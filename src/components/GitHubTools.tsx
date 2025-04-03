@@ -10,12 +10,10 @@ import {
 } from "@/components/ui/card";
 import { GithubToolsList } from "@/constants";
 import { Tool } from "@/lib/types";
-import { replaceUrlVariables } from "@/app/helper";
-
 
 const GitHubTools = ({ owner, repo }: { owner: string; repo: string }) => {
   // Group tools by category
-  const toolsByCategory = Object.values(GithubToolsList).reduce((acc, tool) => {
+  const toolsByCategory = GithubToolsList.reduce((acc, tool) => {
     if (!acc[tool.category]) {
       acc[tool.category] = [];
     }
@@ -43,7 +41,7 @@ const GitHubTools = ({ owner, repo }: { owner: string; repo: string }) => {
                 <CardHeader className="pb-2">
                   <CardTitle className="text-lg flex items-center gap-2">
                     <Image
-                      alt={""}
+                      alt={"Github Tool"}
                       src={tool.icon}
                       width={24}
                       height={24}
@@ -54,7 +52,7 @@ const GitHubTools = ({ owner, repo }: { owner: string; repo: string }) => {
                 </CardHeader>
                 <CardContent>
                   <a
-                    href={replaceUrlVariables(tool.url, { owner, repo })}
+                    href={`/tools/${tool.name}/${owner}/${repo}`}
                     target="_blank"
                     rel="noopener noreferrer"
                     className="inline-flex items-center text-github-blue hover:text-blue-700 text-sm font-medium group"

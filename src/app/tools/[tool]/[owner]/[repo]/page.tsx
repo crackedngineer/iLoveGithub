@@ -19,7 +19,8 @@ export default function ToolsPage({ params }: PageProps) {
   const [repoData, setRepoData] = useState<RepoData | null>(null);
   const [isLoading, setIsLoading] = useState<boolean>(true);
 
-  const toolData = GithubToolsList[tool as keyof typeof GithubToolsList];
+  console.log("name", tool)
+  const toolData = GithubToolsList.find((item) => item.name == tool);
   const toolLink = toolData?.url
     ? replaceUrlVariables(toolData.url, { owner, repo })
     : null;
@@ -64,12 +65,12 @@ export default function ToolsPage({ params }: PageProps) {
   }
 
   return (
-    <main>
+    <>
       {repoData && toolLink ? (
         <ToolViewer url={toolLink} repoData={repoData} />
       ) : (
         <p>Error fetching repository data.</p>
       )}
-    </main>
+    </>
   );
 }
