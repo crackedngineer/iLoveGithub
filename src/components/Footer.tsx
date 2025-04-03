@@ -1,5 +1,5 @@
 import React from "react";
-import { Heart } from "lucide-react";
+import Image from "next/image";
 
 const Footer = () => {
   const currentYear = new Date().getFullYear();
@@ -11,8 +11,15 @@ const Footer = () => {
         <p>&copy; {currentYear} I Love GitHub. All rights reserved.</p>
 
         {/* Creator Section */}
-        <p className="flex items-center gap-1 mt-3 md:mt-0">
-          Made with <Heart className="h-4 w-4 text-red-500" /> by{" "}
+        <p className="flex items-center gap-2 mt-3 md:mt-0">
+          Made in
+          <Image
+            src="/icons/indian-flag.svg"
+            alt="Indian Flag"
+            width={24}
+            height={24}
+          />
+          by
           <a
             href="https://github.com/subhomoy-roy-choudhury/iLoveGithub"
             target="_blank"
