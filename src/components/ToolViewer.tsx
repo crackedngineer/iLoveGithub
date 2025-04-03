@@ -1,46 +1,65 @@
 import React, { useEffect, useState } from "react";
-import { ExternalLink, Heart, Star, GitFork } from "lucide-react";
-// import { ScrollArea } from "@/components/ui/scroll-area";
-import { RepoData } from "@/components/RepoInfo";
+import { ExternalLink, Star, GitFork, Coffee } from "lucide-react";
+import { RepoData } from "./RepoInfo";
 
 interface ToolViewerProps {
   url: string;
   repoData: RepoData;
-  // onBack: () => void;
 }
 
-const ToolViewer: React.FC<ToolViewerProps> = ({
-  url,
-  repoData,
-}: ToolViewerProps) => {
+const ToolViewer: React.FC<ToolViewerProps> = ({ url, repoData }) => {
   const [bannerIndex, setBannerIndex] = useState(0);
 
   const bannerMessages = [
     // Repo Description
     <>
-      <span className="font-medium">Description:</span> {repoData.description}
-    </>,
-    // GitHub Stats
-    <>
-      <div className="flex items-center space-x-4">
-        <div className="flex items-center">
-          <Star className="h-4 w-4 mr-1 text-yellow-400" />
-          <span>{repoData.stars.toLocaleString()} Stars</span>
-        </div>
-        <div className="flex items-center">
-          <GitFork className="h-4 w-4 mr-1 text-blue-400" />
-          <span>{repoData.forks.toLocaleString()} Forks</span>
-        </div>
+      <div className="flex gap-2">
+        <span className="font-medium">What is I Love GitHub?</span> A curated
+        collection of awesome GitHub tools and resources.
       </div>
     </>,
-    // Sponsorship message
+    // GitHub Stats
+    // <>
+    //   <div className="flex items-center space-x-4">
+    //     <div className="flex items-center">
+    //       <Star className="h-4 w-4 mr-1 text-yellow-400" />
+    //       <span>{repoData.stars.toLocaleString()} Stars</span>
+    //     </div>
+    //     <div className="flex items-center">
+    //       <GitFork className="h-4 w-4 mr-1 text-blue-400" />
+    //       <span>{repoData.forks.toLocaleString()} Forks</span>
+    //     </div>
+    //   </div>
+    // </>,
+    // Donation Message (Buy Me a Coffee)
     <>
-      <Heart className="h-4 w-4 mr-2 text-red-500" />
-      <span>Support open source! Consider sponsoring this project</span>
+      <Coffee className="h-4 w-4 mr-2 text-yellow-500" />
+      <span>
+        Love this project?{" "}
+        <a
+          href="https://buymeacoffee.com/subhomoyrc"
+          target="_blank"
+          rel="noopener noreferrer"
+          className="underline hover:text-white"
+        >
+          Buy Me a Coffee
+        </a>{" "}
+        and support open source!
+      </span>
     </>,
-    // Donation message
+    // Original iFrame Source
     <>
-      <span>❤️ Donate to keep this project alive and maintained</span>
+      <div className="flex gap-2">
+        🔗 Looking for the original tool?{" "}
+        <a
+          href={url}
+          target="_blank"
+          rel="noopener noreferrer"
+          className="underline hover:text-white"
+        >
+          Click here to visit.
+        </a>
+      </div>
     </>,
   ];
 
@@ -55,15 +74,12 @@ const ToolViewer: React.FC<ToolViewerProps> = ({
 
   return (
     <div className="w-full h-screen flex flex-col bg-white dark:bg-gray-950">
-      {/* Top banner */}
-      <div className="w-full bg-github-blue text-white px-4 py-3 flex items-center justify-between">
-        {/* <button
-          onClick={onBack}
-          className="text-sm bg-white/20 hover:bg-white/30 rounded px-3 py-1 transition-colors"
-        >
-          Back
-        </button> */}
+      {/* Top Banner with Branding */}
+      <div className="w-full bg-github-blue text-white px-6 py-3 flex items-center justify-between">
+        {/* Branding */}
+        <div className="text-lg font-semibold">❤️ I Love GitHub</div>
 
+        {/* Rotating Banner Messages */}
         <div className="flex-1 mx-4 overflow-hidden">
           <div className="animate-fade-in" key={bannerIndex}>
             <div className="flex items-center justify-center">
@@ -72,6 +88,7 @@ const ToolViewer: React.FC<ToolViewerProps> = ({
           </div>
         </div>
 
+        {/* GitHub Repo Link */}
         <a
           href={repoData.url}
           target="_blank"
@@ -83,7 +100,7 @@ const ToolViewer: React.FC<ToolViewerProps> = ({
         </a>
       </div>
 
-      {/* Iframe container */}
+      {/* iFrame Container */}
       <div className="flex-1 w-full">
         <iframe
           src={url}
