@@ -56,6 +56,7 @@ const RepoSearch = ({ onRepoSubmit }: { onRepoSubmit: (owner: string, repo: stri
   };
 
   const examples = [
+    'https://github.com/subhomoy-roy-choudhury/iLoveGithub',
     'https://github.com/facebook/react',
     'https://github.com/vercel/next.js',
     'https://github.com/tailwindlabs/tailwindcss'

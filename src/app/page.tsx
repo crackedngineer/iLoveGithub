@@ -21,6 +21,7 @@ export default function Home() {
       // Transform GitHub API response to our RepoData format
       const transformedData: RepoData = {
         name: githubData.name,
+        owner: owner,
         fullName: githubData.full_name,
         description: githubData.description || 'No description provided',
         url: githubData.html_url,
@@ -45,6 +46,7 @@ export default function Home() {
       // Fallback to mock data for demo or when API limit is reached
       const mockRepoData: RepoData = {
         name: repo,
+        owner: owner,
         fullName: `${owner}/${repo}`,
         description: repo === 'react'
           ? 'A declarative, efficient, and flexible JavaScript library for building user interfaces.'
@@ -102,7 +104,7 @@ export default function Home() {
 
       {!loading && repoData && <RepoInfo repo={repoData} />}
 
-      {hasSearched && <GitHubTools />}
+      {hasSearched && repoData && <GitHubTools owner={repoData.owner} repo={repoData.name} />}
     </main>
   );
 }

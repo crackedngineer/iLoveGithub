@@ -10,66 +10,74 @@ interface Tool {
     category: string;
 }
 
+function replaceUrlVariables(urlTemplate: string, variables: { [key: string]: string }): string {
+    return urlTemplate.replace(/{(\w+)}/g, (_, key) => {
+        return variables[key] || `{${key}}`;
+    });
+}
+
+
+
 const tools: Tool[] = [
     {
         name: 'GitHub CLI',
-        description: 'Command line tool for interacting with GitHub from your terminal',
-        url: 'https://cli.github.com/',
+        description: 'One second to read GitHub code with VS Code.',
+        url: 'https://github1s.com/{owner}/{repo}',
         icon: Terminal,
         category: 'Development'
     },
-    {
-        name: 'GitHub Desktop',
-        description: 'Simplified GitHub workflow using a GUI',
-        url: 'https://desktop.github.com/',
-        icon: Download,
-        category: 'Development'
-    },
-    {
-        name: 'GitHub Codespaces',
-        description: 'Cloud development environment integrated with GitHub',
-        url: 'https://github.com/features/codespaces',
-        icon: Code,
-        category: 'Development'
-    },
-    {
-        name: 'GitKraken',
-        description: 'Powerful Git GUI for version control',
-        url: 'https://www.gitkraken.com/',
-        icon: GitBranch,
-        category: 'Git Client'
-    },
-    {
-        name: 'Sourcegraph',
-        description: 'Code search and intelligence platform',
-        url: 'https://about.sourcegraph.com/',
-        icon: Search,
-        category: 'Code Search'
-    },
-    {
-        name: 'Dependabot',
-        description: 'Automated dependency updates',
-        url: 'https://github.com/dependabot',
-        icon: GitMerge,
-        category: 'Security'
-    },
-    {
-        name: 'Pull Panda',
-        description: 'Pull request management and code review tools',
-        url: 'https://pullpanda.com/',
-        icon: GitPullRequest,
-        category: 'Productivity'
-    },
-    {
-        name: 'GitHub Actions',
-        description: 'Automate your workflow from idea to production',
-        url: 'https://github.com/features/actions',
-        icon: Code,
-        category: 'CI/CD'
-    },
+    // {
+    //     name: 'GitHub Desktop',
+    //     description: 'Simplified GitHub workflow using a GUI',
+    //     url: 'https://desktop.github.com/',
+    //     icon: Download,
+    //     category: 'Development'
+    // },
+    // {
+    //     name: 'GitHub Codespaces',
+    //     description: 'Cloud development environment integrated with GitHub',
+    //     url: 'https://github.com/features/codespaces',
+    //     icon: Code,
+    //     category: 'Development'
+    // },
+    // {
+    //     name: 'GitKraken',
+    //     description: 'Powerful Git GUI for version control',
+    //     url: 'https://www.gitkraken.com/',
+    //     icon: GitBranch,
+    //     category: 'Git Client'
+    // },
+    // {
+    //     name: 'Sourcegraph',
+    //     description: 'Code search and intelligence platform',
+    //     url: 'https://about.sourcegraph.com/',
+    //     icon: Search,
+    //     category: 'Code Search'
+    // },
+    // {
+    //     name: 'Dependabot',
+    //     description: 'Automated dependency updates',
+    //     url: 'https://github.com/dependabot',
+    //     icon: GitMerge,
+    //     category: 'Security'
+    // },
+    // {
+    //     name: 'Pull Panda',
+    //     description: 'Pull request management and code review tools',
+    //     url: 'https://pullpanda.com/',
+    //     icon: GitPullRequest,
+    //     category: 'Productivity'
+    // },
+    // {
+    //     name: 'GitHub Actions',
+    //     description: 'Automate your workflow from idea to production',
+    //     url: 'https://github.com/features/actions',
+    //     icon: Code,
+    //     category: 'CI/CD'
+    // },
 ];
 
-const GitHubTools = () => {
+const GitHubTools = ({ owner, repo }: { owner: string, repo: string }) => {
     // Group tools by category
     const toolsByCategory = tools.reduce((acc, tool) => {
         if (!acc[tool.category]) {
@@ -98,7 +106,7 @@ const GitHubTools = () => {
                                 </CardHeader>
                                 <CardContent>
                                     <a
-                                        href={tool.url}
+                                        href={replaceUrlVariables(tool.url, { owner, repo })}
                                         target="_blank"
                                         rel="noopener noreferrer"
                                         className="inline-flex items-center text-github-blue hover:text-blue-700 text-sm font-medium group"

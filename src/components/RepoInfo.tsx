@@ -7,6 +7,7 @@ import { Progress } from '@/components/ui/progress';
 
 export interface RepoData {
   name: string;
+  owner: string;
   fullName: string;
   description: string;
   url: string;
