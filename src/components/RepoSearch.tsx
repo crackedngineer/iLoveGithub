@@ -12,30 +12,27 @@ const RepoSearch = ({ onRepoSubmit }: { onRepoSubmit: (owner: string, repo: stri
     // Clear previous error
     setError('');
 
-    // Match GitHub URL pattern
-    const githubPattern = /github\.com\/([^\/]+)\/([^\/]+)/;
-    let match = url.match(githubPattern);
+    // Define patterns for GitHub URL and owner/repo format
+    const patterns = [
+      /github\.com\/([^\/]+)\/([^\/]+)/, // Full GitHub URL
+      /^([^\/]+)\/([^\/]+)$/ // Owner/repo format
+    ];
 
-    if (!match) {
-      // Try alternative pattern (like gitdiagram.com)
-      const altPattern = /gitdiagram\.com\/([^\/]+)\/([^\/]+)/;
-      match = url.match(altPattern);
+    // Try matching the URL with each pattern
+    for (const pattern of patterns) {
+      const match = url.match(pattern);
+      if (match) {
+        const [, owner, repo] = match;
+        return { owner, repo: repo.replace('.git', '').split('#')[0].split('?')[0] }; // Remove .git suffix, fragments, and query parameters
+      }
     }
 
-    // Also try to match just username/repo pattern (without domain)
-    if (!match) {
-      const simplePattern = /^([^\/]+)\/([^\/]+)$/;
-      match = url.match(simplePattern);
-    }
 
-    if (!match) {
-      setError('Invalid repository URL format. Please enter a valid GitHub URL or owner/repo format.');
-      return null;
-    }
-
-    const [, owner, repo] = match;
-    return { owner, repo: repo.split('#')[0].split('?')[0] }; // Remove any fragments or query parameters
+    // If no match is found, set error and return null
+    setError('Invalid repository URL format. Please enter a valid GitHub URL or owner/repo format.');
+    return null;
   };
+
 
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();
@@ -83,9 +80,9 @@ const RepoSearch = ({ onRepoSubmit }: { onRepoSubmit: (owner: string, repo: stri
               Analyze Repository
             </Button>
           </div>
-          
+
           {error && <p className="text-red-500 text-sm">{error}</p>}
-          
+
           <div className="mt-4">
             <p className="text-sm text-gray-500 dark:text-gray-400 mb-2">Try these examples:</p>
             <div className="flex flex-wrap gap-2">
