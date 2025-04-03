@@ -1,4 +1,5 @@
 import React, { useEffect, useState } from "react";
+// eslint-disable-next-line @typescript-eslint/no-unused-vars
 import { ExternalLink, Star, GitFork, Coffee } from "lucide-react";
 import { RepoData } from "./RepoInfo";
 

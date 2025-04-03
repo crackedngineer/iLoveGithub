@@ -6,7 +6,7 @@ const nextConfig: NextConfig = {
     remotePatterns: Object.values(GithubToolsList)
       .map((item) => {
         try {
-          const url = new URL(item.homepage);
+          const url = new URL(item.icon);
           const protocol = url.protocol.replace(":", "") as "http" | "https"; // Ensure correct type
 
           return { protocol, hostname: url.hostname };

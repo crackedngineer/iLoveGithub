@@ -10,6 +10,7 @@ import {
 } from "@/components/ui/card";
 import { GithubToolsList } from "@/constants";
 import { Tool } from "@/lib/types";
+import { replaceUrlVariables } from "@/app/helper";
 
 const GitHubTools = ({ owner, repo }: { owner: string; repo: string }) => {
   // Group tools by category
@@ -52,7 +53,11 @@ const GitHubTools = ({ owner, repo }: { owner: string; repo: string }) => {
                 </CardHeader>
                 <CardContent>
                   <a
-                    href={`/tools/${tool.name}/${owner}/${repo}`}
+                    href={
+                      tool.iframe
+                        ? `/tools/${tool.name}/${owner}/${repo}`
+                        : replaceUrlVariables(tool.url, { owner, repo })
+                    }
                     target="_blank"
                     rel="noopener noreferrer"
                     className="inline-flex items-center text-github-blue hover:text-blue-700 text-sm font-medium group"

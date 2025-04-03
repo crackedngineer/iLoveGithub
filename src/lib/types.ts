@@ -6,4 +6,5 @@ export interface Tool {
     url: string;
     icon: string;
     category: string;
+    iframe: boolean;
 }
