@@ -6,9 +6,11 @@ import { Card, CardContent } from "@/components/ui/card";
 
 const RepoSearch = ({
   value = "",
+  onError,
   onRepoSubmit,
 }: {
   value: string;
+  onError?: (error: string | null) => void;
   onRepoSubmit: (owner: string, repo: string) => void;
 }) => {
   const [repoUrl, setRepoUrl] = useState(value);
@@ -55,6 +57,8 @@ const RepoSearch = ({
     const repoDetails = extractRepoDetails(repoUrl);
     if (repoDetails) {
       onRepoSubmit(repoDetails.owner, repoDetails.repo);
+    } else {
+      onError?.(null);
     }
   };
 

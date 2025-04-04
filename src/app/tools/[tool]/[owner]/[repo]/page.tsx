@@ -7,6 +7,7 @@ import { fetchRepoDetails } from "@/services/githubService";
 import { GithubToolsList } from "@/constants";
 import { replaceUrlVariables } from "@/app/helper";
 import { useParams } from "next/navigation";
+import LoadingScreen from "@/components/LoadingScreen";
 
 export default function ToolsPage() {
   const params = useParams()  as { tool: string; owner: string; repo: string };
@@ -14,7 +15,6 @@ export default function ToolsPage() {
   const [repoData, setRepoData] = useState<RepoData | null>(null);
   const [isLoading, setIsLoading] = useState<boolean>(true);
 
-  console.log("name", tool);
   const toolData = GithubToolsList.find((item) => item.name == tool);
   const toolLink = toolData?.url
     ? replaceUrlVariables(toolData.url, {
@@ -59,7 +59,7 @@ export default function ToolsPage() {
   }, [owner, repo]); // Removed `params` since `owner` and `repo` cover all changes
 
   if (isLoading) {
-    return <p>Loading...</p>;
+    return <LoadingScreen tool={tool} owner={owner} repo={repo}/>;
   }
 
   return (

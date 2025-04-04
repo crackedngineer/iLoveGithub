@@ -9,20 +9,22 @@ import AppLayout from "@/components/AppLayout";
 import { useParams } from "next/navigation";
 
 export default function RepoPage() {
+  const router = useRouter();
   const params = useParams() as { owner: string; repo: string };
   const { owner, repo } = params;
+  
   const [repoData, setRepoData] = useState<RepoData | null>(null);
   const [isLoading, setIsLoading] = useState<boolean>(true);
-  const router = useRouter();
+  const [error, setError] = useState<string | null>(null);
 
   useEffect(() => {
-    // Simulate fetching data based on the query parameter
     const fetchData = async (): Promise<void> => {
+      setIsLoading(true);
+      setError(null); // Reset error before fetching
+
       try {
-        // Simulate API call delay
         const githubData = await fetchRepoDetails(owner, repo);
 
-        // Transform GitHub API response to our RepoData format
         const transformedData: RepoData = {
           name: githubData.name,
           owner: owner,
@@ -41,13 +43,14 @@ export default function RepoPage() {
         setRepoData(transformedData);
       } catch (error) {
         console.error("Error fetching data:", error);
+        setError("Failed to load repository data. Please try again.");
       } finally {
         setIsLoading(false);
       }
     };
 
     fetchData();
-  }, [owner, params, repo]);
+  }, [owner, repo]);
 
   return (
     <AppLayout>
@@ -63,12 +66,14 @@ export default function RepoPage() {
         </div>
         <RepoSearch
           value={`${owner}/${repo}`}
+          onError={() => setError(null)}
           onRepoSubmit={(owner: string, repo: string) => {
             if (owner.trim() && repo.trim()) {
               router.push(`/${owner}/${repo}`);
             }
           }}
         />
+
         {isLoading && (
           <div className="w-full max-w-4xl mx-auto mt-8 flex justify-center">
             <div className="animate-pulse-subtle flex flex-col items-center">
@@ -79,9 +84,15 @@ export default function RepoPage() {
           </div>
         )}
 
-        {!isLoading && repoData && <RepoInfo repo={repoData} />}
+        {error && (
+          <div className="w-full max-w-4xl mx-auto mt-8 p-4 bg-red-100 text-red-800 border border-red-300 rounded-md text-center">
+            {error}
+          </div>
+        )}
 
-        {repoData && (
+        {!isLoading && !error && repoData && <RepoInfo repo={repoData} />}
+
+        {!isLoading && !error && repoData && (
           <GitHubTools owner={repoData.owner} repo={repoData.name} />
         )}
       </main>

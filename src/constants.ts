@@ -78,7 +78,7 @@ export const GithubToolsList: Tool[] = [
     url: "https://uithub.com/{owner}/{repo}",
     icon: "https://uithub.com/favicon-32x32.png",
     category: "Analytics",
-    iframe: true,
+    iframe: false,
   },
   {
     name: "gitpodcast",
