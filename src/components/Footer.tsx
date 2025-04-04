@@ -21,12 +21,12 @@ const Footer = () => {
           />
           by
           <a
-            href="https://github.com/subhomoy-roy-choudhury/iLoveGithub"
+            href="https://github.com/subhomoy-roy-choudhury/"
             target="_blank"
             rel="noopener noreferrer"
             className="hover:text-github-blue dark:hover:text-white transition-colors"
           >
-            iLoveGithub Team
+            Subhomoy Roy Choudhury
           </a>
         </p>
 
