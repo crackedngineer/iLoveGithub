@@ -1,28 +1,26 @@
 "use client";
+import * as React from "react";
 import { useState, useEffect } from "react";
 import ToolViewer from "@/components/ToolViewer";
 import { RepoData } from "@/components/RepoInfo";
 import { fetchRepoDetails } from "@/services/githubService";
 import { GithubToolsList } from "@/constants";
 import { replaceUrlVariables } from "@/app/helper";
+import { useParams } from "next/navigation";
 
-interface PageProps {
-  params: {
-    tool: string;
-    owner: string;
-    repo: string;
-  };
-}
-
-export default function ToolsPage({ params }: PageProps) {
+export default function ToolsPage() {
+  const params = useParams()  as { tool: string; owner: string; repo: string };
   const { tool, owner, repo } = params;
   const [repoData, setRepoData] = useState<RepoData | null>(null);
   const [isLoading, setIsLoading] = useState<boolean>(true);
 
-  console.log("name", tool)
+  console.log("name", tool);
   const toolData = GithubToolsList.find((item) => item.name == tool);
   const toolLink = toolData?.url
-    ? replaceUrlVariables(toolData.url, { owner, repo })
+    ? replaceUrlVariables(toolData.url, {
+        owner: owner,
+        repo: repo,
+      })
     : null;
 
   useEffect(() => {

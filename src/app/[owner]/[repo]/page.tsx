@@ -6,15 +6,10 @@ import GitHubTools from "@/components/GitHubTools";
 import { fetchRepoDetails } from "@/services/githubService";
 import RepoSearch from "@/components/RepoSearch";
 import AppLayout from "@/components/AppLayout";
+import { useParams } from "next/navigation";
 
-interface PageProps {
-  params: {
-    owner: string;
-    repo: string;
-  };
-}
-
-export default function RepoPage({ params }: PageProps) {
+export default function RepoPage() {
+  const params = useParams() as { owner: string; repo: string };
   const { owner, repo } = params;
   const [repoData, setRepoData] = useState<RepoData | null>(null);
   const [isLoading, setIsLoading] = useState<boolean>(true);
