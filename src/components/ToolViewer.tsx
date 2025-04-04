@@ -38,7 +38,7 @@ const ToolViewer: React.FC<ToolViewerProps> = ({ url, repoData }) => {
       <span>
         Love this project?{" "}
         <a
-          href="https://buymeacoffee.com/subhomoyrc"
+          href="https://buymeacoffee.com/subhomoyrca"
           target="_blank"
           rel="noopener noreferrer"
           className="underline hover:text-white"

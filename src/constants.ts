@@ -73,8 +73,7 @@ export const GithubToolsList: Tool[] = [
   {
     name: "uithub",
     title: "uithub",
-    description:
-      "Easily Ask Your LLM Coding Questions",
+    description: "Easily Ask Your LLM Coding Questions",
     homepage: "https://uithub.com/",
     url: "https://uithub.com/{owner}/{repo}",
     icon: "https://uithub.com/favicon-32x32.png",
@@ -95,12 +94,33 @@ export const GithubToolsList: Tool[] = [
   {
     name: "socialify",
     title: "Github Socialify",
-    description:
-      "Socialify your GitHub project to share with the world",
+    description: "Socialify your GitHub project to share with the world",
     homepage: "https://socialify.git.ci/",
     url: "https://socialify.git.ci/{owner}/{repo}",
     icon: "https://socialify.git.ci/favicon.ico",
     category: "Widgets",
     iframe: true,
+  },
+  {
+    name: "gitsummarize",
+    title: "GitSummarize",
+    description:
+      "Turn any GitHub repository into a comprehensive AI-powered documentation hub.",
+    homepage: "https://gitsummarize.com/",
+    url: "https://gitsummarize.com/{owner}/{repo}",
+    icon: "https://gitsummarize.com/favicon.ico",
+    category: "Analytics",
+    iframe: true,
+  },
+  {
+    name: "explaingithub",
+    title: "ExplainGithub",
+    description:
+      "ExplainGitHub is an intelligent code exploration platform that helps developers understand GitHub repositories more efficiently. By leveraging AI-powered analysis, it allows users to navigate and comprehend unfamiliar codebases with ease.",
+    homepage: "https://explaingithub.com/",
+    url: "https://explaingithub.com/{owner}/{repo}",
+    icon: "https://explaingithub.com/favicon.ico",
+    category: "Analytics",
+    iframe: false,
   },
 ];
