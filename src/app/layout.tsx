@@ -13,7 +13,7 @@ const geistMono = Geist_Mono({
 });
 
 export const metadata: Metadata = {
-  title: "I Love Github",
+  title: "iLoveGithub",
   description: "Collection of GitHub tools ",
 };
 

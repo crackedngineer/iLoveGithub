@@ -12,54 +12,71 @@ const ToolViewer: React.FC<ToolViewerProps> = ({ url, repoData }) => {
   const [bannerIndex, setBannerIndex] = useState(0);
 
   const bannerMessages = [
-    // Repo Description
+    // Intro: What is "iLoveGithub"?
     <>
-      <div className="flex gap-2">
-        <span className="font-medium">What is I Love GitHub?</span> A curated
-        collection of awesome GitHub tools and resources.
+      <div className="flex gap-2 items-center">
+        <span className="font-medium">❤️ iLoveGithub</span> is your curated
+        hub for exploring the coolest GitHub tools and open source gems.
       </div>
     </>,
-    // GitHub Stats
-    // <>
-    //   <div className="flex items-center space-x-4">
-    //     <div className="flex items-center">
-    //       <Star className="h-4 w-4 mr-1 text-yellow-400" />
-    //       <span>{repoData.stars.toLocaleString()} Stars</span>
-    //     </div>
-    //     <div className="flex items-center">
-    //       <GitFork className="h-4 w-4 mr-1 text-blue-400" />
-    //       <span>{repoData.forks.toLocaleString()} Forks</span>
-    //     </div>
-    //   </div>
-    // </>,
-    // Donation Message (Buy Me a Coffee)
+
+    // Donation Message #1
     <>
-      <Coffee className="h-4 w-4 mr-2 text-yellow-500" />
-      <span>
-        Love this project?{" "}
-        <a
-          href="https://buymeacoffee.com/subhomoyrca"
-          target="_blank"
-          rel="noopener noreferrer"
-          className="underline hover:text-white"
-        >
-          Buy Me a Coffee
-        </a>{" "}
-        and support open source!
-      </span>
+      <div className="flex items-center gap-2">
+        <Coffee className="h-4 w-4 text-yellow-500" />
+        <span>
+          Fuel this project with ☕!{" "}
+          <a
+            href="https://buymeacoffee.com/subhomoyrca"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="underline hover:text-white"
+          >
+            Buy Me a Coffee
+          </a>{" "}
+          if you find it helpful.
+        </span>
+      </div>
     </>,
-    // Original iFrame Source
+
+    // Original Tool Link
     <>
-      <div className="flex gap-2">
-        🔗 Looking for the original tool?{" "}
+      <div className="flex items-center gap-2">
+        🔗 Want the real deal?{" "}
         <a
           href={url}
           target="_blank"
           rel="noopener noreferrer"
           className="underline hover:text-white"
         >
-          Click here to visit.
+          Click here to open the original tool.
         </a>
+      </div>
+    </>,
+
+    // Donation Message #2 (alt phrasing)
+    <>
+      <div className="flex items-center gap-2">
+        <Coffee className="h-4 w-4 text-yellow-500" />
+        <span>
+          Like the work? Help keep it going.{" "}
+          <a
+            href="https://buymeacoffee.com/subhomoyrca"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="underline hover:text-white"
+          >
+            Support with a coffee
+          </a>{" "}
+          ☕️
+        </span>
+      </div>
+    </>,
+
+    // Community Message
+    <>
+      <div className="flex items-center gap-2">
+        🚀 New tools added weekly! Stay curious, stay building 💡
       </div>
     </>,
   ];
@@ -78,7 +95,7 @@ const ToolViewer: React.FC<ToolViewerProps> = ({ url, repoData }) => {
       {/* Top Banner with Branding */}
       <div className="w-full bg-github-blue text-white px-6 py-3 flex items-center justify-between">
         {/* Branding */}
-        <div className="text-lg font-semibold">❤️ I Love GitHub</div>
+        <div className="text-lg font-semibold">❤️ iLoveGithub</div>
 
         {/* Rotating Banner Messages */}
         <div className="flex-1 mx-4 overflow-hidden">
@@ -89,15 +106,15 @@ const ToolViewer: React.FC<ToolViewerProps> = ({ url, repoData }) => {
           </div>
         </div>
 
-        {/* GitHub Repo Link */}
+        {/* Open Fullscreen Button */}
         <a
-          href={repoData.url}
-          target="_blank"
+          href={url}
+          target="_top"
           rel="noopener noreferrer"
-          className="flex items-center text-sm bg-white/20 hover:bg-white/30 rounded px-3 py-1 transition-colors"
+          className="flex gap-2 items-center text-sm bg-white/20 hover:bg-white/30 rounded px-3 py-1 transition-colors"
         >
+          Open in Full Window
           <ExternalLink className="h-3 w-3 mr-1" />
-          View on GitHub
         </a>
       </div>
 

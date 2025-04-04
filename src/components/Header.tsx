@@ -22,7 +22,7 @@ const Header = () => {
         />
         <Heart className="h-5 w-5 text-red-500" aria-hidden="true" />
         <h1 className="text-xl font-bold text-github-gray dark:text-white">
-          I Love GitHub
+          iLoveGithub
         </h1>
       </div>
 
