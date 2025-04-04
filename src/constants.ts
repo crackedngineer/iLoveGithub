@@ -92,4 +92,15 @@ export const GithubToolsList: Tool[] = [
     category: "Analytics",
     iframe: true,
   },
+  {
+    name: "socialify",
+    title: "Github Socialify",
+    description:
+      "Socialify your GitHub project to share with the world",
+    homepage: "https://socialify.git.ci/",
+    url: "https://socialify.git.ci/{owner}/{repo}",
+    icon: "https://socialify.git.ci/favicon.ico",
+    category: "Widgets",
+    iframe: true,
+  },
 ];
