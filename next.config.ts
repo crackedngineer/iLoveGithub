@@ -4,7 +4,7 @@ import { GithubToolsList } from "@/constants";
 const nextConfig: NextConfig = {
   output: "export",
   trailingSlash: true,
-  basePath: "/",
+  basePath: "",
   images: {
     unoptimized: true,
     remotePatterns: Object.values(GithubToolsList)
