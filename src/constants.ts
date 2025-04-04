@@ -73,7 +73,7 @@ export const GithubToolsList: Tool[] = [
   {
     name: "uithub",
     title: "uithub",
-    description: "Easily Ask Your LLM Coding Questions",
+    description: "Easily Ask Your LLM Coding Questions.",
     homepage: "https://uithub.com/",
     url: "https://uithub.com/{owner}/{repo}",
     icon: "https://uithub.com/favicon-32x32.png",
@@ -94,7 +94,7 @@ export const GithubToolsList: Tool[] = [
   {
     name: "socialify",
     title: "Github Socialify",
-    description: "Socialify your GitHub project to share with the world",
+    description: "Socialify your GitHub project to share with the world.",
     homepage: "https://socialify.git.ci/",
     url: "https://socialify.git.ci/{owner}/{repo}",
     icon: "https://socialify.git.ci/favicon.ico",
@@ -116,7 +116,7 @@ export const GithubToolsList: Tool[] = [
     name: "explaingithub",
     title: "ExplainGithub",
     description:
-      "ExplainGitHub is an intelligent code exploration platform that helps developers understand GitHub repositories more efficiently. By leveraging AI-powered analysis, it allows users to navigate and comprehend unfamiliar codebases with ease.",
+      "Understand complex codebases with AI.",
     homepage: "https://explaingithub.com/",
     url: "https://explaingithub.com/{owner}/{repo}",
     icon: "https://explaingithub.com/favicon.ico",

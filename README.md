@@ -59,18 +59,18 @@
 
 | Tool                                            | Description                                                        | Launch                                                                         |
 | ----------------------------------------------- | ------------------------------------------------------------------ | ------------------------------------------------------------------------------ |
-| [**GitDiagram**](https://gitdiagram.com/)       | Visualize any repo as an interactive diagram.                      | [`gitdiagram.com/{owner}/{repo}`](https://gitdiagram.com/{owner}/{repo})       |
+| [**GitDiagram**](https://gitdiagram.com/)       | Turn any GitHub repository into an interactive diagram for visualization.                      | [`gitdiagram.com/{owner}/{repo}`](https://gitdiagram.com/{owner}/{repo})       |
 | [**Gitingest**](https://gitingest.com/)         | Turn any Git repository into a simple text digest of its codebase. | [`gitingest.com/{owner}/{repo}`](https://gitingest.com/{owner}/{repo})         |
-| [**GitPodcast**](https://www.gitpodcast.com/)   | Turn your repo into a podcast.                                     | [`gitpodcast.com/{owner}/{repo}`](https://www.gitpodcast.com/{owner}/{repo})   |
-| [**GitSummarize**](https://gitsummarize.com/)   | AI-generated documentation hub.                                    | [`gitsummarize.com/{owner}/{repo}`](https://gitsummarize.com/{owner}/{repo})   |
+| [**GitPodcast**](https://www.gitpodcast.com/)   | Turn any GitHub repository into an engaging podcast in seconds.                                     | [`gitpodcast.com/{owner}/{repo}`](https://www.gitpodcast.com/{owner}/{repo})   |
+| [**GitSummarize**](https://gitsummarize.com/)   | Turn any GitHub repository into a comprehensive AI-powered documentation hub.                                    | [`gitsummarize.com/{owner}/{repo}`](https://gitsummarize.com/{owner}/{repo})   |
 | [**ExplainGithub**](https://explaingithub.com/) | Understand complex codebases with AI.                              | [`explaingithub.com/{owner}/{repo}`](https://explaingithub.com/{owner}/{repo}) |
-| [**uithub**](https://uithub.com/)               | Ask AI questions about code.                                       | [`uithub.com/{owner}/{repo}`](https://uithub.com/{owner}/{repo})               |
+| [**uithub**](https://uithub.com/)               | Easily Ask Your LLM Coding Questions.                                       | [`uithub.com/{owner}/{repo}`](https://uithub.com/{owner}/{repo})               |
 
 ### 🧩 Widgets & UI Enhancers
 
 | Tool                                              | Description                                   | Launch                                                                       |
 | ------------------------------------------------- | --------------------------------------------- | ---------------------------------------------------------------------------- |
-| [**Github Socialify**](https://socialify.git.ci/) | Generate stunning social cards for your repo. | [`socialify.git.ci/{owner}/{repo}`](https://socialify.git.ci/{owner}/{repo}) |
+| [**Github Socialify**](https://socialify.git.ci/) | Socialify your GitHub project to share with the world. | [`socialify.git.ci/{owner}/{repo}`](https://socialify.git.ci/{owner}/{repo}) |
 
 ---
 
