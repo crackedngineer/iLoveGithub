@@ -2,11 +2,13 @@
   "name": "i-love-github",
   "version": "0.1.0",
   "private": true,
+  "homepage": "https://subhomoy-roy-choudhury.github.io/iLoveGithub",
   "scripts": {
     "dev": "next dev --turbopack",
     "build": "next build",
-    "postbuild": "next-sitemap",
     "start": "next start",
+    "postbuild": "next-sitemap",
+    "export": "next export",
     "lint": "next lint",
     "lint:fix": "next lint --fix"
   },
