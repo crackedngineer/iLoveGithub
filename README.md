@@ -90,31 +90,11 @@ $ npm install
 $ npm run dev
 ```
 
-Now visit [http://localhost:3000](http://localhost:3000) 🚀
+Open [http://localhost:3000](http://localhost:3000) with your browser to see the result 🚀
 
----
+You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
 
-## 🌐 Deployment
-
-This project is deployed using **GitHub Pages**. The final static build is exported using:
-
-```bash
-npm run build && npm run export
-```
-
-Make sure to configure your `next.config.js` with:
-
-```js
-module.exports = {
-  output: "export",
-  images: {
-    unoptimized: true,
-  },
-  basePath: "/", // if hosted on /iLoveGitHub path
-};
-```
-
-You can now host the `out/` folder using GitHub Pages.
+This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
 
 ---
 
