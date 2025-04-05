@@ -18,11 +18,11 @@ export const metadata: Metadata = {
   openGraph: {
     title: "iLoveGithub",
     description: "A curated collection of magical tools built around GitHub — open a repo in VS Code, visualize it, generate AI-powered summaries, convert it to a podcast, and so much more.",
-    url: "https://ilovegithub.oderna.com",
+    url: "https://ilovegithub.oderna.in",
     siteName: "iLoveGithub",
     images: [
       {
-        url: "https://ilovegithub.oderna.com/og-image.png",
+        url: "https://ilovegithub.oderna.in/og-image.png",
         width: 1200,
         height: 630,
       },
@@ -34,7 +34,7 @@ export const metadata: Metadata = {
     card: "summary_large_image",
     title: "iLoveGithub",
     description: "A curated collection of magical tools built around GitHub — open a repo in VS Code, visualize it, generate AI-powered summaries, convert it to a podcast, and so much more.",
-    images: ["https://ilovegithub.oderna.com/og-image.jpg"],
+    images: ["https://ilovegithub.oderna.in/og-image.jpg"],
   },
 };
 
