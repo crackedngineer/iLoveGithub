@@ -1,6 +1,5 @@
 import React, { useEffect, useState } from "react";
-// eslint-disable-next-line @typescript-eslint/no-unused-vars
-import { ExternalLink, Star, GitFork, Coffee } from "lucide-react";
+import { ExternalLink, Coffee } from "lucide-react";
 import { RepoData } from "./RepoInfo";
 
 interface ToolViewerProps {
@@ -12,17 +11,14 @@ const ToolViewer: React.FC<ToolViewerProps> = ({ url, repoData }) => {
   const [bannerIndex, setBannerIndex] = useState(0);
 
   const bannerMessages = [
-    // Intro: What is "iLoveGithub"?
     <>
-      <div className="flex gap-2 items-center">
+      <div className="flex gap-2 items-center flex-wrap text-sm sm:text-base text-center sm:text-left">
         <span className="font-medium">❤️ iLoveGithub</span> is your curated
         hub for exploring the coolest GitHub tools and open source gems.
       </div>
     </>,
-
-    // Donation Message #1
     <>
-      <div className="flex items-center gap-2">
+      <div className="flex items-center gap-2 flex-wrap text-sm sm:text-base text-center sm:text-left">
         <Coffee className="h-4 w-4 text-yellow-500" />
         <span>
           Fuel this project with ☕!{" "}
@@ -38,10 +34,8 @@ const ToolViewer: React.FC<ToolViewerProps> = ({ url, repoData }) => {
         </span>
       </div>
     </>,
-
-    // Original Tool Link
     <>
-      <div className="flex items-center gap-2">
+      <div className="flex items-center gap-2 flex-wrap text-sm sm:text-base text-center sm:text-left">
         🔗 Want the real deal?{" "}
         <a
           href={url}
@@ -53,10 +47,8 @@ const ToolViewer: React.FC<ToolViewerProps> = ({ url, repoData }) => {
         </a>
       </div>
     </>,
-
-    // Donation Message #2 (alt phrasing)
     <>
-      <div className="flex items-center gap-2">
+      <div className="flex items-center gap-2 flex-wrap text-sm sm:text-base text-center sm:text-left">
         <Coffee className="h-4 w-4 text-yellow-500" />
         <span>
           Like the work? Help keep it going.{" "}
@@ -72,16 +64,13 @@ const ToolViewer: React.FC<ToolViewerProps> = ({ url, repoData }) => {
         </span>
       </div>
     </>,
-
-    // Community Message
     <>
-      <div className="flex items-center gap-2">
+      <div className="flex items-center gap-2 flex-wrap text-sm sm:text-base text-center sm:text-left">
         🚀 New tools added weekly! Stay curious, stay building 💡
       </div>
     </>,
   ];
 
-  // Cycle through banner messages
   useEffect(() => {
     const interval = setInterval(() => {
       setBannerIndex((prevIndex) => (prevIndex + 1) % bannerMessages.length);
@@ -93,14 +82,16 @@ const ToolViewer: React.FC<ToolViewerProps> = ({ url, repoData }) => {
   return (
     <div className="w-full h-screen flex flex-col bg-white dark:bg-gray-950">
       {/* Top Banner with Branding */}
-      <div className="w-full bg-github-blue text-white px-6 py-3 flex items-center justify-between">
+      <div className="w-full bg-github-blue text-white px-4 sm:px-6 py-3 flex items-center justify-between gap-2 flex-wrap sm:flex-nowrap">
         {/* Branding */}
-        <div className="text-lg font-semibold">❤️ iLoveGithub</div>
+        <div className="text-base sm:text-lg font-semibold whitespace-nowrap">
+          ❤️ iLoveGithub
+        </div>
 
-        {/* Rotating Banner Messages */}
-        <div className="flex-1 mx-4 overflow-hidden">
-          <div className="animate-fade-in" key={bannerIndex}>
-            <div className="flex items-center justify-center">
+        {/* Rotating Banner Messages (hidden on mobile) */}
+        <div className="hidden sm:flex flex-1 mx-4 overflow-hidden">
+          <div className="animate-fade-in truncate w-full" key={bannerIndex}>
+            <div className="flex items-center justify-center truncate">
               {bannerMessages[bannerIndex]}
             </div>
           </div>
@@ -111,10 +102,11 @@ const ToolViewer: React.FC<ToolViewerProps> = ({ url, repoData }) => {
           href={url}
           target="_top"
           rel="noopener noreferrer"
-          className="flex gap-2 items-center text-sm bg-white/20 hover:bg-white/30 rounded px-3 py-1 transition-colors"
+          className="flex-shrink-0 text-xs sm:text-sm bg-white/20 hover:bg-white/30 rounded px-2 sm:px-3 py-1 transition-colors flex items-center gap-1"
         >
-          Open in Full Window
-          <ExternalLink className="h-3 w-3 mr-1" />
+          <span className="hidden sm:inline">Open in Full Window</span>
+          <span className="sm:hidden">Open</span>
+          <ExternalLink className="h-4 w-4" />
         </a>
       </div>
 

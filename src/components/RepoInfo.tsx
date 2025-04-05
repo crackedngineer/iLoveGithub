@@ -35,39 +35,19 @@ export interface RepoData {
   topics: string[];
 }
 
-/**
- * Calculates a health score (0 to 100) for a GitHub repository based on various repository metrics.
- *
- * The score is a weighted sum of normalized values for stars, forks, watchers, topics, recent activity,
- * and description quality. Each metric contributes a portion of the score, and the total is capped at 100.
- *
- * Scoring breakdown:
- * - Stars: Up to 25 points. Repos with 1000+ stars receive the full 25 points.
- * - Forks: Up to 20 points. Repos with 500+ forks receive the full 20 points.
- * - Watchers: Up to 15 points. Repos with 200+ watchers receive the full 15 points.
- * - Topics: 10 points if the repo has at least one topic assigned.
- * - Recently Updated: 20 points if the repo was updated in the last 30 days.
- * - Description: 10 points if the repo has a non-trivial description (length > 50 characters).
- *
- * All metric values are normalized and clamped to avoid over-scoring.
- *
- * @param {RepoData} repo - The repository data object containing GitHub metadata.
- * @returns {number} A health score between 0 and 100, indicating repository quality and activity.
- */
 const calculateHealthScore = (repo: RepoData): number => {
-  // const ageInYears = (new Date().getTime() - new Date(repo.createdAt).getTime()) / (1000 * 60 * 60 * 24 * 365);
   const updatedRecently =
     (new Date().getTime() - new Date(repo.updatedAt).getTime()) /
       (1000 * 60 * 60 * 24) <
     30;
 
   const score =
-    (repo.stars > 0 ? Math.min(repo.stars / 1000, 1) * 25 : 0) + // Stars (max 25)
-    (repo.forks > 0 ? Math.min(repo.forks / 500, 1) * 20 : 0) + // Forks (max 20)
-    (repo.watchers > 0 ? Math.min(repo.watchers / 200, 1) * 15 : 0) + // Watchers (max 15)
-    (repo.topics.length > 0 ? 10 : 0) + // Topics (max 10)
-    (updatedRecently ? 20 : 0) + // Recency (max 20)
-    (repo.description.length > 50 ? 10 : 0); // Description presence (max 10)
+    (repo.stars > 0 ? Math.min(repo.stars / 1000, 1) * 25 : 0) +
+    (repo.forks > 0 ? Math.min(repo.forks / 500, 1) * 20 : 0) +
+    (repo.watchers > 0 ? Math.min(repo.watchers / 200, 1) * 15 : 0) +
+    (repo.topics.length > 0 ? 10 : 0) +
+    (updatedRecently ? 20 : 0) +
+    (repo.description.length > 50 ? 10 : 0);
 
   return Math.min(Math.round(score), 100);
 };
@@ -93,7 +73,7 @@ const RepoInfo = ({ repo }: { repo: RepoData }) => {
   return (
     <Card className="w-full max-w-4xl mx-auto mt-8 animate-fade-in">
       <CardHeader className="pb-2">
-        <div className="flex justify-between items-start">
+        <div className="flex flex-col sm:flex-row sm:justify-between sm:items-start gap-4">
           <div>
             <CardTitle className="text-2xl font-bold flex items-center gap-2">
               {repo.name}
@@ -111,7 +91,7 @@ const RepoInfo = ({ repo }: { repo: RepoData }) => {
           <Button
             variant="outline"
             size="sm"
-            className="flex items-center gap-1"
+            className="flex items-center gap-1 w-fit"
             asChild
           >
             <a href={repo.url} target="_blank" rel="noopener noreferrer">
@@ -123,11 +103,9 @@ const RepoInfo = ({ repo }: { repo: RepoData }) => {
       </CardHeader>
 
       <CardContent className="pb-4">
-        <p className="text-gray-700 dark:text-gray-300 mb-6">
-          {repo.description}
-        </p>
+        <p className="text-gray-700 dark:text-gray-300 mb-6">{repo.description}</p>
 
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-4 mb-6">
+        <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-4 mb-6">
           <div className="flex items-center gap-2 bg-github-lightGray dark:bg-gray-800 p-3 rounded-md">
             <Star className="text-yellow-500" size={20} />
             <div>
@@ -154,9 +132,7 @@ const RepoInfo = ({ repo }: { repo: RepoData }) => {
               <p className="text-xl font-semibold">
                 {repo.watchers.toLocaleString()}
               </p>
-              <p className="text-xs text-gray-500 dark:text-gray-400">
-                Watchers
-              </p>
+              <p className="text-xs text-gray-500 dark:text-gray-400">Watchers</p>
             </div>
           </div>
         </div>
@@ -165,7 +141,7 @@ const RepoInfo = ({ repo }: { repo: RepoData }) => {
           <div className="flex items-center gap-2">
             <FileCode size={16} className="text-gray-500" />
             <span className="text-sm text-gray-700 dark:text-gray-300">
-              Main language:{" "}
+              Main language:
             </span>
             <Badge
               variant="secondary"
@@ -178,7 +154,7 @@ const RepoInfo = ({ repo }: { repo: RepoData }) => {
           <div className="flex items-center gap-2">
             <Calendar size={16} className="text-gray-500" />
             <span className="text-sm text-gray-700 dark:text-gray-300">
-              Created:{" "}
+              Created:
             </span>
             <span className="text-sm font-medium">
               {formattedDate(repo.createdAt)}
@@ -188,7 +164,7 @@ const RepoInfo = ({ repo }: { repo: RepoData }) => {
           <div className="flex items-center gap-2">
             <GitBranch size={16} className="text-gray-500" />
             <span className="text-sm text-gray-700 dark:text-gray-300">
-              Last updated:{" "}
+              Last updated:
             </span>
             <span className="text-sm font-medium">
               {formattedDate(repo.updatedAt)}
@@ -212,7 +188,7 @@ const RepoInfo = ({ repo }: { repo: RepoData }) => {
         </div>
 
         <div className="mb-4">
-          <div className="flex justify-between mb-1">
+          <div className="flex justify-between flex-wrap items-center gap-y-1 mb-1">
             <span className="text-sm font-medium">Repository Health</span>
             <span className={`text-sm font-medium ${healthColor(healthScore)}`}>
               {healthScore}%
@@ -223,7 +199,7 @@ const RepoInfo = ({ repo }: { repo: RepoData }) => {
       </CardContent>
 
       <CardFooter className="border-t border-gray-100 dark:border-gray-800 pt-4">
-        <p className="text-sm text-gray-500 dark:text-gray-400">
+        <p className="text-sm text-gray-500 dark:text-gray-400 leading-relaxed max-w-prose">
           This repository is one of the most popular in its category, with
           active development and a strong community.
         </p>

@@ -21,19 +21,18 @@ const GitHubTools = ({ owner, repo }: { owner: string; repo: string }) => {
   }, {} as Record<string, Tool[]>);
 
   return (
-    <div className="w-full max-w-4xl mx-auto mt-10 animate-fade-in">
-      <h2 className="text-3xl font-semibold mb-8 text-center text-gray-800 dark:text-white">
+    <div className="w-full px-4 sm:px-6 lg:px-0 max-w-4xl mx-auto mt-10 animate-fade-in">
+      <h2 className="text-2xl sm:text-3xl font-semibold mb-6 sm:mb-8 text-center text-gray-800 dark:text-white">
         🔧 Popular GitHub Tools
       </h2>
 
       {Object.entries(toolsByCategory).map(([category, categoryTools]) => (
-        <section key={category} className="mb-12">
-          <h3 className="text-xl font-semibold mb-4 text-gray-700 dark:text-gray-200 border-b pb-1 border-gray-200 dark:border-gray-700">
+        <section key={category} className="mb-10 sm:mb-12">
+          <h3 className="text-lg sm:text-xl font-semibold mb-4 text-gray-700 dark:text-gray-200 border-b pb-1 border-gray-200 dark:border-gray-700">
             {category}
           </h3>
 
-          {/* <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6"> */}
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 sm:gap-6">
             {categoryTools.map((tool) => {
               const toolUrl = tool.iframe
                 ? `/tools/${tool.name}/${owner}/${repo}`
@@ -45,12 +44,12 @@ const GitHubTools = ({ owner, repo }: { owner: string; repo: string }) => {
                   className="group transition-all duration-200 hover:shadow-xl hover:border-blue-500 border border-gray-200 dark:border-gray-800 bg-white dark:bg-gray-900"
                 >
                   <CardHeader className="pb-1">
-                    <CardTitle className="text-lg flex items-center gap-2 text-gray-900 dark:text-white">
+                    <CardTitle className="text-base sm:text-lg flex items-center gap-2 text-gray-900 dark:text-white">
                       <Image
                         alt={`${tool.name} icon`}
                         src={tool.icon}
-                        width={28}
-                        height={28}
+                        width={24}
+                        height={24}
                         className="rounded-sm"
                       />
                       {tool.name}

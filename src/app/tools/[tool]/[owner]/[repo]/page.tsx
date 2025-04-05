@@ -10,16 +10,16 @@ import { useParams } from "next/navigation";
 import LoadingScreen from "@/components/LoadingScreen";
 
 export default function ToolsPage() {
-  const params = useParams()  as { tool: string; owner: string; repo: string };
+  const params = useParams() as { tool: string; owner: string; repo: string };
   const { tool, owner, repo } = params;
   const [repoData, setRepoData] = useState<RepoData | null>(null);
   const [isLoading, setIsLoading] = useState<boolean>(true);
 
-  const toolData = GithubToolsList.find((item) => item.name == tool);
+  const toolData = GithubToolsList.find((item) => item.name === tool);
   const toolLink = toolData?.url
     ? replaceUrlVariables(toolData.url, {
-        owner: owner,
-        repo: repo,
+        owner,
+        repo,
       })
     : null;
 
@@ -28,9 +28,7 @@ export default function ToolsPage() {
       try {
         const githubData = await fetchRepoDetails(owner, repo);
 
-        if (!githubData) {
-          throw new Error("GitHub API returned no data");
-        }
+        if (!githubData) throw new Error("GitHub API returned no data");
 
         const transformedData: RepoData = {
           name: githubData.name,
@@ -49,26 +47,26 @@ export default function ToolsPage() {
 
         setRepoData(transformedData);
       } catch (error) {
-        console.error("Error fetching data:", error);
+        console.error("Error fetching GitHub repo:", error);
       } finally {
         setIsLoading(false);
       }
     };
 
     fetchData();
-  }, [owner, repo]); // Removed `params` since `owner` and `repo` cover all changes
-
-  if (isLoading) {
-    return <LoadingScreen tool={tool} owner={owner} repo={repo}/>;
-  }
+  }, [owner, repo]);
 
   return (
-    <>
-      {repoData && toolLink ? (
+    <div className="min-h-screen w-full overflow-hidden">
+      {isLoading ? (
+        <LoadingScreen tool={tool} owner={owner} repo={repo} />
+      ) : repoData && toolLink ? (
         <ToolViewer url={toolLink} repoData={repoData} />
       ) : (
-        <p>Error fetching repository data.</p>
+        <div className="w-full p-4 text-center text-red-500">
+          Error fetching repository data.
+        </div>
       )}
-    </>
+    </div>
   );
 }
