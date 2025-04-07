@@ -65,6 +65,7 @@ export default function RepoPage() {
         </div>
 
         <RepoSearch
+          key={`${owner}-${repo}-${Date.now()}`}
           value={`${owner}/${repo}`}
           onError={() => setError(null)}
           onRepoSubmit={(owner: string, repo: string) => {
