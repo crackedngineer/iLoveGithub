@@ -10,6 +10,7 @@ export interface GithubRepoResponse {
     created_at: string;
     updated_at: string;
     topics: string[];
+    default_branch: string;
 }
 
 export const fetchRepoDetails = async (owner: string, repo: string): Promise<GithubRepoResponse> => {

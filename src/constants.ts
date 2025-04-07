@@ -40,8 +40,7 @@ export const GithubToolsList: Tool[] = [
   {
     name: "stackblitz",
     title: "StackBlitz",
-    description:
-      "Turn text into working web apps.",
+    description: "Turn text into working web apps.",
     homepage: "https://gitdiagram.com/",
     url: "https://stackblitz.com/~/github.com/{owner}/{repo}",
     icon: "https://stackblitz.com/_astro/favicon.svg",
@@ -51,8 +50,7 @@ export const GithubToolsList: Tool[] = [
   {
     name: "vscode",
     title: "Visual Studio Code",
-    description:
-      "Edit projects using the full VS Code experience in-browser.",
+    description: "Edit projects using the full VS Code experience in-browser.",
     homepage: "https://code.visualstudio.com/docs/setup/vscode-web",
     url: "https://vscode.dev/github/{owner}/{repo}",
     icon: "https://code.visualstudio.com/assets/favicon.ico",
@@ -115,11 +113,20 @@ export const GithubToolsList: Tool[] = [
   {
     name: "explaingithub",
     title: "ExplainGithub",
-    description:
-      "Understand complex codebases with AI.",
+    description: "Understand complex codebases with AI.",
     homepage: "https://explaingithub.com/",
     url: "https://explaingithub.com/{owner}/{repo}",
     icon: "https://explaingithub.com/favicon.ico",
+    category: "Analytics & Insights",
+    iframe: false,
+  },
+  {
+    name: "gituml",
+    title: "GitUML",
+    description: "UML visualisation for Git repositories.",
+    homepage: "https://www.gituml.com/",
+    url: "https://www.gituml.com/ztree_scratchpad?user={owner}&repo={repo}&commit={default_branch}&repo-brand=github",
+    icon: "https://www.gituml.com/favicon.ico",
     category: "Analytics & Insights",
     iframe: false,
   },

@@ -43,6 +43,7 @@ export default function ToolsPage() {
           createdAt: githubData.created_at,
           updatedAt: githubData.updated_at,
           topics: githubData.topics || [],
+          default_branch: githubData.default_branch,
         };
 
         setRepoData(transformedData);

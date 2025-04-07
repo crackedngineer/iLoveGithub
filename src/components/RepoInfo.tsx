@@ -33,6 +33,7 @@ export interface RepoData {
   createdAt: string;
   updatedAt: string;
   topics: string[];
+  default_branch: string;
 }
 
 const calculateHealthScore = (repo: RepoData): number => {

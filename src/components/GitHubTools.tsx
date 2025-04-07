@@ -13,7 +13,15 @@ import { Tool } from "@/lib/types";
 import { replaceUrlVariables } from "@/app/helper";
 import { Button } from "@/components/ui/button";
 
-const GitHubTools = ({ owner, repo }: { owner: string; repo: string }) => {
+const GitHubTools = ({
+  owner,
+  repo,
+  default_branch = "master",
+}: {
+  owner: string;
+  repo: string;
+  default_branch: string;
+}) => {
   const toolsByCategory = GithubToolsList.reduce((acc, tool) => {
     if (!acc[tool.category]) acc[tool.category] = [];
     acc[tool.category].push(tool);
@@ -36,7 +44,11 @@ const GitHubTools = ({ owner, repo }: { owner: string; repo: string }) => {
             {categoryTools.map((tool) => {
               const toolUrl = tool.iframe
                 ? `/tools/${tool.name}/${owner}/${repo}`
-                : replaceUrlVariables(tool.url, { owner, repo });
+                : replaceUrlVariables(tool.url, {
+                    owner,
+                    repo,
+                    default_branch,
+                  });
 
               return (
                 <Card
@@ -60,14 +72,19 @@ const GitHubTools = ({ owner, repo }: { owner: string; repo: string }) => {
                   </CardHeader>
 
                   <CardContent className="mt-2">
-                    <Button asChild variant="link" className="text-sm px-0 py-1">
+                    <Button
+                      asChild
+                      variant="link"
+                      className="text-sm px-0 py-1"
+                    >
                       <a
                         href={toolUrl}
                         target="_blank"
                         rel="noopener noreferrer"
                         className="inline-flex items-center gap-1 text-github-blue hover:text-blue-700 group-hover:underline"
                       >
-                        Visit Tool <ArrowRight className="w-4 h-4 transition-transform group-hover:translate-x-1" />
+                        Visit Tool{" "}
+                        <ArrowRight className="w-4 h-4 transition-transform group-hover:translate-x-1" />
                       </a>
                     </Button>
                   </CardContent>

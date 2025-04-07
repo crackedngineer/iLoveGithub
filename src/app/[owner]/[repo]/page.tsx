@@ -38,6 +38,7 @@ export default function RepoPage() {
           createdAt: githubData.created_at,
           updatedAt: githubData.updated_at,
           topics: githubData.topics || [],
+          default_branch: githubData.default_branch,
         };
 
         setRepoData(transformedData);
@@ -60,7 +61,8 @@ export default function RepoPage() {
             Discover GitHub Tools
           </h1>
           <p className="text-base sm:text-lg md:text-xl text-gray-600 dark:text-gray-400 max-w-xl mx-auto">
-            Explore GitHub repositories and find the best tools to enhance your GitHub experience
+            Explore GitHub repositories and find the best tools to enhance your
+            GitHub experience
           </p>
         </div>
 
@@ -93,7 +95,11 @@ export default function RepoPage() {
 
         {!isLoading && !error && repoData && <RepoInfo repo={repoData} />}
         {!isLoading && !error && repoData && (
-          <GitHubTools owner={repoData.owner} repo={repoData.name} />
+          <GitHubTools
+            owner={repoData.owner}
+            repo={repoData.name}
+            default_branch={repoData.default_branch}
+          />
         )}
       </main>
     </AppLayout>
