@@ -21,7 +21,7 @@ const Header = () => {
 
         {/* Desktop Navigation */}
         <div className="hidden md:flex items-center gap-4">
-          <Button
+          {/* <Button
             variant="ghost"
             size="sm"
             className="text-github-gray dark:text-gray-300 hover:text-github-blue dark:hover:text-white"
@@ -34,7 +34,7 @@ const Header = () => {
             }
           >
             Curated Tools
-          </Button>
+          </Button> */}
           <Button
             variant="ghost"
             size="sm"
@@ -76,7 +76,7 @@ const Header = () => {
       {/* Mobile Dropdown Menu */}
       {isMenuOpen && (
         <div className="md:hidden px-4 pb-4 flex flex-col gap-2 animate-slide-down">
-          <Button
+          {/* <Button
             variant="ghost"
             className="w-full justify-start text-github-gray dark:text-gray-300 hover:text-github-blue dark:hover:text-white"
             onClick={() => {
@@ -88,7 +88,7 @@ const Header = () => {
             }}
           >
             Curated Tools
-          </Button>
+          </Button> */}
           <Button
             variant="ghost"
             className="w-full justify-start text-github-gray dark:text-gray-300 hover:text-github-blue dark:hover:text-white"

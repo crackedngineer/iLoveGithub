@@ -5,6 +5,12 @@ export const DefaultGithubRepo = {
   repo: "iLoveGithub",
 };
 
+export const ToolCategories = {
+  DEVELOPMENT: "Development Tools",
+  ANALYTICS: "Analytics & Insights",
+  WIDGETS: "Widgets & UI",
+} as const;
+
 export const GithubToolsList: Tool[] = [
   {
     name: "github1s",
@@ -13,7 +19,7 @@ export const GithubToolsList: Tool[] = [
     homepage: "https://github1s.com",
     url: "https://github1s.com/{owner}/{repo}",
     icon: "https://github1s.com/favicon.ico",
-    category: "Development Tools",
+    category: ToolCategories.DEVELOPMENT,
     iframe: true,
   },
   {
@@ -23,7 +29,7 @@ export const GithubToolsList: Tool[] = [
     homepage: "https://github.dev",
     url: "https://github.dev/{owner}/{repo}",
     icon: "https://github.com/favicon.ico",
-    category: "Development Tools",
+    category: ToolCategories.DEVELOPMENT,
     iframe: false,
   },
   {
@@ -34,7 +40,7 @@ export const GithubToolsList: Tool[] = [
     homepage: "https://stackblitz.com/",
     url: "https://gitdiagram.com/{owner}/{repo}",
     icon: "https://gitdiagram.com/favicon.ico",
-    category: "Analytics & Insights",
+    category: ToolCategories.ANALYTICS,
     iframe: true,
   },
   {
@@ -44,7 +50,7 @@ export const GithubToolsList: Tool[] = [
     homepage: "https://gitdiagram.com/",
     url: "https://stackblitz.com/~/github.com/{owner}/{repo}",
     icon: "https://stackblitz.com/_astro/favicon.svg",
-    category: "Development Tools",
+    category: ToolCategories.DEVELOPMENT,
     iframe: false,
   },
   {
@@ -54,7 +60,7 @@ export const GithubToolsList: Tool[] = [
     homepage: "https://code.visualstudio.com/docs/setup/vscode-web",
     url: "https://vscode.dev/github/{owner}/{repo}",
     icon: "https://code.visualstudio.com/assets/favicon.ico",
-    category: "Development Tools",
+    category: ToolCategories.DEVELOPMENT,
     iframe: false,
   },
   {
@@ -65,7 +71,7 @@ export const GithubToolsList: Tool[] = [
     homepage: "https://gitingest.com/",
     url: "https://gitingest.com/{owner}/{repo}",
     icon: "https://gitingest.com/static/favicon.ico",
-    category: "Analytics & Insights",
+    category: ToolCategories.ANALYTICS,
     iframe: true,
   },
   {
@@ -75,7 +81,7 @@ export const GithubToolsList: Tool[] = [
     homepage: "https://uithub.com/",
     url: "https://uithub.com/{owner}/{repo}",
     icon: "https://uithub.com/favicon-32x32.png",
-    category: "Analytics & Insights",
+    category: ToolCategories.ANALYTICS,
     iframe: false,
   },
   {
@@ -86,7 +92,7 @@ export const GithubToolsList: Tool[] = [
     homepage: "https://www.gitpodcast.com/",
     url: "https://www.gitpodcast.com/{owner}/{repo}",
     icon: "https://www.gitpodcast.com/favicon.ico",
-    category: "Analytics & Insights",
+    category: ToolCategories.ANALYTICS,
     iframe: true,
   },
   {
@@ -96,7 +102,7 @@ export const GithubToolsList: Tool[] = [
     homepage: "https://socialify.git.ci/",
     url: "https://socialify.git.ci/{owner}/{repo}",
     icon: "https://socialify.git.ci/favicon.ico",
-    category: "Widgets & UI",
+    category: ToolCategories.WIDGETS,
     iframe: true,
   },
   {
@@ -107,7 +113,7 @@ export const GithubToolsList: Tool[] = [
     homepage: "https://gitsummarize.com/",
     url: "https://gitsummarize.com/{owner}/{repo}",
     icon: "https://gitsummarize.com/favicon.ico",
-    category: "Analytics & Insights",
+    category: ToolCategories.ANALYTICS,
     iframe: true,
   },
   {
@@ -117,7 +123,7 @@ export const GithubToolsList: Tool[] = [
     homepage: "https://explaingithub.com/",
     url: "https://explaingithub.com/{owner}/{repo}",
     icon: "https://explaingithub.com/favicon.ico",
-    category: "Analytics & Insights",
+    category: ToolCategories.ANALYTICS,
     iframe: false,
   },
   {
@@ -127,18 +133,131 @@ export const GithubToolsList: Tool[] = [
     homepage: "https://www.gituml.com/",
     url: "https://www.gituml.com/ztree_scratchpad?user={owner}&repo={repo}&commit={default_branch}&repo-brand=github",
     icon: "https://www.gituml.com/favicon.ico",
-    category: "Analytics & Insights",
+    category: ToolCategories.ANALYTICS,
     iframe: false,
   },
   {
-    name: "googlecolab", 
+    name: "googlecolab",
     title: "Google Colaboratory",
     description:
       "Colaboratory is a research tool for machine learning education and research.",
     homepage: "https://colab.research.google.com/",
-    url: "https://colab.research.google.com/github/{owner}/{repo}", // githubtocolab.com/{owner}/{repo}
+    url: "https://colab.research.google.com/github/{owner}/{repo}",
     icon: "https://ssl.gstatic.com/colaboratory-static/common/8e5fae8429764217c8c60f7f0fea86be/img/favicon.ico",
-    category: "Development Tools",
+    category: ToolCategories.DEVELOPMENT,
     iframe: false,
+  },
+  {
+    name: "bolt",
+    title: "Bolt.new",
+    description: "Prompt, run, edit, and deploy full-stack web applications.",
+    homepage: "https://bolt.new/",
+    url: "https://bolt.new/~/github.com/{owner}/{repo}",
+    icon: "https://bolt.new/static/favicon.svg",
+    category: ToolCategories.DEVELOPMENT,
+    iframe: false,
+  },
+  {
+    name: "codesandbox",
+    title: "CodeSandbox",
+    description: "Sandboxes built for scale.",
+    homepage: "https://codesandbox.io/",
+    url: "https://codesandbox.io/p/devbox/github/{owner}/{repo}",
+    icon: "https://codesandbox.io/favicon.ico",
+    category: ToolCategories.DEVELOPMENT,
+    iframe: true,
+  },
+  {
+    name: "repo-surf",
+    title: "Repo Surf",
+    description:
+      "repo-surf is a repository viewer that lets you dive through its commits and branches.",
+    homepage: "https://repo.surf/",
+    url: "https://repo.surf/{owner}/{repo}",
+    icon: "https://repo.surf/favicon.ico",
+    category: ToolCategories.ANALYTICS,
+    iframe: false,
+  },
+  {
+    name: "star-history",
+    title: "GitHub Star History",
+    description:
+      "View and compare GitHub star history graph of open source projects.",
+    homepage: "https://www.star-history.com/",
+    url: "https://www.star-history.com/#{owner}/{repo}",
+    icon: "https://www.star-history.com/assets/favicon.ico",
+    category: ToolCategories.WIDGETS,
+    iframe: true,
+  },
+  {
+    name: "githubnext",
+    title: "GitHubNext",
+    description: "Visualizing a Codebase.",
+    homepage: "https://githubnext.com/projects/repo-visualization/",
+    url: "https://mango-dune-07a8b7110.1.azurestaticapps.net/?repo={owner}%2F{repo}",
+    icon: "https://githubnext.com/assets/images/next-octocat.svg",
+    category: ToolCategories.ANALYTICS,
+    iframe: true,
+  },
+  {
+    name: "github.gg",
+    title: "GitHub.gg",
+    description:
+      "Analyze GitHub repositories with insights about code quality, dependencies, and more.",
+    homepage: "https://github.gg/",
+    url: "https://github.gg/{owner}/{repo}",
+    icon: "https://github.gg/static/images/favicon/favicon-32x32.png",
+    category: ToolCategories.ANALYTICS,
+    iframe: true,
+  },
+  {
+    name: "chatforgithub",
+    title: "chatforgithub",
+    description: "Context-driven LLM Interface.",
+    homepage: "https://chat.forgithub.com/",
+    url: "https://chat.forgithub.com/{owner}/{repo}",
+    icon: "https://chat.forgithub.com/favicon.ico",
+    category: ToolCategories.ANALYTICS,
+    iframe: false,
+  },
+  {
+    name: "entelligence",
+    title: "Entelligence.ai",
+    description: "Empower and uplevel your engineering team",
+    homepage: "https://www.entelligence.ai/",
+    url: "https://www.entelligence.ai/{owner}/{repo}",
+    icon: "https://www.entelligence.ai/assets/ent_logo_new_dark_mode.svg",
+    category: ToolCategories.ANALYTICS,
+    iframe: false,
+  },
+  {
+    name: "git1file",
+    title: "git1file",
+    description: "Compress & Transform Git Repositories for AI",
+    homepage: "https://git1file.com/",
+    url: "https://git1file.com/{owner}/{repo}",
+    icon: "https://git1file.com/favicon.ico",
+    category: ToolCategories.ANALYTICS,
+    iframe: true,
+  },
+  {
+    name: "gitmcp",
+    title: "GitMCP",
+    description: "Instantly create a Remote MCP server for any GitHub project",
+    homepage: "https://gitmcp.io/",
+    url: "https://gitmcp.io/{owner}/{repo}",
+    icon: "https://gitmcp.io//img/icon_black_cropped.png",
+    category: ToolCategories.ANALYTICS,
+    iframe: true,
+  },
+  {
+    name: "flatgithub",
+    title: "Flat Github",
+    description: "Instantly create a Remote MCP server for any GitHub project",
+    homepage: "https://flatgithub.com/",
+    url: "https://flatgithub.com/{owner}/{repo}",
+    icon: "https://flatgithub.com/favicon-32x32.png",
+    category: ToolCategories.ANALYTICS,
+    iframe: true,
   },
 ];
