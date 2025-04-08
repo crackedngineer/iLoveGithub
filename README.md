@@ -54,6 +54,7 @@
 | [**Github Dev**](https://github.dev)                                              | Open any GitHub repo in a browser-based VS Code editor.     | [`github.dev/{owner}/{repo}`](https://github.dev/{owner}/{repo})                                   |
 | [**StackBlitz**](https://stackblitz.com/)                                         | Turn text into working web apps..                           | [`stackblitz.com/~/github.com/{owner}/{repo}`](https://stackblitz.com/~/github.com/{owner}/{repo}) |
 | [**Visual Studio Code Web**](https://code.visualstudio.com/docs/setup/vscode-web) | Edit projects using the full VS Code experience in-browser. | [`vscode.dev/github/{owner}/{repo}`](https://vscode.dev/github/{owner}/{repo})                     |
+| [**Google Colaboratory**](https://colab.research.google.com/) | Colaboratory is a research tool for machine learning education and research. | [`colab.research.google.com/github/{owner}/{repo}`](https://colab.research.google.com/github/{owner}/{repo})                     |
 
 ### 📊 Analytics & Insights
 
@@ -65,6 +66,7 @@
 | [**GitSummarize**](https://gitsummarize.com/)   | Turn any GitHub repository into a comprehensive AI-powered documentation hub.                                    | [`gitsummarize.com/{owner}/{repo}`](https://gitsummarize.com/{owner}/{repo})   |
 | [**ExplainGithub**](https://explaingithub.com/) | Understand complex codebases with AI.                              | [`explaingithub.com/{owner}/{repo}`](https://explaingithub.com/{owner}/{repo}) |
 | [**uithub**](https://uithub.com/)               | Easily Ask Your LLM Coding Questions.                                       | [`uithub.com/{owner}/{repo}`](https://uithub.com/{owner}/{repo})               |
+| [**GitUML**](https://www.gituml.com/)               | UML visualisation for Git repositories.                                       | [`gituml.com/ztree_scratchpad?user={owner}&repo={repo}&commit={default_branch}&repo-brand=github`](https://www.gituml.com/ztree_scratchpad?user={owner}&repo={repo}&commit={default_branch}&repo-brand=github)               |
 
 ### 🧩 Widgets & UI Enhancers
 

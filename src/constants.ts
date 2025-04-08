@@ -130,4 +130,15 @@ export const GithubToolsList: Tool[] = [
     category: "Analytics & Insights",
     iframe: false,
   },
+  {
+    name: "googlecolab", 
+    title: "Google Colaboratory",
+    description:
+      "Colaboratory is a research tool for machine learning education and research.",
+    homepage: "https://colab.research.google.com/",
+    url: "https://colab.research.google.com/github/{owner}/{repo}", // githubtocolab.com/{owner}/{repo}
+    icon: "https://ssl.gstatic.com/colaboratory-static/common/8e5fae8429764217c8c60f7f0fea86be/img/favicon.ico",
+    category: "Development Tools",
+    iframe: false,
+  },
 ];
