@@ -1,0 +1,72 @@
+name: 🚀 Suggest a New GitHub Tool
+description: Propose a new GitHub-related tool to be added to the curated list
+title: "[Tool Request] <Tool Name>"
+labels: [tool-request, enhancement]
+body:
+  - type: input
+    id: tool-name
+    attributes:
+      label: Tool Name
+      placeholder: "e.g., GitHub1s"
+    validations:
+      required: true
+
+  - type: input
+    id: homepage
+    attributes:
+      label: Tool Homepage
+      placeholder: "https://github1s.com"
+    validations:
+      required: true
+
+  - type: input
+    id: url-pattern
+    attributes:
+      label: URL pattern with placeholders
+      placeholder: "https://github1s.com/{owner}/{repo}"
+    validations:
+      required: true
+
+  - type: input
+    id: icon-url
+    attributes:
+      label: Icon URL
+      placeholder: "https://github1s.com/favicon.ico"
+    validations:
+      required: true
+
+  - type: textarea
+    id: description
+    attributes:
+      label: Description
+      placeholder: "One second to read GitHub code with VS Code."
+    validations:
+      required: true
+
+  - type: dropdown
+    id: category
+    attributes:
+      label: Category
+      options:
+        - Development Tools
+        - Analytics & Insights
+        - Widgets & UI
+        - Other
+    validations:
+      required: true
+
+  - type: dropdown
+    id: iframe
+    attributes:
+      label: Should this open inside an iframe?
+      options:
+        - true
+        - false
+    validations:
+      required: true
+
+  - type: textarea
+    id: notes
+    attributes:
+      label: Additional Notes
+      placeholder: "Any extra context?"

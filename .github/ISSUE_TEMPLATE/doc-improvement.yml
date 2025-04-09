@@ -1,0 +1,20 @@
+name: 📝 Documentation Improvement
+description: Suggest changes to the README, contributing guide, etc.
+title: "[Docs] <Suggestion>"
+labels: [documentation]
+body:
+  - type: textarea
+    id: what-doc
+    attributes:
+      label: What documentation needs updating?
+      placeholder: "README, code comments, issue templates, etc."
+    validations:
+      required: true
+
+  - type: textarea
+    id: suggestion
+    attributes:
+      label: What should be changed?
+      placeholder: "What should be updated or added?"
+    validations:
+      required: true

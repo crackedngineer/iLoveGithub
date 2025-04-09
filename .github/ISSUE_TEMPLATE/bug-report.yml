@@ -1,0 +1,40 @@
+name: 🐛 Bug Report
+description: Report a bug or issue with the current codebase
+title: "[Bug] <Short description>"
+labels: [bug]
+body:
+  - type: textarea
+    id: what-happened
+    attributes:
+      label: Describe the bug
+      placeholder: "A clear and concise description of what went wrong..."
+    validations:
+      required: true
+
+  - type: textarea
+    id: steps
+    attributes:
+      label: Steps to reproduce
+      placeholder: "1. Go to...\n2. Click on...\n3. See error..."
+    validations:
+      required: true
+
+  - type: input
+    id: environment
+    attributes:
+      label: Environment
+      placeholder: "Browser, OS, etc. (e.g., Chrome 122 on macOS)"
+    validations:
+      required: false
+
+  - type: textarea
+    id: screenshots
+    attributes:
+      label: Screenshots (if applicable)
+      placeholder: "Drag and drop a screenshot or paste image link here."
+
+  - type: textarea
+    id: suggestion
+    attributes:
+      label: Suggested Fix (optional)
+      placeholder: "Any ideas on what might fix it?"
