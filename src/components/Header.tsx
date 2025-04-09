@@ -20,25 +20,26 @@ const Header = () => {
         </Link>
 
         {/* Desktop Navigation */}
-        <div className="hidden md:flex items-center gap-4">
-          {/* <Button
+        <div className="hidden md:flex items-center gap-2 sm:gap-4">
+          <Button
             variant="ghost"
             size="sm"
-            className="text-github-gray dark:text-gray-300 hover:text-github-blue dark:hover:text-white"
+            className="text-github-gray dark:text-gray-300 hover:text-github-blue dark:hover:text-white transition-colors"
             onClick={() =>
               window.open(
-                "https://github.com/subhomoy-roy-choudhury/iLoveGithub?tab=readme-ov-file#-curated-github-tools",
+                "https://github.com/subhomoy-roy-choudhury/iLoveGithub/issues/new?template=new-tool-request.yml",
                 "_blank",
                 "noopener,noreferrer"
               )
             }
           >
-            Curated Tools
-          </Button> */}
+            Submit a Tool
+          </Button>
+
           <Button
             variant="ghost"
             size="sm"
-            className="text-github-gray dark:text-gray-300 hover:text-github-blue dark:hover:text-white"
+            className="text-github-gray dark:text-gray-300 hover:text-github-blue dark:hover:text-white transition-colors"
             onClick={() =>
               window.open(
                 "https://github.com/subhomoy-roy-choudhury/iLoveGithub",
@@ -49,14 +50,16 @@ const Header = () => {
           >
             GitHub
           </Button>
+
           <a
             href="https://buymeacoffee.com/subhomoyrca"
             target="_blank"
             rel="noopener noreferrer"
           >
             <Button
+              size="sm"
               variant="outline"
-              className="bg-github-pink text-white hover:bg-github-darkPink transition"
+              className="bg-github-pink text-white hover:bg-github-darkPink border-none rounded-full px-4 transition-colors"
             >
               Donate ❤️
             </Button>
@@ -72,6 +75,7 @@ const Header = () => {
           {isMenuOpen ? <X className="w-6 h-6" /> : <Menu className="w-6 h-6" />}
         </button>
       </div>
+
 
       {/* Mobile Dropdown Menu */}
       {isMenuOpen && (
