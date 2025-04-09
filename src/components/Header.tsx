@@ -3,6 +3,7 @@ import React, { useState } from "react";
 import Link from "next/link";
 import { Github, Heart, Menu, X } from "lucide-react";
 import { Button } from "@/components/ui/button";
+import { appVersion } from '@/lib/version';
 
 const Header = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -17,6 +18,7 @@ const Header = () => {
           <span className="text-lg sm:text-xl font-bold text-github-gray dark:text-white">
             iLoveGithub
           </span>
+          <span className="text-xs text-gray-400 dark:text-gray-500 mt-0.5">v{appVersion}</span>
         </Link>
 
         {/* Desktop Navigation */}
