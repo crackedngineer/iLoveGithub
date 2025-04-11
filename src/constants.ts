@@ -253,7 +253,7 @@ export const GithubToolsList: Tool[] = [
   {
     name: "flatgithub",
     title: "Flat Github",
-    description: "Instantly create a Remote MCP server for any GitHub project",
+    description: "A simple tool for exploring flat data files in GitHub repositories.",
     homepage: "https://flatgithub.com/",
     url: "https://flatgithub.com/{owner}/{repo}",
     icon: "https://flatgithub.com/favicon-32x32.png",
