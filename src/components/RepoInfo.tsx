@@ -80,7 +80,7 @@ const RepoInfo = ({ repo }: { repo: RepoData }) => {
               {repo.name}
               <Badge
                 variant="outline"
-                className="ml-2 bg-github-lightGray text-github-gray"
+                className="ml-2 bg-github-light-gray text-github-gray"
               >
                 Public
               </Badge>
@@ -107,7 +107,7 @@ const RepoInfo = ({ repo }: { repo: RepoData }) => {
         <p className="text-gray-700 dark:text-gray-300 mb-6">{repo.description}</p>
 
         <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-4 mb-6">
-          <div className="flex items-center gap-2 bg-github-lightGray dark:bg-gray-800 p-3 rounded-md">
+          <div className="flex items-center gap-2 bg-github-light-gray dark:bg-gray-800 p-3 rounded-md">
             <Star className="text-yellow-500" size={20} />
             <div>
               <p className="text-xl font-semibold">
@@ -117,7 +117,7 @@ const RepoInfo = ({ repo }: { repo: RepoData }) => {
             </div>
           </div>
 
-          <div className="flex items-center gap-2 bg-github-lightGray dark:bg-gray-800 p-3 rounded-md">
+          <div className="flex items-center gap-2 bg-github-light-gray dark:bg-gray-800 p-3 rounded-md">
             <GitFork className="text-github-blue" size={20} />
             <div>
               <p className="text-xl font-semibold">
@@ -127,7 +127,7 @@ const RepoInfo = ({ repo }: { repo: RepoData }) => {
             </div>
           </div>
 
-          <div className="flex items-center gap-2 bg-github-lightGray dark:bg-gray-800 p-3 rounded-md">
+          <div className="flex items-center gap-2 bg-github-light-gray dark:bg-gray-800 p-3 rounded-md">
             <Eye className="text-purple-500" size={20} />
             <div>
               <p className="text-xl font-semibold">

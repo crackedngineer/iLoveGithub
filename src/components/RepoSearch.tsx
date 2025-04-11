@@ -85,7 +85,7 @@ const RepoSearch = ({
                 placeholder="Enter GitHub repository URL (e.g., https://github.com/user/repo)"
                 value={repoUrl}
                 onChange={(e) => setRepoUrl(e.target.value)}
-                className="pr-10 h-12 w-full bg-github-lightGray dark:bg-gray-800 border-gray-300 dark:border-gray-700"
+                className="pr-10 h-12 bg-github-light-gray dark:bg-gray-800 border-gray-300 dark:border-gray-700"
               />
               <Search
                 className="absolute right-3 top-1/2 transform -translate-y-1/2 text-gray-400"

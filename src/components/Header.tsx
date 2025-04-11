@@ -97,6 +97,20 @@ const Header = () => {
           </Button> */}
           <Button
             variant="ghost"
+            size="sm"
+            className="w-full justify-start text-github-gray dark:text-gray-300 hover:text-github-blue dark:hover:text-white"
+            onClick={() =>
+              window.open(
+                "https://github.com/subhomoy-roy-choudhury/iLoveGithub/issues/new?template=new-tool-request.yml",
+                "_blank",
+                "noopener,noreferrer"
+              )
+            }
+          >
+            Submit a Tool
+          </Button>
+          <Button
+            variant="ghost"
             className="w-full justify-start text-github-gray dark:text-gray-300 hover:text-github-blue dark:hover:text-white"
             onClick={() => {
               setIsMenuOpen(false);

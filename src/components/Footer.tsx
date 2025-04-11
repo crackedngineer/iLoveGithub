@@ -5,7 +5,7 @@ const Footer = () => {
   const currentYear = new Date().getFullYear();
 
   return (
-    <footer className="w-full py-6 px-4 sm:px-6 bg-github-lightGray dark:bg-github-darkBlue border-t border-gray-200 dark:border-gray-800">
+    <footer className="w-full py-6 px-4 sm:px-6 bg-github-light-gray dark:bg-github-darkBlue border-t border-gray-200 dark:border-gray-800">
       <div className="flex flex-col gap-y-4 md:flex-row md:justify-between md:items-center text-sm text-center md:text-left text-gray-500 dark:text-gray-400">
         {/* Copyright */}
         <p>&copy; {currentYear} iLoveGithub. All rights reserved.</p>
