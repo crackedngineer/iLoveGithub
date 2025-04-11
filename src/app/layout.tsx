@@ -15,9 +15,13 @@ const geistMono = Geist_Mono({
 export const metadata: Metadata = {
   title: "iLoveGithub",
   description: "Collection of GitHub tools ",
+  icons: {
+    icon: "/icons/favicon.png",
+  },
   openGraph: {
     title: "iLoveGithub",
-    description: "A curated collection of magical tools built around GitHub — open a repo in VS Code, visualize it, generate AI-powered summaries, convert it to a podcast, and so much more.",
+    description:
+      "A curated collection of magical tools built around GitHub — open a repo in VS Code, visualize it, generate AI-powered summaries, convert it to a podcast, and so much more.",
     url: "https://ilovegithub.oderna.in",
     siteName: "iLoveGithub",
     images: [
@@ -33,7 +37,8 @@ export const metadata: Metadata = {
   twitter: {
     card: "summary_large_image",
     title: "iLoveGithub",
-    description: "A curated collection of magical tools built around GitHub — open a repo in VS Code, visualize it, generate AI-powered summaries, convert it to a podcast, and so much more.",
+    description:
+      "A curated collection of magical tools built around GitHub — open a repo in VS Code, visualize it, generate AI-powered summaries, convert it to a podcast, and so much more.",
     images: ["https://ilovegithub.oderna.in/og-image.jpg"],
   },
 };

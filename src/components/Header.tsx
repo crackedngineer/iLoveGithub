@@ -1,9 +1,10 @@
 "use client";
 import React, { useState } from "react";
 import Link from "next/link";
-import { Github, Heart, Menu, X } from "lucide-react";
+import Image from "next/image";
+import { Menu, X } from "lucide-react";
 import { Button } from "@/components/ui/button";
-import { appVersion } from '@/lib/version';
+import { appVersion } from "@/lib/version";
 
 const Header = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -13,12 +14,18 @@ const Header = () => {
       <div className="max-w-7xl mx-auto px-4 sm:px-6 py-4 flex items-center justify-between">
         {/* Logo and Title */}
         <Link href="/" className="flex items-center gap-2 sm:gap-3">
-          <Github className="h-6 w-6 text-github-gray dark:text-white" />
-          <Heart className="h-5 w-5 text-red-500" />
+          <Image
+            alt="favicon"
+            src={"/icons/favicon.png"}
+            width={24}
+            height={24}
+          />
           <span className="text-lg sm:text-xl font-bold text-github-gray dark:text-white">
             iLoveGithub
           </span>
-          <span className="text-xs text-gray-400 dark:text-gray-500 mt-0.5">v{appVersion}</span>
+          <span className="text-xs text-gray-400 dark:text-gray-500 mt-0.5">
+            v{appVersion}
+          </span>
         </Link>
 
         {/* Desktop Navigation */}
@@ -74,10 +81,13 @@ const Header = () => {
           onClick={() => setIsMenuOpen((prev) => !prev)}
           aria-label="Toggle Menu"
         >
-          {isMenuOpen ? <X className="w-6 h-6" /> : <Menu className="w-6 h-6" />}
+          {isMenuOpen ? (
+            <X className="w-6 h-6" />
+          ) : (
+            <Menu className="w-6 h-6" />
+          )}
         </button>
       </div>
-
 
       {/* Mobile Dropdown Menu */}
       {isMenuOpen && (
