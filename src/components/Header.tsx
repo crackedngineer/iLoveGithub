@@ -1,16 +1,37 @@
 "use client";
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import Link from "next/link";
 import Image from "next/image";
-import { Menu, X } from "lucide-react";
+import { Menu, X, Sun, Moon } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { appVersion } from "@/lib/version";
 
 const Header = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
+  const [isDarkMode, setIsDarkMode] = useState(false);
+
+  useEffect(() => {
+    const savedTheme = localStorage.getItem("theme");
+    if (
+      savedTheme === "dark" ||
+      (!savedTheme && window.matchMedia("(prefers-color-scheme: dark)").matches)
+    ) {
+      document.documentElement.classList.add("dark");
+      setIsDarkMode(true);
+    } else {
+      document.documentElement.classList.remove("dark");
+      setIsDarkMode(false);
+    }
+  }, []);
+
+  const toggleTheme = () => {
+    const isDark = document.documentElement.classList.toggle("dark");
+    localStorage.setItem("theme", isDark ? "dark" : "light");
+    setIsDarkMode(isDark);
+  };
 
   return (
-    <header className="w-full bg-white dark:bg-github-darkBlue border-b border-gray-200 dark:border-gray-800 sticky top-0 z-50 shadow-sm">
+    <header className="w-full bg-white dark:bg-github-dark-blue border-b border-gray-200 dark:border-gray-700 sticky top-0 z-50 shadow-sm dark:shadow-md transition-colors duration-300">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 py-4 flex items-center justify-between">
         {/* Logo and Title */}
         <Link href="/" className="flex items-center gap-2 sm:gap-3">
@@ -20,7 +41,7 @@ const Header = () => {
             width={24}
             height={24}
           />
-          <span className="text-lg sm:text-xl font-bold text-github-gray dark:text-white">
+          <span className="text-lg sm:text-xl font-bold text-github-gray dark:text-white transition-colors">
             iLoveGithub
           </span>
           <span className="text-xs text-gray-400 dark:text-gray-500 mt-0.5">
@@ -33,12 +54,11 @@ const Header = () => {
           <Button
             variant="ghost"
             size="sm"
-            className="text-github-gray dark:text-gray-300 hover:text-github-blue dark:hover:text-white transition-colors"
+            className="text-github-gray dark:text-white/90 hover:text-github-blue dark:hover:text-white transition-colors"
             onClick={() =>
               window.open(
                 "https://github.com/subhomoy-roy-choudhury/iLoveGithub/issues/new?template=new-tool-request.yml",
-                "_blank",
-                "noopener,noreferrer"
+                "_blank"
               )
             }
           >
@@ -48,16 +68,32 @@ const Header = () => {
           <Button
             variant="ghost"
             size="sm"
-            className="text-github-gray dark:text-gray-300 hover:text-github-blue dark:hover:text-white transition-colors"
+            className="text-github-gray dark:text-white/90 hover:text-github-blue dark:hover:text-white transition-colors"
             onClick={() =>
               window.open(
                 "https://github.com/subhomoy-roy-choudhury/iLoveGithub",
-                "_blank",
-                "noopener,noreferrer"
+                "_blank"
               )
             }
           >
             GitHub
+          </Button>
+
+          {/* 🌙 Theme Toggle Button */}
+          <Button
+            variant="ghost"
+            size="icon"
+            onClick={toggleTheme}
+            className="text-github-gray dark:text-white/90 hover:text-github-blue dark:hover:text-white transition-colors duration-300"
+            aria-label="Toggle Theme"
+          >
+            <span className="transition-transform duration-300 ease-in-out transform hover:rotate-180">
+              {isDarkMode ? (
+                <Sun className="h-5 w-5" />
+              ) : (
+                <Moon className="h-5 w-5" />
+              )}
+            </span>
           </Button>
 
           <a
@@ -77,7 +113,7 @@ const Header = () => {
 
         {/* Mobile Menu Toggle */}
         <button
-          className="md:hidden p-2 text-github-gray dark:text-white focus:outline-none"
+          className="md:hidden p-2 text-github-gray dark:text-white focus:outline-none transition-colors"
           onClick={() => setIsMenuOpen((prev) => !prev)}
           aria-label="Toggle Menu"
         >
@@ -91,29 +127,15 @@ const Header = () => {
 
       {/* Mobile Dropdown Menu */}
       {isMenuOpen && (
-        <div className="md:hidden px-4 pb-4 flex flex-col gap-2 animate-slide-down">
-          {/* <Button
-            variant="ghost"
-            className="w-full justify-start text-github-gray dark:text-gray-300 hover:text-github-blue dark:hover:text-white"
-            onClick={() => {
-              setIsMenuOpen(false);
-              window.open(
-                "https://github.com/subhomoy-roy-choudhury/iLoveGithub?tab=readme-ov-file#-curated-github-tools",
-                "_blank"
-              );
-            }}
-          >
-            Curated Tools
-          </Button> */}
+        <div className="md:hidden px-4 pb-4 flex flex-col gap-2 animate-slide-down transition-colors">
           <Button
             variant="ghost"
             size="sm"
-            className="w-full justify-start text-github-gray dark:text-gray-300 hover:text-github-blue dark:hover:text-white"
+            className="w-full justify-start text-github-gray dark:text-white/90 hover:text-github-blue dark:hover:text-white"
             onClick={() =>
               window.open(
                 "https://github.com/subhomoy-roy-choudhury/iLoveGithub/issues/new?template=new-tool-request.yml",
-                "_blank",
-                "noopener,noreferrer"
+                "_blank"
               )
             }
           >
@@ -121,7 +143,7 @@ const Header = () => {
           </Button>
           <Button
             variant="ghost"
-            className="w-full justify-start text-github-gray dark:text-gray-300 hover:text-github-blue dark:hover:text-white"
+            className="w-full justify-start text-github-gray dark:text-white/90 hover:text-github-blue dark:hover:text-white"
             onClick={() => {
               setIsMenuOpen(false);
               window.open(
@@ -131,6 +153,14 @@ const Header = () => {
             }}
           >
             GitHub
+          </Button>
+          {/* 🌙 Theme Toggle for Mobile */}
+          <Button
+            variant="ghost"
+            className="w-full justify-start text-github-gray dark:text-white/90 hover:text-github-blue dark:hover:text-white"
+            onClick={toggleTheme}
+          >
+            {isDarkMode ? "Light Mode ☀️" : "Dark Mode 🌙"}
           </Button>
           <a
             href="https://buymeacoffee.com/subhomoyrca"
