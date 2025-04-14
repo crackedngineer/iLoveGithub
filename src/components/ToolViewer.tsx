@@ -1,14 +1,13 @@
 import React, { useEffect, useState } from "react";
 import Image from "next/image";
 import { ExternalLink, Coffee } from "lucide-react";
-import { RepoData } from "./RepoInfo";
 
 interface ToolViewerProps {
   url: string;
-  repoData: RepoData;
+  name: string;
 }
 
-const ToolViewer: React.FC<ToolViewerProps> = ({ url, repoData }) => {
+const ToolViewer: React.FC<ToolViewerProps> = ({ url, name }) => {
   const [bannerIndex, setBannerIndex] = useState(0);
 
   const bannerMessages = [
@@ -121,7 +120,7 @@ const ToolViewer: React.FC<ToolViewerProps> = ({ url, repoData }) => {
       <div className="flex-1 w-full">
         <iframe
           src={url}
-          title={`${repoData.name} tool`}
+          title={`${name} tool`}
           className="w-full h-full border-0"
           sandbox="allow-same-origin allow-scripts allow-popups allow-forms"
         />
