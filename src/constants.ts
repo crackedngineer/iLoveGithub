@@ -1,5 +1,11 @@
 import { Tool } from "./lib/types";
 
+export const RECENT_REPO_LOCAL_STORAGE_KEY = "recent_github_repos";
+
+export const RECENT_TRENDING_REPO_UI_MAXCOUNT = 4
+
+export const RECENT_TRENDING_REPO_CACHE_MAXCOUNT = 4
+
 export const DefaultGithubRepo = {
   owner: "subhomoy-roy-choudhury",
   repo: "iLoveGithub",

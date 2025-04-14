@@ -8,6 +8,10 @@ import RepoSearch from "@/components/RepoSearch";
 import AppLayout from "@/components/AppLayout";
 import { Introduction } from "@/components/Introduction";
 import { useParams } from "next/navigation";
+import {
+  RECENT_REPO_LOCAL_STORAGE_KEY,
+  RECENT_TRENDING_REPO_CACHE_MAXCOUNT,
+} from "@/constants";
 
 export default function RepoPage() {
   const router = useRouter();
@@ -19,11 +23,32 @@ export default function RepoPage() {
   const [error, setError] = useState<string | null>(null);
 
   useEffect(() => {
+    const CACHE_DURATION = 5 * 60 * 1000; // 5 minutes
+
     const fetchData = async (): Promise<void> => {
       setIsLoading(true);
       setError(null);
 
       try {
+        const stored = JSON.parse(
+          localStorage.getItem(RECENT_REPO_LOCAL_STORAGE_KEY) || "[]"
+        ) as RepoData[];
+
+        const cached = stored.find(
+          (r) => r.fullName.toLowerCase() === `${owner}/${repo}`.toLowerCase()
+        );
+
+        const isCacheValid =
+          cached &&
+          cached.cachedAt &&
+          Date.now() - cached.cachedAt < CACHE_DURATION;
+
+        if (isCacheValid) {
+          setRepoData(cached);
+          updateRecentRepos(cached); // refresh LRU order
+          return;
+        }
+
         const githubData = await fetchRepoDetails(owner, repo);
 
         const transformedData: RepoData = {
@@ -43,9 +68,18 @@ export default function RepoPage() {
         };
 
         setRepoData(transformedData);
-      } catch (error) {
+        updateRecentRepos(transformedData);
+      } catch (error: any) {
         console.error("Error fetching data:", error);
-        setError("Failed to load repository data. Please try again.");
+
+        if (
+          error?.response?.status === 403 ||
+          error?.message?.toLowerCase().includes("rate limit")
+        ) {
+          setError("GitHub API rate limit exceeded. Please try again later.");
+        } else {
+          setError("Failed to load repository data. Please try again.");
+        }
       } finally {
         setIsLoading(false);
       }
@@ -53,6 +87,24 @@ export default function RepoPage() {
 
     fetchData();
   }, [owner, repo]);
+
+  const updateRecentRepos = (details: RepoData) => {
+    const stored = JSON.parse(
+      localStorage.getItem(RECENT_REPO_LOCAL_STORAGE_KEY) || "[]"
+    ) as RepoData[];
+
+    const timestamped = { ...details, cachedAt: Date.now() };
+
+    const updated = [
+      timestamped,
+      ...stored.filter((r) => r.fullName !== details.fullName),
+    ].slice(0, RECENT_TRENDING_REPO_CACHE_MAXCOUNT);
+
+    localStorage.setItem(
+      RECENT_REPO_LOCAL_STORAGE_KEY,
+      JSON.stringify(updated)
+    );
+  };
 
   return (
     <AppLayout>
@@ -62,6 +114,7 @@ export default function RepoPage() {
         <RepoSearch
           key={`${owner}-${repo}-${Date.now()}`}
           value={`${owner}/${repo}`}
+          trending={false}
           onError={() => setError(null)}
           onRepoSubmit={(owner: string, repo: string) => {
             if (owner.trim() && repo.trim()) {
