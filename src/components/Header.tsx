@@ -11,17 +11,38 @@ const Header = () => {
   const [isDarkMode, setIsDarkMode] = useState(false);
 
   useEffect(() => {
-    const savedTheme = localStorage.getItem("theme");
-    if (
-      savedTheme === "dark" ||
-      (!savedTheme && window.matchMedia("(prefers-color-scheme: dark)").matches)
-    ) {
-      document.documentElement.classList.add("dark");
-      setIsDarkMode(true);
-    } else {
-      document.documentElement.classList.remove("dark");
-      setIsDarkMode(false);
-    }
+    const applyTheme = () => {
+      const savedTheme = localStorage.getItem("theme"); // Check if user has a saved theme preference
+
+      const systemPrefersDark = window.matchMedia(
+        "(prefers-color-scheme: dark)"
+      ).matches; // Check system-level dark mode setting
+
+      const currentHour = new Date().getHours(); // Get the current hour of the day (0–23)
+      const isEvening = currentHour >= 19 || currentHour < 7; // Consider dark mode between 7 PM and 7 AM
+
+      let finalTheme = "light"; // Default theme fallback
+
+      // Determine the final theme using user preference > system setting > time-based fallback
+      if (savedTheme === "dark" || savedTheme === "light") {
+        finalTheme = savedTheme;
+      } else if (systemPrefersDark) {
+        finalTheme = "dark";
+      } else if (isEvening) {
+        finalTheme = "dark";
+      }
+
+      // Apply the final theme and update state accordingly
+      if (finalTheme === "dark") {
+        document.documentElement.classList.add("dark");
+        setIsDarkMode(true);
+      } else {
+        document.documentElement.classList.remove("dark");
+        setIsDarkMode(false);
+      }
+    };
+
+    applyTheme(); // Run on component mount
   }, []);
 
   const toggleTheme = () => {
