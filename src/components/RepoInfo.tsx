@@ -7,6 +7,7 @@ import {
   Calendar,
   GitBranch,
   FileCode,
+  Info,
 } from "lucide-react";
 import {
   Card,
@@ -18,6 +19,7 @@ import {
 } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
 import { Badge } from "@/components/ui/badge";
+import { formatDistanceToNow } from "date-fns";
 
 export interface RepoData {
   name: string;
@@ -33,6 +35,7 @@ export interface RepoData {
   updatedAt: string;
   topics: string[];
   default_branch: string;
+  cachedAt?: number;
 }
 
 const calculateHealthScore = (repo: RepoData): number => {
@@ -94,22 +97,46 @@ const RepoInfo = ({ repo }: { repo: RepoData }) => {
 
   return (
     <Card className="w-full max-w-4xl mx-auto mt-8 animate-fade-in gap-[0px]">
-      <CardHeader className="pb-2">
-        <div className="flex flex-col sm:flex-row sm:justify-between sm:items-start gap-4">
+      <CardHeader className="pb-4">
+        <div className="flex flex-col sm:flex-row sm:justify-between sm:items-start gap-6">
           <div>
-            <CardTitle className="text-2xl font-bold flex items-center gap-2">
+            <CardTitle className="text-3xl font-semibold text-gray-800 dark:text-white flex items-center gap-3">
               {repo.name}
               <Badge
                 variant="outline"
-                className="ml-2 bg-github-light-gray text-github-gray"
+                className="bg-github-light-gray text-github-gray dark:bg-gray-700 dark:text-white"
               >
                 Public
               </Badge>
             </CardTitle>
-            <CardDescription className="text-gray-500 dark:text-gray-400 mt-1">
+            <CardDescription className="text-gray-600 dark:text-gray-300 mt-2">
               {repo.fullName}
             </CardDescription>
+
+            {/* Last Synced Section */}
+            {repo.cachedAt && (
+              <div className="mt-3 text-sm text-gray-500 dark:text-gray-400 flex items-center gap-2">
+                <Info size={14} className="text-gray-400 dark:text-gray-500" />
+                <span
+                  title={new Date(repo.cachedAt).toLocaleString("en-US", {
+                    year: "numeric",
+                    month: "short",
+                    day: "numeric",
+                    hour: "2-digit",
+                    minute: "2-digit",
+                  })}
+                  className="italic"
+                >
+                  Last synced{" "}
+                  {formatDistanceToNow(new Date(repo.cachedAt), {
+                    addSuffix: true,
+                  })}
+                </span>
+              </div>
+            )}
           </div>
+
+          {/* GitHub Button */}
           <Button
             variant="outline"
             size="sm"
@@ -198,20 +225,22 @@ const RepoInfo = ({ repo }: { repo: RepoData }) => {
           </div>
         </div>
 
-        <div className="mb-6">
-          <h3 className="text-sm font-medium mb-2">Topics:</h3>
-          <div className="flex flex-wrap gap-2">
-            {repo.topics.map((topic) => (
-              <Badge
-                key={topic}
-                variant="outline"
-                className="bg-blue-50 text-github-blue border-blue-200 dark:bg-blue-900 dark:text-blue-300 dark:border-blue-800"
-              >
-                {topic}
-              </Badge>
-            ))}
+        {repo.topics.length > 0 && (
+          <div className="mb-6">
+            <h3 className="text-sm font-medium mb-2">Topics:</h3>
+            <div className="flex flex-wrap gap-2">
+              {repo.topics.map((topic) => (
+                <Badge
+                  key={topic}
+                  variant="outline"
+                  className="bg-blue-50 text-github-blue border-blue-200 dark:bg-blue-900 dark:text-blue-300 dark:border-blue-800"
+                >
+                  {topic}
+                </Badge>
+              ))}
+            </div>
           </div>
-        </div>
+        )}
 
         <div className="mb-4">
           <div className="flex justify-between flex-wrap items-center gap-y-1 mb-1"></div>
