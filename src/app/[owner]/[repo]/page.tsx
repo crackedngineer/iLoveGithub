@@ -49,7 +49,14 @@ export default function RepoPage() {
           return;
         }
 
-        const githubData = await fetchRepoDetails(owner, repo);
+        const response = await fetch(`/api/repo?owner=${owner}&repo=${repo}`);
+
+        if (!response.ok) {
+          const errorData = await response.json();
+          throw new Error(errorData.error || "Failed to load data");
+        }
+
+        const githubData = await response.json();
 
         const transformedData: RepoData = {
           name: githubData.name,
@@ -73,8 +80,8 @@ export default function RepoPage() {
         console.error("Error fetching data:", error);
 
         if (
-          error?.response?.status === 403 ||
-          error?.message?.toLowerCase().includes("rate limit")
+          error.message?.includes("rate limit") ||
+          error.message?.toLowerCase().includes("too many requests")
         ) {
           setError("GitHub API rate limit exceeded. Please try again later.");
         } else {
