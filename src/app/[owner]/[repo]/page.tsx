@@ -1,13 +1,11 @@
 "use client";
 import { useState, useEffect } from "react";
-import { useRouter } from "next/navigation";
+import { useRouter, useParams } from "next/navigation";
 import RepoInfo, { RepoData } from "@/components/RepoInfo";
 import GitHubTools from "@/components/GitHubTools";
-import { fetchRepoDetails } from "@/services/githubService";
 import RepoSearch from "@/components/RepoSearch";
 import AppLayout from "@/components/AppLayout";
 import { Introduction } from "@/components/Introduction";
-import { useParams } from "next/navigation";
 import {
   RECENT_REPO_LOCAL_STORAGE_KEY,
   RECENT_TRENDING_REPO_CACHE_MAXCOUNT,
@@ -20,7 +18,7 @@ export default function RepoPage() {
 
   const [repoData, setRepoData] = useState<RepoData | null>(null);
   const [isLoading, setIsLoading] = useState<boolean>(true);
-  const [error, setError] = useState<string | null>(null);
+  const [error, setError] = useState<"rate-limit" | "generic" | null>(null);
 
   useEffect(() => {
     const CACHE_DURATION = 5 * 60 * 1000; // 5 minutes
@@ -52,6 +50,9 @@ export default function RepoPage() {
         const response = await fetch(`/api/repo?owner=${owner}&repo=${repo}`);
 
         if (!response.ok) {
+          if (response.status === 429) {
+            throw new Error("rate limit");
+          }
           const errorData = await response.json();
           throw new Error(errorData.error || "Failed to load data");
         }
@@ -79,13 +80,10 @@ export default function RepoPage() {
       } catch (error: any) {
         console.error("Error fetching data:", error);
 
-        if (
-          error.message?.includes("rate limit") ||
-          error.message?.toLowerCase().includes("too many requests")
-        ) {
-          setError("GitHub API rate limit exceeded. Please try again later.");
+        if (error.message?.includes("rate limit")) {
+          setError("rate-limit");
         } else {
-          setError("Failed to load repository data. Please try again.");
+          setError("generic");
         }
       } finally {
         setIsLoading(false);
@@ -140,9 +138,29 @@ export default function RepoPage() {
           </div>
         )}
 
-        {error && (
+        {/* Rate limit error UI */}
+        {error === "rate-limit" && (
+          <div className="w-full max-w-xl mx-auto mt-12 p-8 bg-white dark:bg-gray-900 text-gray-900 dark:text-gray-100 border border-gray-200 dark:border-gray-700 rounded-2xl shadow-lg text-center">
+            <h2 className="text-xl sm:text-2xl font-semibold mb-3">
+              🚀 Join to Continue
+            </h2>
+            <p className="text-base sm:text-lg mb-6">
+              Please log in with GitHub to use the application. It's completely
+              free.
+            </p>
+            <button
+              onClick={() => router.push("/auth/github")}
+              className="px-5 py-2.5 bg-black text-white rounded-full hover:bg-gray-800 transition"
+            >
+              Login with GitHub
+            </button>
+          </div>
+        )}
+
+        {/* Generic error fallback */}
+        {error === "generic" && (
           <div className="w-full max-w-4xl mx-auto mt-8 p-4 bg-red-100 text-red-800 border border-red-300 rounded-md text-center text-sm sm:text-base">
-            {error}
+            Failed to load repository data. Please try again.
           </div>
         )}
 
