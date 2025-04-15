@@ -3,7 +3,6 @@ import { useState, useEffect } from "react";
 import { useRouter } from "next/navigation";
 import RepoInfo, { RepoData } from "@/components/RepoInfo";
 import GitHubTools from "@/components/GitHubTools";
-import { fetchRepoDetails } from "@/services/githubService";
 import RepoSearch from "@/components/RepoSearch";
 import AppLayout from "@/components/AppLayout";
 import { Introduction } from "@/components/Introduction";
