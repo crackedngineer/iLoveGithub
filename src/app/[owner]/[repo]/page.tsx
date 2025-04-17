@@ -1,4 +1,5 @@
 "use client";
+import axios from "axios";
 import { useState, useEffect } from "react";
 import { useRouter, useParams } from "next/navigation";
 import RepoInfo, { RepoData } from "@/components/RepoInfo";
@@ -10,8 +11,10 @@ import {
   RECENT_REPO_LOCAL_STORAGE_KEY,
   RECENT_TRENDING_REPO_CACHE_MAXCOUNT,
 } from "@/constants";
+import { useSession, signIn, getSession } from "next-auth/react";
 
 export default function RepoPage() {
+  const { data: session, status } = useSession();
   const router = useRouter();
   const params = useParams() as { owner: string; repo: string };
   const { owner, repo } = params;
@@ -19,79 +22,82 @@ export default function RepoPage() {
   const [repoData, setRepoData] = useState<RepoData | null>(null);
   const [isLoading, setIsLoading] = useState<boolean>(true);
   const [error, setError] = useState<"rate-limit" | "generic" | null>(null);
+  const [isSigningIn, setIsSigningIn] = useState<boolean>(false); // New state for sign-in loading
 
   useEffect(() => {
-    const CACHE_DURATION = 5 * 60 * 1000; // 5 minutes
+    if (status === "unauthenticated" && !isSigningIn) {
+      setIsSigningIn(true);  // Trigger signing in state
+      signIn("github", { callbackUrl: window.location.href });
+      return;
+    }
 
-    const fetchData = async (): Promise<void> => {
-      setIsLoading(true);
-      setError(null);
+    if (status === "authenticated") {
+      fetchRepoData();
+    }
+  }, [owner, repo, status]); // Trigger on session change
 
-      try {
-        const stored = JSON.parse(
-          localStorage.getItem(RECENT_REPO_LOCAL_STORAGE_KEY) || "[]"
-        ) as RepoData[];
+  const fetchRepoData = async (): Promise<void> => {
+    setIsLoading(true);
+    setError(null);
 
-        const cached = stored.find(
-          (r) => r.fullName.toLowerCase() === `${owner}/${repo}`.toLowerCase()
-        );
+    try {
+      const stored: RepoData[] = JSON.parse(
+        localStorage.getItem(RECENT_REPO_LOCAL_STORAGE_KEY) || "[]"
+      );
+      const fullName = `${owner}/${repo}`.toLowerCase();
+      const cached = stored.find(
+        (r) => r.fullName.toLowerCase() === fullName
+      );
 
-        const isCacheValid =
-          cached &&
-          cached.cachedAt &&
-          Date.now() - cached.cachedAt < CACHE_DURATION;
+      const isCacheValid =
+        cached?.cachedAt && Date.now() - cached.cachedAt < 5 * 60 * 1000; // 5 minutes cache validity
 
-        if (isCacheValid) {
-          setRepoData(cached);
-          updateRecentRepos(cached); // refresh LRU order
-          return;
-        }
-
-        const response = await fetch(`/api/repo?owner=${owner}&repo=${repo}`);
-
-        if (!response.ok) {
-          if (response.status === 429) {
-            throw new Error("rate limit");
-          }
-          const errorData = await response.json();
-          throw new Error(errorData.error || "Failed to load data");
-        }
-
-        const githubData = await response.json();
-
-        const transformedData: RepoData = {
-          name: githubData.name,
-          owner: owner,
-          fullName: githubData.full_name,
-          description: githubData.description || "No description provided",
-          url: githubData.html_url,
-          stars: githubData.stargazers_count,
-          forks: githubData.forks_count,
-          watchers: githubData.watchers_count,
-          language: githubData.language || "Not specified",
-          createdAt: githubData.created_at,
-          updatedAt: githubData.updated_at,
-          topics: githubData.topics || [],
-          default_branch: githubData.default_branch,
-        };
-
-        setRepoData(transformedData);
-        updateRecentRepos(transformedData);
-      } catch (error: any) {
-        console.error("Error fetching data:", error);
-
-        if (error.message?.includes("rate limit")) {
-          setError("rate-limit");
-        } else {
-          setError("generic");
-        }
-      } finally {
-        setIsLoading(false);
+      if (isCacheValid && cached) {
+        setRepoData(cached);
+        updateRecentRepos(cached); // Refresh LRU
+        return;
       }
-    };
 
-    fetchData();
-  }, [owner, repo]);
+      // Get token from NextAuth session
+      const session = await getSession();
+      const token = session?.accessToken;
+
+      const response = await axios.get(
+        `/api/repo?owner=${owner}&repo=${repo}`,
+        {
+          headers: token ? { Authorization: `Bearer ${token}` } : {},
+        }
+      );
+
+      const githubData = response.data;
+
+      const transformedData: RepoData = {
+        name: githubData.name,
+        owner,
+        fullName: githubData.full_name,
+        description: githubData.description || "No description provided",
+        url: githubData.html_url,
+        stars: githubData.stargazers_count,
+        forks: githubData.forks_count,
+        watchers: githubData.watchers_count,
+        language: githubData.language || "Not specified",
+        createdAt: githubData.created_at,
+        updatedAt: githubData.updated_at,
+        topics: githubData.topics || [],
+        default_branch: githubData.default_branch,
+        cachedAt: Date.now(),
+      };
+
+      setRepoData(transformedData);
+      updateRecentRepos(transformedData);
+    } catch (error) {
+      console.error("Error fetching data:", error);
+      setError("generic");
+    } finally {
+      setIsLoading(false);
+      setIsSigningIn(false);  // Reset sign-in loading state after fetching data
+    }
+  };
 
   const updateRecentRepos = (details: RepoData) => {
     const stored = JSON.parse(
@@ -138,39 +144,29 @@ export default function RepoPage() {
           </div>
         )}
 
-        {/* Rate limit error UI */}
-        {error === "rate-limit" && (
-          <div className="w-full max-w-xl mx-auto mt-12 p-8 bg-white dark:bg-gray-900 text-gray-900 dark:text-gray-100 border border-gray-200 dark:border-gray-700 rounded-2xl shadow-lg text-center">
-            <h2 className="text-xl sm:text-2xl font-semibold mb-3">
-              🚀 Join to Continue
-            </h2>
-            <p className="text-base sm:text-lg mb-6">
-              Please log in with GitHub to use the application. It's completely
-              free.
+        {isSigningIn && !isLoading && !repoData && (
+          <div className="w-full text-center">
+            <p className="text-xl">Signing in to GitHub...</p>
+          </div>
+        )}
+
+        {error && (
+          <div className="text-center text-red-500">
+            <p>
+              Oops, something went wrong. Please try again later.
             </p>
-            <button
-              onClick={() => router.push("/auth/github")}
-              className="px-5 py-2.5 bg-black text-white rounded-full hover:bg-gray-800 transition"
-            >
-              Login with GitHub
-            </button>
           </div>
         )}
 
-        {/* Generic error fallback */}
-        {error === "generic" && (
-          <div className="w-full max-w-4xl mx-auto mt-8 p-4 bg-red-100 text-red-800 border border-red-300 rounded-md text-center text-sm sm:text-base">
-            Failed to load repository data. Please try again.
-          </div>
-        )}
-
-        {!isLoading && !error && repoData && <RepoInfo repo={repoData} />}
         {!isLoading && !error && repoData && (
-          <GitHubTools
-            owner={repoData.owner}
-            repo={repoData.name}
-            default_branch={repoData.default_branch}
-          />
+          <>
+            <RepoInfo repo={repoData} />
+            <GitHubTools
+              owner={repoData.owner}
+              repo={repoData.name}
+              default_branch={repoData.default_branch}
+            />
+          </>
         )}
       </main>
     </AppLayout>
