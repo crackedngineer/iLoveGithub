@@ -1,4 +1,5 @@
 "use client";
+
 import React, { useState, useEffect } from "react";
 import Link from "next/link";
 import Image from "next/image";
@@ -16,43 +17,12 @@ import {
 } from "@/components/ui/dropdown-menu";
 
 const Header = () => {
-  const { data: session, status } = useSession();
+  const { data: session } = useSession();
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   const [isDarkMode, setIsDarkMode] = useState(false);
 
   useEffect(() => {
-    const applyTheme = () => {
-      const savedTheme = localStorage.getItem("theme"); // Check if user has a saved theme preference
-
-      const systemPrefersDark = window.matchMedia(
-        "(prefers-color-scheme: dark)"
-      ).matches; // Check system-level dark mode setting
-
-      const currentHour = new Date().getHours(); // Get the current hour of the day (0–23)
-      const isEvening = currentHour >= 19 || currentHour < 7; // Consider dark mode between 7 PM and 7 AM
-
-      let finalTheme = "light"; // Default theme fallback
-
-      // Determine the final theme using user preference > system setting > time-based fallback
-      if (savedTheme === "dark" || savedTheme === "light") {
-        finalTheme = savedTheme;
-      } else if (systemPrefersDark) {
-        finalTheme = "dark";
-      } else if (isEvening) {
-        finalTheme = "dark";
-      }
-
-      // Apply the final theme and update state accordingly
-      if (finalTheme === "dark") {
-        document.documentElement.classList.add("dark");
-        setIsDarkMode(true);
-      } else {
-        document.documentElement.classList.remove("dark");
-        setIsDarkMode(false);
-      }
-    };
-
-    applyTheme(); // Run on component mount
+    setIsDarkMode(document.documentElement.classList.contains("dark"));
   }, []);
 
   const toggleTheme = () => {
@@ -64,7 +34,6 @@ const Header = () => {
   return (
     <header className="w-full bg-white dark:bg-github-dark-blue border-b border-gray-200 dark:border-gray-700 sticky top-0 z-50 shadow-sm dark:shadow-md transition-colors duration-300">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 py-4 flex items-center justify-between">
-        {/* Logo and Title */}
         <Link href="/" className="flex items-center gap-2 sm:gap-3">
           <Image
             alt="favicon"
@@ -72,7 +41,7 @@ const Header = () => {
             width={24}
             height={24}
           />
-          <span className="text-lg sm:text-xl font-bold text-github-gray dark:text-white transition-colors">
+          <span className="text-lg sm:text-xl font-bold text-github-gray dark:text-white">
             iLoveGithub
           </span>
           <span className="text-xs text-gray-400 dark:text-gray-500 mt-0.5">
@@ -80,12 +49,11 @@ const Header = () => {
           </span>
         </Link>
 
-        {/* Desktop Navigation */}
         <div className="hidden md:flex items-center gap-2 sm:gap-4">
           <Button
             variant="ghost"
             size="sm"
-            className="text-github-gray dark:text-white/90 hover:text-github-blue dark:hover:text-white transition-colors"
+            className="text-github-gray dark:text-white/90 hover:text-github-blue dark:hover:text-white"
             onClick={() =>
               window.open(
                 "https://github.com/subhomoy-roy-choudhury/iLoveGithub/issues/new?template=new-tool-request.yml",
@@ -99,7 +67,7 @@ const Header = () => {
           <Button
             variant="ghost"
             size="sm"
-            className="text-github-gray dark:text-white/90 hover:text-github-blue dark:hover:text-white transition-colors"
+            className="text-github-gray dark:text-white/90 hover:text-github-blue dark:hover:text-white"
             onClick={() =>
               window.open(
                 "https://github.com/subhomoy-roy-choudhury/iLoveGithub",
@@ -110,20 +78,15 @@ const Header = () => {
             GitHub
           </Button>
 
-          {/* 🌙 Theme Toggle Button */}
           <Button
             variant="ghost"
             size="icon"
             onClick={toggleTheme}
-            className="text-github-gray dark:text-white/90 hover:text-github-blue dark:hover:text-white transition-colors duration-300"
+            className="text-github-gray dark:text-white/90 hover:text-github-blue dark:hover:text-white"
             aria-label="Toggle Theme"
           >
             <span className="transition-transform duration-300 ease-in-out transform hover:rotate-180">
-              {isDarkMode ? (
-                <Sun className="h-5 w-5" />
-              ) : (
-                <Moon className="h-5 w-5" />
-              )}
+              {isDarkMode ? <Sun className="h-5 w-5" /> : <Moon className="h-5 w-5" />}
             </span>
           </Button>
 
@@ -135,7 +98,7 @@ const Header = () => {
             <Button
               size="sm"
               variant="outline"
-              className="bg-github-pink text-white hover:bg-github-darkPink border-none rounded-full px-4 transition-colors"
+              className="bg-github-pink text-white hover:bg-github-darkPink border-none rounded-full px-4"
             >
               Donate ❤️
             </Button>
@@ -178,26 +141,20 @@ const Header = () => {
                 </DropdownMenuItem>
               </DropdownMenuContent>
             </DropdownMenu>
-          )}        </div>
+          )}
+        </div>
 
-        {/* Mobile Menu Toggle */}
         <button
-          className="md:hidden p-2 text-github-gray dark:text-white focus:outline-none transition-colors"
+          className="md:hidden p-2 text-github-gray dark:text-white focus:outline-none"
           onClick={() => setIsMenuOpen((prev) => !prev)}
           aria-label="Toggle Menu"
         >
-          {isMenuOpen ? (
-            <X className="w-6 h-6" />
-          ) : (
-            <Menu className="w-6 h-6" />
-          )}
+          {isMenuOpen ? <X className="w-6 h-6" /> : <Menu className="w-6 h-6" />}
         </button>
-
       </div>
 
-      {/* Mobile Dropdown Menu */}
       {isMenuOpen && (
-        <div className="md:hidden px-4 pb-4 flex flex-col gap-2 animate-slide-down transition-colors">
+        <div className="md:hidden px-4 pb-4 flex flex-col gap-2 animate-slide-down">
           <Button
             variant="ghost"
             size="sm"
@@ -224,7 +181,6 @@ const Header = () => {
           >
             GitHub
           </Button>
-          {/* 🌙 Theme Toggle for Mobile */}
           <Button
             variant="ghost"
             className="w-full justify-start text-github-gray dark:text-white/90 hover:text-github-blue dark:hover:text-white"
