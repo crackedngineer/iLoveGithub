@@ -1,0 +1,48 @@
+name: Fetch Trending (Python)
+
+on:
+  schedule:
+    - cron: "0 0 * * *" # Daily at midnight UTC
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+jobs:
+  fetch:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v3
+
+      - name: Set up Python
+        uses: actions/setup-python@v4
+        with:
+          python-version: "3.11"
+
+      - name: Install pipreqs
+        run: |
+          pip install pipreqs
+
+      - name: Generate requirements.txt
+        run: |
+          pipreqs . --force
+
+      - name: Install dependencies
+        run: |
+          pip install -r requirements.txt
+
+      - name: Run fetch_trending.py
+        run: python scripts/fetch_trending.py
+
+      - name: Configure Git
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+
+      - name: Commit and push data/trending_repositories.json
+        run: |
+          git add src/trending.json
+          git commit -m "🤖 Update trending_repositories.json [automated]" || echo "No changes to commit"
+          git push origin main

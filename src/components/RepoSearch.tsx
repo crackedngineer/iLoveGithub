@@ -2,6 +2,7 @@
 
 import React, { useEffect, useState } from "react";
 import { Search } from "lucide-react";
+import { useSession, signIn } from "next-auth/react";
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { Card, CardContent } from "@/components/ui/card";
@@ -27,6 +28,15 @@ interface TrendingRepo {
   };
 }
 
+type RepoSubmitHandler = {
+  e: React.FormEvent;
+  owner?: string;
+  repo?: string;
+  repoUrl?: string;
+  onSubmit: (owner: string, repo: string) => void;
+  onError?: (error: any) => void;
+};
+
 const RepoSearch = ({
   value = "",
   onError,
@@ -38,6 +48,7 @@ const RepoSearch = ({
   trending: boolean;
   onRepoSubmit: (owner: string, repo: string) => void;
 }) => {
+  const { data: session, status } = useSession();
   const [repoUrl, setRepoUrl] = useState(value);
   const [error, setError] = useState("");
   const [trendingRepos, setTrendingRepos] = useState<TrendingRepo[]>([]);
@@ -68,19 +79,65 @@ const RepoSearch = ({
     return null;
   };
 
-  const handleSubmit = (e: React.FormEvent) => {
+  const handleRepoSubmit = ({
+    e,
+    owner,
+    repo,
+    repoUrl,
+    onSubmit,
+    onError,
+  }: RepoSubmitHandler) => {
     e.preventDefault();
-    if (!repoUrl.trim()) {
-      setError("Please enter a repository URL");
+
+    const isUnauthenticated = !status || status === "unauthenticated";
+
+    if (isUnauthenticated) {
+      const pendingUrl =
+        repoUrl?.trim() ||
+        (owner && repo ? `https://github.com/${owner}/${repo}` : null);
+
+      if (pendingUrl) {
+        sessionStorage.setItem("pendingRepoUrl", pendingUrl);
+      }
+
+      signIn("github", { callbackUrl: window.location.href });
       return;
     }
 
-    const repoDetails = extractRepoDetails(repoUrl);
-    if (repoDetails) {
-      onRepoSubmit(repoDetails.owner, repoDetails.repo);
+    if (repoUrl?.trim()) {
+      const details = extractRepoDetails(repoUrl);
+      if (details) {
+        onSubmit(details.owner, details.repo);
+      } else {
+        onError?.(null);
+      }
+    } else if (owner && repo) {
+      onSubmit(owner, repo);
     } else {
-      onError?.(null);
+      onError?.("Please enter a valid repository URL");
     }
+  };
+
+  const handleSubmit = (e: React.FormEvent) => {
+    handleRepoSubmit({
+      e,
+      repoUrl,
+      onSubmit: onRepoSubmit,
+      onError: setError,
+    });
+  };
+
+  const onTrendingRepoSubmit = (
+    e: React.FormEvent,
+    owner: string,
+    repo: string
+  ) => {
+    handleRepoSubmit({
+      e,
+      owner,
+      repo,
+      onSubmit: onRepoSubmit,
+    });
   };
 
   useEffect(() => {
@@ -96,27 +153,15 @@ const RepoSearch = ({
 
   useEffect(() => {
     const fetchTrending = async () => {
-      // Delay before fetching (simulate loading + allow cache to kick in)
-      await new Promise((res) => setTimeout(res, 600));
+      setLoading(true);
       try {
-        const cached = localStorage.getItem("trending_repos");
-        const cachedAt = localStorage.getItem("trending_repos_timestamp");
+        const res = await fetch("/api/repo/trending");
+        if (!res.ok) throw new Error("Failed to fetch trending.json");
 
-        const oneDayMs = 24 * 60 * 60 * 1000;
-        const isCacheValid =
-          cached && cachedAt && Date.now() - Number(cachedAt) < oneDayMs;
-
-        if (isCacheValid) {
-          setTrendingRepos(JSON.parse(cached));
-        } else {
-          const res = await fetch("/api/repo/trending?per_page=6");
-          const data = await res.json();
-          localStorage.setItem("trending_repos", JSON.stringify(data));
-          localStorage.setItem("trending_repos_timestamp", String(Date.now()));
-          setTrendingRepos(data);
-        }
+        const data = await res.json();
+        setTrendingRepos(data);
       } catch (e) {
-        console.error("Failed to fetch trending repositories");
+        console.error("Failed to fetch trending repositories", e);
       } finally {
         setLoading(false);
       }
@@ -124,6 +169,23 @@ const RepoSearch = ({
 
     if (trending) fetchTrending();
   }, []);
+
+  // Add a useEffect to check for pending repo URL after authentication
+  useEffect(() => {
+    if (status === "authenticated") {
+      const pendingRepoUrl = sessionStorage.getItem("pendingRepoUrl");
+      if (pendingRepoUrl) {
+        setRepoUrl(pendingRepoUrl);
+        sessionStorage.removeItem("pendingRepoUrl");
+
+        // Optionally auto-submit the form
+        const repoDetails = extractRepoDetails(pendingRepoUrl);
+        if (repoDetails) {
+          onRepoSubmit(repoDetails.owner, repoDetails.repo);
+        }
+      }
+    }
+  }, [status]);
 
   const handleRecentClick = (entry: string) => {
     const [owner, repo] = entry.split("/");
@@ -153,7 +215,9 @@ const RepoSearch = ({
               type="submit"
               className="h-12 w-full md:w-auto bg-github-blue hover:bg-blue-700 text-white"
             >
-              Analyze Repository
+              {status === "authenticated"
+                ? "🚀 Analyze Repository"
+                : "✨ Sign In to Analyze"}
             </Button>
           </div>
 
@@ -161,7 +225,7 @@ const RepoSearch = ({
         </form>
 
         {/* Recent Searches */}
-        {recent.length > 0 && (
+        {recent.length > 0 && status === "authenticated" && (
           <div className="mt-6">
             <h4 className="text-sm font-medium text-muted-foreground mb-2">
               Recent Searches
@@ -197,7 +261,9 @@ const RepoSearch = ({
                     <Card
                       key={repo.id}
                       className="p-4 hover:shadow-sm cursor-pointer transition"
-                      onClick={() => onRepoSubmit(repo.owner.login, repo.name)}
+                      onClick={(event) =>
+                        onTrendingRepoSubmit(event, repo.owner.login, repo.name)
+                      }
                     >
                       <div className="flex justify-between items-center">
                         <div>

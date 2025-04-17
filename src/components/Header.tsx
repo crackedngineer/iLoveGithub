@@ -2,11 +2,21 @@
 import React, { useState, useEffect } from "react";
 import Link from "next/link";
 import Image from "next/image";
+import { useSession, signOut } from "next-auth/react";
 import { Menu, X, Sun, Moon } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { appVersion } from "@/lib/version";
+import {
+  DropdownMenu,
+  DropdownMenuTrigger,
+  DropdownMenuContent,
+  DropdownMenuLabel,
+  DropdownMenuSeparator,
+  DropdownMenuItem,
+} from "@/components/ui/dropdown-menu";
 
 const Header = () => {
+  const { data: session, status } = useSession();
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   const [isDarkMode, setIsDarkMode] = useState(false);
 
@@ -130,7 +140,45 @@ const Header = () => {
               Donate ❤️
             </Button>
           </a>
-        </div>
+
+          {session?.githubProfile && (
+            <DropdownMenu>
+              <DropdownMenuTrigger asChild>
+                <button className="flex items-center gap-2 rounded-full focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-github-blue">
+                  {session.user?.image ? (
+                    <img
+                      src={session.user.image}
+                      alt="Profile"
+                      className="w-8 h-8 rounded-full object-cover"
+                    />
+                  ) : (
+                    <div className="w-8 h-8 bg-gray-300 dark:bg-gray-600 rounded-full" />
+                  )}
+                </button>
+              </DropdownMenuTrigger>
+
+              <DropdownMenuContent align="end" className="w-56 p-2">
+                <DropdownMenuLabel className="text-sm text-muted-foreground">
+                  Signed in as
+                </DropdownMenuLabel>
+                <div className="px-2 py-1">
+                  <p className="text-sm font-medium text-github-gray dark:text-white truncate">
+                    {session.user?.name}
+                  </p>
+                  <p className="text-xs text-gray-500 dark:text-gray-400 truncate">
+                    {session.user?.email}
+                  </p>
+                </div>
+                <DropdownMenuSeparator />
+                <DropdownMenuItem
+                  className="cursor-pointer text-sm text-red-600 hover:bg-red-50 dark:hover:bg-red-900/20"
+                  onClick={() => signOut({ callbackUrl: "/" })}
+                >
+                  Log out
+                </DropdownMenuItem>
+              </DropdownMenuContent>
+            </DropdownMenu>
+          )}        </div>
 
         {/* Mobile Menu Toggle */}
         <button
@@ -144,6 +192,7 @@ const Header = () => {
             <Menu className="w-6 h-6" />
           )}
         </button>
+
       </div>
 
       {/* Mobile Dropdown Menu */}

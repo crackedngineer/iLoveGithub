@@ -1,27 +1,26 @@
 import { NextRequest, NextResponse } from "next/server";
 import axios from "axios";
 
-const GITHUB_TOKEN = process.env.GITHUB_TOKEN;
-
-const githubClient = axios.create({
-  baseURL: "https://api.github.com",
-  headers: {
-    Accept: "application/vnd.github+json",
-    ...(GITHUB_TOKEN && { Authorization: `Bearer ${GITHUB_TOKEN}` }),
-  },
-});
-
 export async function GET(req: NextRequest) {
   const { searchParams } = new URL(req.url);
   const owner = searchParams.get("owner");
   const repo = searchParams.get("repo");
+  const token = req.headers.get("Authorization")?.replace("Bearer ", "");
 
-  if (!owner || !repo) {
+  if (!owner || !repo || !token) {
     return NextResponse.json(
-      { error: "Missing 'owner' or 'repo' query params" },
+      { error: "Missing 'owner', 'repo' or Authorization 'token'" },
       { status: 400 }
     );
   }
+
+  const githubClient = axios.create({
+    baseURL: "https://api.github.com",
+    headers: {
+      Accept: "application/vnd.github+json",
+      Authorization: `Bearer ${token}`,
+    },
+  });
 
   try {
     const [repoRes, topicsRes] = await Promise.all([
@@ -29,6 +28,7 @@ export async function GET(req: NextRequest) {
       githubClient.get(`/repos/${owner}/${repo}/topics`, {
         headers: {
           Accept: "application/vnd.github.mercy-preview+json",
+          Authorization: `Bearer ${token}`,
         },
       }),
     ]);
@@ -44,7 +44,6 @@ export async function GET(req: NextRequest) {
     const rateLimitRemaining =
       error?.response?.headers?.["x-ratelimit-remaining"];
 
-    // Rate limit exceeded
     if (status === 403 && rateLimitRemaining === "0") {
       return NextResponse.json(
         {
