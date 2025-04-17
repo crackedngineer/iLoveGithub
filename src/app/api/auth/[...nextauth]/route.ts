@@ -1,3 +1,5 @@
+import { type Session, type User } from "next-auth";
+import { type JWT } from "next-auth/jwt";
 import NextAuth from "next-auth";
 import GithubProvider from "next-auth/providers/github";
 
@@ -17,15 +19,23 @@ const handler = NextAuth({
       }
       return token;
     },
-    async session({ session, token }) {
-      // Send properties to the client
+    async session({
+      session,
+      token,
+    }: {
+      session: Session;
+      token: JWT & {
+        accessToken?: string;
+        githubProfile?: any;
+      };
+    }) {
       session.accessToken = token.accessToken;
       session.githubProfile = token.githubProfile;
       return session;
     },
   },
   pages: {
-    signIn: '/auth/signin',
+    signIn: "/auth/signin",
   },
 });
 
