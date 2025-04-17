@@ -1,0 +1,86 @@
+[
+    {
+        "id": 965313467,
+        "name": "droidrun",
+        "full_name": "droidrun/droidrun",
+        "html_url": "https://github.com/droidrun/droidrun",
+        "description": null,
+        "stargazers_count": 1149,
+        "language": "Python",
+        "owner": {
+            "login": "droidrun",
+            "avatar_url": "https://avatars.githubusercontent.com/u/207381488?v=4",
+            "html_url": "https://github.com/droidrun"
+        }
+    },
+    {
+        "id": 965159463,
+        "name": "FramePack",
+        "full_name": "lllyasviel/FramePack",
+        "html_url": "https://github.com/lllyasviel/FramePack",
+        "description": "Lets make video diffusion practical!",
+        "stargazers_count": 1124,
+        "language": "Python",
+        "owner": {
+            "login": "lllyasviel",
+            "avatar_url": "https://avatars.githubusercontent.com/u/19834515?v=4",
+            "html_url": "https://github.com/lllyasviel"
+        }
+    },
+    {
+        "id": 967232951,
+        "name": "damn-vulnerable-MCP-server",
+        "full_name": "harishsg993010/damn-vulnerable-MCP-server",
+        "html_url": "https://github.com/harishsg993010/damn-vulnerable-MCP-server",
+        "description": "Damn Vulnerable MCP Server",
+        "stargazers_count": 496,
+        "language": "Python",
+        "owner": {
+            "login": "harishsg993010",
+            "avatar_url": "https://avatars.githubusercontent.com/u/114534778?v=4",
+            "html_url": "https://github.com/harishsg993010"
+        }
+    },
+    {
+        "id": 964488506,
+        "name": "Skywork-OR1",
+        "full_name": "SkyworkAI/Skywork-OR1",
+        "html_url": "https://github.com/SkyworkAI/Skywork-OR1",
+        "description": null,
+        "stargazers_count": 477,
+        "language": "Python",
+        "owner": {
+            "login": "SkyworkAI",
+            "avatar_url": "https://avatars.githubusercontent.com/u/147303017?v=4",
+            "html_url": "https://github.com/SkyworkAI"
+        }
+    },
+    {
+        "id": 965494890,
+        "name": "BiliNote",
+        "full_name": "JefferyHcool/BiliNote",
+        "html_url": "https://github.com/JefferyHcool/BiliNote",
+        "description": "AI \u89c6\u9891\u7b14\u8bb0\u751f\u6210\u5de5\u5177 \u8ba9 AI \u4e3a\u4f60\u7684\u89c6\u9891\u505a\u7b14\u8bb0",
+        "stargazers_count": 311,
+        "language": "Python",
+        "owner": {
+            "login": "JefferyHcool",
+            "avatar_url": "https://avatars.githubusercontent.com/u/63531681?v=4",
+            "html_url": "https://github.com/JefferyHcool"
+        }
+    },
+    {
+        "id": 964990473,
+        "name": "DockFlare",
+        "full_name": "ChrispyBacon-dev/DockFlare",
+        "html_url": "https://github.com/ChrispyBacon-dev/DockFlare",
+        "description": "DockFlare - CloudFlare Tunnel Controller",
+        "stargazers_count": 208,
+        "language": "Python",
+        "owner": {
+            "login": "ChrispyBacon-dev",
+            "avatar_url": "https://avatars.githubusercontent.com/u/175474883?v=4",
+            "html_url": "https://github.com/ChrispyBacon-dev"
+        }
+    }
+]
