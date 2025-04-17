@@ -2,6 +2,7 @@
 
 import React, { useEffect, useState } from "react";
 import { Search } from "lucide-react";
+import { useSession, signIn } from "next-auth/react";
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { Card, CardContent } from "@/components/ui/card";
@@ -38,6 +39,7 @@ const RepoSearch = ({
   trending: boolean;
   onRepoSubmit: (owner: string, repo: string) => void;
 }) => {
+  const { data: session, status } = useSession();
   const [repoUrl, setRepoUrl] = useState(value);
   const [error, setError] = useState("");
   const [trendingRepos, setTrendingRepos] = useState<TrendingRepo[]>([]);
@@ -70,6 +72,18 @@ const RepoSearch = ({
 
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();
+    // Check if user is authenticated
+    if (!status || status === "unauthenticated") {
+      // Store the repo URL in session storage to retrieve after auth
+      if (repoUrl.trim()) {
+        sessionStorage.setItem("pendingRepoUrl", repoUrl);
+      }
+
+      // Redirect to GitHub sign-in
+      signIn("github", { callbackUrl: window.location.href });
+      return;
+    }
+
     if (!repoUrl.trim()) {
       setError("Please enter a repository URL");
       return;
@@ -125,6 +139,23 @@ const RepoSearch = ({
     if (trending) fetchTrending();
   }, []);
 
+  // Add a useEffect to check for pending repo URL after authentication
+  useEffect(() => {
+    if (status === "authenticated") {
+      const pendingRepoUrl = sessionStorage.getItem("pendingRepoUrl");
+      if (pendingRepoUrl) {
+        setRepoUrl(pendingRepoUrl);
+        sessionStorage.removeItem("pendingRepoUrl");
+
+        // Optionally auto-submit the form
+        const repoDetails = extractRepoDetails(pendingRepoUrl);
+        if (repoDetails) {
+          onRepoSubmit(repoDetails.owner, repoDetails.repo);
+        }
+      }
+    }
+  }, [status]);
+
   const handleRecentClick = (entry: string) => {
     const [owner, repo] = entry.split("/");
     setRepoUrl(`https://github.com/${entry}`);
@@ -153,7 +184,7 @@ const RepoSearch = ({
               type="submit"
               className="h-12 w-full md:w-auto bg-github-blue hover:bg-blue-700 text-white"
             >
-              Analyze Repository
+              {status === "authenticated" ? "Analyze Repository" : "Sign in with GitHub"}
             </Button>
           </div>
 
@@ -191,31 +222,31 @@ const RepoSearch = ({
             <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
               {loading
                 ? Array.from({ length: 4 }).map((_, i) => (
-                    <Skeleton key={i} className="h-[80px] rounded-xl" />
-                  ))
+                  <Skeleton key={i} className="h-[80px] rounded-xl" />
+                ))
                 : trendingRepos.map((repo) => (
-                    <Card
-                      key={repo.id}
-                      className="p-4 hover:shadow-sm cursor-pointer transition"
-                      onClick={() => onRepoSubmit(repo.owner.login, repo.name)}
-                    >
-                      <div className="flex justify-between items-center">
-                        <div>
-                          <p className="font-medium text-sm text-foreground">
-                            {repo.full_name}
-                          </p>
-                          <p className="text-xs text-muted-foreground line-clamp-1">
-                            {repo.description || "No description"}
-                          </p>
-                        </div>
-                        <img
-                          src={repo.owner.avatar_url}
-                          alt={repo.owner.login}
-                          className="w-8 h-8 rounded-full"
-                        />
+                  <Card
+                    key={repo.id}
+                    className="p-4 hover:shadow-sm cursor-pointer transition"
+                    onClick={() => onRepoSubmit(repo.owner.login, repo.name)}
+                  >
+                    <div className="flex justify-between items-center">
+                      <div>
+                        <p className="font-medium text-sm text-foreground">
+                          {repo.full_name}
+                        </p>
+                        <p className="text-xs text-muted-foreground line-clamp-1">
+                          {repo.description || "No description"}
+                        </p>
                       </div>
-                    </Card>
-                  ))}
+                      <img
+                        src={repo.owner.avatar_url}
+                        alt={repo.owner.login}
+                        className="w-8 h-8 rounded-full"
+                      />
+                    </div>
+                  </Card>
+                ))}
             </div>
           </div>
         )}
