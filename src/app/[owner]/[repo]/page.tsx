@@ -26,13 +26,27 @@ export default function RepoPage() {
 
   useEffect(() => {
     if (status === "unauthenticated" && !isSigningIn) {
-      setIsSigningIn(true);  // Trigger signing in state
+      setIsSigningIn(true); // Trigger signing in state
+
+      const pendingUrl = `https://github.com/${owner}/${repo}`;
+
+      if (pendingUrl) {
+        sessionStorage.setItem("pendingRepoUrl", pendingUrl);
+      }
+
       signIn("github", { callbackUrl: window.location.href });
       return;
     }
 
     if (status === "authenticated") {
-      fetchRepoData();
+      const pendingUrl = sessionStorage.getItem("pendingRepoUrl");
+
+      if (pendingUrl) {
+        sessionStorage.removeItem("pendingRepoUrl");
+        window.location.href = pendingUrl; // 🔁 Redirect after login
+      } else {
+        fetchRepoData();
+      }
     }
   }, [owner, repo, status]); // Trigger on session change
 
@@ -45,9 +59,7 @@ export default function RepoPage() {
         localStorage.getItem(RECENT_REPO_LOCAL_STORAGE_KEY) || "[]"
       );
       const fullName = `${owner}/${repo}`.toLowerCase();
-      const cached = stored.find(
-        (r) => r.fullName.toLowerCase() === fullName
-      );
+      const cached = stored.find((r) => r.fullName.toLowerCase() === fullName);
 
       const isCacheValid =
         cached?.cachedAt && Date.now() - cached.cachedAt < 5 * 60 * 1000; // 5 minutes cache validity
@@ -95,7 +107,7 @@ export default function RepoPage() {
       setError("generic");
     } finally {
       setIsLoading(false);
-      setIsSigningIn(false);  // Reset sign-in loading state after fetching data
+      setIsSigningIn(false); // Reset sign-in loading state after fetching data
     }
   };
 
@@ -152,9 +164,7 @@ export default function RepoPage() {
 
         {error && (
           <div className="text-center text-red-500">
-            <p>
-              Oops, something went wrong. Please try again later.
-            </p>
+            <p>Oops, something went wrong. Please try again later.</p>
           </div>
         )}
 
