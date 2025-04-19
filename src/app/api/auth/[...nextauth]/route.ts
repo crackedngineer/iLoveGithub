@@ -1,5 +1,5 @@
 // app/api/auth/[...nextauth]/route.ts
-import { type Session, type User } from "next-auth";
+import { type Session, type User, type Account, type Profile } from "next-auth";
 import { type JWT } from "next-auth/jwt";
 import NextAuth, { type NextAuthOptions } from "next-auth";
 import GithubProvider from "next-auth/providers/github";
@@ -29,6 +29,19 @@ export const authOptions: NextAuthOptions = {
     }),
   ],
   callbacks: {
+    async signIn({
+      user,
+      account,
+      profile,
+    }: {
+      user: User;
+      account: Account | null;
+      profile?: Profile;
+    }) {
+      user.username = profile?.login ?? "GitHubUser"; // GitHub username
+      return true;
+    },
+
     async jwt({ token, account, profile }): Promise<ExtendedToken> {
       if (account && profile) {
         return {
