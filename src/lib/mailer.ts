@@ -1,6 +1,5 @@
 import { generateWelcomeEmail } from "@/components/emails/templates/WelcomeEmail";
-import { generateWelcomeBackEmail } from "@/components/emails/templates/WelcomeBackEmail"; // MJML function
-// import { checkRateLimit, setRateLimit } from "@/lib/rateLimiter"; // optional
+import { generateWelcomeBackEmail } from "@/components/emails/templates/WelcomeBackEmail";
 
 function calculateDaysBetween(start: Date, end: Date): number {
   const diff = Math.abs(end.getTime() - start.getTime());

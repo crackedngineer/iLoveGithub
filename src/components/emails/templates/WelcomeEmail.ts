@@ -1,92 +1,96 @@
-interface WelcomeEmailProps {
-  name: string;
-  email: string;
-}
-
-export function generateWelcomeEmail({
+export const generateWelcomeEmail = ({
   name,
   email,
-}: WelcomeEmailProps): string {
+}: {
+  name: string;
+  email: string;
+}) => {
   const year = new Date().getFullYear();
+  const appUrl =
+    process.env.NEXT_PUBLIC_APP_URL || "https://ilovegithub.oderna.in";
 
   const html = `
   <!DOCTYPE html>
   <html lang="en">
   <head>
     <meta charset="utf-8" />
-    <title>Welcome Email</title>
+    <title>Welcome to iLoveGithub</title>
     <style>
       body {
-        font-family: Arial, sans-serif;
-        background-color: #ffffff;
         margin: 0;
         padding: 0;
+        background: #ffffff;
+        font-family: 'Courier New', Courier, monospace;
+        color: #0d1117;
+      }
+      .container {
+        max-width: 560px;
+        margin: 40px auto;
+        padding: 24px;
       }
       .header {
-        background-color: #24292e;
-        color: #ffffff;
-        text-align: center;
-        font-size: 24px;
+        font-size: 20px;
         font-weight: bold;
-        padding: 20px;
-        border-radius: 5px 5px 0 0;
+        color: #ffffff;
+        background: #42b6b9;
+        padding: 16px;
+        text-align: center;
+        border-radius: 6px;
+      }
+      .version {
+        font-size: 12px;
+        font-weight: normal;
+        opacity: 0.8;
+        margin-left: 4px;
       }
       .content {
-        padding: 30px 20px;
-        color: #24292e;
-        font-size: 16px;
-        line-height: 1.5;
-      }
-      .content ul {
-        padding-left: 20px;
+        margin-top: 24px;
+        font-size: 14px;
+        line-height: 1.6;
       }
       .button {
         display: inline-block;
-        background-color: #2ea44f;
-        color: #ffffff;
-        font-weight: bold;
-        border-radius: 6px;
-        padding: 12px 20px;
+        margin-top: 24px;
+        background: #2ea44f;
+        color: #fff;
+        padding: 10px 18px;
         text-decoration: none;
-        margin: 20px 0;
+        border-radius: 4px;
+        font-size: 14px;
+        font-weight: 600;
       }
       .footer {
-        background-color: #f6f8fa;
+        margin-top: 40px;
         font-size: 12px;
         color: #6a737d;
         text-align: center;
-        padding: 15px;
+      }
+      a {
+        color: #2ea44f;
+        text-decoration: none;
       }
     </style>
   </head>
   <body>
-    <div class="header">
-      Welcome to iLoveGithub!
-    </div>
-    <div class="content">
-      <p>Hi ${name},</p>
-      <p>Thank you for joining iLoveGithub! We're excited to have you as part of our community.</p>
-      <p>With iLoveGithub, you can:</p>
-      <ul>
-        <li>Discover interesting GitHub repositories</li>
-        <li>Share your favorite projects</li>
-        <li>Connect with other developers</li>
-        <li>Stay updated on the latest trends</li>
-      </ul>
-      <a href="${
-        process.env.NEXT_PUBLIC_APP_URL || "https://your-app-url.com"
-      }/dashboard" class="button">Explore Now</a>
-      <p>If you have any questions or feedback, feel free to reply to this email.</p>
-      <p>Happy coding!</p>
-      <p style="padding-top: 30px;">The iLoveGithub Team</p>
-    </div>
-    <div class="footer">
-      <p>This email was sent to ${email}</p>
-      <p>© ${year} iLoveGithub. All rights reserved.</p>
+    <div class="container">
+      <div class="header">iLoveGithub</div>
+      <div class="content">
+        <p>Hello ${name}!</p>
+        <p>Welcome to <strong>iLoveGithub</strong> — your new favorite way to discover GitHub's hidden gems.</p>
+        <p>🚀 Find trending repositories</p>
+        <p>🔍 Discover tools to enhance your GitHub experience</p>
+        <p>🌟 Connect with developers sharing amazing projects</p>
+        <p>We're excited to have you join our community of GitHub enthusiasts!</p>
+        <a class="button" href="${appUrl}">Explore Now →</a>
+      </div>
+      <div class="footer">
+        <p>Sent to ${email}</p>
+        <p>© ${year} iLoveGithub</p>
+      </div>
     </div>
   </body>
   </html>
   `;
 
   return html;
-}
+};
