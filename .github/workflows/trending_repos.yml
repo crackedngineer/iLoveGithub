@@ -34,7 +34,7 @@ jobs:
           pip install -r requirements.txt
 
       - name: Run fetch_trending.py
-        run: python scripts/fetch_trending.py
+        run: python scripts/fetch_trending_repos.py
 
       - name: Configure Git
         run: |
