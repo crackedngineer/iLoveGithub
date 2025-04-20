@@ -1,4 +1,5 @@
 import { sendWelcomeEmail } from "../mailer";
+import { sendWelcomeBackEmail } from "../mailer";
 import { User } from "next-auth";
 
 export async function handleUserCreation(user: User): Promise<void> {
@@ -18,6 +19,23 @@ export async function handleUserCreation(user: User): Promise<void> {
   }
 }
 
+export async function handleReturningUser(user: User): Promise<void> {
+  try {
+    if (!user.email) {
+      console.warn(
+        "Returning user without email address, skipping welcome back email"
+      );
+      return;
+    }
+
+    console.log(`Sending welcome back email to returning user: ${user.email}`);
+    await sendWelcomeBackEmail(user.email, user.name ?? "GitHub User");
+    console.log(`Welcome back email successfully queued for ${user.email}`);
+  } catch (error) {
+    console.error("Failed to process returning user:", error);
+  }
+}
+
 // NextAuth events configuration
 const authEvents = {
   createUser: async ({ user }: { user: User }) => {
@@ -34,7 +52,7 @@ const authEvents = {
   }) => {
     if (!isNewUser) {
       console.log(`Returning user signed in: ${user.email}`);
-      await handleUserCreation(user);
+      await handleReturningUser(user);
     }
   },
 };

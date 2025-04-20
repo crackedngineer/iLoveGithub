@@ -1,4 +1,6 @@
 import { generateWelcomeEmail } from "@/components/emails/templates/WelcomeEmail";
+import { generateWelcomeBackEmail } from "@/components/emails/templates/WelcomeBackEmail";
+
 import nodemailer from "nodemailer";
 
 // Create a type for email options
@@ -87,6 +89,24 @@ export async function sendWelcomeEmail(
   const htmlContent = generateWelcomeEmail({ name, email });
 
   const subject = `Welcome to iLoveGithub, ${name}!`;
+
+  await sendEmail({
+    to: email,
+    subject,
+    html: htmlContent,
+  });
+}
+
+export async function sendWelcomeBackEmail(
+  email: string,
+  name: string = "there"
+): Promise<void> {
+  const htmlContent = generateWelcomeBackEmail({
+    name,
+    email,
+  });
+
+  const subject = `Welcome back to iLoveGithub, ${name}!`;
 
   await sendEmail({
     to: email,
