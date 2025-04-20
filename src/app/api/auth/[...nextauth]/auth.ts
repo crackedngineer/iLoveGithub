@@ -6,13 +6,11 @@ import { Session, User, Account, Profile } from "next-auth";
 interface ExtendedToken extends JWT {
   accessToken?: string;
   githubProfile?: Record<string, any>;
-  lastLogin?: string;
 }
 
 interface ExtendedSession extends Session {
   accessToken?: string;
   githubProfile?: Record<string, any>;
-  lastLogin?: string;
 }
 
 export const authOptions: NextAuthOptions = {
@@ -47,7 +45,6 @@ export const authOptions: NextAuthOptions = {
           ...token,
           accessToken: account.access_token,
           githubProfile: profile,
-          lastLogin: new Date().toISOString(),
         };
       }
       return token as ExtendedToken;
@@ -60,7 +57,6 @@ export const authOptions: NextAuthOptions = {
         ...session,
         accessToken: extendedToken.accessToken,
         githubProfile: extendedToken.githubProfile,
-        lastLogin: extendedToken.lastLogin,
       };
     },
   },
