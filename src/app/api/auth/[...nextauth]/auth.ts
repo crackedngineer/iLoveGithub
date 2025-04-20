@@ -1,4 +1,5 @@
-// Create a new file: src/app/api/auth/[...nextauth]/auth.ts
+// src/app/api/auth/[...nextauth]/auth.ts
+
 import { NextAuthOptions } from "next-auth";
 import GithubProvider from "next-auth/providers/github";
 import { type JWT } from "next-auth/jwt";
@@ -8,11 +9,13 @@ import authEvents from "@/lib/auth/authEvents";
 interface ExtendedToken extends JWT {
   accessToken?: string;
   githubProfile?: Record<string, any>;
+  lastLogin?: string;
 }
 
 interface ExtendedSession extends Session {
   accessToken?: string;
   githubProfile?: Record<string, any>;
+  lastLogin?: string;
 }
 
 export const authOptions: NextAuthOptions = {
@@ -37,7 +40,7 @@ export const authOptions: NextAuthOptions = {
       account: Account | null;
       profile?: Profile;
     }) {
-      user.username = profile?.login ?? "GitHubUser"; // GitHub username
+      user.username = profile?.login ?? "GitHubUser";
       return true;
     },
 
@@ -47,6 +50,7 @@ export const authOptions: NextAuthOptions = {
           ...token,
           accessToken: account.access_token,
           githubProfile: profile,
+          lastLogin: new Date().toISOString(),
         };
       }
       return token as ExtendedToken;
@@ -59,6 +63,7 @@ export const authOptions: NextAuthOptions = {
         ...session,
         accessToken: extendedToken.accessToken,
         githubProfile: extendedToken.githubProfile,
+        lastLogin: extendedToken.lastLogin,
       };
     },
   },
