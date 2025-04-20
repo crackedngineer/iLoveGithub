@@ -8,7 +8,7 @@ function calculateDaysBetween(date1: Date, date2: Date): number {
   return Math.ceil(diffTime / (1000 * 60 * 60 * 24));
 }
 
-async function createUser({id, email, name, username}: {id: string, email: string, name: string, username: string}) {
+export async function createUser({id, email, name, username}: {id: string, email: string, name: string, username: string}) {
   await dbConnect();
   const now = new Date();
   const userDoc = await UserModel.create({
