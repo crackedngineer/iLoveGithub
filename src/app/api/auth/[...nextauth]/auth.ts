@@ -2,6 +2,7 @@ import { NextAuthOptions } from "next-auth";
 import GithubProvider from "next-auth/providers/github";
 import { type JWT } from "next-auth/jwt";
 import { Session, User, Account, Profile } from "next-auth";
+import authEvents from "@/lib/auth/authEvents";
 
 interface ExtendedToken extends JWT {
   accessToken?: string;
@@ -60,7 +61,10 @@ export const authOptions: NextAuthOptions = {
       };
     },
   },
-  // Removed events block as it's no longer needed
+  events: {
+    createUser: authEvents.createUser,
+    signIn: authEvents.signIn,
+  },
   pages: {
     signIn: "/auth/signin",
   },
