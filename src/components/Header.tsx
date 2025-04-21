@@ -34,19 +34,26 @@ const Header = () => {
   return (
     <header className="w-full bg-white dark:bg-github-dark-blue border-b border-gray-200 dark:border-gray-700 sticky top-0 z-50 shadow-sm dark:shadow-md transition-colors duration-300">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 py-4 flex items-center justify-between">
-        <Link href="/" className="flex items-center gap-2 sm:gap-3">
+        <Link href="/" className="flex items-center gap-3 sm:gap-4">
           <Image
             alt="favicon"
-            src={"/icons/favicon.png"}
+            src="/icons/favicon.png"
             width={24}
             height={24}
           />
-          <span className="text-lg sm:text-xl font-bold text-github-gray dark:text-white">
-            iLoveGithub
-          </span>
-          <span className="text-xs text-gray-400 dark:text-gray-500 mt-0.5">
-            v{appVersion}
-          </span>
+          <div className="flex flex-col">
+            <div className="flex items-baseline gap-2">
+              <span className="text-lg sm:text-xl font-bold text-github-gray dark:text-white">
+                iLoveGithub
+              </span>
+              <span className="text-xs text-gray-400 dark:text-gray-500">
+                v{appVersion}
+              </span>
+            </div>
+            <span className="text-xs text-gray-400 dark:text-gray-500 -mt-0.5">
+              by Oderna Technologies
+            </span>
+          </div>
         </Link>
 
         <div className="hidden md:flex items-center gap-2 sm:gap-4">
@@ -86,7 +93,11 @@ const Header = () => {
             aria-label="Toggle Theme"
           >
             <span className="transition-transform duration-300 ease-in-out transform hover:rotate-180">
-              {isDarkMode ? <Sun className="h-5 w-5" /> : <Moon className="h-5 w-5" />}
+              {isDarkMode ? (
+                <Sun className="h-5 w-5" />
+              ) : (
+                <Moon className="h-5 w-5" />
+              )}
             </span>
           </Button>
 
@@ -149,7 +160,11 @@ const Header = () => {
           onClick={() => setIsMenuOpen((prev) => !prev)}
           aria-label="Toggle Menu"
         >
-          {isMenuOpen ? <X className="w-6 h-6" /> : <Menu className="w-6 h-6" />}
+          {isMenuOpen ? (
+            <X className="w-6 h-6" />
+          ) : (
+            <Menu className="w-6 h-6" />
+          )}
         </button>
       </div>
 
