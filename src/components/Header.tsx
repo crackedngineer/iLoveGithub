@@ -16,6 +16,12 @@ import {
   DropdownMenuItem,
 } from "@/components/ui/dropdown-menu";
 
+const BuyMeCoffeeURL = "https://buymeacoffee.com/subhomoyrca";
+const SubstackNewsletterURL = "https://ilovegithub.substack.com/";
+const GithubRepoURL = "https://github.com/subhomoy-roy-choudhury/iLoveGithub";
+const GithubSubmitToolURL =
+  "https://github.com/subhomoy-roy-choudhury/iLoveGithub/issues/new?template=new-tool-request.yml";
+
 const Header = () => {
   const { data: session } = useSession();
   const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -61,12 +67,7 @@ const Header = () => {
             variant="ghost"
             size="sm"
             className="text-github-gray dark:text-white/90 hover:text-github-blue dark:hover:text-white"
-            onClick={() =>
-              window.open(
-                "https://github.com/subhomoy-roy-choudhury/iLoveGithub/issues/new?template=new-tool-request.yml",
-                "_blank"
-              )
-            }
+            onClick={() => window.open(GithubSubmitToolURL, "_blank")}
           >
             Submit a Tool
           </Button>
@@ -75,14 +76,18 @@ const Header = () => {
             variant="ghost"
             size="sm"
             className="text-github-gray dark:text-white/90 hover:text-github-blue dark:hover:text-white"
-            onClick={() =>
-              window.open(
-                "https://github.com/subhomoy-roy-choudhury/iLoveGithub",
-                "_blank"
-              )
-            }
+            onClick={() => window.open(GithubRepoURL, "_blank")}
           >
             GitHub
+          </Button>
+
+          <Button
+            variant="ghost"
+            size="sm"
+            className="text-github-gray dark:text-white/90 hover:text-github-blue dark:hover:text-white"
+            onClick={() => window.open(SubstackNewsletterURL, "_blank")}
+          >
+            Join Newsletter
           </Button>
 
           <Button
@@ -101,11 +106,7 @@ const Header = () => {
             </span>
           </Button>
 
-          <a
-            href="https://buymeacoffee.com/subhomoyrca"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
+          <a href={BuyMeCoffeeURL} target="_blank" rel="noopener noreferrer">
             <Button
               size="sm"
               variant="outline"
@@ -174,12 +175,7 @@ const Header = () => {
             variant="ghost"
             size="sm"
             className="w-full justify-start text-github-gray dark:text-white/90 hover:text-github-blue dark:hover:text-white"
-            onClick={() =>
-              window.open(
-                "https://github.com/subhomoy-roy-choudhury/iLoveGithub/issues/new?template=new-tool-request.yml",
-                "_blank"
-              )
-            }
+            onClick={() => window.open(GithubSubmitToolURL, "_blank")}
           >
             Submit a Tool
           </Button>
@@ -188,13 +184,20 @@ const Header = () => {
             className="w-full justify-start text-github-gray dark:text-white/90 hover:text-github-blue dark:hover:text-white"
             onClick={() => {
               setIsMenuOpen(false);
-              window.open(
-                "https://github.com/subhomoy-roy-choudhury/iLoveGithub",
-                "_blank"
-              );
+              window.open(GithubRepoURL, "_blank");
             }}
           >
             GitHub
+          </Button>
+          <Button
+            variant="ghost"
+            className="w-full justify-start text-github-gray dark:text-white/90 hover:text-github-blue dark:hover:text-white"
+            onClick={() => {
+              setIsMenuOpen(false);
+              window.open(SubstackNewsletterURL, "_blank");
+            }}
+          >
+            Join Newsletter
           </Button>
           <Button
             variant="ghost"
@@ -203,8 +206,17 @@ const Header = () => {
           >
             {isDarkMode ? "Light Mode ☀️" : "Dark Mode 🌙"}
           </Button>
+          {session?.githubProfile && (
+            <Button
+              variant="ghost"
+              className="w-full justify-start text-sm text-red-600 hover:bg-red-50 dark:hover:bg-red-900/20 mt-1"
+              onClick={() => signOut({ callbackUrl: "/" })}
+            >
+              Log out
+            </Button>
+          )}
           <a
-            href="https://buymeacoffee.com/subhomoyrca"
+            href={BuyMeCoffeeURL}
             target="_blank"
             rel="noopener noreferrer"
             className="w-full"
