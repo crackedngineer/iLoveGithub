@@ -1,11 +1,6 @@
 import { generateWelcomeEmail } from "@/components/emails/templates/WelcomeEmail";
 import { generateWelcomeBackEmail } from "@/components/emails/templates/WelcomeBackEmail";
 
-function calculateDaysBetween(start: Date, end: Date): number {
-  const diff = Math.abs(end.getTime() - start.getTime());
-  return Math.floor(diff / (1000 * 60 * 60 * 24));
-}
-
 import nodemailer from "nodemailer";
 
 // Create a type for email options
@@ -102,30 +97,13 @@ export async function sendWelcomeEmail(
   });
 }
 
-/**
- * Sends a welcome back email to returning users
- * @param email User's email address
- * @param name User's name
- * @param lastLogin User's last login date
- */
 export async function sendWelcomeBackEmail(
   email: string,
-  name: string = "there",
-  lastLogin: Date
+  name: string = "there"
 ): Promise<void> {
-  const formattedLastLogin = new Intl.DateTimeFormat("en-US", {
-    year: "numeric",
-    month: "long",
-    day: "numeric",
-  }).format(lastLogin);
-
-  const daysSinceLastLogin = calculateDaysBetween(lastLogin, new Date());
-
   const htmlContent = generateWelcomeBackEmail({
     name,
     email,
-    lastLogin: formattedLastLogin,
-    daysSinceLastLogin,
   });
 
   const subject = `Welcome back to iLoveGithub, ${name}!`;

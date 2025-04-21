@@ -8,6 +8,10 @@ export const generateWelcomeEmail = ({
   const year = new Date().getFullYear();
   const appUrl =
     process.env.NEXT_PUBLIC_APP_URL || "https://ilovegithub.oderna.in";
+  const unsubscribeUrl = `${appUrl}/unsubscribe?email=${encodeURIComponent(
+    email
+  )}`;
+  const newsletterUrl = `${appUrl}/newsletter`;
 
   const html = `
   <!DOCTYPE html>
@@ -79,7 +83,7 @@ export const generateWelcomeEmail = ({
         <p>Welcome to <strong>iLoveGithub</strong> — your new favorite way to discover GitHub's hidden gems.</p>
         <p>🚀 Find trending repositories</p>
         <p>🔍 Discover tools to enhance your GitHub experience</p>
-        <p>🌟 Connect with developers sharing amazing projects</p>
+        <p>👨‍💻 A vibrant community continuing to share amazing projects</p>
         <p>We're excited to have you join our community of GitHub enthusiasts!</p>
         <a class="button" href="${appUrl}">Explore Now →</a>
       </div>

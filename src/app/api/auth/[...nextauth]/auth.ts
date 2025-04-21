@@ -1,10 +1,8 @@
-import dbConnect from "@/lib/mongoose";
 import { NextAuthOptions } from "next-auth";
 import GithubProvider from "next-auth/providers/github";
 import { type JWT } from "next-auth/jwt";
-import { User as UserModel } from "@/models/User";
 import { Session, User, Account, Profile } from "next-auth";
-import { createUser } from "@/lib/auth/authEvents";
+import authEvents from "@/lib/auth/authEvents";
 
 interface ExtendedToken extends JWT {
   accessToken?: string;
@@ -38,26 +36,7 @@ export const authOptions: NextAuthOptions = {
       account: Account | null;
       profile?: Profile;
     }) {
-      await dbConnect();
-
-      if (!account || !profile) return false;
-
-      const email = user.email;
-
-      // // Only create user if not already in DB
-      let userDoc = await UserModel.findOne({ username: user.username });
-
-      if (!userDoc) {
-        console.log(`User ${user.email} not found. Creating new user.`);
-        userDoc = await createUser({
-          id: user.id,
-          email: user.email,
-          name: user.name ?? "GitHub User",
-          username: user?.username ?? "github-username",
-        });
-        console.log(`User created in DB for ${user.email}`);
-      }
-
+      user.username = profile?.login ?? "GitHubUser";
       return true;
     },
 
@@ -82,7 +61,10 @@ export const authOptions: NextAuthOptions = {
       };
     },
   },
-  // Removed events block as it's no longer needed
+  events: {
+    createUser: authEvents.createUser,
+    signIn: authEvents.signIn,
+  },
   pages: {
     signIn: "/auth/signin",
   },

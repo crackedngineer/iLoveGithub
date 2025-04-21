@@ -11,7 +11,6 @@ declare module "next-auth" {
     email: string;
     name?: string;
     username: string;
-    lastLogin?: Date;
   }
 
   interface Profile {

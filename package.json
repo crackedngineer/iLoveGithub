@@ -2,7 +2,7 @@
   "name": "i-love-github",
   "version": "0.4.0",
   "private": true,
-  "homepage": "https://subhomoy-roy-choudhury.github.io/iLoveGithub",
+  "homepage": "https://ilovegithub.oderna.in/",
   "scripts": {
     "dev": "next dev --turbopack",
     "build": "next build",
@@ -24,6 +24,7 @@
     "class-variance-authority": "^0.7.1",
     "clsx": "^2.1.1",
     "date-fns": "^4.1.0",
+    "jsonwebtoken": "^9.0.2",
     "lucide-react": "^0.485.0",
     "mongoose": "^8.13.2",
     "next": "15.2.4",
@@ -41,6 +42,7 @@
   "devDependencies": {
     "@eslint/eslintrc": "^3",
     "@tailwindcss/postcss": "^4",
+    "@types/jsonwebtoken": "^9.0.9",
     "@types/node": "^20",
     "@types/nodemailer": "^6.4.17",
     "@types/react": "^19",

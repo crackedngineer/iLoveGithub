@@ -1,17 +1,13 @@
 export const generateWelcomeBackEmail = ({
   name,
   email,
-  lastLogin,
-  daysSinceLastLogin,
 }: {
   name: string;
   email: string;
-  lastLogin: string;
-  daysSinceLastLogin: number;
 }) => {
   const year = new Date().getFullYear();
-  const appUrl = process.env.NEXT_PUBLIC_APP_URL || "https://ilovegithub.oderna.in";
-
+  const appUrl =
+    process.env.NEXT_PUBLIC_APP_URL || "https://ilovegithub.oderna.in";
 
   const html = `
   <!DOCTYPE html>
@@ -74,12 +70,12 @@ export const generateWelcomeBackEmail = ({
       <div class="header">iLoveGithub</div>
       <div class="content">
         <p>Hey ${name},</p>
-        <p>It's been ${daysSinceLastLogin} days since your last visit on ${lastLogin} — we've missed you!</p>
-        <p>🔥 New trending repositories are waiting for you to discover</p>
-        <p>🛠️ Fresh tools to supercharge your GitHub experience</p>
+        <p>We’ve been busy curating the best of GitHub — and you’re missing out!</p>
+        <p>✨ Discover fresh, trending repositories tailored for curious devs</p>
+        <p>🛠️ Explore powerful tools that boost your workflow</p>
         <p>👨‍💻 A vibrant community continuing to share amazing projects</p>
-        <p>We've kept your spot warm. Ready to dive back in?</p>
-        <a class="button" href="${appUrl}">Jump Back In →</a>
+        <p>Come see what’s new — your GitHub playground awaits.</p>
+        <a class="button" href="${appUrl}">Explore Now →</a>
       </div>
       <div class="footer">
         <p>Sent to ${email}</p>
