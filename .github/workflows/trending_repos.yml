@@ -43,6 +43,6 @@ jobs:
 
       - name: Commit and push data/trending_repositories.json
         run: |
-          git add src/trending.json
+          git add src/trending_repositories.json
           git commit -m "🤖 Update trending_repositories.json [automated]" || echo "No changes to commit"
           git push origin main
