@@ -1,30 +1,16 @@
 [
     {
-        "id": 965313467,
-        "name": "droidrun",
-        "full_name": "droidrun/droidrun",
-        "html_url": "https://github.com/droidrun/droidrun",
-        "description": null,
-        "stargazers_count": 1149,
+        "id": 969010919,
+        "name": "dia",
+        "full_name": "nari-labs/dia",
+        "html_url": "https://github.com/nari-labs/dia",
+        "description": "A TTS model capable of generating ultra-realistic dialogue in one pass.",
+        "stargazers_count": 1339,
         "language": "Python",
         "owner": {
-            "login": "droidrun",
-            "avatar_url": "https://avatars.githubusercontent.com/u/207381488?v=4",
-            "html_url": "https://github.com/droidrun"
-        }
-    },
-    {
-        "id": 965159463,
-        "name": "FramePack",
-        "full_name": "lllyasviel/FramePack",
-        "html_url": "https://github.com/lllyasviel/FramePack",
-        "description": "Lets make video diffusion practical!",
-        "stargazers_count": 1124,
-        "language": "Python",
-        "owner": {
-            "login": "lllyasviel",
-            "avatar_url": "https://avatars.githubusercontent.com/u/19834515?v=4",
-            "html_url": "https://github.com/lllyasviel"
+            "login": "nari-labs",
+            "avatar_url": "https://avatars.githubusercontent.com/u/208232306?v=4",
+            "html_url": "https://github.com/nari-labs"
         }
     },
     {
@@ -33,7 +19,7 @@
         "full_name": "harishsg993010/damn-vulnerable-MCP-server",
         "html_url": "https://github.com/harishsg993010/damn-vulnerable-MCP-server",
         "description": "Damn Vulnerable MCP Server",
-        "stargazers_count": 496,
+        "stargazers_count": 749,
         "language": "Python",
         "owner": {
             "login": "harishsg993010",
@@ -42,45 +28,59 @@
         }
     },
     {
-        "id": 964488506,
-        "name": "Skywork-OR1",
-        "full_name": "SkyworkAI/Skywork-OR1",
-        "html_url": "https://github.com/SkyworkAI/Skywork-OR1",
+        "id": 968047168,
+        "name": "ComfyUI-FramePackWrapper",
+        "full_name": "kijai/ComfyUI-FramePackWrapper",
+        "html_url": "https://github.com/kijai/ComfyUI-FramePackWrapper",
         "description": null,
-        "stargazers_count": 477,
+        "stargazers_count": 693,
         "language": "Python",
         "owner": {
-            "login": "SkyworkAI",
-            "avatar_url": "https://avatars.githubusercontent.com/u/147303017?v=4",
-            "html_url": "https://github.com/SkyworkAI"
+            "login": "kijai",
+            "avatar_url": "https://avatars.githubusercontent.com/u/40791699?v=4",
+            "html_url": "https://github.com/kijai"
         }
     },
     {
-        "id": 965494890,
-        "name": "BiliNote",
-        "full_name": "JefferyHcool/BiliNote",
-        "html_url": "https://github.com/JefferyHcool/BiliNote",
-        "description": "AI \u89c6\u9891\u7b14\u8bb0\u751f\u6210\u5de5\u5177 \u8ba9 AI \u4e3a\u4f60\u7684\u89c6\u9891\u505a\u7b14\u8bb0",
-        "stargazers_count": 311,
+        "id": 970023948,
+        "name": "MAGI-1",
+        "full_name": "SandAI-org/MAGI-1",
+        "html_url": "https://github.com/SandAI-org/MAGI-1",
+        "description": "MAGI-1: Autoregressive Video Generation at Scale",
+        "stargazers_count": 546,
         "language": "Python",
         "owner": {
-            "login": "JefferyHcool",
-            "avatar_url": "https://avatars.githubusercontent.com/u/63531681?v=4",
-            "html_url": "https://github.com/JefferyHcool"
+            "login": "SandAI-org",
+            "avatar_url": "https://avatars.githubusercontent.com/u/208222005?v=4",
+            "html_url": "https://github.com/SandAI-org"
         }
     },
     {
-        "id": 964990473,
-        "name": "DockFlare",
-        "full_name": "ChrispyBacon-dev/DockFlare",
-        "html_url": "https://github.com/ChrispyBacon-dev/DockFlare",
-        "description": "DockFlare - CloudFlare Tunnel Controller",
-        "stargazers_count": 208,
+        "id": 967326100,
+        "name": "InstantCharacter",
+        "full_name": "Tencent/InstantCharacter",
+        "html_url": "https://github.com/Tencent/InstantCharacter",
+        "description": null,
+        "stargazers_count": 546,
         "language": "Python",
         "owner": {
-            "login": "ChrispyBacon-dev",
-            "avatar_url": "https://avatars.githubusercontent.com/u/175474883?v=4",
-            "html_url": "https://github.com/ChrispyBacon-dev"
+            "login": "Tencent",
+            "avatar_url": "https://avatars.githubusercontent.com/u/18461506?v=4",
+            "html_url": "https://github.com/Tencent"
+        }
+    },
+    {
+        "id": 967548396,
+        "name": "Discord-Nitro-Generator",
+        "full_name": "pops-1529/Discord-Nitro-Generator",
+        "html_url": "https://github.com/pops-1529/Discord-Nitro-Generator",
+        "description": "\ud83d\udd25 discord nitro generator \ud83d\udd25 nitro generator & checker \u2b50 gens discord nitro codes and checks - discord nitro generator nitro gen bruteforce discord nitro checker discord nitro bruteforcer discord nitro checker discord nitro gen discord nitro generator nitro gen bruteforce discord nitro checker discord nitro bruteforcer ucyimjubhh",
+        "stargazers_count": 248,
+        "language": "Python",
+        "owner": {
+            "login": "pops-1529",
+            "avatar_url": "https://avatars.githubusercontent.com/u/193874316?v=4",
+            "html_url": "https://github.com/pops-1529"
         }
     }
 ]
