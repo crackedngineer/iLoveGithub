@@ -1,4 +1,4 @@
-name: Fetch Trending (Python)
+name: Fetch Trending Repositories (Python)
 
 on:
   schedule:
