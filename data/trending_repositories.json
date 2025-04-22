@@ -5,7 +5,7 @@
         "full_name": "nari-labs/dia",
         "html_url": "https://github.com/nari-labs/dia",
         "description": "A TTS model capable of generating ultra-realistic dialogue in one pass.",
-        "stargazers_count": 1339,
+        "stargazers_count": 1348,
         "language": "Python",
         "owner": {
             "login": "nari-labs",
@@ -33,7 +33,7 @@
         "full_name": "kijai/ComfyUI-FramePackWrapper",
         "html_url": "https://github.com/kijai/ComfyUI-FramePackWrapper",
         "description": null,
-        "stargazers_count": 693,
+        "stargazers_count": 696,
         "language": "Python",
         "owner": {
             "login": "kijai",
@@ -47,7 +47,7 @@
         "full_name": "SandAI-org/MAGI-1",
         "html_url": "https://github.com/SandAI-org/MAGI-1",
         "description": "MAGI-1: Autoregressive Video Generation at Scale",
-        "stargazers_count": 546,
+        "stargazers_count": 548,
         "language": "Python",
         "owner": {
             "login": "SandAI-org",
