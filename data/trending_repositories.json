@@ -5,7 +5,7 @@
         "full_name": "nari-labs/dia",
         "html_url": "https://github.com/nari-labs/dia",
         "description": "A TTS model capable of generating ultra-realistic dialogue in one pass.",
-        "stargazers_count": 1339,
+        "stargazers_count": 4737,
         "language": "Python",
         "owner": {
             "login": "nari-labs",
@@ -14,40 +14,12 @@
         }
     },
     {
-        "id": 967232951,
-        "name": "damn-vulnerable-MCP-server",
-        "full_name": "harishsg993010/damn-vulnerable-MCP-server",
-        "html_url": "https://github.com/harishsg993010/damn-vulnerable-MCP-server",
-        "description": "Damn Vulnerable MCP Server",
-        "stargazers_count": 749,
-        "language": "Python",
-        "owner": {
-            "login": "harishsg993010",
-            "avatar_url": "https://avatars.githubusercontent.com/u/114534778?v=4",
-            "html_url": "https://github.com/harishsg993010"
-        }
-    },
-    {
-        "id": 968047168,
-        "name": "ComfyUI-FramePackWrapper",
-        "full_name": "kijai/ComfyUI-FramePackWrapper",
-        "html_url": "https://github.com/kijai/ComfyUI-FramePackWrapper",
-        "description": null,
-        "stargazers_count": 693,
-        "language": "Python",
-        "owner": {
-            "login": "kijai",
-            "avatar_url": "https://avatars.githubusercontent.com/u/40791699?v=4",
-            "html_url": "https://github.com/kijai"
-        }
-    },
-    {
         "id": 970023948,
         "name": "MAGI-1",
         "full_name": "SandAI-org/MAGI-1",
         "html_url": "https://github.com/SandAI-org/MAGI-1",
         "description": "MAGI-1: Autoregressive Video Generation at Scale",
-        "stargazers_count": 546,
+        "stargazers_count": 1441,
         "language": "Python",
         "owner": {
             "login": "SandAI-org",
@@ -56,31 +28,59 @@
         }
     },
     {
-        "id": 967326100,
-        "name": "InstantCharacter",
-        "full_name": "Tencent/InstantCharacter",
-        "html_url": "https://github.com/Tencent/InstantCharacter",
+        "id": 968047168,
+        "name": "ComfyUI-FramePackWrapper",
+        "full_name": "kijai/ComfyUI-FramePackWrapper",
+        "html_url": "https://github.com/kijai/ComfyUI-FramePackWrapper",
         "description": null,
-        "stargazers_count": 546,
+        "stargazers_count": 740,
         "language": "Python",
         "owner": {
-            "login": "Tencent",
-            "avatar_url": "https://avatars.githubusercontent.com/u/18461506?v=4",
-            "html_url": "https://github.com/Tencent"
+            "login": "kijai",
+            "avatar_url": "https://avatars.githubusercontent.com/u/40791699?v=4",
+            "html_url": "https://github.com/kijai"
         }
     },
     {
-        "id": 967548396,
-        "name": "Discord-Nitro-Generator",
-        "full_name": "pops-1529/Discord-Nitro-Generator",
-        "html_url": "https://github.com/pops-1529/Discord-Nitro-Generator",
-        "description": "\ud83d\udd25 discord nitro generator \ud83d\udd25 nitro generator & checker \u2b50 gens discord nitro codes and checks - discord nitro generator nitro gen bruteforce discord nitro checker discord nitro bruteforcer discord nitro checker discord nitro gen discord nitro generator nitro gen bruteforce discord nitro checker discord nitro bruteforcer ucyimjubhh",
-        "stargazers_count": 248,
+        "id": 969399025,
+        "name": "MagiAttention",
+        "full_name": "SandAI-org/MagiAttention",
+        "html_url": "https://github.com/SandAI-org/MagiAttention",
+        "description": "A Distributed Attention Towards Linear Scalability for Ultra-Long Context, Heterogeneous Data Training",
+        "stargazers_count": 217,
         "language": "Python",
         "owner": {
-            "login": "pops-1529",
-            "avatar_url": "https://avatars.githubusercontent.com/u/193874316?v=4",
-            "html_url": "https://github.com/pops-1529"
+            "login": "SandAI-org",
+            "avatar_url": "https://avatars.githubusercontent.com/u/208222005?v=4",
+            "html_url": "https://github.com/SandAI-org"
+        }
+    },
+    {
+        "id": 967828692,
+        "name": "Siliv",
+        "full_name": "PaulShiLi/Siliv",
+        "html_url": "https://github.com/PaulShiLi/Siliv",
+        "description": "MacOS menu\u2011bar utility to adjust Apple Silicon GPU VRAM allocation",
+        "stargazers_count": 132,
+        "language": "Python",
+        "owner": {
+            "login": "PaulShiLi",
+            "avatar_url": "https://avatars.githubusercontent.com/u/74270733?v=4",
+            "html_url": "https://github.com/PaulShiLi"
+        }
+    },
+    {
+        "id": 968069920,
+        "name": "dataframely",
+        "full_name": "Quantco/dataframely",
+        "html_url": "https://github.com/Quantco/dataframely",
+        "description": "A declarative, \ud83d\udc3b\u200d\u2744\ufe0f-native data frame validation library.",
+        "stargazers_count": 115,
+        "language": "Python",
+        "owner": {
+            "login": "Quantco",
+            "avatar_url": "https://avatars.githubusercontent.com/u/15262568?v=4",
+            "html_url": "https://github.com/Quantco"
         }
     }
 ]
