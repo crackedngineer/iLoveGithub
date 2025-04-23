@@ -201,7 +201,7 @@ const RepoSearch = ({
             <div className="relative w-full">
               <Input
                 type="text"
-                placeholder="Enter GitHub URL (e.g., https://github.com/subhomoy-roy-choudhury/iLoveGithub) or user/repo"
+                placeholder="Enter GitHub URL (e.g., https://github.com/subhomoy-roy-choudhury/iLoveGithub)"
                 value={repoUrl}
                 onChange={(e) => setRepoUrl(e.target.value)}
                 className="pr-10 h-12"
