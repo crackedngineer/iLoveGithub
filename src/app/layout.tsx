@@ -94,8 +94,9 @@ export default function RootLayout({
       >
         <Analytics />
         <SpeedInsights />
-        <AdBanner adSlot="1234567890" />
         <AuthProvider>{children}</AuthProvider>
+        {/* Add the AdBanner component at the end of body to ensure it's at the bottom */}
+        <AdBanner adSlot="8130644563" />
       </body>
     </html>
   );
