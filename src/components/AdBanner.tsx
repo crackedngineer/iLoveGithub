@@ -15,21 +15,40 @@ interface AdBannerProps {
 
 export default function AdBanner({ adSlot }: AdBannerProps) {
   const [isVisible, setIsVisible] = useState(true);
-  const [isHidden, setIsHidden] = useState(false);
+  const [adsBlocked, setAdsBlocked] = useState(false);
 
   useEffect(() => {
-    try {
-      if (isVisible && !isHidden) {
-        (window.adsbygoogle = window.adsbygoogle || []).push({});
+    // Check if AdSense is loaded and not blocked
+    const checkAdSense = setTimeout(() => {
+      try {
+        if (
+          !window.adsbygoogle ||
+          typeof window.adsbygoogle.push !== 'function' ||
+          document.querySelector('.adsbygoogle-noablate') // This class often appears when ads are blocked
+        ) {
+          console.log("AdSense may be blocked or not loaded properly");
+          setAdsBlocked(true);
+        } else {
+          // Try to push an ad
+          (window.adsbygoogle = window.adsbygoogle || []).push({});
+        }
+      } catch (err) {
+        console.error("AdSense error:", err);
+        setAdsBlocked(true);
       }
-    } catch (err) {
-      console.error(err);
-    }
-  }, [isVisible, isHidden]);
+    }, 2000); // Give AdSense some time to load
+
+    return () => clearTimeout(checkAdSense);
+  }, []);
 
   const toggleVisibility = () => {
     setIsVisible(!isVisible);
   };
+
+  // Don't render anything if ads are blocked or not working
+  if (adsBlocked) {
+    return null;
+  }
 
   return (
     <div 
