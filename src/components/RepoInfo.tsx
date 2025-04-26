@@ -20,6 +20,7 @@ import {
 import { Button } from "@/components/ui/button";
 import { Badge } from "@/components/ui/badge";
 import { formatDistanceToNow } from "date-fns";
+import RepoInfoLoginWall from "./RepoInfoLoginWall";
 
 export interface RepoData {
   name: string;
@@ -35,7 +36,7 @@ export interface RepoData {
   updatedAt: string;
   topics: string[];
   default_branch: string;
-  cachedAt?: number;
+  cachedAt: number;
 }
 
 const calculateHealthScore = (repo: RepoData): number => {
@@ -83,7 +84,13 @@ const HealthProgressBar = ({ value }: { value: number }) => {
   );
 };
 
-const RepoInfo = ({ repo }: { repo: RepoData }) => {
+const RepoInfo = ({
+  repo,
+  isLoggedIn = false,
+}: {
+  repo: RepoData;
+  isLoggedIn: boolean;
+}) => {
   const formattedDate = (dateString: string) => {
     const date = new Date(dateString);
     return date.toLocaleDateString("en-US", {
@@ -96,165 +103,174 @@ const RepoInfo = ({ repo }: { repo: RepoData }) => {
   const healthScore = calculateHealthScore(repo);
 
   return (
-    <Card className="w-full max-w-4xl mx-auto mt-8 animate-fade-in gap-[0px]">
-      <CardHeader className="pb-4">
-        <div className="flex flex-col sm:flex-row sm:justify-between sm:items-start gap-6">
-          <div>
-            <CardTitle className="text-3xl font-semibold text-gray-800 dark:text-white flex items-center gap-3">
-              {repo.name}
-              <Badge
-                variant="outline"
-                className="bg-github-light-gray text-github-gray dark:bg-gray-700 dark:text-white"
-              >
-                Public
-              </Badge>
-            </CardTitle>
-            <CardDescription className="text-gray-600 dark:text-gray-300 mt-2">
-              {repo.fullName}
-            </CardDescription>
-
-            {/* Last Synced Section */}
-            {repo.cachedAt && (
-              <div className="mt-3 text-sm text-gray-500 dark:text-gray-400 flex items-center gap-2">
-                <Info size={14} className="text-gray-400 dark:text-gray-500" />
-                <span
-                  title={new Date(repo.cachedAt).toLocaleString("en-US", {
-                    year: "numeric",
-                    month: "short",
-                    day: "numeric",
-                    hour: "2-digit",
-                    minute: "2-digit",
-                  })}
-                  className="italic"
-                >
-                  Last synced{" "}
-                  {formatDistanceToNow(new Date(repo.cachedAt), {
-                    addSuffix: true,
-                  })}
-                </span>
-              </div>
-            )}
-          </div>
-
-          {/* GitHub Button */}
-          <Button
-            variant="outline"
-            size="sm"
-            className="flex items-center gap-1 w-fit"
-            asChild
-          >
-            <a href={repo.url} target="_blank" rel="noopener noreferrer">
-              <ExternalLink size={14} />
-              View on GitHub
-            </a>
-          </Button>
-        </div>
-      </CardHeader>
-
-      <CardContent className="pb-4">
-        <p className="text-gray-700 dark:text-gray-300 mb-6">
-          {repo.description}
-        </p>
-
-        <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-4 mb-6">
-          <div className="flex items-center gap-2 bg-github-light-gray dark:bg-gray-800 p-3 rounded-md">
-            <Star className="text-yellow-500" size={20} />
+    <RepoInfoLoginWall isLoggedIn={isLoggedIn}>
+      <Card className="w-full max-w-4xl mx-auto mt-8 animate-fade-in gap-[0px]">
+        <CardHeader className="pb-4">
+          <div className="flex flex-col sm:flex-row sm:justify-between sm:items-start gap-6">
             <div>
-              <p className="text-xl font-semibold">
-                {repo.stars.toLocaleString()}
-              </p>
-              <p className="text-xs text-gray-500 dark:text-gray-400">Stars</p>
-            </div>
-          </div>
-
-          <div className="flex items-center gap-2 bg-github-light-gray dark:bg-gray-800 p-3 rounded-md">
-            <GitFork className="text-github-blue" size={20} />
-            <div>
-              <p className="text-xl font-semibold">
-                {repo.forks.toLocaleString()}
-              </p>
-              <p className="text-xs text-gray-500 dark:text-gray-400">Forks</p>
-            </div>
-          </div>
-
-          <div className="flex items-center gap-2 bg-github-light-gray dark:bg-gray-800 p-3 rounded-md">
-            <Eye className="text-purple-500" size={20} />
-            <div>
-              <p className="text-xl font-semibold">
-                {repo.watchers.toLocaleString()}
-              </p>
-              <p className="text-xs text-gray-500 dark:text-gray-400">
-                Watchers
-              </p>
-            </div>
-          </div>
-        </div>
-
-        <div className="flex flex-col gap-4 mb-6">
-          <div className="flex items-center gap-2">
-            <FileCode size={16} className="text-gray-500" />
-            <span className="text-sm text-gray-700 dark:text-gray-300">
-              Main language:
-            </span>
-            <Badge
-              variant="secondary"
-              className="bg-blue-100 text-github-blue dark:bg-blue-900 dark:text-blue-300"
-            >
-              {repo.language}
-            </Badge>
-          </div>
-
-          <div className="flex items-center gap-2">
-            <Calendar size={16} className="text-gray-500" />
-            <span className="text-sm text-gray-700 dark:text-gray-300">
-              Created:
-            </span>
-            <span className="text-sm font-medium">
-              {formattedDate(repo.createdAt)}
-            </span>
-          </div>
-
-          <div className="flex items-center gap-2">
-            <GitBranch size={16} className="text-gray-500" />
-            <span className="text-sm text-gray-700 dark:text-gray-300">
-              Last updated:
-            </span>
-            <span className="text-sm font-medium">
-              {formattedDate(repo.updatedAt)}
-            </span>
-          </div>
-        </div>
-
-        {repo.topics.length > 0 && (
-          <div className="mb-6">
-            <h3 className="text-sm font-medium mb-2">Topics:</h3>
-            <div className="flex flex-wrap gap-2">
-              {repo.topics.map((topic) => (
+              <CardTitle className="text-3xl font-semibold text-gray-800 dark:text-white flex items-center gap-3">
+                {repo.name}
                 <Badge
-                  key={topic}
                   variant="outline"
-                  className="bg-blue-50 text-github-blue border-blue-200 dark:bg-blue-900 dark:text-blue-300 dark:border-blue-800"
+                  className="bg-github-light-gray text-github-gray dark:bg-gray-700 dark:text-white"
                 >
-                  {topic}
+                  Public
                 </Badge>
-              ))}
+              </CardTitle>
+              <CardDescription className="text-gray-600 dark:text-gray-300 mt-2">
+                {repo.fullName}
+              </CardDescription>
+
+              {/* Last Synced Section */}
+              {repo.cachedAt && (
+                <div className="mt-3 text-sm text-gray-500 dark:text-gray-400 flex items-center gap-2">
+                  <Info
+                    size={14}
+                    className="text-gray-400 dark:text-gray-500"
+                  />
+                  <span
+                    title={new Date(repo.cachedAt).toLocaleString("en-US", {
+                      year: "numeric",
+                      month: "short",
+                      day: "numeric",
+                      hour: "2-digit",
+                      minute: "2-digit",
+                    })}
+                    className="italic"
+                  >
+                    Last synced{" "}
+                    {formatDistanceToNow(new Date(repo.cachedAt), {
+                      addSuffix: true,
+                    })}
+                  </span>
+                </div>
+              )}
+            </div>
+
+            {/* GitHub Button */}
+            <Button
+              variant="outline"
+              size="sm"
+              className="flex items-center gap-1 w-fit"
+              asChild
+            >
+              <a href={repo.url} target="_blank" rel="noopener noreferrer">
+                <ExternalLink size={14} />
+                View on GitHub
+              </a>
+            </Button>
+          </div>
+        </CardHeader>
+
+        <CardContent className="pb-4">
+          <p className="text-gray-700 dark:text-gray-300 mb-6">
+            {repo.description}
+          </p>
+
+          <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-4 mb-6">
+            <div className="flex items-center gap-2 bg-github-light-gray dark:bg-gray-800 p-3 rounded-md">
+              <Star className="text-yellow-500" size={20} />
+              <div>
+                <p className="text-xl font-semibold">
+                  {repo.stars.toLocaleString()}
+                </p>
+                <p className="text-xs text-gray-500 dark:text-gray-400">
+                  Stars
+                </p>
+              </div>
+            </div>
+
+            <div className="flex items-center gap-2 bg-github-light-gray dark:bg-gray-800 p-3 rounded-md">
+              <GitFork className="text-github-blue" size={20} />
+              <div>
+                <p className="text-xl font-semibold">
+                  {repo.forks.toLocaleString()}
+                </p>
+                <p className="text-xs text-gray-500 dark:text-gray-400">
+                  Forks
+                </p>
+              </div>
+            </div>
+
+            <div className="flex items-center gap-2 bg-github-light-gray dark:bg-gray-800 p-3 rounded-md">
+              <Eye className="text-purple-500" size={20} />
+              <div>
+                <p className="text-xl font-semibold">
+                  {repo.watchers.toLocaleString()}
+                </p>
+                <p className="text-xs text-gray-500 dark:text-gray-400">
+                  Watchers
+                </p>
+              </div>
             </div>
           </div>
-        )}
 
-        <div className="mb-4">
-          <div className="flex justify-between flex-wrap items-center gap-y-1 mb-1"></div>
-          <HealthProgressBar value={healthScore} />
-        </div>
-      </CardContent>
+          <div className="flex flex-col gap-4 mb-6">
+            <div className="flex items-center gap-2">
+              <FileCode size={16} className="text-gray-500" />
+              <span className="text-sm text-gray-700 dark:text-gray-300">
+                Main language:
+              </span>
+              <Badge
+                variant="secondary"
+                className="bg-blue-100 text-github-blue dark:bg-blue-900 dark:text-blue-300"
+              >
+                {repo.language}
+              </Badge>
+            </div>
 
-      <CardFooter className="border-t border-gray-100 dark:border-gray-800 pt-4">
-        <span className="text-sm text-gray-500 dark:text-gray-400 whitespace-nowrap overflow-hidden text-ellipsis">
-          This repository is one of the most popular in its category, with
-          active development and a strong community.
-        </span>
-      </CardFooter>
-    </Card>
+            <div className="flex items-center gap-2">
+              <Calendar size={16} className="text-gray-500" />
+              <span className="text-sm text-gray-700 dark:text-gray-300">
+                Created:
+              </span>
+              <span className="text-sm font-medium">
+                {formattedDate(repo.createdAt)}
+              </span>
+            </div>
+
+            <div className="flex items-center gap-2">
+              <GitBranch size={16} className="text-gray-500" />
+              <span className="text-sm text-gray-700 dark:text-gray-300">
+                Last updated:
+              </span>
+              <span className="text-sm font-medium">
+                {formattedDate(repo.updatedAt)}
+              </span>
+            </div>
+          </div>
+
+          {repo.topics.length > 0 && (
+            <div className="mb-6">
+              <h3 className="text-sm font-medium mb-2">Topics:</h3>
+              <div className="flex flex-wrap gap-2">
+                {repo.topics.map((topic) => (
+                  <Badge
+                    key={topic}
+                    variant="outline"
+                    className="bg-blue-50 text-github-blue border-blue-200 dark:bg-blue-900 dark:text-blue-300 dark:border-blue-800"
+                  >
+                    {topic}
+                  </Badge>
+                ))}
+              </div>
+            </div>
+          )}
+
+          <div className="mb-4">
+            <div className="flex justify-between flex-wrap items-center gap-y-1 mb-1"></div>
+            <HealthProgressBar value={healthScore} />
+          </div>
+        </CardContent>
+
+        <CardFooter className="border-t border-gray-100 dark:border-gray-800 pt-4">
+          <span className="text-sm text-gray-500 dark:text-gray-400 whitespace-nowrap overflow-hidden text-ellipsis">
+            This repository is one of the most popular in its category, with
+            active development and a strong community.
+          </span>
+        </CardFooter>
+      </Card>
+    </RepoInfoLoginWall>
   );
 };
 

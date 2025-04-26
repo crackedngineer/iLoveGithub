@@ -87,20 +87,16 @@ const RepoSearch = ({
     onSubmit,
     onError,
   }: RepoSubmitHandler) => {
-    e.preventDefault();
+    // e.preventDefault();
 
     const isUnauthenticated = !status || status === "unauthenticated";
 
     if (isUnauthenticated) {
       const pendingUrl =
         repoUrl?.trim() ||
-        (owner && repo ? `https://github.com/${owner}/${repo}` : null);
+        (owner && repo ? `https://github.com/${owner}/${repo}` : "");
 
-      if (pendingUrl) {
-        sessionStorage.setItem("pendingRepoUrl", pendingUrl);
-      }
-
-      signIn("github", { callbackUrl: window.location.href });
+      window.location.href = pendingUrl;
       return;
     }
 
@@ -215,9 +211,7 @@ const RepoSearch = ({
               type="submit"
               className="h-12 w-full md:w-auto bg-github-blue hover:bg-blue-700 text-white"
             >
-              {status === "authenticated"
-                ? "🚀 Analyze Repository"
-                : "✨ Sign In to Analyze"}
+              🚀 Analyze Repository
             </Button>
           </div>
 
