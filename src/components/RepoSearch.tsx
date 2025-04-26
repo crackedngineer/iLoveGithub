@@ -87,18 +87,7 @@ const RepoSearch = ({
     onSubmit,
     onError,
   }: RepoSubmitHandler) => {
-    // e.preventDefault();
-
-    const isUnauthenticated = !status || status === "unauthenticated";
-
-    if (isUnauthenticated) {
-      const pendingUrl =
-        repoUrl?.trim() ||
-        (owner && repo ? `https://github.com/${owner}/${repo}` : "");
-
-      window.location.href = pendingUrl;
-      return;
-    }
+    e.preventDefault();
 
     if (repoUrl?.trim()) {
       const details = extractRepoDetails(repoUrl);
