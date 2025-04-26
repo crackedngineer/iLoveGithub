@@ -267,4 +267,14 @@ export const GithubToolsList: Tool[] = [
     category: ToolCategories.ANALYTICS,
     iframe: true,
   },
+  {
+    name: "deepwiki",
+    title: "DeepWiki",
+    description: "Which repo would you like to understand?",
+    homepage: "https://deepwiki.com/",
+    url: "https://deepwiki.com/{owner}/{repo}",
+    icon: "/icons/tools/deepwiki.ico", // https://deepwiki.com/favicon.ico
+    category: ToolCategories.ANALYTICS,
+    iframe: true,
+  },
 ];

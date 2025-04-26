@@ -81,6 +81,7 @@
 | [**Git1File**](https://git1file.com/)               | Compress and simplify GitHub repos into a single text file for AI interaction.         | [`git1file.com/{owner}/{repo}`](https://git1file.com/{owner}/{repo})                                       |
 | [**GitMCP**](https://gitmcp.io/)                    | Instantly create a remote Minecraft plugin server from any GitHub repo.                | [`gitmcp.io/{owner}/{repo}`](https://gitmcp.io/{owner}/{repo})                                             |
 | [**FlatGitHub**](https://flatgithub.com/)           | A simple tool for exploring flat data files in GitHub repositories.Flatten a repository into a single page for fast preview.                              | [`flatgithub.com/{owner}/{repo}`](https://flatgithub.com/{owner}/{repo})                                   |
+| [**DeepWiki**](https://deepwiki.com/)           | Which repo would you like to understand?                              | [`deepwiki.com/{owner}/{repo}`](https://deepwiki.com/{owner}/{repo})                                   |
 
 ---
 
