@@ -14,7 +14,15 @@ import { GithubToolsList } from "@/constants";
 import { Tool } from "@/lib/types";
 import { replaceUrlVariables } from "@/app/helper";
 import { Button } from "@/components/ui/button";
-import { Input } from "@/components/ui/input"; // If you have a styled input component
+import { Input } from "@/components/ui/input";
+
+function isNew(createdAt: string): boolean {
+  const createdDate = new Date(createdAt);
+  const now = new Date();
+  const diffTime = now.getTime() - createdDate.getTime();
+  const diffDays = diffTime / (1000 * 3600 * 24);
+  return diffDays <= 15;
+}
 
 const GitHubTools = ({
   owner,
@@ -82,8 +90,13 @@ const GitHubTools = ({
                 return (
                   <Card
                     key={tool.name}
-                    className="group transition-all duration-200 hover:shadow-xl hover:border-blue-500 border border-gray-200 dark:border-gray-800 bg-white dark:bg-gray-900"
+                    className="relative group transition-all duration-200 hover:shadow-xl hover:border-blue-500 border border-gray-200 dark:border-gray-800 bg-white dark:bg-gray-900"
                   >
+                    {tool.created_at && isNew(tool.created_at) && (
+                      <div className="absolute top-2 right-2 bg-green-500 text-white text-xs font-semibold px-2 py-0.5 rounded-full shadow-md">
+                        New
+                      </div>
+                    )}
                     <CardHeader className="pb-1">
                       <CardTitle className="text-base sm:text-lg flex items-center gap-2 text-gray-900 dark:text-white">
                         <Image
@@ -95,6 +108,7 @@ const GitHubTools = ({
                         />
                         {tool.name}
                       </CardTitle>
+
                       <CardDescription className="mt-1 text-sm text-gray-600 dark:text-gray-400">
                         {tool.description}
                       </CardDescription>
