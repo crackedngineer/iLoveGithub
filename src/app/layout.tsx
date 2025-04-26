@@ -7,6 +7,7 @@ import "./globals.css";
 import AuthProvider from "@/components/AuthProvider";
 import AdBanner from "@/components/AdBanner";
 import GoogleAnalytics from "@/components/GoogleAnalytics";
+import { ApiLimitProvider } from "@/components/ApiLimitContext";
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -112,7 +113,9 @@ export default function RootLayout({
         />
         <Analytics />
         <SpeedInsights />
-        <AuthProvider>{children}</AuthProvider>
+        <ApiLimitProvider>
+          <AuthProvider>{children}</AuthProvider>
+        </ApiLimitProvider>
         {/* Add the AdBanner component at the end of body to ensure it's at the bottom */}
         <AdBanner adSlot="8130644563" />
       </body>

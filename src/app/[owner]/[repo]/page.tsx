@@ -11,68 +11,83 @@ import {
   RECENT_REPO_LOCAL_STORAGE_KEY,
   RECENT_TRENDING_REPO_CACHE_MAXCOUNT,
 } from "@/constants";
-import { useSession, signIn, getSession } from "next-auth/react";
+import { useSession, getSession } from "next-auth/react";
+import { useApiLimit } from "@/components/ApiLimitContext";
 
 export default function RepoPage() {
   const { data: session, status } = useSession();
   const router = useRouter();
   const params = useParams() as { owner: string; repo: string };
   const { owner, repo } = params;
+  const { apiHits, incrementHits, hasReachedLimit } = useApiLimit();
 
   const [repoData, setRepoData] = useState<RepoData | null>(null);
   const [isLoading, setIsLoading] = useState<boolean>(true);
   const [error, setError] = useState<"rate-limit" | "generic" | null>(null);
-  const [isSigningIn, setIsSigningIn] = useState<boolean>(false); // New state for sign-in loading
 
   useEffect(() => {
-    if (status === "unauthenticated" && !isSigningIn) {
-      setIsSigningIn(true); // Trigger signing in state
+    if (!owner || !repo) return;
+    fetchRepoData();
+  }, [status]);
 
-      const pendingUrl = `https://github.com/${owner}/${repo}`;
-
-      if (pendingUrl) {
-        sessionStorage.setItem("pendingRepoUrl", pendingUrl);
-      }
-
-      signIn("github", { callbackUrl: window.location.href });
-      return;
-    }
-
-    if (status === "authenticated") {
-      const pendingUrl = sessionStorage.getItem("pendingRepoUrl");
-
-      if (pendingUrl) {
-        sessionStorage.removeItem("pendingRepoUrl");
-        window.location.href = pendingUrl; // 🔁 Redirect after login
-      } else {
-        fetchRepoData();
-      }
-    }
-  }, [owner, repo, status]); // Trigger on session change
-
-  const fetchRepoData = async (): Promise<void> => {
+  const fetchRepoData = async () => {
     setIsLoading(true);
     setError(null);
+    let isCached = false;
 
     try {
-      const stored: RepoData[] = JSON.parse(
+      if (status === "loading") return;
+
+      const storedRepos: RepoData[] = JSON.parse(
         localStorage.getItem(RECENT_REPO_LOCAL_STORAGE_KEY) || "[]"
       );
       const fullName = `${owner}/${repo}`.toLowerCase();
-      const cached = stored.find((r) => r.fullName.toLowerCase() === fullName);
+      const cached = storedRepos.find(
+        (r) => r.fullName.toLowerCase() === fullName
+      );
 
       const isCacheValid =
-        cached?.cachedAt && Date.now() - cached.cachedAt < 5 * 60 * 1000; // 5 minutes cache validity
+        cached && Date.now() - cached.cachedAt < 5 * 60 * 1000; // 5 minutes
 
-      if (isCacheValid && cached) {
+      if (isCacheValid) {
         setRepoData(cached);
-        updateRecentRepos(cached); // Refresh LRU
+        updateRecentRepos(cached);
+        setIsLoading(false);
+        isCached = true;
         return;
       }
 
-      // Get token from NextAuth session
-      const session = await getSession();
-      const token = session?.accessToken;
+      if (status === "unauthenticated" && hasReachedLimit) {
+        setError("rate-limit");
+        setIsLoading(false);
+
+        const dummyRepo: RepoData = {
+          name: repo,
+          owner,
+          fullName: `${owner}/${repo}`,
+          description: "This is dummy repo data used as a fallback.",
+          url: `https://github.com/${owner}/${repo}`,
+          stars: 0,
+          forks: 0,
+          watchers: 0,
+          language: "Unknown",
+          createdAt: new Date().toISOString(),
+          updatedAt: new Date().toISOString(),
+          topics: [],
+          default_branch: "main",
+          cachedAt: Date.now(),
+        };
+        setRepoData(dummyRepo);
+
+        return;
+      }
+
+      const session = await getSession(); // 🔥 fetch fresh session always
+
+      const token =
+        status === "authenticated"
+          ? session?.accessToken
+          : process.env.NEXT_PUBLIC_GITHUB_TOKEN;
 
       const response = await axios.get(
         `/api/repo?owner=${owner}&repo=${repo}`,
@@ -83,7 +98,7 @@ export default function RepoPage() {
 
       const githubData = response.data;
 
-      const transformedData: RepoData = {
+      const transformed: RepoData = {
         name: githubData.name,
         owner,
         fullName: githubData.full_name,
@@ -100,14 +115,14 @@ export default function RepoPage() {
         cachedAt: Date.now(),
       };
 
-      setRepoData(transformedData);
-      updateRecentRepos(transformedData);
+      setRepoData(transformed);
+      updateRecentRepos(transformed);
     } catch (error) {
-      console.error("Error fetching data:", error);
+      console.error("Error fetching repo data", error);
       setError("generic");
     } finally {
       setIsLoading(false);
-      setIsSigningIn(false); // Reset sign-in loading state after fetching data
+      if (status === "unauthenticated" && !isCached) incrementHits();
     }
   };
 
@@ -115,14 +130,10 @@ export default function RepoPage() {
     const stored = JSON.parse(
       localStorage.getItem(RECENT_REPO_LOCAL_STORAGE_KEY) || "[]"
     ) as RepoData[];
-
-    const timestamped = { ...details, cachedAt: Date.now() };
-
     const updated = [
-      timestamped,
+      details,
       ...stored.filter((r) => r.fullName !== details.fullName),
     ].slice(0, RECENT_TRENDING_REPO_CACHE_MAXCOUNT);
-
     localStorage.setItem(
       RECENT_REPO_LOCAL_STORAGE_KEY,
       JSON.stringify(updated)
@@ -135,11 +146,11 @@ export default function RepoPage() {
         <Introduction />
 
         <RepoSearch
-          key={`${owner}-${repo}-${Date.now()}`}
+          key={`${owner}-${repo}`}
           value={`${owner}/${repo}`}
           trending={false}
           onError={() => setError(null)}
-          onRepoSubmit={(owner: string, repo: string) => {
+          onRepoSubmit={(owner, repo) => {
             if (owner.trim() && repo.trim()) {
               router.push(`/${owner}/${repo}`);
             }
@@ -156,21 +167,18 @@ export default function RepoPage() {
           </div>
         )}
 
-        {isSigningIn && !isLoading && !repoData && (
-          <div className="w-full text-center">
-            <p className="text-xl">Signing in to GitHub...</p>
-          </div>
-        )}
-
-        {error && (
+        {error === "generic" && (
           <div className="text-center text-red-500">
             <p>Oops, something went wrong. Please try again later.</p>
           </div>
         )}
 
-        {!isLoading && !error && repoData && (
+        {!isLoading && repoData && (
           <>
-            <RepoInfo repo={repoData} />
+            <RepoInfo
+              repo={repoData}
+              isLoggedIn={status === "authenticated" || !hasReachedLimit}
+            />
             <GitHubTools
               owner={repoData.owner}
               repo={repoData.name}
