@@ -20,9 +20,14 @@ const RepoInfoLoginWall: React.FC<RepoInfoLoginWallProps> = ({
   }, [isLoggedIn]);
 
   const handleSignIn = () => {
-    const currentUrl = window.location.href;
-    sessionStorage.setItem("pendingRepoUrl", currentUrl); // ✨ Save where user was
-    signIn("github", { callbackUrl: currentUrl }); // ✨ Redirect back after login
+    const currentPath = window.location.pathname;
+    const parts = currentPath.split("/").filter(Boolean); // Split and remove empty strings
+
+    const [owner, repo] = parts;
+    const githubUrl = `https://github.com/${owner}/${repo}`;
+
+    sessionStorage.setItem("pendingRepoUrl", githubUrl); // Save GitHub URL
+    signIn("github", { callbackUrl: githubUrl }); // Redirect after login
   };
 
   if (!showWall) {
@@ -46,8 +51,9 @@ const RepoInfoLoginWall: React.FC<RepoInfoLoginWallProps> = ({
             </div>
 
             <p className="text-gray-600 dark:text-gray-400 mb-4 text-sm">
-              You've reached the maximum limit of {process.env.NEXT_PUBLIC_MAX_REPO_LIMIT} repository analyses. Please
-              sign in to continue using this tool without limitations.
+              You've reached the maximum limit of{" "}
+              {process.env.NEXT_PUBLIC_MAX_REPO_LIMIT} repository analyses.
+              Please sign in to continue using this tool without limitations.
             </p>
 
             <button
