@@ -1,25 +1,11 @@
 [
     {
-        "id": 970023948,
-        "name": "MAGI-1",
-        "full_name": "SandAI-org/MAGI-1",
-        "html_url": "https://github.com/SandAI-org/MAGI-1",
-        "description": "MAGI-1: Autoregressive Video Generation at Scale",
-        "stargazers_count": 2626,
-        "language": "Python",
-        "owner": {
-            "login": "SandAI-org",
-            "avatar_url": "https://avatars.githubusercontent.com/u/208222005?v=4",
-            "html_url": "https://github.com/SandAI-org"
-        }
-    },
-    {
         "id": 972578539,
         "name": "Kimi-Audio",
         "full_name": "MoonshotAI/Kimi-Audio",
         "html_url": "https://github.com/MoonshotAI/Kimi-Audio",
         "description": "Kimi-Audio, an open-source audio foundation model excelling in audio understanding, generation, and conversation",
-        "stargazers_count": 474,
+        "stargazers_count": 1031,
         "language": "Python",
         "owner": {
             "login": "MoonshotAI",
@@ -33,7 +19,7 @@
         "full_name": "stepfun-ai/Step1X-Edit",
         "html_url": "https://github.com/stepfun-ai/Step1X-Edit",
         "description": null,
-        "stargazers_count": 364,
+        "stargazers_count": 559,
         "language": "Python",
         "owner": {
             "login": "stepfun-ai",
@@ -47,7 +33,7 @@
         "full_name": "going-doer/Paper2Code",
         "html_url": "https://github.com/going-doer/Paper2Code",
         "description": "Paper2Code: Automating Code Generation from Scientific Papers in Machine Learning",
-        "stargazers_count": 355,
+        "stargazers_count": 551,
         "language": "Python",
         "owner": {
             "login": "going-doer",
@@ -61,7 +47,7 @@
         "full_name": "PRIME-RL/TTRL",
         "html_url": "https://github.com/PRIME-RL/TTRL",
         "description": "TTRL: Test-Time Reinforcement Learning",
-        "stargazers_count": 264,
+        "stargazers_count": 293,
         "language": "Python",
         "owner": {
             "login": "PRIME-RL",
@@ -70,12 +56,26 @@
         }
     },
     {
+        "id": 973697232,
+        "name": "linkedin-scraper",
+        "full_name": "lanatenet192/linkedin-scraper",
+        "html_url": "https://github.com/lanatenet192/linkedin-scraper",
+        "description": "linkedin scraper \ud83d\udd25 python3 linkedin jobs scraper | education jobs web scraper linkedin scraper profile data linkedin scraper linkedin scraper linkedin scraper linkedin scraper linkedin scraper linkedin scraper linkedin scraper linkedin scraper linkedin scraper linkedin scraper linkedin scraper hmstepys",
+        "stargazers_count": 222,
+        "language": "Python",
+        "owner": {
+            "login": "lanatenet192",
+            "avatar_url": "https://avatars.githubusercontent.com/u/193876934?v=4",
+            "html_url": "https://github.com/lanatenet192"
+        }
+    },
+    {
         "id": 970882538,
         "name": "leetcode-challenge",
         "full_name": "caio-andres/leetcode-challenge",
         "html_url": "https://github.com/caio-andres/leetcode-challenge",
         "description": "It's the LeetCode Challenge. Created by @caio-andres & @matheusaudibert & @enzowxl to improve our structure algorithm skill using https://leetcode.com/.",
-        "stargazers_count": 196,
+        "stargazers_count": 209,
         "language": "Python",
         "owner": {
             "login": "caio-andres",
