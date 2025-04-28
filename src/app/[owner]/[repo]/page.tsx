@@ -1,6 +1,6 @@
 "use client";
 import axios from "axios";
-import { useState, useEffect } from "react";
+import { useCallback, useMemo, useEffect, useState } from "react";
 import { useRouter, useParams } from "next/navigation";
 import RepoInfo, { RepoData } from "@/components/RepoInfo";
 import GitHubTools from "@/components/GitHubTools";
@@ -11,7 +11,7 @@ import {
   RECENT_REPO_LOCAL_STORAGE_KEY,
   RECENT_TRENDING_REPO_CACHE_MAXCOUNT,
 } from "@/constants";
-import { useSession, getSession } from "next-auth/react";
+import { useSession } from "next-auth/react";
 import { useApiLimit } from "@/components/ApiLimitContext";
 
 export default function RepoPage() {
@@ -19,29 +19,30 @@ export default function RepoPage() {
   const router = useRouter();
   const params = useParams() as { owner: string; repo: string };
   const { owner, repo } = params;
-  const { apiHits, incrementHits, hasReachedLimit } = useApiLimit();
+  const { incrementHits, hasReachedLimit } = useApiLimit();
 
   const [repoData, setRepoData] = useState<RepoData | null>(null);
   const [isLoading, setIsLoading] = useState<boolean>(true);
   const [error, setError] = useState<"rate-limit" | "generic" | null>(null);
 
-  useEffect(() => {
-    if (!owner || !repo) return;
-    fetchRepoData();
+  const fullName = useMemo(() => `${owner}/${repo}`, [owner, repo]);
+
+  const token = useMemo(() => {
+    return status === "authenticated"
+      ? session?.accessToken
+      : process.env.NEXT_PUBLIC_GITHUB_TOKEN;
   }, [status]);
 
-  const fetchRepoData = async () => {
+  const fetchRepoData = useCallback(async () => {
     setIsLoading(true);
     setError(null);
     let isCached = false;
 
     try {
-      if (status === "loading") return;
-
       const storedRepos: RepoData[] = JSON.parse(
         localStorage.getItem(RECENT_REPO_LOCAL_STORAGE_KEY) || "[]"
       );
-      const fullName = `${owner}/${repo}`.toLowerCase();
+
       const cached = storedRepos.find(
         (r) => r.fullName.toLowerCase() === fullName
       );
@@ -52,14 +53,12 @@ export default function RepoPage() {
       if (isCacheValid) {
         setRepoData(cached);
         updateRecentRepos(cached);
-        setIsLoading(false);
         isCached = true;
         return;
       }
 
-      if (status === "unauthenticated" && hasReachedLimit) {
+      if (status !== "authenticated" && hasReachedLimit) {
         setError("rate-limit");
-        setIsLoading(false);
 
         const dummyRepo: RepoData = {
           name: repo,
@@ -81,13 +80,6 @@ export default function RepoPage() {
 
         return;
       }
-
-      const session = await getSession(); // 🔥 fetch fresh session always
-
-      const token =
-        status === "authenticated"
-          ? session?.accessToken
-          : process.env.NEXT_PUBLIC_GITHUB_TOKEN;
 
       const response = await axios.get(
         `/api/repo?owner=${owner}&repo=${repo}`,
@@ -122,9 +114,14 @@ export default function RepoPage() {
       setError("generic");
     } finally {
       setIsLoading(false);
-      if (status === "unauthenticated" && !isCached) incrementHits();
+      if (status !== "authenticated" && !isCached) incrementHits();
     }
-  };
+  }, [owner, repo, status]);
+
+  useEffect(() => {
+    if (status === "loading") return;
+    fetchRepoData();
+  }, [owner, repo, status]);
 
   const updateRecentRepos = (details: RepoData) => {
     const stored = JSON.parse(

@@ -36,29 +36,44 @@ export const authOptions: NextAuthOptions = {
       account: Account | null;
       profile?: Profile;
     }) {
-      user.username = profile?.login ?? "GitHubUser";
-      return true;
+      try {
+        user.username = profile?.login ?? "GitHubUser";
+        return true;
+      } catch (error) {
+        console.error("Error in signIn callback:", error);
+        return false; // Returning false redirects to `pages.error` page
+      }
     },
 
     async jwt({ token, account, profile }): Promise<ExtendedToken> {
-      if (account && profile) {
-        return {
-          ...token,
-          accessToken: account.access_token,
-          githubProfile: profile,
-        };
+      try {
+        if (account && profile) {
+          return {
+            ...token,
+            accessToken: account.access_token,
+            githubProfile: profile,
+          };
+        }
+        return token as ExtendedToken;
+      } catch (error) {
+        console.error("Error in jwt callback:", error);
+        throw new Error("JWT callback error");
       }
-      return token as ExtendedToken;
     },
 
     async session({ session, token }): Promise<ExtendedSession> {
-      const extendedToken = token as ExtendedToken;
+      try {
+        const extendedToken = token as ExtendedToken;
 
-      return {
-        ...session,
-        accessToken: extendedToken.accessToken,
-        githubProfile: extendedToken.githubProfile,
-      };
+        return {
+          ...session,
+          accessToken: extendedToken.accessToken,
+          githubProfile: extendedToken.githubProfile,
+        };
+      } catch (error) {
+        console.error("Error in session callback:", error);
+        throw new Error("Session callback error");
+      }
     },
   },
   events: {
@@ -66,7 +81,8 @@ export const authOptions: NextAuthOptions = {
     signIn: authEvents.signIn,
   },
   pages: {
-    signIn: "/auth/signin",
+    signIn: "/",
+    error: "/",
   },
   debug: process.env.NODE_ENV === "development",
 };

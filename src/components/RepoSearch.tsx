@@ -87,7 +87,7 @@ const RepoSearch = ({
     onSubmit,
     onError,
   }: RepoSubmitHandler) => {
-    e.preventDefault();
+    // e.preventDefault();
 
     if (repoUrl?.trim()) {
       const details = extractRepoDetails(repoUrl);
