@@ -7,6 +7,7 @@ import authEvents from "@/lib/auth/authEvents";
 interface ExtendedToken extends JWT {
   accessToken?: string;
   githubProfile?: Record<string, any>;
+  expires_at?: number;
 }
 
 interface ExtendedSession extends Session {
@@ -45,6 +46,7 @@ export const authOptions: NextAuthOptions = {
       }
     },
 
+
     async jwt({ token, account, profile }): Promise<ExtendedToken> {
       try {
         if (account && profile) {
@@ -52,6 +54,7 @@ export const authOptions: NextAuthOptions = {
             ...token,
             accessToken: account.access_token,
             githubProfile: profile,
+            expires_at: account.expires_at,
           };
         }
         return token as ExtendedToken;
@@ -64,6 +67,12 @@ export const authOptions: NextAuthOptions = {
     async session({ session, token }): Promise<ExtendedSession> {
       try {
         const extendedToken = token as ExtendedToken;
+        const now = Math.floor(Date.now() / 1000);
+
+        if (extendedToken.expires_at && now >= extendedToken.expires_at) {
+          // Token has expired, invalidate the session
+          return {} as ExtendedSession;
+        }
 
         return {
           ...session,
@@ -72,10 +81,11 @@ export const authOptions: NextAuthOptions = {
         };
       } catch (error) {
         console.error("Error in session callback:", error);
-       throw new Error("Session callback error"); 
+        throw new Error("Session callback error");
       }
     },
   },
+
   events: {
     createUser: authEvents.createUser,
     signIn: authEvents.signIn,
