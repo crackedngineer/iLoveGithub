@@ -104,7 +104,7 @@ const GitHubTools = ({
                           src={tool.icon}
                           width={24}
                           height={24}
-                          className="rounded-sm"
+                          className="rounded-sm transition-all dark:invert dark:brightness-90"
                         />
                         {tool.name}
                       </CardTitle>
