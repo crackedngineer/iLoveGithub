@@ -5,9 +5,11 @@ import { SpeedInsights } from "@vercel/speed-insights/next";
 import { Geist, Geist_Mono } from "next/font/google";
 import Head from "next/head";
 import "./globals.css";
+import AuthProvider from "@/components/AuthProvider";
 import AdBanner from "@/components/AdBanner";
 import GoogleAnalytics from "@/components/GoogleAnalytics";
 import { ApiLimitProvider } from "@/components/ApiLimitContext";
+import AuthGuard from "@/components/AuthGuard";
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -132,7 +134,8 @@ export default function RootLayout({
         <Analytics />
         <SpeedInsights />
         <ApiLimitProvider>
-          {children}
+          <AuthProvider>
+            <AuthGuard>{children}</AuthGuard></AuthProvider>
         </ApiLimitProvider>
         {/* Add the AdBanner component at the end of body to ensure it's at the bottom */}
         <AdBanner adSlot="8130644563" />
