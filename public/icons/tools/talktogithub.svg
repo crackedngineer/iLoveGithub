@@ -1,0 +1,15 @@
+<svg width="128" height="128" viewBox="0 0 128 128" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=Inter:wght@700&amp;display=swap');
+    text {
+      font-family: 'Inter', sans-serif;
+      font-weight: 700;
+      letter-spacing: -0.12em;
+    }
+  </style>
+  <text x="50%" y="50%" text-anchor="middle" dominant-baseline="central" font-size="56">
+    <tspan fill="#6D28D9" style="fill: oklch(66.34% 0.1806 277.2)">T</tspan>
+    <tspan fill="#6D28D9" style="fill: oklch(66.34% 0.1806 277.2)" dx="-0.06em">T</tspan>
+    <tspan fill="white" dx="-0.06em">G</tspan>
+  </text>
+</svg>
