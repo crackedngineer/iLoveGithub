@@ -185,7 +185,7 @@ export const GithubToolsList: Tool[] = [
     url: "https://codesandbox.io/p/devbox/github/{owner}/{repo}",
     icon: "/icons/tools/codesandbox.ico", // https://codesandbox.io/favicon.ico
     category: ToolCategories.DEVELOPMENT,
-    iframe: true,
+    iframe: false,
     created_at: "2025-03-28T15:39:45Z",
   },
   {
@@ -301,5 +301,16 @@ export const GithubToolsList: Tool[] = [
     category: ToolCategories.ANALYTICS,
     iframe: true,
     created_at: "2025-04-26T19:02:42.848Z",
+  },
+  {
+    name: "talktogithub",
+    title: "TalkToGitHub",
+    description: "Repo to Convo in seconds!",
+    homepage: "https://talktogithub.com/",
+    url: "https://talktogithub.com/{owner}/{repo}",
+    icon: "/icons/tools/talktogithub.svg", // https://www.gitpodcast.com/favicon.ico
+    category: ToolCategories.ANALYTICS,
+    iframe: true,
+    created_at: "2025-04-29T18:56:38Z",
   },
 ];
