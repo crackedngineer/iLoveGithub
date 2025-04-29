@@ -5,7 +5,7 @@
         "full_name": "MoonshotAI/Kimi-Audio",
         "html_url": "https://github.com/MoonshotAI/Kimi-Audio",
         "description": "Kimi-Audio, an open-source audio foundation model excelling in audio understanding, generation, and conversation",
-        "stargazers_count": 1031,
+        "stargazers_count": 1940,
         "language": "Python",
         "owner": {
             "login": "MoonshotAI",
@@ -18,8 +18,8 @@
         "name": "Step1X-Edit",
         "full_name": "stepfun-ai/Step1X-Edit",
         "html_url": "https://github.com/stepfun-ai/Step1X-Edit",
-        "description": null,
-        "stargazers_count": 559,
+        "description": "A SOTA open-source image editing model, which aims to provide comparable performance against the closed-source models like GPT-4o and Gemini 2 Flash.",
+        "stargazers_count": 785,
         "language": "Python",
         "owner": {
             "login": "stepfun-ai",
@@ -33,7 +33,7 @@
         "full_name": "going-doer/Paper2Code",
         "html_url": "https://github.com/going-doer/Paper2Code",
         "description": "Paper2Code: Automating Code Generation from Scientific Papers in Machine Learning",
-        "stargazers_count": 551,
+        "stargazers_count": 695,
         "language": "Python",
         "owner": {
             "login": "going-doer",
@@ -47,7 +47,7 @@
         "full_name": "PRIME-RL/TTRL",
         "html_url": "https://github.com/PRIME-RL/TTRL",
         "description": "TTRL: Test-Time Reinforcement Learning",
-        "stargazers_count": 293,
+        "stargazers_count": 341,
         "language": "Python",
         "owner": {
             "login": "PRIME-RL",
@@ -70,17 +70,17 @@
         }
     },
     {
-        "id": 970882538,
-        "name": "leetcode-challenge",
-        "full_name": "caio-andres/leetcode-challenge",
-        "html_url": "https://github.com/caio-andres/leetcode-challenge",
-        "description": "It's the LeetCode Challenge. Created by @caio-andres & @matheusaudibert & @enzowxl to improve our structure algorithm skill using https://leetcode.com/.",
-        "stargazers_count": 209,
+        "id": 971285421,
+        "name": "GPOHound",
+        "full_name": "cogiceo/GPOHound",
+        "html_url": "https://github.com/cogiceo/GPOHound",
+        "description": "Offensive GPO dumping and analysis tool that leverages and enriches BloodHound data",
+        "stargazers_count": 159,
         "language": "Python",
         "owner": {
-            "login": "caio-andres",
-            "avatar_url": "https://avatars.githubusercontent.com/u/138927547?v=4",
-            "html_url": "https://github.com/caio-andres"
+            "login": "cogiceo",
+            "avatar_url": "https://avatars.githubusercontent.com/u/7262787?v=4",
+            "html_url": "https://github.com/cogiceo"
         }
     }
 ]
