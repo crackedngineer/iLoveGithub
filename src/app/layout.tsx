@@ -133,10 +133,13 @@ export default function RootLayout({
         />
         <Analytics />
         <SpeedInsights />
-        <ApiLimitProvider>
-          <AuthProvider>
-            <AuthGuard>{children}</AuthGuard></AuthProvider>
-        </ApiLimitProvider>
+
+        <AuthProvider>
+          <ApiLimitProvider>
+            <AuthGuard>{children}</AuthGuard>
+          </ApiLimitProvider>
+        </AuthProvider>
+
         {/* Add the AdBanner component at the end of body to ensure it's at the bottom */}
         <AdBanner adSlot="8130644563" />
       </body>

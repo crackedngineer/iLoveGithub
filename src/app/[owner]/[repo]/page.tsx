@@ -25,7 +25,10 @@ export default function RepoPage() {
   const [isLoading, setIsLoading] = useState<boolean>(true);
   const [error, setError] = useState<"rate-limit" | "generic" | null>(null);
 
-  const fullName = useMemo(() => `${owner}/${repo}`, [owner, repo]);
+  const fullName = useMemo(
+    () => `${owner}/${repo}`.toLowerCase(),
+    [owner, repo]
+  );
 
   const token = useMemo(() => {
     return status === "authenticated"
@@ -33,37 +36,49 @@ export default function RepoPage() {
       : process.env.NEXT_PUBLIC_GITHUB_TOKEN;
   }, [status]);
 
+  const updateRecentRepos = (details: RepoData) => {
+    const stored = JSON.parse(
+      localStorage.getItem(RECENT_REPO_LOCAL_STORAGE_KEY) || "[]"
+    ) as RepoData[];
+    const updated = [
+      details,
+      ...stored.filter((r) => r.fullName !== details.fullName),
+    ].slice(0, RECENT_TRENDING_REPO_CACHE_MAXCOUNT);
+    localStorage.setItem(
+      RECENT_REPO_LOCAL_STORAGE_KEY,
+      JSON.stringify(updated)
+    );
+  };
+
   const fetchRepoData = useCallback(async () => {
     setIsLoading(true);
     setError(null);
-    let isCached = false;
+    let shouldIncrementApiHit = true;
 
     try {
       const storedRepos: RepoData[] = JSON.parse(
         localStorage.getItem(RECENT_REPO_LOCAL_STORAGE_KEY) || "[]"
       );
-
       const cached = storedRepos.find(
         (r) => r.fullName.toLowerCase() === fullName
       );
-
       const isCacheValid =
-        cached && Date.now() - cached.cachedAt < 5 * 60 * 1000; // 5 minutes
+        cached && Date.now() - cached.cachedAt < 5 * 60 * 1000;
 
       if (isCacheValid) {
         setRepoData(cached);
         updateRecentRepos(cached);
-        isCached = true;
+        shouldIncrementApiHit = false;
         return;
       }
 
+      // 2. Handle unauthenticated + rate limit
       if (status !== "authenticated" && hasReachedLimit) {
         setError("rate-limit");
-
-        const dummyRepo: RepoData = {
+        const fallbackRepo: RepoData = {
           name: repo,
           owner,
-          fullName: `${owner}/${repo}`,
+          fullName,
           description: "This is dummy repo data used as a fallback.",
           url: `https://github.com/${owner}/${repo}`,
           stars: 0,
@@ -76,8 +91,8 @@ export default function RepoPage() {
           default_branch: "main",
           cachedAt: Date.now(),
         };
-        setRepoData(dummyRepo);
-
+        setRepoData(fallbackRepo);
+        shouldIncrementApiHit = false;
         return;
       }
 
@@ -89,7 +104,6 @@ export default function RepoPage() {
       );
 
       const githubData = response.data;
-
       const transformed: RepoData = {
         name: githubData.name,
         owner,
@@ -110,34 +124,26 @@ export default function RepoPage() {
       setRepoData(transformed);
       updateRecentRepos(transformed);
     } catch (error) {
-      console.error("Error fetching repo data", error);
+      console.error("Error fetching repo data:", error);
       setError("generic");
-      if (session && "accessToken" in session) signOut({ callbackUrl: "/" });
-
     } finally {
       setIsLoading(false);
-      if (status !== "authenticated" && !isCached) incrementHits();
+      if (shouldIncrementApiHit) incrementHits();
     }
-  }, [owner, repo, status]);
+  }, [
+    owner,
+    repo,
+    status,
+    session,
+    hasReachedLimit,
+    updateRecentRepos,
+    incrementHits,
+  ]);
 
   useEffect(() => {
     if (status === "loading") return;
     fetchRepoData();
   }, [owner, repo, status]);
-
-  const updateRecentRepos = (details: RepoData) => {
-    const stored = JSON.parse(
-      localStorage.getItem(RECENT_REPO_LOCAL_STORAGE_KEY) || "[]"
-    ) as RepoData[];
-    const updated = [
-      details,
-      ...stored.filter((r) => r.fullName !== details.fullName),
-    ].slice(0, RECENT_TRENDING_REPO_CACHE_MAXCOUNT);
-    localStorage.setItem(
-      RECENT_REPO_LOCAL_STORAGE_KEY,
-      JSON.stringify(updated)
-    );
-  };
 
   return (
     <AppLayout>
