@@ -11,7 +11,7 @@ import {
   RECENT_REPO_LOCAL_STORAGE_KEY,
   RECENT_TRENDING_REPO_CACHE_MAXCOUNT,
 } from "@/constants";
-import { useSession } from "next-auth/react";
+import { useSession, signOut } from "next-auth/react";
 import { useApiLimit } from "@/components/ApiLimitContext";
 
 export default function RepoPage() {
@@ -112,6 +112,8 @@ export default function RepoPage() {
     } catch (error) {
       console.error("Error fetching repo data", error);
       setError("generic");
+      if (session && "accessToken" in session) signOut({ callbackUrl: "/" });
+
     } finally {
       setIsLoading(false);
       if (status !== "authenticated" && !isCached) incrementHits();
