@@ -3,8 +3,8 @@
 import React, { useState, useEffect } from "react";
 import Link from "next/link";
 import Image from "next/image";
-import { useSession, signOut } from "next-auth/react";
-import { Menu, X, Sun, Moon } from "lucide-react";
+import { useSession, signOut, signIn } from "next-auth/react";
+import { Menu, X, Sun, Moon, User } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { appVersion } from "@/lib/version";
 import {
@@ -116,44 +116,55 @@ const Header = () => {
             </Button>
           </a>
 
-          {session?.githubProfile && (
-            <DropdownMenu>
-              <DropdownMenuTrigger asChild>
-                <button className="flex items-center gap-2 rounded-full focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-github-blue">
-                  {session.user?.image ? (
-                    <img
-                      src={session.user.image}
-                      alt="Profile"
-                      className="w-8 h-8 rounded-full object-cover"
-                    />
-                  ) : (
-                    <div className="w-8 h-8 bg-gray-300 dark:bg-gray-600 rounded-full" />
-                  )}
-                </button>
-              </DropdownMenuTrigger>
+          <DropdownMenu>
+            <DropdownMenuTrigger asChild>
+              <button className="flex items-center gap-2 rounded-full focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-github-blue">
+                {session?.user?.image ? (
+                  <img
+                    src={session.user.image}
+                    alt="Profile"
+                    className="w-8 h-8 rounded-full object-cover"
+                  />
+                ) : (
+                  <div className="w-8 h-8 flex items-center justify-center bg-gray-300 dark:bg-gray-600 rounded-full">
+                    <User className="w-4 h-4 text-white" />
+                  </div>
+                )}
+              </button>
+            </DropdownMenuTrigger>
 
-              <DropdownMenuContent align="end" className="w-56 p-2">
-                <DropdownMenuLabel className="text-sm text-muted-foreground">
-                  Signed in as
-                </DropdownMenuLabel>
-                <div className="px-2 py-1">
-                  <p className="text-sm font-medium text-github-gray dark:text-white truncate">
-                    {session.user?.name}
-                  </p>
-                  <p className="text-xs text-gray-500 dark:text-gray-400 truncate">
-                    {session.user?.email}
-                  </p>
-                </div>
-                <DropdownMenuSeparator />
+            <DropdownMenuContent align="end" className="w-56 p-2">
+              {session ? (
+                <>
+                  <DropdownMenuLabel className="text-sm text-muted-foreground">
+                    Signed in as
+                  </DropdownMenuLabel>
+                  <div className="px-2 py-1">
+                    <p className="text-sm font-medium text-github-gray dark:text-white truncate">
+                      {session.user?.name}
+                    </p>
+                    <p className="text-xs text-gray-500 dark:text-gray-400 truncate">
+                      {session.user?.email}
+                    </p>
+                  </div>
+                  <DropdownMenuSeparator />
+                  <DropdownMenuItem
+                    className="cursor-pointer text-sm text-red-600 hover:bg-red-50 dark:hover:bg-red-900/20"
+                    onClick={() => signOut({ callbackUrl: "/" })}
+                  >
+                    Log out
+                  </DropdownMenuItem>
+                </>
+              ) : (
                 <DropdownMenuItem
-                  className="cursor-pointer text-sm text-red-600 hover:bg-red-50 dark:hover:bg-red-900/20"
-                  onClick={() => signOut({ callbackUrl: "/" })}
+                  className="cursor-pointer text-sm text-blue-600 hover:bg-blue-50 dark:hover:bg-blue-900/20"
+                  onClick={() => signIn("github", { callbackUrl: "/" })}
                 >
-                  Log out
+                  Sign in with GitHub
                 </DropdownMenuItem>
-              </DropdownMenuContent>
-            </DropdownMenu>
-          )}
+              )}
+            </DropdownMenuContent>
+          </DropdownMenu>
         </div>
 
         <button
