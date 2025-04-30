@@ -5,7 +5,7 @@
         "full_name": "MoonshotAI/Kimi-Audio",
         "html_url": "https://github.com/MoonshotAI/Kimi-Audio",
         "description": "Kimi-Audio, an open-source audio foundation model excelling in audio understanding, generation, and conversation",
-        "stargazers_count": 1940,
+        "stargazers_count": 2804,
         "language": "Python",
         "owner": {
             "login": "MoonshotAI",
@@ -14,26 +14,12 @@
         }
     },
     {
-        "id": 971293318,
-        "name": "Step1X-Edit",
-        "full_name": "stepfun-ai/Step1X-Edit",
-        "html_url": "https://github.com/stepfun-ai/Step1X-Edit",
-        "description": "A SOTA open-source image editing model, which aims to provide comparable performance against the closed-source models like GPT-4o and Gemini 2 Flash.",
-        "stargazers_count": 785,
-        "language": "Python",
-        "owner": {
-            "login": "stepfun-ai",
-            "avatar_url": "https://avatars.githubusercontent.com/u/178004800?v=4",
-            "html_url": "https://github.com/stepfun-ai"
-        }
-    },
-    {
         "id": 972519099,
         "name": "Paper2Code",
         "full_name": "going-doer/Paper2Code",
         "html_url": "https://github.com/going-doer/Paper2Code",
         "description": "Paper2Code: Automating Code Generation from Scientific Papers in Machine Learning",
-        "stargazers_count": 695,
+        "stargazers_count": 791,
         "language": "Python",
         "owner": {
             "login": "going-doer",
@@ -42,17 +28,17 @@
         }
     },
     {
-        "id": 971091060,
-        "name": "TTRL",
-        "full_name": "PRIME-RL/TTRL",
-        "html_url": "https://github.com/PRIME-RL/TTRL",
-        "description": "TTRL: Test-Time Reinforcement Learning",
-        "stargazers_count": 341,
+        "id": 973519535,
+        "name": "Chain-of-Recursive-Thoughts",
+        "full_name": "PhialsBasement/Chain-of-Recursive-Thoughts",
+        "html_url": "https://github.com/PhialsBasement/Chain-of-Recursive-Thoughts",
+        "description": "I made my AI think harder by making it argue with itself repeatedly. It works stupidly well.",
+        "stargazers_count": 336,
         "language": "Python",
         "owner": {
-            "login": "PRIME-RL",
-            "avatar_url": "https://avatars.githubusercontent.com/u/193307489?v=4",
-            "html_url": "https://github.com/PRIME-RL"
+            "login": "PhialsBasement",
+            "avatar_url": "https://avatars.githubusercontent.com/u/155454343?v=4",
+            "html_url": "https://github.com/PhialsBasement"
         }
     },
     {
@@ -61,7 +47,7 @@
         "full_name": "lanatenet192/linkedin-scraper",
         "html_url": "https://github.com/lanatenet192/linkedin-scraper",
         "description": "linkedin scraper \ud83d\udd25 python3 linkedin jobs scraper | education jobs web scraper linkedin scraper profile data linkedin scraper linkedin scraper linkedin scraper linkedin scraper linkedin scraper linkedin scraper linkedin scraper linkedin scraper linkedin scraper linkedin scraper linkedin scraper hmstepys",
-        "stargazers_count": 222,
+        "stargazers_count": 224,
         "language": "Python",
         "owner": {
             "login": "lanatenet192",
@@ -70,17 +56,31 @@
         }
     },
     {
-        "id": 971285421,
-        "name": "GPOHound",
-        "full_name": "cogiceo/GPOHound",
-        "html_url": "https://github.com/cogiceo/GPOHound",
-        "description": "Offensive GPO dumping and analysis tool that leverages and enriches BloodHound data",
-        "stargazers_count": 159,
+        "id": 974420439,
+        "name": "jobspy-api",
+        "full_name": "rainmanjam/jobspy-api",
+        "html_url": "https://github.com/rainmanjam/jobspy-api",
+        "description": "Dockerized version of JobSpy job search utility with API key auth, rate limiting, and proxy support.",
+        "stargazers_count": 174,
         "language": "Python",
         "owner": {
-            "login": "cogiceo",
-            "avatar_url": "https://avatars.githubusercontent.com/u/7262787?v=4",
-            "html_url": "https://github.com/cogiceo"
+            "login": "rainmanjam",
+            "avatar_url": "https://avatars.githubusercontent.com/u/181322?v=4",
+            "html_url": "https://github.com/rainmanjam"
+        }
+    },
+    {
+        "id": 971726597,
+        "name": "abogen",
+        "full_name": "denizsafak/abogen",
+        "html_url": "https://github.com/denizsafak/abogen",
+        "description": "Generate audiobooks from EPUBs, PDFs and text with synchronized captions.",
+        "stargazers_count": 143,
+        "language": "Python",
+        "owner": {
+            "login": "denizsafak",
+            "avatar_url": "https://avatars.githubusercontent.com/u/39929354?v=4",
+            "html_url": "https://github.com/denizsafak"
         }
     }
 ]
