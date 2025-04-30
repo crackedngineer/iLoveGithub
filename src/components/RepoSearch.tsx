@@ -1,6 +1,6 @@
 "use client";
 
-import React, { useEffect, useState } from "react";
+import React, { useEffect, useState, useRef } from "react";
 import { Search } from "lucide-react";
 import { useSession, signIn } from "next-auth/react";
 import { Button } from "@/components/ui/button";
@@ -49,6 +49,7 @@ const RepoSearch = ({
   onRepoSubmit: (owner: string, repo: string) => void;
 }) => {
   const { data: session, status } = useSession();
+  const repoInputRef = useRef<HTMLInputElement>(null);
   const [repoUrl, setRepoUrl] = useState(value);
   const [error, setError] = useState("");
   const [trendingRepos, setTrendingRepos] = useState<TrendingRepo[]>([]);
@@ -87,8 +88,6 @@ const RepoSearch = ({
     onSubmit,
     onError,
   }: RepoSubmitHandler) => {
-    // e.preventDefault();
-
     if (repoUrl?.trim()) {
       const details = extractRepoDetails(repoUrl);
       if (details) {
@@ -104,9 +103,10 @@ const RepoSearch = ({
   };
 
   const handleSubmit = (e: React.FormEvent) => {
+    e.preventDefault();
     handleRepoSubmit({
       e,
-      repoUrl,
+      repoUrl: repoInputRef.current?.value || "",
       onSubmit: onRepoSubmit,
       onError: setError,
     });
@@ -155,7 +155,6 @@ const RepoSearch = ({
     if (trending) fetchTrending();
   }, []);
 
-  // Add a useEffect to check for pending repo URL after authentication
   useEffect(() => {
     if (status === "authenticated") {
       const pendingRepoUrl = sessionStorage.getItem("pendingRepoUrl");
@@ -163,7 +162,6 @@ const RepoSearch = ({
         setRepoUrl(pendingRepoUrl);
         sessionStorage.removeItem("pendingRepoUrl");
 
-        // Optionally auto-submit the form
         const repoDetails = extractRepoDetails(pendingRepoUrl);
         if (repoDetails) {
           onRepoSubmit(repoDetails.owner, repoDetails.repo);
@@ -181,13 +179,15 @@ const RepoSearch = ({
   return (
     <Card className="w-full max-w-4xl mx-auto animate-fade-in px-4 sm:px-6">
       <CardContent className="pt-6 pb-8">
-        <form onSubmit={handleSubmit} className="flex flex-col gap-4">
+        <div className="flex flex-col gap-4">
           <div className="flex flex-col md:flex-row gap-3">
             <div className="relative w-full">
               <Input
                 type="text"
                 placeholder="https://github.com/username/repo"
                 value={repoUrl}
+                ref={repoInputRef}
+                defaultValue={value}
                 onChange={(e) => setRepoUrl(e.target.value)}
                 className="pr-10 h-12"
               />
@@ -197,7 +197,8 @@ const RepoSearch = ({
               />
             </div>
             <Button
-              type="submit"
+              onClick={handleSubmit}
+
               className="h-12 w-full md:w-auto bg-github-blue hover:bg-blue-700 text-white"
             >
               🚀 Analyze Repository
@@ -205,9 +206,8 @@ const RepoSearch = ({
           </div>
 
           {error && <p className="text-red-500 text-sm">{error}</p>}
-        </form>
+        </div>
 
-        {/* Recent Searches */}
         {recent.length > 0 && status === "authenticated" && (
           <div className="mt-6">
             <h4 className="text-sm font-medium text-muted-foreground mb-2">
@@ -220,7 +220,7 @@ const RepoSearch = ({
                   type="button"
                   onClick={() => handleRecentClick(entry)}
                   className="max-w-[200px] truncate px-3 py-1 text-sm rounded-md bg-muted hover:bg-accent text-foreground transition-colors duration-200 ease-in-out"
-                  title={entry} // Show full text on hover
+                  title={entry}
                 >
                   <span className="truncate block">{entry}</span>
                 </button>
@@ -229,7 +229,6 @@ const RepoSearch = ({
           </div>
         )}
 
-        {/* Trending */}
         {trending && (
           <div className="mt-8">
             <h4 className="text-sm font-medium text-muted-foreground mb-3">
