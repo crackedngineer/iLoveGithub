@@ -5,7 +5,7 @@
         "full_name": "MoonshotAI/Kimi-Audio",
         "html_url": "https://github.com/MoonshotAI/Kimi-Audio",
         "description": "Kimi-Audio, an open-source audio foundation model excelling in audio understanding, generation, and conversation",
-        "stargazers_count": 2804,
+        "stargazers_count": 3139,
         "language": "Python",
         "owner": {
             "login": "MoonshotAI",
@@ -19,7 +19,7 @@
         "full_name": "going-doer/Paper2Code",
         "html_url": "https://github.com/going-doer/Paper2Code",
         "description": "Paper2Code: Automating Code Generation from Scientific Papers in Machine Learning",
-        "stargazers_count": 791,
+        "stargazers_count": 863,
         "language": "Python",
         "owner": {
             "login": "going-doer",
@@ -28,31 +28,17 @@
         }
     },
     {
-        "id": 973519535,
-        "name": "Chain-of-Recursive-Thoughts",
-        "full_name": "PhialsBasement/Chain-of-Recursive-Thoughts",
-        "html_url": "https://github.com/PhialsBasement/Chain-of-Recursive-Thoughts",
-        "description": "I made my AI think harder by making it argue with itself repeatedly. It works stupidly well.",
-        "stargazers_count": 336,
+        "id": 973111956,
+        "name": "MiMo",
+        "full_name": "XiaomiMiMo/MiMo",
+        "html_url": "https://github.com/XiaomiMiMo/MiMo",
+        "description": "MiMo: Unlocking the Reasoning Potential of Language Model \u2013 From Pretraining to Posttraining",
+        "stargazers_count": 764,
         "language": "Python",
         "owner": {
-            "login": "PhialsBasement",
-            "avatar_url": "https://avatars.githubusercontent.com/u/155454343?v=4",
-            "html_url": "https://github.com/PhialsBasement"
-        }
-    },
-    {
-        "id": 973697232,
-        "name": "linkedin-scraper",
-        "full_name": "lanatenet192/linkedin-scraper",
-        "html_url": "https://github.com/lanatenet192/linkedin-scraper",
-        "description": "linkedin scraper \ud83d\udd25 python3 linkedin jobs scraper | education jobs web scraper linkedin scraper profile data linkedin scraper linkedin scraper linkedin scraper linkedin scraper linkedin scraper linkedin scraper linkedin scraper linkedin scraper linkedin scraper linkedin scraper linkedin scraper hmstepys",
-        "stargazers_count": 224,
-        "language": "Python",
-        "owner": {
-            "login": "lanatenet192",
-            "avatar_url": "https://avatars.githubusercontent.com/u/193876934?v=4",
-            "html_url": "https://github.com/lanatenet192"
+            "login": "XiaomiMiMo",
+            "avatar_url": "https://avatars.githubusercontent.com/u/208276378?v=4",
+            "html_url": "https://github.com/XiaomiMiMo"
         }
     },
     {
@@ -61,7 +47,7 @@
         "full_name": "rainmanjam/jobspy-api",
         "html_url": "https://github.com/rainmanjam/jobspy-api",
         "description": "Dockerized version of JobSpy job search utility with API key auth, rate limiting, and proxy support.",
-        "stargazers_count": 174,
+        "stargazers_count": 198,
         "language": "Python",
         "owner": {
             "login": "rainmanjam",
@@ -70,17 +56,31 @@
         }
     },
     {
-        "id": 971726597,
-        "name": "abogen",
-        "full_name": "denizsafak/abogen",
-        "html_url": "https://github.com/denizsafak/abogen",
-        "description": "Generate audiobooks from EPUBs, PDFs and text with synchronized captions.",
-        "stargazers_count": 143,
+        "id": 975086883,
+        "name": "atropos",
+        "full_name": "NousResearch/atropos",
+        "html_url": "https://github.com/NousResearch/atropos",
+        "description": "Atropos is a Language Model Reinforcement Learning Environments framework for collecting and evaluating LLM trajectories through diverse environments",
+        "stargazers_count": 172,
         "language": "Python",
         "owner": {
-            "login": "denizsafak",
-            "avatar_url": "https://avatars.githubusercontent.com/u/39929354?v=4",
-            "html_url": "https://github.com/denizsafak"
+            "login": "NousResearch",
+            "avatar_url": "https://avatars.githubusercontent.com/u/134168893?v=4",
+            "html_url": "https://github.com/NousResearch"
+        }
+    },
+    {
+        "id": 973697232,
+        "name": "linkedin-scraper",
+        "full_name": "lanatenet192/linkedin-scraper",
+        "html_url": "https://github.com/lanatenet192/linkedin-scraper",
+        "description": "linkedin scraper \ud83d\udd25 python3 linkedin jobs scraper | education jobs web scraper linkedin scraper profile data linkedin scraper linkedin scraper linkedin scraper linkedin scraper linkedin scraper linkedin scraper linkedin scraper linkedin scraper linkedin scraper linkedin scraper linkedin scraper hmstepys",
+        "stargazers_count": 150,
+        "language": "Python",
+        "owner": {
+            "login": "lanatenet192",
+            "avatar_url": "https://avatars.githubusercontent.com/u/193876934?v=4",
+            "html_url": "https://github.com/lanatenet192"
         }
     }
 ]
