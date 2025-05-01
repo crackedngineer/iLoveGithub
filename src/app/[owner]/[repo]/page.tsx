@@ -31,9 +31,7 @@ export default function RepoPage() {
   );
 
   const token = useMemo(() => {
-    return status === "authenticated"
-      ? session?.accessToken
-      : process.env.NEXT_PUBLIC_GITHUB_TOKEN;
+    return session?.accessToken;
   }, [status]);
 
   const updateRecentRepos = (details: RepoData) => {

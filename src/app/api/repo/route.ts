@@ -1,15 +1,16 @@
 import { NextRequest, NextResponse } from "next/server";
 import axios from "axios";
+import { headers } from "next/headers";
 
 export async function GET(req: NextRequest) {
   const { searchParams } = new URL(req.url);
   const owner = searchParams.get("owner");
   const repo = searchParams.get("repo");
-  const token = req.headers.get("Authorization")?.replace("Bearer ", "");
+  const token = req.headers.get("Authorization");
 
-  if (!owner || !repo || !token) {
+  if (!owner || !repo) {
     return NextResponse.json(
-      { error: "Missing 'owner', 'repo' or Authorization 'token'" },
+      { error: "Missing 'owner', 'repo'" },
       { status: 400 }
     );
   }
@@ -22,14 +23,16 @@ export async function GET(req: NextRequest) {
     },
   });
 
+  const headers = {
+    Accept: "application/vnd.github.mercy-preview+json",
+    Authorization: token || `Bearer ${process.env.NEXT_PUBLIC_GITHUB_TOKEN}`,
+  };
+
   try {
     const [repoRes, topicsRes] = await Promise.all([
-      githubClient.get(`/repos/${owner}/${repo}`),
+      githubClient.get(`/repos/${owner}/${repo}`, { headers: headers }),
       githubClient.get(`/repos/${owner}/${repo}/topics`, {
-        headers: {
-          Accept: "application/vnd.github.mercy-preview+json",
-          Authorization: `Bearer ${token}`,
-        },
+        headers: headers,
       }),
     ]);
 
