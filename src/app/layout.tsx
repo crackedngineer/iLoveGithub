@@ -3,7 +3,6 @@ import Script from "next/script";
 import { Analytics } from "@vercel/analytics/react";
 import { SpeedInsights } from "@vercel/speed-insights/next";
 import { Geist, Geist_Mono } from "next/font/google";
-import Head from "next/head";
 import "./globals.css";
 import AuthProvider from "@/components/AuthProvider";
 import AdBanner from "@/components/AdBanner";
@@ -76,22 +75,20 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en" suppressHydrationWarning>
-      <Head>
+      <head>
         <link rel="canonical" href="https://ilovegithub.oderna.in" />
         {/* Theme script for preventing flicker */}
-        <script
+        <Script
           dangerouslySetInnerHTML={{
             __html: `(function() {
           try {
             const savedTheme = localStorage.getItem("theme");
             const systemPrefersDark = window.matchMedia("(prefers-color-scheme: dark)").matches;
-            const currentHour = new Date().getHours();
-            const isEvening = currentHour >= 19 || currentHour < 7;
 
             let theme = "light";
             if (savedTheme === "dark" || savedTheme === "light") {
               theme = savedTheme;
-            } else if (systemPrefersDark || isEvening) {
+            } else if (systemPrefersDark) {
               theme = "dark";
             }
 
@@ -124,7 +121,7 @@ export default function RootLayout({
     gtag('config', '${process.env.NEXT_PUBLIC_GA_MEASUREMENT_ID}');
   `}
         </Script>
-      </Head>
+      </head>
       <body
         className={`${geistSans.variable} ${geistMono.variable} antialiased`}
       >
@@ -141,7 +138,7 @@ export default function RootLayout({
         </AuthProvider>
 
         {/* Add the AdBanner component at the end of body to ensure it's at the bottom */}
-        <AdBanner adSlot="8130644563" />
+        {/* <AdBanner adSlot="8130644563" /> */}
       </body>
     </html>
   );

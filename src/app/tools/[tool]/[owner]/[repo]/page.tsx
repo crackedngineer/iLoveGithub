@@ -5,7 +5,7 @@ import { GithubToolsList } from "@/constants";
 import { replaceUrlVariables } from "@/app/helper";
 import { useParams } from "next/navigation";
 import ToolViewer from "@/components/ToolViewer";
-import LoadingScreen from "@/components/LoadingScreen";
+import ToolLoading from "@/components/ToolLoading";
 
 export default function ToolsPage() {
   const params = useParams() as { tool: string; owner: string; repo: string };
@@ -34,7 +34,7 @@ export default function ToolsPage() {
       {toolLink && showViewer ? (
         <ToolViewer url={toolLink} name={`${owner}/${repo}`} />
       ) : (
-        <LoadingScreen tool={tool} owner={owner} repo={repo} />
+        <ToolLoading tool={tool} owner={owner} repo={repo} />
       )}
     </div>
   );
