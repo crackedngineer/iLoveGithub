@@ -8,24 +8,30 @@ import { appVersion } from "@/lib/version";
 export default function AuthGuard({ children }: { children: React.ReactNode }) {
   const { data: session, status } = useSession();
   const [isLoggingOut, setIsLoggingOut] = useState(false);
+  const [showInitialLoader, setShowInitialLoader] = useState(true);
 
+  // Show loader for a fixed duration on mount
   useEffect(() => {
-    const timeout = setTimeout(() => {
-      // Check if session is unauthenticated and if there's no access token
-      if (status === "unauthenticated" && session && "accessToken" in session) {
-        console.log("No valid token, logging out...");
-        setIsLoggingOut(true); // Set logout state
-        signOut({ callbackUrl: "/" }); // Redirect to home or login page after logout
-      }
-    }, 2500);
+    const timer = setTimeout(() => setShowInitialLoader(false), 1500);
+    return () => clearTimeout(timer);
+  }, []);
 
-    return () => clearTimeout(timeout);
+  // Logout if session is unauthenticated but contains accessToken (invalid state)
+  useEffect(() => {
+    if (status !== "unauthenticated" || !session || !("accessToken" in session))
+      return;
+
+    const logoutTimer = setTimeout(() => {
+      console.warn("No valid token, logging out...");
+      setIsLoggingOut(true);
+      signOut({ callbackUrl: "/" });
+    }, 4500);
+
+    return () => clearTimeout(logoutTimer);
   }, [status, session]);
 
-  // While session is loading, display a loading spinner or message
-  if (status === "loading" || isLoggingOut) {
-    return <Loader version={appVersion} />;
-  }
+  const shouldShowLoader =
+    showInitialLoader || status === "loading" || isLoggingOut;
 
-  return <>{children}</>;
+  return shouldShowLoader ? <Loader version={appVersion} /> : <>{children}</>;
 }
