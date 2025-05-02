@@ -1,39 +1,11 @@
 [
     {
-        "id": 972578539,
-        "name": "Kimi-Audio",
-        "full_name": "MoonshotAI/Kimi-Audio",
-        "html_url": "https://github.com/MoonshotAI/Kimi-Audio",
-        "description": "Kimi-Audio, an open-source audio foundation model excelling in audio understanding, generation, and conversation",
-        "stargazers_count": 3139,
-        "language": "Python",
-        "owner": {
-            "login": "MoonshotAI",
-            "avatar_url": "https://avatars.githubusercontent.com/u/129152888?v=4",
-            "html_url": "https://github.com/MoonshotAI"
-        }
-    },
-    {
-        "id": 972519099,
-        "name": "Paper2Code",
-        "full_name": "going-doer/Paper2Code",
-        "html_url": "https://github.com/going-doer/Paper2Code",
-        "description": "Paper2Code: Automating Code Generation from Scientific Papers in Machine Learning",
-        "stargazers_count": 863,
-        "language": "Python",
-        "owner": {
-            "login": "going-doer",
-            "avatar_url": "https://avatars.githubusercontent.com/u/48055421?v=4",
-            "html_url": "https://github.com/going-doer"
-        }
-    },
-    {
         "id": 973111956,
         "name": "MiMo",
         "full_name": "XiaomiMiMo/MiMo",
         "html_url": "https://github.com/XiaomiMiMo/MiMo",
         "description": "MiMo: Unlocking the Reasoning Potential of Language Model \u2013 From Pretraining to Posttraining",
-        "stargazers_count": 764,
+        "stargazers_count": 931,
         "language": "Python",
         "owner": {
             "login": "XiaomiMiMo",
@@ -47,7 +19,7 @@
         "full_name": "rainmanjam/jobspy-api",
         "html_url": "https://github.com/rainmanjam/jobspy-api",
         "description": "Dockerized version of JobSpy job search utility with API key auth, rate limiting, and proxy support.",
-        "stargazers_count": 198,
+        "stargazers_count": 219,
         "language": "Python",
         "owner": {
             "login": "rainmanjam",
@@ -56,12 +28,26 @@
         }
     },
     {
+        "id": 975502419,
+        "name": "GrassBot",
+        "full_name": "blinddumper/GrassBot",
+        "html_url": "https://github.com/blinddumper/GrassBot",
+        "description": "bot for grass farm",
+        "stargazers_count": 201,
+        "language": "Python",
+        "owner": {
+            "login": "blinddumper",
+            "avatar_url": "https://avatars.githubusercontent.com/u/162107?v=4",
+            "html_url": "https://github.com/blinddumper"
+        }
+    },
+    {
         "id": 975086883,
         "name": "atropos",
         "full_name": "NousResearch/atropos",
         "html_url": "https://github.com/NousResearch/atropos",
         "description": "Atropos is a Language Model Reinforcement Learning Environments framework for collecting and evaluating LLM trajectories through diverse environments",
-        "stargazers_count": 172,
+        "stargazers_count": 190,
         "language": "Python",
         "owner": {
             "login": "NousResearch",
@@ -81,6 +67,20 @@
             "login": "lanatenet192",
             "avatar_url": "https://avatars.githubusercontent.com/u/193876934?v=4",
             "html_url": "https://github.com/lanatenet192"
+        }
+    },
+    {
+        "id": 973704272,
+        "name": "eth-address-poisoning-tool",
+        "full_name": "EchoEth/eth-address-poisoning-tool",
+        "html_url": "https://github.com/EchoEth/eth-address-poisoning-tool",
+        "description": "A complex and complete ethereum address poisoning tool",
+        "stargazers_count": 118,
+        "language": "Python",
+        "owner": {
+            "login": "EchoEth",
+            "avatar_url": "https://avatars.githubusercontent.com/u/209363184?v=4",
+            "html_url": "https://github.com/EchoEth"
         }
     }
 ]
