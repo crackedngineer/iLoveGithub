@@ -18,9 +18,9 @@ import {
 
 const BuyMeCoffeeURL = "https://buymeacoffee.com/subhomoyrca";
 const SubstackNewsletterURL = "https://ilovegithub.substack.com/";
-const GithubRepoURL = "https://github.com/subhomoy-roy-choudhury/iLoveGithub";
+const GithubRepoURL = "https://github.com/crackedngineer/iLoveGithub";
 const GithubSubmitToolURL =
-  "https://github.com/subhomoy-roy-choudhury/iLoveGithub/issues/new?template=new-tool-request.yml";
+  "https://github.com/crackedngineer/iLoveGithub/issues/new?template=new-tool-request.yml";
 
 const Header = () => {
   const { data: session } = useSession();

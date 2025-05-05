@@ -1,31 +1,31 @@
 <!-- # 💖 iLoveGitHub -->
 <br/>
 <p align="center">
-  <a href="https://github.com/subhomoy-roy-choudhury/Hack_IP">
+  <a href="https://github.com/crackedngineer/Hack_IP">
     <img src="https://svg-banners.vercel.app/api?type=origin&text1=iLoveGithub🤠&text2=💖%20Open%20Source&width=800&height=400" alt="Hack_IP" width="640" height="320" />
   </a>
   <p align="center">
     A curated collection of magical tools built around GitHub — open a repo in VS Code, visualize it, generate AI-powered summaries, convert it to a podcast, and so much more.
     <br/>
     <br/>
-    <a href="https://github.com/subhomoy-roy-choudhury/iLoveGithub"><strong>Explore the docs »</strong></a>
+    <a href="https://github.com/crackedngineer/iLoveGithub"><strong>Explore the docs »</strong></a>
     <br/>
     <br/>
-    <a href="https://github.com/subhomoy-roy-choudhury/iLoveGithub">View Demo</a>
+    <a href="https://github.com/crackedngineer/iLoveGithub">View Demo</a>
     .
-    <a href="https://github.com/subhomoy-roy-choudhury/iLoveGithub/issues">Report Bug</a>
+    <a href="https://github.com/crackedngineer/iLoveGithub/issues">Report Bug</a>
     .
-    <a href="https://github.com/subhomoy-roy-choudhury/iLoveGithub/issues">Request Feature</a>
+    <a href="https://github.com/crackedngineer/iLoveGithub/issues">Request Feature</a>
   </p>
 </p>
 
 <p align="center">
-    <img alt="GitHub Contributors" src="https://img.shields.io/github/contributors/subhomoy-roy-choudhury/iLoveGithub?color=dark-green" />
-    <!-- <img alt="Github Issues" src="https://img.shields.io/github/issues/subhomoy-roy-choudhury/iLoveGithub" /> -->
-    <img alt="GitHub Last Commit" src="https://img.shields.io/github/last-commit/subhomoy-roy-choudhury/iLoveGithub" />
-    <img alt="Repo Size" src="https://img.shields.io/github/repo-size/subhomoy-roy-choudhury/iLoveGithub" />
-    <!-- <img alt="GitHub Pull Requests" src="https://img.shields.io/github/issues-pr/subhomoy-roy-choudhury/iLoveGithub" /> -->
-    <img alt="Github License" src="https://img.shields.io/github/license/subhomoy-roy-choudhury/iLoveGithub" />
+    <img alt="GitHub Contributors" src="https://img.shields.io/github/contributors/crackedngineer/iLoveGithub?color=dark-green" />
+    <!-- <img alt="Github Issues" src="https://img.shields.io/github/issues/crackedngineer/iLoveGithub" /> -->
+    <img alt="GitHub Last Commit" src="https://img.shields.io/github/last-commit/crackedngineer/iLoveGithub" />
+    <img alt="Repo Size" src="https://img.shields.io/github/repo-size/crackedngineer/iLoveGithub" />
+    <!-- <img alt="GitHub Pull Requests" src="https://img.shields.io/github/issues-pr/crackedngineer/iLoveGithub" /> -->
+    <img alt="Github License" src="https://img.shields.io/github/license/crackedngineer/iLoveGithub" />
 
 
 </p>
@@ -100,7 +100,7 @@
 
 ```bash
 # 1. Clone the repository
-$ git clone https://github.com/your-username/iLoveGitHub.git
+$ git clone https://github.com/crackedngineer/iLoveGitHub.git
 
 # 2. Navigate into the project folder
 $ cd iLoveGitHub
@@ -124,7 +124,7 @@ This project uses [`next/font`](https://nextjs.org/docs/app/building-your-applic
 
 If this project helps you discover amazing tools or saves your time, consider supporting it:
 
-☕ [**Buy Me a Coffee**](https://buymeacoffee.com/subhomoyrca) — Every bit helps keep the lights on!
+☕ [**Buy Me a Coffee**](https://buymeacoffee.com/crackedngineer) — Every bit helps keep the lights on!
 
 📬 **Contact:** subhomoyrchoudhury@gmail.com
 
@@ -138,4 +138,4 @@ If this project helps you discover amazing tools or saves your time, consider su
 
 ---
 
-Made in India with ❤️ by [Subhomoy Roy Choudhury](https://github.com/subhomoy-roy-choudhury)
+Made in India with ❤️ by [Subhomoy Roy Choudhury](https://github.com/crackedngineer)

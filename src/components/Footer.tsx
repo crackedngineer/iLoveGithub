@@ -24,7 +24,7 @@ const Footer = () => {
           />
           <span>by</span>
           <a
-            href="https://github.com/subhomoy-roy-choudhury/"
+            href="https://github.com/crackedngineer/"
             target="_blank"
             rel="noopener noreferrer"
             className="hover:text-github-blue dark:hover:text-white transition-colors"

@@ -7,7 +7,7 @@ export const RECENT_TRENDING_REPO_UI_MAXCOUNT = 4;
 export const RECENT_TRENDING_REPO_CACHE_MAXCOUNT = 4;
 
 export const DefaultGithubRepo = {
-  owner: "subhomoy-roy-choudhury",
+  owner: "crackedngineer",
   repo: "iLoveGithub",
 };
 
