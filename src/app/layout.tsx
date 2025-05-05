@@ -9,6 +9,7 @@ import AdBanner from "@/components/AdBanner";
 import GoogleAnalytics from "@/components/GoogleAnalytics";
 import { ApiLimitProvider } from "@/components/ApiLimitContext";
 import AuthGuard from "@/components/AuthGuard";
+import DemoVideoProvider from "@/components/DemoVideoProvider";
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -131,11 +132,13 @@ export default function RootLayout({
         <Analytics />
         <SpeedInsights />
 
-        <AuthProvider>
-          <ApiLimitProvider>
-            <AuthGuard>{children}</AuthGuard>
-          </ApiLimitProvider>
-        </AuthProvider>
+        <DemoVideoProvider>
+          <AuthProvider>
+            <ApiLimitProvider>
+              <AuthGuard>{children}</AuthGuard>
+            </ApiLimitProvider>
+          </AuthProvider>
+        </DemoVideoProvider>
 
         {/* Add the AdBanner component at the end of body to ensure it's at the bottom */}
         {/* <AdBanner adSlot="8130644563" /> */}

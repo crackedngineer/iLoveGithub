@@ -15,6 +15,7 @@ import {
   DropdownMenuSeparator,
   DropdownMenuItem,
 } from "@/components/ui/dropdown-menu";
+import { DEMO_VIDEO_URL } from "@/constants";
 
 const BuyMeCoffeeURL = "https://buymeacoffee.com/subhomoyrca";
 const SubstackNewsletterURL = "https://ilovegithub.substack.com/";
@@ -216,6 +217,15 @@ const Header = () => {
             onClick={toggleTheme}
           >
             {isDarkMode ? "Light Mode ☀️" : "Dark Mode 🌙"}
+          </Button>
+          <Button
+            variant="ghost"
+            className="w-full justify-start text-github-gray dark:text-white/90 hover:text-github-blue dark:hover:text-white"
+            onClick={() => {
+              window.open(DEMO_VIDEO_URL, "_blank");
+            }}
+          >
+            Demo
           </Button>
           {session?.githubProfile && (
             <Button

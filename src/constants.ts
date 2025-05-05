@@ -6,6 +6,8 @@ export const RECENT_TRENDING_REPO_UI_MAXCOUNT = 4;
 
 export const RECENT_TRENDING_REPO_CACHE_MAXCOUNT = 4;
 
+export const DEMO_VIDEO_URL = "https://www.youtube.com/embed/dQw4w9WgXcQ?autoplay=1"
+
 export const DefaultGithubRepo = {
   owner: "crackedngineer",
   repo: "iLoveGithub",
