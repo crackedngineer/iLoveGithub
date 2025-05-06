@@ -21,6 +21,7 @@ import {
   SUBSTACK_NEWSLETTER_URL,
   GITHUB_REPO_URL,
   GITHUB_SUBMIT_TOOL_URL,
+  DEMO_VIDEO_URL
 } from "@/constants";
 
 // Utility to check if coordinates fall within India's bounding box
@@ -260,6 +261,15 @@ const Header = () => {
             onClick={toggleTheme}
           >
             {isDarkMode ? "Light Mode ☀️" : "Dark Mode 🌙"}
+          </Button>
+          <Button
+            variant="ghost"
+            className="w-full justify-start text-github-gray dark:text-white/90 hover:text-github-blue dark:hover:text-white"
+            onClick={() => {
+              window.open(DEMO_VIDEO_URL, "_blank");
+            }}
+          >
+            Demo
           </Button>
           {session?.githubProfile && (
             <Button
