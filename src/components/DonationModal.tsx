@@ -28,8 +28,8 @@ const DonationModal = ({
 }: DonationModalProps) => {
   const [amount, setAmount] = useState(101);
   const [qrImage, setQrImage] = useState("");
-  const minAmount = 10;
-  const maxAmount = 5000;
+  const minAmount = 11;
+  const maxAmount = 5001;
   const step = 10;
 
   // Predefined donation amounts
