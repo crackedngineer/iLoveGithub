@@ -6,6 +6,17 @@ export const RECENT_TRENDING_REPO_UI_MAXCOUNT = 4;
 
 export const RECENT_TRENDING_REPO_CACHE_MAXCOUNT = 4;
 
+export const DONATION_MERCHANT_NAME = "iLoveGithub";
+
+export const BUY_ME_COFFEE_URL = "https://buymeacoffee.com/crackedngineer";
+
+export const SUBSTACK_NEWSLETTER_URL = "https://ilovegithub.substack.com/";
+
+export const GITHUB_REPO_URL = "https://github.com/crackedngineer/iLoveGithub";
+
+export const GITHUB_SUBMIT_TOOL_URL =
+  "https://github.com/crackedngineer/iLoveGithub/issues/new?template=new-tool-request.yml";
+
 export const DefaultGithubRepo = {
   owner: "crackedngineer",
   repo: "iLoveGithub",
