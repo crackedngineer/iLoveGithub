@@ -4,7 +4,7 @@ import React, { useState, useEffect } from "react";
 import Link from "next/link";
 import Image from "next/image";
 import { useSession, signOut, signIn } from "next-auth/react";
-import { Menu, X, Sun, Moon, User } from "lucide-react";
+import { Menu, X, Sun, Moon, User, Coffee, QrCode } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { appVersion } from "@/lib/version";
 import {
@@ -15,20 +15,58 @@ import {
   DropdownMenuSeparator,
   DropdownMenuItem,
 } from "@/components/ui/dropdown-menu";
+import DonationModal from "./DonationModal";
+import {
+  BUY_ME_COFFEE_URL,
+  SUBSTACK_NEWSLETTER_URL,
+  GITHUB_REPO_URL,
+  GITHUB_SUBMIT_TOOL_URL,
+} from "@/constants";
 
-const BuyMeCoffeeURL = "https://buymeacoffee.com/subhomoyrca";
-const SubstackNewsletterURL = "https://ilovegithub.substack.com/";
-const GithubRepoURL = "https://github.com/crackedngineer/iLoveGithub";
-const GithubSubmitToolURL =
-  "https://github.com/crackedngineer/iLoveGithub/issues/new?template=new-tool-request.yml";
+// Utility to check if coordinates fall within India's bounding box
+const isWithinIndia = (latitude: number, longitude: number): boolean => {
+  return (
+    latitude >= 6.5546 &&
+    latitude <= 35.6745 &&
+    longitude >= 68.1114 &&
+    longitude <= 97.3956
+  );
+};
 
 const Header = () => {
   const { data: session } = useSession();
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   const [isDarkMode, setIsDarkMode] = useState(false);
+  const [isDonationModalOpen, setIsDonationModalOpen] = useState(false);
+  const [isIndiaLocation, setIsIndiaLocation] = useState(false);
 
   useEffect(() => {
     setIsDarkMode(document.documentElement.classList.contains("dark"));
+  }, []);
+
+  useEffect(() => {
+    const getLocation = () => {
+      if (!navigator.geolocation) {
+        console.warn("Geolocation not supported");
+        return;
+      }
+
+      navigator.geolocation.getCurrentPosition(
+        (position) => {
+          const { latitude, longitude } = position.coords;
+          console.log("Browser geolocation:", { latitude, longitude });
+
+          const inIndia = isWithinIndia(latitude, longitude);
+          setIsIndiaLocation(inIndia);
+        },
+        (err) => {
+          console.warn("Geolocation error:", err.message);
+        },
+        { enableHighAccuracy: true, timeout: 5000, maximumAge: 10000 }
+      );
+    };
+
+    getLocation();
   }, []);
 
   const toggleTheme = () => {
@@ -66,59 +104,66 @@ const Header = () => {
           <Button
             variant="ghost"
             size="sm"
-            className="text-github-gray dark:text-white/90 hover:text-github-blue dark:hover:text-white"
-            onClick={() => window.open(GithubSubmitToolURL, "_blank")}
+            onClick={() => window.open(GITHUB_SUBMIT_TOOL_URL, "_blank")}
           >
             Submit a Tool
           </Button>
-
           <Button
             variant="ghost"
             size="sm"
-            className="text-github-gray dark:text-white/90 hover:text-github-blue dark:hover:text-white"
-            onClick={() => window.open(GithubRepoURL, "_blank")}
+            onClick={() => window.open(GITHUB_REPO_URL, "_blank")}
           >
             GitHub
           </Button>
-
           <Button
             variant="ghost"
             size="sm"
-            className="text-github-gray dark:text-white/90 hover:text-github-blue dark:hover:text-white"
-            onClick={() => window.open(SubstackNewsletterURL, "_blank")}
+            onClick={() => window.open(SUBSTACK_NEWSLETTER_URL, "_blank")}
           >
             Join Newsletter
           </Button>
-
           <Button
             variant="ghost"
             size="icon"
             onClick={toggleTheme}
-            className="text-github-gray dark:text-white/90 hover:text-github-blue dark:hover:text-white"
             aria-label="Toggle Theme"
           >
-            <span className="transition-transform duration-300 ease-in-out transform hover:rotate-180">
-              {isDarkMode ? (
-                <Sun className="h-5 w-5" />
-              ) : (
-                <Moon className="h-5 w-5" />
-              )}
-            </span>
+            {isDarkMode ? (
+              <Sun className="h-5 w-5" />
+            ) : (
+              <Moon className="h-5 w-5" />
+            )}
           </Button>
-
-          <a href={BuyMeCoffeeURL} target="_blank" rel="noopener noreferrer">
-            <Button
-              size="sm"
-              variant="outline"
-              className="bg-github-pink text-white hover:bg-github-darkPink border-none rounded-full px-4"
-            >
-              Donate ❤️
-            </Button>
-          </a>
 
           <DropdownMenu>
             <DropdownMenuTrigger asChild>
-              <button className="flex items-center gap-2 rounded-full focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-github-blue">
+              <Button
+                variant="outline"
+                size="sm"
+                className="flex items-center gap-1 bg-github-pink text-white hover:bg-github-darkPink border-none rounded-full px-4"
+              >
+                Donate ❤️
+              </Button>
+            </DropdownMenuTrigger>
+            <DropdownMenuContent className="w-48 bg-white dark:bg-gray-800 p-2">
+              <DropdownMenuItem
+                onClick={() => window.open(BUY_ME_COFFEE_URL, "_blank")}
+              >
+                <Coffee className="h-4 w-4 mr-2" />
+                Buy me a coffee
+              </DropdownMenuItem>
+              {isIndiaLocation && (
+                <DropdownMenuItem onClick={() => setIsDonationModalOpen(true)}>
+                  <QrCode className="h-4 w-4 mr-2" />
+                  Scan QR code
+                </DropdownMenuItem>
+              )}
+            </DropdownMenuContent>
+          </DropdownMenu>
+
+          <DropdownMenu>
+            <DropdownMenuTrigger asChild>
+              <button className="flex items-center gap-2 rounded-full">
                 {session?.user?.image ? (
                   <img
                     src={session.user.image}
@@ -132,7 +177,6 @@ const Header = () => {
                 )}
               </button>
             </DropdownMenuTrigger>
-
             <DropdownMenuContent align="end" className="w-56 p-2">
               {session ? (
                 <>
@@ -140,7 +184,7 @@ const Header = () => {
                     Signed in as
                   </DropdownMenuLabel>
                   <div className="px-2 py-1">
-                    <p className="text-sm font-medium text-github-gray dark:text-white truncate">
+                    <p className="text-sm font-medium truncate">
                       {session.user?.name}
                     </p>
                     <p className="text-xs text-gray-500 dark:text-gray-400 truncate">
@@ -168,7 +212,7 @@ const Header = () => {
         </div>
 
         <button
-          className="md:hidden p-2 text-github-gray dark:text-white focus:outline-none"
+          className="md:hidden p-2 text-github-gray dark:text-white"
           onClick={() => setIsMenuOpen((prev) => !prev)}
           aria-label="Toggle Menu"
         >
@@ -186,7 +230,7 @@ const Header = () => {
             variant="ghost"
             size="sm"
             className="w-full justify-start text-github-gray dark:text-white/90 hover:text-github-blue dark:hover:text-white"
-            onClick={() => window.open(GithubSubmitToolURL, "_blank")}
+            onClick={() => window.open(GITHUB_SUBMIT_TOOL_URL, "_blank")}
           >
             Submit a Tool
           </Button>
@@ -195,7 +239,7 @@ const Header = () => {
             className="w-full justify-start text-github-gray dark:text-white/90 hover:text-github-blue dark:hover:text-white"
             onClick={() => {
               setIsMenuOpen(false);
-              window.open(GithubRepoURL, "_blank");
+              window.open(GITHUB_REPO_URL, "_blank");
             }}
           >
             GitHub
@@ -205,7 +249,7 @@ const Header = () => {
             className="w-full justify-start text-github-gray dark:text-white/90 hover:text-github-blue dark:hover:text-white"
             onClick={() => {
               setIsMenuOpen(false);
-              window.open(SubstackNewsletterURL, "_blank");
+              window.open(SUBSTACK_NEWSLETTER_URL, "_blank");
             }}
           >
             Join Newsletter
@@ -227,7 +271,7 @@ const Header = () => {
             </Button>
           )}
           <a
-            href={BuyMeCoffeeURL}
+            href={BUY_ME_COFFEE_URL}
             target="_blank"
             rel="noopener noreferrer"
             className="w-full"
@@ -241,6 +285,12 @@ const Header = () => {
           </a>
         </div>
       )}
+
+      <DonationModal
+        isOpen={isDonationModalOpen}
+        onClose={() => setIsDonationModalOpen(false)}
+        isIndiaLocation={isIndiaLocation}
+      />
     </header>
   );
 };
