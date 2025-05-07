@@ -14,6 +14,7 @@ import {
   DialogDescription,
 } from "@/components/ui/dialog";
 import { DONATION_MERCHANT_NAME } from "@/constants";
+import Image from "next/image";
 
 interface DonationModalProps {
   isOpen: boolean;
@@ -110,7 +111,13 @@ const DonationModal = ({
             {/* <QrCode className="w-48 h-48 text-black dark:text-white" /> */}
             {qrImage && (
               <div className="w-48 h-48 text-black dark:text-white">
-                <img src={qrImage} alt="QR Code" />
+                <Image
+                  src={qrImage}
+                  className="rounded"
+                  alt="QR Code"
+                  width={480}
+                  height={480}
+                />
               </div>
             )}
           </div>

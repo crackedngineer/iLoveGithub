@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 import {
   ExternalLink,
   Star,
@@ -8,6 +8,7 @@ import {
   GitBranch,
   FileCode,
   Info,
+  QrCode,
 } from "lucide-react";
 import {
   Card,
@@ -21,6 +22,7 @@ import { Button } from "@/components/ui/button";
 import { Badge } from "@/components/ui/badge";
 import { formatDistanceToNow } from "date-fns";
 import RepoInfoLoginWall from "./RepoInfoLoginWall";
+import ShareQRCodeModal from "./ShareQRCOdeModal";
 
 export interface RepoData {
   name: string;
@@ -91,6 +93,8 @@ const RepoInfo = ({
   repo: RepoData;
   isLoggedIn: boolean;
 }) => {
+  const [isQRModalOpen, setIsQRModalOpen] = useState(false);
+
   const formattedDate = (dateString: string) => {
     const date = new Date(dateString);
     return date.toLocaleDateString("en-US", {
@@ -148,17 +152,28 @@ const RepoInfo = ({
             </div>
 
             {/* GitHub Button */}
-            <Button
-              variant="outline"
-              size="sm"
-              className="flex items-center gap-1 w-fit"
-              asChild
-            >
-              <a href={repo.url} target="_blank" rel="noopener noreferrer">
-                <ExternalLink size={14} />
-                View on GitHub
-              </a>
-            </Button>
+            <div className="flex gap-2">
+              <Button
+                variant="outline"
+                size="sm"
+                className="flex items-center gap-1"
+                onClick={() => setIsQRModalOpen(true)}
+              >
+                <QrCode size={14} />
+                QR Code
+              </Button>
+              <Button
+                variant="outline"
+                size="sm"
+                className="flex items-center gap-1 w-fit"
+                asChild
+              >
+                <a href={repo.url} target="_blank" rel="noopener noreferrer">
+                  <ExternalLink size={14} />
+                  View on GitHub
+                </a>
+              </Button>
+            </div>
           </div>
         </CardHeader>
 
@@ -270,6 +285,11 @@ const RepoInfo = ({
           </span>
         </CardFooter>
       </Card>
+      <ShareQRCodeModal
+        isOpen={isQRModalOpen}
+        onClose={() => setIsQRModalOpen(false)}
+        repoName={repo.name}
+      />
     </RepoInfoLoginWall>
   );
 };
