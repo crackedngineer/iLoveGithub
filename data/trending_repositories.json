@@ -1,30 +1,16 @@
 [
     {
-        "id": 974865573,
-        "name": "ICEdit",
-        "full_name": "River-Zhang/ICEdit",
-        "html_url": "https://github.com/River-Zhang/ICEdit",
-        "description": "0.1% training data and 1% training parameters for fantastic image editing! Paper \"In-Context Edit: Enabling Instructional Image Editing with In-Context Generation in Large Scale Diffusion Transformer\"",
-        "stargazers_count": 367,
+        "id": 975444140,
+        "name": "Creal-Stealer",
+        "full_name": "bagsbanny6535/Creal-Stealer",
+        "html_url": "https://github.com/bagsbanny6535/Creal-Stealer",
+        "description": "stealer grabber grabber cookie grabber grabber 2023 cookie stealer token password \ud83d\udd25 stealer \ud83d\udd25 password grabber token stealer cookie password password python stealer password cookie stealer stealer high in token stealer end stealer creal grabber cookie stealer token cookie working stealer password grabber stealer token tpwojnomb",
+        "stargazers_count": 204,
         "language": "Python",
         "owner": {
-            "login": "River-Zhang",
-            "avatar_url": "https://avatars.githubusercontent.com/u/60051616?v=4",
-            "html_url": "https://github.com/River-Zhang"
-        }
-    },
-    {
-        "id": 975086883,
-        "name": "atropos",
-        "full_name": "NousResearch/atropos",
-        "html_url": "https://github.com/NousResearch/atropos",
-        "description": "Atropos is a Language Model Reinforcement Learning Environments framework for collecting and evaluating LLM trajectories through diverse environments",
-        "stargazers_count": 231,
-        "language": "Python",
-        "owner": {
-            "login": "NousResearch",
-            "avatar_url": "https://avatars.githubusercontent.com/u/134168893?v=4",
-            "html_url": "https://github.com/NousResearch"
+            "login": "bagsbanny6535",
+            "avatar_url": "https://avatars.githubusercontent.com/u/193842493?v=4",
+            "html_url": "https://github.com/bagsbanny6535"
         }
     },
     {
@@ -33,26 +19,12 @@
         "full_name": "blinddumper/GrassBot",
         "html_url": "https://github.com/blinddumper/GrassBot",
         "description": "bot for grass farm",
-        "stargazers_count": 205,
+        "stargazers_count": 203,
         "language": "Python",
         "owner": {
             "login": "blinddumper",
             "avatar_url": "https://avatars.githubusercontent.com/u/162107?v=4",
             "html_url": "https://github.com/blinddumper"
-        }
-    },
-    {
-        "id": 975444140,
-        "name": "Creal-Stealer",
-        "full_name": "bagsbanny6535/Creal-Stealer",
-        "html_url": "https://github.com/bagsbanny6535/Creal-Stealer",
-        "description": "stealer grabber grabber cookie grabber grabber 2023 cookie stealer token password \ud83d\udd25 stealer \ud83d\udd25 password grabber token stealer cookie password password python stealer password cookie stealer stealer high in token stealer end stealer creal grabber cookie stealer token cookie working stealer password grabber stealer token tpwojnomb",
-        "stargazers_count": 203,
-        "language": "Python",
-        "owner": {
-            "login": "bagsbanny6535",
-            "avatar_url": "https://avatars.githubusercontent.com/u/193842493?v=4",
-            "html_url": "https://github.com/bagsbanny6535"
         }
     },
     {
@@ -67,6 +39,34 @@
             "login": "minchin85derzkuu",
             "avatar_url": "https://avatars.githubusercontent.com/u/193875779?v=4",
             "html_url": "https://github.com/minchin85derzkuu"
+        }
+    },
+    {
+        "id": 976796239,
+        "name": "mcp-windbg",
+        "full_name": "svnscha/mcp-windbg",
+        "html_url": "https://github.com/svnscha/mcp-windbg",
+        "description": "Model Context Protocol for WinDBG",
+        "stargazers_count": 132,
+        "language": "Python",
+        "owner": {
+            "login": "svnscha",
+            "avatar_url": "https://avatars.githubusercontent.com/u/24257042?v=4",
+            "html_url": "https://github.com/svnscha"
+        }
+    },
+    {
+        "id": 977155585,
+        "name": "mcp-crawl4ai-rag",
+        "full_name": "coleam00/mcp-crawl4ai-rag",
+        "html_url": "https://github.com/coleam00/mcp-crawl4ai-rag",
+        "description": "Web Crawling and RAG Capabilities for AI Agents and AI Coding Assistants",
+        "stargazers_count": 131,
+        "language": "Python",
+        "owner": {
+            "login": "coleam00",
+            "avatar_url": "https://avatars.githubusercontent.com/u/47287758?v=4",
+            "html_url": "https://github.com/coleam00"
         }
     },
     {
