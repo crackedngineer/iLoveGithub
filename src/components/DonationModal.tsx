@@ -27,6 +27,7 @@ const DonationModal = ({
   isIndiaLocation,
 }: DonationModalProps) => {
   const [amount, setAmount] = useState(101);
+  const [debouncedAmount, setDebouncedAmount] = useState(amount);
   const [qrImage, setQrImage] = useState("");
   const minAmount = 11;
   const maxAmount = 5001;
@@ -48,6 +49,16 @@ const DonationModal = ({
   };
 
   useEffect(() => {
+    const handler = setTimeout(() => {
+      setDebouncedAmount(amount);
+    }, 500); // debounce delay: 500ms
+
+    return () => {
+      clearTimeout(handler);
+    };
+  }, [amount]);
+
+  useEffect(() => {
     const generateQR = async () => {
       try {
         const origin =
@@ -55,7 +66,7 @@ const DonationModal = ({
         const imageUrl = `${origin}/icons/favicon.png`;
 
         const { data: result } = await axios.post("/api/qrcode/generate", {
-          data: `upi://pay?pa=${process.env.NEXT_PUBLIC_DONATION_UPI_ID}&pn=${DONATION_MERCHANT_NAME}&am=${amount}&cu=INR`,
+          data: `upi://pay?pa=${process.env.NEXT_PUBLIC_DONATION_UPI_ID}&pn=${DONATION_MERCHANT_NAME}&am=${debouncedAmount}&cu=INR`,
           image: imageUrl,
         });
 
@@ -66,7 +77,7 @@ const DonationModal = ({
     };
 
     generateQR();
-  }, [amount]);
+  }, [debouncedAmount]);
 
   return (
     <Dialog
