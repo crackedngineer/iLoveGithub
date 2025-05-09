@@ -2,7 +2,7 @@
 
 import React, { useState } from "react";
 import Image from "next/image";
-import { ArrowRight } from "lucide-react";
+import { ArrowRight, BrainCircuit } from "lucide-react";
 import {
   Card,
   CardContent,
@@ -82,10 +82,10 @@ const GitHubTools = ({
                 const toolUrl = tool.iframe
                   ? `/tools/${tool.name}/${owner}/${repo}`
                   : replaceUrlVariables(tool.url, {
-                      owner,
-                      repo,
-                      default_branch,
-                    });
+                    owner,
+                    repo,
+                    default_branch,
+                  });
 
                 return (
                   <Card
@@ -99,13 +99,18 @@ const GitHubTools = ({
                     )}
                     <CardHeader className="pb-1">
                       <CardTitle className="text-base sm:text-lg flex items-center gap-2 text-gray-900 dark:text-white">
-                        <Image
-                          alt={`${tool.name} icon`}
-                          src={tool.icon}
-                          width={24}
-                          height={24}
-                          className="rounded-sm transition-all dark:invert dark:brightness-90"
-                        />
+                        {
+                          tool.icon ? <Image
+                            alt={`${tool.name} icon`}
+                            src={tool.icon}
+                            width={24}
+                            height={24}
+                            className="rounded-sm transition-all dark:invert dark:brightness-90"
+                          /> : <BrainCircuit width={24}
+                            height={24}
+                            className="rounded-sm transition-all dark:invert dark:brightness-90" />
+                        }
+
                         {tool.name}
                       </CardTitle>
 

@@ -319,7 +319,7 @@ export const GithubToolsList: Tool[] = [
     description: "AI-Powered GitHub Repository Explorer",
     homepage: "https://answergit.vercel.app/",
     url: "https://answergit.vercel.app/{owner}/{repo}",
-    icon: null, // https://www.gitpodcast.com/favicon.ico
+    icon: null,
     category: ToolCategories.ANALYTICS,
     iframe: true,
     created_at: "2025-05-09T05:13:49Z",
