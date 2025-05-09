@@ -1,25 +1,11 @@
 [
     {
-        "id": 976731654,
-        "name": "ty",
-        "full_name": "astral-sh/ty",
-        "html_url": "https://github.com/astral-sh/ty",
-        "description": "An extremely fast Python type checker and language server, written in Rust.",
-        "stargazers_count": 1592,
-        "language": "Python",
-        "owner": {
-            "login": "astral-sh",
-            "avatar_url": "https://avatars.githubusercontent.com/u/115962839?v=4",
-            "html_url": "https://github.com/astral-sh"
-        }
-    },
-    {
         "id": 978621630,
         "name": "Telegram-Members-Adder-Scraper-Spammer-Cloner-ManyMore2025",
         "full_name": "cnsk7392/Telegram-Members-Adder-Scraper-Spammer-Cloner-ManyMore2025",
         "html_url": "https://github.com/cnsk7392/Telegram-Members-Adder-Scraper-Spammer-Cloner-ManyMore2025",
         "description": "Telegram Members Adding Software. Scrape more than 10k Telegram members and add members to your group. And many more features.",
-        "stargazers_count": 445,
+        "stargazers_count": 706,
         "language": "Python",
         "owner": {
             "login": "cnsk7392",
@@ -33,7 +19,7 @@
         "full_name": "aperoc/toolkami",
         "html_url": "https://github.com/aperoc/toolkami",
         "description": "Minimal AI agent framework that just works with only seven tools.",
-        "stargazers_count": 290,
+        "stargazers_count": 325,
         "language": "Python",
         "owner": {
             "login": "aperoc",
@@ -42,12 +28,26 @@
         }
     },
     {
+        "id": 979060063,
+        "name": "pyroki",
+        "full_name": "chungmin99/pyroki",
+        "html_url": "https://github.com/chungmin99/pyroki",
+        "description": "A Modular Toolkit for Robot Kinematic Optimization",
+        "stargazers_count": 268,
+        "language": "Python",
+        "owner": {
+            "login": "chungmin99",
+            "avatar_url": "https://avatars.githubusercontent.com/u/10284938?v=4",
+            "html_url": "https://github.com/chungmin99"
+        }
+    },
+    {
         "id": 977155585,
         "name": "mcp-crawl4ai-rag",
         "full_name": "coleam00/mcp-crawl4ai-rag",
         "html_url": "https://github.com/coleam00/mcp-crawl4ai-rag",
         "description": "Web Crawling and RAG Capabilities for AI Agents and AI Coding Assistants",
-        "stargazers_count": 220,
+        "stargazers_count": 262,
         "language": "Python",
         "owner": {
             "login": "coleam00",
@@ -70,17 +70,17 @@
         }
     },
     {
-        "id": 976796239,
-        "name": "mcp-windbg",
-        "full_name": "svnscha/mcp-windbg",
-        "html_url": "https://github.com/svnscha/mcp-windbg",
-        "description": "Model Context Protocol for WinDBG",
-        "stargazers_count": 191,
+        "id": 978174235,
+        "name": "AutoHajimiMosaic",
+        "full_name": "frinkleko/AutoHajimiMosaic",
+        "html_url": "https://github.com/frinkleko/AutoHajimiMosaic",
+        "description": "\u4e00\u6b3e\u81ea\u52a8\u4e3a\u4f60\u7684\u8272\u56fe\u8fdb\u884c\u54c8\u57fa\u7c73\u9a6c\u8d5b\u514b\u5904\u7406\u7684\u6253\u7801\u5668\ud83d\ude0e\u518d\u4e5f\u4e0d\u7528\u62c5\u5fc3\u5bb6\u91cc\u8bf7\u4e0d\u5230\u9ad8\u4eba\u4e86|\u81ea\u52a8\u54c8\u57fa\u7c73\u6253\u7801\u5668",
+        "stargazers_count": 190,
         "language": "Python",
         "owner": {
-            "login": "svnscha",
-            "avatar_url": "https://avatars.githubusercontent.com/u/24257042?v=4",
-            "html_url": "https://github.com/svnscha"
+            "login": "frinkleko",
+            "avatar_url": "https://avatars.githubusercontent.com/u/32212221?v=4",
+            "html_url": "https://github.com/frinkleko"
         }
     }
 ]
