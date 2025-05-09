@@ -83,6 +83,7 @@
 | [**FlatGitHub**](https://flatgithub.com/)           | A simple tool for exploring flat data files in GitHub repositories.Flatten a repository into a single page for fast preview.                              | [`flatgithub.com/{owner}/{repo}`](https://flatgithub.com/{owner}/{repo})                                   |
 | [**DeepWiki**](https://deepwiki.com/)           | Which repo would you like to understand?                              | [`deepwiki.com/{owner}/{repo}`](https://deepwiki.com/{owner}/{repo})                                   |
 | [**TalkToGitHub**](https://talktogithub.com/)           | Repo to Convo in seconds!                              | [`talktogithub.com/{owner}/{repo}`](https://talktogithub.com/{owner}/{repo})                                   |
+| [**AnswerGit**](https://answergit.vercel.app/)           | AI-Powered GitHub Repository Explorer!                              | [`answergit.vercel.app/{owner}/{repo}`](https://answergit.vercel.app/{owner}/{repo})                                   |
 
 ---
 

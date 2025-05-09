@@ -308,9 +308,20 @@ export const GithubToolsList: Tool[] = [
     description: "Repo to Convo in seconds!",
     homepage: "https://talktogithub.com/",
     url: "https://talktogithub.com/{owner}/{repo}",
-    icon: "/icons/tools/talktogithub.svg", // https://www.gitpodcast.com/favicon.ico
+    icon: "/icons/tools/talktogithub.svg", // https://www.talktogithub.com/favicon.svg
     category: ToolCategories.ANALYTICS,
     iframe: true,
     created_at: "2025-04-29T18:56:38Z",
+  },
+  {
+    name: "answergit",
+    title: "AnswerGit",
+    description: "AI-Powered GitHub Repository Explorer",
+    homepage: "https://answergit.vercel.app/",
+    url: "https://answergit.vercel.app/{owner}/{repo}",
+    icon: null,
+    category: ToolCategories.ANALYTICS,
+    iframe: true,
+    created_at: "2025-05-09T05:13:49Z",
   },
 ];

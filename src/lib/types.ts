@@ -4,7 +4,7 @@ export interface Tool {
   description: string;
   homepage: string;
   url: string;
-  icon: string;
+  icon: string | null;
   category: string;
   iframe: boolean;
   created_at: string;
