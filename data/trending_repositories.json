@@ -5,7 +5,7 @@
         "full_name": "cnsk7392/Telegram-Members-Adder-Scraper-Spammer-Cloner-ManyMore2025",
         "html_url": "https://github.com/cnsk7392/Telegram-Members-Adder-Scraper-Spammer-Cloner-ManyMore2025",
         "description": "Telegram Members Adding Software. Scrape more than 10k Telegram members and add members to your group. And many more features.",
-        "stargazers_count": 706,
+        "stargazers_count": 708,
         "language": "Python",
         "owner": {
             "login": "cnsk7392",
@@ -19,7 +19,7 @@
         "full_name": "aperoc/toolkami",
         "html_url": "https://github.com/aperoc/toolkami",
         "description": "Minimal AI agent framework that just works with only seven tools.",
-        "stargazers_count": 325,
+        "stargazers_count": 374,
         "language": "Python",
         "owner": {
             "login": "aperoc",
@@ -33,7 +33,7 @@
         "full_name": "chungmin99/pyroki",
         "html_url": "https://github.com/chungmin99/pyroki",
         "description": "A Modular Toolkit for Robot Kinematic Optimization",
-        "stargazers_count": 268,
+        "stargazers_count": 365,
         "language": "Python",
         "owner": {
             "login": "chungmin99",
@@ -42,31 +42,31 @@
         }
     },
     {
-        "id": 977155585,
-        "name": "mcp-crawl4ai-rag",
-        "full_name": "coleam00/mcp-crawl4ai-rag",
-        "html_url": "https://github.com/coleam00/mcp-crawl4ai-rag",
-        "description": "Web Crawling and RAG Capabilities for AI Agents and AI Coding Assistants",
-        "stargazers_count": 262,
+        "id": 979235459,
+        "name": "HunyuanCustom",
+        "full_name": "Tencent/HunyuanCustom",
+        "html_url": "https://github.com/Tencent/HunyuanCustom",
+        "description": "HunyuanCustom: A Multimodal-Driven Architecture for Customized Video Generation",
+        "stargazers_count": 338,
         "language": "Python",
         "owner": {
-            "login": "coleam00",
-            "avatar_url": "https://avatars.githubusercontent.com/u/47287758?v=4",
-            "html_url": "https://github.com/coleam00"
+            "login": "Tencent",
+            "avatar_url": "https://avatars.githubusercontent.com/u/18461506?v=4",
+            "html_url": "https://github.com/Tencent"
         }
     },
     {
-        "id": 977077772,
-        "name": "BlackCap-Grabber-NoDualHook",
-        "full_name": "minchin85derzkuu/BlackCap-Grabber-NoDualHook",
-        "html_url": "https://github.com/minchin85derzkuu/BlackCap-Grabber-NoDualHook",
-        "description": "grabber \ud83d\udd25 blackcap grabber \ud83d\udd25 fixed stealer - dualhook removed - python3 logger blackcap grabber blackcap grabber blackcap grabber blackcap grabber blackcap grabber blackcap grabber blackcap grabber blackcap grabber blackcap grabber blackcap grabber blackcap grabber blackcap grabber blackcap grabber hxjbbmffgx",
-        "stargazers_count": 196,
+        "id": 979518567,
+        "name": "ZeroSearch",
+        "full_name": "Alibaba-NLP/ZeroSearch",
+        "html_url": "https://github.com/Alibaba-NLP/ZeroSearch",
+        "description": "ZeroSearch: Incentivize the Search Capability of LLMs without Searching",
+        "stargazers_count": 336,
         "language": "Python",
         "owner": {
-            "login": "minchin85derzkuu",
-            "avatar_url": "https://avatars.githubusercontent.com/u/193875779?v=4",
-            "html_url": "https://github.com/minchin85derzkuu"
+            "login": "Alibaba-NLP",
+            "avatar_url": "https://avatars.githubusercontent.com/u/64211549?v=4",
+            "html_url": "https://github.com/Alibaba-NLP"
         }
     },
     {
@@ -75,7 +75,7 @@
         "full_name": "frinkleko/AutoHajimiMosaic",
         "html_url": "https://github.com/frinkleko/AutoHajimiMosaic",
         "description": "\u4e00\u6b3e\u81ea\u52a8\u4e3a\u4f60\u7684\u8272\u56fe\u8fdb\u884c\u54c8\u57fa\u7c73\u9a6c\u8d5b\u514b\u5904\u7406\u7684\u6253\u7801\u5668\ud83d\ude0e\u518d\u4e5f\u4e0d\u7528\u62c5\u5fc3\u5bb6\u91cc\u8bf7\u4e0d\u5230\u9ad8\u4eba\u4e86|\u81ea\u52a8\u54c8\u57fa\u7c73\u6253\u7801\u5668",
-        "stargazers_count": 190,
+        "stargazers_count": 200,
         "language": "Python",
         "owner": {
             "login": "frinkleko",
