@@ -13,7 +13,7 @@ const ToolViewer: React.FC<ToolViewerProps> = ({ url, name }) => {
   const bannerMessages = [
     <>
       <div className="flex gap-2 items-center flex-wrap text-sm sm:text-base text-center sm:text-left">
-        <span className="font-medium">iLoveGithub</span> is your curated hub for
+        <span className="font-medium">iLoveGitHub</span> is your curated hub for
         exploring the coolest GitHub tools and open source gems.
       </div>
     </>,
@@ -91,7 +91,7 @@ const ToolViewer: React.FC<ToolViewerProps> = ({ url, name }) => {
             width={24}
             height={24}
           />{" "}
-          iLoveGithub
+          iLoveGitHub
         </div>
 
         {/* Rotating Banner Messages (hidden on mobile) */}

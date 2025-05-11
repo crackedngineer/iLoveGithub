@@ -89,7 +89,7 @@ const Header = () => {
           <div className="flex flex-col">
             <div className="flex items-baseline gap-2">
               <span className="text-lg sm:text-xl font-bold text-github-gray dark:text-white">
-                iLoveGithub
+                iLoveGitHub
               </span>
               <span className="text-xs text-gray-400 dark:text-gray-500">
                 v{appVersion}

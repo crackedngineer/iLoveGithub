@@ -18,7 +18,7 @@ export const generateWelcomeEmail = ({
   <html lang="en">
   <head>
     <meta charset="utf-8" />
-    <title>Welcome to iLoveGithub</title>
+    <title>Welcome to iLoveGitHub</title>
     <style>
       body {
         margin: 0;
@@ -77,10 +77,10 @@ export const generateWelcomeEmail = ({
   </head>
   <body>
     <div class="container">
-      <div class="header">iLoveGithub</div>
+      <div class="header">iLoveGitHub</div>
       <div class="content">
         <p>Hello ${name}!</p>
-        <p>Welcome to <strong>iLoveGithub</strong> — your new favorite way to discover GitHub's hidden gems.</p>
+        <p>Welcome to <strong>iLoveGitHub</strong> — your new favorite way to discover GitHub's hidden gems.</p>
         <p>🚀 Find trending repositories</p>
         <p>🔍 Discover tools to enhance your GitHub experience</p>
         <p>👨‍💻 A vibrant community continuing to share amazing projects</p>
@@ -89,7 +89,7 @@ export const generateWelcomeEmail = ({
       </div>
       <div class="footer">
         <p>Sent to ${email}</p>
-        <p>© ${year} iLoveGithub</p>
+        <p>© ${year} iLoveGitHub</p>
       </div>
     </div>
   </body>

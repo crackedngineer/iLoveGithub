@@ -53,7 +53,7 @@ export async function sendEmail(options: EmailOptions): Promise<void> {
     try {
       const result = await transporter.sendMail({
         from:
-          process.env.EMAIL_FROM || "iLoveGithub <no-reply@ilovegithub.com>",
+          process.env.EMAIL_FROM || "iLoveGitHub <no-reply@ilovegithub.com>",
         to,
         subject,
         html,
@@ -88,7 +88,7 @@ export async function sendWelcomeEmail(
 ): Promise<void> {
   const htmlContent = generateWelcomeEmail({ name, email });
 
-  const subject = `Welcome to iLoveGithub, ${name}!`;
+  const subject = `Welcome to iLoveGitHub, ${name}!`;
 
   await sendEmail({
     to: email,
@@ -106,7 +106,7 @@ export async function sendWelcomeBackEmail(
     email,
   });
 
-  const subject = `Welcome back to iLoveGithub, ${name}!`;
+  const subject = `Welcome back to iLoveGitHub, ${name}!`;
 
   await sendEmail({
     to: email,

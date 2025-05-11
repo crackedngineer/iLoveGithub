@@ -22,7 +22,7 @@ const geistMono = Geist_Mono({
 });
 
 export const metadata: Metadata = {
-  title: "iLoveGithub - GitHub Tools & Repo Transformers",
+  title: "iLoveGitHub - GitHub Tools & Repo Transformers",
   description:
     "Discover magical GitHub tools to explore, transform, and remix repositories. Open repos in VS Code, generate AI summaries, replace GitHub URLs, and more — all in one place!",
   keywords: [
@@ -43,17 +43,17 @@ export const metadata: Metadata = {
     icon: "/icons/favicon.png",
   },
   openGraph: {
-    title: "iLoveGithub - GitHub Tools & Repo Transformers",
+    title: "iLoveGitHub - GitHub Tools & Repo Transformers",
     description:
       "A curated collection of magical tools built around GitHub — open a repo in VS Code, visualize it, generate AI-powered summaries, convert it to a podcast, and so much more.",
     url: "https://ilovegithub.oderna.in",
-    siteName: "iLoveGithub",
+    siteName: "iLoveGitHub",
     images: [
       {
         url: "https://ilovegithub.oderna.in/og-image.png",
         width: 1200,
         height: 630,
-        alt: "iLoveGithub - GitHub Tools Screenshot",
+        alt: "iLoveGitHub - GitHub Tools Screenshot",
       },
     ],
     locale: "en_US",
@@ -61,7 +61,7 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: "summary_large_image",
-    title: "iLoveGithub - GitHub Tools & Repo Transformers",
+    title: "iLoveGitHub - GitHub Tools & Repo Transformers",
     description:
       "Explore magical GitHub tools to open repos in VS Code, summarize repositories with AI, and transform GitHub URLs easily!",
     images: ["https://ilovegithub.oderna.in/og-image.jpg"],

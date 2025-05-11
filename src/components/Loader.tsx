@@ -18,7 +18,7 @@ export default function Loader({ version }: { version: string }) {
         className="flex flex-col sm:flex-row items-center gap-3"
       >
         <h1 className="text-2xl sm:text-3xl font-bold bg-gradient-to-r from-github-blue to-github-green bg-clip-text text-transparent">
-          Welcome to iLoveGithub{" "}
+          Welcome to iLoveGitHub{" "}
           <span className="block sm:inline text-base sm:text-sm font-normal">
             v{version}
           </span>

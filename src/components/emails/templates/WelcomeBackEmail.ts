@@ -14,7 +14,7 @@ export const generateWelcomeBackEmail = ({
   <html lang="en">
   <head>
     <meta charset="utf-8" />
-    <title>Welcome Back to iLoveGithub</title>
+    <title>Welcome Back to iLoveGitHub</title>
     <style>
       body {
         margin: 0;
@@ -67,7 +67,7 @@ export const generateWelcomeBackEmail = ({
   </head>
   <body>
     <div class="container">
-      <div class="header">iLoveGithub</div>
+      <div class="header">iLoveGitHub</div>
       <div class="content">
         <p>Hey ${name},</p>
         <p>We’ve been busy curating the best of GitHub — and you’re missing out!</p>
@@ -79,7 +79,7 @@ export const generateWelcomeBackEmail = ({
       </div>
       <div class="footer">
         <p>Sent to ${email}</p>
-        <p>© ${year} iLoveGithub</p>
+        <p>© ${year} iLoveGitHub</p>
       </div>
     </div>
   </body>

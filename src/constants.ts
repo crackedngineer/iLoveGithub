@@ -6,7 +6,7 @@ export const RECENT_TRENDING_REPO_UI_MAXCOUNT = 4;
 
 export const RECENT_TRENDING_REPO_CACHE_MAXCOUNT = 4;
 
-export const DONATION_MERCHANT_NAME = "iLoveGithub";
+export const DONATION_MERCHANT_NAME = "iLoveGitHub";
 
 export const BUY_ME_COFFEE_URL = "https://buymeacoffee.com/crackedngineer";
 
