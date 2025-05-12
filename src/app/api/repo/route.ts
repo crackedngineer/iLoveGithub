@@ -1,6 +1,6 @@
 import { NextRequest, NextResponse } from "next/server";
 import axios from "axios";
-import { redis } from "@/lib/redis"; // adjust path as necessary
+import { redis } from "@/lib/redis";
 
 export async function GET(req: NextRequest) {
   const { searchParams } = new URL(req.url);
@@ -16,10 +16,10 @@ export async function GET(req: NextRequest) {
   }
 
   const cacheKey = `github:repo:${owner}/${repo}`;
-  const cachedData = await redis.get(cacheKey);
+  const cachedDataStr = await redis.get(cacheKey);
 
-  if (cachedData) {
-    return NextResponse.json(cachedData);
+  if (cachedDataStr) {
+    return NextResponse.json(cachedDataStr);
   }
 
   const githubClient = axios.create({
@@ -39,6 +39,7 @@ export async function GET(req: NextRequest) {
     const data = {
       ...repoRes.data,
       topics: topicsRes.data.names || [],
+      cached_at: new Date().toISOString(),
     };
 
     // Cache the data with TTL of 1 hour

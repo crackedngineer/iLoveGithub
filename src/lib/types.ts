@@ -18,6 +18,7 @@ export interface GitHubRepo {
   description: string;
   stargazers_count: number;
   language: string;
+  created_at: string;
   owner: {
     login: string;
     avatar_url: string;

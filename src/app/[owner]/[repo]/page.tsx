@@ -97,7 +97,7 @@ export default function RepoPage() {
         updatedAt: githubData.updated_at,
         topics: githubData.topics || [],
         default_branch: githubData.default_branch,
-        cachedAt: Date.now(),
+        cachedAt: githubData.cached_at || Date.now(),
       };
 
       setRepoData(transformed);
