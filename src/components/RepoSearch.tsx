@@ -128,12 +128,8 @@ const RepoSearch = ({
   useEffect(() => {
     const recent = JSON.parse(
       localStorage.getItem(RECENT_REPO_LOCAL_STORAGE_KEY) || "[]"
-    ) as RepoData[];
-    setRecent(
-      recent
-        .slice(0, RECENT_TRENDING_REPO_UI_MAXCOUNT)
-        .map((item) => item.fullName)
-    );
+    ) as string[];
+    setRecent(recent.slice(0, RECENT_TRENDING_REPO_UI_MAXCOUNT));
   }, []);
 
   useEffect(() => {

@@ -37,10 +37,10 @@ export default function RepoPage() {
   const updateRecentRepos = (details: RepoData) => {
     const stored = JSON.parse(
       localStorage.getItem(RECENT_REPO_LOCAL_STORAGE_KEY) || "[]"
-    ) as RepoData[];
+    ) as string[];
     const updated = [
-      details,
-      ...stored.filter((r) => r.fullName !== details.fullName),
+      details.fullName,
+      ...stored.filter((name) => name !== details.fullName),
     ].slice(0, RECENT_TRENDING_REPO_CACHE_MAXCOUNT);
     localStorage.setItem(
       RECENT_REPO_LOCAL_STORAGE_KEY,
@@ -53,22 +53,6 @@ export default function RepoPage() {
     setError(null);
 
     try {
-      const storedRepos: RepoData[] = JSON.parse(
-        localStorage.getItem(RECENT_REPO_LOCAL_STORAGE_KEY) || "[]"
-      );
-      const cached = storedRepos.find(
-        (r) => r.fullName.toLowerCase() === fullName
-      );
-      const isCacheValid =
-        cached && Date.now() - cached.cachedAt < 5 * 60 * 1000;
-
-      if (isCacheValid) {
-        setRepoData(cached);
-        updateRecentRepos(cached);
-        return;
-      }
-
-      // 2. Handle unauthenticated + rate limit
       if (status !== "authenticated" && !remaining) {
         setError("rate-limit");
         const fallbackRepo: RepoData = {
