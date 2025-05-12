@@ -19,7 +19,7 @@ export default function RepoPage() {
   const router = useRouter();
   const params = useParams() as { owner: string; repo: string };
   const { owner, repo } = params;
-  const { incrementHits, hasReachedLimit } = useApiLimit();
+  const { remaining } = useApiLimit();
 
   const [repoData, setRepoData] = useState<RepoData | null>(null);
   const [isLoading, setIsLoading] = useState<boolean>(true);
@@ -51,7 +51,6 @@ export default function RepoPage() {
   const fetchRepoData = useCallback(async () => {
     setIsLoading(true);
     setError(null);
-    let shouldIncrementApiHit = true;
 
     try {
       const storedRepos: RepoData[] = JSON.parse(
@@ -66,12 +65,11 @@ export default function RepoPage() {
       if (isCacheValid) {
         setRepoData(cached);
         updateRecentRepos(cached);
-        shouldIncrementApiHit = false;
         return;
       }
 
       // 2. Handle unauthenticated + rate limit
-      if (status !== "authenticated" && hasReachedLimit) {
+      if (status !== "authenticated" && !remaining) {
         setError("rate-limit");
         const fallbackRepo: RepoData = {
           name: repo,
@@ -90,7 +88,6 @@ export default function RepoPage() {
           cachedAt: Date.now(),
         };
         setRepoData(fallbackRepo);
-        shouldIncrementApiHit = false;
         return;
       }
 
@@ -126,17 +123,8 @@ export default function RepoPage() {
       setError("generic");
     } finally {
       setIsLoading(false);
-      if (shouldIncrementApiHit) incrementHits();
     }
-  }, [
-    owner,
-    repo,
-    status,
-    session,
-    hasReachedLimit,
-    updateRecentRepos,
-    incrementHits,
-  ]);
+  }, [owner, repo, status, session, remaining, updateRecentRepos]);
 
   useEffect(() => {
     if (status === "loading") return;
@@ -180,7 +168,7 @@ export default function RepoPage() {
           <>
             <RepoInfo
               repo={repoData}
-              isLoggedIn={status === "authenticated" || !hasReachedLimit}
+              isLoggedIn={status === "authenticated" || !!remaining}
             />
             <GitHubTools
               owner={repoData.owner}
