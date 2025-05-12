@@ -1,7 +1,7 @@
 "use client";
 import axios from "axios";
 import React, { useEffect, useState } from "react";
-import { QrCode, Loader2, Download } from "lucide-react";
+import { QrCode, Download } from "lucide-react";
 import {
   Dialog,
   DialogContent,
@@ -65,6 +65,7 @@ const ShareQRCodeModal = ({ isOpen, onClose, repoName }: QRCodeModalProps) => {
 
   return (
     <Dialog
+      key={"dialog-qr-code"}
       open={isOpen}
       onOpenChange={(open) => {
         if (!open) onClose();
