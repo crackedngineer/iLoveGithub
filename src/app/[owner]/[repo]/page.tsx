@@ -19,7 +19,7 @@ export default function RepoPage() {
   const router = useRouter();
   const params = useParams() as { owner: string; repo: string };
   const { owner, repo } = params;
-  const { incrementHits, hasReachedLimit } = useApiLimit();
+  const { remaining } = useApiLimit();
 
   const [repoData, setRepoData] = useState<RepoData | null>(null);
   const [isLoading, setIsLoading] = useState<boolean>(true);
@@ -37,10 +37,10 @@ export default function RepoPage() {
   const updateRecentRepos = (details: RepoData) => {
     const stored = JSON.parse(
       localStorage.getItem(RECENT_REPO_LOCAL_STORAGE_KEY) || "[]"
-    ) as RepoData[];
+    ) as string[];
     const updated = [
-      details,
-      ...stored.filter((r) => r.fullName !== details.fullName),
+      details.fullName,
+      ...stored.filter((name) => name !== details.fullName),
     ].slice(0, RECENT_TRENDING_REPO_CACHE_MAXCOUNT);
     localStorage.setItem(
       RECENT_REPO_LOCAL_STORAGE_KEY,
@@ -51,27 +51,9 @@ export default function RepoPage() {
   const fetchRepoData = useCallback(async () => {
     setIsLoading(true);
     setError(null);
-    let shouldIncrementApiHit = true;
 
     try {
-      const storedRepos: RepoData[] = JSON.parse(
-        localStorage.getItem(RECENT_REPO_LOCAL_STORAGE_KEY) || "[]"
-      );
-      const cached = storedRepos.find(
-        (r) => r.fullName.toLowerCase() === fullName
-      );
-      const isCacheValid =
-        cached && Date.now() - cached.cachedAt < 5 * 60 * 1000;
-
-      if (isCacheValid) {
-        setRepoData(cached);
-        updateRecentRepos(cached);
-        shouldIncrementApiHit = false;
-        return;
-      }
-
-      // 2. Handle unauthenticated + rate limit
-      if (status !== "authenticated" && hasReachedLimit) {
+      if (status !== "authenticated" && !remaining) {
         setError("rate-limit");
         const fallbackRepo: RepoData = {
           name: repo,
@@ -90,7 +72,6 @@ export default function RepoPage() {
           cachedAt: Date.now(),
         };
         setRepoData(fallbackRepo);
-        shouldIncrementApiHit = false;
         return;
       }
 
@@ -126,17 +107,8 @@ export default function RepoPage() {
       setError("generic");
     } finally {
       setIsLoading(false);
-      if (shouldIncrementApiHit) incrementHits();
     }
-  }, [
-    owner,
-    repo,
-    status,
-    session,
-    hasReachedLimit,
-    updateRecentRepos,
-    incrementHits,
-  ]);
+  }, [owner, repo, status, session, remaining, updateRecentRepos]);
 
   useEffect(() => {
     if (status === "loading") return;
@@ -180,7 +152,7 @@ export default function RepoPage() {
           <>
             <RepoInfo
               repo={repoData}
-              isLoggedIn={status === "authenticated" || !hasReachedLimit}
+              isLoggedIn={status === "authenticated" || !!remaining}
             />
             <GitHubTools
               owner={repoData.owner}

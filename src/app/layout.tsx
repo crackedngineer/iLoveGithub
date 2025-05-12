@@ -10,6 +10,7 @@ import GoogleAnalytics from "@/components/GoogleAnalytics";
 import { ApiLimitProvider } from "@/components/ApiLimitContext";
 import AuthGuard from "@/components/AuthGuard";
 import DemoVideoProvider from "@/components/DemoVideoProvider";
+import AppVersionSync from "@/components/AppVersionSync";
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -131,6 +132,7 @@ export default function RootLayout({
         />
         <Analytics />
         <SpeedInsights />
+        <AppVersionSync />
 
         <DemoVideoProvider>
           <AuthProvider>

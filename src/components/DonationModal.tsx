@@ -30,11 +30,11 @@ const DonationModal = ({
   const [amount, setAmount] = useState(101);
   const [debouncedAmount, setDebouncedAmount] = useState(amount);
   const [qrImage, setQrImage] = useState("");
+  const [loading, setLoading] = useState(false);
+
   const minAmount = 11;
   const maxAmount = 5001;
   const step = 10;
-
-  // Predefined donation amounts
   const presetAmounts = [101, 201, 501, 1001];
 
   const handleIncrease = () => {
@@ -51,17 +51,18 @@ const DonationModal = ({
 
   useEffect(() => {
     const handler = setTimeout(() => {
-      setDebouncedAmount(amount);
-    }, 500); // debounce delay: 500ms
+      if (amount !== debouncedAmount) {
+        setDebouncedAmount(amount);
+      }
+    }, 800); // increased debounce delay
 
-    return () => {
-      clearTimeout(handler);
-    };
+    return () => clearTimeout(handler);
   }, [amount]);
 
   useEffect(() => {
     const generateQR = async () => {
       try {
+        setLoading(true);
         const origin =
           typeof window !== "undefined" ? window.location.origin : "";
         const imageUrl = `${origin}/icons/favicon.png`;
@@ -74,14 +75,19 @@ const DonationModal = ({
         setQrImage(result.image);
       } catch (error) {
         console.error("QR code generation failed:", error);
+      } finally {
+        setLoading(false);
       }
     };
 
-    generateQR();
-  }, [debouncedAmount]);
+    if (isIndiaLocation) {
+      generateQR();
+    }
+  }, [debouncedAmount, isIndiaLocation]);
 
   return (
     <Dialog
+      key={"dialog-donation"}
       open={isOpen}
       onOpenChange={(open) => {
         if (!open) onClose();
@@ -107,18 +113,21 @@ const DonationModal = ({
         </DialogHeader>
 
         <div className="flex flex-col items-center justify-center space-y-6 mt-4">
-          <div className="bg-white p-3 rounded-lg shadow-sm border border-gray-200 dark:border-gray-700">
-            {/* <QrCode className="w-48 h-48 text-black dark:text-white" /> */}
-            {qrImage && (
-              <div className="w-48 h-48 text-black dark:text-white">
+          <div className="bg-white p-3 rounded-lg shadow-sm border border-gray-200 dark:border-gray-700 w-48 h-48 flex items-center justify-center">
+            {loading ? (
+              <p className="text-sm text-gray-500 dark:text-gray-400">
+                Generating QR...
+              </p>
+            ) : (
+              qrImage && (
                 <Image
                   src={qrImage}
                   className="rounded"
                   alt="QR Code"
-                  width={480}
-                  height={480}
+                  width={192}
+                  height={192}
                 />
-              </div>
+              )
             )}
           </div>
 
@@ -179,11 +188,6 @@ const DonationModal = ({
         </div>
 
         <div className="flex flex-col space-y-3 mt-6">
-          {/* <Button className="w-full">
-            <Wallet className="mr-2 h-4 w-4" />
-            {isIndiaLocation ? "Pay via UPI" : "Support Us"}
-          </Button> */}
-
           <DialogClose asChild>
             <Button variant="outline" className="w-full">
               Cancel

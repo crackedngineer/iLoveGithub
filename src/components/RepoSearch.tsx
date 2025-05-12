@@ -128,12 +128,8 @@ const RepoSearch = ({
   useEffect(() => {
     const recent = JSON.parse(
       localStorage.getItem(RECENT_REPO_LOCAL_STORAGE_KEY) || "[]"
-    ) as RepoData[];
-    setRecent(
-      recent
-        .slice(0, RECENT_TRENDING_REPO_UI_MAXCOUNT)
-        .map((item) => item.fullName)
-    );
+    ) as string[];
+    setRecent(recent.slice(0, RECENT_TRENDING_REPO_UI_MAXCOUNT));
   }, []);
 
   useEffect(() => {
@@ -187,7 +183,6 @@ const RepoSearch = ({
                 placeholder="https://github.com/username/repo"
                 value={repoUrl}
                 ref={repoInputRef}
-                defaultValue={value}
                 onChange={(e) => setRepoUrl(e.target.value)}
                 className="pr-10 h-12"
               />
@@ -198,7 +193,6 @@ const RepoSearch = ({
             </div>
             <Button
               onClick={handleSubmit}
-
               className="h-12 w-full md:w-auto bg-github-blue hover:bg-blue-700 text-white"
             >
               🚀 Analyze Repository

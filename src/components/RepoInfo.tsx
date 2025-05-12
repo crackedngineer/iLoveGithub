@@ -22,7 +22,7 @@ import { Button } from "@/components/ui/button";
 import { Badge } from "@/components/ui/badge";
 import { formatDistanceToNow } from "date-fns";
 import RepoInfoLoginWall from "./RepoInfoLoginWall";
-import ShareQRCodeModal from "./ShareQRCOdeModal";
+import ShareQRCodeModal from "./ShareQRCodeModal";
 
 export interface RepoData {
   name: string;
