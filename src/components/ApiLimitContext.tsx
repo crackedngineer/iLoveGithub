@@ -1,48 +1,98 @@
 "use client";
-import React, { createContext, useContext, useState, useEffect } from "react";
+
+import React, {
+  createContext,
+  useContext,
+  useEffect,
+  useState,
+  ReactNode,
+} from "react";
+import {
+  fetchRateLimit,
+  RateLimitError,
+  RateLimitResponse,
+} from "@/services/githubService";
 
 interface ApiLimitContextType {
-  apiHits: number;
-  incrementHits: () => void;
-  hasReachedLimit: boolean;
-  resetHits: () => void;
+  rateLimit: RateLimitResponse | null;
+  isApiLimitLoading: boolean;
+  apiLimitError: string | null;
+  remaining: number;
+  limit: number;
+  used: number;
+  reset: number;
+  getPercentage: () => number;
+  getColor: () => string;
+  getResetTime: () => string;
 }
 
 const ApiLimitContext = createContext<ApiLimitContextType | undefined>(
   undefined
 );
 
-export const ApiLimitProvider: React.FC<{ children: React.ReactNode }> = ({
-  children,
-}) => {
-  const [apiHits, setApiHits] = useState<number>(0);
+export const ApiLimitProvider = ({ children }: { children: ReactNode }) => {
+  const [rateLimit, setRateLimit] = useState<RateLimitResponse | null>(null);
+  const [isApiLimitLoading, setIsApiLimitLoading] = useState(false);
+  const [apiLimitError, setApiLimitError] = useState<string | null>(null);
 
   useEffect(() => {
-    const storedHits = localStorage.getItem("api_hits");
-    if (storedHits) {
-      setApiHits(parseInt(storedHits, 10));
-    }
+    const checkRateLimit = async () => {
+      setIsApiLimitLoading(true);
+      try {
+        const limitData = await fetchRateLimit();
+        setRateLimit(limitData);
+
+        if (limitData.remaining === 0) {
+          throw new RateLimitError(limitData);
+        }
+      } catch (err: any) {
+        const message =
+          err instanceof RateLimitError
+            ? "GitHub API rate limit exceeded."
+            : "Failed to fetch GitHub rate limit.";
+        setApiLimitError(message);
+      } finally {
+        setIsApiLimitLoading(false);
+      }
+    };
+
+    checkRateLimit();
   }, []);
 
-  const incrementHits = () => {
-    setApiHits((prev) => {
-      const newHits = prev + 1;
-      localStorage.setItem("api_hits", newHits.toString());
-      return newHits;
-    });
+  const getPercentage = () =>
+    rateLimit ? Math.round((rateLimit.remaining / rateLimit.limit) * 100) : 0;
+
+  const getColor = () => {
+    const percent = getPercentage();
+    if (percent > 50) return "github-green";
+    if (percent > 20) return "yellow-500";
+    return "red-500";
   };
 
-  const resetHits = () => {
-    localStorage.setItem("api_hits", "0");
-    setApiHits(0);
+  const getResetTime = () => {
+    if (!rateLimit) return "N/A";
+    const now = Math.floor(Date.now() / 1000);
+    const secondsRemaining = rateLimit.reset - now;
+    if (secondsRemaining <= 0) return "Resetting now...";
+    const minutes = Math.floor(secondsRemaining / 60);
+    const seconds = secondsRemaining % 60;
+    return `${minutes}m ${seconds}s`;
   };
-
-  const hasReachedLimit =
-    apiHits >= Number(process.env.NEXT_PUBLIC_MAX_REPO_LIMIT);
 
   return (
     <ApiLimitContext.Provider
-      value={{ apiHits, incrementHits, hasReachedLimit, resetHits }}
+      value={{
+        rateLimit,
+        isApiLimitLoading,
+        apiLimitError,
+        remaining: rateLimit?.remaining ?? 0,
+        limit: rateLimit?.limit ?? 60,
+        used: rateLimit?.used ?? 0,
+        reset: rateLimit?.reset ?? 0,
+        getPercentage,
+        getColor,
+        getResetTime,
+      }}
     >
       {children}
     </ApiLimitContext.Provider>

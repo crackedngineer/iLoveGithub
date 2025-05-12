@@ -1,7 +1,7 @@
 "use client";
 import axios from "axios";
 import React, { useEffect, useState } from "react";
-import { QrCode, Loader2, Download } from "lucide-react";
+import { QrCode, Download } from "lucide-react";
 import {
   Dialog,
   DialogContent,
@@ -65,6 +65,7 @@ const ShareQRCodeModal = ({ isOpen, onClose, repoName }: QRCodeModalProps) => {
 
   return (
     <Dialog
+      key={"dialog-qr-code"}
       open={isOpen}
       onOpenChange={(open) => {
         if (!open) onClose();
@@ -86,7 +87,7 @@ const ShareQRCodeModal = ({ isOpen, onClose, repoName }: QRCodeModalProps) => {
         <div className="flex flex-col items-center justify-center space-y-4 mt-4">
           <div className="bg-white p-4 rounded-lg shadow-sm border border-gray-200 dark:border-gray-700">
             {loading ? (
-              <Loader2 className="animate-spin h-24 w-24 text-gray-400" />
+              <div className="w-56 h-56 bg-gray-200 dark:bg-gray-700 animate-pulse-subtle" />
             ) : qrImageUrl ? (
               <img
                 src={qrImageUrl}

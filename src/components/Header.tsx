@@ -21,8 +21,9 @@ import {
   SUBSTACK_NEWSLETTER_URL,
   GITHUB_REPO_URL,
   GITHUB_SUBMIT_TOOL_URL,
-  DEMO_VIDEO_URL
+  DEMO_VIDEO_URL,
 } from "@/constants";
+import { RateLimitDisplay } from "./RateLimitDisplay";
 
 // Utility to check if coordinates fall within India's bounding box
 const isWithinIndia = (latitude: number, longitude: number): boolean => {
@@ -35,7 +36,7 @@ const isWithinIndia = (latitude: number, longitude: number): boolean => {
 };
 
 const Header = () => {
-  const { data: session } = useSession();
+  const { data: session, status } = useSession();
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   const [isDarkMode, setIsDarkMode] = useState(false);
   const [isDonationModalOpen, setIsDonationModalOpen] = useState(false);
@@ -123,6 +124,10 @@ const Header = () => {
           >
             Join Newsletter
           </Button>
+
+          {/* GitHub API Rate Limit Display */}
+          {status === "unauthenticated" && <RateLimitDisplay />}
+
           <Button
             variant="ghost"
             size="icon"
@@ -146,20 +151,24 @@ const Header = () => {
                 Donate ❤️
               </Button>
             </DropdownMenuTrigger>
-            <DropdownMenuContent className="w-48 bg-white dark:bg-gray-800 p-2">
-              <DropdownMenuItem
-                onClick={() => window.open(BUY_ME_COFFEE_URL, "_blank")}
-              >
-                <Coffee className="h-4 w-4 mr-2" />
-                Buy me a coffee
-              </DropdownMenuItem>
-              {isIndiaLocation && (
-                <DropdownMenuItem onClick={() => setIsDonationModalOpen(true)}>
-                  <QrCode className="h-4 w-4 mr-2" />
-                  Scan QR code
+            {!isDonationModalOpen && (
+              <DropdownMenuContent className="w-48 bg-white dark:bg-gray-800 p-2">
+                <DropdownMenuItem
+                  onClick={() => window.open(BUY_ME_COFFEE_URL, "_blank")}
+                >
+                  <Coffee className="h-4 w-4 mr-2" />
+                  Buy me a coffee
                 </DropdownMenuItem>
-              )}
-            </DropdownMenuContent>
+                {isIndiaLocation && (
+                  <DropdownMenuItem
+                    onClick={() => setIsDonationModalOpen(true)}
+                  >
+                    <QrCode className="h-4 w-4 mr-2" />
+                    Scan QR code
+                  </DropdownMenuItem>
+                )}
+              </DropdownMenuContent>
+            )}
           </DropdownMenu>
 
           <DropdownMenu>
