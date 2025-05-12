@@ -151,20 +151,24 @@ const Header = () => {
                 Donate ❤️
               </Button>
             </DropdownMenuTrigger>
-            <DropdownMenuContent className="w-48 bg-white dark:bg-gray-800 p-2">
-              <DropdownMenuItem
-                onClick={() => window.open(BUY_ME_COFFEE_URL, "_blank")}
-              >
-                <Coffee className="h-4 w-4 mr-2" />
-                Buy me a coffee
-              </DropdownMenuItem>
-              {isIndiaLocation && (
-                <DropdownMenuItem onClick={() => setIsDonationModalOpen(true)}>
-                  <QrCode className="h-4 w-4 mr-2" />
-                  Scan QR code
+            {!isDonationModalOpen && (
+              <DropdownMenuContent className="w-48 bg-white dark:bg-gray-800 p-2">
+                <DropdownMenuItem
+                  onClick={() => window.open(BUY_ME_COFFEE_URL, "_blank")}
+                >
+                  <Coffee className="h-4 w-4 mr-2" />
+                  Buy me a coffee
                 </DropdownMenuItem>
-              )}
-            </DropdownMenuContent>
+                {isIndiaLocation && (
+                  <DropdownMenuItem
+                    onClick={() => setIsDonationModalOpen(true)}
+                  >
+                    <QrCode className="h-4 w-4 mr-2" />
+                    Scan QR code
+                  </DropdownMenuItem>
+                )}
+              </DropdownMenuContent>
+            )}
           </DropdownMenu>
 
           <DropdownMenu>
