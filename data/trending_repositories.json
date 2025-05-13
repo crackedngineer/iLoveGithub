@@ -1,25 +1,11 @@
 [
     {
-        "id": 978621630,
-        "name": "Telegram-Members-Adder-Scraper-Spammer-Cloner-ManyMore2025",
-        "full_name": "cnsk7392/Telegram-Members-Adder-Scraper-Spammer-Cloner-ManyMore2025",
-        "html_url": "https://github.com/cnsk7392/Telegram-Members-Adder-Scraper-Spammer-Cloner-ManyMore2025",
-        "description": "Telegram Members Adding Software. Scrape more than 10k Telegram members and add members to your group. And many more features.",
-        "stargazers_count": 711,
-        "language": "Python",
-        "owner": {
-            "login": "cnsk7392",
-            "avatar_url": "https://avatars.githubusercontent.com/u/205672238?v=4",
-            "html_url": "https://github.com/cnsk7392"
-        }
-    },
-    {
         "id": 979518567,
         "name": "ZeroSearch",
         "full_name": "Alibaba-NLP/ZeroSearch",
         "html_url": "https://github.com/Alibaba-NLP/ZeroSearch",
         "description": "ZeroSearch: Incentivize the Search Capability of LLMs without Searching",
-        "stargazers_count": 541,
+        "stargazers_count": 657,
         "language": "Python",
         "owner": {
             "login": "Alibaba-NLP",
@@ -33,7 +19,7 @@
         "full_name": "Tencent/HunyuanCustom",
         "html_url": "https://github.com/Tencent/HunyuanCustom",
         "description": "HunyuanCustom: A Multimodal-Driven Architecture for Customized Video Generation",
-        "stargazers_count": 509,
+        "stargazers_count": 616,
         "language": "Python",
         "owner": {
             "login": "Tencent",
@@ -42,45 +28,59 @@
         }
     },
     {
-        "id": 979060063,
-        "name": "pyroki",
-        "full_name": "chungmin99/pyroki",
-        "html_url": "https://github.com/chungmin99/pyroki",
-        "description": "A Modular Toolkit for Robot Kinematic Optimization",
-        "stargazers_count": 401,
+        "id": 981378932,
+        "name": "continuous-thought-machines",
+        "full_name": "SakanaAI/continuous-thought-machines",
+        "html_url": "https://github.com/SakanaAI/continuous-thought-machines",
+        "description": "Continuous Thought Machines, because thought takes time and reasoning is a process.",
+        "stargazers_count": 336,
         "language": "Python",
         "owner": {
-            "login": "chungmin99",
-            "avatar_url": "https://avatars.githubusercontent.com/u/10284938?v=4",
-            "html_url": "https://github.com/chungmin99"
+            "login": "SakanaAI",
+            "avatar_url": "https://avatars.githubusercontent.com/u/140988036?v=4",
+            "html_url": "https://github.com/SakanaAI"
         }
     },
     {
-        "id": 978638487,
-        "name": "toolkami",
-        "full_name": "aperoc/toolkami",
-        "html_url": "https://github.com/aperoc/toolkami",
-        "description": "Minimal AI agent framework that just works with only seven tools.",
-        "stargazers_count": 391,
+        "id": 980033758,
+        "name": "flow_grpo",
+        "full_name": "yifan123/flow_grpo",
+        "html_url": "https://github.com/yifan123/flow_grpo",
+        "description": "An official implementation of Flow-GRPO: Training Flow Matching Models via Online RL",
+        "stargazers_count": 283,
         "language": "Python",
         "owner": {
-            "login": "aperoc",
-            "avatar_url": "https://avatars.githubusercontent.com/u/157211707?v=4",
-            "html_url": "https://github.com/aperoc"
+            "login": "yifan123",
+            "avatar_url": "https://avatars.githubusercontent.com/u/37578514?v=4",
+            "html_url": "https://github.com/yifan123"
         }
     },
     {
-        "id": 978654274,
-        "name": "PrimitiveAnything",
-        "full_name": "PrimitiveAnything/PrimitiveAnything",
-        "html_url": "https://github.com/PrimitiveAnything/PrimitiveAnything",
-        "description": "[SIGGRAPH 2025] PrimitiveAnything: Human-Crafted 3D Primitive Assembly Generation with Auto-Regressive Transformer",
-        "stargazers_count": 216,
+        "id": 980138769,
+        "name": "multiverse",
+        "full_name": "EnigmaLabsAI/multiverse",
+        "html_url": "https://github.com/EnigmaLabsAI/multiverse",
+        "description": null,
+        "stargazers_count": 192,
         "language": "Python",
         "owner": {
-            "login": "PrimitiveAnything",
-            "avatar_url": "https://avatars.githubusercontent.com/u/209415770?v=4",
-            "html_url": "https://github.com/PrimitiveAnything"
+            "login": "EnigmaLabsAI",
+            "avatar_url": "https://avatars.githubusercontent.com/u/210861766?v=4",
+            "html_url": "https://github.com/EnigmaLabsAI"
+        }
+    },
+    {
+        "id": 979574750,
+        "name": "fastmap",
+        "full_name": "pals-ttic/fastmap",
+        "html_url": "https://github.com/pals-ttic/fastmap",
+        "description": "A fast structure from motion pipeline written in Pytorch.",
+        "stargazers_count": 143,
+        "language": "Python",
+        "owner": {
+            "login": "pals-ttic",
+            "avatar_url": "https://avatars.githubusercontent.com/u/93798616?v=4",
+            "html_url": "https://github.com/pals-ttic"
         }
     }
 ]
