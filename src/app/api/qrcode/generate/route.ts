@@ -50,6 +50,7 @@ export async function POST(req: NextRequest) {
     const blob = await put(`qr-${hash}.png`, buffer, {
       access: "public",
       contentType: "image/png",
+      allowOverwrite: true,
     });
 
     // Cache the URL in Redis
