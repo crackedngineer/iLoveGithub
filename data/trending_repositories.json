@@ -1,39 +1,11 @@
 [
     {
-        "id": 979518567,
-        "name": "ZeroSearch",
-        "full_name": "Alibaba-NLP/ZeroSearch",
-        "html_url": "https://github.com/Alibaba-NLP/ZeroSearch",
-        "description": "ZeroSearch: Incentivize the Search Capability of LLMs without Searching",
-        "stargazers_count": 657,
-        "language": "Python",
-        "owner": {
-            "login": "Alibaba-NLP",
-            "avatar_url": "https://avatars.githubusercontent.com/u/64211549?v=4",
-            "html_url": "https://github.com/Alibaba-NLP"
-        }
-    },
-    {
-        "id": 979235459,
-        "name": "HunyuanCustom",
-        "full_name": "Tencent/HunyuanCustom",
-        "html_url": "https://github.com/Tencent/HunyuanCustom",
-        "description": "HunyuanCustom: A Multimodal-Driven Architecture for Customized Video Generation",
-        "stargazers_count": 616,
-        "language": "Python",
-        "owner": {
-            "login": "Tencent",
-            "avatar_url": "https://avatars.githubusercontent.com/u/18461506?v=4",
-            "html_url": "https://github.com/Tencent"
-        }
-    },
-    {
         "id": 981378932,
         "name": "continuous-thought-machines",
         "full_name": "SakanaAI/continuous-thought-machines",
         "html_url": "https://github.com/SakanaAI/continuous-thought-machines",
         "description": "Continuous Thought Machines, because thought takes time and reasoning is a process.",
-        "stargazers_count": 336,
+        "stargazers_count": 497,
         "language": "Python",
         "owner": {
             "login": "SakanaAI",
@@ -47,7 +19,7 @@
         "full_name": "yifan123/flow_grpo",
         "html_url": "https://github.com/yifan123/flow_grpo",
         "description": "An official implementation of Flow-GRPO: Training Flow Matching Models via Online RL",
-        "stargazers_count": 283,
+        "stargazers_count": 403,
         "language": "Python",
         "owner": {
             "login": "yifan123",
@@ -56,12 +28,40 @@
         }
     },
     {
+        "id": 981752011,
+        "name": "whatsapp-python-chatbot",
+        "full_name": "YonkoSam/whatsapp-python-chatbot",
+        "html_url": "https://github.com/YonkoSam/whatsapp-python-chatbot",
+        "description": "WhatsApp Chatbot using Gemini + WasenderAPI",
+        "stargazers_count": 249,
+        "language": "Python",
+        "owner": {
+            "login": "YonkoSam",
+            "avatar_url": "https://avatars.githubusercontent.com/u/161728760?v=4",
+            "html_url": "https://github.com/YonkoSam"
+        }
+    },
+    {
+        "id": 981734201,
+        "name": "Starguard",
+        "full_name": "m-ahmed-elbeskeri/Starguard",
+        "html_url": "https://github.com/m-ahmed-elbeskeri/Starguard",
+        "description": "CLI that detects fake-star campaigns, dependency hijacks, licence red-flags and other signs of repository risk. Inspired by the \u201c4.5 million fake stars\u201d study, StarGuard helps CTOs, security teams and investors perform fast, automated open-source due-diligence.",
+        "stargazers_count": 248,
+        "language": "Python",
+        "owner": {
+            "login": "m-ahmed-elbeskeri",
+            "avatar_url": "https://avatars.githubusercontent.com/u/131454742?v=4",
+            "html_url": "https://github.com/m-ahmed-elbeskeri"
+        }
+    },
+    {
         "id": 980138769,
         "name": "multiverse",
         "full_name": "EnigmaLabsAI/multiverse",
         "html_url": "https://github.com/EnigmaLabsAI/multiverse",
         "description": null,
-        "stargazers_count": 192,
+        "stargazers_count": 201,
         "language": "Python",
         "owner": {
             "login": "EnigmaLabsAI",
@@ -70,17 +70,17 @@
         }
     },
     {
-        "id": 979574750,
-        "name": "fastmap",
-        "full_name": "pals-ttic/fastmap",
-        "html_url": "https://github.com/pals-ttic/fastmap",
-        "description": "A fast structure from motion pipeline written in Pytorch.",
-        "stargazers_count": 143,
+        "id": 982543341,
+        "name": "Step1X-3D",
+        "full_name": "stepfun-ai/Step1X-3D",
+        "html_url": "https://github.com/stepfun-ai/Step1X-3D",
+        "description": "Step1X-3D: Towards High-Fidelity and Controllable Generation of Textured 3D Assets",
+        "stargazers_count": 191,
         "language": "Python",
         "owner": {
-            "login": "pals-ttic",
-            "avatar_url": "https://avatars.githubusercontent.com/u/93798616?v=4",
-            "html_url": "https://github.com/pals-ttic"
+            "login": "stepfun-ai",
+            "avatar_url": "https://avatars.githubusercontent.com/u/178004800?v=4",
+            "html_url": "https://github.com/stepfun-ai"
         }
     }
 ]
