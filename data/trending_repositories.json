@@ -5,7 +5,7 @@
         "full_name": "SakanaAI/continuous-thought-machines",
         "html_url": "https://github.com/SakanaAI/continuous-thought-machines",
         "description": "Continuous Thought Machines, because thought takes time and reasoning is a process.",
-        "stargazers_count": 497,
+        "stargazers_count": 594,
         "language": "Python",
         "owner": {
             "login": "SakanaAI",
@@ -14,26 +14,12 @@
         }
     },
     {
-        "id": 980033758,
-        "name": "flow_grpo",
-        "full_name": "yifan123/flow_grpo",
-        "html_url": "https://github.com/yifan123/flow_grpo",
-        "description": "An official implementation of Flow-GRPO: Training Flow Matching Models via Online RL",
-        "stargazers_count": 403,
-        "language": "Python",
-        "owner": {
-            "login": "yifan123",
-            "avatar_url": "https://avatars.githubusercontent.com/u/37578514?v=4",
-            "html_url": "https://github.com/yifan123"
-        }
-    },
-    {
         "id": 981752011,
         "name": "whatsapp-python-chatbot",
         "full_name": "YonkoSam/whatsapp-python-chatbot",
         "html_url": "https://github.com/YonkoSam/whatsapp-python-chatbot",
         "description": "WhatsApp Chatbot using Gemini + WasenderAPI",
-        "stargazers_count": 249,
+        "stargazers_count": 398,
         "language": "Python",
         "owner": {
             "login": "YonkoSam",
@@ -42,31 +28,17 @@
         }
     },
     {
-        "id": 981734201,
-        "name": "Starguard",
-        "full_name": "m-ahmed-elbeskeri/Starguard",
-        "html_url": "https://github.com/m-ahmed-elbeskeri/Starguard",
-        "description": "CLI that detects fake-star campaigns, dependency hijacks, licence red-flags and other signs of repository risk. Inspired by the \u201c4.5 million fake stars\u201d study, StarGuard helps CTOs, security teams and investors perform fast, automated open-source due-diligence.",
-        "stargazers_count": 248,
+        "id": 982552795,
+        "name": "AgentCPM-GUI",
+        "full_name": "OpenBMB/AgentCPM-GUI",
+        "html_url": "https://github.com/OpenBMB/AgentCPM-GUI",
+        "description": "AgentCPM-GUI: An on-device GUI agent for operating Android apps, enhancing reasoning ability with reinforcement fine-tuning for efficient task execution.",
+        "stargazers_count": 371,
         "language": "Python",
         "owner": {
-            "login": "m-ahmed-elbeskeri",
-            "avatar_url": "https://avatars.githubusercontent.com/u/131454742?v=4",
-            "html_url": "https://github.com/m-ahmed-elbeskeri"
-        }
-    },
-    {
-        "id": 980138769,
-        "name": "multiverse",
-        "full_name": "EnigmaLabsAI/multiverse",
-        "html_url": "https://github.com/EnigmaLabsAI/multiverse",
-        "description": null,
-        "stargazers_count": 201,
-        "language": "Python",
-        "owner": {
-            "login": "EnigmaLabsAI",
-            "avatar_url": "https://avatars.githubusercontent.com/u/210861766?v=4",
-            "html_url": "https://github.com/EnigmaLabsAI"
+            "login": "OpenBMB",
+            "avatar_url": "https://avatars.githubusercontent.com/u/89920203?v=4",
+            "html_url": "https://github.com/OpenBMB"
         }
     },
     {
@@ -75,12 +47,40 @@
         "full_name": "stepfun-ai/Step1X-3D",
         "html_url": "https://github.com/stepfun-ai/Step1X-3D",
         "description": "Step1X-3D: Towards High-Fidelity and Controllable Generation of Textured 3D Assets",
-        "stargazers_count": 191,
+        "stargazers_count": 314,
         "language": "Python",
         "owner": {
             "login": "stepfun-ai",
             "avatar_url": "https://avatars.githubusercontent.com/u/178004800?v=4",
             "html_url": "https://github.com/stepfun-ai"
+        }
+    },
+    {
+        "id": 981734201,
+        "name": "Starguard",
+        "full_name": "m-ahmed-elbeskeri/Starguard",
+        "html_url": "https://github.com/m-ahmed-elbeskeri/Starguard",
+        "description": "CLI that detects fake-star campaigns, dependency hijacks, licence red-flags and other signs of repository risk. Inspired by the \u201c4.5 million fake stars\u201d study, StarGuard helps CTOs, security teams and investors perform fast, automated open-source due-diligence.",
+        "stargazers_count": 301,
+        "language": "Python",
+        "owner": {
+            "login": "m-ahmed-elbeskeri",
+            "avatar_url": "https://avatars.githubusercontent.com/u/131454742?v=4",
+            "html_url": "https://github.com/m-ahmed-elbeskeri"
+        }
+    },
+    {
+        "id": 980332012,
+        "name": "codesys",
+        "full_name": "RVCA212/codesys",
+        "html_url": "https://github.com/RVCA212/codesys",
+        "description": null,
+        "stargazers_count": 147,
+        "language": "Python",
+        "owner": {
+            "login": "RVCA212",
+            "avatar_url": "https://avatars.githubusercontent.com/u/112829052?v=4",
+            "html_url": "https://github.com/RVCA212"
         }
     }
 ]
