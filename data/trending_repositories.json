@@ -5,7 +5,7 @@
         "full_name": "SakanaAI/continuous-thought-machines",
         "html_url": "https://github.com/SakanaAI/continuous-thought-machines",
         "description": "Continuous Thought Machines, because thought takes time and reasoning is a process.",
-        "stargazers_count": 594,
+        "stargazers_count": 661,
         "language": "Python",
         "owner": {
             "login": "SakanaAI",
@@ -14,26 +14,12 @@
         }
     },
     {
-        "id": 981752011,
-        "name": "whatsapp-python-chatbot",
-        "full_name": "YonkoSam/whatsapp-python-chatbot",
-        "html_url": "https://github.com/YonkoSam/whatsapp-python-chatbot",
-        "description": "WhatsApp Chatbot using Gemini + WasenderAPI",
-        "stargazers_count": 398,
-        "language": "Python",
-        "owner": {
-            "login": "YonkoSam",
-            "avatar_url": "https://avatars.githubusercontent.com/u/161728760?v=4",
-            "html_url": "https://github.com/YonkoSam"
-        }
-    },
-    {
         "id": 982552795,
         "name": "AgentCPM-GUI",
         "full_name": "OpenBMB/AgentCPM-GUI",
         "html_url": "https://github.com/OpenBMB/AgentCPM-GUI",
         "description": "AgentCPM-GUI: An on-device GUI agent for operating Android apps, enhancing reasoning ability with reinforcement fine-tuning for efficient task execution.",
-        "stargazers_count": 371,
+        "stargazers_count": 508,
         "language": "Python",
         "owner": {
             "login": "OpenBMB",
@@ -42,12 +28,26 @@
         }
     },
     {
+        "id": 981752011,
+        "name": "whatsapp-python-chatbot",
+        "full_name": "YonkoSam/whatsapp-python-chatbot",
+        "html_url": "https://github.com/YonkoSam/whatsapp-python-chatbot",
+        "description": "WhatsApp Chatbot using Gemini + WasenderAPI",
+        "stargazers_count": 431,
+        "language": "Python",
+        "owner": {
+            "login": "YonkoSam",
+            "avatar_url": "https://avatars.githubusercontent.com/u/161728760?v=4",
+            "html_url": "https://github.com/YonkoSam"
+        }
+    },
+    {
         "id": 982543341,
         "name": "Step1X-3D",
         "full_name": "stepfun-ai/Step1X-3D",
         "html_url": "https://github.com/stepfun-ai/Step1X-3D",
         "description": "Step1X-3D: Towards High-Fidelity and Controllable Generation of Textured 3D Assets",
-        "stargazers_count": 314,
+        "stargazers_count": 370,
         "language": "Python",
         "owner": {
             "login": "stepfun-ai",
@@ -61,7 +61,7 @@
         "full_name": "m-ahmed-elbeskeri/Starguard",
         "html_url": "https://github.com/m-ahmed-elbeskeri/Starguard",
         "description": "CLI that detects fake-star campaigns, dependency hijacks, licence red-flags and other signs of repository risk. Inspired by the \u201c4.5 million fake stars\u201d study, StarGuard helps CTOs, security teams and investors perform fast, automated open-source due-diligence.",
-        "stargazers_count": 301,
+        "stargazers_count": 313,
         "language": "Python",
         "owner": {
             "login": "m-ahmed-elbeskeri",
@@ -70,17 +70,17 @@
         }
     },
     {
-        "id": 980332012,
-        "name": "codesys",
-        "full_name": "RVCA212/codesys",
-        "html_url": "https://github.com/RVCA212/codesys",
-        "description": null,
-        "stargazers_count": 147,
+        "id": 981017090,
+        "name": "autogenlib",
+        "full_name": "cofob/autogenlib",
+        "html_url": "https://github.com/cofob/autogenlib",
+        "description": "Import wisdom, export code.",
+        "stargazers_count": 258,
         "language": "Python",
         "owner": {
-            "login": "RVCA212",
-            "avatar_url": "https://avatars.githubusercontent.com/u/112829052?v=4",
-            "html_url": "https://github.com/RVCA212"
+            "login": "cofob",
+            "avatar_url": "https://avatars.githubusercontent.com/u/49928332?v=4",
+            "html_url": "https://github.com/cofob"
         }
     }
 ]
