@@ -5,7 +5,7 @@
         "full_name": "SakanaAI/continuous-thought-machines",
         "html_url": "https://github.com/SakanaAI/continuous-thought-machines",
         "description": "Continuous Thought Machines, because thought takes time and reasoning is a process.",
-        "stargazers_count": 661,
+        "stargazers_count": 700,
         "language": "Python",
         "owner": {
             "login": "SakanaAI",
@@ -19,7 +19,7 @@
         "full_name": "OpenBMB/AgentCPM-GUI",
         "html_url": "https://github.com/OpenBMB/AgentCPM-GUI",
         "description": "AgentCPM-GUI: An on-device GUI agent for operating Android apps, enhancing reasoning ability with reinforcement fine-tuning for efficient task execution.",
-        "stargazers_count": 508,
+        "stargazers_count": 556,
         "language": "Python",
         "owner": {
             "login": "OpenBMB",
@@ -33,7 +33,7 @@
         "full_name": "YonkoSam/whatsapp-python-chatbot",
         "html_url": "https://github.com/YonkoSam/whatsapp-python-chatbot",
         "description": "WhatsApp Chatbot using Gemini + WasenderAPI",
-        "stargazers_count": 431,
+        "stargazers_count": 445,
         "language": "Python",
         "owner": {
             "login": "YonkoSam",
@@ -47,7 +47,7 @@
         "full_name": "stepfun-ai/Step1X-3D",
         "html_url": "https://github.com/stepfun-ai/Step1X-3D",
         "description": "Step1X-3D: Towards High-Fidelity and Controllable Generation of Textured 3D Assets",
-        "stargazers_count": 370,
+        "stargazers_count": 409,
         "language": "Python",
         "owner": {
             "login": "stepfun-ai",
@@ -61,7 +61,7 @@
         "full_name": "m-ahmed-elbeskeri/Starguard",
         "html_url": "https://github.com/m-ahmed-elbeskeri/Starguard",
         "description": "CLI that detects fake-star campaigns, dependency hijacks, licence red-flags and other signs of repository risk. Inspired by the \u201c4.5 million fake stars\u201d study, StarGuard helps CTOs, security teams and investors perform fast, automated open-source due-diligence.",
-        "stargazers_count": 313,
+        "stargazers_count": 327,
         "language": "Python",
         "owner": {
             "login": "m-ahmed-elbeskeri",
@@ -70,17 +70,17 @@
         }
     },
     {
-        "id": 981017090,
-        "name": "autogenlib",
-        "full_name": "cofob/autogenlib",
-        "html_url": "https://github.com/cofob/autogenlib",
-        "description": "Import wisdom, export code.",
-        "stargazers_count": 258,
+        "id": 981648287,
+        "name": "agent-api",
+        "full_name": "agno-agi/agent-api",
+        "html_url": "https://github.com/agno-agi/agent-api",
+        "description": "A minimal, open-source setup for serving Agents using FastAPI and Postgres. Built for speed, clarity, and dev happiness.",
+        "stargazers_count": 165,
         "language": "Python",
         "owner": {
-            "login": "cofob",
-            "avatar_url": "https://avatars.githubusercontent.com/u/49928332?v=4",
-            "html_url": "https://github.com/cofob"
+            "login": "agno-agi",
+            "avatar_url": "https://avatars.githubusercontent.com/u/104874993?v=4",
+            "html_url": "https://github.com/agno-agi"
         }
     }
 ]
