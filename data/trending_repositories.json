@@ -5,7 +5,7 @@
         "full_name": "OpenBMB/AgentCPM-GUI",
         "html_url": "https://github.com/OpenBMB/AgentCPM-GUI",
         "description": "AgentCPM-GUI: An on-device GUI agent for operating Android apps, enhancing reasoning ability with reinforcement fine-tuning for efficient task execution.",
-        "stargazers_count": 589,
+        "stargazers_count": 606,
         "language": "Python",
         "owner": {
             "login": "OpenBMB",
@@ -19,7 +19,7 @@
         "full_name": "stepfun-ai/Step1X-3D",
         "html_url": "https://github.com/stepfun-ai/Step1X-3D",
         "description": "Step1X-3D: Towards High-Fidelity and Controllable Generation of Textured 3D Assets",
-        "stargazers_count": 420,
+        "stargazers_count": 489,
         "language": "Python",
         "owner": {
             "login": "stepfun-ai",
@@ -28,12 +28,26 @@
         }
     },
     {
+        "id": 985477441,
+        "name": "OpenAlpha_Evolve",
+        "full_name": "shyamsaktawat/OpenAlpha_Evolve",
+        "html_url": "https://github.com/shyamsaktawat/OpenAlpha_Evolve",
+        "description": "OpenAlpha_Evolve is an open-source Python framework inspired by the groundbreaking research on autonomous coding agents like DeepMind's AlphaEvolve.",
+        "stargazers_count": 344,
+        "language": "Python",
+        "owner": {
+            "login": "shyamsaktawat",
+            "avatar_url": "https://avatars.githubusercontent.com/u/76257252?v=4",
+            "html_url": "https://github.com/shyamsaktawat"
+        }
+    },
+    {
         "id": 984927305,
         "name": "KVSplit",
         "full_name": "dipampaul17/KVSplit",
         "html_url": "https://github.com/dipampaul17/KVSplit",
         "description": "Run larger LLMs with longer contexts on Apple Silicon by using differentiated precision for KV cache quantization. KVSplit enables 8-bit keys & 4-bit values, reducing memory by 59% with <1% quality loss. Includes benchmarking, visualization, and one-command setup. Optimized for M1/M2/M3 Macs with Metal support.",
-        "stargazers_count": 290,
+        "stargazers_count": 309,
         "language": "Python",
         "owner": {
             "login": "dipampaul17",
@@ -47,7 +61,7 @@
         "full_name": "strands-agents/sdk-python",
         "html_url": "https://github.com/strands-agents/sdk-python",
         "description": "A model-driven approach to building AI agents in just a few lines of code.",
-        "stargazers_count": 204,
+        "stargazers_count": 275,
         "language": "Python",
         "owner": {
             "login": "strands-agents",
@@ -61,26 +75,12 @@
         "full_name": "EvolutionAPI/evo-ai",
         "html_url": "https://github.com/EvolutionAPI/evo-ai",
         "description": "Evo AI is an open-source platform for creating and managing AI agents, enabling integration with different AI models and services.",
-        "stargazers_count": 172,
+        "stargazers_count": 206,
         "language": "Python",
         "owner": {
             "login": "EvolutionAPI",
             "avatar_url": "https://avatars.githubusercontent.com/u/136080052?v=4",
             "html_url": "https://github.com/EvolutionAPI"
-        }
-    },
-    {
-        "id": 982849381,
-        "name": "ComfyUI-LBMWrapper",
-        "full_name": "kijai/ComfyUI-LBMWrapper",
-        "html_url": "https://github.com/kijai/ComfyUI-LBMWrapper",
-        "description": null,
-        "stargazers_count": 146,
-        "language": "Python",
-        "owner": {
-            "login": "kijai",
-            "avatar_url": "https://avatars.githubusercontent.com/u/40791699?v=4",
-            "html_url": "https://github.com/kijai"
         }
     }
 ]
