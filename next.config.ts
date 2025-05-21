@@ -1,5 +1,5 @@
 import { NextConfig } from "next";
-import { GithubToolsList } from "@/constants";
+import GithubToolsList from "./data/tools.json";
 
 const nextConfig: NextConfig = {
   async headers() {
