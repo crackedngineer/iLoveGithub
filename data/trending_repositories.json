@@ -5,7 +5,7 @@
         "full_name": "shyamsaktawat/OpenAlpha_Evolve",
         "html_url": "https://github.com/shyamsaktawat/OpenAlpha_Evolve",
         "description": "OpenAlpha_Evolve is an open-source Python framework inspired by the groundbreaking research on autonomous coding agents like DeepMind's AlphaEvolve.",
-        "stargazers_count": 533,
+        "stargazers_count": 613,
         "language": "Python",
         "owner": {
             "login": "shyamsaktawat",
@@ -14,26 +14,12 @@
         }
     },
     {
-        "id": 983715534,
-        "name": "sdk-python",
-        "full_name": "strands-agents/sdk-python",
-        "html_url": "https://github.com/strands-agents/sdk-python",
-        "description": "A model-driven approach to building AI agents in just a few lines of code.",
-        "stargazers_count": 424,
-        "language": "Python",
-        "owner": {
-            "login": "strands-agents",
-            "avatar_url": "https://avatars.githubusercontent.com/u/209155962?v=4",
-            "html_url": "https://github.com/strands-agents"
-        }
-    },
-    {
         "id": 984927305,
         "name": "KVSplit",
         "full_name": "dipampaul17/KVSplit",
         "html_url": "https://github.com/dipampaul17/KVSplit",
         "description": "Run larger LLMs with longer contexts on Apple Silicon by using differentiated precision for KV cache quantization. KVSplit enables 8-bit keys & 4-bit values, reducing memory by 59% with <1% quality loss. Includes benchmarking, visualization, and one-command setup. Optimized for M1/M2/M3 Macs with Metal support.",
-        "stargazers_count": 322,
+        "stargazers_count": 324,
         "language": "Python",
         "owner": {
             "login": "dipampaul17",
@@ -42,12 +28,40 @@
         }
     },
     {
+        "id": 984096689,
+        "name": "openevolve",
+        "full_name": "codelion/openevolve",
+        "html_url": "https://github.com/codelion/openevolve",
+        "description": "Open-source implementation of AlphaEvolve",
+        "stargazers_count": 250,
+        "language": "Python",
+        "owner": {
+            "login": "codelion",
+            "avatar_url": "https://avatars.githubusercontent.com/u/603317?v=4",
+            "html_url": "https://github.com/codelion"
+        }
+    },
+    {
+        "id": 984036705,
+        "name": "ParScale",
+        "full_name": "QwenLM/ParScale",
+        "html_url": "https://github.com/QwenLM/ParScale",
+        "description": "Parallel Scaling Law for Language Model \u2014 Beyond Parameter and Inference Time Scaling",
+        "stargazers_count": 247,
+        "language": "Python",
+        "owner": {
+            "login": "QwenLM",
+            "avatar_url": "https://avatars.githubusercontent.com/u/141221163?v=4",
+            "html_url": "https://github.com/QwenLM"
+        }
+    },
+    {
         "id": 986459955,
         "name": "Password-Cracker",
         "full_name": "tavibray0/Password-Cracker",
         "html_url": "https://github.com/tavibray0/Password-Cracker",
         "description": "pdf password cracker anon cracker \ud83d\udca5 bruteforce .pdf and .zip files in lighting speed \ud83d\udca5 a single tool to bruteforce pdf , zip and hashes very super fast. pdf cracker zip cracker pdf bruteforce zip bruteforce hash bruteforce has cracker pdf cracker zip cracker pdf bruteforce zip bruteforce hash bruteforce has cracker pdf fbafoaywsa",
-        "stargazers_count": 239,
+        "stargazers_count": 244,
         "language": "Python",
         "owner": {
             "login": "tavibray0",
@@ -67,20 +81,6 @@
             "login": "endguypie8385",
             "avatar_url": "https://avatars.githubusercontent.com/u/193173820?v=4",
             "html_url": "https://github.com/endguypie8385"
-        }
-    },
-    {
-        "id": 986459907,
-        "name": "spoofer-hwid",
-        "full_name": "valetnoob/spoofer-hwid",
-        "html_url": "https://github.com/valetnoob/spoofer-hwid",
-        "description": "hwid spoofer hwid changer \ud83d\udd11\ufe0e disk, guid, mac, gpu, pc-name, win-id, efi, smbios spoofing fortnite warzone apex rust escape from tarkov and all eac be games hwid spoof hwid changer hwid spoof hwid changer hwid spoof hwid changer hwid  mkxfzon",
-        "stargazers_count": 200,
-        "language": "Python",
-        "owner": {
-            "login": "valetnoob",
-            "avatar_url": "https://avatars.githubusercontent.com/u/193176090?v=4",
-            "html_url": "https://github.com/valetnoob"
         }
     }
 ]
