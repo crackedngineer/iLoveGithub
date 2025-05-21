@@ -5,12 +5,15 @@ import { SpeedInsights } from "@vercel/speed-insights/next";
 import { Geist, Geist_Mono } from "next/font/google";
 import "./globals.css";
 import AuthProvider from "@/components/AuthProvider";
-import AdBanner from "@/components/AdBanner";
+// import AdBanner from "@/components/AdBanner";
 import GoogleAnalytics from "@/components/GoogleAnalytics";
 import { ApiLimitProvider } from "@/components/ApiLimitContext";
 import AuthGuard from "@/components/AuthGuard";
 import DemoVideoProvider from "@/components/DemoVideoProvider";
 import AppVersionSync from "@/components/AppVersionSync";
+import { AppLocationProvider } from "@/components/AppLocationProvider";
+
+import DonationWidget from "@/components/DonationWidget";
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -118,16 +121,21 @@ export default function RootLayout({
           measurementId={process.env.NEXT_PUBLIC_GA_MEASUREMENT_ID}
         />
         <Analytics />
-        <GoogleAnalytics measurementId={process.env.NEXT_PUBLIC_GA_MEASUREMENT_ID} />
+        <GoogleAnalytics
+          measurementId={process.env.NEXT_PUBLIC_GA_MEASUREMENT_ID}
+        />
         <SpeedInsights />
         <AppVersionSync />
 
         <DemoVideoProvider>
-          <AuthProvider>
-            <ApiLimitProvider>
-              <AuthGuard>{children}</AuthGuard>
-            </ApiLimitProvider>
-          </AuthProvider>
+          <AppLocationProvider>
+            <AuthProvider>
+              <ApiLimitProvider>
+                <AuthGuard>{children}</AuthGuard>
+                <DonationWidget />
+              </ApiLimitProvider>
+            </AuthProvider>
+          </AppLocationProvider>
         </DemoVideoProvider>
 
         {/* Add the AdBanner component at the end of body to ensure it's at the bottom */}
