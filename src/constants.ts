@@ -16,7 +16,7 @@ export const GITHUB_REPO_URL = "https://github.com/crackedngineer/iLoveGithub";
 
 export const GITHUB_SUBMIT_TOOL_URL =
   "https://github.com/crackedngineer/iLoveGithub/issues/new?template=new-tool-request.yml";
-  
+
 export const DEMO_VIDEO_URL = "https://www.youtube.com/embed/eg5eAEnNEVY?si=_me67cuBbIloxm8o&autoplay=1"
 
 export const DefaultGithubRepo = {
@@ -336,5 +336,17 @@ export const GithubToolsList: Tool[] = [
     category: ToolCategories.ANALYTICS,
     iframe: true,
     created_at: "2025-05-09T05:13:49Z",
+  },
+  {
+    name: "gittodoc",
+    title: "Gittodoc",
+    description:
+      "Turn any Git repository into a simple documentation link that LLMs can easily index.",
+    homepage: "https://www.gittodoc.com/",
+    url: "https://www.gittodoc.com/{owner}/{repo}",
+    icon: "/icons/tools/gittodoc.ico", // https://gittodoc.com/static/favicon.ico
+    category: ToolCategories.ANALYTICS,
+    iframe: true,
+    created_at: "2025-05-21T18:30:45Z",
   },
 ];

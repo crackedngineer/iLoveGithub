@@ -84,7 +84,7 @@
 | [**DeepWiki**](https://deepwiki.com/)           | Which repo would you like to understand?                              | [`deepwiki.com/{owner}/{repo}`](https://deepwiki.com/{owner}/{repo})                                   |
 | [**TalkToGitHub**](https://talktogithub.com/)           | Repo to Convo in seconds!                              | [`talktogithub.com/{owner}/{repo}`](https://talktogithub.com/{owner}/{repo})                                   |
 | [**AnswerGit**](https://answergit.vercel.app/)           | AI-Powered GitHub Repository Explorer!                              | [`answergit.vercel.app/{owner}/{repo}`](https://answergit.vercel.app/{owner}/{repo})                                   |
-
+| [**Gittodoc**](https://gittodoc.com/)             | Turn any Git repository into a simple documentation link that LLMs can easily index.                                     | [`gittodoc.com/{owner}/{repo}`](https://gittodoc.com/{owner}/{repo})                     |
 ---
 
 ### 🧩 Widgets & UI Enhancers
