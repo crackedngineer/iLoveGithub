@@ -1,7 +1,7 @@
 "use client";
 import * as React from "react";
 import { useState, useEffect } from "react";
-import { GithubToolsList } from "@/constants";
+import GithubToolsList from "../../../../../../tools.json";
 import { replaceUrlVariables } from "@/app/helper";
 import { useParams } from "next/navigation";
 import ToolViewer from "@/components/ToolViewer";
