@@ -10,7 +10,8 @@ import {
   CardHeader,
   CardTitle,
 } from "@/components/ui/card";
-import { GithubToolsList } from "@/constants";
+import GithubToolsList from "../../tools.json";
+import { ToolCategories } from "@/constants";
 import { Tool } from "@/lib/types";
 import { replaceUrlVariables } from "@/app/helper";
 import { Button } from "@/components/ui/button";
@@ -44,8 +45,19 @@ const GitHubTools = ({
   });
 
   const toolsByCategory = filteredTools.reduce((acc, tool) => {
-    if (!acc[tool.category]) acc[tool.category] = [];
-    acc[tool.category].push(tool);
+    const categoryKey = tool.category as keyof typeof ToolCategories;
+
+    if (!(categoryKey in ToolCategories)) {
+      throw new Error(`Invalid category key "${tool.category}" found for tool "${tool.name}". 
+        Please ensure it matches a key in ToolCategories.`);
+    }
+
+    const categoryDisplayName = ToolCategories[categoryKey];
+
+    if (!acc[categoryDisplayName]) {
+      acc[categoryDisplayName] = [];
+    }
+    acc[categoryDisplayName].push(tool);
     return acc;
   }, {} as Record<string, Tool[]>);
 
@@ -56,7 +68,6 @@ const GitHubTools = ({
       </h2>
 
       <div className="mb-8 flex items-center gap-2">
-        {/* <Search className="text-gray-500 w-5 h-5" /> */}
         <Input
           type="text"
           placeholder="Search by title or description..."
@@ -99,17 +110,21 @@ const GitHubTools = ({
                     )}
                     <CardHeader className="pb-1">
                       <CardTitle className="text-base sm:text-lg flex items-center gap-2 text-gray-900 dark:text-white">
-                        {
-                          tool.icon ? <Image
+                        {tool.icon ? (
+                          <Image
                             alt={`${tool.name} icon`}
                             src={tool.icon}
                             width={24}
                             height={24}
                             className="rounded-sm transition-all dark:invert dark:brightness-90"
-                          /> : <BrainCircuit width={24}
+                          />
+                        ) : (
+                          <BrainCircuit
+                            width={24}
                             height={24}
-                            className="rounded-sm transition-all dark:invert dark:brightness-90" />
-                        }
+                            className="rounded-sm transition-all dark:invert dark:brightness-90"
+                          />
+                        )}
 
                         {tool.name}
                       </CardTitle>
