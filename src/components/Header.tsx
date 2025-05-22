@@ -24,51 +24,17 @@ import {
   DEMO_VIDEO_URL,
 } from "@/constants";
 import { RateLimitDisplay } from "./RateLimitDisplay";
-
-// Utility to check if coordinates fall within India's bounding box
-const isWithinIndia = (latitude: number, longitude: number): boolean => {
-  return (
-    latitude >= 6.5546 &&
-    latitude <= 35.6745 &&
-    longitude >= 68.1114 &&
-    longitude <= 97.3956
-  );
-};
+import { useAppLocation } from "./AppLocationProvider";
 
 const Header = () => {
   const { data: session, status } = useSession();
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   const [isDarkMode, setIsDarkMode] = useState(false);
   const [isDonationModalOpen, setIsDonationModalOpen] = useState(false);
-  const [isIndiaLocation, setIsIndiaLocation] = useState(false);
+  const { isInIndia } = useAppLocation();
 
   useEffect(() => {
     setIsDarkMode(document.documentElement.classList.contains("dark"));
-  }, []);
-
-  useEffect(() => {
-    const getLocation = () => {
-      if (!navigator.geolocation) {
-        console.warn("Geolocation not supported");
-        return;
-      }
-
-      navigator.geolocation.getCurrentPosition(
-        (position) => {
-          const { latitude, longitude } = position.coords;
-          console.log("Browser geolocation:", { latitude, longitude });
-
-          const inIndia = isWithinIndia(latitude, longitude);
-          setIsIndiaLocation(inIndia);
-        },
-        (err) => {
-          console.warn("Geolocation error:", err.message);
-        },
-        { enableHighAccuracy: true, timeout: 5000, maximumAge: 10000 }
-      );
-    };
-
-    getLocation();
   }, []);
 
   const toggleTheme = () => {
@@ -159,7 +125,7 @@ const Header = () => {
                   <Coffee className="h-4 w-4 mr-2" />
                   Buy me a coffee
                 </DropdownMenuItem>
-                {isIndiaLocation && (
+                {isInIndia && (
                   <DropdownMenuItem
                     onClick={() => setIsDonationModalOpen(true)}
                   >
@@ -308,7 +274,7 @@ const Header = () => {
       <DonationModal
         isOpen={isDonationModalOpen}
         onClose={() => setIsDonationModalOpen(false)}
-        isIndiaLocation={isIndiaLocation}
+        isIndiaLocation={isInIndia}
       />
     </header>
   );
