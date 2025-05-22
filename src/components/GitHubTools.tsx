@@ -10,7 +10,7 @@ import {
   CardHeader,
   CardTitle,
 } from "@/components/ui/card";
-import GithubToolsList from "../../data/tools.json";
+import GithubToolsList from "../../tools.json";
 import { ToolCategories } from "@/constants";
 import { Tool } from "@/lib/types";
 import { replaceUrlVariables } from "@/app/helper";
