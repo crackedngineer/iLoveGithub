@@ -1,86 +1,86 @@
 [
     {
-        "id": 981378932,
-        "name": "continuous-thought-machines",
-        "full_name": "SakanaAI/continuous-thought-machines",
-        "html_url": "https://github.com/SakanaAI/continuous-thought-machines",
-        "description": "Continuous Thought Machines, because thought takes time and reasoning is a process.",
-        "stargazers_count": 497,
+        "id": 985477441,
+        "name": "OpenAlpha_Evolve",
+        "full_name": "shyamsaktawat/OpenAlpha_Evolve",
+        "html_url": "https://github.com/shyamsaktawat/OpenAlpha_Evolve",
+        "description": "OpenAlpha_Evolve is an open-source Python framework inspired by the groundbreaking research on autonomous coding agents like DeepMind's AlphaEvolve.",
+        "stargazers_count": 642,
         "language": "Python",
         "owner": {
-            "login": "SakanaAI",
-            "avatar_url": "https://avatars.githubusercontent.com/u/140988036?v=4",
-            "html_url": "https://github.com/SakanaAI"
+            "login": "shyamsaktawat",
+            "avatar_url": "https://avatars.githubusercontent.com/u/76257252?v=4",
+            "html_url": "https://github.com/shyamsaktawat"
         }
     },
     {
-        "id": 980033758,
-        "name": "flow_grpo",
-        "full_name": "yifan123/flow_grpo",
-        "html_url": "https://github.com/yifan123/flow_grpo",
-        "description": "An official implementation of Flow-GRPO: Training Flow Matching Models via Online RL",
-        "stargazers_count": 403,
+        "id": 984927305,
+        "name": "KVSplit",
+        "full_name": "dipampaul17/KVSplit",
+        "html_url": "https://github.com/dipampaul17/KVSplit",
+        "description": "Run larger LLMs with longer contexts on Apple Silicon by using differentiated precision for KV cache quantization. KVSplit enables 8-bit keys & 4-bit values, reducing memory by 59% with <1% quality loss. Includes benchmarking, visualization, and one-command setup. Optimized for M1/M2/M3 Macs with Metal support.",
+        "stargazers_count": 332,
         "language": "Python",
         "owner": {
-            "login": "yifan123",
-            "avatar_url": "https://avatars.githubusercontent.com/u/37578514?v=4",
-            "html_url": "https://github.com/yifan123"
+            "login": "dipampaul17",
+            "avatar_url": "https://avatars.githubusercontent.com/u/40596409?v=4",
+            "html_url": "https://github.com/dipampaul17"
         }
     },
     {
-        "id": 981752011,
-        "name": "whatsapp-python-chatbot",
-        "full_name": "YonkoSam/whatsapp-python-chatbot",
-        "html_url": "https://github.com/YonkoSam/whatsapp-python-chatbot",
-        "description": "WhatsApp Chatbot using Gemini + WasenderAPI",
-        "stargazers_count": 249,
+        "id": 985949172,
+        "name": "juvio",
+        "full_name": "OKUA1/juvio",
+        "html_url": "https://github.com/OKUA1/juvio",
+        "description": "UV kernel for Jupyter",
+        "stargazers_count": 276,
         "language": "Python",
         "owner": {
-            "login": "YonkoSam",
-            "avatar_url": "https://avatars.githubusercontent.com/u/161728760?v=4",
-            "html_url": "https://github.com/YonkoSam"
+            "login": "OKUA1",
+            "avatar_url": "https://avatars.githubusercontent.com/u/48349467?v=4",
+            "html_url": "https://github.com/OKUA1"
         }
     },
     {
-        "id": 981734201,
-        "name": "Starguard",
-        "full_name": "m-ahmed-elbeskeri/Starguard",
-        "html_url": "https://github.com/m-ahmed-elbeskeri/Starguard",
-        "description": "CLI that detects fake-star campaigns, dependency hijacks, licence red-flags and other signs of repository risk. Inspired by the \u201c4.5 million fake stars\u201d study, StarGuard helps CTOs, security teams and investors perform fast, automated open-source due-diligence.",
-        "stargazers_count": 248,
+        "id": 986459955,
+        "name": "Password-Cracker",
+        "full_name": "tavibray0/Password-Cracker",
+        "html_url": "https://github.com/tavibray0/Password-Cracker",
+        "description": "pdf password cracker anon cracker \ud83d\udca5 bruteforce .pdf and .zip files in lighting speed \ud83d\udca5 a single tool to bruteforce pdf , zip and hashes very super fast. pdf cracker zip cracker pdf bruteforce zip bruteforce hash bruteforce has cracker pdf cracker zip cracker pdf bruteforce zip bruteforce hash bruteforce has cracker pdf fbafoaywsa",
+        "stargazers_count": 245,
         "language": "Python",
         "owner": {
-            "login": "m-ahmed-elbeskeri",
-            "avatar_url": "https://avatars.githubusercontent.com/u/131454742?v=4",
-            "html_url": "https://github.com/m-ahmed-elbeskeri"
+            "login": "tavibray0",
+            "avatar_url": "https://avatars.githubusercontent.com/u/193174542?v=4",
+            "html_url": "https://github.com/tavibray0"
         }
     },
     {
-        "id": 980138769,
-        "name": "multiverse",
-        "full_name": "EnigmaLabsAI/multiverse",
-        "html_url": "https://github.com/EnigmaLabsAI/multiverse",
-        "description": null,
+        "id": 984739304,
+        "name": "llmbasedos",
+        "full_name": "iluxu/llmbasedos",
+        "html_url": "https://github.com/iluxu/llmbasedos",
+        "description": "Minimal Linux OS with a Model Context Protocol (MCP) gateway to expose local capabilities to LLMs.",
+        "stargazers_count": 209,
+        "language": "Python",
+        "owner": {
+            "login": "iluxu",
+            "avatar_url": "https://avatars.githubusercontent.com/u/18131453?v=4",
+            "html_url": "https://github.com/iluxu"
+        }
+    },
+    {
+        "id": 986458677,
+        "name": "Creal-Stealer",
+        "full_name": "endguypie8385/Creal-Stealer",
+        "html_url": "https://github.com/endguypie8385/Creal-Stealer",
+        "description": "stealer grabber grabber cookie grabber grabber 2023 cookie stealer token password \ud83d\udd25 stealer \ud83d\udd25 password grabber token stealer cookie password password python stealer password cookie stealer stealer high in token stealer end stealer creal grabber cookie stealer token cookie working stealer password grabber stealer token rzwbbjzx",
         "stargazers_count": 201,
         "language": "Python",
         "owner": {
-            "login": "EnigmaLabsAI",
-            "avatar_url": "https://avatars.githubusercontent.com/u/210861766?v=4",
-            "html_url": "https://github.com/EnigmaLabsAI"
-        }
-    },
-    {
-        "id": 982543341,
-        "name": "Step1X-3D",
-        "full_name": "stepfun-ai/Step1X-3D",
-        "html_url": "https://github.com/stepfun-ai/Step1X-3D",
-        "description": "Step1X-3D: Towards High-Fidelity and Controllable Generation of Textured 3D Assets",
-        "stargazers_count": 191,
-        "language": "Python",
-        "owner": {
-            "login": "stepfun-ai",
-            "avatar_url": "https://avatars.githubusercontent.com/u/178004800?v=4",
-            "html_url": "https://github.com/stepfun-ai"
+            "login": "endguypie8385",
+            "avatar_url": "https://avatars.githubusercontent.com/u/193173820?v=4",
+            "html_url": "https://github.com/endguypie8385"
         }
     }
 ]

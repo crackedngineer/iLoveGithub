@@ -19,7 +19,7 @@ import Image from "next/image";
 interface DonationModalProps {
   isOpen: boolean;
   onClose: () => void;
-  isIndiaLocation: boolean;
+  isIndiaLocation: boolean | null;
 }
 
 const DonationModal = ({
