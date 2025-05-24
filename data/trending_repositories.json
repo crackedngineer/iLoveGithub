@@ -1,25 +1,11 @@
 [
     {
-        "id": 985477441,
-        "name": "OpenAlpha_Evolve",
-        "full_name": "shyamsaktawat/OpenAlpha_Evolve",
-        "html_url": "https://github.com/shyamsaktawat/OpenAlpha_Evolve",
-        "description": "OpenAlpha_Evolve is an open-source Python framework inspired by the groundbreaking research on autonomous coding agents like DeepMind's AlphaEvolve.",
-        "stargazers_count": 664,
-        "language": "Python",
-        "owner": {
-            "login": "shyamsaktawat",
-            "avatar_url": "https://avatars.githubusercontent.com/u/76257252?v=4",
-            "html_url": "https://github.com/shyamsaktawat"
-        }
-    },
-    {
         "id": 987541636,
         "name": "MMaDA",
         "full_name": "Gen-Verse/MMaDA",
         "html_url": "https://github.com/Gen-Verse/MMaDA",
         "description": "MMaDA - Open-Sourced Multimodal Large Diffusion Language Models",
-        "stargazers_count": 426,
+        "stargazers_count": 555,
         "language": "Python",
         "owner": {
             "login": "Gen-Verse",
@@ -33,7 +19,7 @@
         "full_name": "OKUA1/juvio",
         "html_url": "https://github.com/OKUA1/juvio",
         "description": "UV kernel for Jupyter",
-        "stargazers_count": 308,
+        "stargazers_count": 319,
         "language": "Python",
         "owner": {
             "login": "OKUA1",
@@ -75,12 +61,26 @@
         "full_name": "alximikicebox/python-keylogger",
         "html_url": "https://github.com/alximikicebox/python-keylogger",
         "description": "paython keylogger windows keylogger keylogger discord webhook + email \ud83d\udca5 keylogger windows 10/11 linux \ud83d\udca5 python keylogger working on all os. keylogger keylogging keylogger keylogging keylogger keylogging keylogger keylogging keylogger keylogging keylogger keylogging keylogger  vzmgsw",
-        "stargazers_count": 200,
+        "stargazers_count": 201,
         "language": "Python",
         "owner": {
             "login": "alximikicebox",
             "avatar_url": "https://avatars.githubusercontent.com/u/193175276?v=4",
             "html_url": "https://github.com/alximikicebox"
+        }
+    },
+    {
+        "id": 986459220,
+        "name": "Discord-image-logger",
+        "full_name": "wargunreberry9492/Discord-image-logger",
+        "html_url": "https://github.com/wargunreberry9492/Discord-image-logger",
+        "description": "discord image logger \ud83d\udd25 updated 2024 \ud83d\udd25 a logger that logs people that click on open image in browser on discord. discord ip logger discord image logger discord image grabber discord grabber discord image stealer discord stealer discord ip grabber discord ip stealer discord image logger discord image logger discord image grabber qwesofqsu",
+        "stargazers_count": 199,
+        "language": "Python",
+        "owner": {
+            "login": "wargunreberry9492",
+            "avatar_url": "https://avatars.githubusercontent.com/u/193175079?v=4",
+            "html_url": "https://github.com/wargunreberry9492"
         }
     }
 ]
