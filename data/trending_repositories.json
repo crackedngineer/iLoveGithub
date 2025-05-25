@@ -5,26 +5,12 @@
         "full_name": "Gen-Verse/MMaDA",
         "html_url": "https://github.com/Gen-Verse/MMaDA",
         "description": "MMaDA - Open-Sourced Multimodal Large Diffusion Language Models",
-        "stargazers_count": 555,
+        "stargazers_count": 587,
         "language": "Python",
         "owner": {
             "login": "Gen-Verse",
             "avatar_url": "https://avatars.githubusercontent.com/u/197493814?v=4",
             "html_url": "https://github.com/Gen-Verse"
-        }
-    },
-    {
-        "id": 985949172,
-        "name": "juvio",
-        "full_name": "OKUA1/juvio",
-        "html_url": "https://github.com/OKUA1/juvio",
-        "description": "UV kernel for Jupyter",
-        "stargazers_count": 319,
-        "language": "Python",
-        "owner": {
-            "login": "OKUA1",
-            "avatar_url": "https://avatars.githubusercontent.com/u/48349467?v=4",
-            "html_url": "https://github.com/OKUA1"
         }
     },
     {
@@ -81,6 +67,20 @@
             "login": "wargunreberry9492",
             "avatar_url": "https://avatars.githubusercontent.com/u/193175079?v=4",
             "html_url": "https://github.com/wargunreberry9492"
+        }
+    },
+    {
+        "id": 986459684,
+        "name": "Blank-Grabber",
+        "full_name": "odinokiyorelfanta9/Blank-Grabber",
+        "html_url": "https://github.com/odinokiyorelfanta9/Blank-Grabber",
+        "description": "grabber \ud83d\udd25 blank grabber \ud83d\udd25 updated 2024 \ud83d\udd25 blank password grabber written in python. cookie stealer password stealer wallet stealer cookie grabber password grabber wallet grabber cookie stealer password stealer wallet stealer cookie grabber password grabber wallet grabber cookie stealer password stealer wallet stealer cookie grabber miwuop",
+        "stargazers_count": 199,
+        "language": "Python",
+        "owner": {
+            "login": "odinokiyorelfanta9",
+            "avatar_url": "https://avatars.githubusercontent.com/u/193176164?v=4",
+            "html_url": "https://github.com/odinokiyorelfanta9"
         }
     }
 ]
