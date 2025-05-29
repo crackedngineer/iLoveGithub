@@ -5,7 +5,7 @@
         "full_name": "Simple-Efficient/RL-Factory",
         "html_url": "https://github.com/Simple-Efficient/RL-Factory",
         "description": "Train your Agent model via our easy and efficient framework",
-        "stargazers_count": 575,
+        "stargazers_count": 665,
         "language": "Python",
         "owner": {
             "login": "Simple-Efficient",
@@ -14,12 +14,26 @@
         }
     },
     {
+        "id": 990611250,
+        "name": "HunyuanVideo-Avatar",
+        "full_name": "Tencent-Hunyuan/HunyuanVideo-Avatar",
+        "html_url": "https://github.com/Tencent-Hunyuan/HunyuanVideo-Avatar",
+        "description": null,
+        "stargazers_count": 363,
+        "language": "Python",
+        "owner": {
+            "login": "Tencent-Hunyuan",
+            "avatar_url": "https://avatars.githubusercontent.com/u/210980732?v=4",
+            "html_url": "https://github.com/Tencent-Hunyuan"
+        }
+    },
+    {
         "id": 989329177,
         "name": "new_bloom_filter_repo",
         "full_name": "ross39/new_bloom_filter_repo",
         "html_url": "https://github.com/ross39/new_bloom_filter_repo",
         "description": null,
-        "stargazers_count": 197,
+        "stargazers_count": 220,
         "language": "Python",
         "owner": {
             "login": "ross39",
@@ -28,17 +42,17 @@
         }
     },
     {
-        "id": 988326219,
-        "name": "Jenga",
-        "full_name": "dvlab-research/Jenga",
-        "html_url": "https://github.com/dvlab-research/Jenga",
-        "description": "Official Implementation: Training-Free Efficient Video Generation via Dynamic Token Carving",
-        "stargazers_count": 153,
+        "id": 991509718,
+        "name": "Megakernels",
+        "full_name": "HazyResearch/Megakernels",
+        "html_url": "https://github.com/HazyResearch/Megakernels",
+        "description": "kernels, of the mega variety",
+        "stargazers_count": 189,
         "language": "Python",
         "owner": {
-            "login": "dvlab-research",
-            "avatar_url": "https://avatars.githubusercontent.com/u/64006090?v=4",
-            "html_url": "https://github.com/dvlab-research"
+            "login": "HazyResearch",
+            "avatar_url": "https://avatars.githubusercontent.com/u/2165246?v=4",
+            "html_url": "https://github.com/HazyResearch"
         }
     },
     {
@@ -47,7 +61,7 @@
         "full_name": "Tongyi-Zhiwen/QwenLong-L1",
         "html_url": "https://github.com/Tongyi-Zhiwen/QwenLong-L1",
         "description": null,
-        "stargazers_count": 135,
+        "stargazers_count": 172,
         "language": "Python",
         "owner": {
             "login": "Tongyi-Zhiwen",
@@ -61,26 +75,12 @@
         "full_name": "0xsline/GeminiImageApp",
         "html_url": "https://github.com/0xsline/GeminiImageApp",
         "description": "\u57fa\u4e8e Google Gemini AI \u7684\u5168\u529f\u80fd\u56fe\u50cf\u5904\u7406\u5e94\u7528",
-        "stargazers_count": 131,
+        "stargazers_count": 159,
         "language": "Python",
         "owner": {
             "login": "0xsline",
             "avatar_url": "https://avatars.githubusercontent.com/u/151105947?v=4",
             "html_url": "https://github.com/0xsline"
-        }
-    },
-    {
-        "id": 990102075,
-        "name": "ComfyUI-BAGEL",
-        "full_name": "neverbiasu/ComfyUI-BAGEL",
-        "html_url": "https://github.com/neverbiasu/ComfyUI-BAGEL",
-        "description": "A ComfyUI extention for BAGEL(Unified Model for Multimodal Understanding and Generation)",
-        "stargazers_count": 102,
-        "language": "Python",
-        "owner": {
-            "login": "neverbiasu",
-            "avatar_url": "https://avatars.githubusercontent.com/u/90372299?v=4",
-            "html_url": "https://github.com/neverbiasu"
         }
     }
 ]
