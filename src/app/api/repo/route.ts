@@ -26,7 +26,12 @@ export async function GET(req: NextRequest) {
     baseURL: "https://api.github.com",
     headers: {
       Accept: "application/vnd.github+json",
-      Authorization: token || `Bearer ${process.env.NEXT_PUBLIC_GITHUB_TOKEN}`,
+      ...(process.env.NEXT_PUBLIC_GITHUB_TOKEN
+        ? {
+          Authorization:
+            token || `Bearer ${process.env.NEXT_PUBLIC_GITHUB_TOKEN}`,
+        }
+        : {}),
     },
   });
 

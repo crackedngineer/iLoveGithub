@@ -17,7 +17,9 @@ export class RateLimitError extends Error {
 export const fetchRateLimit = async (): Promise<RateLimitResponse> => {
   const headers: Record<string, string> = {
     Accept: "application/vnd.github.v3+json",
-    Authorization: `Bearer ${process.env.NEXT_PUBLIC_GITHUB_TOKEN}`,
+    ...(process.env.NEXT_PUBLIC_GITHUB_TOKEN
+      ? { Authorization: `Bearer ${process.env.NEXT_PUBLIC_GITHUB_TOKEN}` }
+      : {}),
   };
 
   try {
