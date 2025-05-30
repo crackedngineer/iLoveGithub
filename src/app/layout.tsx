@@ -119,7 +119,9 @@ export default function RootLayout({
           measurementId={process.env.NEXT_PUBLIC_GA_MEASUREMENT_ID}
         />
         <Analytics />
-        <GoogleAnalytics measurementId={process.env.NEXT_PUBLIC_GA_MEASUREMENT_ID} />
+        <GoogleAnalytics
+          measurementId={process.env.NEXT_PUBLIC_GA_MEASUREMENT_ID}
+        />
         <SpeedInsights />
         <AppVersionSync />
 
@@ -131,7 +133,6 @@ export default function RootLayout({
               </ApiLimitProvider>
             </AuthProvider>
           </AppLocationProvider>
-
         </DemoVideoProvider>
 
         {/* Add the AdBanner component at the end of body to ensure it's at the bottom */}

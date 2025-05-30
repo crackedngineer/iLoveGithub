@@ -1,7 +1,13 @@
 import { NextConfig } from "next";
 import GithubToolsList from "./tools.json";
+import { rootDomain } from "@/lib/utils";
+
+const iframeOrigins = GithubToolsList.filter((tool) => tool.iframe).map(
+  (tool) => `https://${tool.name}.${rootDomain}`
+);
 
 const nextConfig: NextConfig = {
+  allowedDevOrigins: [...iframeOrigins],
   async headers() {
     return [
       {
@@ -18,32 +24,6 @@ const nextConfig: NextConfig = {
         ],
       },
     ];
-  },
-  images: {
-    remotePatterns: [
-      ...Object.values(GithubToolsList)
-        .map((item) => {
-          try {
-            if (!item?.icon) return null;
-            const url = new URL(item.icon);
-            const protocol = url.protocol.replace(":", "") as "http" | "https"; // Ensure correct type
-
-            return { protocol, hostname: url.hostname };
-          } catch {
-            return null; // Handle invalid URLs
-          }
-        })
-        .filter(
-          (
-            pattern
-          ): pattern is { protocol: "http" | "https"; hostname: string } =>
-            pattern !== null
-        ), // Type-safe filtering
-      {
-        protocol: "https",
-        hostname: "*.blob.vercel-storage.com",
-      },
-    ],
   },
 };
 
