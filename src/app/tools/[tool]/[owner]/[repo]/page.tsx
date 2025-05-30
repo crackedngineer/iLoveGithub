@@ -12,12 +12,17 @@ export default function ToolsPage() {
   const { tool, owner, repo } = params;
 
   const toolData = GithubToolsList.find((item) => item.name === tool);
+
   const toolLink = toolData?.url
     ? replaceUrlVariables(toolData.url, {
         owner,
         repo,
       })
     : null;
+
+  if (!toolData?.iframe && toolLink) {
+    window.location.href = toolLink;
+  }
 
   const [showViewer, setShowViewer] = useState<boolean>(false);
 
