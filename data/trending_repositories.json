@@ -5,7 +5,7 @@
         "full_name": "Tencent-Hunyuan/HunyuanVideo-Avatar",
         "html_url": "https://github.com/Tencent-Hunyuan/HunyuanVideo-Avatar",
         "description": null,
-        "stargazers_count": 567,
+        "stargazers_count": 649,
         "language": "Python",
         "owner": {
             "login": "Tencent-Hunyuan",
@@ -14,26 +14,12 @@
         }
     },
     {
-        "id": 991509718,
-        "name": "Megakernels",
-        "full_name": "HazyResearch/Megakernels",
-        "html_url": "https://github.com/HazyResearch/Megakernels",
-        "description": "kernels, of the mega variety",
-        "stargazers_count": 274,
-        "language": "Python",
-        "owner": {
-            "login": "HazyResearch",
-            "avatar_url": "https://avatars.githubusercontent.com/u/2165246?v=4",
-            "html_url": "https://github.com/HazyResearch"
-        }
-    },
-    {
         "id": 991431142,
         "name": "memvid",
         "full_name": "Olow304/memvid",
         "html_url": "https://github.com/Olow304/memvid",
         "description": "Video-based AI memory library. Store millions of text chunks in MP4 files with lightning-fast semantic search. No database needed.",
-        "stargazers_count": 196,
+        "stargazers_count": 365,
         "language": "Python",
         "owner": {
             "login": "Olow304",
@@ -42,12 +28,40 @@
         }
     },
     {
+        "id": 991509718,
+        "name": "Megakernels",
+        "full_name": "HazyResearch/Megakernels",
+        "html_url": "https://github.com/HazyResearch/Megakernels",
+        "description": "kernels, of the mega variety",
+        "stargazers_count": 307,
+        "language": "Python",
+        "owner": {
+            "login": "HazyResearch",
+            "avatar_url": "https://avatars.githubusercontent.com/u/2165246?v=4",
+            "html_url": "https://github.com/HazyResearch"
+        }
+    },
+    {
+        "id": 991939049,
+        "name": "ROLL",
+        "full_name": "alibaba/ROLL",
+        "html_url": "https://github.com/alibaba/ROLL",
+        "description": null,
+        "stargazers_count": 288,
+        "language": "Python",
+        "owner": {
+            "login": "alibaba",
+            "avatar_url": "https://avatars.githubusercontent.com/u/1961952?v=4",
+            "html_url": "https://github.com/alibaba"
+        }
+    },
+    {
         "id": 991217487,
         "name": "Rethink_RLVR",
         "full_name": "ruixin31/Rethink_RLVR",
         "html_url": "https://github.com/ruixin31/Rethink_RLVR",
         "description": null,
-        "stargazers_count": 175,
+        "stargazers_count": 194,
         "language": "Python",
         "owner": {
             "login": "ruixin31",
@@ -56,26 +70,12 @@
         }
     },
     {
-        "id": 990652037,
-        "name": "GeminiImageApp",
-        "full_name": "0xsline/GeminiImageApp",
-        "html_url": "https://github.com/0xsline/GeminiImageApp",
-        "description": "\u57fa\u4e8e Google Gemini AI \u7684\u5168\u529f\u80fd\u56fe\u50cf\u5904\u7406\u5e94\u7528",
-        "stargazers_count": 174,
-        "language": "Python",
-        "owner": {
-            "login": "0xsline",
-            "avatar_url": "https://avatars.githubusercontent.com/u/151105947?v=4",
-            "html_url": "https://github.com/0xsline"
-        }
-    },
-    {
         "id": 991037838,
         "name": "HunyuanPortrait",
         "full_name": "Tencent-Hunyuan/HunyuanPortrait",
         "html_url": "https://github.com/Tencent-Hunyuan/HunyuanPortrait",
         "description": "HunyuanPortrait: Implicit Condition Control for Enhanced Portrait Animation",
-        "stargazers_count": 174,
+        "stargazers_count": 185,
         "language": "Python",
         "owner": {
             "login": "Tencent-Hunyuan",
