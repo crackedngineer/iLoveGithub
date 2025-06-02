@@ -11,6 +11,10 @@ const nextConfig: NextConfig = {
   async headers() {
     return [
       {
+        protocol: "https",
+        hostname: "*.blob.vercel-storage.com",
+      },
+      {
         source: "/(.*)", // Apply to all routes
         headers: [
           {
