@@ -1,25 +1,11 @@
 [
     {
-        "id": 991431142,
-        "name": "memvid",
-        "full_name": "Olow304/memvid",
-        "html_url": "https://github.com/Olow304/memvid",
-        "description": "Video-based AI memory library. Store millions of text chunks in MP4 files with lightning-fast semantic search. No database needed.",
-        "stargazers_count": 573,
-        "language": "Python",
-        "owner": {
-            "login": "Olow304",
-            "avatar_url": "https://avatars.githubusercontent.com/u/7048571?v=4",
-            "html_url": "https://github.com/Olow304"
-        }
-    },
-    {
         "id": 991939049,
         "name": "ROLL",
         "full_name": "alibaba/ROLL",
         "html_url": "https://github.com/alibaba/ROLL",
         "description": null,
-        "stargazers_count": 455,
+        "stargazers_count": 491,
         "language": "Python",
         "owner": {
             "login": "alibaba",
@@ -33,7 +19,7 @@
         "full_name": "Jskeaaa/cursor_pro",
         "html_url": "https://github.com/Jskeaaa/cursor_pro",
         "description": "\u514d\u8d39\u7528\u6237cursor\u7a81\u7834claude-3.7\u7684\u9650\u5236\u3002\u4ec5\u4f9b\u5b66\u4e60\uff0c\u7ed9\u4e2a\u661f\u661f",
-        "stargazers_count": 332,
+        "stargazers_count": 362,
         "language": "Python",
         "owner": {
             "login": "Jskeaaa",
@@ -42,45 +28,59 @@
         }
     },
     {
-        "id": 991509718,
-        "name": "Megakernels",
-        "full_name": "HazyResearch/Megakernels",
-        "html_url": "https://github.com/HazyResearch/Megakernels",
-        "description": "kernels, of the mega variety",
-        "stargazers_count": 318,
-        "language": "Python",
-        "owner": {
-            "login": "HazyResearch",
-            "avatar_url": "https://avatars.githubusercontent.com/u/2165246?v=4",
-            "html_url": "https://github.com/HazyResearch"
-        }
-    },
-    {
-        "id": 991217487,
-        "name": "Rethink_RLVR",
-        "full_name": "ruixin31/Rethink_RLVR",
-        "html_url": "https://github.com/ruixin31/Rethink_RLVR",
+        "id": 992596757,
+        "name": "vibetest-use",
+        "full_name": "browser-use/vibetest-use",
+        "html_url": "https://github.com/browser-use/vibetest-use",
         "description": null,
-        "stargazers_count": 212,
+        "stargazers_count": 198,
         "language": "Python",
         "owner": {
-            "login": "ruixin31",
-            "avatar_url": "https://avatars.githubusercontent.com/u/139481960?v=4",
-            "html_url": "https://github.com/ruixin31"
+            "login": "browser-use",
+            "avatar_url": "https://avatars.githubusercontent.com/u/192012301?v=4",
+            "html_url": "https://github.com/browser-use"
         }
     },
     {
-        "id": 991037838,
-        "name": "HunyuanPortrait",
-        "full_name": "Tencent-Hunyuan/HunyuanPortrait",
-        "html_url": "https://github.com/Tencent-Hunyuan/HunyuanPortrait",
-        "description": "HunyuanPortrait: Implicit Condition Control for Enhanced Portrait Animation",
-        "stargazers_count": 208,
+        "id": 991834110,
+        "name": "MPWLedClock",
+        "full_name": "lybzzb/MPWLedClock",
+        "html_url": "https://github.com/lybzzb/MPWLedClock",
+        "description": "\u57fa\u4e8e\u5b89\u4fe1\u53efESP-C3-12F\u6a21\u7ec4\uff0c\u642d\u914dWS2812\u77e9\u9635\u706f\u73e0\uff0c\u7528\u4e8e\u663e\u793a\u5f53\u524d\u65f6\u95f4",
+        "stargazers_count": 175,
         "language": "Python",
         "owner": {
-            "login": "Tencent-Hunyuan",
-            "avatar_url": "https://avatars.githubusercontent.com/u/210980732?v=4",
-            "html_url": "https://github.com/Tencent-Hunyuan"
+            "login": "lybzzb",
+            "avatar_url": "https://avatars.githubusercontent.com/u/108349861?v=4",
+            "html_url": "https://github.com/lybzzb"
+        }
+    },
+    {
+        "id": 992905954,
+        "name": "Spatial-MLLM",
+        "full_name": "diankun-wu/Spatial-MLLM",
+        "html_url": "https://github.com/diankun-wu/Spatial-MLLM",
+        "description": "Official implementation of Spatial-MLLM: Boosting MLLM Capabilities in Visual-based Spatial Intelligence",
+        "stargazers_count": 133,
+        "language": "Python",
+        "owner": {
+            "login": "diankun-wu",
+            "avatar_url": "https://avatars.githubusercontent.com/u/99659784?v=4",
+            "html_url": "https://github.com/diankun-wu"
+        }
+    },
+    {
+        "id": 991823591,
+        "name": "mcp-feedback-collector",
+        "full_name": "sanshao85/mcp-feedback-collector",
+        "html_url": "https://github.com/sanshao85/mcp-feedback-collector",
+        "description": "\u4e00\u4e2a\u73b0\u4ee3\u5316\u7684 Model Context Protocol (MCP) \u670d\u52a1\u5668\uff0c\u4e3aAI\u52a9\u624b\u63d0\u4f9b\u4ea4\u4e92\u5f0f\u7528\u6237\u53cd\u9988\u6536\u96c6\u529f\u80fd\u3002",
+        "stargazers_count": 129,
+        "language": "Python",
+        "owner": {
+            "login": "sanshao85",
+            "avatar_url": "https://avatars.githubusercontent.com/u/192583346?v=4",
+            "html_url": "https://github.com/sanshao85"
         }
     }
 ]
