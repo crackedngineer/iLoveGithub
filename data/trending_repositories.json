@@ -1,39 +1,11 @@
 [
     {
-        "id": 992357079,
-        "name": "mcp-feedback-enhanced",
-        "full_name": "Minidoracat/mcp-feedback-enhanced",
-        "html_url": "https://github.com/Minidoracat/mcp-feedback-enhanced",
-        "description": "Interactive User Feedback MCP",
-        "stargazers_count": 318,
-        "language": "Python",
-        "owner": {
-            "login": "Minidoracat",
-            "avatar_url": "https://avatars.githubusercontent.com/u/11269639?v=4",
-            "html_url": "https://github.com/Minidoracat"
-        }
-    },
-    {
-        "id": 992596757,
-        "name": "vibetest-use",
-        "full_name": "browser-use/vibetest-use",
-        "html_url": "https://github.com/browser-use/vibetest-use",
-        "description": null,
-        "stargazers_count": 210,
-        "language": "Python",
-        "owner": {
-            "login": "browser-use",
-            "avatar_url": "https://avatars.githubusercontent.com/u/192012301?v=4",
-            "html_url": "https://github.com/browser-use"
-        }
-    },
-    {
         "id": 994681424,
         "name": "xhs-toolkit",
         "full_name": "aki66938/xhs-toolkit",
         "html_url": "https://github.com/aki66938/xhs-toolkit",
         "description": "\ud83c\udf3a \u5c0f\u7ea2\u4e66MCP\u5de5\u5177\u5305 - \u652f\u6301\u4e0eAI\u5ba2\u6237\u7aef\u96c6\u6210\u7684\u667a\u80fd\u5185\u5bb9\u521b\u4f5c\u548c\u53d1\u5e03\u5de5\u5177",
-        "stargazers_count": 174,
+        "stargazers_count": 218,
         "language": "Python",
         "owner": {
             "login": "aki66938",
@@ -42,45 +14,73 @@
         }
     },
     {
-        "id": 992905954,
-        "name": "Spatial-MLLM",
-        "full_name": "diankun-wu/Spatial-MLLM",
-        "html_url": "https://github.com/diankun-wu/Spatial-MLLM",
-        "description": "Official implementation of Spatial-MLLM: Boosting MLLM Capabilities in Visual-based Spatial Intelligence",
-        "stargazers_count": 150,
+        "id": 996141359,
+        "name": "warzone-cheat",
+        "full_name": "ElusionCheats/warzone-cheat",
+        "html_url": "https://github.com/ElusionCheats/warzone-cheat",
+        "description": "Warzone Cheat is a powerful and feature-rich educational project designed to demonstrate how cheats can be built for Call of Duty: Warzone. Includes fully functional modules such as Aimbot, ESP, Wallhack, Triggerbot, and No Recoil. Each module is built to be customizable, with code optimized for low latency",
+        "stargazers_count": 182,
         "language": "Python",
         "owner": {
-            "login": "diankun-wu",
-            "avatar_url": "https://avatars.githubusercontent.com/u/99659784?v=4",
-            "html_url": "https://github.com/diankun-wu"
+            "login": "ElusionCheats",
+            "avatar_url": "https://avatars.githubusercontent.com/u/212272185?v=4",
+            "html_url": "https://github.com/ElusionCheats"
         }
     },
     {
-        "id": 992456486,
-        "name": "free-augmentcode",
-        "full_name": "vber/free-augmentcode",
-        "html_url": "https://github.com/vber/free-augmentcode",
-        "description": "\u7528\u4e8e\u65e0\u9650\u7eed\u676fAugmentCode VSCode\u63d2\u4ef6.A tool that allows you to use the AugmentCode  VSCode plugin indefinitely.",
-        "stargazers_count": 143,
+        "id": 994302499,
+        "name": "swe-agent",
+        "full_name": "langtalks/swe-agent",
+        "html_url": "https://github.com/langtalks/swe-agent",
+        "description": "\ud83e\udd16 AI-powered software engineering multi-agent system with researcher and developer agents that automate code implementation through intelligent planning and execution. Built with LangGraph multi-agent workflows",
+        "stargazers_count": 145,
         "language": "Python",
         "owner": {
-            "login": "vber",
-            "avatar_url": "https://avatars.githubusercontent.com/u/1329609?v=4",
-            "html_url": "https://github.com/vber"
+            "login": "langtalks",
+            "avatar_url": "https://avatars.githubusercontent.com/u/186320475?v=4",
+            "html_url": "https://github.com/langtalks"
         }
     },
     {
-        "id": 992974212,
-        "name": "ATI",
-        "full_name": "bytedance/ATI",
-        "html_url": "https://github.com/bytedance/ATI",
-        "description": "Official implementation of ATI: Any Trajectory Instruction for Controllable Video Generation. https://arxiv.org/pdf/2505.22944",
-        "stargazers_count": 100,
+        "id": 993746345,
+        "name": "Chatterbox-TTS-Server",
+        "full_name": "devnen/Chatterbox-TTS-Server",
+        "html_url": "https://github.com/devnen/Chatterbox-TTS-Server",
+        "description": "Self-host the powerful Chatterbox TTS model. This server offers a user-friendly Web UI, flexible API endpoints (incl. OpenAI compatible), predefined voices, voice cloning, large text processing, and GPU/CPU execution.",
+        "stargazers_count": 139,
         "language": "Python",
         "owner": {
-            "login": "bytedance",
-            "avatar_url": "https://avatars.githubusercontent.com/u/4158466?v=4",
-            "html_url": "https://github.com/bytedance"
+            "login": "devnen",
+            "avatar_url": "https://avatars.githubusercontent.com/u/195903272?v=4",
+            "html_url": "https://github.com/devnen"
+        }
+    },
+    {
+        "id": 994415380,
+        "name": "BioReason",
+        "full_name": "bowang-lab/BioReason",
+        "html_url": "https://github.com/bowang-lab/BioReason",
+        "description": "BioReason: Incentivizing Multimodal Biological Reasoning within a DNA-LLM Model",
+        "stargazers_count": 127,
+        "language": "Python",
+        "owner": {
+            "login": "bowang-lab",
+            "avatar_url": "https://avatars.githubusercontent.com/u/50999261?v=4",
+            "html_url": "https://github.com/bowang-lab"
+        }
+    },
+    {
+        "id": 994323054,
+        "name": "ShapeLLM-Omni",
+        "full_name": "JAMESYJL/ShapeLLM-Omni",
+        "html_url": "https://github.com/JAMESYJL/ShapeLLM-Omni",
+        "description": "A Native Multimodal LLM for 3D Generation and Understanding",
+        "stargazers_count": 114,
+        "language": "Python",
+        "owner": {
+            "login": "JAMESYJL",
+            "avatar_url": "https://avatars.githubusercontent.com/u/145889120?v=4",
+            "html_url": "https://github.com/JAMESYJL"
         }
     }
 ]
