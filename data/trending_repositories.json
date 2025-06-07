@@ -1,11 +1,25 @@
 [
     {
+        "id": 996623392,
+        "name": "Qwen3-Embedding",
+        "full_name": "QwenLM/Qwen3-Embedding",
+        "html_url": "https://github.com/QwenLM/Qwen3-Embedding",
+        "description": null,
+        "stargazers_count": 364,
+        "language": "Python",
+        "owner": {
+            "login": "QwenLM",
+            "avatar_url": "https://avatars.githubusercontent.com/u/141221163?v=4",
+            "html_url": "https://github.com/QwenLM"
+        }
+    },
+    {
         "id": 996141359,
         "name": "warzone-cheat",
         "full_name": "ElusionCheats/warzone-cheat",
         "html_url": "https://github.com/ElusionCheats/warzone-cheat",
         "description": "Warzone Cheat is a powerful and feature-rich educational project designed to demonstrate how cheats can be built for Call of Duty: Warzone. Includes fully functional modules such as Aimbot, ESP, Wallhack, Triggerbot, and No Recoil. Each module is built to be customizable, with code optimized for low latency",
-        "stargazers_count": 268,
+        "stargazers_count": 269,
         "language": "Python",
         "owner": {
             "login": "ElusionCheats",
@@ -14,12 +28,26 @@
         }
     },
     {
+        "id": 996795316,
+        "name": "py-pglite",
+        "full_name": "wey-gu/py-pglite",
+        "html_url": "https://github.com/wey-gu/py-pglite",
+        "description": "PGlite wrapper in Python for testing. Test your app with Postgres just as lite as SQLite.",
+        "stargazers_count": 250,
+        "language": "Python",
+        "owner": {
+            "login": "wey-gu",
+            "avatar_url": "https://avatars.githubusercontent.com/u/1651790?v=4",
+            "html_url": "https://github.com/wey-gu"
+        }
+    },
+    {
         "id": 994681424,
         "name": "xhs-toolkit",
         "full_name": "aki66938/xhs-toolkit",
         "html_url": "https://github.com/aki66938/xhs-toolkit",
         "description": "\ud83c\udf3a \u5c0f\u7ea2\u4e66MCP\u5de5\u5177\u5305 - \u652f\u6301\u4e0eAI\u5ba2\u6237\u7aef\u96c6\u6210\u7684\u667a\u80fd\u5185\u5bb9\u521b\u4f5c\u548c\u53d1\u5e03\u5de5\u5177",
-        "stargazers_count": 228,
+        "stargazers_count": 239,
         "language": "Python",
         "owner": {
             "login": "aki66938",
@@ -33,7 +61,7 @@
         "full_name": "JAMESYJL/ShapeLLM-Omni",
         "html_url": "https://github.com/JAMESYJL/ShapeLLM-Omni",
         "description": "A Native Multimodal LLM for 3D Generation and Understanding",
-        "stargazers_count": 193,
+        "stargazers_count": 216,
         "language": "Python",
         "owner": {
             "login": "JAMESYJL",
@@ -42,45 +70,17 @@
         }
     },
     {
-        "id": 994302499,
-        "name": "swe-agent",
-        "full_name": "langtalks/swe-agent",
-        "html_url": "https://github.com/langtalks/swe-agent",
-        "description": "\ud83e\udd16 AI-powered software engineering multi-agent system with researcher and developer agents that automate code implementation through intelligent planning and execution. Built with LangGraph multi-agent workflows",
-        "stargazers_count": 182,
+        "id": 996851962,
+        "name": "tokasaurus",
+        "full_name": "ScalingIntelligence/tokasaurus",
+        "html_url": "https://github.com/ScalingIntelligence/tokasaurus",
+        "description": null,
+        "stargazers_count": 213,
         "language": "Python",
         "owner": {
-            "login": "langtalks",
-            "avatar_url": "https://avatars.githubusercontent.com/u/186320475?v=4",
-            "html_url": "https://github.com/langtalks"
-        }
-    },
-    {
-        "id": 993746345,
-        "name": "Chatterbox-TTS-Server",
-        "full_name": "devnen/Chatterbox-TTS-Server",
-        "html_url": "https://github.com/devnen/Chatterbox-TTS-Server",
-        "description": "Self-host the powerful Chatterbox TTS model. This server offers a user-friendly Web UI, flexible API endpoints (incl. OpenAI compatible), predefined voices, voice cloning, large text processing, and GPU/CPU execution.",
-        "stargazers_count": 166,
-        "language": "Python",
-        "owner": {
-            "login": "devnen",
-            "avatar_url": "https://avatars.githubusercontent.com/u/195903272?v=4",
-            "html_url": "https://github.com/devnen"
-        }
-    },
-    {
-        "id": 994415380,
-        "name": "BioReason",
-        "full_name": "bowang-lab/BioReason",
-        "html_url": "https://github.com/bowang-lab/BioReason",
-        "description": "BioReason: Incentivizing Multimodal Biological Reasoning within a DNA-LLM Model",
-        "stargazers_count": 146,
-        "language": "Python",
-        "owner": {
-            "login": "bowang-lab",
-            "avatar_url": "https://avatars.githubusercontent.com/u/50999261?v=4",
-            "html_url": "https://github.com/bowang-lab"
+            "login": "ScalingIntelligence",
+            "avatar_url": "https://avatars.githubusercontent.com/u/171742855?v=4",
+            "html_url": "https://github.com/ScalingIntelligence"
         }
     }
 ]
