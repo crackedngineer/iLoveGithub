@@ -5,7 +5,7 @@
         "full_name": "QwenLM/Qwen3-Embedding",
         "html_url": "https://github.com/QwenLM/Qwen3-Embedding",
         "description": null,
-        "stargazers_count": 364,
+        "stargazers_count": 421,
         "language": "Python",
         "owner": {
             "login": "QwenLM",
@@ -14,17 +14,17 @@
         }
     },
     {
-        "id": 996141359,
-        "name": "warzone-cheat",
-        "full_name": "ElusionCheats/warzone-cheat",
-        "html_url": "https://github.com/ElusionCheats/warzone-cheat",
-        "description": "Warzone Cheat is a powerful and feature-rich educational project designed to demonstrate how cheats can be built for Call of Duty: Warzone. Includes fully functional modules such as Aimbot, ESP, Wallhack, Triggerbot, and No Recoil. Each module is built to be customizable, with code optimized for low latency",
-        "stargazers_count": 269,
+        "id": 997639797,
+        "name": "Apex-Cheat",
+        "full_name": "apex-undetected/Apex-Cheat",
+        "html_url": "https://github.com/apex-undetected/Apex-Cheat",
+        "description": "Apex Cheat is an undetected Apex Legends Cheat including Apex Aimbot, ESP overlays, and a full HWID Spoofer. Ideal for personal use and studying how Apex Legends Aimbot systems and cheat tools are built and executed in live environments.",
+        "stargazers_count": 337,
         "language": "Python",
         "owner": {
-            "login": "ElusionCheats",
-            "avatar_url": "https://avatars.githubusercontent.com/u/212272185?v=4",
-            "html_url": "https://github.com/ElusionCheats"
+            "login": "apex-undetected",
+            "avatar_url": "https://avatars.githubusercontent.com/u/215214808?v=4",
+            "html_url": "https://github.com/apex-undetected"
         }
     },
     {
@@ -33,7 +33,7 @@
         "full_name": "wey-gu/py-pglite",
         "html_url": "https://github.com/wey-gu/py-pglite",
         "description": "PGlite wrapper in Python for testing. Test your app with Postgres just as lite as SQLite.",
-        "stargazers_count": 250,
+        "stargazers_count": 293,
         "language": "Python",
         "owner": {
             "login": "wey-gu",
@@ -42,12 +42,26 @@
         }
     },
     {
+        "id": 996141359,
+        "name": "warzone-cheat",
+        "full_name": "ElusionCheats/warzone-cheat",
+        "html_url": "https://github.com/ElusionCheats/warzone-cheat",
+        "description": "Warzone Cheat is a powerful and feature-rich educational project designed to demonstrate how cheats can be built for Call of Duty: Warzone. Includes fully functional modules such as Aimbot, ESP, Wallhack, Triggerbot, and No Recoil. Each module is built to be customizable, with code optimized for low latency",
+        "stargazers_count": 268,
+        "language": "Python",
+        "owner": {
+            "login": "ElusionCheats",
+            "avatar_url": "https://avatars.githubusercontent.com/u/212272185?v=4",
+            "html_url": "https://github.com/ElusionCheats"
+        }
+    },
+    {
         "id": 994681424,
         "name": "xhs-toolkit",
         "full_name": "aki66938/xhs-toolkit",
         "html_url": "https://github.com/aki66938/xhs-toolkit",
-        "description": "\ud83c\udf3a \u5c0f\u7ea2\u4e66MCP\u5de5\u5177\u5305 - \u652f\u6301\u4e0eAI\u5ba2\u6237\u7aef\u96c6\u6210\u7684\u667a\u80fd\u5185\u5bb9\u521b\u4f5c\u548c\u53d1\u5e03\u5de5\u5177",
-        "stargazers_count": 239,
+        "description": "\ud83d\udcd5 \u5c0f\u7ea2\u4e66MCP\u5de5\u5177\u5305 - \u652f\u6301\u4e0eAI\u5ba2\u6237\u7aef\u96c6\u6210\u7684\u667a\u80fd\u5185\u5bb9\u521b\u4f5c\u548c\u53d1\u5e03\u5de5\u5177",
+        "stargazers_count": 243,
         "language": "Python",
         "owner": {
             "login": "aki66938",
@@ -56,26 +70,12 @@
         }
     },
     {
-        "id": 994323054,
-        "name": "ShapeLLM-Omni",
-        "full_name": "JAMESYJL/ShapeLLM-Omni",
-        "html_url": "https://github.com/JAMESYJL/ShapeLLM-Omni",
-        "description": "A Native Multimodal LLM for 3D Generation and Understanding",
-        "stargazers_count": 216,
-        "language": "Python",
-        "owner": {
-            "login": "JAMESYJL",
-            "avatar_url": "https://avatars.githubusercontent.com/u/145889120?v=4",
-            "html_url": "https://github.com/JAMESYJL"
-        }
-    },
-    {
         "id": 996851962,
         "name": "tokasaurus",
         "full_name": "ScalingIntelligence/tokasaurus",
         "html_url": "https://github.com/ScalingIntelligence/tokasaurus",
         "description": null,
-        "stargazers_count": 213,
+        "stargazers_count": 241,
         "language": "Python",
         "owner": {
             "login": "ScalingIntelligence",
