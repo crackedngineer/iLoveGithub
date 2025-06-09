@@ -5,7 +5,7 @@
         "full_name": "QwenLM/Qwen3-Embedding",
         "html_url": "https://github.com/QwenLM/Qwen3-Embedding",
         "description": null,
-        "stargazers_count": 421,
+        "stargazers_count": 459,
         "language": "Python",
         "owner": {
             "login": "QwenLM",
@@ -33,7 +33,7 @@
         "full_name": "wey-gu/py-pglite",
         "html_url": "https://github.com/wey-gu/py-pglite",
         "description": "PGlite wrapper in Python for testing. Test your app with Postgres just as lite as SQLite.",
-        "stargazers_count": 293,
+        "stargazers_count": 314,
         "language": "Python",
         "owner": {
             "login": "wey-gu",
@@ -56,17 +56,17 @@
         }
     },
     {
-        "id": 994681424,
-        "name": "xhs-toolkit",
-        "full_name": "aki66938/xhs-toolkit",
-        "html_url": "https://github.com/aki66938/xhs-toolkit",
-        "description": "\ud83d\udcd5 \u5c0f\u7ea2\u4e66MCP\u5de5\u5177\u5305 - \u652f\u6301\u4e0eAI\u5ba2\u6237\u7aef\u96c6\u6210\u7684\u667a\u80fd\u5185\u5bb9\u521b\u4f5c\u548c\u53d1\u5e03\u5de5\u5177",
-        "stargazers_count": 243,
+        "id": 995214393,
+        "name": "MonkeyOCR",
+        "full_name": "Yuliang-Liu/MonkeyOCR",
+        "html_url": "https://github.com/Yuliang-Liu/MonkeyOCR",
+        "description": "A lightweight LMM-based Document Parsing Model",
+        "stargazers_count": 255,
         "language": "Python",
         "owner": {
-            "login": "aki66938",
-            "avatar_url": "https://avatars.githubusercontent.com/u/47413858?v=4",
-            "html_url": "https://github.com/aki66938"
+            "login": "Yuliang-Liu",
+            "avatar_url": "https://avatars.githubusercontent.com/u/34134635?v=4",
+            "html_url": "https://github.com/Yuliang-Liu"
         }
     },
     {
@@ -75,7 +75,7 @@
         "full_name": "ScalingIntelligence/tokasaurus",
         "html_url": "https://github.com/ScalingIntelligence/tokasaurus",
         "description": null,
-        "stargazers_count": 241,
+        "stargazers_count": 254,
         "language": "Python",
         "owner": {
             "login": "ScalingIntelligence",
