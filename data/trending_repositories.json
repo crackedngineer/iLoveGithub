@@ -5,7 +5,7 @@
         "full_name": "QwenLM/Qwen3-Embedding",
         "html_url": "https://github.com/QwenLM/Qwen3-Embedding",
         "description": null,
-        "stargazers_count": 459,
+        "stargazers_count": 548,
         "language": "Python",
         "owner": {
             "login": "QwenLM",
@@ -33,7 +33,7 @@
         "full_name": "wey-gu/py-pglite",
         "html_url": "https://github.com/wey-gu/py-pglite",
         "description": "PGlite wrapper in Python for testing. Test your app with Postgres just as lite as SQLite.",
-        "stargazers_count": 314,
+        "stargazers_count": 334,
         "language": "Python",
         "owner": {
             "login": "wey-gu",
@@ -42,31 +42,17 @@
         }
     },
     {
-        "id": 996141359,
-        "name": "warzone-cheat",
-        "full_name": "ElusionCheats/warzone-cheat",
-        "html_url": "https://github.com/ElusionCheats/warzone-cheat",
-        "description": "Warzone Cheat is a powerful and feature-rich educational project designed to demonstrate how cheats can be built for Call of Duty: Warzone. Includes fully functional modules such as Aimbot, ESP, Wallhack, Triggerbot, and No Recoil. Each module is built to be customizable, with code optimized for low latency",
-        "stargazers_count": 268,
+        "id": 997353956,
+        "name": "OpenWBT",
+        "full_name": "GalaxyGeneralRobotics/OpenWBT",
+        "html_url": "https://github.com/GalaxyGeneralRobotics/OpenWBT",
+        "description": "Official implementation of OpenWBT.",
+        "stargazers_count": 280,
         "language": "Python",
         "owner": {
-            "login": "ElusionCheats",
-            "avatar_url": "https://avatars.githubusercontent.com/u/212272185?v=4",
-            "html_url": "https://github.com/ElusionCheats"
-        }
-    },
-    {
-        "id": 995214393,
-        "name": "MonkeyOCR",
-        "full_name": "Yuliang-Liu/MonkeyOCR",
-        "html_url": "https://github.com/Yuliang-Liu/MonkeyOCR",
-        "description": "A lightweight LMM-based Document Parsing Model",
-        "stargazers_count": 255,
-        "language": "Python",
-        "owner": {
-            "login": "Yuliang-Liu",
-            "avatar_url": "https://avatars.githubusercontent.com/u/34134635?v=4",
-            "html_url": "https://github.com/Yuliang-Liu"
+            "login": "GalaxyGeneralRobotics",
+            "avatar_url": "https://avatars.githubusercontent.com/u/169434821?v=4",
+            "html_url": "https://github.com/GalaxyGeneralRobotics"
         }
     },
     {
@@ -75,12 +61,26 @@
         "full_name": "ScalingIntelligence/tokasaurus",
         "html_url": "https://github.com/ScalingIntelligence/tokasaurus",
         "description": null,
-        "stargazers_count": 254,
+        "stargazers_count": 277,
         "language": "Python",
         "owner": {
             "login": "ScalingIntelligence",
             "avatar_url": "https://avatars.githubusercontent.com/u/171742855?v=4",
             "html_url": "https://github.com/ScalingIntelligence"
+        }
+    },
+    {
+        "id": 998428732,
+        "name": "gemini-mcp-server",
+        "full_name": "BeehiveInnovations/gemini-mcp-server",
+        "html_url": "https://github.com/BeehiveInnovations/gemini-mcp-server",
+        "description": "The power of Gemini + Claude Code in one. Augments Claude's extended thinking with Gemini's perspective.",
+        "stargazers_count": 270,
+        "language": "Python",
+        "owner": {
+            "login": "BeehiveInnovations",
+            "avatar_url": "https://avatars.githubusercontent.com/u/26299964?v=4",
+            "html_url": "https://github.com/BeehiveInnovations"
         }
     }
 ]
