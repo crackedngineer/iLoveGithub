@@ -5,12 +5,54 @@
         "full_name": "QwenLM/Qwen3-Embedding",
         "html_url": "https://github.com/QwenLM/Qwen3-Embedding",
         "description": null,
-        "stargazers_count": 548,
+        "stargazers_count": 614,
         "language": "Python",
         "owner": {
             "login": "QwenLM",
             "avatar_url": "https://avatars.githubusercontent.com/u/141221163?v=4",
             "html_url": "https://github.com/QwenLM"
+        }
+    },
+    {
+        "id": 998428732,
+        "name": "gemini-mcp-server",
+        "full_name": "BeehiveInnovations/gemini-mcp-server",
+        "html_url": "https://github.com/BeehiveInnovations/gemini-mcp-server",
+        "description": "The power of Gemini + Claude Code working as one. Augments Claude's extended thinking with Gemini's perspective.",
+        "stargazers_count": 450,
+        "language": "Python",
+        "owner": {
+            "login": "BeehiveInnovations",
+            "avatar_url": "https://avatars.githubusercontent.com/u/26299964?v=4",
+            "html_url": "https://github.com/BeehiveInnovations"
+        }
+    },
+    {
+        "id": 997353956,
+        "name": "OpenWBT",
+        "full_name": "GalaxyGeneralRobotics/OpenWBT",
+        "html_url": "https://github.com/GalaxyGeneralRobotics/OpenWBT",
+        "description": "Official implementation of OpenWBT.",
+        "stargazers_count": 419,
+        "language": "Python",
+        "owner": {
+            "login": "GalaxyGeneralRobotics",
+            "avatar_url": "https://avatars.githubusercontent.com/u/169434821?v=4",
+            "html_url": "https://github.com/GalaxyGeneralRobotics"
+        }
+    },
+    {
+        "id": 996795316,
+        "name": "py-pglite",
+        "full_name": "wey-gu/py-pglite",
+        "html_url": "https://github.com/wey-gu/py-pglite",
+        "description": "PGlite wrapper in Python for testing. Test your app with Postgres just as lite as SQLite.",
+        "stargazers_count": 345,
+        "language": "Python",
+        "owner": {
+            "login": "wey-gu",
+            "avatar_url": "https://avatars.githubusercontent.com/u/1651790?v=4",
+            "html_url": "https://github.com/wey-gu"
         }
     },
     {
@@ -28,59 +70,17 @@
         }
     },
     {
-        "id": 996795316,
-        "name": "py-pglite",
-        "full_name": "wey-gu/py-pglite",
-        "html_url": "https://github.com/wey-gu/py-pglite",
-        "description": "PGlite wrapper in Python for testing. Test your app with Postgres just as lite as SQLite.",
-        "stargazers_count": 334,
+        "id": 998735999,
+        "name": "pubg-cheat",
+        "full_name": "pubg-undetected/pubg-cheat",
+        "html_url": "https://github.com/pubg-undetected/pubg-cheat",
+        "description": "PUBG Cheat is a powerful, undetected and educational toolkit featuring PUBG Aimbot, ESP, Wallhack, Radar, No Recoil, and HWID Spoofer. Designed for Windows 10/11 with support for Streamer Mode, it's ideal for security research and understanding PUBG internals",
+        "stargazers_count": 289,
         "language": "Python",
         "owner": {
-            "login": "wey-gu",
-            "avatar_url": "https://avatars.githubusercontent.com/u/1651790?v=4",
-            "html_url": "https://github.com/wey-gu"
-        }
-    },
-    {
-        "id": 997353956,
-        "name": "OpenWBT",
-        "full_name": "GalaxyGeneralRobotics/OpenWBT",
-        "html_url": "https://github.com/GalaxyGeneralRobotics/OpenWBT",
-        "description": "Official implementation of OpenWBT.",
-        "stargazers_count": 280,
-        "language": "Python",
-        "owner": {
-            "login": "GalaxyGeneralRobotics",
-            "avatar_url": "https://avatars.githubusercontent.com/u/169434821?v=4",
-            "html_url": "https://github.com/GalaxyGeneralRobotics"
-        }
-    },
-    {
-        "id": 996851962,
-        "name": "tokasaurus",
-        "full_name": "ScalingIntelligence/tokasaurus",
-        "html_url": "https://github.com/ScalingIntelligence/tokasaurus",
-        "description": null,
-        "stargazers_count": 277,
-        "language": "Python",
-        "owner": {
-            "login": "ScalingIntelligence",
-            "avatar_url": "https://avatars.githubusercontent.com/u/171742855?v=4",
-            "html_url": "https://github.com/ScalingIntelligence"
-        }
-    },
-    {
-        "id": 998428732,
-        "name": "gemini-mcp-server",
-        "full_name": "BeehiveInnovations/gemini-mcp-server",
-        "html_url": "https://github.com/BeehiveInnovations/gemini-mcp-server",
-        "description": "The power of Gemini + Claude Code in one. Augments Claude's extended thinking with Gemini's perspective.",
-        "stargazers_count": 270,
-        "language": "Python",
-        "owner": {
-            "login": "BeehiveInnovations",
-            "avatar_url": "https://avatars.githubusercontent.com/u/26299964?v=4",
-            "html_url": "https://github.com/BeehiveInnovations"
+            "login": "pubg-undetected",
+            "avatar_url": "https://avatars.githubusercontent.com/u/215467538?v=4",
+            "html_url": "https://github.com/pubg-undetected"
         }
     }
 ]
