@@ -1,25 +1,11 @@
 [
     {
-        "id": 996623392,
-        "name": "Qwen3-Embedding",
-        "full_name": "QwenLM/Qwen3-Embedding",
-        "html_url": "https://github.com/QwenLM/Qwen3-Embedding",
-        "description": null,
-        "stargazers_count": 614,
-        "language": "Python",
-        "owner": {
-            "login": "QwenLM",
-            "avatar_url": "https://avatars.githubusercontent.com/u/141221163?v=4",
-            "html_url": "https://github.com/QwenLM"
-        }
-    },
-    {
         "id": 998428732,
         "name": "gemini-mcp-server",
         "full_name": "BeehiveInnovations/gemini-mcp-server",
         "html_url": "https://github.com/BeehiveInnovations/gemini-mcp-server",
         "description": "The power of Gemini + Claude Code working as one. Augments Claude's extended thinking with Gemini's perspective.",
-        "stargazers_count": 450,
+        "stargazers_count": 558,
         "language": "Python",
         "owner": {
             "login": "BeehiveInnovations",
@@ -33,7 +19,7 @@
         "full_name": "GalaxyGeneralRobotics/OpenWBT",
         "html_url": "https://github.com/GalaxyGeneralRobotics/OpenWBT",
         "description": "Official implementation of OpenWBT.",
-        "stargazers_count": 419,
+        "stargazers_count": 500,
         "language": "Python",
         "owner": {
             "login": "GalaxyGeneralRobotics",
@@ -42,17 +28,31 @@
         }
     },
     {
-        "id": 996795316,
-        "name": "py-pglite",
-        "full_name": "wey-gu/py-pglite",
-        "html_url": "https://github.com/wey-gu/py-pglite",
-        "description": "PGlite wrapper in Python for testing. Test your app with Postgres just as lite as SQLite.",
-        "stargazers_count": 345,
+        "id": 998699154,
+        "name": "Self-Forcing",
+        "full_name": "guandeh17/Self-Forcing",
+        "html_url": "https://github.com/guandeh17/Self-Forcing",
+        "description": null,
+        "stargazers_count": 358,
         "language": "Python",
         "owner": {
-            "login": "wey-gu",
-            "avatar_url": "https://avatars.githubusercontent.com/u/1651790?v=4",
-            "html_url": "https://github.com/wey-gu"
+            "login": "guandeh17",
+            "avatar_url": "https://avatars.githubusercontent.com/u/1621092?v=4",
+            "html_url": "https://github.com/guandeh17"
+        }
+    },
+    {
+        "id": 998704750,
+        "name": "paws-on-mcp",
+        "full_name": "hemanth/paws-on-mcp",
+        "html_url": "https://github.com/hemanth/paws-on-mcp",
+        "description": "A comprehensive Model Context Protocol (MCP) server implementing the latest specification.",
+        "stargazers_count": 254,
+        "language": "Python",
+        "owner": {
+            "login": "hemanth",
+            "avatar_url": "https://avatars.githubusercontent.com/u/18315?v=4",
+            "html_url": "https://github.com/hemanth"
         }
     },
     {
@@ -61,7 +61,7 @@
         "full_name": "apex-undetected/Apex-Cheat",
         "html_url": "https://github.com/apex-undetected/Apex-Cheat",
         "description": "Apex Cheat is an undetected Apex Legends Cheat including Apex Aimbot, ESP overlays, and a full HWID Spoofer. Ideal for personal use and studying how Apex Legends Aimbot systems and cheat tools are built and executed in live environments.",
-        "stargazers_count": 337,
+        "stargazers_count": 155,
         "language": "Python",
         "owner": {
             "login": "apex-undetected",
@@ -70,17 +70,17 @@
         }
     },
     {
-        "id": 998735999,
-        "name": "pubg-cheat",
-        "full_name": "pubg-undetected/pubg-cheat",
-        "html_url": "https://github.com/pubg-undetected/pubg-cheat",
-        "description": "PUBG Cheat is a powerful, undetected and educational toolkit featuring PUBG Aimbot, ESP, Wallhack, Radar, No Recoil, and HWID Spoofer. Designed for Windows 10/11 with support for Streamer Mode, it's ideal for security research and understanding PUBG internals",
-        "stargazers_count": 289,
+        "id": 997871086,
+        "name": "GrassBot",
+        "full_name": "tyreme/GrassBot",
+        "html_url": "https://github.com/tyreme/GrassBot",
+        "description": "bot for automated grass farming",
+        "stargazers_count": 143,
         "language": "Python",
         "owner": {
-            "login": "pubg-undetected",
-            "avatar_url": "https://avatars.githubusercontent.com/u/215467538?v=4",
-            "html_url": "https://github.com/pubg-undetected"
+            "login": "tyreme",
+            "avatar_url": "https://avatars.githubusercontent.com/u/43525560?v=4",
+            "html_url": "https://github.com/tyreme"
         }
     }
 ]
