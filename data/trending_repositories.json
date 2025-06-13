@@ -1,11 +1,11 @@
 [
     {
         "id": 998428732,
-        "name": "gemini-mcp-server",
-        "full_name": "BeehiveInnovations/gemini-mcp-server",
-        "html_url": "https://github.com/BeehiveInnovations/gemini-mcp-server",
-        "description": "The power of Gemini + Claude Code working as one. Augments Claude's extended thinking with Gemini's perspective.",
-        "stargazers_count": 558,
+        "name": "zen-mcp-server",
+        "full_name": "BeehiveInnovations/zen-mcp-server",
+        "html_url": "https://github.com/BeehiveInnovations/zen-mcp-server",
+        "description": "The power of Claude Code + [Gemini Pro / Flash / O3 / O3-Mini / All Of The Above] working as one.",
+        "stargazers_count": 1028,
         "language": "Python",
         "owner": {
             "login": "BeehiveInnovations",
@@ -14,26 +14,12 @@
         }
     },
     {
-        "id": 997353956,
-        "name": "OpenWBT",
-        "full_name": "GalaxyGeneralRobotics/OpenWBT",
-        "html_url": "https://github.com/GalaxyGeneralRobotics/OpenWBT",
-        "description": "Official implementation of OpenWBT.",
-        "stargazers_count": 500,
-        "language": "Python",
-        "owner": {
-            "login": "GalaxyGeneralRobotics",
-            "avatar_url": "https://avatars.githubusercontent.com/u/169434821?v=4",
-            "html_url": "https://github.com/GalaxyGeneralRobotics"
-        }
-    },
-    {
         "id": 998699154,
         "name": "Self-Forcing",
         "full_name": "guandeh17/Self-Forcing",
         "html_url": "https://github.com/guandeh17/Self-Forcing",
         "description": null,
-        "stargazers_count": 358,
+        "stargazers_count": 587,
         "language": "Python",
         "owner": {
             "login": "guandeh17",
@@ -47,7 +33,7 @@
         "full_name": "hemanth/paws-on-mcp",
         "html_url": "https://github.com/hemanth/paws-on-mcp",
         "description": "A comprehensive Model Context Protocol (MCP) server implementing the latest specification.",
-        "stargazers_count": 254,
+        "stargazers_count": 279,
         "language": "Python",
         "owner": {
             "login": "hemanth",
@@ -56,17 +42,31 @@
         }
     },
     {
-        "id": 997639797,
-        "name": "Apex-Cheat",
-        "full_name": "apex-undetected/Apex-Cheat",
-        "html_url": "https://github.com/apex-undetected/Apex-Cheat",
-        "description": "Apex Cheat is an undetected Apex Legends Cheat including Apex Aimbot, ESP overlays, and a full HWID Spoofer. Ideal for personal use and studying how Apex Legends Aimbot systems and cheat tools are built and executed in live environments.",
-        "stargazers_count": 155,
+        "id": 999030842,
+        "name": "nano-vllm",
+        "full_name": "GeeeekExplorer/nano-vllm",
+        "html_url": "https://github.com/GeeeekExplorer/nano-vllm",
+        "description": "Nano vLLM",
+        "stargazers_count": 246,
         "language": "Python",
         "owner": {
-            "login": "apex-undetected",
-            "avatar_url": "https://avatars.githubusercontent.com/u/215214808?v=4",
-            "html_url": "https://github.com/apex-undetected"
+            "login": "GeeeekExplorer",
+            "avatar_url": "https://avatars.githubusercontent.com/u/38156925?v=4",
+            "html_url": "https://github.com/GeeeekExplorer"
+        }
+    },
+    {
+        "id": 1000026842,
+        "name": "10x-Tool-Calls",
+        "full_name": "perrypixel/10x-Tool-Calls",
+        "html_url": "https://github.com/perrypixel/10x-Tool-Calls",
+        "description": "10x-Tool-Calls is a lightweight rules file designed to help you maximize the value of your monthly AI coding tool calls, enabling you to get more done with fewer requests.",
+        "stargazers_count": 180,
+        "language": "Python",
+        "owner": {
+            "login": "perrypixel",
+            "avatar_url": "https://avatars.githubusercontent.com/u/78496703?v=4",
+            "html_url": "https://github.com/perrypixel"
         }
     },
     {
@@ -75,7 +75,7 @@
         "full_name": "tyreme/GrassBot",
         "html_url": "https://github.com/tyreme/GrassBot",
         "description": "bot for automated grass farming",
-        "stargazers_count": 143,
+        "stargazers_count": 126,
         "language": "Python",
         "owner": {
             "login": "tyreme",
