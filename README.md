@@ -107,7 +107,7 @@ $ git clone https://github.com/crackedngineer/iLoveGitHub.git
 $ cd iLoveGitHub
 
 # Populate .env file
-$ cat .evn.example > .env
+$ cat .env.example > .env
 
 # 3. Install dependencies
 $ npm install
