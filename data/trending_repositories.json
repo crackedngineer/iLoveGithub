@@ -4,8 +4,8 @@
         "name": "zen-mcp-server",
         "full_name": "BeehiveInnovations/zen-mcp-server",
         "html_url": "https://github.com/BeehiveInnovations/zen-mcp-server",
-        "description": "The power of Claude Code + [Gemini Pro / Flash / O3 / O3-Mini / All Of The Above] working as one.",
-        "stargazers_count": 1028,
+        "description": "The power of Claude Code + [Gemini Pro / Flash / O3 / O3-Mini / OpenRouter / Ollama / Custom Model / All Of The Above] working as one.",
+        "stargazers_count": 1389,
         "language": "Python",
         "owner": {
             "login": "BeehiveInnovations",
@@ -19,7 +19,7 @@
         "full_name": "guandeh17/Self-Forcing",
         "html_url": "https://github.com/guandeh17/Self-Forcing",
         "description": null,
-        "stargazers_count": 587,
+        "stargazers_count": 1019,
         "language": "Python",
         "owner": {
             "login": "guandeh17",
@@ -28,26 +28,12 @@
         }
     },
     {
-        "id": 998704750,
-        "name": "paws-on-mcp",
-        "full_name": "hemanth/paws-on-mcp",
-        "html_url": "https://github.com/hemanth/paws-on-mcp",
-        "description": "A comprehensive Model Context Protocol (MCP) server implementing the latest specification.",
-        "stargazers_count": 279,
-        "language": "Python",
-        "owner": {
-            "login": "hemanth",
-            "avatar_url": "https://avatars.githubusercontent.com/u/18315?v=4",
-            "html_url": "https://github.com/hemanth"
-        }
-    },
-    {
         "id": 999030842,
         "name": "nano-vllm",
         "full_name": "GeeeekExplorer/nano-vllm",
         "html_url": "https://github.com/GeeeekExplorer/nano-vllm",
         "description": "Nano vLLM",
-        "stargazers_count": 246,
+        "stargazers_count": 925,
         "language": "Python",
         "owner": {
             "login": "GeeeekExplorer",
@@ -56,12 +42,26 @@
         }
     },
     {
+        "id": 998704750,
+        "name": "paws-on-mcp",
+        "full_name": "hemanth/paws-on-mcp",
+        "html_url": "https://github.com/hemanth/paws-on-mcp",
+        "description": "A comprehensive Model Context Protocol (MCP) server implementing the latest specification.",
+        "stargazers_count": 290,
+        "language": "Python",
+        "owner": {
+            "login": "hemanth",
+            "avatar_url": "https://avatars.githubusercontent.com/u/18315?v=4",
+            "html_url": "https://github.com/hemanth"
+        }
+    },
+    {
         "id": 1000026842,
         "name": "10x-Tool-Calls",
         "full_name": "perrypixel/10x-Tool-Calls",
         "html_url": "https://github.com/perrypixel/10x-Tool-Calls",
         "description": "10x-Tool-Calls is a lightweight rules file designed to help you maximize the value of your monthly AI coding tool calls, enabling you to get more done with fewer requests.",
-        "stargazers_count": 180,
+        "stargazers_count": 198,
         "language": "Python",
         "owner": {
             "login": "perrypixel",
@@ -70,17 +70,17 @@
         }
     },
     {
-        "id": 997871086,
-        "name": "GrassBot",
-        "full_name": "tyreme/GrassBot",
-        "html_url": "https://github.com/tyreme/GrassBot",
-        "description": "bot for automated grass farming",
-        "stargazers_count": 126,
+        "id": 1000233031,
+        "name": "bibliotheca",
+        "full_name": "pickles4evaaaa/bibliotheca",
+        "html_url": "https://github.com/pickles4evaaaa/bibliotheca",
+        "description": "Track your reading habits, log books, and visualize your library\u2014all in your own space.",
+        "stargazers_count": 141,
         "language": "Python",
         "owner": {
-            "login": "tyreme",
-            "avatar_url": "https://avatars.githubusercontent.com/u/43525560?v=4",
-            "html_url": "https://github.com/tyreme"
+            "login": "pickles4evaaaa",
+            "avatar_url": "https://avatars.githubusercontent.com/u/176637269?v=4",
+            "html_url": "https://github.com/pickles4evaaaa"
         }
     }
 ]
