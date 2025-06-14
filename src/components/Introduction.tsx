@@ -34,7 +34,7 @@ export const Introduction = () => {
         ))}
       </div>
 
-      <h1 className="text-4xl md:text-5xl font-bold bg-gradient-to-r from-purple-500 to-indigo-500 bg-clip-text text-transparent mt-6 mb-4">
+      <h1 className="text-4xl md:text-5xl font-bold bg-gradient-to-r from-github-blue to-github-green bg-clip-text text-transparent mb-4">
         Discover GitHub Tools
       </h1>
       <p className="text-lg md:text-xl text-gray-600 dark:text-gray-400 max-w-2xl mx-auto mb-4">
