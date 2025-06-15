@@ -1,25 +1,11 @@
 [
     {
-        "id": 998428732,
-        "name": "zen-mcp-server",
-        "full_name": "BeehiveInnovations/zen-mcp-server",
-        "html_url": "https://github.com/BeehiveInnovations/zen-mcp-server",
-        "description": "The power of Claude Code + [Gemini Pro / Flash / O3 / O3-Mini / OpenRouter / Ollama / Custom Model / All Of The Above] working as one.",
-        "stargazers_count": 1389,
-        "language": "Python",
-        "owner": {
-            "login": "BeehiveInnovations",
-            "avatar_url": "https://avatars.githubusercontent.com/u/26299964?v=4",
-            "html_url": "https://github.com/BeehiveInnovations"
-        }
-    },
-    {
         "id": 998699154,
         "name": "Self-Forcing",
         "full_name": "guandeh17/Self-Forcing",
         "html_url": "https://github.com/guandeh17/Self-Forcing",
         "description": null,
-        "stargazers_count": 1019,
+        "stargazers_count": 1353,
         "language": "Python",
         "owner": {
             "login": "guandeh17",
@@ -33,7 +19,7 @@
         "full_name": "GeeeekExplorer/nano-vllm",
         "html_url": "https://github.com/GeeeekExplorer/nano-vllm",
         "description": "Nano vLLM",
-        "stargazers_count": 925,
+        "stargazers_count": 1122,
         "language": "Python",
         "owner": {
             "login": "GeeeekExplorer",
@@ -42,12 +28,26 @@
         }
     },
     {
+        "id": 1001565199,
+        "name": "Hunyuan3D-2.1",
+        "full_name": "Tencent-Hunyuan/Hunyuan3D-2.1",
+        "html_url": "https://github.com/Tencent-Hunyuan/Hunyuan3D-2.1",
+        "description": "From Images to High-Fidelity 3D Assets with Production-Ready PBR Material",
+        "stargazers_count": 385,
+        "language": "Python",
+        "owner": {
+            "login": "Tencent-Hunyuan",
+            "avatar_url": "https://avatars.githubusercontent.com/u/210980732?v=4",
+            "html_url": "https://github.com/Tencent-Hunyuan"
+        }
+    },
+    {
         "id": 998704750,
         "name": "paws-on-mcp",
         "full_name": "hemanth/paws-on-mcp",
         "html_url": "https://github.com/hemanth/paws-on-mcp",
         "description": "A comprehensive Model Context Protocol (MCP) server implementing the latest specification.",
-        "stargazers_count": 290,
+        "stargazers_count": 296,
         "language": "Python",
         "owner": {
             "login": "hemanth",
@@ -61,7 +61,7 @@
         "full_name": "perrypixel/10x-Tool-Calls",
         "html_url": "https://github.com/perrypixel/10x-Tool-Calls",
         "description": "10x-Tool-Calls is a lightweight rules file designed to help you maximize the value of your monthly AI coding tool calls, enabling you to get more done with fewer requests.",
-        "stargazers_count": 198,
+        "stargazers_count": 213,
         "language": "Python",
         "owner": {
             "login": "perrypixel",
@@ -70,17 +70,17 @@
         }
     },
     {
-        "id": 1000233031,
-        "name": "bibliotheca",
-        "full_name": "pickles4evaaaa/bibliotheca",
-        "html_url": "https://github.com/pickles4evaaaa/bibliotheca",
-        "description": "Track your reading habits, log books, and visualize your library\u2014all in your own space.",
-        "stargazers_count": 141,
+        "id": 1001686362,
+        "name": "valorant-best-cheat",
+        "full_name": "valorant-undetected/valorant-best-cheat",
+        "html_url": "https://github.com/valorant-undetected/valorant-best-cheat",
+        "description": "Valorant Cheat includes undetected ESP, a legit-mode aimbot, radar, unlock all, and a secure HWID spoofer. Full StreamerMode support, modular code, and prediction-based aim system make it ideal for security researchers and cheat developers on Windows 10/11.",
+        "stargazers_count": 189,
         "language": "Python",
         "owner": {
-            "login": "pickles4evaaaa",
-            "avatar_url": "https://avatars.githubusercontent.com/u/176637269?v=4",
-            "html_url": "https://github.com/pickles4evaaaa"
+            "login": "valorant-undetected",
+            "avatar_url": "https://avatars.githubusercontent.com/u/216229508?v=4",
+            "html_url": "https://github.com/valorant-undetected"
         }
     }
 ]
