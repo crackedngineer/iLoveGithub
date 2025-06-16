@@ -1,39 +1,11 @@
 [
     {
-        "id": 998699154,
-        "name": "Self-Forcing",
-        "full_name": "guandeh17/Self-Forcing",
-        "html_url": "https://github.com/guandeh17/Self-Forcing",
-        "description": null,
-        "stargazers_count": 1353,
-        "language": "Python",
-        "owner": {
-            "login": "guandeh17",
-            "avatar_url": "https://avatars.githubusercontent.com/u/1621092?v=4",
-            "html_url": "https://github.com/guandeh17"
-        }
-    },
-    {
-        "id": 999030842,
-        "name": "nano-vllm",
-        "full_name": "GeeeekExplorer/nano-vllm",
-        "html_url": "https://github.com/GeeeekExplorer/nano-vllm",
-        "description": "Nano vLLM",
-        "stargazers_count": 1122,
-        "language": "Python",
-        "owner": {
-            "login": "GeeeekExplorer",
-            "avatar_url": "https://avatars.githubusercontent.com/u/38156925?v=4",
-            "html_url": "https://github.com/GeeeekExplorer"
-        }
-    },
-    {
         "id": 1001565199,
         "name": "Hunyuan3D-2.1",
         "full_name": "Tencent-Hunyuan/Hunyuan3D-2.1",
         "html_url": "https://github.com/Tencent-Hunyuan/Hunyuan3D-2.1",
         "description": "From Images to High-Fidelity 3D Assets with Production-Ready PBR Material",
-        "stargazers_count": 385,
+        "stargazers_count": 525,
         "language": "Python",
         "owner": {
             "login": "Tencent-Hunyuan",
@@ -42,17 +14,17 @@
         }
     },
     {
-        "id": 998704750,
-        "name": "paws-on-mcp",
-        "full_name": "hemanth/paws-on-mcp",
-        "html_url": "https://github.com/hemanth/paws-on-mcp",
-        "description": "A comprehensive Model Context Protocol (MCP) server implementing the latest specification.",
-        "stargazers_count": 296,
+        "id": 1000486904,
+        "name": "claude-code-sdk-python",
+        "full_name": "anthropics/claude-code-sdk-python",
+        "html_url": "https://github.com/anthropics/claude-code-sdk-python",
+        "description": null,
+        "stargazers_count": 319,
         "language": "Python",
         "owner": {
-            "login": "hemanth",
-            "avatar_url": "https://avatars.githubusercontent.com/u/18315?v=4",
-            "html_url": "https://github.com/hemanth"
+            "login": "anthropics",
+            "avatar_url": "https://avatars.githubusercontent.com/u/76263028?v=4",
+            "html_url": "https://github.com/anthropics"
         }
     },
     {
@@ -61,12 +33,40 @@
         "full_name": "perrypixel/10x-Tool-Calls",
         "html_url": "https://github.com/perrypixel/10x-Tool-Calls",
         "description": "10x-Tool-Calls is a lightweight rules file designed to help you maximize the value of your monthly AI coding tool calls, enabling you to get more done with fewer requests.",
-        "stargazers_count": 213,
+        "stargazers_count": 230,
         "language": "Python",
         "owner": {
             "login": "perrypixel",
             "avatar_url": "https://avatars.githubusercontent.com/u/78496703?v=4",
             "html_url": "https://github.com/perrypixel"
+        }
+    },
+    {
+        "id": 1001193950,
+        "name": "SEAL",
+        "full_name": "Continual-Intelligence/SEAL",
+        "html_url": "https://github.com/Continual-Intelligence/SEAL",
+        "description": "Self-Adapting Language Models",
+        "stargazers_count": 211,
+        "language": "Python",
+        "owner": {
+            "login": "Continual-Intelligence",
+            "avatar_url": "https://avatars.githubusercontent.com/u/212643578?v=4",
+            "html_url": "https://github.com/Continual-Intelligence"
+        }
+    },
+    {
+        "id": 1000233031,
+        "name": "bibliotheca",
+        "full_name": "pickles4evaaaa/bibliotheca",
+        "html_url": "https://github.com/pickles4evaaaa/bibliotheca",
+        "description": "Track your reading habits, log books, and visualize your library\u2014all in your own space.",
+        "stargazers_count": 195,
+        "language": "Python",
+        "owner": {
+            "login": "pickles4evaaaa",
+            "avatar_url": "https://avatars.githubusercontent.com/u/176637269?v=4",
+            "html_url": "https://github.com/pickles4evaaaa"
         }
     },
     {
