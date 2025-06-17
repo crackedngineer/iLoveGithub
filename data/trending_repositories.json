@@ -5,7 +5,7 @@
         "full_name": "Tencent-Hunyuan/Hunyuan3D-2.1",
         "html_url": "https://github.com/Tencent-Hunyuan/Hunyuan3D-2.1",
         "description": "From Images to High-Fidelity 3D Assets with Production-Ready PBR Material",
-        "stargazers_count": 525,
+        "stargazers_count": 774,
         "language": "Python",
         "owner": {
             "login": "Tencent-Hunyuan",
@@ -19,7 +19,7 @@
         "full_name": "anthropics/claude-code-sdk-python",
         "html_url": "https://github.com/anthropics/claude-code-sdk-python",
         "description": null,
-        "stargazers_count": 319,
+        "stargazers_count": 387,
         "language": "Python",
         "owner": {
             "login": "anthropics",
@@ -28,26 +28,12 @@
         }
     },
     {
-        "id": 1000026842,
-        "name": "10x-Tool-Calls",
-        "full_name": "perrypixel/10x-Tool-Calls",
-        "html_url": "https://github.com/perrypixel/10x-Tool-Calls",
-        "description": "10x-Tool-Calls is a lightweight rules file designed to help you maximize the value of your monthly AI coding tool calls, enabling you to get more done with fewer requests.",
-        "stargazers_count": 230,
-        "language": "Python",
-        "owner": {
-            "login": "perrypixel",
-            "avatar_url": "https://avatars.githubusercontent.com/u/78496703?v=4",
-            "html_url": "https://github.com/perrypixel"
-        }
-    },
-    {
         "id": 1001193950,
         "name": "SEAL",
         "full_name": "Continual-Intelligence/SEAL",
         "html_url": "https://github.com/Continual-Intelligence/SEAL",
         "description": "Self-Adapting Language Models",
-        "stargazers_count": 211,
+        "stargazers_count": 287,
         "language": "Python",
         "owner": {
             "login": "Continual-Intelligence",
@@ -56,17 +42,17 @@
         }
     },
     {
-        "id": 1000233031,
-        "name": "bibliotheca",
-        "full_name": "pickles4evaaaa/bibliotheca",
-        "html_url": "https://github.com/pickles4evaaaa/bibliotheca",
-        "description": "Track your reading habits, log books, and visualize your library\u2014all in your own space.",
-        "stargazers_count": 195,
+        "id": 1000026842,
+        "name": "10x-Tool-Calls",
+        "full_name": "perrypixel/10x-Tool-Calls",
+        "html_url": "https://github.com/perrypixel/10x-Tool-Calls",
+        "description": "10x-Tool-Calls is a lightweight rules file designed to help you maximize the value of your monthly AI coding tool calls, enabling you to get more done with fewer requests.",
+        "stargazers_count": 268,
         "language": "Python",
         "owner": {
-            "login": "pickles4evaaaa",
-            "avatar_url": "https://avatars.githubusercontent.com/u/176637269?v=4",
-            "html_url": "https://github.com/pickles4evaaaa"
+            "login": "perrypixel",
+            "avatar_url": "https://avatars.githubusercontent.com/u/78496703?v=4",
+            "html_url": "https://github.com/perrypixel"
         }
     },
     {
@@ -75,12 +61,26 @@
         "full_name": "valorant-undetected/valorant-best-cheat",
         "html_url": "https://github.com/valorant-undetected/valorant-best-cheat",
         "description": "Valorant Cheat includes undetected ESP, a legit-mode aimbot, radar, unlock all, and a secure HWID spoofer. Full StreamerMode support, modular code, and prediction-based aim system make it ideal for security researchers and cheat developers on Windows 10/11.",
-        "stargazers_count": 189,
+        "stargazers_count": 237,
         "language": "Python",
         "owner": {
             "login": "valorant-undetected",
             "avatar_url": "https://avatars.githubusercontent.com/u/216229508?v=4",
             "html_url": "https://github.com/valorant-undetected"
+        }
+    },
+    {
+        "id": 1001457531,
+        "name": "CVE-2025-33073",
+        "full_name": "mverschu/CVE-2025-33073",
+        "html_url": "https://github.com/mverschu/CVE-2025-33073",
+        "description": "PoC Exploit for the NTLM reflection SMB flaw.",
+        "stargazers_count": 235,
+        "language": "Python",
+        "owner": {
+            "login": "mverschu",
+            "avatar_url": "https://avatars.githubusercontent.com/u/69352107?v=4",
+            "html_url": "https://github.com/mverschu"
         }
     }
 ]
