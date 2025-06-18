@@ -5,7 +5,7 @@
         "full_name": "Tencent-Hunyuan/Hunyuan3D-2.1",
         "html_url": "https://github.com/Tencent-Hunyuan/Hunyuan3D-2.1",
         "description": "From Images to High-Fidelity 3D Assets with Production-Ready PBR Material",
-        "stargazers_count": 774,
+        "stargazers_count": 915,
         "language": "Python",
         "owner": {
             "login": "Tencent-Hunyuan",
@@ -14,17 +14,17 @@
         }
     },
     {
-        "id": 1000486904,
-        "name": "claude-code-sdk-python",
-        "full_name": "anthropics/claude-code-sdk-python",
-        "html_url": "https://github.com/anthropics/claude-code-sdk-python",
-        "description": null,
-        "stargazers_count": 387,
+        "id": 1001889935,
+        "name": "MiniMax-M1",
+        "full_name": "MiniMax-AI/MiniMax-M1",
+        "html_url": "https://github.com/MiniMax-AI/MiniMax-M1",
+        "description": "MiniMax-M1, the world's first open-weight, large-scale hybrid-attention reasoning model.",
+        "stargazers_count": 625,
         "language": "Python",
         "owner": {
-            "login": "anthropics",
-            "avatar_url": "https://avatars.githubusercontent.com/u/76263028?v=4",
-            "html_url": "https://github.com/anthropics"
+            "login": "MiniMax-AI",
+            "avatar_url": "https://avatars.githubusercontent.com/u/194880281?v=4",
+            "html_url": "https://github.com/MiniMax-AI"
         }
     },
     {
@@ -33,7 +33,7 @@
         "full_name": "Continual-Intelligence/SEAL",
         "html_url": "https://github.com/Continual-Intelligence/SEAL",
         "description": "Self-Adapting Language Models",
-        "stargazers_count": 287,
+        "stargazers_count": 328,
         "language": "Python",
         "owner": {
             "login": "Continual-Intelligence",
@@ -42,17 +42,31 @@
         }
     },
     {
-        "id": 1000026842,
-        "name": "10x-Tool-Calls",
-        "full_name": "perrypixel/10x-Tool-Calls",
-        "html_url": "https://github.com/perrypixel/10x-Tool-Calls",
-        "description": "10x-Tool-Calls is a lightweight rules file designed to help you maximize the value of your monthly AI coding tool calls, enabling you to get more done with fewer requests.",
-        "stargazers_count": 268,
+        "id": 1001457531,
+        "name": "CVE-2025-33073",
+        "full_name": "mverschu/CVE-2025-33073",
+        "html_url": "https://github.com/mverschu/CVE-2025-33073",
+        "description": "PoC Exploit for the NTLM reflection SMB flaw.",
+        "stargazers_count": 291,
         "language": "Python",
         "owner": {
-            "login": "perrypixel",
-            "avatar_url": "https://avatars.githubusercontent.com/u/78496703?v=4",
-            "html_url": "https://github.com/perrypixel"
+            "login": "mverschu",
+            "avatar_url": "https://avatars.githubusercontent.com/u/69352107?v=4",
+            "html_url": "https://github.com/mverschu"
+        }
+    },
+    {
+        "id": 1003546779,
+        "name": "Telegram-Scraper",
+        "full_name": "ScrapeEmAll/Telegram-Scraper",
+        "html_url": "https://github.com/ScrapeEmAll/Telegram-Scraper",
+        "description": "A powerful Python script that allows you to scrape messages and media from Telegram channels using the Telethon library. Features include real-time continuous scraping, media downloading, and data export capabilities.",
+        "stargazers_count": 263,
+        "language": "Python",
+        "owner": {
+            "login": "ScrapeEmAll",
+            "avatar_url": "https://avatars.githubusercontent.com/u/216692685?v=4",
+            "html_url": "https://github.com/ScrapeEmAll"
         }
     },
     {
@@ -67,20 +81,6 @@
             "login": "valorant-undetected",
             "avatar_url": "https://avatars.githubusercontent.com/u/216229508?v=4",
             "html_url": "https://github.com/valorant-undetected"
-        }
-    },
-    {
-        "id": 1001457531,
-        "name": "CVE-2025-33073",
-        "full_name": "mverschu/CVE-2025-33073",
-        "html_url": "https://github.com/mverschu/CVE-2025-33073",
-        "description": "PoC Exploit for the NTLM reflection SMB flaw.",
-        "stargazers_count": 235,
-        "language": "Python",
-        "owner": {
-            "login": "mverschu",
-            "avatar_url": "https://avatars.githubusercontent.com/u/69352107?v=4",
-            "html_url": "https://github.com/mverschu"
         }
     }
 ]
