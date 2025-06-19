@@ -1,25 +1,11 @@
 [
     {
-        "id": 1001565199,
-        "name": "Hunyuan3D-2.1",
-        "full_name": "Tencent-Hunyuan/Hunyuan3D-2.1",
-        "html_url": "https://github.com/Tencent-Hunyuan/Hunyuan3D-2.1",
-        "description": "From Images to High-Fidelity 3D Assets with Production-Ready PBR Material",
-        "stargazers_count": 915,
-        "language": "Python",
-        "owner": {
-            "login": "Tencent-Hunyuan",
-            "avatar_url": "https://avatars.githubusercontent.com/u/210980732?v=4",
-            "html_url": "https://github.com/Tencent-Hunyuan"
-        }
-    },
-    {
         "id": 1001889935,
         "name": "MiniMax-M1",
         "full_name": "MiniMax-AI/MiniMax-M1",
         "html_url": "https://github.com/MiniMax-AI/MiniMax-M1",
         "description": "MiniMax-M1, the world's first open-weight, large-scale hybrid-attention reasoning model.",
-        "stargazers_count": 625,
+        "stargazers_count": 1379,
         "language": "Python",
         "owner": {
             "login": "MiniMax-AI",
@@ -28,12 +14,40 @@
         }
     },
     {
+        "id": 1001565199,
+        "name": "Hunyuan3D-2.1",
+        "full_name": "Tencent-Hunyuan/Hunyuan3D-2.1",
+        "html_url": "https://github.com/Tencent-Hunyuan/Hunyuan3D-2.1",
+        "description": "From Images to High-Fidelity 3D Assets with Production-Ready PBR Material",
+        "stargazers_count": 991,
+        "language": "Python",
+        "owner": {
+            "login": "Tencent-Hunyuan",
+            "avatar_url": "https://avatars.githubusercontent.com/u/210980732?v=4",
+            "html_url": "https://github.com/Tencent-Hunyuan"
+        }
+    },
+    {
+        "id": 1003546779,
+        "name": "Telegram-Scraper",
+        "full_name": "ScrapeEmAll/Telegram-Scraper",
+        "html_url": "https://github.com/ScrapeEmAll/Telegram-Scraper",
+        "description": "A powerful Python script that allows you to scrape messages and media from Telegram channels using the Telethon library. Features include real-time continuous scraping, media downloading, and data export capabilities.",
+        "stargazers_count": 691,
+        "language": "Python",
+        "owner": {
+            "login": "ScrapeEmAll",
+            "avatar_url": "https://avatars.githubusercontent.com/u/216692685?v=4",
+            "html_url": "https://github.com/ScrapeEmAll"
+        }
+    },
+    {
         "id": 1001193950,
         "name": "SEAL",
         "full_name": "Continual-Intelligence/SEAL",
         "html_url": "https://github.com/Continual-Intelligence/SEAL",
         "description": "Self-Adapting Language Models",
-        "stargazers_count": 328,
+        "stargazers_count": 375,
         "language": "Python",
         "owner": {
             "login": "Continual-Intelligence",
@@ -47,7 +61,7 @@
         "full_name": "mverschu/CVE-2025-33073",
         "html_url": "https://github.com/mverschu/CVE-2025-33073",
         "description": "PoC Exploit for the NTLM reflection SMB flaw.",
-        "stargazers_count": 291,
+        "stargazers_count": 325,
         "language": "Python",
         "owner": {
             "login": "mverschu",
@@ -56,31 +70,17 @@
         }
     },
     {
-        "id": 1003546779,
-        "name": "Telegram-Scraper",
-        "full_name": "ScrapeEmAll/Telegram-Scraper",
-        "html_url": "https://github.com/ScrapeEmAll/Telegram-Scraper",
-        "description": "A powerful Python script that allows you to scrape messages and media from Telegram channels using the Telethon library. Features include real-time continuous scraping, media downloading, and data export capabilities.",
-        "stargazers_count": 263,
+        "id": 1004378871,
+        "name": "SelfDiscord",
+        "full_name": "kikus50lovemoney/SelfDiscord",
+        "html_url": "https://github.com/kikus50lovemoney/SelfDiscord",
+        "description": "discord selfbot selfdiscord discord selfbot \u2705 updated latest api update 2024 \u2705 discord selfbot in python using discord api. discord self bot discord account automator discord auto responder discord self bot discord account automator discord auto responder discord self bot discord account automator discord auto responder discord self bot twkfztt",
+        "stargazers_count": 307,
         "language": "Python",
         "owner": {
-            "login": "ScrapeEmAll",
-            "avatar_url": "https://avatars.githubusercontent.com/u/216692685?v=4",
-            "html_url": "https://github.com/ScrapeEmAll"
-        }
-    },
-    {
-        "id": 1001686362,
-        "name": "valorant-best-cheat",
-        "full_name": "valorant-undetected/valorant-best-cheat",
-        "html_url": "https://github.com/valorant-undetected/valorant-best-cheat",
-        "description": "Valorant Cheat includes undetected ESP, a legit-mode aimbot, radar, unlock all, and a secure HWID spoofer. Full StreamerMode support, modular code, and prediction-based aim system make it ideal for security researchers and cheat developers on Windows 10/11.",
-        "stargazers_count": 237,
-        "language": "Python",
-        "owner": {
-            "login": "valorant-undetected",
-            "avatar_url": "https://avatars.githubusercontent.com/u/216229508?v=4",
-            "html_url": "https://github.com/valorant-undetected"
+            "login": "kikus50lovemoney",
+            "avatar_url": "https://avatars.githubusercontent.com/u/193878329?v=4",
+            "html_url": "https://github.com/kikus50lovemoney"
         }
     }
 ]
