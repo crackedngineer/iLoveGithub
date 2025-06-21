@@ -1,39 +1,11 @@
 [
     {
-        "id": 1001889935,
-        "name": "MiniMax-M1",
-        "full_name": "MiniMax-AI/MiniMax-M1",
-        "html_url": "https://github.com/MiniMax-AI/MiniMax-M1",
-        "description": "MiniMax-M1, the world's first open-weight, large-scale hybrid-attention reasoning model.",
-        "stargazers_count": 1680,
-        "language": "Python",
-        "owner": {
-            "login": "MiniMax-AI",
-            "avatar_url": "https://avatars.githubusercontent.com/u/194880281?v=4",
-            "html_url": "https://github.com/MiniMax-AI"
-        }
-    },
-    {
-        "id": 1003546779,
-        "name": "Telegram-Scraper",
-        "full_name": "ScrapeEmAll/Telegram-Scraper",
-        "html_url": "https://github.com/ScrapeEmAll/Telegram-Scraper",
-        "description": "A powerful Python script that allows you to scrape messages and media from Telegram channels using the Telethon library. Features include real-time continuous scraping, media downloading, and data export capabilities.",
-        "stargazers_count": 874,
-        "language": "Python",
-        "owner": {
-            "login": "ScrapeEmAll",
-            "avatar_url": "https://avatars.githubusercontent.com/u/216692685?v=4",
-            "html_url": "https://github.com/ScrapeEmAll"
-        }
-    },
-    {
         "id": 1004631442,
         "name": "Claude-Code-Usage-Monitor",
         "full_name": "Maciek-roboblog/Claude-Code-Usage-Monitor",
         "html_url": "https://github.com/Maciek-roboblog/Claude-Code-Usage-Monitor",
         "description": "Real-time Claude Code usage monitor with predictions and warnings",
-        "stargazers_count": 598,
+        "stargazers_count": 972,
         "language": "Python",
         "owner": {
             "login": "Maciek-roboblog",
@@ -42,17 +14,17 @@
         }
     },
     {
-        "id": 1004915037,
-        "name": "warzone-cheat",
-        "full_name": "ElusionUndetected/warzone-cheat",
-        "html_url": "https://github.com/ElusionUndetected/warzone-cheat",
-        "description": "Warzone Cheat is the ultimate undetected solution for Call of Duty: Warzone featuring powerful Warzone Aimbot, ESP, No Recoil, 2D Radar, Skinchanger, and HWID Spoofer. Fully compatible with Windows 10/11 and all hardware. Enhance your gameplay and dominate the battlefield effortlessly",
-        "stargazers_count": 352,
+        "id": 1003546779,
+        "name": "Telegram-Scraper",
+        "full_name": "ScrapeEmAll/Telegram-Scraper",
+        "html_url": "https://github.com/ScrapeEmAll/Telegram-Scraper",
+        "description": "A powerful Python script that allows you to scrape messages and media from Telegram channels using the Telethon library. Features include real-time continuous scraping, media downloading, and data export capabilities.",
+        "stargazers_count": 957,
         "language": "Python",
         "owner": {
-            "login": "ElusionUndetected",
-            "avatar_url": "https://avatars.githubusercontent.com/u/217046876?v=4",
-            "html_url": "https://github.com/ElusionUndetected"
+            "login": "ScrapeEmAll",
+            "avatar_url": "https://avatars.githubusercontent.com/u/216692685?v=4",
+            "html_url": "https://github.com/ScrapeEmAll"
         }
     },
     {
@@ -61,7 +33,7 @@
         "full_name": "MoonshotAI/Kimi-Dev",
         "html_url": "https://github.com/MoonshotAI/Kimi-Dev",
         "description": "open-source coding LLM for software engineering tasks",
-        "stargazers_count": 341,
+        "stargazers_count": 367,
         "language": "Python",
         "owner": {
             "login": "MoonshotAI",
@@ -70,17 +42,45 @@
         }
     },
     {
-        "id": 1004988830,
-        "name": "apex-cheat",
-        "full_name": "ApexElusion/apex-cheat",
-        "html_url": "https://github.com/ApexElusion/apex-cheat",
-        "description": "Apex Cheat is a cutting-edge, undetected tool for Apex Legends featuring Apex Aimbot, ESP, 2D Radar, No Recoil, Skinchanger, and HWID Spoofer. Fully compatible with Windows 10/11 and all hardware. Dominate your enemies with precision, awareness, and customization.",
-        "stargazers_count": 248,
+        "id": 1004140701,
+        "name": "slime",
+        "full_name": "THUDM/slime",
+        "html_url": "https://github.com/THUDM/slime",
+        "description": "slime is a LLM post-training framework aiming at scaling RL.",
+        "stargazers_count": 328,
         "language": "Python",
         "owner": {
-            "login": "ApexElusion",
-            "avatar_url": "https://avatars.githubusercontent.com/u/217064477?v=4",
-            "html_url": "https://github.com/ApexElusion"
+            "login": "THUDM",
+            "avatar_url": "https://avatars.githubusercontent.com/u/48590610?v=4",
+            "html_url": "https://github.com/THUDM"
+        }
+    },
+    {
+        "id": 1003205027,
+        "name": "delayed-streams-modeling",
+        "full_name": "kyutai-labs/delayed-streams-modeling",
+        "html_url": "https://github.com/kyutai-labs/delayed-streams-modeling",
+        "description": "Delayed Streams Modeling (DSM) is a flexible formulation for streaming, multimodal sequence-to-sequence learning.",
+        "stargazers_count": 212,
+        "language": "Python",
+        "owner": {
+            "login": "kyutai-labs",
+            "avatar_url": "https://avatars.githubusercontent.com/u/151010778?v=4",
+            "html_url": "https://github.com/kyutai-labs"
+        }
+    },
+    {
+        "id": 1002822743,
+        "name": "humanoid-general-motion-tracking",
+        "full_name": "zixuan417/humanoid-general-motion-tracking",
+        "html_url": "https://github.com/zixuan417/humanoid-general-motion-tracking",
+        "description": "The official codebase of paper \"GMT: General Motion Tracking for Humanoid Whole-Body Control\"",
+        "stargazers_count": 137,
+        "language": "Python",
+        "owner": {
+            "login": "zixuan417",
+            "avatar_url": "https://avatars.githubusercontent.com/u/71373950?v=4",
+            "html_url": "https://github.com/zixuan417"
         }
     }
 ]
