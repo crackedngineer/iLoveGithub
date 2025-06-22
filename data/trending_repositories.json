@@ -5,7 +5,7 @@
         "full_name": "Maciek-roboblog/Claude-Code-Usage-Monitor",
         "html_url": "https://github.com/Maciek-roboblog/Claude-Code-Usage-Monitor",
         "description": "Real-time Claude Code usage monitor with predictions and warnings",
-        "stargazers_count": 972,
+        "stargazers_count": 1376,
         "language": "Python",
         "owner": {
             "login": "Maciek-roboblog",
@@ -19,7 +19,7 @@
         "full_name": "ScrapeEmAll/Telegram-Scraper",
         "html_url": "https://github.com/ScrapeEmAll/Telegram-Scraper",
         "description": "A powerful Python script that allows you to scrape messages and media from Telegram channels using the Telethon library. Features include real-time continuous scraping, media downloading, and data export capabilities.",
-        "stargazers_count": 957,
+        "stargazers_count": 1042,
         "language": "Python",
         "owner": {
             "login": "ScrapeEmAll",
@@ -33,7 +33,7 @@
         "full_name": "MoonshotAI/Kimi-Dev",
         "html_url": "https://github.com/MoonshotAI/Kimi-Dev",
         "description": "open-source coding LLM for software engineering tasks",
-        "stargazers_count": 367,
+        "stargazers_count": 390,
         "language": "Python",
         "owner": {
             "login": "MoonshotAI",
@@ -47,7 +47,7 @@
         "full_name": "THUDM/slime",
         "html_url": "https://github.com/THUDM/slime",
         "description": "slime is a LLM post-training framework aiming at scaling RL.",
-        "stargazers_count": 328,
+        "stargazers_count": 360,
         "language": "Python",
         "owner": {
             "login": "THUDM",
@@ -61,7 +61,7 @@
         "full_name": "kyutai-labs/delayed-streams-modeling",
         "html_url": "https://github.com/kyutai-labs/delayed-streams-modeling",
         "description": "Delayed Streams Modeling (DSM) is a flexible formulation for streaming, multimodal sequence-to-sequence learning.",
-        "stargazers_count": 212,
+        "stargazers_count": 243,
         "language": "Python",
         "owner": {
             "login": "kyutai-labs",
@@ -70,17 +70,17 @@
         }
     },
     {
-        "id": 1002822743,
-        "name": "humanoid-general-motion-tracking",
-        "full_name": "zixuan417/humanoid-general-motion-tracking",
-        "html_url": "https://github.com/zixuan417/humanoid-general-motion-tracking",
-        "description": "The official codebase of paper \"GMT: General Motion Tracking for Humanoid Whole-Body Control\"",
-        "stargazers_count": 137,
+        "id": 1005866827,
+        "name": "pubg-cheat",
+        "full_name": "pubgundetected/pubg-cheat",
+        "html_url": "https://github.com/pubgundetected/pubg-cheat",
+        "description": "PUBG Cheat is a stealthy, undetected external cheats with ESP, HWID spoofing, no spread, recoil control, and a smart PUBG aimbot. Fully streamproof and compatible with Windows 10/11, Fullscreen, and StreamerMode. Dominate with PUBG Cheat and precision PUBG Aimbot today",
+        "stargazers_count": 213,
         "language": "Python",
         "owner": {
-            "login": "zixuan417",
-            "avatar_url": "https://avatars.githubusercontent.com/u/71373950?v=4",
-            "html_url": "https://github.com/zixuan417"
+            "login": "pubgundetected",
+            "avatar_url": "https://avatars.githubusercontent.com/u/217270399?v=4",
+            "html_url": "https://github.com/pubgundetected"
         }
     }
 ]
