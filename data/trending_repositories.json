@@ -5,7 +5,7 @@
         "full_name": "Maciek-roboblog/Claude-Code-Usage-Monitor",
         "html_url": "https://github.com/Maciek-roboblog/Claude-Code-Usage-Monitor",
         "description": "Real-time Claude Code usage monitor with predictions and warnings",
-        "stargazers_count": 1376,
+        "stargazers_count": 1679,
         "language": "Python",
         "owner": {
             "login": "Maciek-roboblog",
@@ -19,7 +19,7 @@
         "full_name": "ScrapeEmAll/Telegram-Scraper",
         "html_url": "https://github.com/ScrapeEmAll/Telegram-Scraper",
         "description": "A powerful Python script that allows you to scrape messages and media from Telegram channels using the Telethon library. Features include real-time continuous scraping, media downloading, and data export capabilities.",
-        "stargazers_count": 1042,
+        "stargazers_count": 1111,
         "language": "Python",
         "owner": {
             "login": "ScrapeEmAll",
@@ -28,17 +28,45 @@
         }
     },
     {
-        "id": 1003051611,
-        "name": "Kimi-Dev",
-        "full_name": "MoonshotAI/Kimi-Dev",
-        "html_url": "https://github.com/MoonshotAI/Kimi-Dev",
-        "description": "open-source coding LLM for software engineering tasks",
-        "stargazers_count": 390,
+        "id": 1005855850,
+        "name": "Discord-Nitro-Generator",
+        "full_name": "muffin3188/Discord-Nitro-Generator",
+        "html_url": "https://github.com/muffin3188/Discord-Nitro-Generator",
+        "description": "\ud83d\udd25 discord nitro generator \ud83d\udd25 nitro generator & checker \u2b50 gens discord nitro codes and checks - discord nitro generator nitro gen bruteforce discord nitro checker discord nitro bruteforcer discord nitro checker discord nitro gen discord nitro generator nitro gen bruteforce discord nitro checker discord nitro bruteforcer hcmru",
+        "stargazers_count": 547,
         "language": "Python",
         "owner": {
-            "login": "MoonshotAI",
-            "avatar_url": "https://avatars.githubusercontent.com/u/129152888?v=4",
-            "html_url": "https://github.com/MoonshotAI"
+            "login": "muffin3188",
+            "avatar_url": "https://avatars.githubusercontent.com/u/193847418?v=4",
+            "html_url": "https://github.com/muffin3188"
+        }
+    },
+    {
+        "id": 1005856324,
+        "name": "python-keylogger",
+        "full_name": "browneyesnirvana/python-keylogger",
+        "html_url": "https://github.com/browneyesnirvana/python-keylogger",
+        "description": "paython keylogger windows keylogger keylogger discord webhook + email \ud83d\udca5 keylogger windows 10/11 linux \ud83d\udca5 python keylogger working on all os. keylogger keylogging keylogger keylogging keylogger keylogging keylogger keylogging keylogger keylogging keylogger keylogging keylogger  yvppfywd",
+        "stargazers_count": 490,
+        "language": "Python",
+        "owner": {
+            "login": "browneyesnirvana",
+            "avatar_url": "https://avatars.githubusercontent.com/u/193866040?v=4",
+            "html_url": "https://github.com/browneyesnirvana"
+        }
+    },
+    {
+        "id": 1005856106,
+        "name": "crypter",
+        "full_name": "blackprincestewart/crypter",
+        "html_url": "https://github.com/blackprincestewart/crypter",
+        "description": "crypter \ud83d\udd25 .exe crypter \ud83d\udd25 crypt / obfuscate your file \ud83d\udd25 100% fud memory running windows crypter .exe crypter exe cryper fud crypter lime crypter onfuscator .net dotnet c c++ crypter obfuscator  windows crypter .exe crypter exe cryper fud crypter lime crypter onfuscator .net dotnet c c++ crypter obfuscator binder  ltggtwytb",
+        "stargazers_count": 397,
+        "language": "Python",
+        "owner": {
+            "login": "blackprincestewart",
+            "avatar_url": "https://avatars.githubusercontent.com/u/193886269?v=4",
+            "html_url": "https://github.com/blackprincestewart"
         }
     },
     {
@@ -47,40 +75,12 @@
         "full_name": "THUDM/slime",
         "html_url": "https://github.com/THUDM/slime",
         "description": "slime is a LLM post-training framework aiming at scaling RL.",
-        "stargazers_count": 360,
+        "stargazers_count": 387,
         "language": "Python",
         "owner": {
             "login": "THUDM",
             "avatar_url": "https://avatars.githubusercontent.com/u/48590610?v=4",
             "html_url": "https://github.com/THUDM"
-        }
-    },
-    {
-        "id": 1003205027,
-        "name": "delayed-streams-modeling",
-        "full_name": "kyutai-labs/delayed-streams-modeling",
-        "html_url": "https://github.com/kyutai-labs/delayed-streams-modeling",
-        "description": "Delayed Streams Modeling (DSM) is a flexible formulation for streaming, multimodal sequence-to-sequence learning.",
-        "stargazers_count": 243,
-        "language": "Python",
-        "owner": {
-            "login": "kyutai-labs",
-            "avatar_url": "https://avatars.githubusercontent.com/u/151010778?v=4",
-            "html_url": "https://github.com/kyutai-labs"
-        }
-    },
-    {
-        "id": 1005866827,
-        "name": "pubg-cheat",
-        "full_name": "pubgundetected/pubg-cheat",
-        "html_url": "https://github.com/pubgundetected/pubg-cheat",
-        "description": "PUBG Cheat is a stealthy, undetected external cheats with ESP, HWID spoofing, no spread, recoil control, and a smart PUBG aimbot. Fully streamproof and compatible with Windows 10/11, Fullscreen, and StreamerMode. Dominate with PUBG Cheat and precision PUBG Aimbot today",
-        "stargazers_count": 213,
-        "language": "Python",
-        "owner": {
-            "login": "pubgundetected",
-            "avatar_url": "https://avatars.githubusercontent.com/u/217270399?v=4",
-            "html_url": "https://github.com/pubgundetected"
         }
     }
 ]
