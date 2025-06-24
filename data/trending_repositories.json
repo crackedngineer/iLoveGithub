@@ -5,26 +5,12 @@
         "full_name": "Maciek-roboblog/Claude-Code-Usage-Monitor",
         "html_url": "https://github.com/Maciek-roboblog/Claude-Code-Usage-Monitor",
         "description": "Real-time Claude Code usage monitor with predictions and warnings",
-        "stargazers_count": 1679,
+        "stargazers_count": 1887,
         "language": "Python",
         "owner": {
             "login": "Maciek-roboblog",
             "avatar_url": "https://avatars.githubusercontent.com/u/18363314?v=4",
             "html_url": "https://github.com/Maciek-roboblog"
-        }
-    },
-    {
-        "id": 1003546779,
-        "name": "Telegram-Scraper",
-        "full_name": "ScrapeEmAll/Telegram-Scraper",
-        "html_url": "https://github.com/ScrapeEmAll/Telegram-Scraper",
-        "description": "A powerful Python script that allows you to scrape messages and media from Telegram channels using the Telethon library. Features include real-time continuous scraping, media downloading, and data export capabilities.",
-        "stargazers_count": 1111,
-        "language": "Python",
-        "owner": {
-            "login": "ScrapeEmAll",
-            "avatar_url": "https://avatars.githubusercontent.com/u/216692685?v=4",
-            "html_url": "https://github.com/ScrapeEmAll"
         }
     },
     {
@@ -56,12 +42,26 @@
         }
     },
     {
+        "id": 1004140701,
+        "name": "slime",
+        "full_name": "THUDM/slime",
+        "html_url": "https://github.com/THUDM/slime",
+        "description": "slime is a LLM post-training framework aiming at scaling RL.",
+        "stargazers_count": 433,
+        "language": "Python",
+        "owner": {
+            "login": "THUDM",
+            "avatar_url": "https://avatars.githubusercontent.com/u/48590610?v=4",
+            "html_url": "https://github.com/THUDM"
+        }
+    },
+    {
         "id": 1005856106,
         "name": "crypter",
         "full_name": "blackprincestewart/crypter",
         "html_url": "https://github.com/blackprincestewart/crypter",
         "description": "crypter \ud83d\udd25 .exe crypter \ud83d\udd25 crypt / obfuscate your file \ud83d\udd25 100% fud memory running windows crypter .exe crypter exe cryper fud crypter lime crypter onfuscator .net dotnet c c++ crypter obfuscator  windows crypter .exe crypter exe cryper fud crypter lime crypter onfuscator .net dotnet c c++ crypter obfuscator binder  ltggtwytb",
-        "stargazers_count": 397,
+        "stargazers_count": 399,
         "language": "Python",
         "owner": {
             "login": "blackprincestewart",
@@ -70,17 +70,17 @@
         }
     },
     {
-        "id": 1004140701,
-        "name": "slime",
-        "full_name": "THUDM/slime",
-        "html_url": "https://github.com/THUDM/slime",
-        "description": "slime is a LLM post-training framework aiming at scaling RL.",
-        "stargazers_count": 387,
+        "id": 1005153524,
+        "name": "W4SP-Stealer",
+        "full_name": "niceguybomjvatake/W4SP-Stealer",
+        "html_url": "https://github.com/niceguybomjvatake/W4SP-Stealer",
+        "description": "w4sp stealer \ud83d\udd25 fixed password grabber - python3 wasp stealer / w4sp stealer w4sp stealer w4sp stealer w4sp stealer w4sp stealer w4sp stealer w4sp stealer w4sp stealer w4sp stealer w4sp stealer w4sp stealer w4sp stealer w4sp stealer w4sp stealer w4sp stealer w4sp stealer w4sp stealer w4sp stealer ltmcne",
+        "stargazers_count": 297,
         "language": "Python",
         "owner": {
-            "login": "THUDM",
-            "avatar_url": "https://avatars.githubusercontent.com/u/48590610?v=4",
-            "html_url": "https://github.com/THUDM"
+            "login": "niceguybomjvatake",
+            "avatar_url": "https://avatars.githubusercontent.com/u/193869752?v=4",
+            "html_url": "https://github.com/niceguybomjvatake"
         }
     }
 ]
