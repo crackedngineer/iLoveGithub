@@ -5,7 +5,7 @@
         "full_name": "TgSurfer/Telegram-Member-Adder-Cloner-Scraper-And-Over-43-Functions",
         "html_url": "https://github.com/TgSurfer/Telegram-Member-Adder-Cloner-Scraper-And-Over-43-Functions",
         "description": "Telegram Members Adding Software/Script for free. Scrape more than 10k Telegram members and add members to your group.",
-        "stargazers_count": 656,
+        "stargazers_count": 728,
         "language": "Python",
         "owner": {
             "login": "TgSurfer",
@@ -19,7 +19,7 @@
         "full_name": "Kwai-Keye/Keye",
         "html_url": "https://github.com/Kwai-Keye/Keye",
         "description": null,
-        "stargazers_count": 303,
+        "stargazers_count": 308,
         "language": "Python",
         "owner": {
             "login": "Kwai-Keye",
@@ -28,17 +28,17 @@
         }
     },
     {
-        "id": 1006692485,
-        "name": "LINO_UniPS",
-        "full_name": "houyuanchen111/LINO_UniPS",
-        "html_url": "https://github.com/houyuanchen111/LINO_UniPS",
-        "description": null,
-        "stargazers_count": 208,
+        "id": 1009335691,
+        "name": "Hunyuan-A13B",
+        "full_name": "Tencent-Hunyuan/Hunyuan-A13B",
+        "html_url": "https://github.com/Tencent-Hunyuan/Hunyuan-A13B",
+        "description": "Tencent Hunyuan A13B (short as Hunyuan-A13B), an innovative and open-source LLM built on a fine-grained MoE architecture.",
+        "stargazers_count": 212,
         "language": "Python",
         "owner": {
-            "login": "houyuanchen111",
-            "avatar_url": "https://avatars.githubusercontent.com/u/209924626?v=4",
-            "html_url": "https://github.com/houyuanchen111"
+            "login": "Tencent-Hunyuan",
+            "avatar_url": "https://avatars.githubusercontent.com/u/210980732?v=4",
+            "html_url": "https://github.com/Tencent-Hunyuan"
         }
     },
     {
@@ -47,7 +47,7 @@
         "full_name": "Gsunshine/meanflow",
         "html_url": "https://github.com/Gsunshine/meanflow",
         "description": "JAX implementation of MeanFlow",
-        "stargazers_count": 189,
+        "stargazers_count": 193,
         "language": "Python",
         "owner": {
             "login": "Gsunshine",
@@ -56,31 +56,31 @@
         }
     },
     {
-        "id": 1006500398,
-        "name": "typr",
-        "full_name": "Sakura-sx/typr",
-        "html_url": "https://github.com/Sakura-sx/typr",
-        "description": "TUI typing test with a word selection algorithm inspired by keybr",
-        "stargazers_count": 159,
+        "id": 1007051902,
+        "name": "MultiAgentPPT",
+        "full_name": "johnson7788/MultiAgentPPT",
+        "html_url": "https://github.com/johnson7788/MultiAgentPPT",
+        "description": "MultiAgentPPT \u662f\u4e00\u4e2a\u96c6\u6210\u4e86 A2A\uff08Ask-to-Answer\uff09+ MCP\uff08Multi-agent Control Protocol\uff09+ ADK\uff08Agent Development Kit\uff09 \u67b6\u6784\u7684\u667a\u80fd\u5316\u6f14\u793a\u6587\u7a3f\u751f\u6210\u7cfb\u7edf\uff0c\u652f\u6301\u901a\u8fc7\u591a\u667a\u80fd\u4f53\u534f\u4f5c\u548c\u6d41\u5f0f\u5e76\u53d1\u673a\u5236",
+        "stargazers_count": 187,
         "language": "Python",
         "owner": {
-            "login": "Sakura-sx",
-            "avatar_url": "https://avatars.githubusercontent.com/u/146769431?v=4",
-            "html_url": "https://github.com/Sakura-sx"
+            "login": "johnson7788",
+            "avatar_url": "https://avatars.githubusercontent.com/u/6083466?v=4",
+            "html_url": "https://github.com/johnson7788"
         }
     },
     {
-        "id": 1006634318,
-        "name": "claude-code-proxy",
-        "full_name": "fuergaosi233/claude-code-proxy",
-        "html_url": "https://github.com/fuergaosi233/claude-code-proxy",
-        "description": "Claude Code to OpenAI API Proxy",
-        "stargazers_count": 135,
+        "id": 1006839665,
+        "name": "WorldVLA",
+        "full_name": "alibaba-damo-academy/WorldVLA",
+        "html_url": "https://github.com/alibaba-damo-academy/WorldVLA",
+        "description": "WorldVLA: Towards Autoregressive Action World Model",
+        "stargazers_count": 94,
         "language": "Python",
         "owner": {
-            "login": "fuergaosi233",
-            "avatar_url": "https://avatars.githubusercontent.com/u/22197568?v=4",
-            "html_url": "https://github.com/fuergaosi233"
+            "login": "alibaba-damo-academy",
+            "avatar_url": "https://avatars.githubusercontent.com/u/115537614?v=4",
+            "html_url": "https://github.com/alibaba-damo-academy"
         }
     }
 ]
