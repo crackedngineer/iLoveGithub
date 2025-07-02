@@ -5,7 +5,7 @@
         "full_name": "Tencent-Hunyuan/Hunyuan-A13B",
         "html_url": "https://github.com/Tencent-Hunyuan/Hunyuan-A13B",
         "description": "Tencent Hunyuan A13B (short as Hunyuan-A13B), an innovative and open-source LLM built on a fine-grained MoE architecture.",
-        "stargazers_count": 456,
+        "stargazers_count": 487,
         "language": "Python",
         "owner": {
             "login": "Tencent-Hunyuan",
@@ -14,31 +14,17 @@
         }
     },
     {
-        "id": 1008200939,
-        "name": "Keye",
-        "full_name": "Kwai-Keye/Keye",
-        "html_url": "https://github.com/Kwai-Keye/Keye",
-        "description": null,
-        "stargazers_count": 332,
+        "id": 1010899993,
+        "name": "PosterCraft",
+        "full_name": "MeiGen-AI/PosterCraft",
+        "html_url": "https://github.com/MeiGen-AI/PosterCraft",
+        "description": "Rethinking High-Quality Aesthetic Poster Generation in a Unified Framework",
+        "stargazers_count": 303,
         "language": "Python",
         "owner": {
-            "login": "Kwai-Keye",
-            "avatar_url": "https://avatars.githubusercontent.com/u/216671074?v=4",
-            "html_url": "https://github.com/Kwai-Keye"
-        }
-    },
-    {
-        "id": 1009598342,
-        "name": "Gift-Buyer-Tg",
-        "full_name": "LLMotion/Gift-Buyer-Tg",
-        "html_url": "https://github.com/LLMotion/Gift-Buyer-Tg",
-        "description": "A universal bot for automatically sniping and purchasing Telegram gifts, with many useful features",
-        "stargazers_count": 215,
-        "language": "Python",
-        "owner": {
-            "login": "LLMotion",
-            "avatar_url": "https://avatars.githubusercontent.com/u/15699974?v=4",
-            "html_url": "https://github.com/LLMotion"
+            "login": "MeiGen-AI",
+            "avatar_url": "https://avatars.githubusercontent.com/u/213629870?v=4",
+            "html_url": "https://github.com/MeiGen-AI"
         }
     },
     {
@@ -47,7 +33,7 @@
         "full_name": "davidkimai/Context-Engineering",
         "html_url": "https://github.com/davidkimai/Context-Engineering",
         "description": "\"Context engineering is the delicate art and science of filling the context window with just the right information for the next step.\" \u2014 Andrej Karpathy. A practical, first-principles handbook inspired by Karpathy and 3Blue1Brown for moving beyond prompt engineering to the wider discipline of context design, orchestration, and optimization.",
-        "stargazers_count": 131,
+        "stargazers_count": 262,
         "language": "Python",
         "owner": {
             "login": "davidkimai",
@@ -56,12 +42,26 @@
         }
     },
     {
+        "id": 1009598342,
+        "name": "Gift-Buyer-Tg",
+        "full_name": "LLMotion/Gift-Buyer-Tg",
+        "html_url": "https://github.com/LLMotion/Gift-Buyer-Tg",
+        "description": "A universal bot for automatically sniping and purchasing Telegram gifts, with many useful features",
+        "stargazers_count": 216,
+        "language": "Python",
+        "owner": {
+            "login": "LLMotion",
+            "avatar_url": "https://avatars.githubusercontent.com/u/15699974?v=4",
+            "html_url": "https://github.com/LLMotion"
+        }
+    },
+    {
         "id": 1008964124,
         "name": "XVerse",
         "full_name": "bytedance/XVerse",
         "html_url": "https://github.com/bytedance/XVerse",
         "description": "Official implementation of \"XVerse: Consistent Multi-Subject Control of Identity and Semantic Attributes via DiT Modulation\".",
-        "stargazers_count": 124,
+        "stargazers_count": 203,
         "language": "Python",
         "owner": {
             "login": "bytedance",
@@ -70,17 +70,17 @@
         }
     },
     {
-        "id": 1010899993,
-        "name": "PosterCraft",
-        "full_name": "MeiGen-AI/PosterCraft",
-        "html_url": "https://github.com/MeiGen-AI/PosterCraft",
-        "description": "Rethinking High-Quality Aesthetic Poster Generation in a Unified Framework",
-        "stargazers_count": 122,
+        "id": 1010065054,
+        "name": "l0",
+        "full_name": "cmriat/l0",
+        "html_url": "https://github.com/cmriat/l0",
+        "description": "A scalable, end-to-end training pipeline for general-purpose agents",
+        "stargazers_count": 108,
         "language": "Python",
         "owner": {
-            "login": "MeiGen-AI",
-            "avatar_url": "https://avatars.githubusercontent.com/u/213629870?v=4",
-            "html_url": "https://github.com/MeiGen-AI"
+            "login": "cmriat",
+            "avatar_url": "https://avatars.githubusercontent.com/u/192933495?v=4",
+            "html_url": "https://github.com/cmriat"
         }
     }
 ]
