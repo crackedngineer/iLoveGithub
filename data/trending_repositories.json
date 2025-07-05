@@ -5,7 +5,7 @@
         "full_name": "davidkimai/Context-Engineering",
         "html_url": "https://github.com/davidkimai/Context-Engineering",
         "description": "\"Context engineering is the delicate art and science of filling the context window with just the right information for the next step.\" \u2014 Andrej Karpathy. A practical, first-principles handbook inspired by Karpathy and 3Blue1Brown for moving beyond prompt engineering to the wider discipline of context design, orchestration, and optimization.",
-        "stargazers_count": 707,
+        "stargazers_count": 869,
         "language": "Python",
         "owner": {
             "login": "davidkimai",
@@ -14,26 +14,12 @@
         }
     },
     {
-        "id": 1010055053,
-        "name": "GLM-4.1V-Thinking",
-        "full_name": "THUDM/GLM-4.1V-Thinking",
-        "html_url": "https://github.com/THUDM/GLM-4.1V-Thinking",
-        "description": "GLM-4.1V-Thinking: Towards Versatile Multimodal Reasoning with Scalable Reinforcement Learning.",
-        "stargazers_count": 507,
-        "language": "Python",
-        "owner": {
-            "login": "THUDM",
-            "avatar_url": "https://avatars.githubusercontent.com/u/48590610?v=4",
-            "html_url": "https://github.com/THUDM"
-        }
-    },
-    {
         "id": 1010899993,
         "name": "PosterCraft",
         "full_name": "MeiGen-AI/PosterCraft",
         "html_url": "https://github.com/MeiGen-AI/PosterCraft",
         "description": "Rethinking High-Quality Aesthetic Poster Generation in a Unified Framework",
-        "stargazers_count": 478,
+        "stargazers_count": 498,
         "language": "Python",
         "owner": {
             "login": "MeiGen-AI",
@@ -42,12 +28,26 @@
         }
     },
     {
+        "id": 1012686024,
+        "name": "ZSim",
+        "full_name": "ZZZSimulator/ZSim",
+        "html_url": "https://github.com/ZZZSimulator/ZSim",
+        "description": "\u7edd\u533a\u96f6\u6a21\u62df\u4eff\u771f\u7a0b\u5e8f\uff0c\u53ef\u4f7f\u7528\u5b9a\u5236\u5316\u624b\u6cd5\uff0c\u8ba1\u7b97\u4f24\u5bb3\u3002",
+        "stargazers_count": 385,
+        "language": "Python",
+        "owner": {
+            "login": "ZZZSimulator",
+            "avatar_url": "https://avatars.githubusercontent.com/u/219022588?v=4",
+            "html_url": "https://github.com/ZZZSimulator"
+        }
+    },
+    {
         "id": 1011594197,
         "name": "ml-diffucoder",
         "full_name": "apple/ml-diffucoder",
         "html_url": "https://github.com/apple/ml-diffucoder",
         "description": "DiffuCoder: Understanding and Improving Masked Diffusion Models for Code Generation",
-        "stargazers_count": 311,
+        "stargazers_count": 384,
         "language": "Python",
         "owner": {
             "login": "apple",
@@ -61,7 +61,7 @@
         "full_name": "sajjadabd/freenet",
         "html_url": "https://github.com/sajjadabd/freenet",
         "description": "connect freely to the internet",
-        "stargazers_count": 266,
+        "stargazers_count": 293,
         "language": "Python",
         "owner": {
             "login": "sajjadabd",
@@ -70,17 +70,17 @@
         }
     },
     {
-        "id": 1012105154,
-        "name": "Telegram-Members-Adder-Forwarder-Scraper-Much-More",
-        "full_name": "Coder4TG/Telegram-Members-Adder-Forwarder-Scraper-Much-More",
-        "html_url": "https://github.com/Coder4TG/Telegram-Members-Adder-Forwarder-Scraper-Much-More",
-        "description": "Telegram marketing tool with over 43 stunning features! Scrape members, add members to groups, send messages to members, forward messages and much more! No coding skills required, easy to use, updated to the newest state of 2025.",
-        "stargazers_count": 265,
+        "id": 1012167700,
+        "name": "gmailtail",
+        "full_name": "c4pt0r/gmailtail",
+        "html_url": "https://github.com/c4pt0r/gmailtail",
+        "description": "tail -f your gmail",
+        "stargazers_count": 285,
         "language": "Python",
         "owner": {
-            "login": "Coder4TG",
-            "avatar_url": "https://avatars.githubusercontent.com/u/218838287?v=4",
-            "html_url": "https://github.com/Coder4TG"
+            "login": "c4pt0r",
+            "avatar_url": "https://avatars.githubusercontent.com/u/773853?v=4",
+            "html_url": "https://github.com/c4pt0r"
         }
     }
 ]
