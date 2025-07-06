@@ -1,16 +1,16 @@
 [
     {
-        "id": 1010380782,
-        "name": "Context-Engineering",
-        "full_name": "davidkimai/Context-Engineering",
-        "html_url": "https://github.com/davidkimai/Context-Engineering",
-        "description": "\"Context engineering is the delicate art and science of filling the context window with just the right information for the next step.\" \u2014 Andrej Karpathy. A practical, first-principles handbook inspired by Karpathy and 3Blue1Brown for moving beyond prompt engineering to the wider discipline of context design, orchestration, and optimization.",
-        "stargazers_count": 869,
+        "id": 1012254587,
+        "name": "gemini-bball",
+        "full_name": "farzaa/gemini-bball",
+        "html_url": "https://github.com/farzaa/gemini-bball",
+        "description": null,
+        "stargazers_count": 611,
         "language": "Python",
         "owner": {
-            "login": "davidkimai",
-            "avatar_url": "https://avatars.githubusercontent.com/u/208424706?v=4",
-            "html_url": "https://github.com/davidkimai"
+            "login": "farzaa",
+            "avatar_url": "https://avatars.githubusercontent.com/u/15614124?v=4",
+            "html_url": "https://github.com/farzaa"
         }
     },
     {
@@ -19,7 +19,7 @@
         "full_name": "MeiGen-AI/PosterCraft",
         "html_url": "https://github.com/MeiGen-AI/PosterCraft",
         "description": "Rethinking High-Quality Aesthetic Poster Generation in a Unified Framework",
-        "stargazers_count": 498,
+        "stargazers_count": 505,
         "language": "Python",
         "owner": {
             "login": "MeiGen-AI",
@@ -33,7 +33,7 @@
         "full_name": "ZZZSimulator/ZSim",
         "html_url": "https://github.com/ZZZSimulator/ZSim",
         "description": "\u7edd\u533a\u96f6\u6a21\u62df\u4eff\u771f\u7a0b\u5e8f\uff0c\u53ef\u4f7f\u7528\u5b9a\u5236\u5316\u624b\u6cd5\uff0c\u8ba1\u7b97\u4f24\u5bb3\u3002",
-        "stargazers_count": 385,
+        "stargazers_count": 482,
         "language": "Python",
         "owner": {
             "login": "ZZZSimulator",
@@ -42,12 +42,26 @@
         }
     },
     {
+        "id": 1012195851,
+        "name": "gremllm",
+        "full_name": "awwaiid/gremllm",
+        "html_url": "https://github.com/awwaiid/gremllm",
+        "description": "A slight upgrade to the Gremlins in your code",
+        "stargazers_count": 433,
+        "language": "Python",
+        "owner": {
+            "login": "awwaiid",
+            "avatar_url": "https://avatars.githubusercontent.com/u/8642?v=4",
+            "html_url": "https://github.com/awwaiid"
+        }
+    },
+    {
         "id": 1011594197,
         "name": "ml-diffucoder",
         "full_name": "apple/ml-diffucoder",
         "html_url": "https://github.com/apple/ml-diffucoder",
         "description": "DiffuCoder: Understanding and Improving Masked Diffusion Models for Code Generation",
-        "stargazers_count": 384,
+        "stargazers_count": 429,
         "language": "Python",
         "owner": {
             "login": "apple",
@@ -61,26 +75,12 @@
         "full_name": "sajjadabd/freenet",
         "html_url": "https://github.com/sajjadabd/freenet",
         "description": "connect freely to the internet",
-        "stargazers_count": 293,
+        "stargazers_count": 318,
         "language": "Python",
         "owner": {
             "login": "sajjadabd",
             "avatar_url": "https://avatars.githubusercontent.com/u/66908198?v=4",
             "html_url": "https://github.com/sajjadabd"
-        }
-    },
-    {
-        "id": 1012167700,
-        "name": "gmailtail",
-        "full_name": "c4pt0r/gmailtail",
-        "html_url": "https://github.com/c4pt0r/gmailtail",
-        "description": "tail -f your gmail",
-        "stargazers_count": 285,
-        "language": "Python",
-        "owner": {
-            "login": "c4pt0r",
-            "avatar_url": "https://avatars.githubusercontent.com/u/773853?v=4",
-            "html_url": "https://github.com/c4pt0r"
         }
     }
 ]
