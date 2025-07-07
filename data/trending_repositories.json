@@ -5,7 +5,7 @@
         "full_name": "farzaa/gemini-bball",
         "html_url": "https://github.com/farzaa/gemini-bball",
         "description": null,
-        "stargazers_count": 611,
+        "stargazers_count": 923,
         "language": "Python",
         "owner": {
             "login": "farzaa",
@@ -14,26 +14,12 @@
         }
     },
     {
-        "id": 1010899993,
-        "name": "PosterCraft",
-        "full_name": "MeiGen-AI/PosterCraft",
-        "html_url": "https://github.com/MeiGen-AI/PosterCraft",
-        "description": "Rethinking High-Quality Aesthetic Poster Generation in a Unified Framework",
-        "stargazers_count": 505,
-        "language": "Python",
-        "owner": {
-            "login": "MeiGen-AI",
-            "avatar_url": "https://avatars.githubusercontent.com/u/213629870?v=4",
-            "html_url": "https://github.com/MeiGen-AI"
-        }
-    },
-    {
         "id": 1012686024,
         "name": "ZSim",
         "full_name": "ZZZSimulator/ZSim",
         "html_url": "https://github.com/ZZZSimulator/ZSim",
         "description": "\u7edd\u533a\u96f6\u6a21\u62df\u4eff\u771f\u7a0b\u5e8f\uff0c\u53ef\u4f7f\u7528\u5b9a\u5236\u5316\u624b\u6cd5\uff0c\u8ba1\u7b97\u4f24\u5bb3\u3002",
-        "stargazers_count": 482,
+        "stargazers_count": 527,
         "language": "Python",
         "owner": {
             "login": "ZZZSimulator",
@@ -47,7 +33,7 @@
         "full_name": "awwaiid/gremllm",
         "html_url": "https://github.com/awwaiid/gremllm",
         "description": "A slight upgrade to the Gremlins in your code",
-        "stargazers_count": 433,
+        "stargazers_count": 483,
         "language": "Python",
         "owner": {
             "login": "awwaiid",
@@ -61,7 +47,7 @@
         "full_name": "apple/ml-diffucoder",
         "html_url": "https://github.com/apple/ml-diffucoder",
         "description": "DiffuCoder: Understanding and Improving Masked Diffusion Models for Code Generation",
-        "stargazers_count": 429,
+        "stargazers_count": 463,
         "language": "Python",
         "owner": {
             "login": "apple",
@@ -75,12 +61,26 @@
         "full_name": "sajjadabd/freenet",
         "html_url": "https://github.com/sajjadabd/freenet",
         "description": "connect freely to the internet",
-        "stargazers_count": 318,
+        "stargazers_count": 421,
         "language": "Python",
         "owner": {
             "login": "sajjadabd",
             "avatar_url": "https://avatars.githubusercontent.com/u/66908198?v=4",
             "html_url": "https://github.com/sajjadabd"
+        }
+    },
+    {
+        "id": 1012167700,
+        "name": "gmailtail",
+        "full_name": "c4pt0r/gmailtail",
+        "html_url": "https://github.com/c4pt0r/gmailtail",
+        "description": "tail -f your gmail",
+        "stargazers_count": 350,
+        "language": "Python",
+        "owner": {
+            "login": "c4pt0r",
+            "avatar_url": "https://avatars.githubusercontent.com/u/773853?v=4",
+            "html_url": "https://github.com/c4pt0r"
         }
     }
 ]
