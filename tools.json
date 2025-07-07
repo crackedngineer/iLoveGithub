@@ -271,7 +271,7 @@
         "url": "https://deepwiki.com/{owner}/{repo}",
         "icon": "/icons/tools/deepwiki.ico",
         "category": "DOCUMENTATION",
-        "iframe": true,
+        "iframe": false,
         "created_at": "2025-04-26T19:02:42.848Z"
     },
     {
