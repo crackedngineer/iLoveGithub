@@ -5,7 +5,7 @@
         "full_name": "farzaa/gemini-bball",
         "html_url": "https://github.com/farzaa/gemini-bball",
         "description": null,
-        "stargazers_count": 923,
+        "stargazers_count": 991,
         "language": "Python",
         "owner": {
             "login": "farzaa",
@@ -19,7 +19,7 @@
         "full_name": "ZZZSimulator/ZSim",
         "html_url": "https://github.com/ZZZSimulator/ZSim",
         "description": "\u7edd\u533a\u96f6\u6a21\u62df\u4eff\u771f\u7a0b\u5e8f\uff0c\u53ef\u4f7f\u7528\u5b9a\u5236\u5316\u624b\u6cd5\uff0c\u8ba1\u7b97\u4f24\u5bb3\u3002",
-        "stargazers_count": 527,
+        "stargazers_count": 556,
         "language": "Python",
         "owner": {
             "login": "ZZZSimulator",
@@ -33,7 +33,7 @@
         "full_name": "awwaiid/gremllm",
         "html_url": "https://github.com/awwaiid/gremllm",
         "description": "A slight upgrade to the Gremlins in your code",
-        "stargazers_count": 483,
+        "stargazers_count": 519,
         "language": "Python",
         "owner": {
             "login": "awwaiid",
@@ -42,45 +42,45 @@
         }
     },
     {
-        "id": 1011594197,
-        "name": "ml-diffucoder",
-        "full_name": "apple/ml-diffucoder",
-        "html_url": "https://github.com/apple/ml-diffucoder",
-        "description": "DiffuCoder: Understanding and Improving Masked Diffusion Models for Code Generation",
-        "stargazers_count": 463,
+        "id": 1014729376,
+        "name": "MemOS",
+        "full_name": "MemTensor/MemOS",
+        "html_url": "https://github.com/MemTensor/MemOS",
+        "description": "MemOS (Preview) | Intelligence Begins with Memory",
+        "stargazers_count": 422,
         "language": "Python",
         "owner": {
-            "login": "apple",
-            "avatar_url": "https://avatars.githubusercontent.com/u/10639145?v=4",
-            "html_url": "https://github.com/apple"
+            "login": "MemTensor",
+            "avatar_url": "https://avatars.githubusercontent.com/u/210160027?v=4",
+            "html_url": "https://github.com/MemTensor"
         }
     },
     {
-        "id": 1011731701,
-        "name": "freenet",
-        "full_name": "sajjadabd/freenet",
-        "html_url": "https://github.com/sajjadabd/freenet",
-        "description": "connect freely to the internet",
-        "stargazers_count": 421,
+        "id": 1014411070,
+        "name": "spyder-osint",
+        "full_name": "bytillo/spyder-osint",
+        "html_url": "https://github.com/bytillo/spyder-osint",
+        "description": "An universal open-source intelligence (OSINT) research tool that performs searches using large global databases.",
+        "stargazers_count": 248,
         "language": "Python",
         "owner": {
-            "login": "sajjadabd",
-            "avatar_url": "https://avatars.githubusercontent.com/u/66908198?v=4",
-            "html_url": "https://github.com/sajjadabd"
+            "login": "bytillo",
+            "avatar_url": "https://avatars.githubusercontent.com/u/23452805?v=4",
+            "html_url": "https://github.com/bytillo"
         }
     },
     {
-        "id": 1012167700,
-        "name": "gmailtail",
-        "full_name": "c4pt0r/gmailtail",
-        "html_url": "https://github.com/c4pt0r/gmailtail",
-        "description": "tail -f your gmail",
-        "stargazers_count": 350,
+        "id": 1014415105,
+        "name": "Gift-Buyer-Tg",
+        "full_name": "salukiDew/Gift-Buyer-Tg",
+        "html_url": "https://github.com/salukiDew/Gift-Buyer-Tg",
+        "description": "A universal bot for automatically sniping and buying Telegram gifts, with many useful features",
+        "stargazers_count": 218,
         "language": "Python",
         "owner": {
-            "login": "c4pt0r",
-            "avatar_url": "https://avatars.githubusercontent.com/u/773853?v=4",
-            "html_url": "https://github.com/c4pt0r"
+            "login": "salukiDew",
+            "avatar_url": "https://avatars.githubusercontent.com/u/15265196?v=4",
+            "html_url": "https://github.com/salukiDew"
         }
     }
 ]
