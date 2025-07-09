@@ -1,53 +1,11 @@
 [
     {
-        "id": 1012254587,
-        "name": "gemini-bball",
-        "full_name": "farzaa/gemini-bball",
-        "html_url": "https://github.com/farzaa/gemini-bball",
-        "description": null,
-        "stargazers_count": 991,
-        "language": "Python",
-        "owner": {
-            "login": "farzaa",
-            "avatar_url": "https://avatars.githubusercontent.com/u/15614124?v=4",
-            "html_url": "https://github.com/farzaa"
-        }
-    },
-    {
-        "id": 1012686024,
-        "name": "ZSim",
-        "full_name": "ZZZSimulator/ZSim",
-        "html_url": "https://github.com/ZZZSimulator/ZSim",
-        "description": "\u7edd\u533a\u96f6\u6a21\u62df\u4eff\u771f\u7a0b\u5e8f\uff0c\u53ef\u4f7f\u7528\u5b9a\u5236\u5316\u624b\u6cd5\uff0c\u8ba1\u7b97\u4f24\u5bb3\u3002",
-        "stargazers_count": 556,
-        "language": "Python",
-        "owner": {
-            "login": "ZZZSimulator",
-            "avatar_url": "https://avatars.githubusercontent.com/u/219022588?v=4",
-            "html_url": "https://github.com/ZZZSimulator"
-        }
-    },
-    {
-        "id": 1012195851,
-        "name": "gremllm",
-        "full_name": "awwaiid/gremllm",
-        "html_url": "https://github.com/awwaiid/gremllm",
-        "description": "A slight upgrade to the Gremlins in your code",
-        "stargazers_count": 519,
-        "language": "Python",
-        "owner": {
-            "login": "awwaiid",
-            "avatar_url": "https://avatars.githubusercontent.com/u/8642?v=4",
-            "html_url": "https://github.com/awwaiid"
-        }
-    },
-    {
         "id": 1014729376,
         "name": "MemOS",
         "full_name": "MemTensor/MemOS",
         "html_url": "https://github.com/MemTensor/MemOS",
         "description": "MemOS (Preview) | Intelligence Begins with Memory",
-        "stargazers_count": 422,
+        "stargazers_count": 647,
         "language": "Python",
         "owner": {
             "login": "MemTensor",
@@ -61,7 +19,7 @@
         "full_name": "bytillo/spyder-osint",
         "html_url": "https://github.com/bytillo/spyder-osint",
         "description": "An universal open-source intelligence (OSINT) research tool that performs searches using large global databases.",
-        "stargazers_count": 248,
+        "stargazers_count": 570,
         "language": "Python",
         "owner": {
             "login": "bytillo",
@@ -75,7 +33,49 @@
         "full_name": "salukiDew/Gift-Buyer-Tg",
         "html_url": "https://github.com/salukiDew/Gift-Buyer-Tg",
         "description": "A universal bot for automatically sniping and buying Telegram gifts, with many useful features",
-        "stargazers_count": 218,
+        "stargazers_count": 219,
+        "language": "Python",
+        "owner": {
+            "login": "salukiDew",
+            "avatar_url": "https://avatars.githubusercontent.com/u/15265196?v=4",
+            "html_url": "https://github.com/salukiDew"
+        }
+    },
+    {
+        "id": 1013175091,
+        "name": "LangScene-X",
+        "full_name": "liuff19/LangScene-X",
+        "html_url": "https://github.com/liuff19/LangScene-X",
+        "description": "[ICCV 2025] LangScene-X: Reconstruct Generalizable 3D Language-Embedded Scenes with TriMap Video Diffusion",
+        "stargazers_count": 207,
+        "language": "Python",
+        "owner": {
+            "login": "liuff19",
+            "avatar_url": "https://avatars.githubusercontent.com/u/66865882?v=4",
+            "html_url": "https://github.com/liuff19"
+        }
+    },
+    {
+        "id": 1014392640,
+        "name": "MonadTestnet-Bot",
+        "full_name": "salukiDew/MonadTestnet-Bot",
+        "html_url": "https://github.com/salukiDew/MonadTestnet-Bot",
+        "description": "A bot for automated Monad Testnet farm",
+        "stargazers_count": 177,
+        "language": "Python",
+        "owner": {
+            "login": "salukiDew",
+            "avatar_url": "https://avatars.githubusercontent.com/u/15265196?v=4",
+            "html_url": "https://github.com/salukiDew"
+        }
+    },
+    {
+        "id": 1014385418,
+        "name": "grass-bot",
+        "full_name": "salukiDew/grass-bot",
+        "html_url": "https://github.com/salukiDew/grass-bot",
+        "description": "bot for automated grass farming",
+        "stargazers_count": 174,
         "language": "Python",
         "owner": {
             "login": "salukiDew",
