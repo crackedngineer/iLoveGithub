@@ -5,7 +5,7 @@
         "full_name": "MemTensor/MemOS",
         "html_url": "https://github.com/MemTensor/MemOS",
         "description": "MemOS (Preview) | Intelligence Begins with Memory",
-        "stargazers_count": 647,
+        "stargazers_count": 953,
         "language": "Python",
         "owner": {
             "login": "MemTensor",
@@ -19,7 +19,7 @@
         "full_name": "bytillo/spyder-osint",
         "html_url": "https://github.com/bytillo/spyder-osint",
         "description": "An universal open-source intelligence (OSINT) research tool that performs searches using large global databases.",
-        "stargazers_count": 570,
+        "stargazers_count": 574,
         "language": "Python",
         "owner": {
             "login": "bytillo",
@@ -28,59 +28,59 @@
         }
     },
     {
-        "id": 1014415105,
-        "name": "Gift-Buyer-Tg",
-        "full_name": "salukiDew/Gift-Buyer-Tg",
-        "html_url": "https://github.com/salukiDew/Gift-Buyer-Tg",
-        "description": "A universal bot for automatically sniping and buying Telegram gifts, with many useful features",
-        "stargazers_count": 219,
+        "id": 1014394578,
+        "name": "claude-code-hooks-mastery",
+        "full_name": "disler/claude-code-hooks-mastery",
+        "html_url": "https://github.com/disler/claude-code-hooks-mastery",
+        "description": null,
+        "stargazers_count": 162,
         "language": "Python",
         "owner": {
-            "login": "salukiDew",
-            "avatar_url": "https://avatars.githubusercontent.com/u/15265196?v=4",
-            "html_url": "https://github.com/salukiDew"
+            "login": "disler",
+            "avatar_url": "https://avatars.githubusercontent.com/u/7570811?v=4",
+            "html_url": "https://github.com/disler"
         }
     },
     {
-        "id": 1013175091,
-        "name": "LangScene-X",
-        "full_name": "liuff19/LangScene-X",
-        "html_url": "https://github.com/liuff19/LangScene-X",
-        "description": "[ICCV 2025] LangScene-X: Reconstruct Generalizable 3D Language-Embedded Scenes with TriMap Video Diffusion",
-        "stargazers_count": 207,
+        "id": 1016359454,
+        "name": "TikTok-Scraper-Video-Downloader-Auto-Reporter-2025",
+        "full_name": "skitSkills/TikTok-Scraper-Video-Downloader-Auto-Reporter-2025",
+        "html_url": "https://github.com/skitSkills/TikTok-Scraper-Video-Downloader-Auto-Reporter-2025",
+        "description": "An All-In-1 TikTok marketing bot for scraping, Download videos without watermarks and auto-reporter",
+        "stargazers_count": 134,
         "language": "Python",
         "owner": {
-            "login": "liuff19",
-            "avatar_url": "https://avatars.githubusercontent.com/u/66865882?v=4",
-            "html_url": "https://github.com/liuff19"
+            "login": "skitSkills",
+            "avatar_url": "https://avatars.githubusercontent.com/u/218836668?v=4",
+            "html_url": "https://github.com/skitSkills"
         }
     },
     {
-        "id": 1014392640,
-        "name": "MonadTestnet-Bot",
-        "full_name": "salukiDew/MonadTestnet-Bot",
-        "html_url": "https://github.com/salukiDew/MonadTestnet-Bot",
-        "description": "A bot for automated Monad Testnet farm",
-        "stargazers_count": 177,
+        "id": 1014948637,
+        "name": "CVE-2025-32023",
+        "full_name": "leesh3288/CVE-2025-32023",
+        "html_url": "https://github.com/leesh3288/CVE-2025-32023",
+        "description": "PoC & Exploit for CVE-2025-32023 / PlaidCTF 2025 \"Zerodeo\"",
+        "stargazers_count": 132,
         "language": "Python",
         "owner": {
-            "login": "salukiDew",
-            "avatar_url": "https://avatars.githubusercontent.com/u/15265196?v=4",
-            "html_url": "https://github.com/salukiDew"
+            "login": "leesh3288",
+            "avatar_url": "https://avatars.githubusercontent.com/u/17825906?v=4",
+            "html_url": "https://github.com/leesh3288"
         }
     },
     {
-        "id": 1014385418,
-        "name": "grass-bot",
-        "full_name": "salukiDew/grass-bot",
-        "html_url": "https://github.com/salukiDew/grass-bot",
-        "description": "bot for automated grass farming",
-        "stargazers_count": 174,
+        "id": 1015615278,
+        "name": "Ai-Novel-Editor",
+        "full_name": "inliver233/Ai-Novel-Editor",
+        "html_url": "https://github.com/inliver233/Ai-Novel-Editor",
+        "description": "\u4f7f\u7528python+pyqt6\u5b9e\u73b0\u7684ai\u8f85\u52a9\u5c0f\u8bf4\u7f16\u8f91\u5668",
+        "stargazers_count": 131,
         "language": "Python",
         "owner": {
-            "login": "salukiDew",
-            "avatar_url": "https://avatars.githubusercontent.com/u/15265196?v=4",
-            "html_url": "https://github.com/salukiDew"
+            "login": "inliver233",
+            "avatar_url": "https://avatars.githubusercontent.com/u/148784533?v=4",
+            "html_url": "https://github.com/inliver233"
         }
     }
 ]
