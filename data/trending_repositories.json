@@ -5,7 +5,7 @@
         "full_name": "MemTensor/MemOS",
         "html_url": "https://github.com/MemTensor/MemOS",
         "description": "MemOS (Preview) | Intelligence Begins with Memory",
-        "stargazers_count": 953,
+        "stargazers_count": 1166,
         "language": "Python",
         "owner": {
             "login": "MemTensor",
@@ -19,7 +19,7 @@
         "full_name": "bytillo/spyder-osint",
         "html_url": "https://github.com/bytillo/spyder-osint",
         "description": "An universal open-source intelligence (OSINT) research tool that performs searches using large global databases.",
-        "stargazers_count": 574,
+        "stargazers_count": 582,
         "language": "Python",
         "owner": {
             "login": "bytillo",
@@ -33,7 +33,7 @@
         "full_name": "disler/claude-code-hooks-mastery",
         "html_url": "https://github.com/disler/claude-code-hooks-mastery",
         "description": null,
-        "stargazers_count": 162,
+        "stargazers_count": 184,
         "language": "Python",
         "owner": {
             "login": "disler",
@@ -42,45 +42,45 @@
         }
     },
     {
-        "id": 1016359454,
-        "name": "TikTok-Scraper-Video-Downloader-Auto-Reporter-2025",
-        "full_name": "skitSkills/TikTok-Scraper-Video-Downloader-Auto-Reporter-2025",
-        "html_url": "https://github.com/skitSkills/TikTok-Scraper-Video-Downloader-Auto-Reporter-2025",
-        "description": "An All-In-1 TikTok marketing bot for scraping, Download videos without watermarks and auto-reporter",
-        "stargazers_count": 134,
+        "id": 1016795345,
+        "name": "grass-bot",
+        "full_name": "braindotcode/grass-bot",
+        "html_url": "https://github.com/braindotcode/grass-bot",
+        "description": "bot for automated grass farming",
+        "stargazers_count": 176,
         "language": "Python",
         "owner": {
-            "login": "skitSkills",
-            "avatar_url": "https://avatars.githubusercontent.com/u/218836668?v=4",
-            "html_url": "https://github.com/skitSkills"
+            "login": "braindotcode",
+            "avatar_url": "https://avatars.githubusercontent.com/u/219168235?v=4",
+            "html_url": "https://github.com/braindotcode"
         }
     },
     {
-        "id": 1014948637,
-        "name": "CVE-2025-32023",
-        "full_name": "leesh3288/CVE-2025-32023",
-        "html_url": "https://github.com/leesh3288/CVE-2025-32023",
-        "description": "PoC & Exploit for CVE-2025-32023 / PlaidCTF 2025 \"Zerodeo\"",
-        "stargazers_count": 132,
+        "id": 1016802650,
+        "name": "MonadTestnet-Bot",
+        "full_name": "NetherlandsDev/MonadTestnet-Bot",
+        "html_url": "https://github.com/NetherlandsDev/MonadTestnet-Bot",
+        "description": "A bot for automated Monad Testnet farm",
+        "stargazers_count": 166,
         "language": "Python",
         "owner": {
-            "login": "leesh3288",
-            "avatar_url": "https://avatars.githubusercontent.com/u/17825906?v=4",
-            "html_url": "https://github.com/leesh3288"
+            "login": "NetherlandsDev",
+            "avatar_url": "https://avatars.githubusercontent.com/u/219170528?v=4",
+            "html_url": "https://github.com/NetherlandsDev"
         }
     },
     {
-        "id": 1015615278,
-        "name": "Ai-Novel-Editor",
-        "full_name": "inliver233/Ai-Novel-Editor",
-        "html_url": "https://github.com/inliver233/Ai-Novel-Editor",
-        "description": "\u4f7f\u7528python+pyqt6\u5b9e\u73b0\u7684ai\u8f85\u52a9\u5c0f\u8bf4\u7f16\u8f91\u5668",
-        "stargazers_count": 131,
+        "id": 1014592707,
+        "name": "muvera-py",
+        "full_name": "sigridjineth/muvera-py",
+        "html_url": "https://github.com/sigridjineth/muvera-py",
+        "description": "Python Implementation of MUVERA (Multi-Vector Retrieval via Fixed Dimensional Encodings)",
+        "stargazers_count": 160,
         "language": "Python",
         "owner": {
-            "login": "inliver233",
-            "avatar_url": "https://avatars.githubusercontent.com/u/148784533?v=4",
-            "html_url": "https://github.com/inliver233"
+            "login": "sigridjineth",
+            "avatar_url": "https://avatars.githubusercontent.com/u/41055141?v=4",
+            "html_url": "https://github.com/sigridjineth"
         }
     }
 ]
