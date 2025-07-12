@@ -31,7 +31,7 @@
     "date-fns": "^4.1.0",
     "framer-motion": "^12.16.0",
     "jsonwebtoken": "^9.0.2",
-    "lucide-react": "^0.513.0",
+    "lucide-react": "^0.519.0",
     "mongoose": "^8.13.2",
     "next": "15.3.3",
     "next-auth": "^4.24.11",
