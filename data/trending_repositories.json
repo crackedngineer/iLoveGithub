@@ -5,7 +5,7 @@
         "full_name": "MemTensor/MemOS",
         "html_url": "https://github.com/MemTensor/MemOS",
         "description": "MemOS (Preview) | Intelligence Begins with Memory",
-        "stargazers_count": 1166,
+        "stargazers_count": 1321,
         "language": "Python",
         "owner": {
             "login": "MemTensor",
@@ -14,59 +14,45 @@
         }
     },
     {
-        "id": 1014411070,
-        "name": "spyder-osint",
-        "full_name": "bytillo/spyder-osint",
-        "html_url": "https://github.com/bytillo/spyder-osint",
-        "description": "An universal open-source intelligence (OSINT) research tool that performs searches using large global databases.",
-        "stargazers_count": 582,
-        "language": "Python",
-        "owner": {
-            "login": "bytillo",
-            "avatar_url": "https://avatars.githubusercontent.com/u/23452805?v=4",
-            "html_url": "https://github.com/bytillo"
-        }
-    },
-    {
-        "id": 1014394578,
-        "name": "claude-code-hooks-mastery",
-        "full_name": "disler/claude-code-hooks-mastery",
-        "html_url": "https://github.com/disler/claude-code-hooks-mastery",
+        "id": 1016883251,
+        "name": "torch-profiling-tutorial",
+        "full_name": "Quentin-Anthony/torch-profiling-tutorial",
+        "html_url": "https://github.com/Quentin-Anthony/torch-profiling-tutorial",
         "description": null,
-        "stargazers_count": 184,
+        "stargazers_count": 327,
         "language": "Python",
         "owner": {
-            "login": "disler",
-            "avatar_url": "https://avatars.githubusercontent.com/u/7570811?v=4",
-            "html_url": "https://github.com/disler"
+            "login": "Quentin-Anthony",
+            "avatar_url": "https://avatars.githubusercontent.com/u/10281105?v=4",
+            "html_url": "https://github.com/Quentin-Anthony"
         }
     },
     {
-        "id": 1016795345,
-        "name": "grass-bot",
-        "full_name": "braindotcode/grass-bot",
-        "html_url": "https://github.com/braindotcode/grass-bot",
-        "description": "bot for automated grass farming",
-        "stargazers_count": 176,
+        "id": 1016122840,
+        "name": "Long-RL",
+        "full_name": "NVlabs/Long-RL",
+        "html_url": "https://github.com/NVlabs/Long-RL",
+        "description": "Long-RL: Scaling RL to Long Sequences",
+        "stargazers_count": 287,
         "language": "Python",
         "owner": {
-            "login": "braindotcode",
-            "avatar_url": "https://avatars.githubusercontent.com/u/219168235?v=4",
-            "html_url": "https://github.com/braindotcode"
+            "login": "NVlabs",
+            "avatar_url": "https://avatars.githubusercontent.com/u/2695301?v=4",
+            "html_url": "https://github.com/NVlabs"
         }
     },
     {
-        "id": 1016802650,
-        "name": "MonadTestnet-Bot",
-        "full_name": "NetherlandsDev/MonadTestnet-Bot",
-        "html_url": "https://github.com/NetherlandsDev/MonadTestnet-Bot",
-        "description": "A bot for automated Monad Testnet farm",
-        "stargazers_count": 166,
+        "id": 1017408818,
+        "name": "grok-cli",
+        "full_name": "ComposioHQ/grok-cli",
+        "html_url": "https://github.com/ComposioHQ/grok-cli",
+        "description": null,
+        "stargazers_count": 206,
         "language": "Python",
         "owner": {
-            "login": "NetherlandsDev",
-            "avatar_url": "https://avatars.githubusercontent.com/u/219170528?v=4",
-            "html_url": "https://github.com/NetherlandsDev"
+            "login": "ComposioHQ",
+            "avatar_url": "https://avatars.githubusercontent.com/u/128464815?v=4",
+            "html_url": "https://github.com/ComposioHQ"
         }
     },
     {
@@ -75,12 +61,26 @@
         "full_name": "sigridjineth/muvera-py",
         "html_url": "https://github.com/sigridjineth/muvera-py",
         "description": "Python Implementation of MUVERA (Multi-Vector Retrieval via Fixed Dimensional Encodings)",
-        "stargazers_count": 160,
+        "stargazers_count": 174,
         "language": "Python",
         "owner": {
             "login": "sigridjineth",
             "avatar_url": "https://avatars.githubusercontent.com/u/41055141?v=4",
             "html_url": "https://github.com/sigridjineth"
+        }
+    },
+    {
+        "id": 1016795345,
+        "name": "grass-bot",
+        "full_name": "braindotcode/grass-bot",
+        "html_url": "https://github.com/braindotcode/grass-bot",
+        "description": "bot for automated grass farming",
+        "stargazers_count": 174,
+        "language": "Python",
+        "owner": {
+            "login": "braindotcode",
+            "avatar_url": "https://avatars.githubusercontent.com/u/219168235?v=4",
+            "html_url": "https://github.com/braindotcode"
         }
     }
 ]
