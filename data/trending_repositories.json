@@ -5,7 +5,7 @@
         "full_name": "Quentin-Anthony/torch-profiling-tutorial",
         "html_url": "https://github.com/Quentin-Anthony/torch-profiling-tutorial",
         "description": null,
-        "stargazers_count": 365,
+        "stargazers_count": 380,
         "language": "Python",
         "owner": {
             "login": "Quentin-Anthony",
@@ -19,7 +19,7 @@
         "full_name": "NVlabs/Long-RL",
         "html_url": "https://github.com/NVlabs/Long-RL",
         "description": "Long-RL: Scaling RL to Long Sequences",
-        "stargazers_count": 325,
+        "stargazers_count": 361,
         "language": "Python",
         "owner": {
             "login": "NVlabs",
@@ -33,12 +33,26 @@
         "full_name": "ComposioHQ/grok-cli",
         "html_url": "https://github.com/ComposioHQ/grok-cli",
         "description": null,
-        "stargazers_count": 242,
+        "stargazers_count": 265,
         "language": "Python",
         "owner": {
             "login": "ComposioHQ",
             "avatar_url": "https://avatars.githubusercontent.com/u/128464815?v=4",
             "html_url": "https://github.com/ComposioHQ"
+        }
+    },
+    {
+        "id": 1017695393,
+        "name": "hnet",
+        "full_name": "goombalab/hnet",
+        "html_url": "https://github.com/goombalab/hnet",
+        "description": "H-Net: Hierarchical Network with Dynamic Chunking",
+        "stargazers_count": 205,
+        "language": "Python",
+        "owner": {
+            "login": "goombalab",
+            "avatar_url": "https://avatars.githubusercontent.com/u/133580860?v=4",
+            "html_url": "https://github.com/goombalab"
         }
     },
     {
@@ -67,20 +81,6 @@
             "login": "NetherlandsDev",
             "avatar_url": "https://avatars.githubusercontent.com/u/219170528?v=4",
             "html_url": "https://github.com/NetherlandsDev"
-        }
-    },
-    {
-        "id": 1015235906,
-        "name": "screenenv",
-        "full_name": "huggingface/screenenv",
-        "html_url": "https://github.com/huggingface/screenenv",
-        "description": "A powerful Python library for creating and managing isolated desktop environments using Docker containers.",
-        "stargazers_count": 142,
-        "language": "Python",
-        "owner": {
-            "login": "huggingface",
-            "avatar_url": "https://avatars.githubusercontent.com/u/25720743?v=4",
-            "html_url": "https://github.com/huggingface"
         }
     }
 ]
