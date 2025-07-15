@@ -5,7 +5,7 @@
         "full_name": "Quentin-Anthony/torch-profiling-tutorial",
         "html_url": "https://github.com/Quentin-Anthony/torch-profiling-tutorial",
         "description": null,
-        "stargazers_count": 380,
+        "stargazers_count": 391,
         "language": "Python",
         "owner": {
             "login": "Quentin-Anthony",
@@ -14,40 +14,12 @@
         }
     },
     {
-        "id": 1016122840,
-        "name": "Long-RL",
-        "full_name": "NVlabs/Long-RL",
-        "html_url": "https://github.com/NVlabs/Long-RL",
-        "description": "Long-RL: Scaling RL to Long Sequences",
-        "stargazers_count": 361,
-        "language": "Python",
-        "owner": {
-            "login": "NVlabs",
-            "avatar_url": "https://avatars.githubusercontent.com/u/2695301?v=4",
-            "html_url": "https://github.com/NVlabs"
-        }
-    },
-    {
-        "id": 1017408818,
-        "name": "grok-cli",
-        "full_name": "ComposioHQ/grok-cli",
-        "html_url": "https://github.com/ComposioHQ/grok-cli",
-        "description": null,
-        "stargazers_count": 265,
-        "language": "Python",
-        "owner": {
-            "login": "ComposioHQ",
-            "avatar_url": "https://avatars.githubusercontent.com/u/128464815?v=4",
-            "html_url": "https://github.com/ComposioHQ"
-        }
-    },
-    {
         "id": 1017695393,
         "name": "hnet",
         "full_name": "goombalab/hnet",
         "html_url": "https://github.com/goombalab/hnet",
         "description": "H-Net: Hierarchical Network with Dynamic Chunking",
-        "stargazers_count": 205,
+        "stargazers_count": 284,
         "language": "Python",
         "owner": {
             "login": "goombalab",
@@ -56,31 +28,59 @@
         }
     },
     {
-        "id": 1016795345,
-        "name": "grass-bot",
-        "full_name": "braindotcode/grass-bot",
-        "html_url": "https://github.com/braindotcode/grass-bot",
-        "description": "bot for automated grass farming",
-        "stargazers_count": 175,
+        "id": 1017408818,
+        "name": "grok-cli",
+        "full_name": "ComposioHQ/grok-cli",
+        "html_url": "https://github.com/ComposioHQ/grok-cli",
+        "description": null,
+        "stargazers_count": 281,
         "language": "Python",
         "owner": {
-            "login": "braindotcode",
-            "avatar_url": "https://avatars.githubusercontent.com/u/219168235?v=4",
-            "html_url": "https://github.com/braindotcode"
+            "login": "ComposioHQ",
+            "avatar_url": "https://avatars.githubusercontent.com/u/128464815?v=4",
+            "html_url": "https://github.com/ComposioHQ"
         }
     },
     {
-        "id": 1016802650,
-        "name": "MonadTestnet-Bot",
-        "full_name": "NetherlandsDev/MonadTestnet-Bot",
-        "html_url": "https://github.com/NetherlandsDev/MonadTestnet-Bot",
-        "description": "A bot for automated Monad Testnet farm",
-        "stargazers_count": 166,
+        "id": 1019432292,
+        "name": "Gift-Buyer-Tg",
+        "full_name": "acuraNJoyer/Gift-Buyer-Tg",
+        "html_url": "https://github.com/acuraNJoyer/Gift-Buyer-Tg",
+        "description": "A bot that searches for available gifts and purchases them based on your criteria. Supports integration with Telegram.",
+        "stargazers_count": 209,
         "language": "Python",
         "owner": {
-            "login": "NetherlandsDev",
-            "avatar_url": "https://avatars.githubusercontent.com/u/219170528?v=4",
-            "html_url": "https://github.com/NetherlandsDev"
+            "login": "acuraNJoyer",
+            "avatar_url": "https://avatars.githubusercontent.com/u/219167795?v=4",
+            "html_url": "https://github.com/acuraNJoyer"
+        }
+    },
+    {
+        "id": 1017951687,
+        "name": "decky-lossless-scaling-vk",
+        "full_name": "xXJSONDeruloXx/decky-lossless-scaling-vk",
+        "html_url": "https://github.com/xXJSONDeruloXx/decky-lossless-scaling-vk",
+        "description": "Decky plugin to streamline installation and usage of lsfg-vk; the Lossless Scaling compatibility layer for linux",
+        "stargazers_count": 203,
+        "language": "Python",
+        "owner": {
+            "login": "xXJSONDeruloXx",
+            "avatar_url": "https://avatars.githubusercontent.com/u/136133082?v=4",
+            "html_url": "https://github.com/xXJSONDeruloXx"
+        }
+    },
+    {
+        "id": 1017715831,
+        "name": "chrome-x-browser-validation-header",
+        "full_name": "dsekz/chrome-x-browser-validation-header",
+        "html_url": "https://github.com/dsekz/chrome-x-browser-validation-header",
+        "description": "Reverse engineering and generation toolkit for Chrome's private x-browser-validation header, used for integrity.",
+        "stargazers_count": 179,
+        "language": "Python",
+        "owner": {
+            "login": "dsekz",
+            "avatar_url": "https://avatars.githubusercontent.com/u/72318654?v=4",
+            "html_url": "https://github.com/dsekz"
         }
     }
 ]
