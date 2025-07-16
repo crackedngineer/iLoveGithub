@@ -1,25 +1,11 @@
 [
     {
-        "id": 1016883251,
-        "name": "torch-profiling-tutorial",
-        "full_name": "Quentin-Anthony/torch-profiling-tutorial",
-        "html_url": "https://github.com/Quentin-Anthony/torch-profiling-tutorial",
-        "description": null,
-        "stargazers_count": 391,
-        "language": "Python",
-        "owner": {
-            "login": "Quentin-Anthony",
-            "avatar_url": "https://avatars.githubusercontent.com/u/10281105?v=4",
-            "html_url": "https://github.com/Quentin-Anthony"
-        }
-    },
-    {
         "id": 1017695393,
         "name": "hnet",
         "full_name": "goombalab/hnet",
         "html_url": "https://github.com/goombalab/hnet",
         "description": "H-Net: Hierarchical Network with Dynamic Chunking",
-        "stargazers_count": 284,
+        "stargazers_count": 367,
         "language": "Python",
         "owner": {
             "login": "goombalab",
@@ -33,7 +19,7 @@
         "full_name": "ComposioHQ/grok-cli",
         "html_url": "https://github.com/ComposioHQ/grok-cli",
         "description": null,
-        "stargazers_count": 281,
+        "stargazers_count": 290,
         "language": "Python",
         "owner": {
             "login": "ComposioHQ",
@@ -42,26 +28,12 @@
         }
     },
     {
-        "id": 1019432292,
-        "name": "Gift-Buyer-Tg",
-        "full_name": "acuraNJoyer/Gift-Buyer-Tg",
-        "html_url": "https://github.com/acuraNJoyer/Gift-Buyer-Tg",
-        "description": "A bot that searches for available gifts and purchases them based on your criteria. Supports integration with Telegram.",
-        "stargazers_count": 209,
-        "language": "Python",
-        "owner": {
-            "login": "acuraNJoyer",
-            "avatar_url": "https://avatars.githubusercontent.com/u/219167795?v=4",
-            "html_url": "https://github.com/acuraNJoyer"
-        }
-    },
-    {
         "id": 1017951687,
         "name": "decky-lossless-scaling-vk",
         "full_name": "xXJSONDeruloXx/decky-lossless-scaling-vk",
         "html_url": "https://github.com/xXJSONDeruloXx/decky-lossless-scaling-vk",
         "description": "Decky plugin to streamline installation and usage of lsfg-vk; the Lossless Scaling compatibility layer for linux",
-        "stargazers_count": 203,
+        "stargazers_count": 281,
         "language": "Python",
         "owner": {
             "login": "xXJSONDeruloXx",
@@ -70,12 +42,40 @@
         }
     },
     {
+        "id": 1019018368,
+        "name": "Ai-Punk",
+        "full_name": "netsky-devel/Ai-Punk",
+        "html_url": "https://github.com/netsky-devel/Ai-Punk",
+        "description": "AI Punk is an advanced autonomous AI assistant  ",
+        "stargazers_count": 212,
+        "language": "Python",
+        "owner": {
+            "login": "netsky-devel",
+            "avatar_url": "https://avatars.githubusercontent.com/u/216619659?v=4",
+            "html_url": "https://github.com/netsky-devel"
+        }
+    },
+    {
+        "id": 1019432292,
+        "name": "Gift-Buyer-Tg",
+        "full_name": "acuraNJoyer/Gift-Buyer-Tg",
+        "html_url": "https://github.com/acuraNJoyer/Gift-Buyer-Tg",
+        "description": "A bot that searches for available gifts and purchases them based on your criteria. Supports integration with Telegram.",
+        "stargazers_count": 211,
+        "language": "Python",
+        "owner": {
+            "login": "acuraNJoyer",
+            "avatar_url": "https://avatars.githubusercontent.com/u/219167795?v=4",
+            "html_url": "https://github.com/acuraNJoyer"
+        }
+    },
+    {
         "id": 1017715831,
         "name": "chrome-x-browser-validation-header",
         "full_name": "dsekz/chrome-x-browser-validation-header",
         "html_url": "https://github.com/dsekz/chrome-x-browser-validation-header",
         "description": "Reverse engineering and generation toolkit for Chrome's private x-browser-validation header, used for integrity.",
-        "stargazers_count": 179,
+        "stargazers_count": 188,
         "language": "Python",
         "owner": {
             "login": "dsekz",
