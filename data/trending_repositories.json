@@ -1,11 +1,25 @@
 [
     {
+        "id": 1020430400,
+        "name": "make-it-heavy",
+        "full_name": "Doriandarko/make-it-heavy",
+        "html_url": "https://github.com/Doriandarko/make-it-heavy",
+        "description": "A Python framework that emulates Grok Heavy functionality using intelligent multi-agent orchestration. Deploy 4 (or more) specialized AI agents in parallel to deliver comprehensive, multi-perspective analysis on any query.",
+        "stargazers_count": 518,
+        "language": "Python",
+        "owner": {
+            "login": "Doriandarko",
+            "avatar_url": "https://avatars.githubusercontent.com/u/1247180?v=4",
+            "html_url": "https://github.com/Doriandarko"
+        }
+    },
+    {
         "id": 1017695393,
         "name": "hnet",
         "full_name": "goombalab/hnet",
         "html_url": "https://github.com/goombalab/hnet",
         "description": "H-Net: Hierarchical Network with Dynamic Chunking",
-        "stargazers_count": 367,
+        "stargazers_count": 395,
         "language": "Python",
         "owner": {
             "login": "goombalab",
@@ -14,26 +28,12 @@
         }
     },
     {
-        "id": 1017408818,
-        "name": "grok-cli",
-        "full_name": "ComposioHQ/grok-cli",
-        "html_url": "https://github.com/ComposioHQ/grok-cli",
-        "description": null,
-        "stargazers_count": 290,
-        "language": "Python",
-        "owner": {
-            "login": "ComposioHQ",
-            "avatar_url": "https://avatars.githubusercontent.com/u/128464815?v=4",
-            "html_url": "https://github.com/ComposioHQ"
-        }
-    },
-    {
         "id": 1017951687,
         "name": "decky-lossless-scaling-vk",
         "full_name": "xXJSONDeruloXx/decky-lossless-scaling-vk",
         "html_url": "https://github.com/xXJSONDeruloXx/decky-lossless-scaling-vk",
         "description": "Decky plugin to streamline installation and usage of lsfg-vk; the Lossless Scaling compatibility layer for linux",
-        "stargazers_count": 281,
+        "stargazers_count": 325,
         "language": "Python",
         "owner": {
             "login": "xXJSONDeruloXx",
@@ -47,7 +47,7 @@
         "full_name": "netsky-devel/Ai-Punk",
         "html_url": "https://github.com/netsky-devel/Ai-Punk",
         "description": "AI Punk is an advanced autonomous AI assistant  ",
-        "stargazers_count": 212,
+        "stargazers_count": 215,
         "language": "Python",
         "owner": {
             "login": "netsky-devel",
@@ -61,7 +61,7 @@
         "full_name": "acuraNJoyer/Gift-Buyer-Tg",
         "html_url": "https://github.com/acuraNJoyer/Gift-Buyer-Tg",
         "description": "A bot that searches for available gifts and purchases them based on your criteria. Supports integration with Telegram.",
-        "stargazers_count": 211,
+        "stargazers_count": 212,
         "language": "Python",
         "owner": {
             "login": "acuraNJoyer",
@@ -75,7 +75,7 @@
         "full_name": "dsekz/chrome-x-browser-validation-header",
         "html_url": "https://github.com/dsekz/chrome-x-browser-validation-header",
         "description": "Reverse engineering and generation toolkit for Chrome's private x-browser-validation header, used for integrity.",
-        "stargazers_count": 188,
+        "stargazers_count": 194,
         "language": "Python",
         "owner": {
             "login": "dsekz",
