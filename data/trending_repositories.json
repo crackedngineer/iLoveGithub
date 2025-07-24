@@ -1,67 +1,11 @@
 [
     {
-        "id": 1021235121,
-        "name": "CommonGround",
-        "full_name": "Intelligent-Internet/CommonGround",
-        "html_url": "https://github.com/Intelligent-Internet/CommonGround",
-        "description": "An open-source application for building, observing, and collaborating with teams of AI agents.",
-        "stargazers_count": 320,
-        "language": "Python",
-        "owner": {
-            "login": "Intelligent-Internet",
-            "avatar_url": "https://avatars.githubusercontent.com/u/173073912?v=4",
-            "html_url": "https://github.com/Intelligent-Internet"
-        }
-    },
-    {
-        "id": 1021676448,
-        "name": "VisionThink",
-        "full_name": "dvlab-research/VisionThink",
-        "html_url": "https://github.com/dvlab-research/VisionThink",
-        "description": "Efficient Reasoning Vision Language Models",
-        "stargazers_count": 286,
-        "language": "Python",
-        "owner": {
-            "login": "dvlab-research",
-            "avatar_url": "https://avatars.githubusercontent.com/u/64006090?v=4",
-            "html_url": "https://github.com/dvlab-research"
-        }
-    },
-    {
-        "id": 1021827990,
-        "name": "OxyGent",
-        "full_name": "jd-opensource/OxyGent",
-        "html_url": "https://github.com/jd-opensource/OxyGent",
-        "description": "Multi-agent collaboration framework",
-        "stargazers_count": 240,
-        "language": "Python",
-        "owner": {
-            "login": "jd-opensource",
-            "avatar_url": "https://avatars.githubusercontent.com/u/75349771?v=4",
-            "html_url": "https://github.com/jd-opensource"
-        }
-    },
-    {
-        "id": 1022435100,
-        "name": "blastoff-llm",
-        "full_name": "realtime-ai/blastoff-llm",
-        "html_url": "https://github.com/realtime-ai/blastoff-llm",
-        "description": "a super fast llm response using small llm model to prefix large llm model",
-        "stargazers_count": 198,
-        "language": "Python",
-        "owner": {
-            "login": "realtime-ai",
-            "avatar_url": "https://avatars.githubusercontent.com/u/175193266?v=4",
-            "html_url": "https://github.com/realtime-ai"
-        }
-    },
-    {
         "id": 1022907328,
         "name": "higgs-audio",
         "full_name": "boson-ai/higgs-audio",
         "html_url": "https://github.com/boson-ai/higgs-audio",
         "description": "Text-audio foundation model from Boson AI",
-        "stargazers_count": 190,
+        "stargazers_count": 2676,
         "language": "Python",
         "owner": {
             "login": "boson-ai",
@@ -70,12 +14,68 @@
         }
     },
     {
+        "id": 1021827990,
+        "name": "OxyGent",
+        "full_name": "jd-opensource/OxyGent",
+        "html_url": "https://github.com/jd-opensource/OxyGent",
+        "description": "Multi-agent collaboration framework",
+        "stargazers_count": 383,
+        "language": "Python",
+        "owner": {
+            "login": "jd-opensource",
+            "avatar_url": "https://avatars.githubusercontent.com/u/75349771?v=4",
+            "html_url": "https://github.com/jd-opensource"
+        }
+    },
+    {
+        "id": 1024559174,
+        "name": "wtffmpeg",
+        "full_name": "scottvr/wtffmpeg",
+        "html_url": "https://github.com/scottvr/wtffmpeg",
+        "description": "a toy that has a local llm spit out ffmpeg commands from natural language prompts on the command-line",
+        "stargazers_count": 209,
+        "language": "Python",
+        "owner": {
+            "login": "scottvr",
+            "avatar_url": "https://avatars.githubusercontent.com/u/7464239?v=4",
+            "html_url": "https://github.com/scottvr"
+        }
+    },
+    {
+        "id": 1022435100,
+        "name": "blastoff-llm",
+        "full_name": "realtime-ai/blastoff-llm",
+        "html_url": "https://github.com/realtime-ai/blastoff-llm",
+        "description": "a super fast llm response using small llm model to prefix large llm model",
+        "stargazers_count": 205,
+        "language": "Python",
+        "owner": {
+            "login": "realtime-ai",
+            "avatar_url": "https://avatars.githubusercontent.com/u/175193266?v=4",
+            "html_url": "https://github.com/realtime-ai"
+        }
+    },
+    {
+        "id": 1023658638,
+        "name": "CVE-2025-53770-Exploit",
+        "full_name": "soltanali0/CVE-2025-53770-Exploit",
+        "html_url": "https://github.com/soltanali0/CVE-2025-53770-Exploit",
+        "description": "SharePoint WebPart Injection Exploit Tool",
+        "stargazers_count": 176,
+        "language": "Python",
+        "owner": {
+            "login": "soltanali0",
+            "avatar_url": "https://avatars.githubusercontent.com/u/87374678?v=4",
+            "html_url": "https://github.com/soltanali0"
+        }
+    },
+    {
         "id": 1022130788,
         "name": "python-udemy",
         "full_name": "hiteshchoudhary/python-udemy",
         "html_url": "https://github.com/hiteshchoudhary/python-udemy",
         "description": "python-udemy",
-        "stargazers_count": 141,
+        "stargazers_count": 148,
         "language": "Python",
         "owner": {
             "login": "hiteshchoudhary",
