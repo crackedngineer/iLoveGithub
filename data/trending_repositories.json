@@ -5,7 +5,7 @@
         "full_name": "boson-ai/higgs-audio",
         "html_url": "https://github.com/boson-ai/higgs-audio",
         "description": "Text-audio foundation model from Boson AI",
-        "stargazers_count": 2676,
+        "stargazers_count": 3651,
         "language": "Python",
         "owner": {
             "login": "boson-ai",
@@ -14,26 +14,12 @@
         }
     },
     {
-        "id": 1021827990,
-        "name": "OxyGent",
-        "full_name": "jd-opensource/OxyGent",
-        "html_url": "https://github.com/jd-opensource/OxyGent",
-        "description": "Multi-agent collaboration framework",
-        "stargazers_count": 383,
-        "language": "Python",
-        "owner": {
-            "login": "jd-opensource",
-            "avatar_url": "https://avatars.githubusercontent.com/u/75349771?v=4",
-            "html_url": "https://github.com/jd-opensource"
-        }
-    },
-    {
         "id": 1024559174,
         "name": "wtffmpeg",
         "full_name": "scottvr/wtffmpeg",
         "html_url": "https://github.com/scottvr/wtffmpeg",
         "description": "a toy that has a local llm spit out ffmpeg commands from natural language prompts on the command-line",
-        "stargazers_count": 209,
+        "stargazers_count": 244,
         "language": "Python",
         "owner": {
             "login": "scottvr",
@@ -47,7 +33,7 @@
         "full_name": "realtime-ai/blastoff-llm",
         "html_url": "https://github.com/realtime-ai/blastoff-llm",
         "description": "a super fast llm response using small llm model to prefix large llm model",
-        "stargazers_count": 205,
+        "stargazers_count": 214,
         "language": "Python",
         "owner": {
             "login": "realtime-ai",
@@ -61,7 +47,7 @@
         "full_name": "soltanali0/CVE-2025-53770-Exploit",
         "html_url": "https://github.com/soltanali0/CVE-2025-53770-Exploit",
         "description": "SharePoint WebPart Injection Exploit Tool",
-        "stargazers_count": 176,
+        "stargazers_count": 199,
         "language": "Python",
         "owner": {
             "login": "soltanali0",
@@ -70,17 +56,31 @@
         }
     },
     {
-        "id": 1022130788,
-        "name": "python-udemy",
-        "full_name": "hiteshchoudhary/python-udemy",
-        "html_url": "https://github.com/hiteshchoudhary/python-udemy",
-        "description": "python-udemy",
-        "stargazers_count": 148,
+        "id": 1023334747,
+        "name": "DMOSpeech2",
+        "full_name": "yl4579/DMOSpeech2",
+        "html_url": "https://github.com/yl4579/DMOSpeech2",
+        "description": null,
+        "stargazers_count": 146,
         "language": "Python",
         "owner": {
-            "login": "hiteshchoudhary",
-            "avatar_url": "https://avatars.githubusercontent.com/u/11613311?v=4",
-            "html_url": "https://github.com/hiteshchoudhary"
+            "login": "yl4579",
+            "avatar_url": "https://avatars.githubusercontent.com/u/71044569?v=4",
+            "html_url": "https://github.com/yl4579"
+        }
+    },
+    {
+        "id": 1022906552,
+        "name": "IMO25",
+        "full_name": "lyang36/IMO25",
+        "html_url": "https://github.com/lyang36/IMO25",
+        "description": null,
+        "stargazers_count": 141,
+        "language": "Python",
+        "owner": {
+            "login": "lyang36",
+            "avatar_url": "https://avatars.githubusercontent.com/u/1485656?v=4",
+            "html_url": "https://github.com/lyang36"
         }
     }
 ]
