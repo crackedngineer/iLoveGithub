@@ -5,7 +5,7 @@
         "full_name": "boson-ai/higgs-audio",
         "html_url": "https://github.com/boson-ai/higgs-audio",
         "description": "Text-audio foundation model from Boson AI",
-        "stargazers_count": 3651,
+        "stargazers_count": 4586,
         "language": "Python",
         "owner": {
             "login": "boson-ai",
@@ -19,7 +19,7 @@
         "full_name": "scottvr/wtffmpeg",
         "html_url": "https://github.com/scottvr/wtffmpeg",
         "description": "a toy that has a local llm spit out ffmpeg commands from natural language prompts on the command-line",
-        "stargazers_count": 244,
+        "stargazers_count": 263,
         "language": "Python",
         "owner": {
             "login": "scottvr",
@@ -28,17 +28,17 @@
         }
     },
     {
-        "id": 1022435100,
-        "name": "blastoff-llm",
-        "full_name": "realtime-ai/blastoff-llm",
-        "html_url": "https://github.com/realtime-ai/blastoff-llm",
-        "description": "a super fast llm response using small llm model to prefix large llm model",
-        "stargazers_count": 214,
+        "id": 1022906552,
+        "name": "IMO25",
+        "full_name": "lyang36/IMO25",
+        "html_url": "https://github.com/lyang36/IMO25",
+        "description": null,
+        "stargazers_count": 229,
         "language": "Python",
         "owner": {
-            "login": "realtime-ai",
-            "avatar_url": "https://avatars.githubusercontent.com/u/175193266?v=4",
-            "html_url": "https://github.com/realtime-ai"
+            "login": "lyang36",
+            "avatar_url": "https://avatars.githubusercontent.com/u/1485656?v=4",
+            "html_url": "https://github.com/lyang36"
         }
     },
     {
@@ -47,7 +47,7 @@
         "full_name": "soltanali0/CVE-2025-53770-Exploit",
         "html_url": "https://github.com/soltanali0/CVE-2025-53770-Exploit",
         "description": "SharePoint WebPart Injection Exploit Tool",
-        "stargazers_count": 199,
+        "stargazers_count": 218,
         "language": "Python",
         "owner": {
             "login": "soltanali0",
@@ -56,31 +56,31 @@
         }
     },
     {
+        "id": 1023456048,
+        "name": "Chronos",
+        "full_name": "Kodezi/Chronos",
+        "html_url": "https://github.com/Kodezi/Chronos",
+        "description": "Kodezi Chronos Debugging-first language model achieving 65.3% autonomous bug fixing (6-7x better than GPT-4). Research, benchmarks & evaluation framework. Model available Q1 2026 via Kodezi OS.",
+        "stargazers_count": 156,
+        "language": "Python",
+        "owner": {
+            "login": "Kodezi",
+            "avatar_url": "https://avatars.githubusercontent.com/u/91817567?v=4",
+            "html_url": "https://github.com/Kodezi"
+        }
+    },
+    {
         "id": 1023334747,
         "name": "DMOSpeech2",
         "full_name": "yl4579/DMOSpeech2",
         "html_url": "https://github.com/yl4579/DMOSpeech2",
         "description": null,
-        "stargazers_count": 146,
+        "stargazers_count": 156,
         "language": "Python",
         "owner": {
             "login": "yl4579",
             "avatar_url": "https://avatars.githubusercontent.com/u/71044569?v=4",
             "html_url": "https://github.com/yl4579"
-        }
-    },
-    {
-        "id": 1022906552,
-        "name": "IMO25",
-        "full_name": "lyang36/IMO25",
-        "html_url": "https://github.com/lyang36/IMO25",
-        "description": null,
-        "stargazers_count": 141,
-        "language": "Python",
-        "owner": {
-            "login": "lyang36",
-            "avatar_url": "https://avatars.githubusercontent.com/u/1485656?v=4",
-            "html_url": "https://github.com/lyang36"
         }
     }
 ]
