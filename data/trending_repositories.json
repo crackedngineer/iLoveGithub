@@ -1,53 +1,11 @@
 [
     {
-        "id": 1024559174,
-        "name": "wtffmpeg",
-        "full_name": "scottvr/wtffmpeg",
-        "html_url": "https://github.com/scottvr/wtffmpeg",
-        "description": "a toy that has a local llm spit out ffmpeg commands from natural language prompts on the command-line",
-        "stargazers_count": 268,
-        "language": "Python",
-        "owner": {
-            "login": "scottvr",
-            "avatar_url": "https://avatars.githubusercontent.com/u/7464239?v=4",
-            "html_url": "https://github.com/scottvr"
-        }
-    },
-    {
-        "id": 1023456048,
-        "name": "Chronos",
-        "full_name": "Kodezi/Chronos",
-        "html_url": "https://github.com/Kodezi/Chronos",
-        "description": "Kodezi Chronos Debugging-first language model achieving 65.3% autonomous bug fixing (6-7x better than GPT-4). Research, benchmarks & evaluation framework. Model available Q1 2026 via Kodezi OS.",
-        "stargazers_count": 244,
-        "language": "Python",
-        "owner": {
-            "login": "Kodezi",
-            "avatar_url": "https://avatars.githubusercontent.com/u/91817567?v=4",
-            "html_url": "https://github.com/Kodezi"
-        }
-    },
-    {
-        "id": 1023658638,
-        "name": "CVE-2025-53770-Exploit",
-        "full_name": "soltanali0/CVE-2025-53770-Exploit",
-        "html_url": "https://github.com/soltanali0/CVE-2025-53770-Exploit",
-        "description": "SharePoint WebPart Injection Exploit Tool",
-        "stargazers_count": 222,
-        "language": "Python",
-        "owner": {
-            "login": "soltanali0",
-            "avatar_url": "https://avatars.githubusercontent.com/u/87374678?v=4",
-            "html_url": "https://github.com/soltanali0"
-        }
-    },
-    {
         "id": 1024955521,
         "name": "neuralagent",
         "full_name": "withneural/neuralagent",
         "html_url": "https://github.com/withneural/neuralagent",
         "description": "The AI Agent That Lives On Your Desktop And Uses It Like You Do!",
-        "stargazers_count": 219,
+        "stargazers_count": 273,
         "language": "Python",
         "owner": {
             "login": "withneural",
@@ -56,17 +14,17 @@
         }
     },
     {
-        "id": 1023334747,
-        "name": "DMOSpeech2",
-        "full_name": "yl4579/DMOSpeech2",
-        "html_url": "https://github.com/yl4579/DMOSpeech2",
-        "description": null,
-        "stargazers_count": 160,
+        "id": 1024559174,
+        "name": "wtffmpeg",
+        "full_name": "scottvr/wtffmpeg",
+        "html_url": "https://github.com/scottvr/wtffmpeg",
+        "description": "a toy that has a local llm spit out ffmpeg commands from natural language prompts on the command-line",
+        "stargazers_count": 271,
         "language": "Python",
         "owner": {
-            "login": "yl4579",
-            "avatar_url": "https://avatars.githubusercontent.com/u/71044569?v=4",
-            "html_url": "https://github.com/yl4579"
+            "login": "scottvr",
+            "avatar_url": "https://avatars.githubusercontent.com/u/7464239?v=4",
+            "html_url": "https://github.com/scottvr"
         }
     },
     {
@@ -75,12 +33,54 @@
         "full_name": "GakkiNoOne/hajimi-king",
         "html_url": "https://github.com/GakkiNoOne/hajimi-king",
         "description": "\u4eba\u4eba\u90fd\u662f\u54c8\u57fa\u7c73\u5927\u738b",
-        "stargazers_count": 124,
+        "stargazers_count": 159,
         "language": "Python",
         "owner": {
             "login": "GakkiNoOne",
             "avatar_url": "https://avatars.githubusercontent.com/u/215487802?v=4",
             "html_url": "https://github.com/GakkiNoOne"
+        }
+    },
+    {
+        "id": 1025527674,
+        "name": "TikTok-Downloader-Scraper-Reporter-2025",
+        "full_name": "CanTakeMore/TikTok-Downloader-Scraper-Reporter-2025",
+        "html_url": "https://github.com/CanTakeMore/TikTok-Downloader-Scraper-Reporter-2025",
+        "description": "TikTok tool to download any content without watermarks. Scrape endless comments, profile pictures and more! ",
+        "stargazers_count": 97,
+        "language": "Python",
+        "owner": {
+            "login": "CanTakeMore",
+            "avatar_url": "https://avatars.githubusercontent.com/u/222616360?v=4",
+            "html_url": "https://github.com/CanTakeMore"
+        }
+    },
+    {
+        "id": 1027129540,
+        "name": "claude-setup",
+        "full_name": "AizenvoltPrime/claude-setup",
+        "html_url": "https://github.com/AizenvoltPrime/claude-setup",
+        "description": null,
+        "stargazers_count": 92,
+        "language": "Python",
+        "owner": {
+            "login": "AizenvoltPrime",
+            "avatar_url": "https://avatars.githubusercontent.com/u/30220416?v=4",
+            "html_url": "https://github.com/AizenvoltPrime"
+        }
+    },
+    {
+        "id": 1024099621,
+        "name": "predictingthepast",
+        "full_name": "google-deepmind/predictingthepast",
+        "html_url": "https://github.com/google-deepmind/predictingthepast",
+        "description": null,
+        "stargazers_count": 86,
+        "language": "Python",
+        "owner": {
+            "login": "google-deepmind",
+            "avatar_url": "https://avatars.githubusercontent.com/u/8596759?v=4",
+            "html_url": "https://github.com/google-deepmind"
         }
     }
 ]
