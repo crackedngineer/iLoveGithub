@@ -4,8 +4,8 @@
         "name": "Wan2.2",
         "full_name": "Wan-Video/Wan2.2",
         "html_url": "https://github.com/Wan-Video/Wan2.2",
-        "description": null,
-        "stargazers_count": 951,
+        "description": "Wan: Open and Advanced Large-Scale Video Generative Models",
+        "stargazers_count": 1660,
         "language": "Python",
         "owner": {
             "login": "Wan-Video",
@@ -19,7 +19,7 @@
         "full_name": "brennercruvinel/CCPlugins",
         "html_url": "https://github.com/brennercruvinel/CCPlugins",
         "description": "Claude Code Plugins that actually save time. Built by a dev tired of typing please act like a senior engineer in every conversation.",
-        "stargazers_count": 521,
+        "stargazers_count": 767,
         "language": "Python",
         "owner": {
             "login": "brennercruvinel",
@@ -28,26 +28,12 @@
         }
     },
     {
-        "id": 1024955521,
-        "name": "neuralagent",
-        "full_name": "withneural/neuralagent",
-        "html_url": "https://github.com/withneural/neuralagent",
-        "description": "The AI Agent That Lives On Your Desktop And Uses It Like You Do!",
-        "stargazers_count": 358,
-        "language": "Python",
-        "owner": {
-            "login": "withneural",
-            "avatar_url": "https://avatars.githubusercontent.com/u/190616990?v=4",
-            "html_url": "https://github.com/withneural"
-        }
-    },
-    {
         "id": 1025956306,
         "name": "hajimi-king",
         "full_name": "GakkiNoOne/hajimi-king",
         "html_url": "https://github.com/GakkiNoOne/hajimi-king",
         "description": "\u4eba\u4eba\u90fd\u662f\u54c8\u57fa\u7c73\u5927\u738b",
-        "stargazers_count": 203,
+        "stargazers_count": 217,
         "language": "Python",
         "owner": {
             "login": "GakkiNoOne",
@@ -61,7 +47,7 @@
         "full_name": "AizenvoltPrime/claude-setup",
         "html_url": "https://github.com/AizenvoltPrime/claude-setup",
         "description": null,
-        "stargazers_count": 126,
+        "stargazers_count": 148,
         "language": "Python",
         "owner": {
             "login": "AizenvoltPrime",
@@ -70,12 +56,26 @@
         }
     },
     {
+        "id": 1026796723,
+        "name": "terminal-bench-rl",
+        "full_name": "Danau5tin/terminal-bench-rl",
+        "html_url": "https://github.com/Danau5tin/terminal-bench-rl",
+        "description": "GRPO training code which scales to 32xH100s for long horizon terminal/coding tasks. Base agent is now the top Qwen3 agent on Stanford's TerminalBench leaderboard.",
+        "stargazers_count": 131,
+        "language": "Python",
+        "owner": {
+            "login": "Danau5tin",
+            "avatar_url": "https://avatars.githubusercontent.com/u/58129064?v=4",
+            "html_url": "https://github.com/Danau5tin"
+        }
+    },
+    {
         "id": 1025311627,
         "name": "Elevate3D",
         "full_name": "ryunuri/Elevate3D",
         "html_url": "https://github.com/ryunuri/Elevate3D",
         "description": null,
-        "stargazers_count": 106,
+        "stargazers_count": 116,
         "language": "Python",
         "owner": {
             "login": "ryunuri",
