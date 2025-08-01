@@ -5,7 +5,7 @@
         "full_name": "Wan-Video/Wan2.2",
         "html_url": "https://github.com/Wan-Video/Wan2.2",
         "description": "Wan: Open and Advanced Large-Scale Video Generative Models",
-        "stargazers_count": 1931,
+        "stargazers_count": 2107,
         "language": "Python",
         "owner": {
             "login": "Wan-Video",
@@ -14,54 +14,12 @@
         }
     },
     {
-        "id": 1025924157,
-        "name": "CCPlugins",
-        "full_name": "brennercruvinel/CCPlugins",
-        "html_url": "https://github.com/brennercruvinel/CCPlugins",
-        "description": "Claude Code Plugins that actually save time. Built by a dev tired of typing please act like a senior engineer in every conversation.",
-        "stargazers_count": 889,
-        "language": "Python",
-        "owner": {
-            "login": "brennercruvinel",
-            "avatar_url": "https://avatars.githubusercontent.com/u/6767715?v=4",
-            "html_url": "https://github.com/brennercruvinel"
-        }
-    },
-    {
-        "id": 1025956306,
-        "name": "hajimi-king",
-        "full_name": "GakkiNoOne/hajimi-king",
-        "html_url": "https://github.com/GakkiNoOne/hajimi-king",
-        "description": "\u4eba\u4eba\u90fd\u662f\u54c8\u57fa\u7c73\u5927\u738b",
-        "stargazers_count": 266,
-        "language": "Python",
-        "owner": {
-            "login": "GakkiNoOne",
-            "avatar_url": "https://avatars.githubusercontent.com/u/215487802?v=4",
-            "html_url": "https://github.com/GakkiNoOne"
-        }
-    },
-    {
-        "id": 1026796723,
-        "name": "terminal-bench-rl",
-        "full_name": "Danau5tin/terminal-bench-rl",
-        "html_url": "https://github.com/Danau5tin/terminal-bench-rl",
-        "description": "GRPO training code which scales to 32xH100s for long horizon terminal/coding tasks. Base agent is now the top Qwen3 agent on Stanford's TerminalBench leaderboard.",
-        "stargazers_count": 191,
-        "language": "Python",
-        "owner": {
-            "login": "Danau5tin",
-            "avatar_url": "https://avatars.githubusercontent.com/u/58129064?v=4",
-            "html_url": "https://github.com/Danau5tin"
-        }
-    },
-    {
         "id": 1027384981,
         "name": "deepagents",
         "full_name": "hwchase17/deepagents",
         "html_url": "https://github.com/hwchase17/deepagents",
         "description": null,
-        "stargazers_count": 157,
+        "stargazers_count": 447,
         "language": "Python",
         "owner": {
             "login": "hwchase17",
@@ -70,12 +28,54 @@
         }
     },
     {
+        "id": 1026796723,
+        "name": "terminal-bench-rl",
+        "full_name": "Danau5tin/terminal-bench-rl",
+        "html_url": "https://github.com/Danau5tin/terminal-bench-rl",
+        "description": "GRPO training code which scales to 32xH100s for long horizon terminal/coding tasks. Base agent is now the top Qwen3 agent on Stanford's TerminalBench leaderboard.",
+        "stargazers_count": 200,
+        "language": "Python",
+        "owner": {
+            "login": "Danau5tin",
+            "avatar_url": "https://avatars.githubusercontent.com/u/58129064?v=4",
+            "html_url": "https://github.com/Danau5tin"
+        }
+    },
+    {
+        "id": 1027015746,
+        "name": "UniPic",
+        "full_name": "SkyworkAI/UniPic",
+        "html_url": "https://github.com/SkyworkAI/UniPic",
+        "description": "Unified Autoregressive Modeling for Visual Understanding and Generation",
+        "stargazers_count": 182,
+        "language": "Python",
+        "owner": {
+            "login": "SkyworkAI",
+            "avatar_url": "https://avatars.githubusercontent.com/u/147303017?v=4",
+            "html_url": "https://github.com/SkyworkAI"
+        }
+    },
+    {
+        "id": 1028340729,
+        "name": "X-Omni",
+        "full_name": "X-Omni-Team/X-Omni",
+        "html_url": "https://github.com/X-Omni-Team/X-Omni",
+        "description": "Official inference code and LongText-Bench benchmark for our paper X-Omni (https://arxiv.org/pdf/2507.22058).",
+        "stargazers_count": 174,
+        "language": "Python",
+        "owner": {
+            "login": "X-Omni-Team",
+            "avatar_url": "https://avatars.githubusercontent.com/u/221924515?v=4",
+            "html_url": "https://github.com/X-Omni-Team"
+        }
+    },
+    {
         "id": 1027129540,
         "name": "claude-setup",
         "full_name": "AizenvoltPrime/claude-setup",
         "html_url": "https://github.com/AizenvoltPrime/claude-setup",
         "description": null,
-        "stargazers_count": 155,
+        "stargazers_count": 160,
         "language": "Python",
         "owner": {
             "login": "AizenvoltPrime",
