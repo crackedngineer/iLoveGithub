@@ -5,7 +5,7 @@
         "full_name": "Wan-Video/Wan2.2",
         "html_url": "https://github.com/Wan-Video/Wan2.2",
         "description": "Wan: Open and Advanced Large-Scale Video Generative Models",
-        "stargazers_count": 2195,
+        "stargazers_count": 2258,
         "language": "Python",
         "owner": {
             "login": "Wan-Video",
@@ -14,26 +14,12 @@
         }
     },
     {
-        "id": 1027384981,
-        "name": "deepagents",
-        "full_name": "hwchase17/deepagents",
-        "html_url": "https://github.com/hwchase17/deepagents",
-        "description": null,
-        "stargazers_count": 602,
-        "language": "Python",
-        "owner": {
-            "login": "hwchase17",
-            "avatar_url": "https://avatars.githubusercontent.com/u/11986836?v=4",
-            "html_url": "https://github.com/hwchase17"
-        }
-    },
-    {
         "id": 1028989499,
         "name": "dots.ocr",
         "full_name": "rednote-hilab/dots.ocr",
         "html_url": "https://github.com/rednote-hilab/dots.ocr",
         "description": "Multilingual Document Layout Parsing in a Single Vision-Language Model",
-        "stargazers_count": 209,
+        "stargazers_count": 340,
         "language": "Python",
         "owner": {
             "login": "rednote-hilab",
@@ -42,26 +28,12 @@
         }
     },
     {
-        "id": 1027015746,
-        "name": "UniPic",
-        "full_name": "SkyworkAI/UniPic",
-        "html_url": "https://github.com/SkyworkAI/UniPic",
-        "description": "Unified Autoregressive Modeling for Visual Understanding and Generation",
-        "stargazers_count": 209,
-        "language": "Python",
-        "owner": {
-            "login": "SkyworkAI",
-            "avatar_url": "https://avatars.githubusercontent.com/u/147303017?v=4",
-            "html_url": "https://github.com/SkyworkAI"
-        }
-    },
-    {
         "id": 1029550379,
         "name": "openbench",
         "full_name": "groq/openbench",
         "html_url": "https://github.com/groq/openbench",
         "description": "Provider-agnostic, open-source evaluation infrastructure for language models",
-        "stargazers_count": 206,
+        "stargazers_count": 264,
         "language": "Python",
         "owner": {
             "login": "groq",
@@ -75,12 +47,40 @@
         "full_name": "X-Omni-Team/X-Omni",
         "html_url": "https://github.com/X-Omni-Team/X-Omni",
         "description": "Official inference code and LongText-Bench benchmark for our paper X-Omni (https://arxiv.org/pdf/2507.22058).",
-        "stargazers_count": 205,
+        "stargazers_count": 216,
         "language": "Python",
         "owner": {
             "login": "X-Omni-Team",
             "avatar_url": "https://avatars.githubusercontent.com/u/221924515?v=4",
             "html_url": "https://github.com/X-Omni-Team"
+        }
+    },
+    {
+        "id": 1027643050,
+        "name": "ScreenCoder",
+        "full_name": "leigest519/ScreenCoder",
+        "html_url": "https://github.com/leigest519/ScreenCoder",
+        "description": "ScreenCoder \u2014 Turn any UI screenshot into clean, editable HTML/CSS with full control. Fast, accurate, and easy to customize.",
+        "stargazers_count": 207,
+        "language": "Python",
+        "owner": {
+            "login": "leigest519",
+            "avatar_url": "https://avatars.githubusercontent.com/u/57628855?v=4",
+            "html_url": "https://github.com/leigest519"
+        }
+    },
+    {
+        "id": 1029237831,
+        "name": "flux-krea",
+        "full_name": "krea-ai/flux-krea",
+        "html_url": "https://github.com/krea-ai/flux-krea",
+        "description": "Official GitHub repository for FLUX.1 Krea [dev].",
+        "stargazers_count": 195,
+        "language": "Python",
+        "owner": {
+            "login": "krea-ai",
+            "avatar_url": "https://avatars.githubusercontent.com/u/108735617?v=4",
+            "html_url": "https://github.com/krea-ai"
         }
     }
 ]
