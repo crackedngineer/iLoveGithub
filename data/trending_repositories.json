@@ -1,25 +1,11 @@
 [
     {
-        "id": 1027579552,
-        "name": "Wan2.2",
-        "full_name": "Wan-Video/Wan2.2",
-        "html_url": "https://github.com/Wan-Video/Wan2.2",
-        "description": "Wan: Open and Advanced Large-Scale Video Generative Models",
-        "stargazers_count": 2258,
-        "language": "Python",
-        "owner": {
-            "login": "Wan-Video",
-            "avatar_url": "https://avatars.githubusercontent.com/u/200620180?v=4",
-            "html_url": "https://github.com/Wan-Video"
-        }
-    },
-    {
         "id": 1028989499,
         "name": "dots.ocr",
         "full_name": "rednote-hilab/dots.ocr",
         "html_url": "https://github.com/rednote-hilab/dots.ocr",
         "description": "Multilingual Document Layout Parsing in a Single Vision-Language Model",
-        "stargazers_count": 340,
+        "stargazers_count": 529,
         "language": "Python",
         "owner": {
             "login": "rednote-hilab",
@@ -33,7 +19,7 @@
         "full_name": "groq/openbench",
         "html_url": "https://github.com/groq/openbench",
         "description": "Provider-agnostic, open-source evaluation infrastructure for language models",
-        "stargazers_count": 264,
+        "stargazers_count": 286,
         "language": "Python",
         "owner": {
             "login": "groq",
@@ -47,7 +33,7 @@
         "full_name": "X-Omni-Team/X-Omni",
         "html_url": "https://github.com/X-Omni-Team/X-Omni",
         "description": "Official inference code and LongText-Bench benchmark for our paper X-Omni (https://arxiv.org/pdf/2507.22058).",
-        "stargazers_count": 216,
+        "stargazers_count": 268,
         "language": "Python",
         "owner": {
             "login": "X-Omni-Team",
@@ -56,31 +42,45 @@
         }
     },
     {
-        "id": 1027643050,
-        "name": "ScreenCoder",
-        "full_name": "leigest519/ScreenCoder",
-        "html_url": "https://github.com/leigest519/ScreenCoder",
-        "description": "ScreenCoder \u2014 Turn any UI screenshot into clean, editable HTML/CSS with full control. Fast, accurate, and easy to customize.",
-        "stargazers_count": 207,
-        "language": "Python",
-        "owner": {
-            "login": "leigest519",
-            "avatar_url": "https://avatars.githubusercontent.com/u/57628855?v=4",
-            "html_url": "https://github.com/leigest519"
-        }
-    },
-    {
         "id": 1029237831,
         "name": "flux-krea",
         "full_name": "krea-ai/flux-krea",
         "html_url": "https://github.com/krea-ai/flux-krea",
         "description": "Official GitHub repository for FLUX.1 Krea [dev].",
-        "stargazers_count": 195,
+        "stargazers_count": 226,
         "language": "Python",
         "owner": {
             "login": "krea-ai",
             "avatar_url": "https://avatars.githubusercontent.com/u/108735617?v=4",
             "html_url": "https://github.com/krea-ai"
+        }
+    },
+    {
+        "id": 1030281840,
+        "name": "XBai-o4",
+        "full_name": "MetaStone-AI/XBai-o4",
+        "html_url": "https://github.com/MetaStone-AI/XBai-o4",
+        "description": null,
+        "stargazers_count": 211,
+        "language": "Python",
+        "owner": {
+            "login": "MetaStone-AI",
+            "avatar_url": "https://avatars.githubusercontent.com/u/218619337?v=4",
+            "html_url": "https://github.com/MetaStone-AI"
+        }
+    },
+    {
+        "id": 1029827509,
+        "name": "Tg-Tools2025",
+        "full_name": "DeeForN/Tg-Tools2025",
+        "html_url": "https://github.com/DeeForN/Tg-Tools2025",
+        "description": null,
+        "stargazers_count": 164,
+        "language": "Python",
+        "owner": {
+            "login": "DeeForN",
+            "avatar_url": "https://avatars.githubusercontent.com/u/223909008?v=4",
+            "html_url": "https://github.com/DeeForN"
         }
     }
 ]
