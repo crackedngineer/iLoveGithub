@@ -5,7 +5,7 @@
         "full_name": "rednote-hilab/dots.ocr",
         "html_url": "https://github.com/rednote-hilab/dots.ocr",
         "description": "Multilingual Document Layout Parsing in a Single Vision-Language Model",
-        "stargazers_count": 529,
+        "stargazers_count": 706,
         "language": "Python",
         "owner": {
             "login": "rednote-hilab",
@@ -14,12 +14,40 @@
         }
     },
     {
+        "id": 1031256025,
+        "name": "Qwen-Image",
+        "full_name": "QwenLM/Qwen-Image",
+        "html_url": "https://github.com/QwenLM/Qwen-Image",
+        "description": "Qwen-Image is a powerful image generation foundation model capable of complex text rendering and precise image editing.",
+        "stargazers_count": 451,
+        "language": "Python",
+        "owner": {
+            "login": "QwenLM",
+            "avatar_url": "https://avatars.githubusercontent.com/u/141221163?v=4",
+            "html_url": "https://github.com/QwenLM"
+        }
+    },
+    {
+        "id": 1030875965,
+        "name": "MEV-UniswapBot",
+        "full_name": "8ZenrithsteWbI/MEV-UniswapBot",
+        "html_url": "https://github.com/8ZenrithsteWbI/MEV-UniswapBot",
+        "description": "MEV Uniswap Bot \u2013 A sophisticated bot built for executing MEV-based trading strategies, including sandwich attacks, on Uniswap. Maximizes profitability with high security and compatibility across EVM networks. Perfect for traders and developers looking to capitalize on Ethereum's mempool opportunities and automated trading solutions.",
+        "stargazers_count": 354,
+        "language": "Python",
+        "owner": {
+            "login": "8ZenrithsteWbI",
+            "avatar_url": "https://avatars.githubusercontent.com/u/224259608?v=4",
+            "html_url": "https://github.com/8ZenrithsteWbI"
+        }
+    },
+    {
         "id": 1029550379,
         "name": "openbench",
         "full_name": "groq/openbench",
         "html_url": "https://github.com/groq/openbench",
         "description": "Provider-agnostic, open-source evaluation infrastructure for language models",
-        "stargazers_count": 286,
+        "stargazers_count": 308,
         "language": "Python",
         "owner": {
             "login": "groq",
@@ -28,26 +56,12 @@
         }
     },
     {
-        "id": 1028340729,
-        "name": "X-Omni",
-        "full_name": "X-Omni-Team/X-Omni",
-        "html_url": "https://github.com/X-Omni-Team/X-Omni",
-        "description": "Official inference code and LongText-Bench benchmark for our paper X-Omni (https://arxiv.org/pdf/2507.22058).",
-        "stargazers_count": 268,
-        "language": "Python",
-        "owner": {
-            "login": "X-Omni-Team",
-            "avatar_url": "https://avatars.githubusercontent.com/u/221924515?v=4",
-            "html_url": "https://github.com/X-Omni-Team"
-        }
-    },
-    {
         "id": 1029237831,
         "name": "flux-krea",
         "full_name": "krea-ai/flux-krea",
         "html_url": "https://github.com/krea-ai/flux-krea",
         "description": "Official GitHub repository for FLUX.1 Krea [dev].",
-        "stargazers_count": 226,
+        "stargazers_count": 254,
         "language": "Python",
         "owner": {
             "login": "krea-ai",
@@ -61,26 +75,12 @@
         "full_name": "MetaStone-AI/XBai-o4",
         "html_url": "https://github.com/MetaStone-AI/XBai-o4",
         "description": null,
-        "stargazers_count": 211,
+        "stargazers_count": 246,
         "language": "Python",
         "owner": {
             "login": "MetaStone-AI",
             "avatar_url": "https://avatars.githubusercontent.com/u/218619337?v=4",
             "html_url": "https://github.com/MetaStone-AI"
-        }
-    },
-    {
-        "id": 1029827509,
-        "name": "Tg-Tools2025",
-        "full_name": "DeeForN/Tg-Tools2025",
-        "html_url": "https://github.com/DeeForN/Tg-Tools2025",
-        "description": null,
-        "stargazers_count": 164,
-        "language": "Python",
-        "owner": {
-            "login": "DeeForN",
-            "avatar_url": "https://avatars.githubusercontent.com/u/223909008?v=4",
-            "html_url": "https://github.com/DeeForN"
         }
     }
 ]
