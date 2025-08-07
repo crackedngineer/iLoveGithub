@@ -1,25 +1,11 @@
 [
     {
-        "id": 1031256025,
-        "name": "Qwen-Image",
-        "full_name": "QwenLM/Qwen-Image",
-        "html_url": "https://github.com/QwenLM/Qwen-Image",
-        "description": "Qwen-Image is a powerful image generation foundation model capable of complex text rendering and precise image editing.",
-        "stargazers_count": 1592,
-        "language": "Python",
-        "owner": {
-            "login": "QwenLM",
-            "avatar_url": "https://avatars.githubusercontent.com/u/141221163?v=4",
-            "html_url": "https://github.com/QwenLM"
-        }
-    },
-    {
         "id": 1032248449,
         "name": "KittenTTS",
         "full_name": "KittenML/KittenTTS",
         "html_url": "https://github.com/KittenML/KittenTTS",
         "description": " State-of-the-art TTS model under 25MB \ud83d\ude3b ",
-        "stargazers_count": 746,
+        "stargazers_count": 3153,
         "language": "Python",
         "owner": {
             "login": "KittenML",
@@ -28,45 +14,17 @@
         }
     },
     {
-        "id": 1030875965,
-        "name": "MEV-UniswapBot",
-        "full_name": "8ZenrithsteWbI/MEV-UniswapBot",
-        "html_url": "https://github.com/8ZenrithsteWbI/MEV-UniswapBot",
-        "description": "MEV Uniswap Bot \u2013 A sophisticated bot built for executing MEV-based trading strategies, including sandwich attacks, on Uniswap. Maximizes profitability with high security and compatibility across EVM networks. Perfect for traders and developers looking to capitalize on Ethereum's mempool opportunities and automated trading solutions.",
-        "stargazers_count": 440,
+        "id": 1031256025,
+        "name": "Qwen-Image",
+        "full_name": "QwenLM/Qwen-Image",
+        "html_url": "https://github.com/QwenLM/Qwen-Image",
+        "description": "Qwen-Image is a powerful image generation foundation model capable of complex text rendering and precise image editing.",
+        "stargazers_count": 1949,
         "language": "Python",
         "owner": {
-            "login": "8ZenrithsteWbI",
-            "avatar_url": "https://avatars.githubusercontent.com/u/224259608?v=4",
-            "html_url": "https://github.com/8ZenrithsteWbI"
-        }
-    },
-    {
-        "id": 1029550379,
-        "name": "openbench",
-        "full_name": "groq/openbench",
-        "html_url": "https://github.com/groq/openbench",
-        "description": "Provider-agnostic, open-source evaluation infrastructure for language models",
-        "stargazers_count": 332,
-        "language": "Python",
-        "owner": {
-            "login": "groq",
-            "avatar_url": "https://avatars.githubusercontent.com/u/7464134?v=4",
-            "html_url": "https://github.com/groq"
-        }
-    },
-    {
-        "id": 1030281840,
-        "name": "XBai-o4",
-        "full_name": "MetaStone-AI/XBai-o4",
-        "html_url": "https://github.com/MetaStone-AI/XBai-o4",
-        "description": null,
-        "stargazers_count": 260,
-        "language": "Python",
-        "owner": {
-            "login": "MetaStone-AI",
-            "avatar_url": "https://avatars.githubusercontent.com/u/218619337?v=4",
-            "html_url": "https://github.com/MetaStone-AI"
+            "login": "QwenLM",
+            "avatar_url": "https://avatars.githubusercontent.com/u/141221163?v=4",
+            "html_url": "https://github.com/QwenLM"
         }
     },
     {
@@ -75,12 +33,54 @@
         "full_name": "YanjieZe/GMR",
         "html_url": "https://github.com/YanjieZe/GMR",
         "description": "GMR: General Motion Retargeting. Retarget human motions into diverse humanoid robots in real time on CPU. Retargeter for TWIST.",
-        "stargazers_count": 235,
+        "stargazers_count": 299,
         "language": "Python",
         "owner": {
             "login": "YanjieZe",
             "avatar_url": "https://avatars.githubusercontent.com/u/59699800?v=4",
             "html_url": "https://github.com/YanjieZe"
+        }
+    },
+    {
+        "id": 1030281840,
+        "name": "XBai-o4",
+        "full_name": "MetaStone-AI/XBai-o4",
+        "html_url": "https://github.com/MetaStone-AI/XBai-o4",
+        "description": null,
+        "stargazers_count": 274,
+        "language": "Python",
+        "owner": {
+            "login": "MetaStone-AI",
+            "avatar_url": "https://avatars.githubusercontent.com/u/218619337?v=4",
+            "html_url": "https://github.com/MetaStone-AI"
+        }
+    },
+    {
+        "id": 1030372504,
+        "name": "ReceiptPrinterAgent",
+        "full_name": "CodingWithLewis/ReceiptPrinterAgent",
+        "html_url": "https://github.com/CodingWithLewis/ReceiptPrinterAgent",
+        "description": "From my video: I Fixed my ADHD with a Receipt Printer",
+        "stargazers_count": 177,
+        "language": "Python",
+        "owner": {
+            "login": "CodingWithLewis",
+            "avatar_url": "https://avatars.githubusercontent.com/u/142752183?v=4",
+            "html_url": "https://github.com/CodingWithLewis"
+        }
+    },
+    {
+        "id": 1031979438,
+        "name": "claude-code-security-review",
+        "full_name": "anthropics/claude-code-security-review",
+        "html_url": "https://github.com/anthropics/claude-code-security-review",
+        "description": "An AI-powered security review GitHub Action using Claude to analyze code changes for security vulnerabilities.",
+        "stargazers_count": 174,
+        "language": "Python",
+        "owner": {
+            "login": "anthropics",
+            "avatar_url": "https://avatars.githubusercontent.com/u/76263028?v=4",
+            "html_url": "https://github.com/anthropics"
         }
     }
 ]
