@@ -5,7 +5,7 @@
         "full_name": "KittenML/KittenTTS",
         "html_url": "https://github.com/KittenML/KittenTTS",
         "description": " State-of-the-art TTS model under 25MB \ud83d\ude3b ",
-        "stargazers_count": 3153,
+        "stargazers_count": 5232,
         "language": "Python",
         "owner": {
             "login": "KittenML",
@@ -19,7 +19,7 @@
         "full_name": "QwenLM/Qwen-Image",
         "html_url": "https://github.com/QwenLM/Qwen-Image",
         "description": "Qwen-Image is a powerful image generation foundation model capable of complex text rendering and precise image editing.",
-        "stargazers_count": 1949,
+        "stargazers_count": 2168,
         "language": "Python",
         "owner": {
             "login": "QwenLM",
@@ -28,12 +28,26 @@
         }
     },
     {
+        "id": 1031979438,
+        "name": "claude-code-security-review",
+        "full_name": "anthropics/claude-code-security-review",
+        "html_url": "https://github.com/anthropics/claude-code-security-review",
+        "description": "An AI-powered security review GitHub Action using Claude to analyze code changes for security vulnerabilities.",
+        "stargazers_count": 487,
+        "language": "Python",
+        "owner": {
+            "login": "anthropics",
+            "avatar_url": "https://avatars.githubusercontent.com/u/76263028?v=4",
+            "html_url": "https://github.com/anthropics"
+        }
+    },
+    {
         "id": 1031180012,
         "name": "GMR",
         "full_name": "YanjieZe/GMR",
         "html_url": "https://github.com/YanjieZe/GMR",
         "description": "GMR: General Motion Retargeting. Retarget human motions into diverse humanoid robots in real time on CPU. Retargeter for TWIST.",
-        "stargazers_count": 299,
+        "stargazers_count": 325,
         "language": "Python",
         "owner": {
             "login": "YanjieZe",
@@ -42,45 +56,31 @@
         }
     },
     {
-        "id": 1030281840,
-        "name": "XBai-o4",
-        "full_name": "MetaStone-AI/XBai-o4",
-        "html_url": "https://github.com/MetaStone-AI/XBai-o4",
+        "id": 1030838184,
+        "name": "tuxagotchi",
+        "full_name": "terpinedream/tuxagotchi",
+        "html_url": "https://github.com/terpinedream/tuxagotchi",
+        "description": "CLI application that encourages you to keep up with your projects. \"Feed\" tux in your terminal by pushing your code to github.",
+        "stargazers_count": 143,
+        "language": "Python",
+        "owner": {
+            "login": "terpinedream",
+            "avatar_url": "https://avatars.githubusercontent.com/u/199557918?v=4",
+            "html_url": "https://github.com/terpinedream"
+        }
+    },
+    {
+        "id": 1031650219,
+        "name": "Neosgenesis",
+        "full_name": "answeryt/Neosgenesis",
+        "html_url": "https://github.com/answeryt/Neosgenesis",
         "description": null,
-        "stargazers_count": 274,
+        "stargazers_count": 141,
         "language": "Python",
         "owner": {
-            "login": "MetaStone-AI",
-            "avatar_url": "https://avatars.githubusercontent.com/u/218619337?v=4",
-            "html_url": "https://github.com/MetaStone-AI"
-        }
-    },
-    {
-        "id": 1030372504,
-        "name": "ReceiptPrinterAgent",
-        "full_name": "CodingWithLewis/ReceiptPrinterAgent",
-        "html_url": "https://github.com/CodingWithLewis/ReceiptPrinterAgent",
-        "description": "From my video: I Fixed my ADHD with a Receipt Printer",
-        "stargazers_count": 177,
-        "language": "Python",
-        "owner": {
-            "login": "CodingWithLewis",
-            "avatar_url": "https://avatars.githubusercontent.com/u/142752183?v=4",
-            "html_url": "https://github.com/CodingWithLewis"
-        }
-    },
-    {
-        "id": 1031979438,
-        "name": "claude-code-security-review",
-        "full_name": "anthropics/claude-code-security-review",
-        "html_url": "https://github.com/anthropics/claude-code-security-review",
-        "description": "An AI-powered security review GitHub Action using Claude to analyze code changes for security vulnerabilities.",
-        "stargazers_count": 174,
-        "language": "Python",
-        "owner": {
-            "login": "anthropics",
-            "avatar_url": "https://avatars.githubusercontent.com/u/76263028?v=4",
-            "html_url": "https://github.com/anthropics"
+            "login": "answeryt",
+            "avatar_url": "https://avatars.githubusercontent.com/u/203585358?v=4",
+            "html_url": "https://github.com/answeryt"
         }
     }
 ]
