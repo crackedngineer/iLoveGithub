@@ -5,7 +5,7 @@
         "full_name": "KittenML/KittenTTS",
         "html_url": "https://github.com/KittenML/KittenTTS",
         "description": " State-of-the-art TTS model under 25MB \ud83d\ude3b ",
-        "stargazers_count": 5232,
+        "stargazers_count": 6293,
         "language": "Python",
         "owner": {
             "login": "KittenML",
@@ -19,7 +19,7 @@
         "full_name": "QwenLM/Qwen-Image",
         "html_url": "https://github.com/QwenLM/Qwen-Image",
         "description": "Qwen-Image is a powerful image generation foundation model capable of complex text rendering and precise image editing.",
-        "stargazers_count": 2168,
+        "stargazers_count": 2281,
         "language": "Python",
         "owner": {
             "login": "QwenLM",
@@ -33,7 +33,7 @@
         "full_name": "anthropics/claude-code-security-review",
         "html_url": "https://github.com/anthropics/claude-code-security-review",
         "description": "An AI-powered security review GitHub Action using Claude to analyze code changes for security vulnerabilities.",
-        "stargazers_count": 487,
+        "stargazers_count": 1121,
         "language": "Python",
         "owner": {
             "login": "anthropics",
@@ -47,7 +47,7 @@
         "full_name": "YanjieZe/GMR",
         "html_url": "https://github.com/YanjieZe/GMR",
         "description": "GMR: General Motion Retargeting. Retarget human motions into diverse humanoid robots in real time on CPU. Retargeter for TWIST.",
-        "stargazers_count": 325,
+        "stargazers_count": 353,
         "language": "Python",
         "owner": {
             "login": "YanjieZe",
@@ -56,31 +56,31 @@
         }
     },
     {
-        "id": 1030838184,
-        "name": "tuxagotchi",
-        "full_name": "terpinedream/tuxagotchi",
-        "html_url": "https://github.com/terpinedream/tuxagotchi",
-        "description": "CLI application that encourages you to keep up with your projects. \"Feed\" tux in your terminal by pushing your code to github.",
-        "stargazers_count": 143,
+        "id": 1033989145,
+        "name": "Gift-Buyer-Tg",
+        "full_name": "KorthuDev/Gift-Buyer-Tg",
+        "html_url": "https://github.com/KorthuDev/Gift-Buyer-Tg",
+        "description": "A bot that searches for new gifts in telegram and purchases them based on your criteria. Supports integration with Telegram bot.",
+        "stargazers_count": 208,
         "language": "Python",
         "owner": {
-            "login": "terpinedream",
-            "avatar_url": "https://avatars.githubusercontent.com/u/199557918?v=4",
-            "html_url": "https://github.com/terpinedream"
+            "login": "KorthuDev",
+            "avatar_url": "https://avatars.githubusercontent.com/u/187395172?v=4",
+            "html_url": "https://github.com/KorthuDev"
         }
     },
     {
-        "id": 1031650219,
-        "name": "Neosgenesis",
-        "full_name": "answeryt/Neosgenesis",
-        "html_url": "https://github.com/answeryt/Neosgenesis",
+        "id": 1033293809,
+        "name": "flex-nano-vllm",
+        "full_name": "changjonathanc/flex-nano-vllm",
+        "html_url": "https://github.com/changjonathanc/flex-nano-vllm",
         "description": null,
-        "stargazers_count": 141,
+        "stargazers_count": 183,
         "language": "Python",
         "owner": {
-            "login": "answeryt",
-            "avatar_url": "https://avatars.githubusercontent.com/u/203585358?v=4",
-            "html_url": "https://github.com/answeryt"
+            "login": "changjonathanc",
+            "avatar_url": "https://avatars.githubusercontent.com/u/31893406?v=4",
+            "html_url": "https://github.com/changjonathanc"
         }
     }
 ]
