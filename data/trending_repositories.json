@@ -5,7 +5,7 @@
         "full_name": "KittenML/KittenTTS",
         "html_url": "https://github.com/KittenML/KittenTTS",
         "description": " State-of-the-art TTS model under 25MB \ud83d\ude3b ",
-        "stargazers_count": 6293,
+        "stargazers_count": 6768,
         "language": "Python",
         "owner": {
             "login": "KittenML",
@@ -14,45 +14,31 @@
         }
     },
     {
-        "id": 1031256025,
-        "name": "Qwen-Image",
-        "full_name": "QwenLM/Qwen-Image",
-        "html_url": "https://github.com/QwenLM/Qwen-Image",
-        "description": "Qwen-Image is a powerful image generation foundation model capable of complex text rendering and precise image editing.",
-        "stargazers_count": 2281,
+        "id": 1033405842,
+        "name": "R-Zero",
+        "full_name": "Chengsong-Huang/R-Zero",
+        "html_url": "https://github.com/Chengsong-Huang/R-Zero",
+        "description": "codes for R-Zero: Self-Evolving Reasoning LLM from Zero Data (https://www.arxiv.org/pdf/2508.05004)",
+        "stargazers_count": 260,
         "language": "Python",
         "owner": {
-            "login": "QwenLM",
-            "avatar_url": "https://avatars.githubusercontent.com/u/141221163?v=4",
-            "html_url": "https://github.com/QwenLM"
+            "login": "Chengsong-Huang",
+            "avatar_url": "https://avatars.githubusercontent.com/u/123848309?v=4",
+            "html_url": "https://github.com/Chengsong-Huang"
         }
     },
     {
-        "id": 1031979438,
-        "name": "claude-code-security-review",
-        "full_name": "anthropics/claude-code-security-review",
-        "html_url": "https://github.com/anthropics/claude-code-security-review",
-        "description": "An AI-powered security review GitHub Action using Claude to analyze code changes for security vulnerabilities.",
-        "stargazers_count": 1121,
+        "id": 1033293809,
+        "name": "flex-nano-vllm",
+        "full_name": "changjonathanc/flex-nano-vllm",
+        "html_url": "https://github.com/changjonathanc/flex-nano-vllm",
+        "description": "FlexAttention based, minimal vllm-style inference engine for fast Gemma 2 inference.",
+        "stargazers_count": 214,
         "language": "Python",
         "owner": {
-            "login": "anthropics",
-            "avatar_url": "https://avatars.githubusercontent.com/u/76263028?v=4",
-            "html_url": "https://github.com/anthropics"
-        }
-    },
-    {
-        "id": 1031180012,
-        "name": "GMR",
-        "full_name": "YanjieZe/GMR",
-        "html_url": "https://github.com/YanjieZe/GMR",
-        "description": "GMR: General Motion Retargeting. Retarget human motions into diverse humanoid robots in real time on CPU. Retargeter for TWIST.",
-        "stargazers_count": 353,
-        "language": "Python",
-        "owner": {
-            "login": "YanjieZe",
-            "avatar_url": "https://avatars.githubusercontent.com/u/59699800?v=4",
-            "html_url": "https://github.com/YanjieZe"
+            "login": "changjonathanc",
+            "avatar_url": "https://avatars.githubusercontent.com/u/31893406?v=4",
+            "html_url": "https://github.com/changjonathanc"
         }
     },
     {
@@ -61,7 +47,7 @@
         "full_name": "KorthuDev/Gift-Buyer-Tg",
         "html_url": "https://github.com/KorthuDev/Gift-Buyer-Tg",
         "description": "A bot that searches for new gifts in telegram and purchases them based on your criteria. Supports integration with Telegram bot.",
-        "stargazers_count": 208,
+        "stargazers_count": 209,
         "language": "Python",
         "owner": {
             "login": "KorthuDev",
@@ -70,17 +56,31 @@
         }
     },
     {
-        "id": 1033293809,
-        "name": "flex-nano-vllm",
-        "full_name": "changjonathanc/flex-nano-vllm",
-        "html_url": "https://github.com/changjonathanc/flex-nano-vllm",
-        "description": null,
-        "stargazers_count": 183,
+        "id": 1032850395,
+        "name": "Kitten-TTS-Server",
+        "full_name": "devnen/Kitten-TTS-Server",
+        "html_url": "https://github.com/devnen/Kitten-TTS-Server",
+        "description": "Self-host the ultra-lightweight Kitten TTS model with this enhanced API server with an intuitive Web UI, large text processing for audiobooks, and GPU acceleration.",
+        "stargazers_count": 153,
         "language": "Python",
         "owner": {
-            "login": "changjonathanc",
-            "avatar_url": "https://avatars.githubusercontent.com/u/31893406?v=4",
-            "html_url": "https://github.com/changjonathanc"
+            "login": "devnen",
+            "avatar_url": "https://avatars.githubusercontent.com/u/195903272?v=4",
+            "html_url": "https://github.com/devnen"
+        }
+    },
+    {
+        "id": 1033246992,
+        "name": "aug_cleaner",
+        "full_name": "gmh5225/aug_cleaner",
+        "html_url": "https://github.com/gmh5225/aug_cleaner",
+        "description": "\u6e05\u9664 Augment Code VSCode \u6269\u5c55\u4e2d\u7684\u9065\u6d4b\u548c\u8ddf\u8e2a\u673a\u5236 | A privacy-focused tool to clean telemetry and tracking from Augment Code VSCode extension while preserving full functionality.",
+        "stargazers_count": 151,
+        "language": "Python",
+        "owner": {
+            "login": "gmh5225",
+            "avatar_url": "https://avatars.githubusercontent.com/u/13917777?v=4",
+            "html_url": "https://github.com/gmh5225"
         }
     }
 ]
