@@ -5,7 +5,7 @@
         "full_name": "KittenML/KittenTTS",
         "html_url": "https://github.com/KittenML/KittenTTS",
         "description": " State-of-the-art TTS model under 25MB \ud83d\ude3b ",
-        "stargazers_count": 6565,
+        "stargazers_count": 6768,
         "language": "Python",
         "owner": {
             "login": "KittenML",
@@ -14,17 +14,31 @@
         }
     },
     {
-        "id": 1031979438,
-        "name": "claude-code-security-review",
-        "full_name": "anthropics/claude-code-security-review",
-        "html_url": "https://github.com/anthropics/claude-code-security-review",
-        "description": "An AI-powered security review GitHub Action using Claude to analyze code changes for security vulnerabilities.",
-        "stargazers_count": 1469,
+        "id": 1033405842,
+        "name": "R-Zero",
+        "full_name": "Chengsong-Huang/R-Zero",
+        "html_url": "https://github.com/Chengsong-Huang/R-Zero",
+        "description": "codes for R-Zero: Self-Evolving Reasoning LLM from Zero Data (https://www.arxiv.org/pdf/2508.05004)",
+        "stargazers_count": 260,
         "language": "Python",
         "owner": {
-            "login": "anthropics",
-            "avatar_url": "https://avatars.githubusercontent.com/u/76263028?v=4",
-            "html_url": "https://github.com/anthropics"
+            "login": "Chengsong-Huang",
+            "avatar_url": "https://avatars.githubusercontent.com/u/123848309?v=4",
+            "html_url": "https://github.com/Chengsong-Huang"
+        }
+    },
+    {
+        "id": 1033293809,
+        "name": "flex-nano-vllm",
+        "full_name": "changjonathanc/flex-nano-vllm",
+        "html_url": "https://github.com/changjonathanc/flex-nano-vllm",
+        "description": "FlexAttention based, minimal vllm-style inference engine for fast Gemma 2 inference.",
+        "stargazers_count": 214,
+        "language": "Python",
+        "owner": {
+            "login": "changjonathanc",
+            "avatar_url": "https://avatars.githubusercontent.com/u/31893406?v=4",
+            "html_url": "https://github.com/changjonathanc"
         }
     },
     {
@@ -42,31 +56,17 @@
         }
     },
     {
-        "id": 1033293809,
-        "name": "flex-nano-vllm",
-        "full_name": "changjonathanc/flex-nano-vllm",
-        "html_url": "https://github.com/changjonathanc/flex-nano-vllm",
-        "description": "FlexAttention based, minimal vllm-style inference engine for fast Gemma 2 inference.",
-        "stargazers_count": 202,
+        "id": 1032850395,
+        "name": "Kitten-TTS-Server",
+        "full_name": "devnen/Kitten-TTS-Server",
+        "html_url": "https://github.com/devnen/Kitten-TTS-Server",
+        "description": "Self-host the ultra-lightweight Kitten TTS model with this enhanced API server with an intuitive Web UI, large text processing for audiobooks, and GPU acceleration.",
+        "stargazers_count": 153,
         "language": "Python",
         "owner": {
-            "login": "changjonathanc",
-            "avatar_url": "https://avatars.githubusercontent.com/u/31893406?v=4",
-            "html_url": "https://github.com/changjonathanc"
-        }
-    },
-    {
-        "id": 1031650219,
-        "name": "Neosgenesis",
-        "full_name": "answeryt/Neosgenesis",
-        "html_url": "https://github.com/answeryt/Neosgenesis",
-        "description": null,
-        "stargazers_count": 190,
-        "language": "Python",
-        "owner": {
-            "login": "answeryt",
-            "avatar_url": "https://avatars.githubusercontent.com/u/203585358?v=4",
-            "html_url": "https://github.com/answeryt"
+            "login": "devnen",
+            "avatar_url": "https://avatars.githubusercontent.com/u/195903272?v=4",
+            "html_url": "https://github.com/devnen"
         }
     },
     {
@@ -75,7 +75,7 @@
         "full_name": "gmh5225/aug_cleaner",
         "html_url": "https://github.com/gmh5225/aug_cleaner",
         "description": "\u6e05\u9664 Augment Code VSCode \u6269\u5c55\u4e2d\u7684\u9065\u6d4b\u548c\u8ddf\u8e2a\u673a\u5236 | A privacy-focused tool to clean telemetry and tracking from Augment Code VSCode extension while preserving full functionality.",
-        "stargazers_count": 147,
+        "stargazers_count": 151,
         "language": "Python",
         "owner": {
             "login": "gmh5225",
