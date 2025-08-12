@@ -1,25 +1,11 @@
 [
     {
-        "id": 1032248449,
-        "name": "KittenTTS",
-        "full_name": "KittenML/KittenTTS",
-        "html_url": "https://github.com/KittenML/KittenTTS",
-        "description": " State-of-the-art TTS model under 25MB \ud83d\ude3b ",
-        "stargazers_count": 6768,
-        "language": "Python",
-        "owner": {
-            "login": "KittenML",
-            "avatar_url": "https://avatars.githubusercontent.com/u/224667585?v=4",
-            "html_url": "https://github.com/KittenML"
-        }
-    },
-    {
         "id": 1033405842,
         "name": "R-Zero",
         "full_name": "Chengsong-Huang/R-Zero",
         "html_url": "https://github.com/Chengsong-Huang/R-Zero",
         "description": "codes for R-Zero: Self-Evolving Reasoning LLM from Zero Data (https://www.arxiv.org/pdf/2508.05004)",
-        "stargazers_count": 260,
+        "stargazers_count": 338,
         "language": "Python",
         "owner": {
             "login": "Chengsong-Huang",
@@ -33,7 +19,7 @@
         "full_name": "changjonathanc/flex-nano-vllm",
         "html_url": "https://github.com/changjonathanc/flex-nano-vllm",
         "description": "FlexAttention based, minimal vllm-style inference engine for fast Gemma 2 inference.",
-        "stargazers_count": 214,
+        "stargazers_count": 220,
         "language": "Python",
         "owner": {
             "login": "changjonathanc",
@@ -42,12 +28,26 @@
         }
     },
     {
+        "id": 1035072355,
+        "name": "Qwen-Image-Lightning",
+        "full_name": "ModelTC/Qwen-Image-Lightning",
+        "html_url": "https://github.com/ModelTC/Qwen-Image-Lightning",
+        "description": "Qwen-Image-Lightning: Speed up Qwen-Image model with distillation",
+        "stargazers_count": 219,
+        "language": "Python",
+        "owner": {
+            "login": "ModelTC",
+            "avatar_url": "https://avatars.githubusercontent.com/u/69665675?v=4",
+            "html_url": "https://github.com/ModelTC"
+        }
+    },
+    {
         "id": 1033989145,
         "name": "Gift-Buyer-Tg",
         "full_name": "KorthuDev/Gift-Buyer-Tg",
         "html_url": "https://github.com/KorthuDev/Gift-Buyer-Tg",
         "description": "A bot that searches for new gifts in telegram and purchases them based on your criteria. Supports integration with Telegram bot.",
-        "stargazers_count": 209,
+        "stargazers_count": 211,
         "language": "Python",
         "owner": {
             "login": "KorthuDev",
@@ -56,17 +56,17 @@
         }
     },
     {
-        "id": 1032850395,
-        "name": "Kitten-TTS-Server",
-        "full_name": "devnen/Kitten-TTS-Server",
-        "html_url": "https://github.com/devnen/Kitten-TTS-Server",
-        "description": "Self-host the ultra-lightweight Kitten TTS model with this enhanced API server with an intuitive Web UI, large text processing for audiobooks, and GPU acceleration.",
-        "stargazers_count": 153,
+        "id": 1033873680,
+        "name": "MiroThinker",
+        "full_name": "MiroMindAI/MiroThinker",
+        "html_url": "https://github.com/MiroMindAI/MiroThinker",
+        "description": "MiroThinker is open-source agentic models trained for deep research and complex tool use scenarios.",
+        "stargazers_count": 157,
         "language": "Python",
         "owner": {
-            "login": "devnen",
-            "avatar_url": "https://avatars.githubusercontent.com/u/195903272?v=4",
-            "html_url": "https://github.com/devnen"
+            "login": "MiroMindAI",
+            "avatar_url": "https://avatars.githubusercontent.com/u/209656584?v=4",
+            "html_url": "https://github.com/MiroMindAI"
         }
     },
     {
@@ -75,7 +75,7 @@
         "full_name": "gmh5225/aug_cleaner",
         "html_url": "https://github.com/gmh5225/aug_cleaner",
         "description": "\u6e05\u9664 Augment Code VSCode \u6269\u5c55\u4e2d\u7684\u9065\u6d4b\u548c\u8ddf\u8e2a\u673a\u5236 | A privacy-focused tool to clean telemetry and tracking from Augment Code VSCode extension while preserving full functionality.",
-        "stargazers_count": 151,
+        "stargazers_count": 157,
         "language": "Python",
         "owner": {
             "login": "gmh5225",
