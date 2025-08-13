@@ -1,39 +1,11 @@
 [
     {
-        "id": 1033405842,
-        "name": "R-Zero",
-        "full_name": "Chengsong-Huang/R-Zero",
-        "html_url": "https://github.com/Chengsong-Huang/R-Zero",
-        "description": "codes for R-Zero: Self-Evolving Reasoning LLM from Zero Data (https://www.arxiv.org/pdf/2508.05004)",
-        "stargazers_count": 338,
-        "language": "Python",
-        "owner": {
-            "login": "Chengsong-Huang",
-            "avatar_url": "https://avatars.githubusercontent.com/u/123848309?v=4",
-            "html_url": "https://github.com/Chengsong-Huang"
-        }
-    },
-    {
-        "id": 1033293809,
-        "name": "flex-nano-vllm",
-        "full_name": "changjonathanc/flex-nano-vllm",
-        "html_url": "https://github.com/changjonathanc/flex-nano-vllm",
-        "description": "FlexAttention based, minimal vllm-style inference engine for fast Gemma 2 inference.",
-        "stargazers_count": 220,
-        "language": "Python",
-        "owner": {
-            "login": "changjonathanc",
-            "avatar_url": "https://avatars.githubusercontent.com/u/31893406?v=4",
-            "html_url": "https://github.com/changjonathanc"
-        }
-    },
-    {
         "id": 1035072355,
         "name": "Qwen-Image-Lightning",
         "full_name": "ModelTC/Qwen-Image-Lightning",
         "html_url": "https://github.com/ModelTC/Qwen-Image-Lightning",
         "description": "Qwen-Image-Lightning: Speed up Qwen-Image model with distillation",
-        "stargazers_count": 219,
+        "stargazers_count": 281,
         "language": "Python",
         "owner": {
             "login": "ModelTC",
@@ -42,12 +14,26 @@
         }
     },
     {
+        "id": 1034533752,
+        "name": "tilf",
+        "full_name": "danterolle/tilf",
+        "html_url": "https://github.com/danterolle/tilf",
+        "description": "Tilf (Tiny Elf) is a simple yet powerful pixel art editor built with PySide6. It\u2019s designed for creating sprites, icons, and small 2D assets with essential drawing tools, live preview, undo/redo, and export options.",
+        "stargazers_count": 218,
+        "language": "Python",
+        "owner": {
+            "login": "danterolle",
+            "avatar_url": "https://avatars.githubusercontent.com/u/45731605?v=4",
+            "html_url": "https://github.com/danterolle"
+        }
+    },
+    {
         "id": 1033989145,
         "name": "Gift-Buyer-Tg",
         "full_name": "KorthuDev/Gift-Buyer-Tg",
         "html_url": "https://github.com/KorthuDev/Gift-Buyer-Tg",
         "description": "A bot that searches for new gifts in telegram and purchases them based on your criteria. Supports integration with Telegram bot.",
-        "stargazers_count": 211,
+        "stargazers_count": 212,
         "language": "Python",
         "owner": {
             "login": "KorthuDev",
@@ -56,12 +42,26 @@
         }
     },
     {
+        "id": 1035697953,
+        "name": "vipe",
+        "full_name": "nv-tlabs/vipe",
+        "html_url": "https://github.com/nv-tlabs/vipe",
+        "description": "ViPE: Video Pose Engine for Geometric 3D Perception",
+        "stargazers_count": 199,
+        "language": "Python",
+        "owner": {
+            "login": "nv-tlabs",
+            "avatar_url": "https://avatars.githubusercontent.com/u/49653101?v=4",
+            "html_url": "https://github.com/nv-tlabs"
+        }
+    },
+    {
         "id": 1033873680,
         "name": "MiroThinker",
         "full_name": "MiroMindAI/MiroThinker",
         "html_url": "https://github.com/MiroMindAI/MiroThinker",
         "description": "MiroThinker is open-source agentic models trained for deep research and complex tool use scenarios.",
-        "stargazers_count": 157,
+        "stargazers_count": 179,
         "language": "Python",
         "owner": {
             "login": "MiroMindAI",
@@ -70,17 +70,17 @@
         }
     },
     {
-        "id": 1033246992,
-        "name": "aug_cleaner",
-        "full_name": "gmh5225/aug_cleaner",
-        "html_url": "https://github.com/gmh5225/aug_cleaner",
-        "description": "\u6e05\u9664 Augment Code VSCode \u6269\u5c55\u4e2d\u7684\u9065\u6d4b\u548c\u8ddf\u8e2a\u673a\u5236 | A privacy-focused tool to clean telemetry and tracking from Augment Code VSCode extension while preserving full functionality.",
-        "stargazers_count": 157,
+        "id": 1035923648,
+        "name": "Matrix-3D",
+        "full_name": "SkyworkAI/Matrix-3D",
+        "html_url": "https://github.com/SkyworkAI/Matrix-3D",
+        "description": "Generate large-scale explorable 3D scene from a single image or text prompt.",
+        "stargazers_count": 144,
         "language": "Python",
         "owner": {
-            "login": "gmh5225",
-            "avatar_url": "https://avatars.githubusercontent.com/u/13917777?v=4",
-            "html_url": "https://github.com/gmh5225"
+            "login": "SkyworkAI",
+            "avatar_url": "https://avatars.githubusercontent.com/u/147303017?v=4",
+            "html_url": "https://github.com/SkyworkAI"
         }
     }
 ]
