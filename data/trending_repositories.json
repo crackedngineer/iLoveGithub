@@ -5,7 +5,7 @@
         "full_name": "nv-tlabs/vipe",
         "html_url": "https://github.com/nv-tlabs/vipe",
         "description": "ViPE: Video Pose Engine for Geometric 3D Perception",
-        "stargazers_count": 363,
+        "stargazers_count": 516,
         "language": "Python",
         "owner": {
             "login": "nv-tlabs",
@@ -19,7 +19,7 @@
         "full_name": "ModelTC/Qwen-Image-Lightning",
         "html_url": "https://github.com/ModelTC/Qwen-Image-Lightning",
         "description": "Qwen-Image-Lightning: Speed up Qwen-Image model with distillation",
-        "stargazers_count": 325,
+        "stargazers_count": 350,
         "language": "Python",
         "owner": {
             "login": "ModelTC",
@@ -33,7 +33,7 @@
         "full_name": "mingyin0312/RLFromScratch",
         "html_url": "https://github.com/mingyin0312/RLFromScratch",
         "description": null,
-        "stargazers_count": 268,
+        "stargazers_count": 348,
         "language": "Python",
         "owner": {
             "login": "mingyin0312",
@@ -42,26 +42,12 @@
         }
     },
     {
-        "id": 1034533752,
-        "name": "tilf",
-        "full_name": "danterolle/tilf",
-        "html_url": "https://github.com/danterolle/tilf",
-        "description": "Tilf (Tiny Elf) is a simple yet powerful pixel art editor built with PySide6. It\u2019s designed for creating sprites, icons, and small 2D assets with essential drawing tools, live preview, undo/redo, and export options.",
-        "stargazers_count": 260,
-        "language": "Python",
-        "owner": {
-            "login": "danterolle",
-            "avatar_url": "https://avatars.githubusercontent.com/u/45731605?v=4",
-            "html_url": "https://github.com/danterolle"
-        }
-    },
-    {
         "id": 1035923648,
         "name": "Matrix-3D",
         "full_name": "SkyworkAI/Matrix-3D",
         "html_url": "https://github.com/SkyworkAI/Matrix-3D",
         "description": "Generate large-scale explorable 3D scenes with high-quality panorama videos from a single image or text prompt.",
-        "stargazers_count": 259,
+        "stargazers_count": 304,
         "language": "Python",
         "owner": {
             "login": "SkyworkAI",
@@ -75,12 +61,26 @@
         "full_name": "Francis-Rings/StableAvatar",
         "html_url": "https://github.com/Francis-Rings/StableAvatar",
         "description": "We present StableAvatar, the first end-to-end video diffusion transformer, which synthesizes infinite-length high-quality audio-driven avatar videos without any post-processing, conditioned on a reference image and audio.",
-        "stargazers_count": 151,
+        "stargazers_count": 277,
         "language": "Python",
         "owner": {
             "login": "Francis-Rings",
             "avatar_url": "https://avatars.githubusercontent.com/u/66824433?v=4",
             "html_url": "https://github.com/Francis-Rings"
+        }
+    },
+    {
+        "id": 1038001062,
+        "name": "Gift-Buyer-Tg",
+        "full_name": "MelnorCode/Gift-Buyer-Tg",
+        "html_url": "https://github.com/MelnorCode/Gift-Buyer-Tg",
+        "description": "A universal bot with many useful features for automatically sniping and buying Telegram gifts",
+        "stargazers_count": 223,
+        "language": "Python",
+        "owner": {
+            "login": "MelnorCode",
+            "avatar_url": "https://avatars.githubusercontent.com/u/223290161?v=4",
+            "html_url": "https://github.com/MelnorCode"
         }
     }
 ]
