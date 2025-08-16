@@ -1,86 +1,86 @@
 [
     {
-        "id": 1027579552,
-        "name": "Wan2.2",
-        "full_name": "Wan-Video/Wan2.2",
-        "html_url": "https://github.com/Wan-Video/Wan2.2",
-        "description": "Wan: Open and Advanced Large-Scale Video Generative Models",
-        "stargazers_count": 1931,
+        "id": 1035697953,
+        "name": "vipe",
+        "full_name": "nv-tlabs/vipe",
+        "html_url": "https://github.com/nv-tlabs/vipe",
+        "description": "ViPE: Video Pose Engine for Geometric 3D Perception",
+        "stargazers_count": 595,
         "language": "Python",
         "owner": {
-            "login": "Wan-Video",
-            "avatar_url": "https://avatars.githubusercontent.com/u/200620180?v=4",
-            "html_url": "https://github.com/Wan-Video"
+            "login": "nv-tlabs",
+            "avatar_url": "https://avatars.githubusercontent.com/u/49653101?v=4",
+            "html_url": "https://github.com/nv-tlabs"
         }
     },
     {
-        "id": 1025924157,
-        "name": "CCPlugins",
-        "full_name": "brennercruvinel/CCPlugins",
-        "html_url": "https://github.com/brennercruvinel/CCPlugins",
-        "description": "Claude Code Plugins that actually save time. Built by a dev tired of typing please act like a senior engineer in every conversation.",
-        "stargazers_count": 889,
+        "id": 1035987541,
+        "name": "StableAvatar",
+        "full_name": "Francis-Rings/StableAvatar",
+        "html_url": "https://github.com/Francis-Rings/StableAvatar",
+        "description": "We present StableAvatar, the first end-to-end video diffusion transformer, which synthesizes infinite-length high-quality audio-driven avatar videos without any post-processing, conditioned on a reference image and audio.",
+        "stargazers_count": 376,
         "language": "Python",
         "owner": {
-            "login": "brennercruvinel",
-            "avatar_url": "https://avatars.githubusercontent.com/u/6767715?v=4",
-            "html_url": "https://github.com/brennercruvinel"
+            "login": "Francis-Rings",
+            "avatar_url": "https://avatars.githubusercontent.com/u/66824433?v=4",
+            "html_url": "https://github.com/Francis-Rings"
         }
     },
     {
-        "id": 1025956306,
-        "name": "hajimi-king",
-        "full_name": "GakkiNoOne/hajimi-king",
-        "html_url": "https://github.com/GakkiNoOne/hajimi-king",
-        "description": "\u4eba\u4eba\u90fd\u662f\u54c8\u57fa\u7c73\u5927\u738b",
-        "stargazers_count": 266,
-        "language": "Python",
-        "owner": {
-            "login": "GakkiNoOne",
-            "avatar_url": "https://avatars.githubusercontent.com/u/215487802?v=4",
-            "html_url": "https://github.com/GakkiNoOne"
-        }
-    },
-    {
-        "id": 1026796723,
-        "name": "terminal-bench-rl",
-        "full_name": "Danau5tin/terminal-bench-rl",
-        "html_url": "https://github.com/Danau5tin/terminal-bench-rl",
-        "description": "GRPO training code which scales to 32xH100s for long horizon terminal/coding tasks. Base agent is now the top Qwen3 agent on Stanford's TerminalBench leaderboard.",
-        "stargazers_count": 191,
-        "language": "Python",
-        "owner": {
-            "login": "Danau5tin",
-            "avatar_url": "https://avatars.githubusercontent.com/u/58129064?v=4",
-            "html_url": "https://github.com/Danau5tin"
-        }
-    },
-    {
-        "id": 1027384981,
-        "name": "deepagents",
-        "full_name": "hwchase17/deepagents",
-        "html_url": "https://github.com/hwchase17/deepagents",
+        "id": 1036456030,
+        "name": "RLFromScratch",
+        "full_name": "mingyin0312/RLFromScratch",
+        "html_url": "https://github.com/mingyin0312/RLFromScratch",
         "description": null,
-        "stargazers_count": 157,
+        "stargazers_count": 367,
         "language": "Python",
         "owner": {
-            "login": "hwchase17",
-            "avatar_url": "https://avatars.githubusercontent.com/u/11986836?v=4",
-            "html_url": "https://github.com/hwchase17"
+            "login": "mingyin0312",
+            "avatar_url": "https://avatars.githubusercontent.com/u/39140136?v=4",
+            "html_url": "https://github.com/mingyin0312"
         }
     },
     {
-        "id": 1027129540,
-        "name": "claude-setup",
-        "full_name": "AizenvoltPrime/claude-setup",
-        "html_url": "https://github.com/AizenvoltPrime/claude-setup",
-        "description": null,
-        "stargazers_count": 155,
+        "id": 1035923648,
+        "name": "Matrix-3D",
+        "full_name": "SkyworkAI/Matrix-3D",
+        "html_url": "https://github.com/SkyworkAI/Matrix-3D",
+        "description": "Generate large-scale explorable 3D scenes with high-quality panorama videos from a single image or text prompt.",
+        "stargazers_count": 325,
         "language": "Python",
         "owner": {
-            "login": "AizenvoltPrime",
-            "avatar_url": "https://avatars.githubusercontent.com/u/30220416?v=4",
-            "html_url": "https://github.com/AizenvoltPrime"
+            "login": "SkyworkAI",
+            "avatar_url": "https://avatars.githubusercontent.com/u/147303017?v=4",
+            "html_url": "https://github.com/SkyworkAI"
+        }
+    },
+    {
+        "id": 1036109133,
+        "name": "whole_body_tracking",
+        "full_name": "HybridRobotics/whole_body_tracking",
+        "html_url": "https://github.com/HybridRobotics/whole_body_tracking",
+        "description": null,
+        "stargazers_count": 322,
+        "language": "Python",
+        "owner": {
+            "login": "HybridRobotics",
+            "avatar_url": "https://avatars.githubusercontent.com/u/10053058?v=4",
+            "html_url": "https://github.com/HybridRobotics"
+        }
+    },
+    {
+        "id": 1037196711,
+        "name": "Hunyuan-GameCraft-1.0",
+        "full_name": "Tencent-Hunyuan/Hunyuan-GameCraft-1.0",
+        "html_url": "https://github.com/Tencent-Hunyuan/Hunyuan-GameCraft-1.0",
+        "description": "Hunyuan-GameCraft: High-dynamic Interactive Game Video Generation with Hybrid History Condition",
+        "stargazers_count": 297,
+        "language": "Python",
+        "owner": {
+            "login": "Tencent-Hunyuan",
+            "avatar_url": "https://avatars.githubusercontent.com/u/210980732?v=4",
+            "html_url": "https://github.com/Tencent-Hunyuan"
         }
     }
 ]
