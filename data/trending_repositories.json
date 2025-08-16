@@ -5,7 +5,7 @@
         "full_name": "nv-tlabs/vipe",
         "html_url": "https://github.com/nv-tlabs/vipe",
         "description": "ViPE: Video Pose Engine for Geometric 3D Perception",
-        "stargazers_count": 516,
+        "stargazers_count": 595,
         "language": "Python",
         "owner": {
             "login": "nv-tlabs",
@@ -14,17 +14,17 @@
         }
     },
     {
-        "id": 1035072355,
-        "name": "Qwen-Image-Lightning",
-        "full_name": "ModelTC/Qwen-Image-Lightning",
-        "html_url": "https://github.com/ModelTC/Qwen-Image-Lightning",
-        "description": "Qwen-Image-Lightning: Speed up Qwen-Image model with distillation",
-        "stargazers_count": 350,
+        "id": 1035987541,
+        "name": "StableAvatar",
+        "full_name": "Francis-Rings/StableAvatar",
+        "html_url": "https://github.com/Francis-Rings/StableAvatar",
+        "description": "We present StableAvatar, the first end-to-end video diffusion transformer, which synthesizes infinite-length high-quality audio-driven avatar videos without any post-processing, conditioned on a reference image and audio.",
+        "stargazers_count": 376,
         "language": "Python",
         "owner": {
-            "login": "ModelTC",
-            "avatar_url": "https://avatars.githubusercontent.com/u/69665675?v=4",
-            "html_url": "https://github.com/ModelTC"
+            "login": "Francis-Rings",
+            "avatar_url": "https://avatars.githubusercontent.com/u/66824433?v=4",
+            "html_url": "https://github.com/Francis-Rings"
         }
     },
     {
@@ -33,7 +33,7 @@
         "full_name": "mingyin0312/RLFromScratch",
         "html_url": "https://github.com/mingyin0312/RLFromScratch",
         "description": null,
-        "stargazers_count": 348,
+        "stargazers_count": 367,
         "language": "Python",
         "owner": {
             "login": "mingyin0312",
@@ -47,7 +47,7 @@
         "full_name": "SkyworkAI/Matrix-3D",
         "html_url": "https://github.com/SkyworkAI/Matrix-3D",
         "description": "Generate large-scale explorable 3D scenes with high-quality panorama videos from a single image or text prompt.",
-        "stargazers_count": 304,
+        "stargazers_count": 325,
         "language": "Python",
         "owner": {
             "login": "SkyworkAI",
@@ -56,31 +56,31 @@
         }
     },
     {
-        "id": 1035987541,
-        "name": "StableAvatar",
-        "full_name": "Francis-Rings/StableAvatar",
-        "html_url": "https://github.com/Francis-Rings/StableAvatar",
-        "description": "We present StableAvatar, the first end-to-end video diffusion transformer, which synthesizes infinite-length high-quality audio-driven avatar videos without any post-processing, conditioned on a reference image and audio.",
-        "stargazers_count": 277,
+        "id": 1036109133,
+        "name": "whole_body_tracking",
+        "full_name": "HybridRobotics/whole_body_tracking",
+        "html_url": "https://github.com/HybridRobotics/whole_body_tracking",
+        "description": null,
+        "stargazers_count": 322,
         "language": "Python",
         "owner": {
-            "login": "Francis-Rings",
-            "avatar_url": "https://avatars.githubusercontent.com/u/66824433?v=4",
-            "html_url": "https://github.com/Francis-Rings"
+            "login": "HybridRobotics",
+            "avatar_url": "https://avatars.githubusercontent.com/u/10053058?v=4",
+            "html_url": "https://github.com/HybridRobotics"
         }
     },
     {
-        "id": 1038001062,
-        "name": "Gift-Buyer-Tg",
-        "full_name": "MelnorCode/Gift-Buyer-Tg",
-        "html_url": "https://github.com/MelnorCode/Gift-Buyer-Tg",
-        "description": "A universal bot with many useful features for automatically sniping and buying Telegram gifts",
-        "stargazers_count": 223,
+        "id": 1037196711,
+        "name": "Hunyuan-GameCraft-1.0",
+        "full_name": "Tencent-Hunyuan/Hunyuan-GameCraft-1.0",
+        "html_url": "https://github.com/Tencent-Hunyuan/Hunyuan-GameCraft-1.0",
+        "description": "Hunyuan-GameCraft: High-dynamic Interactive Game Video Generation with Hybrid History Condition",
+        "stargazers_count": 297,
         "language": "Python",
         "owner": {
-            "login": "MelnorCode",
-            "avatar_url": "https://avatars.githubusercontent.com/u/223290161?v=4",
-            "html_url": "https://github.com/MelnorCode"
+            "login": "Tencent-Hunyuan",
+            "avatar_url": "https://avatars.githubusercontent.com/u/210980732?v=4",
+            "html_url": "https://github.com/Tencent-Hunyuan"
         }
     }
 ]
