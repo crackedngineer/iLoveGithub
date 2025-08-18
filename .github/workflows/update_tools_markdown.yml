@@ -23,7 +23,6 @@ jobs:
 
       - name: Run update_tools_readme script
         run: |
-          pip install -r requirements.txt || true  # if you have dependencies
           python scripts/update_tools_readme.py
 
       - name: Configure Git
