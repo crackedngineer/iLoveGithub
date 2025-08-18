@@ -52,14 +52,14 @@
 
 | Tool | Description | Launch |
 | ---- | ----------- | ------ |
-| [**github1s**](https://github1s.com/{owner}/{repo}) | One second to read GitHub code with VS Code. | [`https://github1s.com/{owner}/{repo}`](https://github1s.com/{owner}/{repo}) |
-| [**github-dev**](https://github.dev/{owner}/{repo}) | Open any GitHub repo in a browser-based VS Code editor. | [`https://github.dev/{owner}/{repo}`](https://github.dev/{owner}/{repo}) |
-| [**stackblitz**](https://stackblitz.com/~/github.com/{owner}/{repo}) | Turn text into working web apps. | [`https://stackblitz.com/~/github.com/{owner}/{repo}`](https://stackblitz.com/~/github.com/{owner}/{repo}) |
-| [**vscode**](https://vscode.dev/github/{owner}/{repo}) | Edit projects using the full VS Code experience in-browser. | [`https://vscode.dev/github/{owner}/{repo}`](https://vscode.dev/github/{owner}/{repo}) |
-| [**googlecolab**](https://colab.research.google.com/github/{owner}/{repo}) | Colaboratory is a research tool for machine learning education and research. | [`https://colab.research.google.com/github/{owner}/{repo}`](https://colab.research.google.com/github/{owner}/{repo}) |
-| [**bolt**](https://bolt.new/~/github.com/{owner}/{repo}) | Prompt, run, edit, and deploy full-stack web applications. | [`https://bolt.new/~/github.com/{owner}/{repo}`](https://bolt.new/~/github.com/{owner}/{repo}) |
-| [**codesandbox**](https://codesandbox.io/p/devbox/github/{owner}/{repo}) | Sandboxes built for scale. | [`https://codesandbox.io/p/devbox/github/{owner}/{repo}`](https://codesandbox.io/p/devbox/github/{owner}/{repo}) |
-| [**gitmcp**](https://gitmcp.io/{owner}/{repo}) | Instantly create a Remote MCP server for any GitHub project | [`https://gitmcp.io/{owner}/{repo}`](https://gitmcp.io/{owner}/{repo}) |
+| [**github1s**](https://github1s.com/{owner}/{repo}) | One second to read GitHub code with VS Code. | `https://github1s.com/{owner}/{repo}` |
+| [**github-dev**](https://github.dev/{owner}/{repo}) | Open any GitHub repo in a browser-based VS Code editor. | `https://github.dev/{owner}/{repo}` |
+| [**stackblitz**](https://stackblitz.com/~/github.com/{owner}/{repo}) | Turn text into working web apps. | `https://stackblitz.com/~/github.com/{owner}/{repo}` |
+| [**vscode**](https://vscode.dev/github/{owner}/{repo}) | Edit projects using the full VS Code experience in-browser. | `https://vscode.dev/github/{owner}/{repo}` |
+| [**googlecolab**](https://colab.research.google.com/github/{owner}/{repo}) | Colaboratory is a research tool for machine learning education and research. | `https://colab.research.google.com/github/{owner}/{repo}` |
+| [**bolt**](https://bolt.new/~/github.com/{owner}/{repo}) | Prompt, run, edit, and deploy full-stack web applications. | `https://bolt.new/~/github.com/{owner}/{repo}` |
+| [**codesandbox**](https://codesandbox.io/p/devbox/github/{owner}/{repo}) | Sandboxes built for scale. | `https://codesandbox.io/p/devbox/github/{owner}/{repo}` |
+| [**gitmcp**](https://gitmcp.io/{owner}/{repo}) | Instantly create a Remote MCP server for any GitHub project | `https://gitmcp.io/{owner}/{repo}` |
 
 ---
 
@@ -67,9 +67,9 @@
 
 | Tool | Description | Launch |
 | ---- | ----------- | ------ |
-| [**gitdiagram**](https://gitdiagram.com/{owner}/{repo}) | Turn any GitHub repository into an interactive diagram for Code Visualization & Diagrams. | [`https://gitdiagram.com/{owner}/{repo}`](https://gitdiagram.com/{owner}/{repo}) |
-| [**gituml**](https://www.gituml.com/ztree_scratchpad?user={owner}&repo={repo}&commit={default_branch}&repo-brand=github) | UML visualisation for Git repositories. | [`https://www.gituml.com/ztree_scratchpad?user={owner}&repo={repo}&commit={default_branch}&repo-brand=github`](https://www.gituml.com/ztree_scratchpad?user={owner}&repo={repo}&commit={default_branch}&repo-brand=github) |
-| [**githubnext**](https://mango-dune-07a8b7110.1.azurestaticapps.net/?repo={owner}%2F{repo}) | Visualizing a Codebase. | [`https://mango-dune-07a8b7110.1.azurestaticapps.net/?repo={owner}%2F{repo}`](https://mango-dune-07a8b7110.1.azurestaticapps.net/?repo={owner}%2F{repo}) |
+| [**gitdiagram**](https://gitdiagram.com/{owner}/{repo}) | Turn any GitHub repository into an interactive diagram for Code Visualization & Diagrams. | `https://gitdiagram.com/{owner}/{repo}` |
+| [**gituml**](https://www.gituml.com/ztree_scratchpad?user={owner}&repo={repo}&commit={default_branch}&repo-brand=github) | UML visualisation for Git repositories. | `https://www.gituml.com/ztree_scratchpad?user={owner}&repo={repo}&commit={default_branch}&repo-brand=github` |
+| [**githubnext**](https://mango-dune-07a8b7110.1.azurestaticapps.net/?repo={owner}%2F{repo}) | Visualizing a Codebase. | `https://mango-dune-07a8b7110.1.azurestaticapps.net/?repo={owner}%2F{repo}` |
 
 ---
 
@@ -77,17 +77,17 @@
 
 | Tool | Description | Launch |
 | ---- | ----------- | ------ |
-| [**gitingest**](https://gitingest.com/{owner}/{repo}) | Turn any Git repository into a simple text digest of its codebase. | [`https://gitingest.com/{owner}/{repo}`](https://gitingest.com/{owner}/{repo}) |
-| [**gitpodcast**](https://www.gitpodcast.com/{owner}/{repo}) | Turn any GitHub repository into an engaging podcast in seconds. | [`https://www.gitpodcast.com/{owner}/{repo}`](https://www.gitpodcast.com/{owner}/{repo}) |
-| [**gitsummarize**](https://gitsummarize.com/{owner}/{repo}) | Turn any GitHub repository into a comprehensive AI-powered Documentation & AI-Powered Understanding hub. | [`https://gitsummarize.com/{owner}/{repo}`](https://gitsummarize.com/{owner}/{repo}) |
-| [**explaingithub**](https://explaingithub.com/{owner}/{repo}) | Understand complex codebases with AI. | [`https://explaingithub.com/{owner}/{repo}`](https://explaingithub.com/{owner}/{repo}) |
-| [**chatforgithub**](https://chat.forgithub.com/{owner}/{repo}) | Context-driven LLM Interface. | [`https://chat.forgithub.com/{owner}/{repo}`](https://chat.forgithub.com/{owner}/{repo}) |
-| [**git1file**](https://git1file.com/{owner}/{repo}) | Compress & Transform Git Repositories for AI | [`https://git1file.com/{owner}/{repo}`](https://git1file.com/{owner}/{repo}) |
-| [**deepwiki**](https://deepwiki.com/{owner}/{repo}) | Which repo would you like to understand? | [`https://deepwiki.com/{owner}/{repo}`](https://deepwiki.com/{owner}/{repo}) |
-| [**talktogithub**](https://talktogithub.com/{owner}/{repo}) | Repo to Convo in seconds! | [`https://talktogithub.com/{owner}/{repo}`](https://talktogithub.com/{owner}/{repo}) |
-| [**answergit**](https://answergit.vercel.app/{owner}/{repo}) | AI-Powered GitHub Repository Explorer | [`https://answergit.vercel.app/{owner}/{repo}`](https://answergit.vercel.app/{owner}/{repo}) |
-| [**gittodoc**](https://www.gittodoc.com/{owner}/{repo}) | Turn any Git repository into a simple Documentation & AI-Powered Understanding link that LLMs can easily index. | [`https://www.gittodoc.com/{owner}/{repo}`](https://www.gittodoc.com/{owner}/{repo}) |
-| [**coding2tutorial**](https://code2tutorial.com/repository/select-files?repoUrl=https://github.com/{owner}/{repo}) | Turn any GitHub repository into a comprehensive AI-powered tutorial. | [`https://code2tutorial.com/repository/select-files?repoUrl=https://github.com/{owner}/{repo}`](https://code2tutorial.com/repository/select-files?repoUrl=https://github.com/{owner}/{repo}) |
+| [**gitingest**](https://gitingest.com/{owner}/{repo}) | Turn any Git repository into a simple text digest of its codebase. | `https://gitingest.com/{owner}/{repo}` |
+| [**gitpodcast**](https://www.gitpodcast.com/{owner}/{repo}) | Turn any GitHub repository into an engaging podcast in seconds. | `https://www.gitpodcast.com/{owner}/{repo}` |
+| [**gitsummarize**](https://gitsummarize.com/{owner}/{repo}) | Turn any GitHub repository into a comprehensive AI-powered Documentation & AI-Powered Understanding hub. | `https://gitsummarize.com/{owner}/{repo}` |
+| [**explaingithub**](https://explaingithub.com/{owner}/{repo}) | Understand complex codebases with AI. | `https://explaingithub.com/{owner}/{repo}` |
+| [**chatforgithub**](https://chat.forgithub.com/{owner}/{repo}) | Context-driven LLM Interface. | `https://chat.forgithub.com/{owner}/{repo}` |
+| [**git1file**](https://git1file.com/{owner}/{repo}) | Compress & Transform Git Repositories for AI | `https://git1file.com/{owner}/{repo}` |
+| [**deepwiki**](https://deepwiki.com/{owner}/{repo}) | Which repo would you like to understand? | `https://deepwiki.com/{owner}/{repo}` |
+| [**talktogithub**](https://talktogithub.com/{owner}/{repo}) | Repo to Convo in seconds! | `https://talktogithub.com/{owner}/{repo}` |
+| [**answergit**](https://answergit.vercel.app/{owner}/{repo}) | AI-Powered GitHub Repository Explorer | `https://answergit.vercel.app/{owner}/{repo}` |
+| [**gittodoc**](https://www.gittodoc.com/{owner}/{repo}) | Turn any Git repository into a simple Documentation & AI-Powered Understanding link that LLMs can easily index. | `https://www.gittodoc.com/{owner}/{repo}` |
+| [**coding2tutorial**](https://code2tutorial.com/repository/select-files?repoUrl=https://github.com/{owner}/{repo}) | Turn any GitHub repository into a comprehensive AI-powered tutorial. | `https://code2tutorial.com/repository/select-files?repoUrl=https://github.com/{owner}/{repo}` |
 
 ---
 
@@ -95,11 +95,11 @@
 
 | Tool | Description | Launch |
 | ---- | ----------- | ------ |
-| [**uithub**](https://uithub.com/{owner}/{repo}) | Easily Ask Your LLM Coding Questions. | [`https://uithub.com/{owner}/{repo}`](https://uithub.com/{owner}/{repo}) |
-| [**repo-surf**](https://repo.surf/{owner}/{repo}) | repo-surf is a repository viewer that lets you dive through its commits and branches. | [`https://repo.surf/{owner}/{repo}`](https://repo.surf/{owner}/{repo}) |
-| [**github.gg**](https://github.gg/{owner}/{repo}) | Analyze GitHub repositories with insights about code quality, dependencies, and more. | [`https://github.gg/{owner}/{repo}`](https://github.gg/{owner}/{repo}) |
-| [**entelligence**](https://www.entelligence.ai/{owner}/{repo}) | Empower and uplevel your engineering team | [`https://www.entelligence.ai/{owner}/{repo}`](https://www.entelligence.ai/{owner}/{repo}) |
-| [**flatgithub**](https://flatgithub.com/{owner}/{repo}) | A simple tool for exploring flat data files in GitHub repositories. | [`https://flatgithub.com/{owner}/{repo}`](https://flatgithub.com/{owner}/{repo}) |
+| [**uithub**](https://uithub.com/{owner}/{repo}) | Easily Ask Your LLM Coding Questions. | `https://uithub.com/{owner}/{repo}` |
+| [**repo-surf**](https://repo.surf/{owner}/{repo}) | repo-surf is a repository viewer that lets you dive through its commits and branches. | `https://repo.surf/{owner}/{repo}` |
+| [**github.gg**](https://github.gg/{owner}/{repo}) | Analyze GitHub repositories with insights about code quality, dependencies, and more. | `https://github.gg/{owner}/{repo}` |
+| [**entelligence**](https://www.entelligence.ai/{owner}/{repo}) | Empower and uplevel your engineering team | `https://www.entelligence.ai/{owner}/{repo}` |
+| [**flatgithub**](https://flatgithub.com/{owner}/{repo}) | A simple tool for exploring flat data files in GitHub repositories. | `https://flatgithub.com/{owner}/{repo}` |
 
 ---
 
@@ -107,8 +107,8 @@
 
 | Tool | Description | Launch |
 | ---- | ----------- | ------ |
-| [**socialify**](https://socialify.git.ci/{owner}/{repo}) | Socialify your GitHub project to share with the world. | [`https://socialify.git.ci/{owner}/{repo}`](https://socialify.git.ci/{owner}/{repo}) |
-| [**star-history**](https://www.star-history.com/#{owner}/{repo}) | View and compare GitHub star history graph of open source projects. | [`https://www.star-history.com/#{owner}/{repo}`](https://www.star-history.com/#{owner}/{repo}) |
+| [**socialify**](https://socialify.git.ci/{owner}/{repo}) | Socialify your GitHub project to share with the world. | `https://socialify.git.ci/{owner}/{repo}` |
+| [**star-history**](https://www.star-history.com/#{owner}/{repo}) | View and compare GitHub star history graph of open source projects. | `https://www.star-history.com/#{owner}/{repo}` |
 
 ---
 
