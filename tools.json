@@ -6,7 +6,7 @@
     "homepage": "https://github1s.com",
     "url": "https://github1s.com/{owner}/{repo}",
     "icon": "/icons/tools/github1s.ico",
-    "category": "DEVELOPMENT",
+    "category": "Development Tools",
     "iframe": true,
     "created_at": "2025-03-28T15:39:45Z"
   },
@@ -17,18 +17,18 @@
     "homepage": "https://github.dev",
     "url": "https://github.dev/{owner}/{repo}",
     "icon": "/icons/tools/github.ico",
-    "category": "DEVELOPMENT",
+    "category": "Development Tools",
     "iframe": false,
     "created_at": "2025-03-28T15:39:45Z"
   },
   {
     "name": "gitdiagram",
     "title": "GitDiagram",
-    "description": "Turn any GitHub repository into an interactive diagram for visualization.",
+    "description": "Turn any GitHub repository into an interactive diagram for Code Visualization & Diagrams.",
     "homepage": "https://gitdiagram.com/",
     "url": "https://gitdiagram.com/{owner}/{repo}",
     "icon": "/icons/tools/gitdiagram.ico",
-    "category": "VISUALIZATION",
+    "category": "Code Visualization & Diagrams",
     "iframe": true,
     "created_at": "2025-03-28T15:39:45Z"
   },
@@ -39,7 +39,7 @@
     "homepage": "https://stackblitz.com/",
     "url": "https://stackblitz.com/~/github.com/{owner}/{repo}",
     "icon": "/icons/tools/stackblitz.svg",
-    "category": "DEVELOPMENT",
+    "category": "Development Tools",
     "iframe": false,
     "created_at": "2025-03-28T15:39:45Z"
   },
@@ -50,7 +50,7 @@
     "homepage": "https://code.visualstudio.com/docs/setup/vscode-web",
     "url": "https://vscode.dev/github/{owner}/{repo}",
     "icon": "/icons/tools/vscode.ico",
-    "category": "DEVELOPMENT",
+    "category": "Development Tools",
     "iframe": false,
     "created_at": "2025-03-28T15:39:45Z"
   },
@@ -61,7 +61,7 @@
     "homepage": "https://gitingest.com/",
     "url": "https://gitingest.com/{owner}/{repo}",
     "icon": "/icons/tools/gitingest.ico",
-    "category": "DOCUMENTATION",
+    "category": "Documentation & AI-Powered Understanding",
     "iframe": true,
     "created_at": "2025-03-28T15:39:45Z"
   },
@@ -72,7 +72,7 @@
     "homepage": "https://uithub.com/",
     "url": "https://uithub.com/{owner}/{repo}",
     "icon": "/icons/tools/uithub.png",
-    "category": "ANALYTICS",
+    "category": "Analytics & Insights",
     "iframe": false,
     "created_at": "2025-03-28T15:39:45Z"
   },
@@ -83,7 +83,7 @@
     "homepage": "https://www.gitpodcast.com/",
     "url": "https://www.gitpodcast.com/{owner}/{repo}",
     "icon": "/icons/tools/gitpodcast.ico",
-    "category": "DOCUMENTATION",
+    "category": "Documentation & AI-Powered Understanding",
     "iframe": true,
     "created_at": "2025-03-28T15:39:45Z"
   },
@@ -94,18 +94,18 @@
     "homepage": "https://socialify.git.ci/",
     "url": "https://socialify.git.ci/{owner}/{repo}",
     "icon": "/icons/tools/socialify.ico",
-    "category": "WIDGETS",
+    "category": "Widgets & UI",
     "iframe": true,
     "created_at": "2025-03-28T15:39:45Z"
   },
   {
     "name": "gitsummarize",
     "title": "GitSummarize",
-    "description": "Turn any GitHub repository into a comprehensive AI-powered documentation hub.",
+    "description": "Turn any GitHub repository into a comprehensive AI-powered Documentation & AI-Powered Understanding hub.",
     "homepage": "https://gitsummarize.com/",
     "url": "https://gitsummarize.com/{owner}/{repo}",
     "icon": "/icons/tools/gitsummarize.ico",
-    "category": "DOCUMENTATION",
+    "category": "Documentation & AI-Powered Understanding",
     "iframe": true,
     "created_at": "2025-03-28T15:39:45Z"
   },
@@ -116,7 +116,7 @@
     "homepage": "https://explaingithub.com/",
     "url": "https://explaingithub.com/{owner}/{repo}",
     "icon": "/icons/tools/explaingithub.ico",
-    "category": "DOCUMENTATION",
+    "category": "Documentation & AI-Powered Understanding",
     "iframe": false,
     "created_at": "2025-03-28T15:39:45Z"
   },
@@ -127,7 +127,7 @@
     "homepage": "https://www.gituml.com/",
     "url": "https://www.gituml.com/ztree_scratchpad?user={owner}&repo={repo}&commit={default_branch}&repo-brand=github",
     "icon": "/icons/tools/gituml.ico",
-    "category": "VISUALIZATION",
+    "category": "Code Visualization & Diagrams",
     "iframe": false,
     "created_at": "2025-03-28T15:39:45Z"
   },
@@ -138,7 +138,7 @@
     "homepage": "https://colab.research.google.com/",
     "url": "https://colab.research.google.com/github/{owner}/{repo}",
     "icon": "/icons/tools/googlecolab.ico",
-    "category": "DEVELOPMENT",
+    "category": "Development Tools",
     "iframe": false,
     "created_at": "2025-03-28T15:39:45Z"
   },
@@ -149,7 +149,7 @@
     "homepage": "https://bolt.new/",
     "url": "https://bolt.new/~/github.com/{owner}/{repo}",
     "icon": "/icons/tools/bolt-new.svg",
-    "category": "DEVELOPMENT",
+    "category": "Development Tools",
     "iframe": false,
     "created_at": "2025-03-28T15:39:45Z"
   },
@@ -160,7 +160,7 @@
     "homepage": "https://codesandbox.io/",
     "url": "https://codesandbox.io/p/devbox/github/{owner}/{repo}",
     "icon": "/icons/tools/codesandbox.ico",
-    "category": "DEVELOPMENT",
+    "category": "Development Tools",
     "iframe": false,
     "created_at": "2025-03-28T15:39:45Z"
   },
@@ -171,7 +171,7 @@
     "homepage": "https://repo.surf/",
     "url": "https://repo.surf/{owner}/{repo}",
     "icon": "/icons/tools/repo-surf.ico",
-    "category": "ANALYTICS",
+    "category": "Analytics & Insights",
     "iframe": false,
     "created_at": "2025-03-28T15:39:45Z"
   },
@@ -182,7 +182,7 @@
     "homepage": "https://www.star-history.com/",
     "url": "https://www.star-history.com/#{owner}/{repo}",
     "icon": "/icons/tools/star-history.ico",
-    "category": "WIDGETS",
+    "category": "Widgets & UI",
     "iframe": true,
     "created_at": "2025-03-28T15:39:45Z"
   },
@@ -190,10 +190,10 @@
     "name": "githubnext",
     "title": "GitHubNext",
     "description": "Visualizing a Codebase.",
-    "homepage": "https://githubnext.com/projects/repo-visualization/",
+    "homepage": "https://githubnext.com/projects/repo-Code Visualization & Diagrams/",
     "url": "https://mango-dune-07a8b7110.1.azurestaticapps.net/?repo={owner}%2F{repo}",
     "icon": "/icons/tools/githubnext.svg",
-    "category": "VISUALIZATION",
+    "category": "Code Visualization & Diagrams",
     "iframe": true,
     "created_at": "2025-03-28T15:39:45Z"
   },
@@ -204,7 +204,7 @@
     "homepage": "https://github.gg/",
     "url": "https://github.gg/{owner}/{repo}",
     "icon": "/icons/tools/github-gg.png",
-    "category": "ANALYTICS",
+    "category": "Analytics & Insights",
     "iframe": true,
     "created_at": "2025-03-28T15:39:45Z"
   },
@@ -215,7 +215,7 @@
     "homepage": "https://chat.forgithub.com/",
     "url": "https://chat.forgithub.com/{owner}/{repo}",
     "icon": "/icons/tools/chatforgithub.ico",
-    "category": "DOCUMENTATION",
+    "category": "Documentation & AI-Powered Understanding",
     "iframe": false,
     "created_at": "2025-03-28T15:39:45Z"
   },
@@ -226,7 +226,7 @@
     "homepage": "https://www.entelligence.ai/",
     "url": "https://www.entelligence.ai/{owner}/{repo}",
     "icon": "/icons/tools/entelligence.svg",
-    "category": "ANALYTICS",
+    "category": "Analytics & Insights",
     "iframe": false,
     "created_at": "2025-03-28T15:39:45Z"
   },
@@ -237,7 +237,7 @@
     "homepage": "https://git1file.com/",
     "url": "https://git1file.com/{owner}/{repo}",
     "icon": "/icons/tools/git1file.ico",
-    "category": "DOCUMENTATION",
+    "category": "Documentation & AI-Powered Understanding",
     "iframe": true,
     "created_at": "2025-03-28T15:39:45Z"
   },
@@ -248,7 +248,7 @@
     "homepage": "https://gitmcp.io/",
     "url": "https://gitmcp.io/{owner}/{repo}",
     "icon": "/icons/tools/gitmcp.png",
-    "category": "DEVELOPMENT",
+    "category": "Development Tools",
     "iframe": true,
     "created_at": "2025-03-28T15:39:45Z"
   },
@@ -259,7 +259,7 @@
     "homepage": "https://flatgithub.com/",
     "url": "https://flatgithub.com/{owner}/{repo}",
     "icon": "/icons/tools/flatgithub.png",
-    "category": "ANALYTICS",
+    "category": "Analytics & Insights",
     "iframe": true,
     "created_at": "2025-03-28T15:39:45Z"
   },
@@ -270,7 +270,7 @@
     "homepage": "https://deepwiki.com/",
     "url": "https://deepwiki.com/{owner}/{repo}",
     "icon": "/icons/tools/deepwiki.ico",
-    "category": "DOCUMENTATION",
+    "category": "Documentation & AI-Powered Understanding",
     "iframe": false,
     "created_at": "2025-04-26T19:02:42.848Z"
   },
@@ -281,7 +281,7 @@
     "homepage": "https://talktogithub.com/",
     "url": "https://talktogithub.com/{owner}/{repo}",
     "icon": "/icons/tools/talktogithub.svg",
-    "category": "DOCUMENTATION",
+    "category": "Documentation & AI-Powered Understanding",
     "iframe": true,
     "created_at": "2025-04-29T18:56:38Z"
   },
@@ -292,18 +292,18 @@
     "homepage": "https://answergit.vercel.app/",
     "url": "https://answergit.vercel.app/{owner}/{repo}",
     "icon": null,
-    "category": "DOCUMENTATION",
+    "category": "Documentation & AI-Powered Understanding",
     "iframe": true,
     "created_at": "2025-05-09T05:13:49Z"
   },
   {
     "name": "gittodoc",
     "title": "Gittodoc",
-    "description": "Turn any Git repository into a simple documentation link that LLMs can easily index.",
+    "description": "Turn any Git repository into a simple Documentation & AI-Powered Understanding link that LLMs can easily index.",
     "homepage": "https://www.gittodoc.com/",
     "url": "https://www.gittodoc.com/{owner}/{repo}",
     "icon": "/icons/tools/gittodoc.ico",
-    "category": "DOCUMENTATION",
+    "category": "Documentation & AI-Powered Understanding",
     "iframe": true,
     "created_at": "2025-05-21T18:30:45Z"
   },
@@ -314,7 +314,7 @@
     "homepage": "https://coding2tutorial.com/",
     "url": "https://code2tutorial.com/repository/select-files?repoUrl=https://github.com/{owner}/{repo}",
     "icon": "/icons/tools/coding2tutorial.ico",
-    "category": "DOCUMENTATION",
+    "category": "Documentation & AI-Powered Understanding",
     "iframe": false,
     "created_at": "2025-07-31T11:06:45Z"
   }
