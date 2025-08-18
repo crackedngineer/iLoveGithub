@@ -11,7 +11,6 @@ import {
   CardTitle,
 } from "@/components/ui/card";
 import GithubToolsList from "../../tools.json";
-import { ToolCategories } from "@/constants";
 import { Tool } from "@/lib/types";
 import { replaceUrlVariables } from "@/app/helper";
 import { Button } from "@/components/ui/button";
@@ -45,19 +44,12 @@ const GitHubTools = ({
   });
 
   const toolsByCategory = filteredTools.reduce((acc, tool) => {
-    const categoryKey = tool.category as keyof typeof ToolCategories;
+    const categoryKey = tool.category;
 
-    if (!(categoryKey in ToolCategories)) {
-      throw new Error(`Invalid category key "${tool.category}" found for tool "${tool.name}". 
-        Please ensure it matches a key in ToolCategories.`);
+    if (!acc[categoryKey]) {
+      acc[categoryKey] = [];
     }
-
-    const categoryDisplayName = ToolCategories[categoryKey];
-
-    if (!acc[categoryDisplayName]) {
-      acc[categoryDisplayName] = [];
-    }
-    acc[categoryDisplayName].push(tool);
+    acc[categoryKey].push(tool);
     return acc;
   }, {} as Record<string, Tool[]>);
 
