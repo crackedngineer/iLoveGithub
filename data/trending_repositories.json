@@ -1,30 +1,16 @@
 [
     {
-        "id": 1035697953,
-        "name": "vipe",
-        "full_name": "nv-tlabs/vipe",
-        "html_url": "https://github.com/nv-tlabs/vipe",
-        "description": "ViPE: Video Pose Engine for Geometric 3D Perception",
-        "stargazers_count": 595,
+        "id": 1038157755,
+        "name": "synapse-bot",
+        "full_name": "anthugeist/synapse-bot",
+        "html_url": "https://github.com/anthugeist/synapse-bot",
+        "description": "A free, opensource, multi functional crypto trading bot. It combines flexibility, speed and extensibility, allowing the user to effectively interact with exchanges, analyze data and make trading decisions in real time.",
+        "stargazers_count": 483,
         "language": "Python",
         "owner": {
-            "login": "nv-tlabs",
-            "avatar_url": "https://avatars.githubusercontent.com/u/49653101?v=4",
-            "html_url": "https://github.com/nv-tlabs"
-        }
-    },
-    {
-        "id": 1035987541,
-        "name": "StableAvatar",
-        "full_name": "Francis-Rings/StableAvatar",
-        "html_url": "https://github.com/Francis-Rings/StableAvatar",
-        "description": "We present StableAvatar, the first end-to-end video diffusion transformer, which synthesizes infinite-length high-quality audio-driven avatar videos without any post-processing, conditioned on a reference image and audio.",
-        "stargazers_count": 376,
-        "language": "Python",
-        "owner": {
-            "login": "Francis-Rings",
-            "avatar_url": "https://avatars.githubusercontent.com/u/66824433?v=4",
-            "html_url": "https://github.com/Francis-Rings"
+            "login": "anthugeist",
+            "avatar_url": "https://avatars.githubusercontent.com/u/75525369?v=4",
+            "html_url": "https://github.com/anthugeist"
         }
     },
     {
@@ -33,7 +19,7 @@
         "full_name": "mingyin0312/RLFromScratch",
         "html_url": "https://github.com/mingyin0312/RLFromScratch",
         "description": null,
-        "stargazers_count": 367,
+        "stargazers_count": 387,
         "language": "Python",
         "owner": {
             "login": "mingyin0312",
@@ -42,31 +28,31 @@
         }
     },
     {
-        "id": 1035923648,
-        "name": "Matrix-3D",
-        "full_name": "SkyworkAI/Matrix-3D",
-        "html_url": "https://github.com/SkyworkAI/Matrix-3D",
-        "description": "Generate large-scale explorable 3D scenes with high-quality panorama videos from a single image or text prompt.",
-        "stargazers_count": 325,
+        "id": 1036388607,
+        "name": "Stand-In",
+        "full_name": "WeChatCV/Stand-In",
+        "html_url": "https://github.com/WeChatCV/Stand-In",
+        "description": "Stand-In is a lightweight, plug-and-play framework for identity-preserving video generation.",
+        "stargazers_count": 377,
         "language": "Python",
         "owner": {
-            "login": "SkyworkAI",
-            "avatar_url": "https://avatars.githubusercontent.com/u/147303017?v=4",
-            "html_url": "https://github.com/SkyworkAI"
+            "login": "WeChatCV",
+            "avatar_url": "https://avatars.githubusercontent.com/u/75737167?v=4",
+            "html_url": "https://github.com/WeChatCV"
         }
     },
     {
-        "id": 1036109133,
-        "name": "whole_body_tracking",
-        "full_name": "HybridRobotics/whole_body_tracking",
-        "html_url": "https://github.com/HybridRobotics/whole_body_tracking",
+        "id": 1037871209,
+        "name": "NextStep-1",
+        "full_name": "stepfun-ai/NextStep-1",
+        "html_url": "https://github.com/stepfun-ai/NextStep-1",
         "description": null,
-        "stargazers_count": 322,
+        "stargazers_count": 352,
         "language": "Python",
         "owner": {
-            "login": "HybridRobotics",
-            "avatar_url": "https://avatars.githubusercontent.com/u/10053058?v=4",
-            "html_url": "https://github.com/HybridRobotics"
+            "login": "stepfun-ai",
+            "avatar_url": "https://avatars.githubusercontent.com/u/178004800?v=4",
+            "html_url": "https://github.com/stepfun-ai"
         }
     },
     {
@@ -75,12 +61,26 @@
         "full_name": "Tencent-Hunyuan/Hunyuan-GameCraft-1.0",
         "html_url": "https://github.com/Tencent-Hunyuan/Hunyuan-GameCraft-1.0",
         "description": "Hunyuan-GameCraft: High-dynamic Interactive Game Video Generation with Hybrid History Condition",
-        "stargazers_count": 297,
+        "stargazers_count": 348,
         "language": "Python",
         "owner": {
             "login": "Tencent-Hunyuan",
             "avatar_url": "https://avatars.githubusercontent.com/u/210980732?v=4",
             "html_url": "https://github.com/Tencent-Hunyuan"
+        }
+    },
+    {
+        "id": 1039025752,
+        "name": "Gift-Buyer",
+        "full_name": "blindxvc/Gift-Buyer",
+        "html_url": "https://github.com/blindxvc/Gift-Buyer",
+        "description": "A universal bot for automatically sniping and buying Telegram gifts",
+        "stargazers_count": 219,
+        "language": "Python",
+        "owner": {
+            "login": "blindxvc",
+            "avatar_url": "https://avatars.githubusercontent.com/u/146737218?v=4",
+            "html_url": "https://github.com/blindxvc"
         }
     }
 ]
