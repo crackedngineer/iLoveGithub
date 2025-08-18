@@ -23,8 +23,7 @@ def tools_to_markdown(tools):
             name = tool.get("name", "Unnamed")
             url = tool.get("url", "#")
             desc = tool.get("description", "")
-            launch = tool.get("launch", url)
-            md.append(f"| [**{name}**]({url}) | {desc} | [`{launch}`]({launch}) |\n")
+            md.append(f"| [**{name}**]({url}) | {desc} | `{url}` |\n")
         md.append("\n---\n\n")
     return "".join(md)
 
