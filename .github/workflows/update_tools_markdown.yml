@@ -21,9 +21,9 @@ jobs:
         with:
           python-version: "3.x"
 
-      - name: Run update_tools_readme script
+      - name: Run update_tools_markdown script
         run: |
-          python scripts/update_tools_readme.py
+          python scripts/update_tools_markdown.py
 
       - name: Configure Git
         run: |
