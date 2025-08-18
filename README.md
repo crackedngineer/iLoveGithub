@@ -48,7 +48,7 @@
 
 ---
 <!-- TOOLS_START -->
-### 🧩 DEVELOPMENT
+### 🧩 Development Tools
 
 | Tool | Description | Launch |
 | ---- | ----------- | ------ |
@@ -63,35 +63,35 @@
 
 ---
 
-### 🧩 VISUALIZATION
+### 🧩 Code Visualization & Diagrams
 
 | Tool | Description | Launch |
 | ---- | ----------- | ------ |
-| [**gitdiagram**](https://gitdiagram.com/{owner}/{repo}) | Turn any GitHub repository into an interactive diagram for visualization. | [`https://gitdiagram.com/{owner}/{repo}`](https://gitdiagram.com/{owner}/{repo}) |
+| [**gitdiagram**](https://gitdiagram.com/{owner}/{repo}) | Turn any GitHub repository into an interactive diagram for Code Visualization & Diagrams. | [`https://gitdiagram.com/{owner}/{repo}`](https://gitdiagram.com/{owner}/{repo}) |
 | [**gituml**](https://www.gituml.com/ztree_scratchpad?user={owner}&repo={repo}&commit={default_branch}&repo-brand=github) | UML visualisation for Git repositories. | [`https://www.gituml.com/ztree_scratchpad?user={owner}&repo={repo}&commit={default_branch}&repo-brand=github`](https://www.gituml.com/ztree_scratchpad?user={owner}&repo={repo}&commit={default_branch}&repo-brand=github) |
 | [**githubnext**](https://mango-dune-07a8b7110.1.azurestaticapps.net/?repo={owner}%2F{repo}) | Visualizing a Codebase. | [`https://mango-dune-07a8b7110.1.azurestaticapps.net/?repo={owner}%2F{repo}`](https://mango-dune-07a8b7110.1.azurestaticapps.net/?repo={owner}%2F{repo}) |
 
 ---
 
-### 🧩 DOCUMENTATION
+### 🧩 Documentation & AI-Powered Understanding
 
 | Tool | Description | Launch |
 | ---- | ----------- | ------ |
 | [**gitingest**](https://gitingest.com/{owner}/{repo}) | Turn any Git repository into a simple text digest of its codebase. | [`https://gitingest.com/{owner}/{repo}`](https://gitingest.com/{owner}/{repo}) |
 | [**gitpodcast**](https://www.gitpodcast.com/{owner}/{repo}) | Turn any GitHub repository into an engaging podcast in seconds. | [`https://www.gitpodcast.com/{owner}/{repo}`](https://www.gitpodcast.com/{owner}/{repo}) |
-| [**gitsummarize**](https://gitsummarize.com/{owner}/{repo}) | Turn any GitHub repository into a comprehensive AI-powered documentation hub. | [`https://gitsummarize.com/{owner}/{repo}`](https://gitsummarize.com/{owner}/{repo}) |
+| [**gitsummarize**](https://gitsummarize.com/{owner}/{repo}) | Turn any GitHub repository into a comprehensive AI-powered Documentation & AI-Powered Understanding hub. | [`https://gitsummarize.com/{owner}/{repo}`](https://gitsummarize.com/{owner}/{repo}) |
 | [**explaingithub**](https://explaingithub.com/{owner}/{repo}) | Understand complex codebases with AI. | [`https://explaingithub.com/{owner}/{repo}`](https://explaingithub.com/{owner}/{repo}) |
 | [**chatforgithub**](https://chat.forgithub.com/{owner}/{repo}) | Context-driven LLM Interface. | [`https://chat.forgithub.com/{owner}/{repo}`](https://chat.forgithub.com/{owner}/{repo}) |
 | [**git1file**](https://git1file.com/{owner}/{repo}) | Compress & Transform Git Repositories for AI | [`https://git1file.com/{owner}/{repo}`](https://git1file.com/{owner}/{repo}) |
 | [**deepwiki**](https://deepwiki.com/{owner}/{repo}) | Which repo would you like to understand? | [`https://deepwiki.com/{owner}/{repo}`](https://deepwiki.com/{owner}/{repo}) |
 | [**talktogithub**](https://talktogithub.com/{owner}/{repo}) | Repo to Convo in seconds! | [`https://talktogithub.com/{owner}/{repo}`](https://talktogithub.com/{owner}/{repo}) |
 | [**answergit**](https://answergit.vercel.app/{owner}/{repo}) | AI-Powered GitHub Repository Explorer | [`https://answergit.vercel.app/{owner}/{repo}`](https://answergit.vercel.app/{owner}/{repo}) |
-| [**gittodoc**](https://www.gittodoc.com/{owner}/{repo}) | Turn any Git repository into a simple documentation link that LLMs can easily index. | [`https://www.gittodoc.com/{owner}/{repo}`](https://www.gittodoc.com/{owner}/{repo}) |
+| [**gittodoc**](https://www.gittodoc.com/{owner}/{repo}) | Turn any Git repository into a simple Documentation & AI-Powered Understanding link that LLMs can easily index. | [`https://www.gittodoc.com/{owner}/{repo}`](https://www.gittodoc.com/{owner}/{repo}) |
 | [**coding2tutorial**](https://code2tutorial.com/repository/select-files?repoUrl=https://github.com/{owner}/{repo}) | Turn any GitHub repository into a comprehensive AI-powered tutorial. | [`https://code2tutorial.com/repository/select-files?repoUrl=https://github.com/{owner}/{repo}`](https://code2tutorial.com/repository/select-files?repoUrl=https://github.com/{owner}/{repo}) |
 
 ---
 
-### 🧩 ANALYTICS
+### 🧩 Analytics & Insights
 
 | Tool | Description | Launch |
 | ---- | ----------- | ------ |
@@ -103,7 +103,7 @@
 
 ---
 
-### 🧩 WIDGETS
+### 🧩 Widgets & UI
 
 | Tool | Description | Launch |
 | ---- | ----------- | ------ |
