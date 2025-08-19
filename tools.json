@@ -317,5 +317,16 @@
     "category": "Documentation & AI-Powered Understanding",
     "iframe": false,
     "created_at": "2025-07-31T11:06:45Z"
+  },
+  {
+    "name": "githubtree",
+    "title": "GitHubTree",
+    "description": "GitHub repository explorer, online repo viewer, visualize GitHub project structure, directory tree, file explorer, open source navigation, copy file paths, GitHub project folders",
+    "homepage": "https://githubtree.mgks.dev/",
+    "url": "https://githubtree.mgks.dev/repo/{owner}/{repo}/{default_branch}/",
+    "icon": "/icons/tools/githubtree.ico",
+    "category": "Code Visualization & Diagrams",
+    "iframe": true,
+    "created_at": "2025-08-19T15:39:45Z"
   }
 ]
