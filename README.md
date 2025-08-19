@@ -70,6 +70,7 @@
 | [**gitdiagram**](https://gitdiagram.com/{owner}/{repo}) | Turn any GitHub repository into an interactive diagram for Code Visualization & Diagrams. | `https://gitdiagram.com/{owner}/{repo}` |
 | [**gituml**](https://www.gituml.com/ztree_scratchpad?user={owner}&repo={repo}&commit={default_branch}&repo-brand=github) | UML visualisation for Git repositories. | `https://www.gituml.com/ztree_scratchpad?user={owner}&repo={repo}&commit={default_branch}&repo-brand=github` |
 | [**githubnext**](https://mango-dune-07a8b7110.1.azurestaticapps.net/?repo={owner}%2F{repo}) | Visualizing a Codebase. | `https://mango-dune-07a8b7110.1.azurestaticapps.net/?repo={owner}%2F{repo}` |
+| [**githubtree**](https://githubtree.mgks.dev/repo/{owner}/{repo}/{default_branch}/) | GitHub repository explorer, online repo viewer, visualize GitHub project structure, directory tree, file explorer, open source navigation, copy file paths, GitHub project folders | `https://githubtree.mgks.dev/repo/{owner}/{repo}/{default_branch}/` |
 
 ---
 
