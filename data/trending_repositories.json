@@ -5,7 +5,7 @@
         "full_name": "anthugeist/synapse-bot",
         "html_url": "https://github.com/anthugeist/synapse-bot",
         "description": "A free, opensource, multi functional crypto trading bot. It combines flexibility, speed and extensibility, allowing the user to effectively interact with exchanges, analyze data and make trading decisions in real time.",
-        "stargazers_count": 631,
+        "stargazers_count": 634,
         "language": "Python",
         "owner": {
             "login": "anthugeist",
@@ -14,26 +14,12 @@
         }
     },
     {
-        "id": 1037196711,
-        "name": "Hunyuan-GameCraft-1.0",
-        "full_name": "Tencent-Hunyuan/Hunyuan-GameCraft-1.0",
-        "html_url": "https://github.com/Tencent-Hunyuan/Hunyuan-GameCraft-1.0",
-        "description": "Hunyuan-GameCraft: High-dynamic Interactive Game Video Generation with Hybrid History Condition",
-        "stargazers_count": 421,
-        "language": "Python",
-        "owner": {
-            "login": "Tencent-Hunyuan",
-            "avatar_url": "https://avatars.githubusercontent.com/u/210980732?v=4",
-            "html_url": "https://github.com/Tencent-Hunyuan"
-        }
-    },
-    {
         "id": 1037871209,
         "name": "NextStep-1",
         "full_name": "stepfun-ai/NextStep-1",
         "html_url": "https://github.com/stepfun-ai/NextStep-1",
         "description": null,
-        "stargazers_count": 418,
+        "stargazers_count": 453,
         "language": "Python",
         "owner": {
             "login": "stepfun-ai",
@@ -42,12 +28,26 @@
         }
     },
     {
+        "id": 1038507702,
+        "name": "ChatMock",
+        "full_name": "RayBytes/ChatMock",
+        "html_url": "https://github.com/RayBytes/ChatMock",
+        "description": "Access OpenAI models programmatically through your ChatGPT subscription.",
+        "stargazers_count": 357,
+        "language": "Python",
+        "owner": {
+            "login": "RayBytes",
+            "avatar_url": "https://avatars.githubusercontent.com/u/108236317?v=4",
+            "html_url": "https://github.com/RayBytes"
+        }
+    },
+    {
         "id": 1038267026,
         "name": "vllm-cli",
         "full_name": "Chen-zexi/vllm-cli",
         "html_url": "https://github.com/Chen-zexi/vllm-cli",
         "description": "A command-line interface tool for serving LLM using vLLM.",
-        "stargazers_count": 301,
+        "stargazers_count": 329,
         "language": "Python",
         "owner": {
             "login": "Chen-zexi",
@@ -56,31 +56,31 @@
         }
     },
     {
-        "id": 1037528675,
-        "name": "deepagents",
-        "full_name": "sagar-n/deepagents",
-        "html_url": "https://github.com/sagar-n/deepagents",
-        "description": null,
-        "stargazers_count": 280,
-        "language": "Python",
-        "owner": {
-            "login": "sagar-n",
-            "avatar_url": "https://avatars.githubusercontent.com/u/24753755?v=4",
-            "html_url": "https://github.com/sagar-n"
-        }
-    },
-    {
         "id": 1039114099,
         "name": "lue",
         "full_name": "superstarryeyes/lue",
         "html_url": "https://github.com/superstarryeyes/lue",
         "description": "Terminal eBook Reader with Text-to-Speech",
-        "stargazers_count": 236,
+        "stargazers_count": 252,
         "language": "Python",
         "owner": {
             "login": "superstarryeyes",
             "avatar_url": "https://avatars.githubusercontent.com/u/225475693?v=4",
             "html_url": "https://github.com/superstarryeyes"
+        }
+    },
+    {
+        "id": 1039330907,
+        "name": "Thyme",
+        "full_name": "yfzhang114/Thyme",
+        "html_url": "https://github.com/yfzhang114/Thyme",
+        "description": "Think Beyond Images",
+        "stargazers_count": 237,
+        "language": "Python",
+        "owner": {
+            "login": "yfzhang114",
+            "avatar_url": "https://avatars.githubusercontent.com/u/53161950?v=4",
+            "html_url": "https://github.com/yfzhang114"
         }
     }
 ]
