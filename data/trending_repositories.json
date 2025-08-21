@@ -1,30 +1,30 @@
 [
     {
-        "id": 1038157755,
-        "name": "synapse-bot",
-        "full_name": "anthugeist/synapse-bot",
-        "html_url": "https://github.com/anthugeist/synapse-bot",
-        "description": "A free, opensource, multi functional crypto trading bot. It combines flexibility, speed and extensibility, allowing the user to effectively interact with exchanges, analyze data and make trading decisions in real time.",
-        "stargazers_count": 634,
+        "id": 1039282306,
+        "name": "mobile-use",
+        "full_name": "minitap-ai/mobile-use",
+        "html_url": "https://github.com/minitap-ai/mobile-use",
+        "description": "AI agents can now use real Android and iOS apps, just like a human.",
+        "stargazers_count": 606,
         "language": "Python",
         "owner": {
-            "login": "anthugeist",
-            "avatar_url": "https://avatars.githubusercontent.com/u/75525369?v=4",
-            "html_url": "https://github.com/anthugeist"
+            "login": "minitap-ai",
+            "avatar_url": "https://avatars.githubusercontent.com/u/217727726?v=4",
+            "html_url": "https://github.com/minitap-ai"
         }
     },
     {
-        "id": 1037871209,
-        "name": "NextStep-1",
-        "full_name": "stepfun-ai/NextStep-1",
-        "html_url": "https://github.com/stepfun-ai/NextStep-1",
-        "description": null,
-        "stargazers_count": 453,
+        "id": 1041136312,
+        "name": "rendergit",
+        "full_name": "karpathy/rendergit",
+        "html_url": "https://github.com/karpathy/rendergit",
+        "description": "Render any git repo into a single static HTML page for humans or LLMs",
+        "stargazers_count": 524,
         "language": "Python",
         "owner": {
-            "login": "stepfun-ai",
-            "avatar_url": "https://avatars.githubusercontent.com/u/178004800?v=4",
-            "html_url": "https://github.com/stepfun-ai"
+            "login": "karpathy",
+            "avatar_url": "https://avatars.githubusercontent.com/u/241138?v=4",
+            "html_url": "https://github.com/karpathy"
         }
     },
     {
@@ -33,7 +33,7 @@
         "full_name": "RayBytes/ChatMock",
         "html_url": "https://github.com/RayBytes/ChatMock",
         "description": "Access OpenAI models programmatically through your ChatGPT subscription.",
-        "stargazers_count": 357,
+        "stargazers_count": 420,
         "language": "Python",
         "owner": {
             "login": "RayBytes",
@@ -42,17 +42,17 @@
         }
     },
     {
-        "id": 1038267026,
-        "name": "vllm-cli",
-        "full_name": "Chen-zexi/vllm-cli",
-        "html_url": "https://github.com/Chen-zexi/vllm-cli",
-        "description": "A command-line interface tool for serving LLM using vLLM.",
-        "stargazers_count": 329,
+        "id": 1039330907,
+        "name": "Thyme",
+        "full_name": "yfzhang114/Thyme",
+        "html_url": "https://github.com/yfzhang114/Thyme",
+        "description": "Think Beyond Images",
+        "stargazers_count": 273,
         "language": "Python",
         "owner": {
-            "login": "Chen-zexi",
-            "avatar_url": "https://avatars.githubusercontent.com/u/128259419?v=4",
-            "html_url": "https://github.com/Chen-zexi"
+            "login": "yfzhang114",
+            "avatar_url": "https://avatars.githubusercontent.com/u/53161950?v=4",
+            "html_url": "https://github.com/yfzhang114"
         }
     },
     {
@@ -61,7 +61,7 @@
         "full_name": "superstarryeyes/lue",
         "html_url": "https://github.com/superstarryeyes/lue",
         "description": "Terminal eBook Reader with Text-to-Speech",
-        "stargazers_count": 252,
+        "stargazers_count": 258,
         "language": "Python",
         "owner": {
             "login": "superstarryeyes",
@@ -70,17 +70,17 @@
         }
     },
     {
-        "id": 1039330907,
-        "name": "Thyme",
-        "full_name": "yfzhang114/Thyme",
-        "html_url": "https://github.com/yfzhang114/Thyme",
-        "description": "Think Beyond Images",
-        "stargazers_count": 237,
+        "id": 1039025752,
+        "name": "Gift-Buyer",
+        "full_name": "blindxvc/Gift-Buyer",
+        "html_url": "https://github.com/blindxvc/Gift-Buyer",
+        "description": "A universal bot for automatically sniping and buying Telegram gifts",
+        "stargazers_count": 223,
         "language": "Python",
         "owner": {
-            "login": "yfzhang114",
-            "avatar_url": "https://avatars.githubusercontent.com/u/53161950?v=4",
-            "html_url": "https://github.com/yfzhang114"
+            "login": "blindxvc",
+            "avatar_url": "https://avatars.githubusercontent.com/u/146737218?v=4",
+            "html_url": "https://github.com/blindxvc"
         }
     }
 ]
