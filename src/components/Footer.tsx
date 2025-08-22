@@ -16,12 +16,7 @@ const Footer = () => {
         {/* Creator Info */}
         <p className="flex justify-center md:justify-start items-center gap-2">
           <span>Made in</span>
-          <Image
-            src="/icons/indian-flag.svg"
-            alt="Indian Flag"
-            width={18}
-            height={18}
-          />
+          <Image src="/icons/indian-flag.svg" alt="Indian Flag" width={18} height={18} />
           <span>by</span>
           <a
             href="https://github.com/crackedngineer/"

@@ -1,5 +1,5 @@
 import GithubToolsList from "./tools.json";
-import { rootDomain } from "@/lib/utils";
+import {rootDomain} from "@/lib/utils";
 
 /**
  * Dynamically generate iframe tool origins like https://toolname.example.com

@@ -18,7 +18,7 @@ export const fetchRateLimit = async (): Promise<RateLimitResponse> => {
   const headers: Record<string, string> = {
     Accept: "application/vnd.github.v3+json",
     ...(process.env.NEXT_PUBLIC_GITHUB_TOKEN
-      ? { Authorization: `Bearer ${process.env.NEXT_PUBLIC_GITHUB_TOKEN}` }
+      ? {Authorization: `Bearer ${process.env.NEXT_PUBLIC_GITHUB_TOKEN}`}
       : {}),
   };
 
@@ -38,10 +38,7 @@ export const fetchRateLimit = async (): Promise<RateLimitResponse> => {
       throw error;
     }
 
-    console.error(
-      "Error fetching rate limit:",
-      error?.response?.data || error.message,
-    );
+    console.error("Error fetching rate limit:", error?.response?.data || error.message);
 
     return {
       limit: 60,

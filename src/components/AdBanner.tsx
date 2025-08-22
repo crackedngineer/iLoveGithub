@@ -1,6 +1,6 @@
 "use client";
-import { useEffect, useState } from "react";
-import { ChevronDown, ChevronUp } from "lucide-react";
+import {useEffect, useState} from "react";
+import {ChevronDown, ChevronUp} from "lucide-react";
 
 // Define types for AdSense window object
 declare global {
@@ -13,7 +13,7 @@ interface AdBannerProps {
   adSlot: string;
 }
 
-export default function AdBanner({ adSlot }: AdBannerProps) {
+export default function AdBanner({adSlot}: AdBannerProps) {
   const [isVisible, setIsVisible] = useState(true);
   const [adsBlocked, setAdsBlocked] = useState(false);
 
@@ -68,7 +68,7 @@ export default function AdBanner({ adSlot }: AdBannerProps) {
         <div className="p-2">
           <ins
             className="adsbygoogle"
-            style={{ display: "block" }}
+            style={{display: "block"}}
             data-ad-client="ca-pub-9989179882825871"
             data-ad-slot={adSlot}
             data-ad-format="auto"

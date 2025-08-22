@@ -1,5 +1,5 @@
-import { type NextRequest, NextResponse } from "next/server";
-import { extractSubdomainFromHostname } from "./lib/utils";
+import {type NextRequest, NextResponse} from "next/server";
+import {extractSubdomainFromHostname} from "./lib/utils";
 
 function extractSubdomain(req: NextRequest): string | null {
   const host = req.headers.get("host") || "";
@@ -8,7 +8,7 @@ function extractSubdomain(req: NextRequest): string | null {
 }
 
 export function middleware(request: NextRequest) {
-  const { pathname } = request.nextUrl;
+  const {pathname} = request.nextUrl;
   const subdomain = extractSubdomain(request);
 
   const pathMatch = pathname.match(/^\/([^\/]+)\/([^\/]+)$/);
@@ -19,9 +19,7 @@ export function middleware(request: NextRequest) {
     const repo = pathMatch[2];
 
     // Rewrite to /tools/[subdomain]/[owner]/[repo]
-    return NextResponse.rewrite(
-      new URL(`/tools/${subdomain}/${owner}/${repo}`, request.url),
-    );
+    return NextResponse.rewrite(new URL(`/tools/${subdomain}/${owner}/${repo}`, request.url));
   }
 }
 

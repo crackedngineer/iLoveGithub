@@ -38,8 +38,7 @@ export const Introduction = () => {
         Discover GitHub Tools
       </h1>
       <p className="text-lg md:text-xl text-gray-600 dark:text-gray-400 max-w-2xl mx-auto mb-4">
-        Explore GitHub repositories and find the best tools to enhance your
-        GitHub experience
+        Explore GitHub repositories and find the best tools to enhance your GitHub experience
       </p>
     </div>
   );

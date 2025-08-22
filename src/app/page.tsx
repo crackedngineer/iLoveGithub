@@ -1,15 +1,11 @@
 "use client";
 
 import "./style.css";
-import { useRouter } from "next/navigation";
+import {useRouter} from "next/navigation";
 import RepoSearch from "@/components/RepoSearch";
 import AppLayout from "@/components/AppLayout";
-import { Introduction } from "@/components/Introduction";
-import {
-  getHostnameFromUrl,
-  extractSubdomainFromHostname,
-  rootDomain,
-} from "@/lib/utils";
+import {Introduction} from "@/components/Introduction";
+import {getHostnameFromUrl, extractSubdomainFromHostname, rootDomain} from "@/lib/utils";
 
 function hasSubdomain(urlString: string): boolean {
   const hostname = getHostnameFromUrl(urlString);

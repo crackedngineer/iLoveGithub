@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, {useState} from "react";
 import {
   ExternalLink,
   Star,
@@ -18,9 +18,9 @@ import {
   CardHeader,
   CardTitle,
 } from "@/components/ui/card";
-import { Button } from "@/components/ui/button";
-import { Badge } from "@/components/ui/badge";
-import { formatDistanceToNow } from "date-fns";
+import {Button} from "@/components/ui/button";
+import {Badge} from "@/components/ui/badge";
+import {formatDistanceToNow} from "date-fns";
 import RepoInfoLoginWall from "./RepoInfoLoginWall";
 import ShareQRCodeModal from "./ShareQRCodeModal";
 
@@ -43,9 +43,7 @@ export interface RepoData {
 
 const calculateHealthScore = (repo: RepoData): number => {
   const updatedRecently =
-    (new Date().getTime() - new Date(repo.updatedAt).getTime()) /
-      (1000 * 60 * 60 * 24) <
-    30;
+    (new Date().getTime() - new Date(repo.updatedAt).getTime()) / (1000 * 60 * 60 * 24) < 30;
 
   const score =
     (repo.stars > 0 ? Math.min(repo.stars / 1000, 1) * 25 : 0) +
@@ -64,7 +62,7 @@ const getHealthColor = (value: number) => {
   return "bg-red-500";
 };
 
-const HealthProgressBar = ({ value }: { value: number }) => {
+const HealthProgressBar = ({value}: {value: number}) => {
   const healthColor = getHealthColor(value);
   return (
     <>
@@ -76,7 +74,7 @@ const HealthProgressBar = ({ value }: { value: number }) => {
       <div className="w-full bg-gray-200 rounded-full dark:bg-gray-700">
         <div
           className={`text-xs font-medium text-blue-100 text-center p-0.5 leading-none rounded-full transition-all duration-700 ease-in-out ${healthColor}`}
-          style={{ width: `${value}%` }}
+          style={{width: `${value}%`}}
         >
           {" "}
           {value}%
@@ -86,13 +84,7 @@ const HealthProgressBar = ({ value }: { value: number }) => {
   );
 };
 
-const RepoInfo = ({
-  repo,
-  isLoggedIn = false,
-}: {
-  repo: RepoData;
-  isLoggedIn: boolean;
-}) => {
+const RepoInfo = ({repo, isLoggedIn = false}: {repo: RepoData; isLoggedIn: boolean}) => {
   const [isQRModalOpen, setIsQRModalOpen] = useState(false);
 
   const formattedDate = (dateString: string) => {
@@ -128,10 +120,7 @@ const RepoInfo = ({
               {/* Last Synced Section */}
               {repo.cachedAt && (
                 <div className="mt-3 text-sm text-gray-500 dark:text-gray-400 flex items-center gap-2">
-                  <Info
-                    size={14}
-                    className="text-gray-400 dark:text-gray-500"
-                  />
+                  <Info size={14} className="text-gray-400 dark:text-gray-500" />
                   <span
                     title={new Date(repo.cachedAt).toLocaleString("en-US", {
                       year: "numeric",
@@ -162,12 +151,7 @@ const RepoInfo = ({
                 <QrCode size={14} />
                 QR Code
               </Button>
-              <Button
-                variant="outline"
-                size="sm"
-                className="flex items-center gap-1 w-fit"
-                asChild
-              >
+              <Button variant="outline" size="sm" className="flex items-center gap-1 w-fit" asChild>
                 <a href={repo.url} target="_blank" rel="noopener noreferrer">
                   <ExternalLink size={14} />
                   View on GitHub
@@ -178,44 +162,30 @@ const RepoInfo = ({
         </CardHeader>
 
         <CardContent className="pb-4">
-          <p className="text-gray-700 dark:text-gray-300 mb-6">
-            {repo.description}
-          </p>
+          <p className="text-gray-700 dark:text-gray-300 mb-6">{repo.description}</p>
 
           <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-4 mb-6">
             <div className="flex items-center gap-2 bg-github-light-gray dark:bg-gray-800 p-3 rounded-md">
               <Star className="text-yellow-500" size={20} />
               <div>
-                <p className="text-xl font-semibold">
-                  {repo.stars.toLocaleString()}
-                </p>
-                <p className="text-xs text-gray-500 dark:text-gray-400">
-                  Stars
-                </p>
+                <p className="text-xl font-semibold">{repo.stars.toLocaleString()}</p>
+                <p className="text-xs text-gray-500 dark:text-gray-400">Stars</p>
               </div>
             </div>
 
             <div className="flex items-center gap-2 bg-github-light-gray dark:bg-gray-800 p-3 rounded-md">
               <GitFork className="text-github-blue" size={20} />
               <div>
-                <p className="text-xl font-semibold">
-                  {repo.forks.toLocaleString()}
-                </p>
-                <p className="text-xs text-gray-500 dark:text-gray-400">
-                  Forks
-                </p>
+                <p className="text-xl font-semibold">{repo.forks.toLocaleString()}</p>
+                <p className="text-xs text-gray-500 dark:text-gray-400">Forks</p>
               </div>
             </div>
 
             <div className="flex items-center gap-2 bg-github-light-gray dark:bg-gray-800 p-3 rounded-md">
               <Eye className="text-purple-500" size={20} />
               <div>
-                <p className="text-xl font-semibold">
-                  {repo.watchers.toLocaleString()}
-                </p>
-                <p className="text-xs text-gray-500 dark:text-gray-400">
-                  Watchers
-                </p>
+                <p className="text-xl font-semibold">{repo.watchers.toLocaleString()}</p>
+                <p className="text-xs text-gray-500 dark:text-gray-400">Watchers</p>
               </div>
             </div>
           </div>
@@ -223,9 +193,7 @@ const RepoInfo = ({
           <div className="flex flex-col gap-4 mb-6">
             <div className="flex items-center gap-2">
               <FileCode size={16} className="text-gray-500" />
-              <span className="text-sm text-gray-700 dark:text-gray-300">
-                Main language:
-              </span>
+              <span className="text-sm text-gray-700 dark:text-gray-300">Main language:</span>
               <Badge
                 variant="secondary"
                 className="bg-blue-100 text-github-blue dark:bg-blue-900 dark:text-blue-300"
@@ -236,22 +204,14 @@ const RepoInfo = ({
 
             <div className="flex items-center gap-2">
               <Calendar size={16} className="text-gray-500" />
-              <span className="text-sm text-gray-700 dark:text-gray-300">
-                Created:
-              </span>
-              <span className="text-sm font-medium">
-                {formattedDate(repo.createdAt)}
-              </span>
+              <span className="text-sm text-gray-700 dark:text-gray-300">Created:</span>
+              <span className="text-sm font-medium">{formattedDate(repo.createdAt)}</span>
             </div>
 
             <div className="flex items-center gap-2">
               <GitBranch size={16} className="text-gray-500" />
-              <span className="text-sm text-gray-700 dark:text-gray-300">
-                Last updated:
-              </span>
-              <span className="text-sm font-medium">
-                {formattedDate(repo.updatedAt)}
-              </span>
+              <span className="text-sm text-gray-700 dark:text-gray-300">Last updated:</span>
+              <span className="text-sm font-medium">{formattedDate(repo.updatedAt)}</span>
             </div>
           </div>
 
@@ -280,8 +240,8 @@ const RepoInfo = ({
 
         <CardFooter className="border-t border-gray-100 dark:border-gray-800 pt-4">
           <span className="text-sm text-gray-500 dark:text-gray-400 whitespace-nowrap overflow-hidden text-ellipsis">
-            This repository is one of the most popular in its category, with
-            active development and a strong community.
+            This repository is one of the most popular in its category, with active development and
+            a strong community.
           </span>
         </CardFooter>
       </Card>

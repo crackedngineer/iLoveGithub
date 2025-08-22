@@ -1,14 +1,12 @@
 "use client";
-import React, { createContext, useContext, useEffect, useState } from "react";
+import React, {createContext, useContext, useEffect, useState} from "react";
 import VideoModal from "./VideoModal";
 
 interface DemoVideoContextType {
   openVideoModal: () => void;
 }
 
-const DemoVideoContext = createContext<DemoVideoContextType | undefined>(
-  undefined,
-);
+const DemoVideoContext = createContext<DemoVideoContextType | undefined>(undefined);
 
 export const useDemoVideo = () => {
   const context = useContext(DemoVideoContext);
@@ -18,9 +16,7 @@ export const useDemoVideo = () => {
   return context;
 };
 
-export const DemoVideoProvider: React.FC<{ children: React.ReactNode }> = ({
-  children,
-}) => {
+export const DemoVideoProvider: React.FC<{children: React.ReactNode}> = ({children}) => {
   // Prevent execution during SSR
   if (typeof window === "undefined") return;
 
@@ -56,7 +52,7 @@ export const DemoVideoProvider: React.FC<{ children: React.ReactNode }> = ({
   };
 
   return (
-    <DemoVideoContext.Provider value={{ openVideoModal }}>
+    <DemoVideoContext.Provider value={{openVideoModal}}>
       {children}
       <VideoModal isOpen={isVideoModalOpen} onClose={closeVideoModal} />
     </DemoVideoContext.Provider>

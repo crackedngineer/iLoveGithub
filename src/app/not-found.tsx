@@ -1,9 +1,9 @@
 "use client";
 
-import { useEffect } from "react";
-import { usePathname, useRouter } from "next/navigation";
-import { Button } from "@/components/ui/button";
-import { Home, ArrowLeft } from "lucide-react";
+import {useEffect} from "react";
+import {usePathname, useRouter} from "next/navigation";
+import {Button} from "@/components/ui/button";
+import {Home, ArrowLeft} from "lucide-react";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 
@@ -12,10 +12,7 @@ const NotFound = () => {
   const router = useRouter();
 
   useEffect(() => {
-    console.error(
-      "404 Error: User attempted to access non-existent route:",
-      pathname,
-    );
+    console.error("404 Error: User attempted to access non-existent route:", pathname);
   }, [pathname]);
 
   return (
@@ -37,8 +34,7 @@ const NotFound = () => {
               Oops! Page not found
             </h2>
             <p className="text-lg text-gray-600 dark:text-gray-400 mb-2">
-              The page you're looking for seems to have wandered off into the
-              digital void.
+              The page you're looking for seems to have wandered off into the digital void.
             </p>
           </div>
 

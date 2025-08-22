@@ -1,18 +1,15 @@
-import { NextRequest, NextResponse } from "next/server";
-import { redis } from "@/lib/redis";
+import {NextRequest, NextResponse} from "next/server";
+import {redis} from "@/lib/redis";
 import crypto from "crypto";
-import { put } from "@vercel/blob";
+import {put} from "@vercel/blob";
 
 export async function POST(req: NextRequest) {
   try {
     const body = await req.json();
-    const { data, image } = body;
+    const {data, image} = body;
 
     if (!data || typeof data !== "string") {
-      return NextResponse.json(
-        { error: "Invalid data input" },
-        { status: 400 },
-      );
+      return NextResponse.json({error: "Invalid data input"}, {status: 400});
     }
 
     // Create a unique hash key
@@ -25,13 +22,13 @@ export async function POST(req: NextRequest) {
     // Check Redis cache
     const cachedUrl = await redis.get<string>(cacheKey);
     if (cachedUrl) {
-      return NextResponse.json({ image: cachedUrl });
+      return NextResponse.json({image: cachedUrl});
     }
 
     // Generate QR code from QRCode Monkey
     const qrResponse = await fetch("https://api.qrcode-monkey.com/qr/custom", {
       method: "POST",
-      headers: { "Content-Type": "application/json" },
+      headers: {"Content-Type": "application/json"},
       body: JSON.stringify({
         data,
         config: {
@@ -54,14 +51,11 @@ export async function POST(req: NextRequest) {
     });
 
     // Cache the URL in Redis
-    await redis.set(cacheKey, blob.url, { ex: 86400 }); // 1 day TTL
+    await redis.set(cacheKey, blob.url, {ex: 86400}); // 1 day TTL
 
-    return NextResponse.json({ image: blob.url });
+    return NextResponse.json({image: blob.url});
   } catch (error) {
     console.error("QR Generation Error:", error);
-    return NextResponse.json(
-      { error: "Failed to generate QR code" },
-      { status: 500 },
-    );
+    return NextResponse.json({error: "Failed to generate QR code"}, {status: 500});
   }
 }

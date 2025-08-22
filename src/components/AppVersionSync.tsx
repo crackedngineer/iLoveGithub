@@ -1,8 +1,8 @@
 "use client";
 
-import { useEffect } from "react";
-import { appVersion } from "@/lib/version";
-import { RECENT_REPO_LOCAL_STORAGE_KEY } from "@/constants";
+import {useEffect} from "react";
+import {appVersion} from "@/lib/version";
+import {RECENT_REPO_LOCAL_STORAGE_KEY} from "@/constants";
 
 const AppVersionSync = () => {
   useEffect(() => {

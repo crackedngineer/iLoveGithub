@@ -1,12 +1,12 @@
 "use client";
 
-import React, { useState, useEffect } from "react";
+import React, {useState, useEffect} from "react";
 import Link from "next/link";
 import Image from "next/image";
-import { useSession, signOut, signIn } from "next-auth/react";
-import { Menu, X, Sun, Moon, User, Coffee, QrCode } from "lucide-react";
-import { Button } from "@/components/ui/button";
-import { appVersion } from "@/lib/version";
+import {useSession, signOut, signIn} from "next-auth/react";
+import {Menu, X, Sun, Moon, User, Coffee, QrCode} from "lucide-react";
+import {Button} from "@/components/ui/button";
+import {appVersion} from "@/lib/version";
 import {
   DropdownMenu,
   DropdownMenuTrigger,
@@ -23,15 +23,15 @@ import {
   GITHUB_SUBMIT_TOOL_URL,
   DEMO_VIDEO_URL,
 } from "@/constants";
-import { RateLimitDisplay } from "./RateLimitDisplay";
-import { useAppLocation } from "./AppLocationProvider";
+import {RateLimitDisplay} from "./RateLimitDisplay";
+import {useAppLocation} from "./AppLocationProvider";
 
 const Header = () => {
-  const { data: session, status } = useSession();
+  const {data: session, status} = useSession();
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   const [isDarkMode, setIsDarkMode] = useState(false);
   const [isDonationModalOpen, setIsDonationModalOpen] = useState(false);
-  const { isInIndia } = useAppLocation();
+  const {isInIndia} = useAppLocation();
 
   useEffect(() => {
     setIsDarkMode(document.documentElement.classList.contains("dark"));
@@ -47,20 +47,13 @@ const Header = () => {
     <header className="w-full bg-white dark:bg-github-dark-blue border-b border-gray-200 dark:border-gray-700 sticky top-0 z-50 shadow-sm dark:shadow-md transition-colors duration-300">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 py-4 flex items-center justify-between">
         <Link href="/" className="flex items-center gap-3 sm:gap-4">
-          <Image
-            alt="favicon"
-            src="/icons/favicon.png"
-            width={24}
-            height={24}
-          />
+          <Image alt="favicon" src="/icons/favicon.png" width={24} height={24} />
           <div className="flex flex-col">
             <div className="flex items-baseline gap-2">
               <span className="text-lg sm:text-xl font-bold text-github-gray dark:text-white">
                 iLoveGithub
               </span>
-              <span className="text-xs text-gray-400 dark:text-gray-500">
-                v{appVersion}
-              </span>
+              <span className="text-xs text-gray-400 dark:text-gray-500">v{appVersion}</span>
             </div>
             <span className="text-xs text-gray-400 dark:text-gray-500 -mt-0.5">
               by Oderna Technologies
@@ -76,11 +69,7 @@ const Header = () => {
           >
             Submit a Tool
           </Button>
-          <Button
-            variant="ghost"
-            size="sm"
-            onClick={() => window.open(GITHUB_REPO_URL, "_blank")}
-          >
+          <Button variant="ghost" size="sm" onClick={() => window.open(GITHUB_REPO_URL, "_blank")}>
             GitHub
           </Button>
           <Button
@@ -94,17 +83,8 @@ const Header = () => {
           {/* GitHub API Rate Limit Display */}
           {status === "unauthenticated" && <RateLimitDisplay />}
 
-          <Button
-            variant="ghost"
-            size="icon"
-            onClick={toggleTheme}
-            aria-label="Toggle Theme"
-          >
-            {isDarkMode ? (
-              <Sun className="h-5 w-5" />
-            ) : (
-              <Moon className="h-5 w-5" />
-            )}
+          <Button variant="ghost" size="icon" onClick={toggleTheme} aria-label="Toggle Theme">
+            {isDarkMode ? <Sun className="h-5 w-5" /> : <Moon className="h-5 w-5" />}
           </Button>
 
           <DropdownMenu>
@@ -119,16 +99,12 @@ const Header = () => {
             </DropdownMenuTrigger>
             {!isDonationModalOpen && (
               <DropdownMenuContent className="w-48 bg-white dark:bg-gray-800 p-2">
-                <DropdownMenuItem
-                  onClick={() => window.open(BUY_ME_COFFEE_URL, "_blank")}
-                >
+                <DropdownMenuItem onClick={() => window.open(BUY_ME_COFFEE_URL, "_blank")}>
                   <Coffee className="h-4 w-4 mr-2" />
                   Buy me a coffee
                 </DropdownMenuItem>
                 {isInIndia && (
-                  <DropdownMenuItem
-                    onClick={() => setIsDonationModalOpen(true)}
-                  >
+                  <DropdownMenuItem onClick={() => setIsDonationModalOpen(true)}>
                     <QrCode className="h-4 w-4 mr-2" />
                     Scan QR code
                   </DropdownMenuItem>
@@ -160,9 +136,7 @@ const Header = () => {
                     Signed in as
                   </DropdownMenuLabel>
                   <div className="px-2 py-1">
-                    <p className="text-sm font-medium truncate">
-                      {session.user?.name}
-                    </p>
+                    <p className="text-sm font-medium truncate">{session.user?.name}</p>
                     <p className="text-xs text-gray-500 dark:text-gray-400 truncate">
                       {session.user?.email}
                     </p>
@@ -170,7 +144,7 @@ const Header = () => {
                   <DropdownMenuSeparator />
                   <DropdownMenuItem
                     className="cursor-pointer text-sm text-red-600 hover:bg-red-50 dark:hover:bg-red-900/20"
-                    onClick={() => signOut({ callbackUrl: "/" })}
+                    onClick={() => signOut({callbackUrl: "/"})}
                   >
                     Log out
                   </DropdownMenuItem>
@@ -178,7 +152,7 @@ const Header = () => {
               ) : (
                 <DropdownMenuItem
                   className="cursor-pointer text-sm text-blue-600 hover:bg-blue-50 dark:hover:bg-blue-900/20"
-                  onClick={() => signIn("github", { callbackUrl: "/" })}
+                  onClick={() => signIn("github", {callbackUrl: "/"})}
                 >
                   Sign in with GitHub
                 </DropdownMenuItem>
@@ -192,11 +166,7 @@ const Header = () => {
           onClick={() => setIsMenuOpen((prev) => !prev)}
           aria-label="Toggle Menu"
         >
-          {isMenuOpen ? (
-            <X className="w-6 h-6" />
-          ) : (
-            <Menu className="w-6 h-6" />
-          )}
+          {isMenuOpen ? <X className="w-6 h-6" /> : <Menu className="w-6 h-6" />}
         </button>
       </div>
 
@@ -250,17 +220,12 @@ const Header = () => {
             <Button
               variant="ghost"
               className="w-full justify-start text-sm text-red-600 hover:bg-red-50 dark:hover:bg-red-900/20 mt-1"
-              onClick={() => signOut({ callbackUrl: "/" })}
+              onClick={() => signOut({callbackUrl: "/"})}
             >
               Log out
             </Button>
           )}
-          <a
-            href={BUY_ME_COFFEE_URL}
-            target="_blank"
-            rel="noopener noreferrer"
-            className="w-full"
-          >
+          <a href={BUY_ME_COFFEE_URL} target="_blank" rel="noopener noreferrer" className="w-full">
             <Button
               variant="outline"
               className="w-full bg-github-pink text-white hover:bg-github-darkPink"

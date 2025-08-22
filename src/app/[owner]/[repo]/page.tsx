@@ -1,34 +1,28 @@
 "use client";
 import axios from "axios";
-import { useCallback, useMemo, useEffect, useState } from "react";
-import { useRouter, useParams } from "next/navigation";
-import RepoInfo, { RepoData } from "@/components/RepoInfo";
+import {useCallback, useMemo, useEffect, useState} from "react";
+import {useRouter, useParams} from "next/navigation";
+import RepoInfo, {RepoData} from "@/components/RepoInfo";
 import GitHubTools from "@/components/GitHubTools";
 import RepoSearch from "@/components/RepoSearch";
 import AppLayout from "@/components/AppLayout";
-import { Introduction } from "@/components/Introduction";
-import {
-  RECENT_REPO_LOCAL_STORAGE_KEY,
-  RECENT_TRENDING_REPO_CACHE_MAXCOUNT,
-} from "@/constants";
-import { useSession, signOut } from "next-auth/react";
-import { useApiLimit } from "@/components/ApiLimitContext";
+import {Introduction} from "@/components/Introduction";
+import {RECENT_REPO_LOCAL_STORAGE_KEY, RECENT_TRENDING_REPO_CACHE_MAXCOUNT} from "@/constants";
+import {useSession, signOut} from "next-auth/react";
+import {useApiLimit} from "@/components/ApiLimitContext";
 
 export default function RepoPage() {
-  const { data: session, status } = useSession();
+  const {data: session, status} = useSession();
   const router = useRouter();
-  const params = useParams() as { owner: string; repo: string };
-  const { owner, repo } = params;
-  const { remaining } = useApiLimit();
+  const params = useParams() as {owner: string; repo: string};
+  const {owner, repo} = params;
+  const {remaining} = useApiLimit();
 
   const [repoData, setRepoData] = useState<RepoData | null>(null);
   const [isLoading, setIsLoading] = useState<boolean>(true);
   const [error, setError] = useState<"rate-limit" | "generic" | null>(null);
 
-  const fullName = useMemo(
-    () => `${owner}/${repo}`.toLowerCase(),
-    [owner, repo],
-  );
+  const fullName = useMemo(() => `${owner}/${repo}`.toLowerCase(), [owner, repo]);
 
   const token = useMemo(() => {
     return session?.accessToken;
@@ -38,14 +32,11 @@ export default function RepoPage() {
     const stored = JSON.parse(
       localStorage.getItem(RECENT_REPO_LOCAL_STORAGE_KEY) || "[]",
     ) as string[];
-    const updated = [
-      details.fullName,
-      ...stored.filter((name) => name !== details.fullName),
-    ].slice(0, RECENT_TRENDING_REPO_CACHE_MAXCOUNT);
-    localStorage.setItem(
-      RECENT_REPO_LOCAL_STORAGE_KEY,
-      JSON.stringify(updated),
+    const updated = [details.fullName, ...stored.filter((name) => name !== details.fullName)].slice(
+      0,
+      RECENT_TRENDING_REPO_CACHE_MAXCOUNT,
     );
+    localStorage.setItem(RECENT_REPO_LOCAL_STORAGE_KEY, JSON.stringify(updated));
   };
 
   const fetchRepoData = useCallback(async () => {
@@ -75,12 +66,9 @@ export default function RepoPage() {
         return;
       }
 
-      const response = await axios.get(
-        `/api/repo?owner=${owner}&repo=${repo}`,
-        {
-          headers: token ? { Authorization: `Bearer ${token}` } : {},
-        },
-      );
+      const response = await axios.get(`/api/repo?owner=${owner}&repo=${repo}`, {
+        headers: token ? {Authorization: `Bearer ${token}`} : {},
+      });
 
       const githubData = response.data;
       const transformed: RepoData = {
@@ -150,10 +138,7 @@ export default function RepoPage() {
 
         {!isLoading && repoData && (
           <>
-            <RepoInfo
-              repo={repoData}
-              isLoggedIn={status === "authenticated" || !!remaining}
-            />
+            <RepoInfo repo={repoData} isLoggedIn={status === "authenticated" || !!remaining} />
             <GitHubTools
               owner={repoData.owner}
               repo={repoData.name}

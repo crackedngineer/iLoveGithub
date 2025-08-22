@@ -1,15 +1,15 @@
 "use client";
 
 import React from "react";
-import { Dialog, DialogContent, DialogOverlay } from "@/components/ui/dialog";
-import { DEMO_VIDEO_URL } from "@/constants";
+import {Dialog, DialogContent, DialogOverlay} from "@/components/ui/dialog";
+import {DEMO_VIDEO_URL} from "@/constants";
 
 interface VideoModalProps {
   isOpen: boolean;
   onClose: () => void;
 }
 
-const VideoModal = ({ isOpen, onClose }: VideoModalProps) => {
+const VideoModal = ({isOpen, onClose}: VideoModalProps) => {
   return (
     <Dialog open={isOpen} onOpenChange={(open) => !open && onClose()}>
       <DialogOverlay className="bg-black/60 backdrop-blur-md fixed inset-0 z-50" />

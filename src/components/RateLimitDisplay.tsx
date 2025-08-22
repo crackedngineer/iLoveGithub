@@ -1,23 +1,12 @@
 import React from "react";
-import { Battery, BatteryLow, BatteryMedium } from "lucide-react";
-import {
-  Tooltip,
-  TooltipContent,
-  TooltipProvider,
-  TooltipTrigger,
-} from "@/components/ui/tooltip";
-import { Skeleton } from "@/components/ui/skeleton";
-import { useApiLimit } from "./ApiLimitContext";
+import {Battery, BatteryLow, BatteryMedium} from "lucide-react";
+import {Tooltip, TooltipContent, TooltipProvider, TooltipTrigger} from "@/components/ui/tooltip";
+import {Skeleton} from "@/components/ui/skeleton";
+import {useApiLimit} from "./ApiLimitContext";
 
 export function RateLimitDisplay() {
-  const {
-    rateLimit,
-    isApiLimitLoading,
-    getColor,
-    getPercentage,
-    getResetTime,
-    apiLimitError,
-  } = useApiLimit();
+  const {rateLimit, isApiLimitLoading, getColor, getPercentage, getResetTime, apiLimitError} =
+    useApiLimit();
   const percentage = getPercentage();
   const isLow = percentage < 30;
   const color = getColor();
@@ -43,19 +32,13 @@ export function RateLimitDisplay() {
             {percentage < 20 ? (
               <BatteryLow className={`h-4 w-4 text-${color || "gray-500"}}`} />
             ) : percentage < 50 ? (
-              <BatteryMedium
-                className={`h-4 w-4 text-${color || "gray-500"}}`}
-              />
+              <BatteryMedium className={`h-4 w-4 text-${color || "gray-500"}}`} />
             ) : (
               <Battery className={`h-4 w-4 text-${color || "gray-500"}}`} />
             )}
 
             <div className="text-xs font-medium whitespace-nowrap">
-              <span
-                className={
-                  isLow ? "text-red-500" : "text-github-gray dark:text-gray-300"
-                }
-              >
+              <span className={isLow ? "text-red-500" : "text-github-gray dark:text-gray-300"}>
                 {rateLimit.remaining}/{rateLimit.limit}
               </span>
             </div>
@@ -70,7 +53,7 @@ export function RateLimitDisplay() {
             <div className="w-full bg-gray-200 dark:bg-gray-700 rounded-full h-1.5 mt-1">
               <div
                 className={`h-1.5 rounded-full ${`bg-${color}`}`}
-                style={{ width: `${percentage}%` }}
+                style={{width: `${percentage}%`}}
               ></div>
             </div>
             <p className="text-xs text-gray-500">Resets in {getResetTime()}</p>

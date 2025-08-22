@@ -1,7 +1,7 @@
 "use client";
 import axios from "axios";
-import React, { useEffect, useState } from "react";
-import { QrCode, Download } from "lucide-react";
+import React, {useEffect, useState} from "react";
+import {QrCode, Download} from "lucide-react";
 import {
   Dialog,
   DialogContent,
@@ -9,7 +9,7 @@ import {
   DialogTitle,
   DialogDescription,
 } from "@/components/ui/dialog";
-import { Button } from "@/components/ui/button";
+import {Button} from "@/components/ui/button";
 
 interface QRCodeModalProps {
   isOpen: boolean;
@@ -17,7 +17,7 @@ interface QRCodeModalProps {
   repoName: string;
 }
 
-const ShareQRCodeModal = ({ isOpen, onClose, repoName }: QRCodeModalProps) => {
+const ShareQRCodeModal = ({isOpen, onClose, repoName}: QRCodeModalProps) => {
   const [qrImageUrl, setQrImageUrl] = useState<string | null>(null);
   const [loading, setLoading] = useState(false);
   const url = typeof window !== "undefined" ? window.location.href : "";
@@ -26,11 +26,10 @@ const ShareQRCodeModal = ({ isOpen, onClose, repoName }: QRCodeModalProps) => {
     if (isOpen) {
       const fetchQrCode = async () => {
         setLoading(true);
-        const origin =
-          typeof window !== "undefined" ? window.location.origin : "";
+        const origin = typeof window !== "undefined" ? window.location.origin : "";
         const imageUrl = `${origin}/icons/favicon.png`;
         try {
-          const { data: result } = await axios.post("/api/qrcode/generate", {
+          const {data: result} = await axios.post("/api/qrcode/generate", {
             data: url,
             image: imageUrl,
           });
@@ -75,9 +74,7 @@ const ShareQRCodeModal = ({ isOpen, onClose, repoName }: QRCodeModalProps) => {
         <DialogHeader className="space-y-2">
           <div className="flex items-center gap-2">
             <QrCode className="h-5 w-5 text-github-blue" />
-            <DialogTitle className="text-xl font-bold">
-              Repository QR Code
-            </DialogTitle>
+            <DialogTitle className="text-xl font-bold">Repository QR Code</DialogTitle>
           </div>
           <DialogDescription className="text-gray-600 dark:text-gray-400">
             Scan to view {repoName}
@@ -89,11 +86,7 @@ const ShareQRCodeModal = ({ isOpen, onClose, repoName }: QRCodeModalProps) => {
             {loading ? (
               <div className="w-56 h-56 bg-gray-200 dark:bg-gray-700 animate-pulse-subtle" />
             ) : qrImageUrl ? (
-              <img
-                src={qrImageUrl}
-                alt="AI QR Code"
-                className="w-56 h-56 object-contain"
-              />
+              <img src={qrImageUrl} alt="AI QR Code" className="w-56 h-56 object-contain" />
             ) : (
               <p className="text-gray-400">Failed to load QR</p>
             )}
@@ -110,9 +103,7 @@ const ShareQRCodeModal = ({ isOpen, onClose, repoName }: QRCodeModalProps) => {
             </Button>
           )}
 
-          <p className="text-sm text-center text-gray-500 dark:text-gray-400 break-all">
-            {url}
-          </p>
+          <p className="text-sm text-center text-gray-500 dark:text-gray-400 break-all">{url}</p>
         </div>
       </DialogContent>
     </Dialog>

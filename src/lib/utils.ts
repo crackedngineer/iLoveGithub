@@ -1,8 +1,7 @@
-import { clsx, type ClassValue } from "clsx";
-import { twMerge } from "tailwind-merge";
+import {clsx, type ClassValue} from "clsx";
+import {twMerge} from "tailwind-merge";
 
-export const protocol =
-  process.env.NODE_ENV === "production" ? "https" : "http";
+export const protocol = process.env.NODE_ENV === "production" ? "https" : "http";
 export const rootDomain = process.env.NEXT_PUBLIC_ROOT_DOMAIN || "localhost";
 
 export function cn(...inputs: ClassValue[]) {
@@ -49,9 +48,7 @@ export function extractSubdomainFromHostname(hostname: string): string | null {
 
   // Generic subdomain handling
   const isSubdomain =
-    hostname !== root &&
-    hostname !== `www.${root}` &&
-    hostname.endsWith(`.${root}`);
+    hostname !== root && hostname !== `www.${root}` && hostname.endsWith(`.${root}`);
 
   return isSubdomain ? hostname.replace(`.${root}`, "") : null;
 }

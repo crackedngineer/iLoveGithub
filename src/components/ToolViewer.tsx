@@ -1,20 +1,20 @@
-import React, { useEffect, useState } from "react";
+import React, {useEffect, useState} from "react";
 import Image from "next/image";
-import { ExternalLink, Coffee } from "lucide-react";
+import {ExternalLink, Coffee} from "lucide-react";
 
 interface ToolViewerProps {
   url: string;
   name: string;
 }
 
-const ToolViewer: React.FC<ToolViewerProps> = ({ url, name }) => {
+const ToolViewer: React.FC<ToolViewerProps> = ({url, name}) => {
   const [bannerIndex, setBannerIndex] = useState(0);
 
   const bannerMessages = [
     <>
       <div className="flex gap-2 items-center flex-wrap text-sm sm:text-base text-center sm:text-left">
-        <span className="font-medium">iLoveGithub</span> is your curated hub for
-        exploring the coolest GitHub tools and open source gems.
+        <span className="font-medium">iLoveGithub</span> is your curated hub for exploring the
+        coolest GitHub tools and open source gems.
       </div>
     </>,
     <>
@@ -85,13 +85,7 @@ const ToolViewer: React.FC<ToolViewerProps> = ({ url, name }) => {
       <div className="w-full bg-github-blue text-white px-4 sm:px-6 py-3 flex items-center justify-between gap-2 flex-wrap sm:flex-nowrap">
         {/* Branding */}
         <div className="flex gap-2 text-base sm:text-lg font-semibold whitespace-nowrap">
-          <Image
-            src={"/icons/favicon.png"}
-            alt="favicon"
-            width={24}
-            height={24}
-          />{" "}
-          iLoveGithub
+          <Image src={"/icons/favicon.png"} alt="favicon" width={24} height={24} /> iLoveGithub
         </div>
 
         {/* Rotating Banner Messages (hidden on mobile) */}

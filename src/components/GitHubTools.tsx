@@ -1,20 +1,14 @@
 "use client";
 
-import React, { useState } from "react";
+import React, {useState} from "react";
 import Image from "next/image";
-import { ArrowRight, BrainCircuit } from "lucide-react";
-import {
-  Card,
-  CardContent,
-  CardDescription,
-  CardHeader,
-  CardTitle,
-} from "@/components/ui/card";
+import {ArrowRight, BrainCircuit} from "lucide-react";
+import {Card, CardContent, CardDescription, CardHeader, CardTitle} from "@/components/ui/card";
 import GithubToolsList from "../../tools.json";
-import { Tool } from "@/lib/types";
-import { replaceUrlVariables } from "@/app/helper";
-import { Button } from "@/components/ui/button";
-import { Input } from "@/components/ui/input";
+import {Tool} from "@/lib/types";
+import {replaceUrlVariables} from "@/app/helper";
+import {Button} from "@/components/ui/button";
+import {Input} from "@/components/ui/input";
 
 function isNew(createdAt: string): boolean {
   const createdDate = new Date(createdAt);
@@ -38,8 +32,7 @@ const GitHubTools = ({
   const filteredTools = GithubToolsList.filter((tool) => {
     const search = searchTerm.toLowerCase();
     return (
-      tool.name.toLowerCase().includes(search) ||
-      tool.description.toLowerCase().includes(search)
+      tool.name.toLowerCase().includes(search) || tool.description.toLowerCase().includes(search)
     );
   });
 
@@ -130,11 +123,7 @@ const GitHubTools = ({
                     </CardHeader>
 
                     <CardContent className="mt-2">
-                      <Button
-                        asChild
-                        variant="link"
-                        className="text-sm px-0 py-1"
-                      >
+                      <Button asChild variant="link" className="text-sm px-0 py-1">
                         <a
                           href={toolUrl}
                           target="_blank"

@@ -1,17 +1,7 @@
 "use client";
 
-import React, {
-  createContext,
-  useContext,
-  useEffect,
-  useState,
-  ReactNode,
-} from "react";
-import {
-  fetchRateLimit,
-  RateLimitError,
-  RateLimitResponse,
-} from "@/services/githubService";
+import React, {createContext, useContext, useEffect, useState, ReactNode} from "react";
+import {fetchRateLimit, RateLimitError, RateLimitResponse} from "@/services/githubService";
 
 interface ApiLimitContextType {
   rateLimit: RateLimitResponse | null;
@@ -26,11 +16,9 @@ interface ApiLimitContextType {
   getResetTime: () => string;
 }
 
-const ApiLimitContext = createContext<ApiLimitContextType | undefined>(
-  undefined,
-);
+const ApiLimitContext = createContext<ApiLimitContextType | undefined>(undefined);
 
-export const ApiLimitProvider = ({ children }: { children: ReactNode }) => {
+export const ApiLimitProvider = ({children}: {children: ReactNode}) => {
   const [rateLimit, setRateLimit] = useState<RateLimitResponse | null>(null);
   const [isApiLimitLoading, setIsApiLimitLoading] = useState(false);
   const [apiLimitError, setApiLimitError] = useState<string | null>(null);

@@ -1,5 +1,5 @@
-import { generateWelcomeEmail } from "@/components/emails/templates/WelcomeEmail";
-import { generateWelcomeBackEmail } from "@/components/emails/templates/WelcomeBackEmail";
+import {generateWelcomeEmail} from "@/components/emails/templates/WelcomeEmail";
+import {generateWelcomeBackEmail} from "@/components/emails/templates/WelcomeBackEmail";
 
 import nodemailer from "nodemailer";
 
@@ -41,7 +41,7 @@ const createTransporter = () => {
 
 // Send email with retry mechanism
 export async function sendEmail(options: EmailOptions): Promise<void> {
-  const { to, subject, html, text } = options;
+  const {to, subject, html, text} = options;
   const transporter = createTransporter();
 
   // Set up retry logic
@@ -52,8 +52,7 @@ export async function sendEmail(options: EmailOptions): Promise<void> {
   while (retries < MAX_RETRIES) {
     try {
       const result = await transporter.sendMail({
-        from:
-          process.env.EMAIL_FROM || "iLoveGithub <no-reply@ilovegithub.com>",
+        from: process.env.EMAIL_FROM || "iLoveGithub <no-reply@ilovegithub.com>",
         to,
         subject,
         html,
@@ -65,9 +64,7 @@ export async function sendEmail(options: EmailOptions): Promise<void> {
     } catch (error) {
       lastError = error instanceof Error ? error : new Error(String(error));
       retries++;
-      console.warn(
-        `Email send attempt ${retries} failed: ${lastError.message}`,
-      );
+      console.warn(`Email send attempt ${retries} failed: ${lastError.message}`);
 
       // Wait before retrying
       if (retries < MAX_RETRIES) {
@@ -82,11 +79,8 @@ export async function sendEmail(options: EmailOptions): Promise<void> {
 }
 
 // Welcome email function
-export async function sendWelcomeEmail(
-  email: string,
-  name: string = "there",
-): Promise<void> {
-  const htmlContent = generateWelcomeEmail({ name, email });
+export async function sendWelcomeEmail(email: string, name: string = "there"): Promise<void> {
+  const htmlContent = generateWelcomeEmail({name, email});
 
   const subject = `Welcome to iLoveGithub, ${name}!`;
 
@@ -97,10 +91,7 @@ export async function sendWelcomeEmail(
   });
 }
 
-export async function sendWelcomeBackEmail(
-  email: string,
-  name: string = "there",
-): Promise<void> {
+export async function sendWelcomeBackEmail(email: string, name: string = "there"): Promise<void> {
   const htmlContent = generateWelcomeBackEmail({
     name,
     email,

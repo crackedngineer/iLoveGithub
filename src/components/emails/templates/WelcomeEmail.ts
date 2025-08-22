@@ -1,16 +1,7 @@
-export const generateWelcomeEmail = ({
-  name,
-  email,
-}: {
-  name: string;
-  email: string;
-}) => {
+export const generateWelcomeEmail = ({name, email}: {name: string; email: string}) => {
   const year = new Date().getFullYear();
-  const appUrl =
-    process.env.NEXT_PUBLIC_APP_URL || "https://ilovegithub.oderna.in";
-  const unsubscribeUrl = `${appUrl}/unsubscribe?email=${encodeURIComponent(
-    email,
-  )}`;
+  const appUrl = process.env.NEXT_PUBLIC_APP_URL || "https://ilovegithub.oderna.in";
+  const unsubscribeUrl = `${appUrl}/unsubscribe?email=${encodeURIComponent(email)}`;
   const newsletterUrl = `${appUrl}/newsletter`;
 
   const html = `

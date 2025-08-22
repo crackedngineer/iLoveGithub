@@ -1,20 +1,9 @@
 "use client";
 
-import React, {
-  createContext,
-  useContext,
-  useEffect,
-  useState,
-  ReactNode,
-} from "react";
+import React, {createContext, useContext, useEffect, useState, ReactNode} from "react";
 
 const isWithinIndia = (latitude: number, longitude: number): boolean => {
-  return (
-    latitude >= 6.5546 &&
-    latitude <= 35.6745 &&
-    longitude >= 68.1114 &&
-    longitude <= 97.3956
-  );
+  return latitude >= 6.5546 && latitude <= 35.6745 && longitude >= 68.1114 && longitude <= 97.3956;
 };
 
 type LocationContextType = {
@@ -24,15 +13,13 @@ type LocationContextType = {
   loading: boolean;
 };
 
-const AppLocationContext = createContext<LocationContextType | undefined>(
-  undefined,
-);
+const AppLocationContext = createContext<LocationContextType | undefined>(undefined);
 
 type Props = {
   children: ReactNode;
 };
 
-export const AppLocationProvider = ({ children }: Props) => {
+export const AppLocationProvider = ({children}: Props) => {
   const [isInIndia, setIsInIndia] = useState<boolean | null>(null);
   const [error, setError] = useState<string | null>(null);
   const [loading, setLoading] = useState<boolean>(true);
@@ -47,7 +34,7 @@ export const AppLocationProvider = ({ children }: Props) => {
     }
 
     navigator.geolocation.getCurrentPosition(
-      ({ coords }) => {
+      ({coords}) => {
         const inIndia = isWithinIndia(coords.latitude, coords.longitude);
         setIsInIndia(inIndia);
         setLoading(false);
@@ -65,9 +52,7 @@ export const AppLocationProvider = ({ children }: Props) => {
   }, []);
 
   return (
-    <AppLocationContext.Provider
-      value={{ isInIndia, timeZone, error, loading }}
-    >
+    <AppLocationContext.Provider value={{isInIndia, timeZone, error, loading}}>
       {children}
     </AppLocationContext.Provider>
   );
