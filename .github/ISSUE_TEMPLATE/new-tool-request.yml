@@ -60,8 +60,8 @@ body:
     attributes:
       label: Should this open inside an iframe?
       options:
-        - 'true'
-        - 'false'
+        - "true"
+        - "false"
     validations:
       required: true
 

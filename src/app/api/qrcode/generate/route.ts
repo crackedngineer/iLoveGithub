@@ -11,7 +11,7 @@ export async function POST(req: NextRequest) {
     if (!data || typeof data !== "string") {
       return NextResponse.json(
         { error: "Invalid data input" },
-        { status: 400 }
+        { status: 400 },
       );
     }
 
@@ -61,7 +61,7 @@ export async function POST(req: NextRequest) {
     console.error("QR Generation Error:", error);
     return NextResponse.json(
       { error: "Failed to generate QR code" },
-      { status: 500 }
+      { status: 500 },
     );
   }
 }

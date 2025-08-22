@@ -6,7 +6,7 @@ export async function handleUserCreation(user: User): Promise<void> {
   try {
     if (!user.email) {
       console.warn(
-        "User created without email address, skipping welcome email"
+        "User created without email address, skipping welcome email",
       );
       return;
     }
@@ -23,7 +23,7 @@ export async function handleReturningUser(user: User): Promise<void> {
   try {
     if (!user.email) {
       console.warn(
-        "Returning user without email address, skipping welcome back email"
+        "Returning user without email address, skipping welcome back email",
       );
       return;
     }

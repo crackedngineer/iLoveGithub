@@ -27,7 +27,7 @@ export default function RepoPage() {
 
   const fullName = useMemo(
     () => `${owner}/${repo}`.toLowerCase(),
-    [owner, repo]
+    [owner, repo],
   );
 
   const token = useMemo(() => {
@@ -36,7 +36,7 @@ export default function RepoPage() {
 
   const updateRecentRepos = (details: RepoData) => {
     const stored = JSON.parse(
-      localStorage.getItem(RECENT_REPO_LOCAL_STORAGE_KEY) || "[]"
+      localStorage.getItem(RECENT_REPO_LOCAL_STORAGE_KEY) || "[]",
     ) as string[];
     const updated = [
       details.fullName,
@@ -44,7 +44,7 @@ export default function RepoPage() {
     ].slice(0, RECENT_TRENDING_REPO_CACHE_MAXCOUNT);
     localStorage.setItem(
       RECENT_REPO_LOCAL_STORAGE_KEY,
-      JSON.stringify(updated)
+      JSON.stringify(updated),
     );
   };
 
@@ -79,7 +79,7 @@ export default function RepoPage() {
         `/api/repo?owner=${owner}&repo=${repo}`,
         {
           headers: token ? { Authorization: `Bearer ${token}` } : {},
-        }
+        },
       );
 
       const githubData = response.data;

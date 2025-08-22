@@ -20,7 +20,7 @@ export function middleware(request: NextRequest) {
 
     // Rewrite to /tools/[subdomain]/[owner]/[repo]
     return NextResponse.rewrite(
-      new URL(`/tools/${subdomain}/${owner}/${repo}`, request.url)
+      new URL(`/tools/${subdomain}/${owner}/${repo}`, request.url),
     );
   }
 }

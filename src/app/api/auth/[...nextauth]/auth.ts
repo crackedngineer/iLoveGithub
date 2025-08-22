@@ -46,7 +46,6 @@ export const authOptions: NextAuthOptions = {
       }
     },
 
-
     async jwt({ token, account, profile }): Promise<ExtendedToken> {
       try {
         if (account && profile) {

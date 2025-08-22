@@ -9,7 +9,7 @@ export const generateWelcomeEmail = ({
   const appUrl =
     process.env.NEXT_PUBLIC_APP_URL || "https://ilovegithub.oderna.in";
   const unsubscribeUrl = `${appUrl}/unsubscribe?email=${encodeURIComponent(
-    email
+    email,
   )}`;
   const newsletterUrl = `${appUrl}/newsletter`;
 

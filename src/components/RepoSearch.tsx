@@ -57,7 +57,7 @@ const RepoSearch = ({
   const [loading, setLoading] = useState(true);
 
   const extractRepoDetails = (
-    url: string
+    url: string,
   ): { owner: string; repo: string } | null => {
     setError("");
     const patterns = [
@@ -115,7 +115,7 @@ const RepoSearch = ({
   const onTrendingRepoSubmit = (
     e: React.FormEvent,
     owner: string,
-    repo: string
+    repo: string,
   ) => {
     handleRepoSubmit({
       e,
@@ -127,7 +127,7 @@ const RepoSearch = ({
 
   useEffect(() => {
     const recent = JSON.parse(
-      localStorage.getItem(RECENT_REPO_LOCAL_STORAGE_KEY) || "[]"
+      localStorage.getItem(RECENT_REPO_LOCAL_STORAGE_KEY) || "[]",
     ) as string[];
     setRecent(recent.slice(0, RECENT_TRENDING_REPO_UI_MAXCOUNT));
   }, []);

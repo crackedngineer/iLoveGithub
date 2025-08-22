@@ -27,7 +27,7 @@ interface ApiLimitContextType {
 }
 
 const ApiLimitContext = createContext<ApiLimitContextType | undefined>(
-  undefined
+  undefined,
 );
 
 export const ApiLimitProvider = ({ children }: { children: ReactNode }) => {

@@ -43,15 +43,18 @@ const GitHubTools = ({
     );
   });
 
-  const toolsByCategory = filteredTools.reduce((acc, tool) => {
-    const categoryKey = tool.category;
+  const toolsByCategory = filteredTools.reduce(
+    (acc, tool) => {
+      const categoryKey = tool.category;
 
-    if (!acc[categoryKey]) {
-      acc[categoryKey] = [];
-    }
-    acc[categoryKey].push(tool);
-    return acc;
-  }, {} as Record<string, Tool[]>);
+      if (!acc[categoryKey]) {
+        acc[categoryKey] = [];
+      }
+      acc[categoryKey].push(tool);
+      return acc;
+    },
+    {} as Record<string, Tool[]>,
+  );
 
   return (
     <div className="w-full px-4 sm:px-6 lg:px-0 max-w-4xl mx-auto mt-10 animate-fade-in">
@@ -85,10 +88,10 @@ const GitHubTools = ({
                 const toolUrl = tool.iframe
                   ? `/tools/${tool.name}/${owner}/${repo}`
                   : replaceUrlVariables(tool.url, {
-                    owner,
-                    repo,
-                    default_branch,
-                  });
+                      owner,
+                      repo,
+                      default_branch,
+                    });
 
                 return (
                   <Card

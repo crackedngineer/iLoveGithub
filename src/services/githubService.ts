@@ -40,7 +40,7 @@ export const fetchRateLimit = async (): Promise<RateLimitResponse> => {
 
     console.error(
       "Error fetching rate limit:",
-      error?.response?.data || error.message
+      error?.response?.data || error.message,
     );
 
     return {

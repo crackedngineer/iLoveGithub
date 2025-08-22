@@ -5,7 +5,7 @@ import { rootDomain } from "@/lib/utils";
  * Dynamically generate iframe tool origins like https://toolname.example.com
  */
 const iframeOrigins = GithubToolsList.filter((tool) => tool.iframe).map(
-  (tool) => `https://${tool.name}.${rootDomain}`
+  (tool) => `https://${tool.name}.${rootDomain}`,
 );
 
 /**

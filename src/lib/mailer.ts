@@ -66,7 +66,7 @@ export async function sendEmail(options: EmailOptions): Promise<void> {
       lastError = error instanceof Error ? error : new Error(String(error));
       retries++;
       console.warn(
-        `Email send attempt ${retries} failed: ${lastError.message}`
+        `Email send attempt ${retries} failed: ${lastError.message}`,
       );
 
       // Wait before retrying
@@ -84,7 +84,7 @@ export async function sendEmail(options: EmailOptions): Promise<void> {
 // Welcome email function
 export async function sendWelcomeEmail(
   email: string,
-  name: string = "there"
+  name: string = "there",
 ): Promise<void> {
   const htmlContent = generateWelcomeEmail({ name, email });
 
@@ -99,7 +99,7 @@ export async function sendWelcomeEmail(
 
 export async function sendWelcomeBackEmail(
   email: string,
-  name: string = "there"
+  name: string = "there",
 ): Promise<void> {
   const htmlContent = generateWelcomeBackEmail({
     name,

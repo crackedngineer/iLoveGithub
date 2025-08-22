@@ -1,4 +1,4 @@
-"use client"
+"use client";
 import { useEffect, useState } from "react";
 import { ChevronDown, ChevronUp } from "lucide-react";
 
@@ -23,8 +23,8 @@ export default function AdBanner({ adSlot }: AdBannerProps) {
       try {
         if (
           !window.adsbygoogle ||
-          typeof window.adsbygoogle.push !== 'function' ||
-          document.querySelector('.adsbygoogle-noablate') // This class often appears when ads are blocked
+          typeof window.adsbygoogle.push !== "function" ||
+          document.querySelector(".adsbygoogle-noablate") // This class often appears when ads are blocked
         ) {
           console.log("AdSense may be blocked or not loaded properly");
           setAdsBlocked(true);
@@ -51,24 +51,20 @@ export default function AdBanner({ adSlot }: AdBannerProps) {
   }
 
   return (
-    <div 
+    <div
       className={`fixed bottom-0 left-0 right-0 bg-white dark:bg-gray-800 border-t border-gray-200 dark:border-gray-700 shadow-lg transition-all duration-500 ease-in-out ${
         isVisible ? "translate-y-0" : "translate-y-full"
       }`}
     >
       <div className="relative">
-        <button 
+        <button
           onClick={toggleVisibility}
           className="absolute -top-8 right-4 bg-white dark:bg-gray-800 p-2 rounded-t-lg border border-gray-200 dark:border-gray-700 border-b-0 shadow-sm hover:bg-gray-100 dark:hover:bg-gray-700 transition-colors"
           aria-label={isVisible ? "Hide ad" : "Show ad"}
         >
-          {isVisible ? (
-            <ChevronDown size={16} />
-          ) : (
-            <ChevronUp size={16} />
-          )}
+          {isVisible ? <ChevronDown size={16} /> : <ChevronUp size={16} />}
         </button>
-        
+
         <div className="p-2">
           <ins
             className="adsbygoogle"

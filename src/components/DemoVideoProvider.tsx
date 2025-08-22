@@ -7,7 +7,7 @@ interface DemoVideoContextType {
 }
 
 const DemoVideoContext = createContext<DemoVideoContextType | undefined>(
-  undefined
+  undefined,
 );
 
 export const useDemoVideo = () => {

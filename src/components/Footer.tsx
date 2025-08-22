@@ -15,7 +15,7 @@ const Footer = () => {
 
         {/* Creator Info */}
         <p className="flex justify-center md:justify-start items-center gap-2">
-        <span>Made in</span>
+          <span>Made in</span>
           <Image
             src="/icons/indian-flag.svg"
             alt="Indian Flag"

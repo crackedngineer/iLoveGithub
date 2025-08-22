@@ -11,7 +11,7 @@ export async function GET(req: NextRequest) {
   if (!owner || !repo) {
     return NextResponse.json(
       { error: "Missing 'owner', 'repo'" },
-      { status: 400 }
+      { status: 400 },
     );
   }
 
@@ -28,9 +28,9 @@ export async function GET(req: NextRequest) {
       Accept: "application/vnd.github+json",
       ...(process.env.NEXT_PUBLIC_GITHUB_TOKEN
         ? {
-          Authorization:
-            token || `Bearer ${process.env.NEXT_PUBLIC_GITHUB_TOKEN}`,
-        }
+            Authorization:
+              token || `Bearer ${process.env.NEXT_PUBLIC_GITHUB_TOKEN}`,
+          }
         : {}),
     },
   });
@@ -61,7 +61,7 @@ export async function GET(req: NextRequest) {
         {
           error: "GitHub API rate limit exceeded. Please try again later.",
         },
-        { status: 429 }
+        { status: 429 },
       );
     }
 
@@ -69,7 +69,7 @@ export async function GET(req: NextRequest) {
 
     return NextResponse.json(
       { error: "Failed to fetch repository details" },
-      { status: 500 }
+      { status: 500 },
     );
   }
 }
