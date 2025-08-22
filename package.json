@@ -6,7 +6,7 @@
   "scripts": {
     "format": "prettier --write \"**/*.{ts,tsx,js,jsx,md,mdx,css,yaml,yml}\"",
     "check": "prettier --check \"**/*.{ts,tsx,js,jsx,md,mdx,css,yaml,yml}\"",
-    "prepare": "husky",
+    "prepare": "if [ \"$NODE_ENV\" != \"production\" ]; then husky install; fi",
     "dev": "next dev --turbopack",
     "build": "next build",
     "start": "next start",
