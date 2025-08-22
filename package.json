@@ -4,9 +4,8 @@
   "private": true,
   "homepage": "https://ilovegithub.oderna.in/",
   "scripts": {
-    "format": "prettier --write \"**/*.{ts,tsx,js,jsx,md,mdx,css,yaml,yml}\"",
-    "check": "prettier --check \"**/*.{ts,tsx,js,jsx,md,mdx,css,yaml,yml}\"",
-    "prepare": "if [ \"$NODE_ENV\" != \"production\" ]; then husky install; fi",
+    "format": "prettier --write .",
+    "prepare": "if [ \"$NODE_ENV\" != \"production\" ]; then husky; fi",
     "dev": "next dev --turbopack",
     "build": "next build",
     "start": "next start",
@@ -14,6 +13,16 @@
     "export": "next export",
     "lint": "next lint",
     "lint:fix": "next lint --fix"
+  },
+  "husky": {
+    "hooks": {
+      "pre-commit": "lint-staged"
+    }
+  },
+  "lint-staged": {
+    "*.{js,jsx,ts,tsx,json,css,scss,md}": [
+      "prettier --write"
+    ]
   },
   "dependencies": {
     "@radix-ui/react-dialog": "^1.1.11",
@@ -54,12 +63,16 @@
     "@types/react": "^19",
     "@types/react-dom": "^19",
     "@types/uuid": "^10.0.0",
-    "@typescript-eslint/eslint-plugin": "^8.30.1",
-    "@typescript-eslint/parser": "^8.30.1",
+    "@typescript-eslint/eslint-plugin": "^8.40.0",
+    "@typescript-eslint/parser": "^8.40.0",
     "autoprefixer": "^10.4.21",
-    "eslint": "^9",
+    "eslint": "^9.33.0",
     "eslint-config-next": "15.2.4",
+    "eslint-config-prettier": "^10.1.8",
+    "eslint-plugin-prettier": "^5.5.4",
+    "eslint-plugin-unused-imports": "^4.2.0",
     "husky": "^9.1.7",
+    "lint-staged": "^15.5.2",
     "prettier": "^3.6.2",
     "tailwindcss": "^4.1.1",
     "typescript": "^5"
