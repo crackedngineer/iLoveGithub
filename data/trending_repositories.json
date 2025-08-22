@@ -5,7 +5,7 @@
         "full_name": "minitap-ai/mobile-use",
         "html_url": "https://github.com/minitap-ai/mobile-use",
         "description": "AI agents can now use real Android and iOS apps, just like a human.",
-        "stargazers_count": 606,
+        "stargazers_count": 901,
         "language": "Python",
         "owner": {
             "login": "minitap-ai",
@@ -19,7 +19,7 @@
         "full_name": "karpathy/rendergit",
         "html_url": "https://github.com/karpathy/rendergit",
         "description": "Render any git repo into a single static HTML page for humans or LLMs",
-        "stargazers_count": 524,
+        "stargazers_count": 874,
         "language": "Python",
         "owner": {
             "login": "karpathy",
@@ -28,31 +28,17 @@
         }
     },
     {
-        "id": 1038507702,
-        "name": "ChatMock",
-        "full_name": "RayBytes/ChatMock",
-        "html_url": "https://github.com/RayBytes/ChatMock",
-        "description": "Access OpenAI models programmatically through your ChatGPT subscription.",
-        "stargazers_count": 420,
+        "id": 1041472829,
+        "name": "DiffMem",
+        "full_name": "Growth-Kinetics/DiffMem",
+        "html_url": "https://github.com/Growth-Kinetics/DiffMem",
+        "description": "Git Based Memory Storage for Conversational AI Agent",
+        "stargazers_count": 363,
         "language": "Python",
         "owner": {
-            "login": "RayBytes",
-            "avatar_url": "https://avatars.githubusercontent.com/u/108236317?v=4",
-            "html_url": "https://github.com/RayBytes"
-        }
-    },
-    {
-        "id": 1039330907,
-        "name": "Thyme",
-        "full_name": "yfzhang114/Thyme",
-        "html_url": "https://github.com/yfzhang114/Thyme",
-        "description": "Think Beyond Images",
-        "stargazers_count": 273,
-        "language": "Python",
-        "owner": {
-            "login": "yfzhang114",
-            "avatar_url": "https://avatars.githubusercontent.com/u/53161950?v=4",
-            "html_url": "https://github.com/yfzhang114"
+            "login": "Growth-Kinetics",
+            "avatar_url": "https://avatars.githubusercontent.com/u/122857063?v=4",
+            "html_url": "https://github.com/Growth-Kinetics"
         }
     },
     {
@@ -61,7 +47,7 @@
         "full_name": "superstarryeyes/lue",
         "html_url": "https://github.com/superstarryeyes/lue",
         "description": "Terminal eBook Reader with Text-to-Speech",
-        "stargazers_count": 258,
+        "stargazers_count": 322,
         "language": "Python",
         "owner": {
             "login": "superstarryeyes",
@@ -70,12 +56,26 @@
         }
     },
     {
+        "id": 1039330907,
+        "name": "Thyme",
+        "full_name": "yfzhang114/Thyme",
+        "html_url": "https://github.com/yfzhang114/Thyme",
+        "description": "Think Beyond Images",
+        "stargazers_count": 293,
+        "language": "Python",
+        "owner": {
+            "login": "yfzhang114",
+            "avatar_url": "https://avatars.githubusercontent.com/u/53161950?v=4",
+            "html_url": "https://github.com/yfzhang114"
+        }
+    },
+    {
         "id": 1039025752,
         "name": "Gift-Buyer",
         "full_name": "blindxvc/Gift-Buyer",
         "html_url": "https://github.com/blindxvc/Gift-Buyer",
         "description": "A universal bot for automatically sniping and buying Telegram gifts",
-        "stargazers_count": 223,
+        "stargazers_count": 224,
         "language": "Python",
         "owner": {
             "login": "blindxvc",
