@@ -5,7 +5,7 @@
         "full_name": "karpathy/rendergit",
         "html_url": "https://github.com/karpathy/rendergit",
         "description": "Render any git repo into a single static HTML page for humans or LLMs",
-        "stargazers_count": 1038,
+        "stargazers_count": 1116,
         "language": "Python",
         "owner": {
             "login": "karpathy",
@@ -19,7 +19,7 @@
         "full_name": "Growth-Kinetics/DiffMem",
         "html_url": "https://github.com/Growth-Kinetics/DiffMem",
         "description": "Git Based Memory Storage for Conversational AI Agent",
-        "stargazers_count": 448,
+        "stargazers_count": 465,
         "language": "Python",
         "owner": {
             "login": "Growth-Kinetics",
@@ -28,26 +28,12 @@
         }
     },
     {
-        "id": 1039330907,
-        "name": "Thyme",
-        "full_name": "yfzhang114/Thyme",
-        "html_url": "https://github.com/yfzhang114/Thyme",
-        "description": "Think Beyond Images",
-        "stargazers_count": 321,
-        "language": "Python",
-        "owner": {
-            "login": "yfzhang114",
-            "avatar_url": "https://avatars.githubusercontent.com/u/53161950?v=4",
-            "html_url": "https://github.com/yfzhang114"
-        }
-    },
-    {
         "id": 1041363996,
         "name": "Datarus-JupyterAgent",
         "full_name": "DatarusAI/Datarus-JupyterAgent",
         "html_url": "https://github.com/DatarusAI/Datarus-JupyterAgent",
         "description": "A sophisticated multi-step reasoning pipeline powered by the Datarus-R1-14B-Preview model",
-        "stargazers_count": 222,
+        "stargazers_count": 202,
         "language": "Python",
         "owner": {
             "login": "DatarusAI",
@@ -56,31 +42,45 @@
         }
     },
     {
-        "id": 1039627945,
-        "name": "Flash-Sparse-Attention",
-        "full_name": "Relaxed-System-Lab/Flash-Sparse-Attention",
-        "html_url": "https://github.com/Relaxed-System-Lab/Flash-Sparse-Attention",
-        "description": "\ud83d\ude80\ud83d\ude80 Efficient implementations of Native Sparse Attention",
-        "stargazers_count": 188,
-        "language": "Python",
-        "owner": {
-            "login": "Relaxed-System-Lab",
-            "avatar_url": "https://avatars.githubusercontent.com/u/143859082?v=4",
-            "html_url": "https://github.com/Relaxed-System-Lab"
-        }
-    },
-    {
         "id": 1040365877,
         "name": "fenrir",
         "full_name": "R0rt1z2/fenrir",
         "html_url": "https://github.com/R0rt1z2/fenrir",
         "description": "Bootchain exploit for MediaTek devices",
-        "stargazers_count": 185,
+        "stargazers_count": 189,
         "language": "Python",
         "owner": {
             "login": "R0rt1z2",
             "avatar_url": "https://avatars.githubusercontent.com/u/39171306?v=4",
             "html_url": "https://github.com/R0rt1z2"
+        }
+    },
+    {
+        "id": 1040271269,
+        "name": "RFdiffusion2",
+        "full_name": "RosettaCommons/RFdiffusion2",
+        "html_url": "https://github.com/RosettaCommons/RFdiffusion2",
+        "description": null,
+        "stargazers_count": 179,
+        "language": "Python",
+        "owner": {
+            "login": "RosettaCommons",
+            "avatar_url": "https://avatars.githubusercontent.com/u/3856847?v=4",
+            "html_url": "https://github.com/RosettaCommons"
+        }
+    },
+    {
+        "id": 1041696335,
+        "name": "GroupPolicyBackdoor",
+        "full_name": "synacktiv/GroupPolicyBackdoor",
+        "html_url": "https://github.com/synacktiv/GroupPolicyBackdoor",
+        "description": "Group Policy Objects manipulation and exploitation framework",
+        "stargazers_count": 161,
+        "language": "Python",
+        "owner": {
+            "login": "synacktiv",
+            "avatar_url": "https://avatars.githubusercontent.com/u/50145679?v=4",
+            "html_url": "https://github.com/synacktiv"
         }
     }
 ]
