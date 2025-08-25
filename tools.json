@@ -328,5 +328,16 @@
     "category": "Code Visualization & Diagrams",
     "iframe": false,
     "created_at": "2025-08-19T15:39:45Z"
-  }
+  },
+  {
+    "name": "gitmvp",
+    "title": "GitMVP",
+    "description": "Turn any GitHub repo into an MVP prompt",
+    "homepage": "https://www.gitmvp.com/",
+    "url": "https://www.gitmvp.com/{owner}/{repo}",
+    "icon": "/icons/tools/gitmvp.png",
+    "category": "Documentation & AI-Powered Understanding",
+    "iframe": true,
+    "created_at": "2025-03-28T11:06:45Z"
+  },
 ]
