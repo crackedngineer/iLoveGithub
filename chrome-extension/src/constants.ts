@@ -1,0 +1,1 @@
+export const HOMEPAGE_URL = "https://ilovegithub.oderna.in/";

@@ -1,0 +1,40 @@
+{
+  "manifest_version": 3,
+  "name": "GitHub Tools Extension",
+  "version": "1.0.0",
+  "description": "Transform GitHub URLs and access development tools with analytics",
+  "permissions": [
+    "activeTab",
+    "storage",
+    "scripting"
+  ],
+  "host_permissions": [
+    "https://github.com/*",
+    "https://*.github.com/*"
+  ],
+  "content_scripts": [
+    {
+      "matches": ["https://github.com/*"],
+      "js": ["dist/content.js"],
+      "css": ["styles/content.css"]
+    }
+  ],
+  "background": {
+    "service_worker": "dist/background.js"
+  },
+  "action": {
+    "default_popup": "popup.html",
+    "default_title": "GitHub Tools"
+  },
+  "icons": {
+    // "16": "icons/icon16.png",
+    // "48": "icons/icon48.png",
+    "128": "icons/favicon.png"
+  },
+  "web_accessible_resources": [
+    {
+      "resources": ["icons/*", "styles/*"],
+      "matches": ["https://github.com/*"]
+    }
+  ]
+}
