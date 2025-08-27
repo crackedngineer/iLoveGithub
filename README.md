@@ -118,6 +118,7 @@
 
 ## 🛠️ Getting Started Locally
 
+### Option 1: Run without Docker
 ```bash
 # 1. Clone the repository
 $ git clone https://github.com/crackedngineer/iLoveGitHub.git
@@ -125,21 +126,33 @@ $ git clone https://github.com/crackedngineer/iLoveGitHub.git
 # 2. Navigate into the project folder
 $ cd iLoveGitHub
 
-# Populate .env file
-$ cat .env.example > .env
+# 3. Populate .env file
+$ cp .env.example .env
 
-# 3. Install dependencies
+# 4. Install dependencies
 $ npm install
 
-# 4. Run the development server
+# 5. Run the development server
 $ npm run dev
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result 🚀
+### Option 2: Run with Docker Compose
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+```bash
+# 1. Clone the repository
+$ git clone https://github.com/crackedngineer/iLoveGitHub.git
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+# 2. Navigate into the project folder
+$ cd iLoveGitHub
+
+# 3. Populate .env file
+$ cp .env.example .env
+
+# 4. Start services with Docker Compose
+$ docker compose up -d --build --remove-orphans
+```
+
+➡️ The app will be available at http://localhost:3000
 
 ---
 
@@ -150,14 +163,6 @@ If this project helps you discover amazing tools or saves your time, consider su
 ☕ [**Buy Me a Coffee**](https://buymeacoffee.com/crackedngineer) — Every bit helps keep the lights on!
 
 📬 **Contact:** subhomoyrchoudhury@gmail.com
-
----
-
-## 📚 Learn More
-
-- [Next.js Documentation](https://nextjs.org/docs) - Explore all features and guides.
-- [Learn Next.js](https://nextjs.org/learn) - Interactive learning experience.
-- [Deploying to GitHub Pages](https://nextjs.org/docs/pages/building-your-application/deploying/static-exports#github-pages) - Official deployment guide.
 
 ---
 
