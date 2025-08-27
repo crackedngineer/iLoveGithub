@@ -1,39 +1,11 @@
 [
     {
-        "id": 1041136312,
-        "name": "rendergit",
-        "full_name": "karpathy/rendergit",
-        "html_url": "https://github.com/karpathy/rendergit",
-        "description": "Render any git repo into a single static HTML page for humans or LLMs",
-        "stargazers_count": 1223,
-        "language": "Python",
-        "owner": {
-            "login": "karpathy",
-            "avatar_url": "https://avatars.githubusercontent.com/u/241138?v=4",
-            "html_url": "https://github.com/karpathy"
-        }
-    },
-    {
-        "id": 1041472829,
-        "name": "DiffMem",
-        "full_name": "Growth-Kinetics/DiffMem",
-        "html_url": "https://github.com/Growth-Kinetics/DiffMem",
-        "description": "Git Based Memory Storage for Conversational AI Agent",
-        "stargazers_count": 504,
-        "language": "Python",
-        "owner": {
-            "login": "Growth-Kinetics",
-            "avatar_url": "https://avatars.githubusercontent.com/u/122857063?v=4",
-            "html_url": "https://github.com/Growth-Kinetics"
-        }
-    },
-    {
         "id": 1044296738,
         "name": "VibeVoice",
         "full_name": "microsoft/VibeVoice",
         "html_url": "https://github.com/microsoft/VibeVoice",
         "description": "Frontier Open-Source Text-to-Speech",
-        "stargazers_count": 331,
+        "stargazers_count": 1782,
         "language": "Python",
         "owner": {
             "login": "microsoft",
@@ -56,31 +28,59 @@
         }
     },
     {
-        "id": 1041363996,
-        "name": "Datarus-JupyterAgent",
-        "full_name": "DatarusAI/Datarus-JupyterAgent",
-        "html_url": "https://github.com/DatarusAI/Datarus-JupyterAgent",
-        "description": "A sophisticated multi-step reasoning pipeline powered by the Datarus-R1-14B-Preview model",
-        "stargazers_count": 210,
+        "id": 1043521882,
+        "name": "ThinkMesh",
+        "full_name": "martianlantern/ThinkMesh",
+        "html_url": "https://github.com/martianlantern/ThinkMesh",
+        "description": "Parallel thinking for LLMs. Confidence\u2011gated, strategy\u2011driven, offline\u2011friendly",
+        "stargazers_count": 181,
         "language": "Python",
         "owner": {
-            "login": "DatarusAI",
-            "avatar_url": "https://avatars.githubusercontent.com/u/224099658?v=4",
-            "html_url": "https://github.com/DatarusAI"
+            "login": "martianlantern",
+            "avatar_url": "https://avatars.githubusercontent.com/u/222924146?v=4",
+            "html_url": "https://github.com/martianlantern"
         }
     },
     {
-        "id": 1041696335,
-        "name": "GroupPolicyBackdoor",
-        "full_name": "synacktiv/GroupPolicyBackdoor",
-        "html_url": "https://github.com/synacktiv/GroupPolicyBackdoor",
-        "description": "Group Policy Objects manipulation and exploitation framework",
-        "stargazers_count": 202,
+        "id": 1042686008,
+        "name": "Image-Detection-Bypass-Utility",
+        "full_name": "PurinNyova/Image-Detection-Bypass-Utility",
+        "html_url": "https://github.com/PurinNyova/Image-Detection-Bypass-Utility",
+        "description": "Attempts to bypass AI Image detection by employing various methods such as: Noise Injection, FFT Smoothing, FFT Matching, Pixel Perturbation, Camera Simulation, and more.",
+        "stargazers_count": 121,
         "language": "Python",
         "owner": {
-            "login": "synacktiv",
-            "avatar_url": "https://avatars.githubusercontent.com/u/50145679?v=4",
-            "html_url": "https://github.com/synacktiv"
+            "login": "PurinNyova",
+            "avatar_url": "https://avatars.githubusercontent.com/u/116049115?v=4",
+            "html_url": "https://github.com/PurinNyova"
+        }
+    },
+    {
+        "id": 1041920680,
+        "name": "Youtu-agent",
+        "full_name": "Tencent/Youtu-agent",
+        "html_url": "https://github.com/Tencent/Youtu-agent",
+        "description": "A simple yet powerful agent framework that delivers with open-source models",
+        "stargazers_count": 117,
+        "language": "Python",
+        "owner": {
+            "login": "Tencent",
+            "avatar_url": "https://avatars.githubusercontent.com/u/18461506?v=4",
+            "html_url": "https://github.com/Tencent"
+        }
+    },
+    {
+        "id": 1042957199,
+        "name": "async-server",
+        "full_name": "bkdevs/async-server",
+        "html_url": "https://github.com/bkdevs/async-server",
+        "description": "It's like Claude Code + Linear + GitHub PR",
+        "stargazers_count": 108,
+        "language": "Python",
+        "owner": {
+            "login": "bkdevs",
+            "avatar_url": "https://avatars.githubusercontent.com/u/131362808?v=4",
+            "html_url": "https://github.com/bkdevs"
         }
     }
 ]
