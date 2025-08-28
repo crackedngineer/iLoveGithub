@@ -5,12 +5,26 @@
         "full_name": "microsoft/VibeVoice",
         "html_url": "https://github.com/microsoft/VibeVoice",
         "description": "Frontier Open-Source Text-to-Speech",
-        "stargazers_count": 1782,
+        "stargazers_count": 3746,
         "language": "Python",
         "owner": {
             "login": "microsoft",
             "avatar_url": "https://avatars.githubusercontent.com/u/6154722?v=4",
             "html_url": "https://github.com/microsoft"
+        }
+    },
+    {
+        "id": 1042957199,
+        "name": "async-server",
+        "full_name": "bkdevs/async-server",
+        "html_url": "https://github.com/bkdevs/async-server",
+        "description": "It's like Claude Code + Linear + GitHub PR",
+        "stargazers_count": 278,
+        "language": "Python",
+        "owner": {
+            "login": "bkdevs",
+            "avatar_url": "https://avatars.githubusercontent.com/u/131362808?v=4",
+            "html_url": "https://github.com/bkdevs"
         }
     },
     {
@@ -33,7 +47,7 @@
         "full_name": "martianlantern/ThinkMesh",
         "html_url": "https://github.com/martianlantern/ThinkMesh",
         "description": "Parallel thinking for LLMs. Confidence\u2011gated, strategy\u2011driven, offline\u2011friendly",
-        "stargazers_count": 181,
+        "stargazers_count": 204,
         "language": "Python",
         "owner": {
             "login": "martianlantern",
@@ -47,7 +61,7 @@
         "full_name": "PurinNyova/Image-Detection-Bypass-Utility",
         "html_url": "https://github.com/PurinNyova/Image-Detection-Bypass-Utility",
         "description": "Attempts to bypass AI Image detection by employing various methods such as: Noise Injection, FFT Smoothing, FFT Matching, Pixel Perturbation, Camera Simulation, and more.",
-        "stargazers_count": 121,
+        "stargazers_count": 124,
         "language": "Python",
         "owner": {
             "login": "PurinNyova",
@@ -56,31 +70,17 @@
         }
     },
     {
-        "id": 1041920680,
-        "name": "Youtu-agent",
-        "full_name": "Tencent/Youtu-agent",
-        "html_url": "https://github.com/Tencent/Youtu-agent",
-        "description": "A simple yet powerful agent framework that delivers with open-source models",
+        "id": 1043576425,
+        "name": "SpatialGen",
+        "full_name": "manycore-research/SpatialGen",
+        "html_url": "https://github.com/manycore-research/SpatialGen",
+        "description": "SpatialGen: Layout-guided 3D Indoor Scene Generation",
         "stargazers_count": 117,
         "language": "Python",
         "owner": {
-            "login": "Tencent",
-            "avatar_url": "https://avatars.githubusercontent.com/u/18461506?v=4",
-            "html_url": "https://github.com/Tencent"
-        }
-    },
-    {
-        "id": 1042957199,
-        "name": "async-server",
-        "full_name": "bkdevs/async-server",
-        "html_url": "https://github.com/bkdevs/async-server",
-        "description": "It's like Claude Code + Linear + GitHub PR",
-        "stargazers_count": 108,
-        "language": "Python",
-        "owner": {
-            "login": "bkdevs",
-            "avatar_url": "https://avatars.githubusercontent.com/u/131362808?v=4",
-            "html_url": "https://github.com/bkdevs"
+            "login": "manycore-research",
+            "avatar_url": "https://avatars.githubusercontent.com/u/83800450?v=4",
+            "html_url": "https://github.com/manycore-research"
         }
     }
 ]
