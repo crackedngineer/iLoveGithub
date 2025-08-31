@@ -5,7 +5,7 @@
         "full_name": "microsoft/VibeVoice",
         "html_url": "https://github.com/microsoft/VibeVoice",
         "description": "Frontier Open-Source Text-to-Speech",
-        "stargazers_count": 5797,
+        "stargazers_count": 6063,
         "language": "Python",
         "owner": {
             "login": "microsoft",
@@ -14,54 +14,12 @@
         }
     },
     {
-        "id": 1043521882,
-        "name": "ThinkMesh",
-        "full_name": "martianlantern/ThinkMesh",
-        "html_url": "https://github.com/martianlantern/ThinkMesh",
-        "description": "Parallel thinking for LLMs. Confidence\u2011gated, strategy\u2011driven, offline\u2011friendly",
-        "stargazers_count": 223,
-        "language": "Python",
-        "owner": {
-            "login": "martianlantern",
-            "avatar_url": "https://avatars.githubusercontent.com/u/222924146?v=4",
-            "html_url": "https://github.com/martianlantern"
-        }
-    },
-    {
-        "id": 1044914909,
-        "name": "immich-drop",
-        "full_name": "Nasogaa/immich-drop",
-        "html_url": "https://github.com/Nasogaa/immich-drop",
-        "description": "A tiny, zero-login web app for collecting photos/videos from anyone into your Immich server.",
-        "stargazers_count": 173,
-        "language": "Python",
-        "owner": {
-            "login": "Nasogaa",
-            "avatar_url": "https://avatars.githubusercontent.com/u/3791025?v=4",
-            "html_url": "https://github.com/Nasogaa"
-        }
-    },
-    {
-        "id": 1043736566,
-        "name": "hound",
-        "full_name": "muellerberndt/hound",
-        "html_url": "https://github.com/muellerberndt/hound",
-        "description": "Language-agnostic AI code security analysis that replicates the cognitive processes of expert auditors",
-        "stargazers_count": 163,
-        "language": "Python",
-        "owner": {
-            "login": "muellerberndt",
-            "avatar_url": "https://avatars.githubusercontent.com/u/5194767?v=4",
-            "html_url": "https://github.com/muellerberndt"
-        }
-    },
-    {
         "id": 1044232198,
         "name": "Genie",
         "full_name": "High-Logic/Genie",
         "html_url": "https://github.com/High-Logic/Genie",
         "description": "GPT-SoVITS ONNX Inference Engine & Model Converter",
-        "stargazers_count": 162,
+        "stargazers_count": 277,
         "language": "Python",
         "owner": {
             "login": "High-Logic",
@@ -70,17 +28,59 @@
         }
     },
     {
-        "id": 1043885417,
-        "name": "marvis-tts",
-        "full_name": "Marvis-Labs/marvis-tts",
-        "html_url": "https://github.com/Marvis-Labs/marvis-tts",
-        "description": null,
-        "stargazers_count": 159,
+        "id": 1044914909,
+        "name": "immich-drop",
+        "full_name": "Nasogaa/immich-drop",
+        "html_url": "https://github.com/Nasogaa/immich-drop",
+        "description": "A tiny, zero-login web app for collecting photos/videos from anyone into your Immich server.",
+        "stargazers_count": 196,
         "language": "Python",
         "owner": {
-            "login": "Marvis-Labs",
-            "avatar_url": "https://avatars.githubusercontent.com/u/228382334?v=4",
-            "html_url": "https://github.com/Marvis-Labs"
+            "login": "Nasogaa",
+            "avatar_url": "https://avatars.githubusercontent.com/u/3791025?v=4",
+            "html_url": "https://github.com/Nasogaa"
+        }
+    },
+    {
+        "id": 1046384082,
+        "name": "mvtracker",
+        "full_name": "ethz-vlg/mvtracker",
+        "html_url": "https://github.com/ethz-vlg/mvtracker",
+        "description": "[ICCV 2025 Oral] MVTracker: Multi-view 3D Point Tracking",
+        "stargazers_count": 176,
+        "language": "Python",
+        "owner": {
+            "login": "ethz-vlg",
+            "avatar_url": "https://avatars.githubusercontent.com/u/205185509?v=4",
+            "html_url": "https://github.com/ethz-vlg"
+        }
+    },
+    {
+        "id": 1044710507,
+        "name": "sgr-deep-research",
+        "full_name": "vakovalskii/sgr-deep-research",
+        "html_url": "https://github.com/vakovalskii/sgr-deep-research",
+        "description": "Schema-Guided Reasoning (SGR) is a technique that guides large language models (LLMs) to produce structured, clear, and predictable outputs by enforcing reasoning through predefined steps. By creating a specific schema (or structured template), you explicitly define:",
+        "stargazers_count": 168,
+        "language": "Python",
+        "owner": {
+            "login": "vakovalskii",
+            "avatar_url": "https://avatars.githubusercontent.com/u/220532298?v=4",
+            "html_url": "https://github.com/vakovalskii"
+        }
+    },
+    {
+        "id": 1045781419,
+        "name": "VibeVoice-ComfyUI",
+        "full_name": "Enemyx-net/VibeVoice-ComfyUI",
+        "html_url": "https://github.com/Enemyx-net/VibeVoice-ComfyUI",
+        "description": "A VibeVoice Wrapper for ComfyUI",
+        "stargazers_count": 161,
+        "language": "Python",
+        "owner": {
+            "login": "Enemyx-net",
+            "avatar_url": "https://avatars.githubusercontent.com/u/228984999?v=4",
+            "html_url": "https://github.com/Enemyx-net"
         }
     }
 ]
