@@ -5,7 +5,7 @@
   "homepage": "https://ilovegithub.oderna.in/",
   "scripts": {
     "format": "prettier --write .",
-    "prepare": "if [ \"$NODE_ENV\" != \"production\" ]; then husky; fi",
+    "prepare": "husky install",
     "dev": "next dev --turbopack",
     "build": "next build",
     "start": "next start",
@@ -43,7 +43,7 @@
     "date-fns": "^4.1.0",
     "framer-motion": "^12.23.12",
     "lucide-react": "^0.539.0",
-    "next": "15.4.2",
+    "next": "^15.5.2",
     "next-auth": "^4.24.11",
     "next-sitemap": "^4.2.3",
     "next-themes": "^0.4.6",
