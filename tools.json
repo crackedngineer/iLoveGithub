@@ -339,5 +339,16 @@
     "category": "Documentation & AI-Powered Understanding",
     "iframe": true,
     "created_at": "2025-08-25T11:06:45Z"
+  },
+  {
+    "name": "gitpod",
+    "title": "Gitpod",
+    "description": "The developer platform for on-demand cloud development environments to create software faster and more securely.",
+    "homepage": "https://gitpod.io/",
+    "url": "https://gitpod.io/#https://github.com/{owner}/{repo}",
+    "icon": "/icons/tools/gitpod.png",
+    "category": "Development Tools",
+    "iframe": false,
+    "created_at": "2025-03-31T14:39:45Z"
   }
 ]
