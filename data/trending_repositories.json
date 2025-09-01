@@ -1,30 +1,16 @@
 [
     {
-        "id": 1044296738,
-        "name": "VibeVoice",
-        "full_name": "microsoft/VibeVoice",
-        "html_url": "https://github.com/microsoft/VibeVoice",
-        "description": "Frontier Open-Source Text-to-Speech",
-        "stargazers_count": 6063,
+        "id": 1046825624,
+        "name": "Pharos-Testnet-Bot",
+        "full_name": "ox1nec/Pharos-Testnet-Bot",
+        "html_url": "https://github.com/ox1nec/Pharos-Testnet-Bot",
+        "description": "Pharos Testnet automation python bot",
+        "stargazers_count": 406,
         "language": "Python",
         "owner": {
-            "login": "microsoft",
-            "avatar_url": "https://avatars.githubusercontent.com/u/6154722?v=4",
-            "html_url": "https://github.com/microsoft"
-        }
-    },
-    {
-        "id": 1044232198,
-        "name": "Genie",
-        "full_name": "High-Logic/Genie",
-        "html_url": "https://github.com/High-Logic/Genie",
-        "description": "GPT-SoVITS ONNX Inference Engine & Model Converter",
-        "stargazers_count": 277,
-        "language": "Python",
-        "owner": {
-            "login": "High-Logic",
-            "avatar_url": "https://avatars.githubusercontent.com/u/69069943?v=4",
-            "html_url": "https://github.com/High-Logic"
+            "login": "ox1nec",
+            "avatar_url": "https://avatars.githubusercontent.com/u/120295393?v=4",
+            "html_url": "https://github.com/ox1nec"
         }
     },
     {
@@ -33,7 +19,7 @@
         "full_name": "Nasogaa/immich-drop",
         "html_url": "https://github.com/Nasogaa/immich-drop",
         "description": "A tiny, zero-login web app for collecting photos/videos from anyone into your Immich server.",
-        "stargazers_count": 196,
+        "stargazers_count": 226,
         "language": "Python",
         "owner": {
             "login": "Nasogaa",
@@ -47,7 +33,7 @@
         "full_name": "ethz-vlg/mvtracker",
         "html_url": "https://github.com/ethz-vlg/mvtracker",
         "description": "[ICCV 2025 Oral] MVTracker: Multi-view 3D Point Tracking",
-        "stargazers_count": 176,
+        "stargazers_count": 207,
         "language": "Python",
         "owner": {
             "login": "ethz-vlg",
@@ -60,8 +46,8 @@
         "name": "sgr-deep-research",
         "full_name": "vakovalskii/sgr-deep-research",
         "html_url": "https://github.com/vakovalskii/sgr-deep-research",
-        "description": "Schema-Guided Reasoning (SGR) is a technique that guides large language models (LLMs) to produce structured, clear, and predictable outputs by enforcing reasoning through predefined steps. By creating a specific schema (or structured template), you explicitly define:",
-        "stargazers_count": 168,
+        "description": "Hybrid Schema-Guided Reasoning (SGR) has agentic system design create by neuraldeep community  Creator of SGR concemption: https://abdullin.com/schema-guided-reasoning/demo Schema-Guided Reasoning (SGR) is a technique that guides large language models (LLMs) to produce structured, clear, and predictable outputs by enforcing reasoning through ",
+        "stargazers_count": 194,
         "language": "Python",
         "owner": {
             "login": "vakovalskii",
@@ -70,17 +56,31 @@
         }
     },
     {
-        "id": 1045781419,
-        "name": "VibeVoice-ComfyUI",
-        "full_name": "Enemyx-net/VibeVoice-ComfyUI",
-        "html_url": "https://github.com/Enemyx-net/VibeVoice-ComfyUI",
-        "description": "A VibeVoice Wrapper for ComfyUI",
-        "stargazers_count": 161,
+        "id": 1045247072,
+        "name": "semantic-router",
+        "full_name": "vllm-project/semantic-router",
+        "html_url": "https://github.com/vllm-project/semantic-router",
+        "description": "Intelligent Mixture-of-Models Router for Efficient LLM Inference",
+        "stargazers_count": 194,
         "language": "Python",
         "owner": {
-            "login": "Enemyx-net",
-            "avatar_url": "https://avatars.githubusercontent.com/u/228984999?v=4",
-            "html_url": "https://github.com/Enemyx-net"
+            "login": "vllm-project",
+            "avatar_url": "https://avatars.githubusercontent.com/u/136984999?v=4",
+            "html_url": "https://github.com/vllm-project"
+        }
+    },
+    {
+        "id": 1045997545,
+        "name": "cognitive-dissonance-dspy",
+        "full_name": "evalops/cognitive-dissonance-dspy",
+        "html_url": "https://github.com/evalops/cognitive-dissonance-dspy",
+        "description": "A multi-agent LLM system for detecting and resolving cognitive dissonance.",
+        "stargazers_count": 185,
+        "language": "Python",
+        "owner": {
+            "login": "evalops",
+            "avatar_url": "https://avatars.githubusercontent.com/u/211087558?v=4",
+            "html_url": "https://github.com/evalops"
         }
     }
 ]
