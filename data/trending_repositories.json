@@ -1,39 +1,11 @@
 [
     {
-        "id": 1046825624,
-        "name": "Pharos-Testnet-Bot",
-        "full_name": "ox1nec/Pharos-Testnet-Bot",
-        "html_url": "https://github.com/ox1nec/Pharos-Testnet-Bot",
-        "description": "Pharos Testnet automation python bot",
-        "stargazers_count": 406,
-        "language": "Python",
-        "owner": {
-            "login": "ox1nec",
-            "avatar_url": "https://avatars.githubusercontent.com/u/120295393?v=4",
-            "html_url": "https://github.com/ox1nec"
-        }
-    },
-    {
-        "id": 1044914909,
-        "name": "immich-drop",
-        "full_name": "Nasogaa/immich-drop",
-        "html_url": "https://github.com/Nasogaa/immich-drop",
-        "description": "A tiny, zero-login web app for collecting photos/videos from anyone into your Immich server.",
-        "stargazers_count": 226,
-        "language": "Python",
-        "owner": {
-            "login": "Nasogaa",
-            "avatar_url": "https://avatars.githubusercontent.com/u/3791025?v=4",
-            "html_url": "https://github.com/Nasogaa"
-        }
-    },
-    {
         "id": 1046384082,
         "name": "mvtracker",
         "full_name": "ethz-vlg/mvtracker",
         "html_url": "https://github.com/ethz-vlg/mvtracker",
         "description": "[ICCV 2025 Oral] MVTracker: Multi-view 3D Point Tracking",
-        "stargazers_count": 207,
+        "stargazers_count": 249,
         "language": "Python",
         "owner": {
             "login": "ethz-vlg",
@@ -42,45 +14,73 @@
         }
     },
     {
-        "id": 1044710507,
-        "name": "sgr-deep-research",
-        "full_name": "vakovalskii/sgr-deep-research",
-        "html_url": "https://github.com/vakovalskii/sgr-deep-research",
-        "description": "Hybrid Schema-Guided Reasoning (SGR) has agentic system design create by neuraldeep community  Creator of SGR concemption: https://abdullin.com/schema-guided-reasoning/demo Schema-Guided Reasoning (SGR) is a technique that guides large language models (LLMs) to produce structured, clear, and predictable outputs by enforcing reasoning through ",
-        "stargazers_count": 194,
-        "language": "Python",
-        "owner": {
-            "login": "vakovalskii",
-            "avatar_url": "https://avatars.githubusercontent.com/u/220532298?v=4",
-            "html_url": "https://github.com/vakovalskii"
-        }
-    },
-    {
-        "id": 1045247072,
-        "name": "semantic-router",
-        "full_name": "vllm-project/semantic-router",
-        "html_url": "https://github.com/vllm-project/semantic-router",
-        "description": "Intelligent Mixture-of-Models Router for Efficient LLM Inference",
-        "stargazers_count": 194,
-        "language": "Python",
-        "owner": {
-            "login": "vllm-project",
-            "avatar_url": "https://avatars.githubusercontent.com/u/136984999?v=4",
-            "html_url": "https://github.com/vllm-project"
-        }
-    },
-    {
         "id": 1045997545,
         "name": "cognitive-dissonance-dspy",
         "full_name": "evalops/cognitive-dissonance-dspy",
         "html_url": "https://github.com/evalops/cognitive-dissonance-dspy",
         "description": "A multi-agent LLM system for detecting and resolving cognitive dissonance.",
-        "stargazers_count": 185,
+        "stargazers_count": 225,
         "language": "Python",
         "owner": {
             "login": "evalops",
             "avatar_url": "https://avatars.githubusercontent.com/u/211087558?v=4",
             "html_url": "https://github.com/evalops"
+        }
+    },
+    {
+        "id": 1045781419,
+        "name": "VibeVoice-ComfyUI",
+        "full_name": "Enemyx-net/VibeVoice-ComfyUI",
+        "html_url": "https://github.com/Enemyx-net/VibeVoice-ComfyUI",
+        "description": "A comprehensive ComfyUI integration for Microsoft's VibeVoice text-to-speech model, enabling high-quality single and multi-speaker voice synthesis directly within your ComfyUI workflows.",
+        "stargazers_count": 199,
+        "language": "Python",
+        "owner": {
+            "login": "Enemyx-net",
+            "avatar_url": "https://avatars.githubusercontent.com/u/228984999?v=4",
+            "html_url": "https://github.com/Enemyx-net"
+        }
+    },
+    {
+        "id": 1045435528,
+        "name": "mcp-bench",
+        "full_name": "Accenture/mcp-bench",
+        "html_url": "https://github.com/Accenture/mcp-bench",
+        "description": "MCP-Bench: Benchmarking Tool-Using LLM Agents with Complex Real-World Tasks via MCP Servers",
+        "stargazers_count": 168,
+        "language": "Python",
+        "owner": {
+            "login": "Accenture",
+            "avatar_url": "https://avatars.githubusercontent.com/u/10454368?v=4",
+            "html_url": "https://github.com/Accenture"
+        }
+    },
+    {
+        "id": 1045571026,
+        "name": "ComfyUI-VibeVoice",
+        "full_name": "wildminder/ComfyUI-VibeVoice",
+        "html_url": "https://github.com/wildminder/ComfyUI-VibeVoice",
+        "description": "ComfyUI custom node for the VibeVoice TTS. Expressive, long-form, multi-speaker conversational audio",
+        "stargazers_count": 135,
+        "language": "Python",
+        "owner": {
+            "login": "wildminder",
+            "avatar_url": "https://avatars.githubusercontent.com/u/2853742?v=4",
+            "html_url": "https://github.com/wildminder"
+        }
+    },
+    {
+        "id": 1046346285,
+        "name": "Pref-GRPO",
+        "full_name": "CodeGoat24/Pref-GRPO",
+        "html_url": "https://github.com/CodeGoat24/Pref-GRPO",
+        "description": "Official implementation of Pref-GRPO: Pairwise Preference Reward-based GRPO for Stable Text-to-Image Reinforcement Learning",
+        "stargazers_count": 104,
+        "language": "Python",
+        "owner": {
+            "login": "CodeGoat24",
+            "avatar_url": "https://avatars.githubusercontent.com/u/95867770?v=4",
+            "html_url": "https://github.com/CodeGoat24"
         }
     }
 ]
