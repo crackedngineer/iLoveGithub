@@ -1,86 +1,86 @@
 [
     {
-        "id": 1046384082,
-        "name": "mvtracker",
-        "full_name": "ethz-vlg/mvtracker",
-        "html_url": "https://github.com/ethz-vlg/mvtracker",
-        "description": "[ICCV 2025 Oral] MVTracker: Multi-view 3D Point Tracking",
-        "stargazers_count": 249,
+        "id": 1047598710,
+        "name": "multi-agent-coding-system",
+        "full_name": "Danau5tin/multi-agent-coding-system",
+        "html_url": "https://github.com/Danau5tin/multi-agent-coding-system",
+        "description": "Reached #13 on Stanford's Terminal Bench leaderboard. Orchestrator, explorer & coder agents working together with intelligent context sharing.",
+        "stargazers_count": 609,
         "language": "Python",
         "owner": {
-            "login": "ethz-vlg",
-            "avatar_url": "https://avatars.githubusercontent.com/u/205185509?v=4",
-            "html_url": "https://github.com/ethz-vlg"
+            "login": "Danau5tin",
+            "avatar_url": "https://avatars.githubusercontent.com/u/58129064?v=4",
+            "html_url": "https://github.com/Danau5tin"
         }
     },
     {
-        "id": 1045997545,
-        "name": "cognitive-dissonance-dspy",
-        "full_name": "evalops/cognitive-dissonance-dspy",
-        "html_url": "https://github.com/evalops/cognitive-dissonance-dspy",
-        "description": "A multi-agent LLM system for detecting and resolving cognitive dissonance.",
-        "stargazers_count": 225,
+        "id": 1048438367,
+        "name": "hallbayes",
+        "full_name": "leochlon/hallbayes",
+        "html_url": "https://github.com/leochlon/hallbayes",
+        "description": null,
+        "stargazers_count": 162,
         "language": "Python",
         "owner": {
-            "login": "evalops",
-            "avatar_url": "https://avatars.githubusercontent.com/u/211087558?v=4",
-            "html_url": "https://github.com/evalops"
+            "login": "leochlon",
+            "avatar_url": "https://avatars.githubusercontent.com/u/60907456?v=4",
+            "html_url": "https://github.com/leochlon"
         }
     },
     {
-        "id": 1045781419,
-        "name": "VibeVoice-ComfyUI",
-        "full_name": "Enemyx-net/VibeVoice-ComfyUI",
-        "html_url": "https://github.com/Enemyx-net/VibeVoice-ComfyUI",
-        "description": "A comprehensive ComfyUI integration for Microsoft's VibeVoice text-to-speech model, enabling high-quality single and multi-speaker voice synthesis directly within your ComfyUI workflows.",
-        "stargazers_count": 199,
+        "id": 1048370238,
+        "name": "FastVGGT",
+        "full_name": "mystorm16/FastVGGT",
+        "html_url": "https://github.com/mystorm16/FastVGGT",
+        "description": "Code for FastVGGT: Training-Free Acceleration of Visual Geometry Transformer",
+        "stargazers_count": 144,
         "language": "Python",
         "owner": {
-            "login": "Enemyx-net",
-            "avatar_url": "https://avatars.githubusercontent.com/u/228984999?v=4",
-            "html_url": "https://github.com/Enemyx-net"
+            "login": "mystorm16",
+            "avatar_url": "https://avatars.githubusercontent.com/u/48885965?v=4",
+            "html_url": "https://github.com/mystorm16"
         }
     },
     {
-        "id": 1045435528,
-        "name": "mcp-bench",
-        "full_name": "Accenture/mcp-bench",
-        "html_url": "https://github.com/Accenture/mcp-bench",
-        "description": "MCP-Bench: Benchmarking Tool-Using LLM Agents with Complex Real-World Tasks via MCP Servers",
-        "stargazers_count": 168,
+        "id": 1048048366,
+        "name": "agentic-drop-zones",
+        "full_name": "disler/agentic-drop-zones",
+        "html_url": "https://github.com/disler/agentic-drop-zones",
+        "description": null,
+        "stargazers_count": 90,
         "language": "Python",
         "owner": {
-            "login": "Accenture",
-            "avatar_url": "https://avatars.githubusercontent.com/u/10454368?v=4",
-            "html_url": "https://github.com/Accenture"
+            "login": "disler",
+            "avatar_url": "https://avatars.githubusercontent.com/u/7570811?v=4",
+            "html_url": "https://github.com/disler"
         }
     },
     {
-        "id": 1045571026,
-        "name": "ComfyUI-VibeVoice",
-        "full_name": "wildminder/ComfyUI-VibeVoice",
-        "html_url": "https://github.com/wildminder/ComfyUI-VibeVoice",
-        "description": "ComfyUI custom node for the VibeVoice TTS. Expressive, long-form, multi-speaker conversational audio",
-        "stargazers_count": 135,
+        "id": 1048236774,
+        "name": "WenetSpeech-Yue",
+        "full_name": "ASLP-lab/WenetSpeech-Yue",
+        "html_url": "https://github.com/ASLP-lab/WenetSpeech-Yue",
+        "description": "A Large-scale Cantonese Speech Corpus with Multi-dimensional Annotation",
+        "stargazers_count": 68,
         "language": "Python",
         "owner": {
-            "login": "wildminder",
-            "avatar_url": "https://avatars.githubusercontent.com/u/2853742?v=4",
-            "html_url": "https://github.com/wildminder"
+            "login": "ASLP-lab",
+            "avatar_url": "https://avatars.githubusercontent.com/u/195776634?v=4",
+            "html_url": "https://github.com/ASLP-lab"
         }
     },
     {
-        "id": 1046346285,
-        "name": "Pref-GRPO",
-        "full_name": "CodeGoat24/Pref-GRPO",
-        "html_url": "https://github.com/CodeGoat24/Pref-GRPO",
-        "description": "Official implementation of Pref-GRPO: Pairwise Preference Reward-based GRPO for Stable Text-to-Image Reinforcement Learning",
-        "stargazers_count": 104,
+        "id": 1047053287,
+        "name": "claude-code-personal-assistant",
+        "full_name": "c0dezli/claude-code-personal-assistant",
+        "html_url": "https://github.com/c0dezli/claude-code-personal-assistant",
+        "description": "AI personal assistant setup for Claude Code",
+        "stargazers_count": 65,
         "language": "Python",
         "owner": {
-            "login": "CodeGoat24",
-            "avatar_url": "https://avatars.githubusercontent.com/u/95867770?v=4",
-            "html_url": "https://github.com/CodeGoat24"
+            "login": "c0dezli",
+            "avatar_url": "https://avatars.githubusercontent.com/u/7098849?v=4",
+            "html_url": "https://github.com/c0dezli"
         }
     }
 ]
