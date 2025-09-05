@@ -5,7 +5,7 @@
         "full_name": "Danau5tin/multi-agent-coding-system",
         "html_url": "https://github.com/Danau5tin/multi-agent-coding-system",
         "description": "Reached #13 on Stanford's Terminal Bench leaderboard. Orchestrator, explorer & coder agents working together with intelligent context sharing.",
-        "stargazers_count": 609,
+        "stargazers_count": 723,
         "language": "Python",
         "owner": {
             "login": "Danau5tin",
@@ -14,26 +14,12 @@
         }
     },
     {
-        "id": 1048438367,
-        "name": "hallbayes",
-        "full_name": "leochlon/hallbayes",
-        "html_url": "https://github.com/leochlon/hallbayes",
-        "description": null,
-        "stargazers_count": 162,
-        "language": "Python",
-        "owner": {
-            "login": "leochlon",
-            "avatar_url": "https://avatars.githubusercontent.com/u/60907456?v=4",
-            "html_url": "https://github.com/leochlon"
-        }
-    },
-    {
         "id": 1048370238,
         "name": "FastVGGT",
         "full_name": "mystorm16/FastVGGT",
         "html_url": "https://github.com/mystorm16/FastVGGT",
         "description": "Code for FastVGGT: Training-Free Acceleration of Visual Geometry Transformer",
-        "stargazers_count": 144,
+        "stargazers_count": 279,
         "language": "Python",
         "owner": {
             "login": "mystorm16",
@@ -42,12 +28,26 @@
         }
     },
     {
+        "id": 1048438367,
+        "name": "hallbayes",
+        "full_name": "leochlon/hallbayes",
+        "html_url": "https://github.com/leochlon/hallbayes",
+        "description": null,
+        "stargazers_count": 213,
+        "language": "Python",
+        "owner": {
+            "login": "leochlon",
+            "avatar_url": "https://avatars.githubusercontent.com/u/60907456?v=4",
+            "html_url": "https://github.com/leochlon"
+        }
+    },
+    {
         "id": 1048048366,
         "name": "agentic-drop-zones",
         "full_name": "disler/agentic-drop-zones",
         "html_url": "https://github.com/disler/agentic-drop-zones",
         "description": null,
-        "stargazers_count": 90,
+        "stargazers_count": 97,
         "language": "Python",
         "owner": {
             "login": "disler",
@@ -56,31 +56,31 @@
         }
     },
     {
+        "id": 1049933767,
+        "name": "docpixie",
+        "full_name": "qnguyen3/docpixie",
+        "html_url": "https://github.com/qnguyen3/docpixie",
+        "description": "Lightweight Vision native Multimodal Document Agent",
+        "stargazers_count": 92,
+        "language": "Python",
+        "owner": {
+            "login": "qnguyen3",
+            "avatar_url": "https://avatars.githubusercontent.com/u/42907738?v=4",
+            "html_url": "https://github.com/qnguyen3"
+        }
+    },
+    {
         "id": 1048236774,
         "name": "WenetSpeech-Yue",
         "full_name": "ASLP-lab/WenetSpeech-Yue",
         "html_url": "https://github.com/ASLP-lab/WenetSpeech-Yue",
         "description": "A Large-scale Cantonese Speech Corpus with Multi-dimensional Annotation",
-        "stargazers_count": 68,
+        "stargazers_count": 82,
         "language": "Python",
         "owner": {
             "login": "ASLP-lab",
             "avatar_url": "https://avatars.githubusercontent.com/u/195776634?v=4",
             "html_url": "https://github.com/ASLP-lab"
-        }
-    },
-    {
-        "id": 1047053287,
-        "name": "claude-code-personal-assistant",
-        "full_name": "c0dezli/claude-code-personal-assistant",
-        "html_url": "https://github.com/c0dezli/claude-code-personal-assistant",
-        "description": "AI personal assistant setup for Claude Code",
-        "stargazers_count": 65,
-        "language": "Python",
-        "owner": {
-            "login": "c0dezli",
-            "avatar_url": "https://avatars.githubusercontent.com/u/7098849?v=4",
-            "html_url": "https://github.com/c0dezli"
         }
     }
 ]
