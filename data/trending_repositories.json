@@ -1,25 +1,11 @@
 [
     {
-        "id": 1047598710,
-        "name": "multi-agent-coding-system",
-        "full_name": "Danau5tin/multi-agent-coding-system",
-        "html_url": "https://github.com/Danau5tin/multi-agent-coding-system",
-        "description": "Reached #13 on Stanford's Terminal Bench leaderboard. Orchestrator, explorer & coder agents working together with intelligent context sharing.",
-        "stargazers_count": 723,
-        "language": "Python",
-        "owner": {
-            "login": "Danau5tin",
-            "avatar_url": "https://avatars.githubusercontent.com/u/58129064?v=4",
-            "html_url": "https://github.com/Danau5tin"
-        }
-    },
-    {
         "id": 1048370238,
         "name": "FastVGGT",
         "full_name": "mystorm16/FastVGGT",
         "html_url": "https://github.com/mystorm16/FastVGGT",
         "description": "Code for FastVGGT: Training-Free Acceleration of Visual Geometry Transformer",
-        "stargazers_count": 279,
+        "stargazers_count": 348,
         "language": "Python",
         "owner": {
             "login": "mystorm16",
@@ -33,7 +19,7 @@
         "full_name": "leochlon/hallbayes",
         "html_url": "https://github.com/leochlon/hallbayes",
         "description": null,
-        "stargazers_count": 213,
+        "stargazers_count": 290,
         "language": "Python",
         "owner": {
             "login": "leochlon",
@@ -47,7 +33,7 @@
         "full_name": "disler/agentic-drop-zones",
         "html_url": "https://github.com/disler/agentic-drop-zones",
         "description": null,
-        "stargazers_count": 97,
+        "stargazers_count": 104,
         "language": "Python",
         "owner": {
             "login": "disler",
@@ -61,7 +47,7 @@
         "full_name": "qnguyen3/docpixie",
         "html_url": "https://github.com/qnguyen3/docpixie",
         "description": "Lightweight Vision native Multimodal Document Agent",
-        "stargazers_count": 92,
+        "stargazers_count": 99,
         "language": "Python",
         "owner": {
             "login": "qnguyen3",
@@ -70,17 +56,31 @@
         }
     },
     {
-        "id": 1048236774,
-        "name": "WenetSpeech-Yue",
-        "full_name": "ASLP-lab/WenetSpeech-Yue",
-        "html_url": "https://github.com/ASLP-lab/WenetSpeech-Yue",
-        "description": "A Large-scale Cantonese Speech Corpus with Multi-dimensional Annotation",
-        "stargazers_count": 82,
+        "id": 1050157453,
+        "name": "dspy-0to1-guide",
+        "full_name": "haasonsaas/dspy-0to1-guide",
+        "html_url": "https://github.com/haasonsaas/dspy-0to1-guide",
+        "description": "A comprehensive 0-to-1 guide for building self-improving LLM applications with DSPy framework",
+        "stargazers_count": 96,
         "language": "Python",
         "owner": {
-            "login": "ASLP-lab",
-            "avatar_url": "https://avatars.githubusercontent.com/u/195776634?v=4",
-            "html_url": "https://github.com/ASLP-lab"
+            "login": "haasonsaas",
+            "avatar_url": "https://avatars.githubusercontent.com/u/15969068?v=4",
+            "html_url": "https://github.com/haasonsaas"
+        }
+    },
+    {
+        "id": 1047916957,
+        "name": "Bitverse-BOT",
+        "full_name": "vonssy/Bitverse-BOT",
+        "html_url": "https://github.com/vonssy/Bitverse-BOT",
+        "description": "Vonssy Part 2?",
+        "stargazers_count": 95,
+        "language": "Python",
+        "owner": {
+            "login": "vonssy",
+            "avatar_url": "https://avatars.githubusercontent.com/u/86215416?v=4",
+            "html_url": "https://github.com/vonssy"
         }
     }
 ]
