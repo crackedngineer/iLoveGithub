@@ -1,39 +1,11 @@
 [
     {
-        "id": 1048370238,
-        "name": "FastVGGT",
-        "full_name": "mystorm16/FastVGGT",
-        "html_url": "https://github.com/mystorm16/FastVGGT",
-        "description": "Code for FastVGGT: Training-Free Acceleration of Visual Geometry Transformer",
-        "stargazers_count": 368,
-        "language": "Python",
-        "owner": {
-            "login": "mystorm16",
-            "avatar_url": "https://avatars.githubusercontent.com/u/48885965?v=4",
-            "html_url": "https://github.com/mystorm16"
-        }
-    },
-    {
-        "id": 1048438367,
-        "name": "hallbayes",
-        "full_name": "leochlon/hallbayes",
-        "html_url": "https://github.com/leochlon/hallbayes",
-        "description": null,
-        "stargazers_count": 356,
-        "language": "Python",
-        "owner": {
-            "login": "leochlon",
-            "avatar_url": "https://avatars.githubusercontent.com/u/60907456?v=4",
-            "html_url": "https://github.com/leochlon"
-        }
-    },
-    {
         "id": 1050485604,
         "name": "Disciplined-AI-Software-Development",
         "full_name": "Varietyz/Disciplined-AI-Software-Development",
         "html_url": "https://github.com/Varietyz/Disciplined-AI-Software-Development",
         "description": "This methodology provides a structured approach for collaborating with AI systems on software development projects. It addresses common issues like code bloat, architectural drift, and context dilution through systematic constraints and validation checkpoints.",
-        "stargazers_count": 175,
+        "stargazers_count": 242,
         "language": "Python",
         "owner": {
             "login": "Varietyz",
@@ -47,7 +19,7 @@
         "full_name": "yoavf/absolutelyright",
         "html_url": "https://github.com/yoavf/absolutelyright",
         "description": "Claude said I'm absolutely right!",
-        "stargazers_count": 160,
+        "stargazers_count": 232,
         "language": "Python",
         "owner": {
             "login": "yoavf",
@@ -56,17 +28,17 @@
         }
     },
     {
-        "id": 1051368307,
-        "name": "zai-python-sdk",
-        "full_name": "iotbackdoor/zai-python-sdk",
-        "html_url": "https://github.com/iotbackdoor/zai-python-sdk",
-        "description": "Unofficial Python SDK for Z.AI API. Free, open-source client library for accessing advanced language   models including GLM-4.5V and 360B models. Features automatic authentication, streaming responses,   customizable parameters, and modular architecture. No API key required.",
-        "stargazers_count": 129,
+        "id": 1048788863,
+        "name": "z.ai2api_python",
+        "full_name": "ZyphrZero/z.ai2api_python",
+        "html_url": "https://github.com/ZyphrZero/z.ai2api_python",
+        "description": "\u5c06Z.ai\u8f6c\u6362\u4e3aOpenAI\u517c\u5bb9\u683c\u5f0f\u7684\u9ad8\u6027\u80fd\u4ee3\u7406\uff0c\u65e0\u7f1d\u63a5\u5165 GLM-4.5 \u7cfb\u5217\u6a21\u578b",
+        "stargazers_count": 157,
         "language": "Python",
         "owner": {
-            "login": "iotbackdoor",
-            "avatar_url": "https://avatars.githubusercontent.com/u/230499578?v=4",
-            "html_url": "https://github.com/iotbackdoor"
+            "login": "ZyphrZero",
+            "avatar_url": "https://avatars.githubusercontent.com/u/133507172?v=4",
+            "html_url": "https://github.com/ZyphrZero"
         }
     },
     {
@@ -75,12 +47,40 @@
         "full_name": "pengzhangzhi/Open-dLLM",
         "html_url": "https://github.com/pengzhangzhi/Open-dLLM",
         "description": "The most open diffusion language model for code generation \u2014 releasing pretraining, evaluation, inference, and checkpoints.",
-        "stargazers_count": 122,
+        "stargazers_count": 146,
         "language": "Python",
         "owner": {
             "login": "pengzhangzhi",
             "avatar_url": "https://avatars.githubusercontent.com/u/59241275?v=4",
             "html_url": "https://github.com/pengzhangzhi"
+        }
+    },
+    {
+        "id": 1049938174,
+        "name": "Pharos-Testnet-Bot",
+        "full_name": "axekado/Pharos-Testnet-Bot",
+        "html_url": "https://github.com/axekado/Pharos-Testnet-Bot",
+        "description": "A bot for Pharos Testnet automation",
+        "stargazers_count": 138,
+        "language": "Python",
+        "owner": {
+            "login": "axekado",
+            "avatar_url": "https://avatars.githubusercontent.com/u/52475520?v=4",
+            "html_url": "https://github.com/axekado"
+        }
+    },
+    {
+        "id": 1050157453,
+        "name": "dspy-0to1-guide",
+        "full_name": "haasonsaas/dspy-0to1-guide",
+        "html_url": "https://github.com/haasonsaas/dspy-0to1-guide",
+        "description": "A comprehensive 0-to-1 guide for building self-improving LLM applications with DSPy framework",
+        "stargazers_count": 119,
+        "language": "Python",
+        "owner": {
+            "login": "haasonsaas",
+            "avatar_url": "https://avatars.githubusercontent.com/u/15969068?v=4",
+            "html_url": "https://github.com/haasonsaas"
         }
     }
 ]
