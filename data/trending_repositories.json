@@ -5,7 +5,7 @@
         "full_name": "Varietyz/Disciplined-AI-Software-Development",
         "html_url": "https://github.com/Varietyz/Disciplined-AI-Software-Development",
         "description": "This methodology provides a structured approach for collaborating with AI systems on software development projects. It addresses common issues like code bloat, architectural drift, and context dilution through systematic constraints and validation checkpoints.",
-        "stargazers_count": 242,
+        "stargazers_count": 265,
         "language": "Python",
         "owner": {
             "login": "Varietyz",
@@ -19,7 +19,7 @@
         "full_name": "yoavf/absolutelyright",
         "html_url": "https://github.com/yoavf/absolutelyright",
         "description": "Claude said I'm absolutely right!",
-        "stargazers_count": 232,
+        "stargazers_count": 251,
         "language": "Python",
         "owner": {
             "login": "yoavf",
@@ -28,31 +28,31 @@
         }
     },
     {
-        "id": 1048788863,
-        "name": "z.ai2api_python",
-        "full_name": "ZyphrZero/z.ai2api_python",
-        "html_url": "https://github.com/ZyphrZero/z.ai2api_python",
-        "description": "\u5c06Z.ai\u8f6c\u6362\u4e3aOpenAI\u517c\u5bb9\u683c\u5f0f\u7684\u9ad8\u6027\u80fd\u4ee3\u7406\uff0c\u65e0\u7f1d\u63a5\u5165 GLM-4.5 \u7cfb\u5217\u6a21\u578b",
-        "stargazers_count": 157,
+        "id": 1050222011,
+        "name": "wall-x",
+        "full_name": "X-Square-Robot/wall-x",
+        "html_url": "https://github.com/X-Square-Robot/wall-x",
+        "description": "Building General-Purpose Robots Based on Embodied Foundation Model",
+        "stargazers_count": 197,
         "language": "Python",
         "owner": {
-            "login": "ZyphrZero",
-            "avatar_url": "https://avatars.githubusercontent.com/u/133507172?v=4",
-            "html_url": "https://github.com/ZyphrZero"
+            "login": "X-Square-Robot",
+            "avatar_url": "https://avatars.githubusercontent.com/u/230077166?v=4",
+            "html_url": "https://github.com/X-Square-Robot"
         }
     },
     {
-        "id": 1049183334,
-        "name": "Open-dLLM",
-        "full_name": "pengzhangzhi/Open-dLLM",
-        "html_url": "https://github.com/pengzhangzhi/Open-dLLM",
-        "description": "The most open diffusion language model for code generation \u2014 releasing pretraining, evaluation, inference, and checkpoints.",
-        "stargazers_count": 146,
+        "id": 1050562779,
+        "name": "VibeVoice",
+        "full_name": "vibevoice-community/VibeVoice",
+        "html_url": "https://github.com/vibevoice-community/VibeVoice",
+        "description": "Long-form conversational TTS | Community fork",
+        "stargazers_count": 139,
         "language": "Python",
         "owner": {
-            "login": "pengzhangzhi",
-            "avatar_url": "https://avatars.githubusercontent.com/u/59241275?v=4",
-            "html_url": "https://github.com/pengzhangzhi"
+            "login": "vibevoice-community",
+            "avatar_url": "https://avatars.githubusercontent.com/u/230403491?v=4",
+            "html_url": "https://github.com/vibevoice-community"
         }
     },
     {
@@ -75,7 +75,7 @@
         "full_name": "haasonsaas/dspy-0to1-guide",
         "html_url": "https://github.com/haasonsaas/dspy-0to1-guide",
         "description": "A comprehensive 0-to-1 guide for building self-improving LLM applications with DSPy framework",
-        "stargazers_count": 119,
+        "stargazers_count": 128,
         "language": "Python",
         "owner": {
             "login": "haasonsaas",
