@@ -1,11 +1,39 @@
 [
     {
+        "id": 1050245177,
+        "name": "HunyuanImage-2.1",
+        "full_name": "Tencent-Hunyuan/HunyuanImage-2.1",
+        "html_url": "https://github.com/Tencent-Hunyuan/HunyuanImage-2.1",
+        "description": "HunyuanImage-2.1: An Efficient Diffusion Model for High-Resolution (2K) Text-to-Image Generation\u200b",
+        "stargazers_count": 306,
+        "language": "Python",
+        "owner": {
+            "login": "Tencent-Hunyuan",
+            "avatar_url": "https://avatars.githubusercontent.com/u/210980732?v=4",
+            "html_url": "https://github.com/Tencent-Hunyuan"
+        }
+    },
+    {
+        "id": 1050222011,
+        "name": "wall-x",
+        "full_name": "X-Square-Robot/wall-x",
+        "html_url": "https://github.com/X-Square-Robot/wall-x",
+        "description": "Building General-Purpose Robots Based on Embodied Foundation Model",
+        "stargazers_count": 297,
+        "language": "Python",
+        "owner": {
+            "login": "X-Square-Robot",
+            "avatar_url": "https://avatars.githubusercontent.com/u/230077166?v=4",
+            "html_url": "https://github.com/X-Square-Robot"
+        }
+    },
+    {
         "id": 1050485604,
         "name": "Disciplined-AI-Software-Development",
         "full_name": "Varietyz/Disciplined-AI-Software-Development",
         "html_url": "https://github.com/Varietyz/Disciplined-AI-Software-Development",
         "description": "This methodology provides a structured approach for collaborating with AI systems on software development projects. It addresses common issues like code bloat, architectural drift, and context dilution through systematic constraints and validation checkpoints.",
-        "stargazers_count": 265,
+        "stargazers_count": 286,
         "language": "Python",
         "owner": {
             "login": "Varietyz",
@@ -19,7 +47,7 @@
         "full_name": "yoavf/absolutelyright",
         "html_url": "https://github.com/yoavf/absolutelyright",
         "description": "Claude said I'm absolutely right!",
-        "stargazers_count": 251,
+        "stargazers_count": 260,
         "language": "Python",
         "owner": {
             "login": "yoavf",
@@ -28,26 +56,12 @@
         }
     },
     {
-        "id": 1050222011,
-        "name": "wall-x",
-        "full_name": "X-Square-Robot/wall-x",
-        "html_url": "https://github.com/X-Square-Robot/wall-x",
-        "description": "Building General-Purpose Robots Based on Embodied Foundation Model",
-        "stargazers_count": 197,
-        "language": "Python",
-        "owner": {
-            "login": "X-Square-Robot",
-            "avatar_url": "https://avatars.githubusercontent.com/u/230077166?v=4",
-            "html_url": "https://github.com/X-Square-Robot"
-        }
-    },
-    {
         "id": 1050562779,
         "name": "VibeVoice",
         "full_name": "vibevoice-community/VibeVoice",
         "html_url": "https://github.com/vibevoice-community/VibeVoice",
         "description": "Long-form conversational TTS | Community fork",
-        "stargazers_count": 139,
+        "stargazers_count": 171,
         "language": "Python",
         "owner": {
             "login": "vibevoice-community",
@@ -56,31 +70,17 @@
         }
     },
     {
-        "id": 1049938174,
-        "name": "Pharos-Testnet-Bot",
-        "full_name": "axekado/Pharos-Testnet-Bot",
-        "html_url": "https://github.com/axekado/Pharos-Testnet-Bot",
-        "description": "A bot for Pharos Testnet automation",
-        "stargazers_count": 138,
+        "id": 1052387869,
+        "name": "LLM-Agents-Ecosystem-Handbook",
+        "full_name": "oxbshw/LLM-Agents-Ecosystem-Handbook",
+        "html_url": "https://github.com/oxbshw/LLM-Agents-Ecosystem-Handbook",
+        "description": "One-stop handbook for building, deploying, and understanding LLM agents with 60+ skeletons, tutorials, ecosystem guides, and evaluation tools.",
+        "stargazers_count": 148,
         "language": "Python",
         "owner": {
-            "login": "axekado",
-            "avatar_url": "https://avatars.githubusercontent.com/u/52475520?v=4",
-            "html_url": "https://github.com/axekado"
-        }
-    },
-    {
-        "id": 1050157453,
-        "name": "dspy-0to1-guide",
-        "full_name": "haasonsaas/dspy-0to1-guide",
-        "html_url": "https://github.com/haasonsaas/dspy-0to1-guide",
-        "description": "A comprehensive 0-to-1 guide for building self-improving LLM applications with DSPy framework",
-        "stargazers_count": 128,
-        "language": "Python",
-        "owner": {
-            "login": "haasonsaas",
-            "avatar_url": "https://avatars.githubusercontent.com/u/15969068?v=4",
-            "html_url": "https://github.com/haasonsaas"
+            "login": "oxbshw",
+            "avatar_url": "https://avatars.githubusercontent.com/u/212214682?v=4",
+            "html_url": "https://github.com/oxbshw"
         }
     }
 ]
