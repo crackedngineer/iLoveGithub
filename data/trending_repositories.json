@@ -1,72 +1,30 @@
 [
     {
-        "id": 1050245177,
-        "name": "HunyuanImage-2.1",
-        "full_name": "Tencent-Hunyuan/HunyuanImage-2.1",
-        "html_url": "https://github.com/Tencent-Hunyuan/HunyuanImage-2.1",
-        "description": "HunyuanImage-2.1: An Efficient Diffusion Model for High-Resolution (2K) Text-to-Image Generation\u200b",
-        "stargazers_count": 306,
+        "id": 1052551856,
+        "name": "checkpoint-engine",
+        "full_name": "MoonshotAI/checkpoint-engine",
+        "html_url": "https://github.com/MoonshotAI/checkpoint-engine",
+        "description": "Checkpoint-engine is a simple middleware to update model weights in LLM inference engines",
+        "stargazers_count": 202,
         "language": "Python",
         "owner": {
-            "login": "Tencent-Hunyuan",
-            "avatar_url": "https://avatars.githubusercontent.com/u/210980732?v=4",
-            "html_url": "https://github.com/Tencent-Hunyuan"
+            "login": "MoonshotAI",
+            "avatar_url": "https://avatars.githubusercontent.com/u/129152888?v=4",
+            "html_url": "https://github.com/MoonshotAI"
         }
     },
     {
-        "id": 1050222011,
-        "name": "wall-x",
-        "full_name": "X-Square-Robot/wall-x",
-        "html_url": "https://github.com/X-Square-Robot/wall-x",
-        "description": "Building General-Purpose Robots Based on Embodied Foundation Model",
-        "stargazers_count": 297,
+        "id": 1053456809,
+        "name": "Gift-buyer-tg",
+        "full_name": "cozythrill/Gift-buyer-tg",
+        "html_url": "https://github.com/cozythrill/Gift-buyer-tg",
+        "description": "A bot that scans for available telegram gifts and buys them based on given criteria.",
+        "stargazers_count": 198,
         "language": "Python",
         "owner": {
-            "login": "X-Square-Robot",
-            "avatar_url": "https://avatars.githubusercontent.com/u/230077166?v=4",
-            "html_url": "https://github.com/X-Square-Robot"
-        }
-    },
-    {
-        "id": 1050485604,
-        "name": "Disciplined-AI-Software-Development",
-        "full_name": "Varietyz/Disciplined-AI-Software-Development",
-        "html_url": "https://github.com/Varietyz/Disciplined-AI-Software-Development",
-        "description": "This methodology provides a structured approach for collaborating with AI systems on software development projects. It addresses common issues like code bloat, architectural drift, and context dilution through systematic constraints and validation checkpoints.",
-        "stargazers_count": 286,
-        "language": "Python",
-        "owner": {
-            "login": "Varietyz",
-            "avatar_url": "https://avatars.githubusercontent.com/u/166302802?v=4",
-            "html_url": "https://github.com/Varietyz"
-        }
-    },
-    {
-        "id": 1050718070,
-        "name": "absolutelyright",
-        "full_name": "yoavf/absolutelyright",
-        "html_url": "https://github.com/yoavf/absolutelyright",
-        "description": "Claude said I'm absolutely right!",
-        "stargazers_count": 260,
-        "language": "Python",
-        "owner": {
-            "login": "yoavf",
-            "avatar_url": "https://avatars.githubusercontent.com/u/844866?v=4",
-            "html_url": "https://github.com/yoavf"
-        }
-    },
-    {
-        "id": 1050562779,
-        "name": "VibeVoice",
-        "full_name": "vibevoice-community/VibeVoice",
-        "html_url": "https://github.com/vibevoice-community/VibeVoice",
-        "description": "Long-form conversational TTS | Community fork",
-        "stargazers_count": 171,
-        "language": "Python",
-        "owner": {
-            "login": "vibevoice-community",
-            "avatar_url": "https://avatars.githubusercontent.com/u/230403491?v=4",
-            "html_url": "https://github.com/vibevoice-community"
+            "login": "cozythrill",
+            "avatar_url": "https://avatars.githubusercontent.com/u/226810224?v=4",
+            "html_url": "https://github.com/cozythrill"
         }
     },
     {
@@ -75,12 +33,54 @@
         "full_name": "oxbshw/LLM-Agents-Ecosystem-Handbook",
         "html_url": "https://github.com/oxbshw/LLM-Agents-Ecosystem-Handbook",
         "description": "One-stop handbook for building, deploying, and understanding LLM agents with 60+ skeletons, tutorials, ecosystem guides, and evaluation tools.",
-        "stargazers_count": 148,
+        "stargazers_count": 162,
         "language": "Python",
         "owner": {
             "login": "oxbshw",
             "avatar_url": "https://avatars.githubusercontent.com/u/212214682?v=4",
             "html_url": "https://github.com/oxbshw"
+        }
+    },
+    {
+        "id": 1053643576,
+        "name": "Lumina-DiMOO",
+        "full_name": "Alpha-VLLM/Lumina-DiMOO",
+        "html_url": "https://github.com/Alpha-VLLM/Lumina-DiMOO",
+        "description": "Lumina-DiMOO - An Open-Sourced Multi-Modal Large Diffusion Language Model",
+        "stargazers_count": 142,
+        "language": "Python",
+        "owner": {
+            "login": "Alpha-VLLM",
+            "avatar_url": "https://avatars.githubusercontent.com/u/140153551?v=4",
+            "html_url": "https://github.com/Alpha-VLLM"
+        }
+    },
+    {
+        "id": 1053522667,
+        "name": "Mini-o3",
+        "full_name": "Mini-o3/Mini-o3",
+        "html_url": "https://github.com/Mini-o3/Mini-o3",
+        "description": "Official Code for \"Mini-o3: Scaling Up Reasoning Patterns and Interaction Turns for Visual Search\"",
+        "stargazers_count": 122,
+        "language": "Python",
+        "owner": {
+            "login": "Mini-o3",
+            "avatar_url": "https://avatars.githubusercontent.com/u/231206191?v=4",
+            "html_url": "https://github.com/Mini-o3"
+        }
+    },
+    {
+        "id": 1053791889,
+        "name": "batch_invariant_ops",
+        "full_name": "thinking-machines-lab/batch_invariant_ops",
+        "html_url": "https://github.com/thinking-machines-lab/batch_invariant_ops",
+        "description": null,
+        "stargazers_count": 118,
+        "language": "Python",
+        "owner": {
+            "login": "thinking-machines-lab",
+            "avatar_url": "https://avatars.githubusercontent.com/u/220441404?v=4",
+            "html_url": "https://github.com/thinking-machines-lab"
         }
     }
 ]
