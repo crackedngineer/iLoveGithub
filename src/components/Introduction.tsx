@@ -6,6 +6,11 @@ export const Introduction = () => {
       alt: "iLoveGithub Product Hunt Badge",
     },
     {
+      href: "https://peerlist.io/crackedngineer/project/ilovegithub",
+      src: "https://peerlist.io/api/v1/projects/embed/PRJH8OEJ9OJ8E88PJ3R66977NBDAOK?showUpvote=true&theme=light",
+      alt: "iLoveGithub Peerlist Badge",
+    },
+    {
       href: "https://scoutforge.net/reviews/ilovegithub/",
       src: "https://scoutforge.net/wp-content/themes/wp-theme/assets/img/badges/badge-light.webp",
       alt: "Trusted and Reviewed by Scout Forge Badge",
@@ -24,12 +29,7 @@ export const Introduction = () => {
             rel="noopener noreferrer"
             className="transform hover:scale-105 transition duration-300"
           >
-            <img
-              src={badge.src}
-              alt={badge.alt}
-              width={250}
-              className="rounded-md shadow-sm h-14"
-            />
+            <img src={badge.src} alt={badge.alt} width={250} className="rounded-md h-14" />
           </a>
         ))}
       </div>

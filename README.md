@@ -60,6 +60,7 @@
 | [**bolt**](https://bolt.new/~/github.com/{owner}/{repo}) | Prompt, run, edit, and deploy full-stack web applications. | `https://bolt.new/~/github.com/{owner}/{repo}` |
 | [**codesandbox**](https://codesandbox.io/p/devbox/github/{owner}/{repo}) | Sandboxes built for scale. | `https://codesandbox.io/p/devbox/github/{owner}/{repo}` |
 | [**gitmcp**](https://gitmcp.io/{owner}/{repo}) | Instantly create a Remote MCP server for any GitHub project | `https://gitmcp.io/{owner}/{repo}` |
+| [**gitpod**](https://gitpod.io/#https://github.com/{owner}/{repo}) | The developer platform for on-demand cloud development environments to create software faster and more securely. | `https://gitpod.io/#https://github.com/{owner}/{repo}` |
 
 ---
 

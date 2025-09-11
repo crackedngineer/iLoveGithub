@@ -1,86 +1,86 @@
 [
     {
-        "id": 1044296738,
-        "name": "VibeVoice",
-        "full_name": "microsoft/VibeVoice",
-        "html_url": "https://github.com/microsoft/VibeVoice",
-        "description": "Frontier Open-Source Text-to-Speech",
-        "stargazers_count": 1782,
+        "id": 1052551856,
+        "name": "checkpoint-engine",
+        "full_name": "MoonshotAI/checkpoint-engine",
+        "html_url": "https://github.com/MoonshotAI/checkpoint-engine",
+        "description": "Checkpoint-engine is a simple middleware to update model weights in LLM inference engines",
+        "stargazers_count": 202,
         "language": "Python",
         "owner": {
-            "login": "microsoft",
-            "avatar_url": "https://avatars.githubusercontent.com/u/6154722?v=4",
-            "html_url": "https://github.com/microsoft"
+            "login": "MoonshotAI",
+            "avatar_url": "https://avatars.githubusercontent.com/u/129152888?v=4",
+            "html_url": "https://github.com/MoonshotAI"
         }
     },
     {
-        "id": 1043447815,
-        "name": "TG-2025",
-        "full_name": "CallToSta/TG-2025",
-        "html_url": "https://github.com/CallToSta/TG-2025",
-        "description": "Scraper, Adder, Forwarder, Copy, Report And More! Easy to use and no coding-knowledge required. A tool to scrape members, add members and many other functions.",
-        "stargazers_count": 210,
+        "id": 1053456809,
+        "name": "Gift-buyer-tg",
+        "full_name": "cozythrill/Gift-buyer-tg",
+        "html_url": "https://github.com/cozythrill/Gift-buyer-tg",
+        "description": "A bot that scans for available telegram gifts and buys them based on given criteria.",
+        "stargazers_count": 198,
         "language": "Python",
         "owner": {
-            "login": "CallToSta",
-            "avatar_url": "https://avatars.githubusercontent.com/u/228258577?v=4",
-            "html_url": "https://github.com/CallToSta"
+            "login": "cozythrill",
+            "avatar_url": "https://avatars.githubusercontent.com/u/226810224?v=4",
+            "html_url": "https://github.com/cozythrill"
         }
     },
     {
-        "id": 1043521882,
-        "name": "ThinkMesh",
-        "full_name": "martianlantern/ThinkMesh",
-        "html_url": "https://github.com/martianlantern/ThinkMesh",
-        "description": "Parallel thinking for LLMs. Confidence\u2011gated, strategy\u2011driven, offline\u2011friendly",
-        "stargazers_count": 181,
+        "id": 1052387869,
+        "name": "LLM-Agents-Ecosystem-Handbook",
+        "full_name": "oxbshw/LLM-Agents-Ecosystem-Handbook",
+        "html_url": "https://github.com/oxbshw/LLM-Agents-Ecosystem-Handbook",
+        "description": "One-stop handbook for building, deploying, and understanding LLM agents with 60+ skeletons, tutorials, ecosystem guides, and evaluation tools.",
+        "stargazers_count": 162,
         "language": "Python",
         "owner": {
-            "login": "martianlantern",
-            "avatar_url": "https://avatars.githubusercontent.com/u/222924146?v=4",
-            "html_url": "https://github.com/martianlantern"
+            "login": "oxbshw",
+            "avatar_url": "https://avatars.githubusercontent.com/u/212214682?v=4",
+            "html_url": "https://github.com/oxbshw"
         }
     },
     {
-        "id": 1042686008,
-        "name": "Image-Detection-Bypass-Utility",
-        "full_name": "PurinNyova/Image-Detection-Bypass-Utility",
-        "html_url": "https://github.com/PurinNyova/Image-Detection-Bypass-Utility",
-        "description": "Attempts to bypass AI Image detection by employing various methods such as: Noise Injection, FFT Smoothing, FFT Matching, Pixel Perturbation, Camera Simulation, and more.",
-        "stargazers_count": 121,
+        "id": 1053643576,
+        "name": "Lumina-DiMOO",
+        "full_name": "Alpha-VLLM/Lumina-DiMOO",
+        "html_url": "https://github.com/Alpha-VLLM/Lumina-DiMOO",
+        "description": "Lumina-DiMOO - An Open-Sourced Multi-Modal Large Diffusion Language Model",
+        "stargazers_count": 142,
         "language": "Python",
         "owner": {
-            "login": "PurinNyova",
-            "avatar_url": "https://avatars.githubusercontent.com/u/116049115?v=4",
-            "html_url": "https://github.com/PurinNyova"
+            "login": "Alpha-VLLM",
+            "avatar_url": "https://avatars.githubusercontent.com/u/140153551?v=4",
+            "html_url": "https://github.com/Alpha-VLLM"
         }
     },
     {
-        "id": 1041920680,
-        "name": "Youtu-agent",
-        "full_name": "Tencent/Youtu-agent",
-        "html_url": "https://github.com/Tencent/Youtu-agent",
-        "description": "A simple yet powerful agent framework that delivers with open-source models",
-        "stargazers_count": 117,
+        "id": 1053522667,
+        "name": "Mini-o3",
+        "full_name": "Mini-o3/Mini-o3",
+        "html_url": "https://github.com/Mini-o3/Mini-o3",
+        "description": "Official Code for \"Mini-o3: Scaling Up Reasoning Patterns and Interaction Turns for Visual Search\"",
+        "stargazers_count": 122,
         "language": "Python",
         "owner": {
-            "login": "Tencent",
-            "avatar_url": "https://avatars.githubusercontent.com/u/18461506?v=4",
-            "html_url": "https://github.com/Tencent"
+            "login": "Mini-o3",
+            "avatar_url": "https://avatars.githubusercontent.com/u/231206191?v=4",
+            "html_url": "https://github.com/Mini-o3"
         }
     },
     {
-        "id": 1042957199,
-        "name": "async-server",
-        "full_name": "bkdevs/async-server",
-        "html_url": "https://github.com/bkdevs/async-server",
-        "description": "It's like Claude Code + Linear + GitHub PR",
-        "stargazers_count": 108,
+        "id": 1053791889,
+        "name": "batch_invariant_ops",
+        "full_name": "thinking-machines-lab/batch_invariant_ops",
+        "html_url": "https://github.com/thinking-machines-lab/batch_invariant_ops",
+        "description": null,
+        "stargazers_count": 118,
         "language": "Python",
         "owner": {
-            "login": "bkdevs",
-            "avatar_url": "https://avatars.githubusercontent.com/u/131362808?v=4",
-            "html_url": "https://github.com/bkdevs"
+            "login": "thinking-machines-lab",
+            "avatar_url": "https://avatars.githubusercontent.com/u/220441404?v=4",
+            "html_url": "https://github.com/thinking-machines-lab"
         }
     }
 ]
