@@ -5,7 +5,7 @@
         "full_name": "MoonshotAI/checkpoint-engine",
         "html_url": "https://github.com/MoonshotAI/checkpoint-engine",
         "description": "Checkpoint-engine is a simple middleware to update model weights in LLM inference engines",
-        "stargazers_count": 202,
+        "stargazers_count": 501,
         "language": "Python",
         "owner": {
             "login": "MoonshotAI",
@@ -14,12 +14,40 @@
         }
     },
     {
+        "id": 1053791889,
+        "name": "batch_invariant_ops",
+        "full_name": "thinking-machines-lab/batch_invariant_ops",
+        "html_url": "https://github.com/thinking-machines-lab/batch_invariant_ops",
+        "description": null,
+        "stargazers_count": 393,
+        "language": "Python",
+        "owner": {
+            "login": "thinking-machines-lab",
+            "avatar_url": "https://avatars.githubusercontent.com/u/220441404?v=4",
+            "html_url": "https://github.com/thinking-machines-lab"
+        }
+    },
+    {
+        "id": 1053643576,
+        "name": "Lumina-DiMOO",
+        "full_name": "Alpha-VLLM/Lumina-DiMOO",
+        "html_url": "https://github.com/Alpha-VLLM/Lumina-DiMOO",
+        "description": "Lumina-DiMOO - An Open-Sourced Multi-Modal Large Diffusion Language Model",
+        "stargazers_count": 205,
+        "language": "Python",
+        "owner": {
+            "login": "Alpha-VLLM",
+            "avatar_url": "https://avatars.githubusercontent.com/u/140153551?v=4",
+            "html_url": "https://github.com/Alpha-VLLM"
+        }
+    },
+    {
         "id": 1053456809,
         "name": "Gift-buyer-tg",
         "full_name": "cozythrill/Gift-buyer-tg",
         "html_url": "https://github.com/cozythrill/Gift-buyer-tg",
         "description": "A bot that scans for available telegram gifts and buys them based on given criteria.",
-        "stargazers_count": 198,
+        "stargazers_count": 199,
         "language": "Python",
         "owner": {
             "login": "cozythrill",
@@ -33,7 +61,7 @@
         "full_name": "oxbshw/LLM-Agents-Ecosystem-Handbook",
         "html_url": "https://github.com/oxbshw/LLM-Agents-Ecosystem-Handbook",
         "description": "One-stop handbook for building, deploying, and understanding LLM agents with 60+ skeletons, tutorials, ecosystem guides, and evaluation tools.",
-        "stargazers_count": 162,
+        "stargazers_count": 186,
         "language": "Python",
         "owner": {
             "login": "oxbshw",
@@ -42,45 +70,17 @@
         }
     },
     {
-        "id": 1053643576,
-        "name": "Lumina-DiMOO",
-        "full_name": "Alpha-VLLM/Lumina-DiMOO",
-        "html_url": "https://github.com/Alpha-VLLM/Lumina-DiMOO",
-        "description": "Lumina-DiMOO - An Open-Sourced Multi-Modal Large Diffusion Language Model",
-        "stargazers_count": 142,
-        "language": "Python",
-        "owner": {
-            "login": "Alpha-VLLM",
-            "avatar_url": "https://avatars.githubusercontent.com/u/140153551?v=4",
-            "html_url": "https://github.com/Alpha-VLLM"
-        }
-    },
-    {
         "id": 1053522667,
         "name": "Mini-o3",
         "full_name": "Mini-o3/Mini-o3",
         "html_url": "https://github.com/Mini-o3/Mini-o3",
         "description": "Official Code for \"Mini-o3: Scaling Up Reasoning Patterns and Interaction Turns for Visual Search\"",
-        "stargazers_count": 122,
+        "stargazers_count": 182,
         "language": "Python",
         "owner": {
             "login": "Mini-o3",
             "avatar_url": "https://avatars.githubusercontent.com/u/231206191?v=4",
             "html_url": "https://github.com/Mini-o3"
-        }
-    },
-    {
-        "id": 1053791889,
-        "name": "batch_invariant_ops",
-        "full_name": "thinking-machines-lab/batch_invariant_ops",
-        "html_url": "https://github.com/thinking-machines-lab/batch_invariant_ops",
-        "description": null,
-        "stargazers_count": 118,
-        "language": "Python",
-        "owner": {
-            "login": "thinking-machines-lab",
-            "avatar_url": "https://avatars.githubusercontent.com/u/220441404?v=4",
-            "html_url": "https://github.com/thinking-machines-lab"
         }
     }
 ]
