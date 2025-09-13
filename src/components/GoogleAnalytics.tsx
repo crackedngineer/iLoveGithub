@@ -2,11 +2,7 @@
 
 import Script from "next/script";
 
-export default function GoogleAnalytics({
-  measurementId,
-}: {
-  measurementId: string | undefined;
-}) {
+export default function GoogleAnalytics({measurementId}: {measurementId: string | undefined}) {
   return (
     <>
       <Script

@@ -1,0 +1,45 @@
+# iLoveGitHub
+
+iLoveGitHub is a curated collection of developer tools centered around GitHub repositories. It allows users to enhance their GitHub experience with tools for code visualization, AI-powered summarization, one-click IDE access, and repository transformation. The platform provides a centralized hub for exploring and utilizing various GitHub-related resources, aiming to boost developer productivity and understanding of codebases.
+
+## Architecture
+
+The application is built using modern web technologies:
+
+- **Next.js**: Handles routing, server-side rendering, and API endpoints
+- **TypeScript**: Used for type checking and overall code quality  
+- **Tailwind CSS**: Provides utility-first CSS styling
+- **Upstash Redis**: Used for caching and rate limiting
+- **Vercel Blob**: Used for storing QR code images
+- **NextAuth.js**: Used for handling authentication
+
+## Documentation
+
+Learn how to get started, understand the architecture, and contribute to the project.
+
+### Guides
+- **Getting Started**: Instructions for setting up the project locally
+- **Contributing**: Guidelines for contributing to the project
+
+### Reference
+- **Tools List**: JSON file containing the list of all curated tools with their details
+
+## Core Features
+
+This platform serves as a comprehensive resource for developers looking to:
+
+- **Tool Discovery**: Discover useful GitHub-related tools
+- **Code Visualization**: Visualize code structures and relationships
+- **AI Summarization**: Generate AI-powered summaries of repositories
+- **IDE Integration**: Access repositories quickly in various IDEs
+- **Workflow Enhancement**: Transform and enhance their GitHub workflow
+
+The project focuses on improving developer productivity by providing easy access to tools that make working with GitHub repositories more efficient and insightful.
+
+## Getting Started
+
+To set up the project locally, follow the getting started guide which includes installation instructions, environment setup, and initial configuration steps.
+
+## Contributing
+
+We welcome contributions to iLoveGitHub! Please refer to our contributing guidelines for information on how to submit pull requests, report issues, and suggest new tools for the collection.

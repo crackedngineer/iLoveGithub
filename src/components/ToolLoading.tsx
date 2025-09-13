@@ -1,5 +1,5 @@
 import React from "react";
-import { Loader } from "lucide-react";
+import {Loader} from "lucide-react";
 
 interface LoadingScreenProps {
   tool: string;
@@ -7,7 +7,7 @@ interface LoadingScreenProps {
   repo: string;
 }
 
-const ToolLoading: React.FC<LoadingScreenProps> = ({ tool }) => {
+const ToolLoading: React.FC<LoadingScreenProps> = ({tool}) => {
   return (
     <div className="fixed inset-0 flex flex-col items-center justify-center bg-white dark:bg-gray-950 z-50 px-4 text-center">
       <Loader className="h-8 w-8 sm:h-10 sm:w-10 text-github-blue animate-spin mb-3" />

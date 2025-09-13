@@ -1,13 +1,11 @@
-import { sendWelcomeEmail } from "../mailer";
-import { sendWelcomeBackEmail } from "../mailer";
-import { User } from "next-auth";
+import {sendWelcomeEmail} from "../mailer";
+import {sendWelcomeBackEmail} from "../mailer";
+import {User} from "next-auth";
 
 export async function handleUserCreation(user: User): Promise<void> {
   try {
     if (!user.email) {
-      console.warn(
-        "User created without email address, skipping welcome email"
-      );
+      console.warn("User created without email address, skipping welcome email");
       return;
     }
 
@@ -22,9 +20,7 @@ export async function handleUserCreation(user: User): Promise<void> {
 export async function handleReturningUser(user: User): Promise<void> {
   try {
     if (!user.email) {
-      console.warn(
-        "Returning user without email address, skipping welcome back email"
-      );
+      console.warn("Returning user without email address, skipping welcome back email");
       return;
     }
 
@@ -38,18 +34,10 @@ export async function handleReturningUser(user: User): Promise<void> {
 
 // NextAuth events configuration
 const authEvents = {
-  createUser: async ({ user }: { user: User }) => {
+  createUser: async ({user}: {user: User}) => {
     await handleUserCreation(user);
   },
-  signIn: async ({
-    user,
-    account,
-    isNewUser,
-  }: {
-    user: User;
-    account: any;
-    isNewUser?: boolean;
-  }) => {
+  signIn: async ({user, account, isNewUser}: {user: User; account: any; isNewUser?: boolean}) => {
     if (!isNewUser) {
       console.log(`Returning user signed in: ${user.email}`);
       await handleReturningUser(user);

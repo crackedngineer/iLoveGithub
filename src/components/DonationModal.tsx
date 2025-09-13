@@ -1,10 +1,10 @@
 "use client";
 
-import React, { useEffect, useState } from "react";
+import React, {useEffect, useState} from "react";
 import axios from "axios";
-import { IndianRupee, Plus, Minus, Coffee } from "lucide-react";
-import { Button } from "@/components/ui/button";
-import { Slider } from "@/components/ui/slider";
+import {IndianRupee, Plus, Minus, Coffee} from "lucide-react";
+import {Button} from "@/components/ui/button";
+import {Slider} from "@/components/ui/slider";
 import {
   Dialog,
   DialogContent,
@@ -13,7 +13,7 @@ import {
   DialogTitle,
   DialogDescription,
 } from "@/components/ui/dialog";
-import { DONATION_MERCHANT_NAME } from "@/constants";
+import {DONATION_MERCHANT_NAME} from "@/constants";
 import Image from "next/image";
 
 interface DonationModalProps {
@@ -22,11 +22,7 @@ interface DonationModalProps {
   isIndiaLocation: boolean | null;
 }
 
-const DonationModal = ({
-  isOpen,
-  onClose,
-  isIndiaLocation,
-}: DonationModalProps) => {
+const DonationModal = ({isOpen, onClose, isIndiaLocation}: DonationModalProps) => {
   const [amount, setAmount] = useState(101);
   const [debouncedAmount, setDebouncedAmount] = useState(amount);
   const [qrImage, setQrImage] = useState("");
@@ -63,11 +59,10 @@ const DonationModal = ({
     const generateQR = async () => {
       try {
         setLoading(true);
-        const origin =
-          typeof window !== "undefined" ? window.location.origin : "";
+        const origin = typeof window !== "undefined" ? window.location.origin : "";
         const imageUrl = `${origin}/icons/favicon.png`;
 
-        const { data: result } = await axios.post("/api/qrcode/generate", {
+        const {data: result} = await axios.post("/api/qrcode/generate", {
           data: `upi://pay?pa=${process.env.NEXT_PUBLIC_DONATION_UPI_ID}&pn=${DONATION_MERCHANT_NAME}&am=${debouncedAmount}&cu=INR`,
           image: imageUrl,
         });
@@ -115,27 +110,17 @@ const DonationModal = ({
         <div className="flex flex-col items-center justify-center space-y-6 mt-4">
           <div className="bg-white p-3 rounded-lg shadow-sm border border-gray-200 dark:border-gray-700 w-48 h-48 flex items-center justify-center">
             {loading ? (
-              <p className="text-sm text-gray-500 dark:text-gray-400">
-                Generating QR...
-              </p>
+              <p className="text-sm text-gray-500 dark:text-gray-400">Generating QR...</p>
             ) : (
               qrImage && (
-                <Image
-                  src={qrImage}
-                  className="rounded"
-                  alt="QR Code"
-                  width={192}
-                  height={192}
-                />
+                <Image src={qrImage} className="rounded" alt="QR Code" width={192} height={192} />
               )
             )}
           </div>
 
           <div className="w-full space-y-4">
             <div className="flex items-center justify-between w-full">
-              <p className="text-sm font-medium text-gray-700 dark:text-gray-300">
-                Amount
-              </p>
+              <p className="text-sm font-medium text-gray-700 dark:text-gray-300">Amount</p>
               <div className="font-bold text-xl text-blue-600 dark:text-blue-400 flex items-center">
                 {isIndiaLocation ? "₹" : "$"} {amount}
               </div>

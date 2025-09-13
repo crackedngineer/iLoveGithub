@@ -1,21 +1,14 @@
 "use client";
 
-import React, { useState } from "react";
+import React, {useState} from "react";
 import Image from "next/image";
-import { ArrowRight, BrainCircuit } from "lucide-react";
-import {
-  Card,
-  CardContent,
-  CardDescription,
-  CardHeader,
-  CardTitle,
-} from "@/components/ui/card";
+import {ArrowRight, BrainCircuit} from "lucide-react";
+import {Card, CardContent, CardDescription, CardHeader, CardTitle} from "@/components/ui/card";
 import GithubToolsList from "../../tools.json";
-import { ToolCategories } from "@/constants";
-import { Tool } from "@/lib/types";
-import { replaceUrlVariables } from "@/app/helper";
-import { Button } from "@/components/ui/button";
-import { Input } from "@/components/ui/input";
+import {Tool} from "@/lib/types";
+import {replaceUrlVariables} from "@/app/helper";
+import {Button} from "@/components/ui/button";
+import {Input} from "@/components/ui/input";
 
 function isNew(createdAt: string): boolean {
   const createdDate = new Date(createdAt);
@@ -39,27 +32,22 @@ const GitHubTools = ({
   const filteredTools = GithubToolsList.filter((tool) => {
     const search = searchTerm.toLowerCase();
     return (
-      tool.name.toLowerCase().includes(search) ||
-      tool.description.toLowerCase().includes(search)
+      tool.name.toLowerCase().includes(search) || tool.description.toLowerCase().includes(search)
     );
   });
 
-  const toolsByCategory = filteredTools.reduce((acc, tool) => {
-    const categoryKey = tool.category as keyof typeof ToolCategories;
+  const toolsByCategory = filteredTools.reduce(
+    (acc, tool) => {
+      const categoryKey = tool.category;
 
-    if (!(categoryKey in ToolCategories)) {
-      throw new Error(`Invalid category key "${tool.category}" found for tool "${tool.name}". 
-        Please ensure it matches a key in ToolCategories.`);
-    }
-
-    const categoryDisplayName = ToolCategories[categoryKey];
-
-    if (!acc[categoryDisplayName]) {
-      acc[categoryDisplayName] = [];
-    }
-    acc[categoryDisplayName].push(tool);
-    return acc;
-  }, {} as Record<string, Tool[]>);
+      if (!acc[categoryKey]) {
+        acc[categoryKey] = [];
+      }
+      acc[categoryKey].push(tool);
+      return acc;
+    },
+    {} as Record<string, Tool[]>,
+  );
 
   return (
     <div className="w-full px-4 sm:px-6 lg:px-0 max-w-4xl mx-auto mt-10 animate-fade-in">
@@ -93,10 +81,10 @@ const GitHubTools = ({
                 const toolUrl = tool.iframe
                   ? `/tools/${tool.name}/${owner}/${repo}`
                   : replaceUrlVariables(tool.url, {
-                    owner,
-                    repo,
-                    default_branch,
-                  });
+                      owner,
+                      repo,
+                      default_branch,
+                    });
 
                 return (
                   <Card
@@ -126,7 +114,7 @@ const GitHubTools = ({
                           />
                         )}
 
-                        {tool.name}
+                        {tool.title}
                       </CardTitle>
 
                       <CardDescription className="mt-1 text-sm text-gray-600 dark:text-gray-400">
@@ -135,11 +123,7 @@ const GitHubTools = ({
                     </CardHeader>
 
                     <CardContent className="mt-2">
-                      <Button
-                        asChild
-                        variant="link"
-                        className="text-sm px-0 py-1"
-                      >
+                      <Button asChild variant="link" className="text-sm px-0 py-1">
                         <a
                           href={toolUrl}
                           target="_blank"

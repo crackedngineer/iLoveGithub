@@ -1,21 +1,27 @@
 ## 🧩 Add New GitHub Tool
 
-**Tool Name:**  
+**Tool Name:**
+
 <!-- e.g., GitMCP -->
 
-**Category:**  
+**Category:**
+
 <!-- e.g., Analytics & Insights -->
 
-**Homepage:**  
+**Homepage:**
+
 <!-- e.g., https://gitmcp.io -->
 
-**Launch URL Template:**  
+**Launch URL Template:**
+
 <!-- e.g., https://gitmcp.io/{owner}/{repo} -->
 
-**Icon URL:**  
+**Icon URL:**
+
 <!-- e.g., https://gitmcp.io/favicon.ico -->
 
-**Short Description:**  
+**Short Description:**
+
 <!-- Brief description of what the tool does -->
 
 ---

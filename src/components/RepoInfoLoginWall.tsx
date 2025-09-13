@@ -1,18 +1,15 @@
 "use client";
 
-import React, { useState, useEffect, ReactNode } from "react";
-import { Info } from "lucide-react";
-import { signIn } from "next-auth/react"; // 👈 import signIn from next-auth
+import React, {useState, useEffect, ReactNode} from "react";
+import {Info} from "lucide-react";
+import {signIn} from "next-auth/react"; // 👈 import signIn from next-auth
 
 interface RepoInfoLoginWallProps {
   children: ReactNode;
   isLoggedIn: boolean;
 }
 
-const RepoInfoLoginWall: React.FC<RepoInfoLoginWallProps> = ({
-  children,
-  isLoggedIn,
-}) => {
+const RepoInfoLoginWall: React.FC<RepoInfoLoginWallProps> = ({children, isLoggedIn}) => {
   const [showWall, setShowWall] = useState(!isLoggedIn);
 
   useEffect(() => {
@@ -27,7 +24,7 @@ const RepoInfoLoginWall: React.FC<RepoInfoLoginWallProps> = ({
     const githubUrl = `https://github.com/${owner}/${repo}`;
 
     sessionStorage.setItem("pendingRepoUrl", githubUrl); // Save GitHub URL
-    signIn("github", { callbackUrl: githubUrl }); // Redirect after login
+    signIn("github", {callbackUrl: githubUrl}); // Redirect after login
   };
 
   if (!showWall) {
@@ -51,9 +48,8 @@ const RepoInfoLoginWall: React.FC<RepoInfoLoginWallProps> = ({
             </div>
 
             <p className="text-gray-600 dark:text-gray-400 mb-4 text-sm">
-              You've reached the maximum limit of{" "}
-              {process.env.NEXT_PUBLIC_MAX_REPO_LIMIT} repository analyses.
-              Please sign in to continue using this tool without limitations.
+              You've reached the maximum limit of {process.env.NEXT_PUBLIC_MAX_REPO_LIMIT}{" "}
+              repository analyses. Please sign in to continue using this tool without limitations.
             </p>
 
             <button

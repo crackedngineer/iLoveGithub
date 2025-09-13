@@ -1,7 +1,7 @@
-import { NextAuthOptions } from "next-auth";
+import {NextAuthOptions} from "next-auth";
 import GithubProvider from "next-auth/providers/github";
-import { type JWT } from "next-auth/jwt";
-import { Session, User, Account, Profile } from "next-auth";
+import {type JWT} from "next-auth/jwt";
+import {Session, User, Account, Profile} from "next-auth";
 import authEvents from "@/lib/auth/authEvents";
 
 interface ExtendedToken extends JWT {
@@ -46,8 +46,7 @@ export const authOptions: NextAuthOptions = {
       }
     },
 
-
-    async jwt({ token, account, profile }): Promise<ExtendedToken> {
+    async jwt({token, account, profile}): Promise<ExtendedToken> {
       try {
         if (account && profile) {
           return {
@@ -64,7 +63,7 @@ export const authOptions: NextAuthOptions = {
       }
     },
 
-    async session({ session, token }): Promise<ExtendedSession> {
+    async session({session, token}): Promise<ExtendedSession> {
       try {
         const extendedToken = token as ExtendedToken;
         const now = Math.floor(Date.now() / 1000);

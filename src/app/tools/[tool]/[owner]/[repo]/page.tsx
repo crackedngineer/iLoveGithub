@@ -1,23 +1,28 @@
 "use client";
 import * as React from "react";
-import { useState, useEffect } from "react";
-import { GithubToolsList } from "@/constants";
-import { replaceUrlVariables } from "@/app/helper";
-import { useParams } from "next/navigation";
+import {useState, useEffect} from "react";
+import GithubToolsList from "../../../../../../tools.json";
+import {replaceUrlVariables} from "@/app/helper";
+import {useParams} from "next/navigation";
 import ToolViewer from "@/components/ToolViewer";
 import ToolLoading from "@/components/ToolLoading";
 
 export default function ToolsPage() {
-  const params = useParams() as { tool: string; owner: string; repo: string };
-  const { tool, owner, repo } = params;
+  const params = useParams() as {tool: string; owner: string; repo: string};
+  const {tool, owner, repo} = params;
 
   const toolData = GithubToolsList.find((item) => item.name === tool);
+
   const toolLink = toolData?.url
     ? replaceUrlVariables(toolData.url, {
         owner,
         repo,
       })
     : null;
+
+  if (!toolData?.iframe && toolLink) {
+    window.location.href = toolLink;
+  }
 
   const [showViewer, setShowViewer] = useState<boolean>(false);
 

@@ -1,17 +1,14 @@
 "use client";
 
-import React, { useEffect, useState, useRef } from "react";
-import { Search } from "lucide-react";
-import { useSession, signIn } from "next-auth/react";
-import { Button } from "@/components/ui/button";
-import { Input } from "@/components/ui/input";
-import { Card, CardContent } from "@/components/ui/card";
-import { Skeleton } from "@/components/ui/skeleton";
-import {
-  RECENT_REPO_LOCAL_STORAGE_KEY,
-  RECENT_TRENDING_REPO_UI_MAXCOUNT,
-} from "@/constants";
-import { RepoData } from "./RepoInfo";
+import React, {useEffect, useState, useRef} from "react";
+import {Search} from "lucide-react";
+import {useSession, signIn} from "next-auth/react";
+import {Button} from "@/components/ui/button";
+import {Input} from "@/components/ui/input";
+import {Card, CardContent} from "@/components/ui/card";
+import {Skeleton} from "@/components/ui/skeleton";
+import {RECENT_REPO_LOCAL_STORAGE_KEY, RECENT_TRENDING_REPO_UI_MAXCOUNT} from "@/constants";
+import {RepoData} from "./RepoInfo";
 
 interface TrendingRepo {
   id: number;
@@ -48,7 +45,7 @@ const RepoSearch = ({
   trending: boolean;
   onRepoSubmit: (owner: string, repo: string) => void;
 }) => {
-  const { data: session, status } = useSession();
+  const {data: session, status} = useSession();
   const repoInputRef = useRef<HTMLInputElement>(null);
   const [repoUrl, setRepoUrl] = useState(value);
   const [error, setError] = useState("");
@@ -56,14 +53,9 @@ const RepoSearch = ({
   const [recent, setRecent] = useState<string[]>([]);
   const [loading, setLoading] = useState(true);
 
-  const extractRepoDetails = (
-    url: string
-  ): { owner: string; repo: string } | null => {
+  const extractRepoDetails = (url: string): {owner: string; repo: string} | null => {
     setError("");
-    const patterns = [
-      /github\.com\/([^\/]+)\/([^\/]+)/,
-      /^([^\/]+)\/([^\/]+)$/,
-    ];
+    const patterns = [/github\.com\/([^\/]+)\/([^\/]+)/, /^([^\/]+)\/([^\/]+)$/];
 
     for (const pattern of patterns) {
       const match = url.match(pattern);
@@ -80,14 +72,7 @@ const RepoSearch = ({
     return null;
   };
 
-  const handleRepoSubmit = ({
-    e,
-    owner,
-    repo,
-    repoUrl,
-    onSubmit,
-    onError,
-  }: RepoSubmitHandler) => {
+  const handleRepoSubmit = ({e, owner, repo, repoUrl, onSubmit, onError}: RepoSubmitHandler) => {
     if (repoUrl?.trim()) {
       const details = extractRepoDetails(repoUrl);
       if (details) {
@@ -112,11 +97,7 @@ const RepoSearch = ({
     });
   };
 
-  const onTrendingRepoSubmit = (
-    e: React.FormEvent,
-    owner: string,
-    repo: string
-  ) => {
+  const onTrendingRepoSubmit = (e: React.FormEvent, owner: string, repo: string) => {
     handleRepoSubmit({
       e,
       owner,
@@ -127,7 +108,7 @@ const RepoSearch = ({
 
   useEffect(() => {
     const recent = JSON.parse(
-      localStorage.getItem(RECENT_REPO_LOCAL_STORAGE_KEY) || "[]"
+      localStorage.getItem(RECENT_REPO_LOCAL_STORAGE_KEY) || "[]",
     ) as string[];
     setRecent(recent.slice(0, RECENT_TRENDING_REPO_UI_MAXCOUNT));
   }, []);
@@ -205,9 +186,7 @@ const RepoSearch = ({
 
         {recent.length > 0 && status === "authenticated" && (
           <div className="mt-6">
-            <h4 className="text-sm font-medium text-muted-foreground mb-2">
-              Recent Searches
-            </h4>
+            <h4 className="text-sm font-medium text-muted-foreground mb-2">Recent Searches</h4>
             <div className="flex flex-wrap gap-2">
               {recent.map((entry) => (
                 <button
@@ -231,22 +210,18 @@ const RepoSearch = ({
             </h4>
             <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
               {loading
-                ? Array.from({ length: 4 }).map((_, i) => (
+                ? Array.from({length: 4}).map((_, i) => (
                     <Skeleton key={i} className="h-[80px] rounded-xl" />
                   ))
                 : trendingRepos.map((repo) => (
                     <Card
                       key={repo.id}
                       className="p-4 hover:shadow-sm cursor-pointer transition"
-                      onClick={(event) =>
-                        onTrendingRepoSubmit(event, repo.owner.login, repo.name)
-                      }
+                      onClick={(event) => onTrendingRepoSubmit(event, repo.owner.login, repo.name)}
                     >
                       <div className="flex justify-between items-center">
                         <div>
-                          <p className="font-medium text-sm text-foreground">
-                            {repo.full_name}
-                          </p>
+                          <p className="font-medium text-sm text-foreground">{repo.full_name}</p>
                           <p className="text-xs text-muted-foreground line-clamp-1">
                             {repo.description || "No description"}
                           </p>
