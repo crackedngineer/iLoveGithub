@@ -1,34 +1,29 @@
 {
   "manifest_version": 3,
-  "name": "GitHub Tools Extension",
+  "name": "iLoveGithub Extension",
   "version": "1.0.0",
-  "description": "Transform GitHub URLs and access development tools with analytics",
-  "permissions": [
-    "activeTab",
-    "storage",
-    "scripting"
-  ],
+  "description": "A curated collection of magical tools built around GitHub — open a repo in VS Code, visualize it, generate AI-powered summaries, convert it to a podcast, and so much more.",
+  "permissions": ["activeTab", "storage", "scripting"],
   "host_permissions": [
     "https://github.com/*",
-    "https://*.github.com/*"
+    "https://*.github.com/*",
+    "https://ilovegithub.oderna.in/*"
   ],
   "content_scripts": [
     {
       "matches": ["https://github.com/*"],
       "js": ["dist/content.js"],
-      "css": ["styles/content.css"]
+      "css": ["styles/content.css"],
+      "run_at": "document_idle"
     }
   ],
   "background": {
-    "service_worker": "dist/background.js"
-  },
-  "action": {
-    "default_popup": "popup.html",
-    "default_title": "GitHub Tools"
+    "service_worker": "dist/background.js",
+    "type": "module"
   },
   "icons": {
-    // "16": "icons/icon16.png",
-    // "48": "icons/icon48.png",
+    "16": "icons/favicon.png",
+    "48": "icons/favicon.png",
     "128": "icons/favicon.png"
   },
   "web_accessible_resources": [

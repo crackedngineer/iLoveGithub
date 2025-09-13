@@ -1,312 +1,197 @@
-/* GitHub Tools Extension Styles */
-.ilovegithub-tools-fab {
+/* GitHub Tools Redirector Styles */
+
+.github-tools-floating-btn {
   position: fixed;
-  bottom: 20px;
+  top: 50%;
   right: 20px;
-  width: 56px;
-  height: 56px;
-  background: linear-gradient(135deg, #6366f1, #8b5cf6);
+  width: 50px;
+  height: 50px;
   border-radius: 50%;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  cursor: pointer;
-  box-shadow: 0 4px 20px rgba(99, 102, 241, 0.4);
-  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
-  z-index: 10000;
-  font-size: 24px;
-  color: white;
-  user-select: none;
-}
-
-#ilovegithub-fab-icon {
-    width: 100% !important;
-    height: 100% !important;
-    border-radius: 50%;
-}
-
-.ilovegithub-tools-fab:hover {
-  transform: translateY(-2px) scale(1.05);
-  box-shadow: 0 8px 30px rgba(99, 102, 241, 0.6);
-}
-
-.github-tools-overlay {
-  position: fixed;
-  top: 20px;
-  right: 20px;
-  width: 400px;
-  max-height: calc(100vh - 40px);
-  background: #1a1b26;
-  border-radius: 16px;
-  box-shadow: 0 20px 60px rgba(0, 0, 0, 0.5);
-  backdrop-filter: blur(20px);
-  border: 1px solid #2a2e42;
-  z-index: 10001;
-  overflow: hidden;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
-  animation: slideIn 0.3s cubic-bezier(0.4, 0, 0.2, 1);
-}
-
-@keyframes slideIn {
-  from {
-    opacity: 0;
-    transform: translateX(20px) translateY(-10px) scale(0.95);
-  }
-  to {
-    opacity: 1;
-    transform: translateX(0) translateY(0) scale(1);
-  }
-}
-
-.github-tools-container {
-  display: flex;
-  flex-direction: column;
-  height: 100%;
-  max-height: calc(100vh - 40px);
-}
-
-.github-tools-content {
-  flex: 1;
-  overflow-y: auto;
-  scrollbar-width: thin;
-  scrollbar-color: #3b4261 #1a1b26;
-}
-
-.github-tools-content::-webkit-scrollbar {
-  width: 6px;
-}
-
-.github-tools-content::-webkit-scrollbar-track {
-  background: #1a1b26;
-}
-
-.github-tools-content::-webkit-scrollbar-thumb {
-  background: #3b4261;
-  border-radius: 3px;
-}
-
-.github-tools-content::-webkit-scrollbar-thumb:hover {
-  background: #565f89;
-}
-
-.github-tools-header {
   background: linear-gradient(135deg, #6366f1, #8b5cf6);
-  padding: 20px;
   color: white;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  position: relative;
-  flex-shrink: 0;
-}
-
-.github-tools-title {
-  font-size: 18px;
-  font-weight: 600;
-  display: flex;
-  align-items: center;
-  gap: 8px;
-}
-
-.github-tools-icon {
-  font-size: 20px;
-}
-
-.github-tools-repo {
-  font-size: 12px;
-  opacity: 0.9;
-  background: rgba(255, 255, 255, 0.2);
-  padding: 4px 8px;
-  border-radius: 12px;
-  backdrop-filter: blur(10px);
-}
-
-.github-tools-close {
-  background: rgba(255, 255, 255, 0.2);
   border: none;
-  color: white;
-  width: 28px;
-  height: 28px;
-  border-radius: 14px;
-  cursor: pointer;
-  font-size: 18px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  transition: all 0.2s ease;
-}
-
-.github-tools-close:hover {
-  background: rgba(255, 255, 255, 0.3);
-  transform: scale(1.1);
-}
-
-
-
-.github-tools-section {
-  padding: 20px;
-  border-bottom: 1px solid #2a2e42;
-}
-
-.github-tools-section:last-child {
-  border-bottom: none;
-  padding-bottom: 20px;
-}
-
-.github-tools-section h3 {
-  font-size: 16px;
-  color: #c0caf5;
-  margin-bottom: 16px;
-  display: flex;
-  align-items: center;
-  gap: 8px;
-}
-
-.analytics-loading {
-  color: #565f89;
-  text-align: center;
-  padding: 20px;
-  font-style: italic;
-}
-
-.analytics-grid {
-  display: grid;
-  grid-template-columns: repeat(2, 1fr);
-  gap: 12px;
-  margin-bottom: 16px;
-}
-
-.analytics-item {
-  text-align: center;
-  padding: 12px;
-  background: #24283b;
-  border-radius: 8px;
-  border: 1px solid #3b4261;
-}
-
-.analytics-value {
   font-size: 20px;
+  cursor: pointer;
+  box-shadow: 0 4px 12px rgba(99, 102, 241, 0.3);
+  z-index: 10000;
+  transition: all 0.3s ease;
+  transform: translateY(-50%);
+}
+
+.github-tools-floating-btn:hover {
+  transform: translateY(-50%) scale(1.1);
+  box-shadow: 0 6px 20px rgba(99, 102, 241, 0.4);
+}
+
+.github-tools-popup {
+  position: fixed;
+  top: 50%;
+  right: 80px;
+  width: 320px;
+  background: white;
+  border-radius: 12px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+  z-index: 10001;
+  transform: translateY(-50%);
+  border: 1px solid #e5e7eb;
+  overflow: hidden;
+  transition: all 0.3s ease;
+}
+
+.github-tools-popup.hidden {
+  opacity: 0;
+  visibility: hidden;
+  transform: translateY(-50%) translateX(20px);
+}
+
+.popup-header {
+  background: linear-gradient(135deg, #f8fafc, #f1f5f9);
+  padding: 16px 20px;
+  border-bottom: 1px solid #e5e7eb;
+}
+
+.popup-header h3 {
+  margin: 0 0 4px 0;
+  font-size: 16px;
   font-weight: 600;
-  color: #6366f1;
-  margin-bottom: 4px;
+  color: #1f2937;
 }
 
-.analytics-label {
+.repo-info {
   font-size: 12px;
-  color: #565f89;
+  color: #6b7280;
+  font-family: "Monaco", "Menlo", monospace;
+  background: rgba(99, 102, 241, 0.1);
+  padding: 4px 8px;
+  border-radius: 4px;
+  display: inline-block;
 }
 
-.analytics-chart {
-  margin-top: 16px;
-  padding: 12px;
-  background: #24283b;
-  border-radius: 8px;
-  text-align: center;
+.tools-list {
+  max-height: 400px;
+  overflow-y: auto;
 }
 
-.github-tools-grid {
-  display: grid;
-  grid-template-columns: 1fr;
-  gap: 8px;
-}
-
-.github-tool-item {
+.tool-item {
   display: flex;
   align-items: center;
-  padding: 16px;
-  background: #24283b;
-  border: 1px solid #3b4261;
-  border-radius: 12px;
+  padding: 12px 20px;
   cursor: pointer;
-  transition: all 0.2s cubic-bezier(0.4, 0, 0.2, 1);
-  position: relative;
-  overflow: hidden;
+  transition: background-color 0.2s ease;
+  border-bottom: 1px solid #f3f4f6;
 }
 
-.github-tool-item::before {
-  content: '';
-  position: absolute;
-  top: 0;
-  left: 0;
-  right: 0;
-  bottom: 0;
-  background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.05), transparent);
-  transform: translateX(-100%);
-  transition: transform 0.6s ease;
+.tool-item:hover {
+  background-color: #f9fafb;
 }
 
-.github-tool-item:hover::before {
-  transform: translateX(100%);
-}
-
-.github-tool-item:hover {
-  transform: translateY(-2px);
-  background: #2f3349;
-  border-color: currentColor;
-  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.3);
+.tool-item:last-child {
+  border-bottom: none;
 }
 
 .tool-icon {
-  font-size: 24px;
-  margin-right: 16px;
-  width: 32px;
+  font-size: 20px;
+  margin-right: 12px;
+  width: 24px;
   text-align: center;
 }
 
-.tool-info {
+.tool-details {
   flex: 1;
 }
 
 .tool-name {
-  font-size: 16px;
-  font-weight: 600;
-  color: #c0caf5;
-  margin-bottom: 4px;
+  font-size: 14px;
+  font-weight: 500;
+  color: #1f2937;
+  margin-bottom: 2px;
 }
 
 .tool-description {
   font-size: 12px;
-  color: #565f89;
-  line-height: 1.4;
+  color: #6b7280;
 }
 
 .tool-arrow {
-  font-size: 18px;
-  color: #565f89;
-  transition: all 0.2s ease;
+  font-size: 16px;
+  color: #9ca3af;
+  transition: transform 0.2s ease;
 }
 
-.github-tool-item:hover .tool-arrow {
+.tool-item:hover .tool-arrow {
+  transform: translateX(2px);
   color: #6366f1;
-  transform: translateX(4px);
 }
 
-.analytics-error {
-  color: #f7768e;
-  text-align: center;
+.error {
   padding: 20px;
-  background: rgba(247, 118, 142, 0.1);
-  border-radius: 8px;
-  border: 1px solid rgba(247, 118, 142, 0.2);
+  text-align: center;
+  color: #ef4444;
+  font-size: 14px;
 }
 
-
-
-/* Responsive adjustments */
-@media (max-width: 480px) {
-  .github-tools-overlay {
-    width: calc(100vw - 40px);
-    right: 20px;
-  }
-  
-  .analytics-grid {
-    grid-template-columns: 1fr;
-  }
-}
-
-/* Dark theme compatibility */
+/* Dark mode support */
 @media (prefers-color-scheme: dark) {
-  .github-tools-overlay {
-    border-color: #30363d;
+  .github-tools-popup {
+    background: #1f2937;
+    border-color: #374151;
+  }
+
+  .popup-header {
+    background: linear-gradient(135deg, #111827, #1f2937);
+    border-bottom-color: #374151;
+  }
+
+  .popup-header h3 {
+    color: #f9fafb;
+  }
+
+  .repo-info {
+    background: rgba(99, 102, 241, 0.2);
+    color: #d1d5db;
+  }
+
+  .tool-item {
+    border-bottom-color: #374151;
+  }
+
+  .tool-item:hover {
+    background-color: #374151;
+  }
+
+  .tool-name {
+    color: #f9fafb;
+  }
+
+  .tool-description {
+    color: #9ca3af;
+  }
+}
+
+/* Responsive design */
+@media (max-width: 768px) {
+  .github-tools-popup {
+    width: 320px;
+    right: 10px;
+  }
+
+  .analytics-grid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 8px;
+  }
+
+  .analytics-item {
+    padding: 8px 6px;
+  }
+
+  .analytics-value {
+    font-size: 14px;
+  }
+
+  .github-tools-floating-btn {
+    right: 10px;
+    width: 45px;
+    height: 45px;
+    font-size: 18px;
   }
 }
