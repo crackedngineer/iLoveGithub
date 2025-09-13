@@ -8,8 +8,9 @@ import RepoSearch from "@/components/RepoSearch";
 import AppLayout from "@/components/AppLayout";
 import {Introduction} from "@/components/Introduction";
 import {RECENT_REPO_LOCAL_STORAGE_KEY, RECENT_TRENDING_REPO_CACHE_MAXCOUNT} from "@/constants";
-import {useSession, signOut} from "next-auth/react";
+import {useSession} from "next-auth/react";
 import {useApiLimit} from "@/components/ApiLimitContext";
+import {Tool} from "@/lib/types";
 
 export default function RepoPage() {
   const {data: session, status} = useSession();
@@ -19,6 +20,7 @@ export default function RepoPage() {
   const {remaining} = useApiLimit();
 
   const [repoData, setRepoData] = useState<RepoData | null>(null);
+  const [tools, setTools] = useState<Tool[]>([]);
   const [isLoading, setIsLoading] = useState<boolean>(true);
   const [error, setError] = useState<"rate-limit" | "generic" | null>(null);
 
@@ -98,10 +100,28 @@ export default function RepoPage() {
     }
   }, [owner, repo, status, session, remaining, updateRecentRepos]);
 
+  const fetchTools = useCallback(async () => {
+    if (!repoData) return;
+    try {
+      const {data} = await axios.get(
+        `/api/tools?owner=${repoData.owner}&repo=${repoData.name}&default_branch=${repoData.default_branch}`,
+      );
+      setTools(data);
+    } catch (err) {
+      console.error("Error fetching tools:", err);
+      setTools([]);
+    }
+  }, [repoData]);
+
   useEffect(() => {
-    if (status === "loading") return;
-    fetchRepoData();
+    if (status !== "loading") {
+      fetchRepoData();
+    }
   }, [owner, repo, status]);
+
+  useEffect(() => {
+    if (repoData) fetchTools();
+  }, [repoData, fetchTools]);
 
   return (
     <AppLayout>
@@ -139,11 +159,7 @@ export default function RepoPage() {
         {!isLoading && repoData && (
           <>
             <RepoInfo repo={repoData} isLoggedIn={status === "authenticated" || !!remaining} />
-            <GitHubTools
-              owner={repoData.owner}
-              repo={repoData.name}
-              default_branch={repoData.default_branch}
-            />
+            <GitHubTools tools={tools} />
           </>
         )}
       </main>

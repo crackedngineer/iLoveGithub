@@ -4,9 +4,7 @@ import React, {useState} from "react";
 import Image from "next/image";
 import {ArrowRight, BrainCircuit} from "lucide-react";
 import {Card, CardContent, CardDescription, CardHeader, CardTitle} from "@/components/ui/card";
-import GithubToolsList from "../../tools.json";
 import {Tool} from "@/lib/types";
-import {replaceUrlVariables} from "@/app/helper";
 import {Button} from "@/components/ui/button";
 import {Input} from "@/components/ui/input";
 
@@ -18,18 +16,10 @@ function isNew(createdAt: string): boolean {
   return diffDays <= 15;
 }
 
-const GitHubTools = ({
-  owner,
-  repo,
-  default_branch = "master",
-}: {
-  owner: string;
-  repo: string;
-  default_branch: string;
-}) => {
+const GitHubTools = ({tools}: {tools: Tool[]}) => {
   const [searchTerm, setSearchTerm] = useState("");
 
-  const filteredTools = GithubToolsList.filter((tool) => {
+  const filteredTools = tools.filter((tool) => {
     const search = searchTerm.toLowerCase();
     return (
       tool.name.toLowerCase().includes(search) || tool.description.toLowerCase().includes(search)
@@ -78,14 +68,6 @@ const GitHubTools = ({
 
             <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 sm:gap-6">
               {categoryTools.map((tool) => {
-                const toolUrl = tool.iframe
-                  ? `/tools/${tool.name}/${owner}/${repo}`
-                  : replaceUrlVariables(tool.url, {
-                      owner,
-                      repo,
-                      default_branch,
-                    });
-
                 return (
                   <Card
                     key={tool.name}
@@ -125,7 +107,7 @@ const GitHubTools = ({
                     <CardContent className="mt-2">
                       <Button asChild variant="link" className="text-sm px-0 py-1">
                         <a
-                          href={toolUrl}
+                          href={tool.url}
                           target="_blank"
                           rel="noopener noreferrer"
                           className="inline-flex items-center gap-1 text-github-blue hover:text-blue-700 group-hover:underline"
