@@ -23,7 +23,7 @@ export async function GET(req: NextRequest) {
     const result = data.map((item: any) => ({
       ...item,
       url: replaceUrlVariables(
-        item.iframe ? `${rootDomain}/tools/${item.name}/{owner}/{repo}` : item.url,
+        item.iframe ? `https://${rootDomain}/tools/${item.name}/{owner}/{repo}` : item.url,
         {owner, repo, default_branch},
       ),
     }));
