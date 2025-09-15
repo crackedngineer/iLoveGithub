@@ -86,13 +86,13 @@ const GitHubTools = ({tools}: {tools: Tool[]}) => {
                             src={tool.icon}
                             width={24}
                             height={24}
-                            className="rounded-sm transition-all dark:invert dark:brightness-90"
+                            className="rounded-sm transition-all dark:invert dark:hue-rotate-18"
                           />
                         ) : (
                           <BrainCircuit
                             width={24}
                             height={24}
-                            className="rounded-sm transition-all dark:invert dark:brightness-90"
+                            className="rounded-sm transition-all dark:invert dark:hue-rotate-18"
                           />
                         )}
 
