@@ -1,7 +1,7 @@
 import {NextRequest, NextResponse} from "next/server";
 import fs from "fs/promises";
 import path from "path";
-import {replaceUrlVariables} from "@/app/helper";
+import {replaceUrlVariables, parseImageFileName} from "@/app/helper";
 import {rootDomain} from "@/lib/utils";
 
 export async function GET(req: NextRequest) {
@@ -22,6 +22,7 @@ export async function GET(req: NextRequest) {
     // Map and update URLs in a functional style
     const result = data.map((item: any) => ({
       ...item,
+      icon: item.icon !== null && process.env.BLOB_ICON_BASE_URL + parseImageFileName(item.icon),
       url: replaceUrlVariables(
         item.iframe ? `https://${rootDomain}/tools/${item.name}/{owner}/{repo}` : item.url,
         {owner, repo, default_branch},
