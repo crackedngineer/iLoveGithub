@@ -1,25 +1,11 @@
 [
     {
-        "id": 1052551856,
-        "name": "checkpoint-engine",
-        "full_name": "MoonshotAI/checkpoint-engine",
-        "html_url": "https://github.com/MoonshotAI/checkpoint-engine",
-        "description": "Checkpoint-engine is a simple middleware to update model weights in LLM inference engines",
-        "stargazers_count": 595,
-        "language": "Python",
-        "owner": {
-            "login": "MoonshotAI",
-            "avatar_url": "https://avatars.githubusercontent.com/u/129152888?v=4",
-            "html_url": "https://github.com/MoonshotAI"
-        }
-    },
-    {
         "id": 1053791889,
         "name": "batch_invariant_ops",
         "full_name": "thinking-machines-lab/batch_invariant_ops",
         "html_url": "https://github.com/thinking-machines-lab/batch_invariant_ops",
         "description": null,
-        "stargazers_count": 520,
+        "stargazers_count": 556,
         "language": "Python",
         "owner": {
             "login": "thinking-machines-lab",
@@ -33,7 +19,7 @@
         "full_name": "Tencent-Hunyuan/SRPO",
         "html_url": "https://github.com/Tencent-Hunyuan/SRPO",
         "description": "Directly Aligning the Full Diffusion Trajectory with Fine-Grained Human Preference",
-        "stargazers_count": 408,
+        "stargazers_count": 517,
         "language": "Python",
         "owner": {
             "login": "Tencent-Hunyuan",
@@ -47,7 +33,7 @@
         "full_name": "Alpha-VLLM/Lumina-DiMOO",
         "html_url": "https://github.com/Alpha-VLLM/Lumina-DiMOO",
         "description": "Lumina-DiMOO - An Open-Sourced Multi-Modal Large Diffusion Language Model",
-        "stargazers_count": 286,
+        "stargazers_count": 314,
         "language": "Python",
         "owner": {
             "login": "Alpha-VLLM",
@@ -56,31 +42,45 @@
         }
     },
     {
-        "id": 1052387869,
-        "name": "LLM-Agents-Ecosystem-Handbook",
-        "full_name": "oxbshw/LLM-Agents-Ecosystem-Handbook",
-        "html_url": "https://github.com/oxbshw/LLM-Agents-Ecosystem-Handbook",
-        "description": "One-stop handbook for building, deploying, and understanding LLM agents with 60+ skeletons, tutorials, ecosystem guides, and evaluation tools.",
-        "stargazers_count": 262,
-        "language": "Python",
-        "owner": {
-            "login": "oxbshw",
-            "avatar_url": "https://avatars.githubusercontent.com/u/212214682?v=4",
-            "html_url": "https://github.com/oxbshw"
-        }
-    },
-    {
         "id": 1053208747,
         "name": "HuMo",
         "full_name": "Phantom-video/HuMo",
         "html_url": "https://github.com/Phantom-video/HuMo",
         "description": "HuMo: Human-Centric Video Generation via Collaborative Multi-Modal Conditioning",
-        "stargazers_count": 241,
+        "stargazers_count": 295,
         "language": "Python",
         "owner": {
             "login": "Phantom-video",
             "avatar_url": "https://avatars.githubusercontent.com/u/198594796?v=4",
             "html_url": "https://github.com/Phantom-video"
+        }
+    },
+    {
+        "id": 1054273804,
+        "name": "AgentGym-RL",
+        "full_name": "WooooDyy/AgentGym-RL",
+        "html_url": "https://github.com/WooooDyy/AgentGym-RL",
+        "description": "Code and implementations for the paper \"AgentGym-RL: Training LLM Agents for Long-Horizon Decision Making through Multi-Turn Reinforcement Learning\" by Zhiheng Xi et al.",
+        "stargazers_count": 240,
+        "language": "Python",
+        "owner": {
+            "login": "WooooDyy",
+            "avatar_url": "https://avatars.githubusercontent.com/u/48242229?v=4",
+            "html_url": "https://github.com/WooooDyy"
+        }
+    },
+    {
+        "id": 1053522667,
+        "name": "Mini-o3",
+        "full_name": "Mini-o3/Mini-o3",
+        "html_url": "https://github.com/Mini-o3/Mini-o3",
+        "description": "Official Code for \"Mini-o3: Scaling Up Reasoning Patterns and Interaction Turns for Visual Search\"",
+        "stargazers_count": 223,
+        "language": "Python",
+        "owner": {
+            "login": "Mini-o3",
+            "avatar_url": "https://avatars.githubusercontent.com/u/231206191?v=4",
+            "html_url": "https://github.com/Mini-o3"
         }
     }
 ]
