@@ -1,13 +1,12 @@
 /* GitHub Tools Redirector Styles */
 
-.github-tools-floating-btn {
+.tools-floating-btn {
   position: fixed;
   top: 50%;
   right: 20px;
   width: 50px;
   height: 50px;
   border-radius: 50%;
-  background: linear-gradient(135deg, #6366f1, #8b5cf6);
   color: white;
   border: none;
   font-size: 20px;
@@ -16,60 +15,160 @@
   z-index: 10000;
   transition: all 0.3s ease;
   transform: translateY(-50%);
+
+  padding: 0;
+
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
-.github-tools-floating-btn:hover {
+.tools-floating-btn:hover {
   transform: translateY(-50%) scale(1.1);
   box-shadow: 0 6px 20px rgba(99, 102, 241, 0.4);
 }
 
-.github-tools-popup {
+.tools-btn-icon {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.tools-popup {
   position: fixed;
   top: 50%;
   right: 80px;
-  width: 320px;
+  z-index: 10001;
+  width: 380px;
+  max-height: 600px;
   background: white;
   border-radius: 12px;
-  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
-  z-index: 10001;
+  box-shadow: 0 10px 40px rgba(0, 0, 0, 0.15);
+  /* border: 1px solid #e1e4e8; */
   transform: translateY(-50%);
-  border: 1px solid #e5e7eb;
   overflow: hidden;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
   transition: all 0.3s ease;
 }
 
-.github-tools-popup.hidden {
+.tools-popup-hidden {
   opacity: 0;
   visibility: hidden;
-  transform: translateY(-50%) translateX(20px);
+  transform: translateY(-50%) scale(0.95);
 }
 
+.tools-popup-visible {
+  opacity: 1;
+  visibility: visible;
+  transform: translateY(-50%) scale(1);
+}
+
+/* Header */
 .popup-header {
-  background: linear-gradient(135deg, #f8fafc, #f1f5f9);
   padding: 16px 20px;
-  border-bottom: 1px solid #e5e7eb;
+  /* background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+   */
+  background: linear-gradient(to right, #0969da, #2da44e);
+  /* color: white; */
+  /* border-bottom: 1px solid #e1e4e8; */
 }
 
 .popup-header h3 {
   margin: 0 0 4px 0;
-  font-size: 16px;
+  font-size: 18px;
   font-weight: 600;
-  color: #1f2937;
+}
+
+.popup-footer {
+  padding: 10px 20px;
+  background: #0d1117;
+  /* border-top: 1px solid #e1e4e8; */
+  text-align: center;
+  font-size: 12px;
+  color: #586069;
 }
 
 .repo-info {
-  font-size: 12px;
-  color: #6b7280;
-  font-family: "Monaco", "Menlo", monospace;
-  background: rgba(99, 102, 241, 0.1);
-  padding: 4px 8px;
-  border-radius: 4px;
-  display: inline-block;
+  font-size: 13px;
+  opacity: 0.9;
+  font-family: "SFMono-Regular", Consolas, monospace;
 }
 
+/* Analytics */
+.analytics-section {
+  padding: 8px 20px;
+  background: #f8f9fa;
+  border-bottom: 1px solid #e1e4e8;
+}
+
+.analytics-compact {
+  display: flex;
+  gap: 16px;
+  align-items: center;
+  justify-content: center;
+}
+
+.analytics-stat {
+  font-size: 12px;
+  color: #586069;
+  font-weight: 500;
+  display: flex;
+  align-items: center;
+  gap: 4px;
+}
+
+/* Search */
+.search-section {
+  padding: 16px 20px;
+  background: white;
+  border-bottom: 1px solid #e1e4e8;
+}
+
+.search-container {
+  position: relative;
+}
+
+.tool-search-input {
+  width: 100%;
+  padding: 8px 12px 8px 35px;
+  border: 1px solid #d1d5da;
+  border-radius: 6px;
+  font-size: 14px;
+  background: #fafbfc;
+  transition: all 0.2s ease;
+  box-sizing: border-box;
+}
+
+.tool-search-input:focus {
+  outline: none;
+  border-color: #0366d6;
+  background: white;
+  box-shadow: 0 0 0 3px rgba(3, 102, 214, 0.1);
+}
+
+.search-icon {
+  position: absolute;
+  left: 10px;
+  top: 50%;
+  transform: translateY(-50%);
+  font-size: 14px;
+  color: #586069;
+}
+
+/* Tools List */
 .tools-list {
-  max-height: 400px;
+  max-height: 350px;
   overflow-y: auto;
+  background: white;
+
+  overflow: auto; /* scrolling still works */
+  scrollbar-width: none; /* Firefox */
+  -ms-overflow-style: none; /* IE/Edge */
+}
+
+.tools-list::-webkit-scrollbar {
+  display: none; /* Chrome, Safari */
 }
 
 .tool-item {
@@ -78,11 +177,11 @@
   padding: 12px 20px;
   cursor: pointer;
   transition: background-color 0.2s ease;
-  border-bottom: 1px solid #f3f4f6;
+  border-bottom: 1px solid #f1f3f4;
 }
 
 .tool-item:hover {
-  background-color: #f9fafb;
+  background-color: #f6f8fa;
 }
 
 .tool-item:last-child {
@@ -90,10 +189,14 @@
 }
 
 .tool-icon {
-  font-size: 20px;
+  width: 20px;
+  height: 20px;
   margin-right: 12px;
-  width: 24px;
-  text-align: center;
+  border-radius: 3px;
+}
+
+.inverted-icon-clr {
+  filter: invert(1) hue-rotate(180deg);
 }
 
 .tool-details {
@@ -102,96 +205,89 @@
 
 .tool-name {
   font-size: 14px;
-  font-weight: 500;
-  color: #1f2937;
+  font-weight: 600;
+  color: #24292e;
   margin-bottom: 2px;
 }
 
 .tool-description {
   font-size: 12px;
-  color: #6b7280;
+  color: #586069;
+  line-height: 1.3;
 }
 
 .tool-arrow {
+  color: #c6cbd1;
   font-size: 16px;
-  color: #9ca3af;
-  transition: transform 0.2s ease;
+  margin-left: 8px;
 }
 
-.tool-item:hover .tool-arrow {
-  transform: translateX(2px);
-  color: #6366f1;
-}
-
-.error {
-  padding: 20px;
+/* No Tools State */
+.no-tools {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 40px 20px;
   text-align: center;
-  color: #ef4444;
+}
+
+.no-tools-icon {
+  font-size: 32px;
+  margin-bottom: 12px;
+  opacity: 0.5;
+}
+
+.no-tools-text {
   font-size: 14px;
+  color: #586069;
 }
 
 /* Dark mode support */
 @media (prefers-color-scheme: dark) {
-  .github-tools-popup {
-    background: #1f2937;
-    border-color: #374151;
+  .tools-popup {
+    background: #161b22;
+    border-color: #30363d;
+    color: #e6edf3;
   }
 
-  .popup-header {
-    background: linear-gradient(135deg, #111827, #1f2937);
-    border-bottom-color: #374151;
+  .analytics-section {
+    background: #0d1117;
+    border-color: #30363d;
   }
 
-  .popup-header h3 {
-    color: #f9fafb;
+  .analytics-stat {
+    color: #8b949e;
   }
 
-  .repo-info {
-    background: rgba(99, 102, 241, 0.2);
-    color: #d1d5db;
+  .tool-search-input {
+    background: #0d1117;
+    border-color: #30363d;
+    color: #e6edf3;
   }
 
-  .tool-item {
-    border-bottom-color: #374151;
+  .tool-search-input:focus {
+    background: #161b22;
+    border-color: #1f6feb;
   }
 
   .tool-item:hover {
-    background-color: #374151;
+    background-color: #21262d;
   }
 
   .tool-name {
-    color: #f9fafb;
+    color: #e6edf3;
   }
 
-  .tool-description {
-    color: #9ca3af;
-  }
-}
-
-/* Responsive design */
-@media (max-width: 768px) {
-  .github-tools-popup {
-    width: 320px;
-    right: 10px;
+  .tool-item {
+    border-color: #21262d;
   }
 
-  .analytics-grid {
-    grid-template-columns: repeat(2, 1fr);
-    gap: 8px;
+  .tools-list {
+    background: #161b22;
   }
 
-  .analytics-item {
-    padding: 8px 6px;
-  }
-
-  .analytics-value {
-    font-size: 14px;
-  }
-
-  .github-tools-floating-btn {
-    right: 10px;
-    width: 45px;
-    height: 45px;
-    font-size: 18px;
+  .search-section {
+    background: #161b22;
+    border-color: #30363d;
   }
 }

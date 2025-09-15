@@ -1,176 +1,291 @@
-import {Tool, RepoInfo} from "./types";
+import {Tool, RepoInfo, UIState, ExtensionElements, RepoAnalytics} from "./types";
+import {debugLog, isRepoPage, getRepoInfo, filterTools} from "./helpers";
+import {
+  updateToolsListHTML,
+  loadTools,
+  createElement,
+  addEventListenerWithCleanup,
+  generatePopupHTML,
+} from "./utils";
+import {CSS_CLASSES, UI_CONSTANTS, DOM_IDS, LOGO_URL} from "./constants";
 
 class ContentHandler {
-  private tools: Tool[];
+  private elements: ExtensionElements = {
+    floatingButton: null,
+    popup: null,
+    searchInput: null,
+    toolsList: null,
+  };
+
+  private state: UIState = {
+    isPopupOpen: false,
+    isLoading: false,
+    error: null,
+    searchQuery: "",
+    filteredTools: [],
+  };
+
+  private cleanupFunctions: (() => void)[] = [];
+  private tools: Tool[] = [];
+  private analytics: RepoAnalytics | null = null;
+  private repoInfo: RepoInfo | null = null;
 
   constructor() {
-    this.tools = [];
     this.initialize();
   }
 
   private async initialize() {
-    const tools = await chrome.runtime.sendMessage({type: "FETCH_TOOLS", data: this.getRepoInfo()});
-    this.tools = tools.data || [];
-    this.init();
-  }
+    try {
+      debugLog("Initializing ContentHandler");
 
-  private init(): void {
-    if (this.isRepoPage()) {
+      if (!isRepoPage()) {
+        debugLog("Not a repository page, skipping initialization");
+        return;
+      }
+
+      this.repoInfo = getRepoInfo();
+      if (!this.repoInfo) {
+        this.setError("Could not detect repository information");
+        return;
+      }
+
+      this.setLoading(true);
+
+      await this.loadToolsData();
       this.createFloatingButton();
+      this.setLoading(false);
+    } catch (error) {
+      debugLog("Initialization error:", error);
+      this.setError("Failed to initialize extension");
+      this.setLoading(false);
     }
   }
 
-  private isRepoPage(): boolean {
-    const path = window.location.pathname;
-    const pathParts = path.split("/").filter((part) => part.length > 0);
-
-    if (pathParts.length >= 2) {
-      const excludedPaths = ["settings", "notifications", "explore", "marketplace", "sponsors"];
-      return !excludedPaths.includes(pathParts[0]);
-    }
-    return false;
+  /**
+   * Load tools from extension storage
+   */
+  private async loadToolsData(): Promise<void> {
+    this.tools = await loadTools(this.repoInfo);
+    this.state.filteredTools = [...this.tools];
   }
 
-  private getRepoInfo(): RepoInfo | null {
-    const path = window.location.pathname;
-    const pathParts = path.split("/").filter((part) => part.length > 0);
+  /**
+   * State Management
+   */
+  private setError(error: string): void {
+    this.state.error = error;
+    debugLog("Error set:", error);
+  }
 
-    if (pathParts.length >= 2) {
-      return {
-        owner: pathParts[0],
-        repo: pathParts[1],
-        default_branch: "main",
-      };
-    }
-    return null;
+  private setLoading(isLoading: boolean): void {
+    this.state.isLoading = isLoading;
+    debugLog("Loading state:", isLoading);
   }
 
   private createFloatingButton(): void {
-    const existing = document.getElementById("github-tools-btn");
+    const existing = document.getElementById("tools-btn");
     if (existing) existing.remove();
 
-    const button = document.createElement("button");
-    button.id = "github-tools-btn";
-    button.innerHTML = "🔧";
-    button.title = "Open in GitHub Tools";
-    button.className = "github-tools-floating-btn";
-
-    const popup = document.createElement("div");
-    popup.id = "github-tools-popup";
-    popup.className = "github-tools-popup hidden";
-    popup.innerHTML = this.createPopupContent();
-
+    const button = createElement("button", {
+      id: "tools-btn",
+      className: "tools-floating-btn",
+      innerHTML: `<img class='tools-btn-icon' src="${LOGO_URL}" alt='iLoveGitHub Tools'/>`,
+      title: "Open in iLoveGitHub",
+      "aria-label": "Open in iLoveGitHub",
+    });
     document.body.appendChild(button);
-    document.body.appendChild(popup);
+    this.elements.floatingButton = button;
 
-    button.addEventListener("click", (e) => {
-      e.stopPropagation();
-      popup.classList.toggle("hidden");
-    });
+    // Add event listener
+    const cleanup = addEventListenerWithCleanup(
+      button,
+      "click",
+      this.handleFloatingButtonClick.bind(this),
+      {passive: true},
+    );
+    this.cleanupFunctions.push(cleanup);
 
-    document.addEventListener("click", (e) => {
-      if (!popup.contains(e.target as Node) && e.target !== button) {
-        popup.classList.add("hidden");
-      }
-    });
-
-    this.addToolClickHandlers();
-    this.addSearchHandler();
-    this.addLoginHandler();
+    debugLog("Floating button created");
   }
 
-  private addSearchHandler(): void {
-    const searchInput = document.getElementById("repo-search") as HTMLInputElement | null;
-    const searchBtn = document.getElementById("search-btn");
-
-    if (searchInput && searchBtn) {
-      const performSearch = () => {
-        const query = searchInput.value.trim();
-        if (query) {
-          window.open(
-            `https://github.com/search?q=${encodeURIComponent(query)}&type=repositories`,
-            "_blank",
-          );
-          document.getElementById("github-tools-popup")?.classList.add("hidden");
-        }
-      };
-
-      searchBtn.addEventListener("click", performSearch);
-      searchInput.addEventListener("keypress", (e) => {
-        if (e.key === "Enter") {
-          performSearch();
-        }
-      });
-    }
-  }
-
-  private addLoginHandler(): void {
-    const loginBtn = document.getElementById("github-login");
-    if (loginBtn) {
-      loginBtn.addEventListener("click", () => {
-        window.open("https://github.com/login", "_blank");
-        document.getElementById("github-tools-popup")?.classList.add("hidden");
-      });
-    }
-  }
-
-  private createPopupContent(): string {
-    const repoInfo = this.getRepoInfo();
-    if (!repoInfo) return '<div class="error">Could not detect repository</div>';
-
-    let content = `
-      <div class="popup-header">
-        <h3>🔧 iLoveGithub</h3>
-        <div class="repo-info">${repoInfo.owner}/${repoInfo.repo}</div>
-      </div>
-      <div class="tools-list">
-    `;
-
-    this.tools.forEach((tool, index) => {
-      content += `
-        <div class="tool-item" data-tool-index="${index}">
-          <img src="${tool.icon}" class="tool-icon" />
-          <div class="tool-details">
-            <div class="tool-name">${tool.name}</div>
-            <div class="tool-description">${tool.description}</div>
-          </div>
-          <span class="tool-arrow">→</span>
-        </div>
-      `;
-    });
-
-    content += "</div>";
-    return content;
-  }
-
-  private addToolClickHandlers(): void {
-    const toolItems = document.querySelectorAll<HTMLElement>(".tool-item");
-    toolItems.forEach((item) => {
-      item.addEventListener("click", (e) => {
-        const toolIndex = parseInt((e.currentTarget as HTMLElement).dataset.toolIndex ?? "-1");
-        if (toolIndex >= 0) {
-          this.openTool(toolIndex);
-        }
-      });
-    });
-  }
-
-  private openTool(toolIndex: number): void {
-    const tool = this.tools[toolIndex];
-    const repoInfo = this.getRepoInfo();
-
-    if (!repoInfo) {
-      console.error("Could not get repository information");
+  /**
+   * Create and show popup
+   */
+  private createPopup(): void {
+    if (!this.repoInfo) {
+      this.setError("Could not detect repository");
       return;
     }
 
-    const url = tool.url
-      .replace("{owner}", repoInfo.owner)
-      .replace("{repo}", repoInfo.repo)
-      .replace("{branch}", repoInfo.default_branch || "main");
+    const popup = createElement("div", {
+      id: DOM_IDS.POPUP,
+      className: `${CSS_CLASSES.POPUP} ${CSS_CLASSES.POPUP_HIDDEN}`,
+    });
 
-    window.open(url, "_blank");
-    document.getElementById("github-tools-popup")?.classList.add("hidden");
+    popup.innerHTML = generatePopupHTML(
+      this.repoInfo,
+      this.analytics,
+      this.state.filteredTools,
+      this.tools,
+      this.state.searchQuery,
+    );
+
+    document.body.appendChild(popup);
+    this.elements.popup = popup;
+
+    // Show with animation
+    requestAnimationFrame(() => {
+      popup.classList.remove(CSS_CLASSES.POPUP_HIDDEN);
+      popup.classList.add(CSS_CLASSES.POPUP_VISIBLE);
+    });
+
+    this.bindPopupEvents();
+    debugLog("Popup created");
+  }
+
+  /**
+   * Bind event listeners to popup elements
+   */
+  private bindPopupEvents(): void {
+    if (!this.elements.popup) return;
+
+    // Tool search
+    this.elements.searchInput = this.elements.popup.querySelector(`#${DOM_IDS.TOOL_SEARCH}`);
+    if (this.elements.searchInput) {
+      const cleanup = addEventListenerWithCleanup(
+        this.elements.searchInput,
+        "input",
+        this.handleToolSearch.bind(this),
+      );
+      this.cleanupFunctions.push(cleanup);
+    }
+
+    // Tool items
+    const toolItems = this.elements.popup.querySelectorAll(`.${CSS_CLASSES.TOOL_ITEM}`);
+    toolItems.forEach((item) => {
+      const cleanup = addEventListenerWithCleanup(
+        item as HTMLElement,
+        "click",
+        this.handleToolClick.bind(this),
+      );
+      this.cleanupFunctions.push(cleanup);
+    });
+
+    // Outside click
+    const outsideClickCleanup = addEventListenerWithCleanup(
+      document,
+      "click",
+      this.handleOutsideClick.bind(this),
+    );
+    this.cleanupFunctions.push(outsideClickCleanup);
+  }
+
+  private handleOutsideClick(e: Event): void {
+    const target = e.target as HTMLElement;
+
+    if (
+      this.state.isPopupOpen &&
+      this.elements.popup &&
+      this.elements.floatingButton &&
+      !this.elements.popup.contains(target) &&
+      target !== this.elements.floatingButton
+    ) {
+      this.hidePopup();
+    }
+  }
+
+  private handleToolSearch(e: Event): void {
+    const target = e.target as HTMLInputElement;
+    const query = target.value.toLowerCase().trim();
+    this.state.searchQuery = query;
+    this.updateFilteredTools(query);
+  }
+
+  private handleToolClick(e: Event): void {
+    const target = e.currentTarget as HTMLElement;
+    const toolIndex = parseInt(target.dataset["toolIndex"] || "0", 10);
+
+    if (toolIndex >= 0 && toolIndex < this.tools.length && this.repoInfo) {
+      const tool = this.tools[toolIndex];
+      window.open(tool.url, "_blank");
+      this.hidePopup();
+    }
+  }
+
+  /**
+   * Update filtered tools and refresh UI
+   */
+  private updateFilteredTools(query: string): void {
+    this.state.filteredTools = filterTools(this.tools, query);
+    this.updateToolsList();
+  }
+
+  /**
+   * Update tools list in DOM
+   */
+  private updateToolsList(): void {
+    if (!this.elements.popup) return;
+
+    const toolsList = this.elements.popup.querySelector(`.${CSS_CLASSES.TOOLS_LIST}`);
+    if (!toolsList) return;
+
+    // Update HTML
+    toolsList.innerHTML = updateToolsListHTML(this.state.filteredTools, this.tools);
+
+    // Re-bind tool click events
+    const newToolItems = toolsList.querySelectorAll(`.${CSS_CLASSES.TOOL_ITEM}`);
+    newToolItems.forEach((item) => {
+      const cleanup = addEventListenerWithCleanup(
+        item as HTMLElement,
+        "click",
+        this.handleToolClick.bind(this),
+      );
+      this.cleanupFunctions.push(cleanup);
+    });
+  }
+
+  /**
+   * Event Handlers
+   */
+  private handleFloatingButtonClick(e: Event): void {
+    e.stopPropagation();
+    this.togglePopup();
+  }
+
+  /**
+   * UI State Management
+   */
+  private togglePopup(): void {
+    if (this.state.isPopupOpen) {
+      this.hidePopup();
+    } else {
+      this.showPopup();
+    }
+  }
+
+  private showPopup(): void {
+    if (!this.state.isPopupOpen) {
+      this.createPopup();
+      this.state.isPopupOpen = true;
+      debugLog("Popup shown");
+    }
+  }
+
+  private hidePopup(): void {
+    if (this.state.isPopupOpen && this.elements.popup) {
+      this.elements.popup.classList.remove(CSS_CLASSES.POPUP_VISIBLE);
+      this.elements.popup.classList.add(CSS_CLASSES.POPUP_HIDDEN);
+
+      setTimeout(() => {
+        if (this.elements.popup) {
+          this.elements.popup.remove();
+          this.elements.popup = null;
+        }
+      }, UI_CONSTANTS.POPUP_ANIMATION_DELAY);
+
+      this.state.isPopupOpen = false;
+      debugLog("Popup hidden");
+    }
   }
 }
 
