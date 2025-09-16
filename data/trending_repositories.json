@@ -5,7 +5,7 @@
         "full_name": "thinking-machines-lab/batch_invariant_ops",
         "html_url": "https://github.com/thinking-machines-lab/batch_invariant_ops",
         "description": null,
-        "stargazers_count": 556,
+        "stargazers_count": 591,
         "language": "Python",
         "owner": {
             "login": "thinking-machines-lab",
@@ -14,54 +14,12 @@
         }
     },
     {
-        "id": 1053251785,
-        "name": "SRPO",
-        "full_name": "Tencent-Hunyuan/SRPO",
-        "html_url": "https://github.com/Tencent-Hunyuan/SRPO",
-        "description": "Directly Aligning the Full Diffusion Trajectory with Fine-Grained Human Preference",
-        "stargazers_count": 517,
-        "language": "Python",
-        "owner": {
-            "login": "Tencent-Hunyuan",
-            "avatar_url": "https://avatars.githubusercontent.com/u/210980732?v=4",
-            "html_url": "https://github.com/Tencent-Hunyuan"
-        }
-    },
-    {
-        "id": 1053643576,
-        "name": "Lumina-DiMOO",
-        "full_name": "Alpha-VLLM/Lumina-DiMOO",
-        "html_url": "https://github.com/Alpha-VLLM/Lumina-DiMOO",
-        "description": "Lumina-DiMOO - An Open-Sourced Multi-Modal Large Diffusion Language Model",
-        "stargazers_count": 314,
-        "language": "Python",
-        "owner": {
-            "login": "Alpha-VLLM",
-            "avatar_url": "https://avatars.githubusercontent.com/u/140153551?v=4",
-            "html_url": "https://github.com/Alpha-VLLM"
-        }
-    },
-    {
-        "id": 1053208747,
-        "name": "HuMo",
-        "full_name": "Phantom-video/HuMo",
-        "html_url": "https://github.com/Phantom-video/HuMo",
-        "description": "HuMo: Human-Centric Video Generation via Collaborative Multi-Modal Conditioning",
-        "stargazers_count": 295,
-        "language": "Python",
-        "owner": {
-            "login": "Phantom-video",
-            "avatar_url": "https://avatars.githubusercontent.com/u/198594796?v=4",
-            "html_url": "https://github.com/Phantom-video"
-        }
-    },
-    {
         "id": 1054273804,
         "name": "AgentGym-RL",
         "full_name": "WooooDyy/AgentGym-RL",
         "html_url": "https://github.com/WooooDyy/AgentGym-RL",
         "description": "Code and implementations for the paper \"AgentGym-RL: Training LLM Agents for Long-Horizon Decision Making through Multi-Turn Reinforcement Learning\" by Zhiheng Xi et al.",
-        "stargazers_count": 240,
+        "stargazers_count": 279,
         "language": "Python",
         "owner": {
             "login": "WooooDyy",
@@ -70,17 +28,59 @@
         }
     },
     {
-        "id": 1053522667,
-        "name": "Mini-o3",
-        "full_name": "Mini-o3/Mini-o3",
-        "html_url": "https://github.com/Mini-o3/Mini-o3",
-        "description": "Official Code for \"Mini-o3: Scaling Up Reasoning Patterns and Interaction Turns for Visual Search\"",
-        "stargazers_count": 223,
+        "id": 1054090386,
+        "name": "SpatialVID",
+        "full_name": "NJU-3DV/SpatialVID",
+        "html_url": "https://github.com/NJU-3DV/SpatialVID",
+        "description": "SpatialVID: A Large-Scale Video Dataset with Spatial Annotations",
+        "stargazers_count": 252,
         "language": "Python",
         "owner": {
-            "login": "Mini-o3",
-            "avatar_url": "https://avatars.githubusercontent.com/u/231206191?v=4",
-            "html_url": "https://github.com/Mini-o3"
+            "login": "NJU-3DV",
+            "avatar_url": "https://avatars.githubusercontent.com/u/152133786?v=4",
+            "html_url": "https://github.com/NJU-3DV"
+        }
+    },
+    {
+        "id": 1056129367,
+        "name": "Gift-Buyer-Tg",
+        "full_name": "aezate/Gift-Buyer-Tg",
+        "html_url": "https://github.com/aezate/Gift-Buyer-Tg",
+        "description": "A bot that scans and buys telegram gifts based on given criteria",
+        "stargazers_count": 206,
+        "language": "Python",
+        "owner": {
+            "login": "aezate",
+            "avatar_url": "https://avatars.githubusercontent.com/u/128062992?v=4",
+            "html_url": "https://github.com/aezate"
+        }
+    },
+    {
+        "id": 1053835457,
+        "name": "reconstruction-alignment",
+        "full_name": "HorizonWind2004/reconstruction-alignment",
+        "html_url": "https://github.com/HorizonWind2004/reconstruction-alignment",
+        "description": "Official repo of paper \"Reconstruction Alignment Improves Unified Multimodal Models\". Unlocking the Massive Zero-shot Potential in Unified Multimodal Models through Self-supervised Learning.",
+        "stargazers_count": 185,
+        "language": "Python",
+        "owner": {
+            "login": "HorizonWind2004",
+            "avatar_url": "https://avatars.githubusercontent.com/u/50254737?v=4",
+            "html_url": "https://github.com/HorizonWind2004"
+        }
+    },
+    {
+        "id": 1055014228,
+        "name": "PrimoAgent",
+        "full_name": "ivebotunac/PrimoAgent",
+        "html_url": "https://github.com/ivebotunac/PrimoAgent",
+        "description": "PrimoAgent: Multi-Agent Stock Analysis",
+        "stargazers_count": 176,
+        "language": "Python",
+        "owner": {
+            "login": "ivebotunac",
+            "avatar_url": "https://avatars.githubusercontent.com/u/33400033?v=4",
+            "html_url": "https://github.com/ivebotunac"
         }
     }
 ]
