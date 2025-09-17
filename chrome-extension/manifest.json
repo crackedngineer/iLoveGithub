@@ -3,7 +3,7 @@
   "name": "iLoveGithub Extension",
   "version": "1.0.0",
   "description": "A curated collection of magical tools built around GitHub",
-  "permissions": ["activeTab", "storage", "scripting"],
+  "permissions": [],
   "host_permissions": [
     "https://github.com/*",
     "https://*.github.com/*",

@@ -16,7 +16,7 @@ class BackgroundService {
 
   private init(): void {
     // Load stored analytics
-    this.loadAnalytics();
+    // this.loadAnalytics();
 
     // Listen for messages from content script
     chrome.runtime.onMessage.addListener((message, sender, sendResponse) => {
@@ -35,22 +35,22 @@ class BackgroundService {
     });
   }
 
-  private async loadAnalytics(): Promise<void> {
-    try {
-      const result = await chrome.storage.local.get(["analytics"]);
-      this.analytics = result.analytics || [];
-    } catch (error) {
-      console.error("Failed to load analytics:", error);
-    }
-  }
+  // private async loadAnalytics(): Promise<void> {
+  //   try {
+  //     const result = await chrome.storage.local.get(["analytics"]);
+  //     this.analytics = result.analytics || [];
+  //   } catch (error) {
+  //     console.error("Failed to load analytics:", error);
+  //   }
+  // }
 
-  private async saveAnalytics(): Promise<void> {
-    try {
-      await chrome.storage.local.set({analytics: this.analytics});
-    } catch (error) {
-      console.error("Failed to save analytics:", error);
-    }
-  }
+  // private async saveAnalytics(): Promise<void> {
+  //   try {
+  //     await chrome.storage.local.set({analytics: this.analytics});
+  //   } catch (error) {
+  //     console.error("Failed to save analytics:", error);
+  //   }
+  // }
 
   private handleMessage(
     message: any,
@@ -102,7 +102,7 @@ class BackgroundService {
       this.analytics = this.analytics.slice(-1000);
     }
 
-    this.saveAnalytics();
+    // this.saveAnalytics();
   }
 
   private async getRepositoryInfo(owner: string, repo: string): Promise<any> {
@@ -132,29 +132,28 @@ class BackgroundService {
     return await fetchTools(data.owner, data.repo, data.default_branch || "master");
   }
 
-  private handleActionClick(tab: chrome.tabs.Tab): void {
-    if (tab.url?.includes("github.com")) {
-      chrome.tabs.sendMessage(tab.id!, {type: "TOGGLE_OVERLAY"});
-    } else {
-      // If not on GitHub, open GitHub
-      chrome.tabs.create({url: "https://github.com"});
-    }
-  }
+  // private handleActionClick(tab: chrome.tabs.Tab): void {
+  //   if (tab.url?.includes("github.com")) {
+  //     chrome.tabs.sendMessage(tab.id!, {type: "TOGGLE_OVERLAY"});
+  //   } else {
+  //     // If not on GitHub, open GitHub
+  //     chrome.tabs.create({url: "https://github.com"});
+  //   }
+  // }
 
   private handleInstallation(): void {
     // Set up default storage
-    chrome.storage.local.set({
-      analytics: [],
-      settings: {
-        autoShow: true,
-        defaultTools: ["uithub", "github1s", "gitpod"],
-      },
-    });
-
+    // chrome.storage.local.set({
+    //   analytics: [],
+    //   settings: {
+    //     autoShow: true,
+    //     defaultTools: ["uithub", "github1s", "gitpod"],
+    //   },
+    // });
     // Show welcome message
-    chrome.tabs.create({
-      url: chrome.runtime.getURL("welcome.html"),
-    });
+    // chrome.tabs.create({
+    //   url: chrome.runtime.getURL("welcome.html"),
+    // });
   }
 
   public getPopularTools(): {name: string; count: number}[] {
