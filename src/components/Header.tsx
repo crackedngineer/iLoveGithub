@@ -15,6 +15,7 @@ import {
   DropdownMenuSeparator,
   DropdownMenuItem,
 } from "@/components/ui/dropdown-menu";
+import {GitHubStarsButton} from "@/components/ui/shadcn-io/github-stars-button";
 import DonationModal from "./DonationModal";
 import {
   BUY_ME_COFFEE_URL,
@@ -22,6 +23,7 @@ import {
   GITHUB_REPO_URL,
   GITHUB_SUBMIT_TOOL_URL,
   DEMO_VIDEO_URL,
+  DefaultGithubRepo,
 } from "@/constants";
 import {RateLimitDisplay} from "./RateLimitDisplay";
 import {useAppLocation} from "./AppLocationProvider";
@@ -69,9 +71,6 @@ const Header = () => {
           >
             Submit a Tool
           </Button>
-          <Button variant="ghost" size="sm" onClick={() => window.open(GITHUB_REPO_URL, "_blank")}>
-            GitHub
-          </Button>
           <Button
             variant="ghost"
             size="sm"
@@ -92,7 +91,7 @@ const Header = () => {
               <Button
                 variant="outline"
                 size="sm"
-                className="flex items-center gap-1 bg-github-pink text-white hover:bg-github-darkPink border-none rounded-full px-4"
+                className="flex items-center gap-1 bg-github-pink text-white hover:bg-github-darkPink border-none rounded-full px-4 py-5"
               >
                 Donate ❤️
               </Button>
@@ -112,6 +111,13 @@ const Header = () => {
               </DropdownMenuContent>
             )}
           </DropdownMenu>
+
+          {/* Github Stars Button */}
+          <GitHubStarsButton
+            username={DefaultGithubRepo.owner}
+            repo={DefaultGithubRepo.repo}
+            onClick={(e) => window.open(GITHUB_REPO_URL, "_blank")}
+          />
 
           <DropdownMenu>
             <DropdownMenuTrigger asChild>
@@ -180,16 +186,7 @@ const Header = () => {
           >
             Submit a Tool
           </Button>
-          <Button
-            variant="ghost"
-            className="w-full justify-start text-github-gray dark:text-white/90 hover:text-github-blue dark:hover:text-white"
-            onClick={() => {
-              setIsMenuOpen(false);
-              window.open(GITHUB_REPO_URL, "_blank");
-            }}
-          >
-            GitHub
-          </Button>
+
           <Button
             variant="ghost"
             className="w-full justify-start text-github-gray dark:text-white/90 hover:text-github-blue dark:hover:text-white"
@@ -227,12 +224,22 @@ const Header = () => {
           )}
           <a href={BUY_ME_COFFEE_URL} target="_blank" rel="noopener noreferrer" className="w-full">
             <Button
-              variant="outline"
-              className="w-full bg-github-pink text-white hover:bg-github-darkPink"
+              variant="ghost"
+              className="w-full justify-start text-github-gray dark:text-white/90 hover:text-github-blue dark:hover:text-white"
             >
               Donate ❤️
             </Button>
           </a>
+
+          <GitHubStarsButton
+            className=""
+            username="animate-ui"
+            repo="animate-ui"
+            onClick={() => {
+              setIsMenuOpen(false);
+              window.open(GITHUB_REPO_URL, "_blank");
+            }}
+          />
         </div>
       )}
 
