@@ -232,9 +232,8 @@ const Header = () => {
           </a>
 
           <GitHubStarsButton
-            className=""
-            username="animate-ui"
-            repo="animate-ui"
+            username={DefaultGithubRepo.owner}
+            repo={DefaultGithubRepo.repo}
             onClick={() => {
               setIsMenuOpen(false);
               window.open(GITHUB_REPO_URL, "_blank");
