@@ -1,30 +1,30 @@
 [
     {
-        "id": 1055591911,
-        "name": "unifolm-world-model-action",
-        "full_name": "unitreerobotics/unifolm-world-model-action",
-        "html_url": "https://github.com/unitreerobotics/unifolm-world-model-action",
-        "description": null,
-        "stargazers_count": 282,
+        "id": 1057664813,
+        "name": "VoxCPM",
+        "full_name": "OpenBMB/VoxCPM",
+        "html_url": "https://github.com/OpenBMB/VoxCPM",
+        "description": "VoxCPM: Tokenizer-Free TTS for Context-Aware Speech Generation and True-to-Life Voice Cloning",
+        "stargazers_count": 612,
         "language": "Python",
         "owner": {
-            "login": "unitreerobotics",
-            "avatar_url": "https://avatars.githubusercontent.com/u/44998897?v=4",
-            "html_url": "https://github.com/unitreerobotics"
+            "login": "OpenBMB",
+            "avatar_url": "https://avatars.githubusercontent.com/u/89920203?v=4",
+            "html_url": "https://github.com/OpenBMB"
         }
     },
     {
-        "id": 1055014228,
-        "name": "PrimoAgent",
-        "full_name": "ivebotunac/PrimoAgent",
-        "html_url": "https://github.com/ivebotunac/PrimoAgent",
-        "description": "PrimoAgent: Multi-Agent Stock Analysis",
-        "stargazers_count": 187,
+        "id": 1057828532,
+        "name": "Qwen3-ASR-Toolkit",
+        "full_name": "QwenLM/Qwen3-ASR-Toolkit",
+        "html_url": "https://github.com/QwenLM/Qwen3-ASR-Toolkit",
+        "description": "Official Python toolkit for the Qwen3-ASR API. Parallel high\u2011throughput calls, robust long\u2011audio transcription, multi\u2011sample\u2011rate support.",
+        "stargazers_count": 304,
         "language": "Python",
         "owner": {
-            "login": "ivebotunac",
-            "avatar_url": "https://avatars.githubusercontent.com/u/33400033?v=4",
-            "html_url": "https://github.com/ivebotunac"
+            "login": "QwenLM",
+            "avatar_url": "https://avatars.githubusercontent.com/u/141221163?v=4",
+            "html_url": "https://github.com/QwenLM"
         }
     },
     {
@@ -33,7 +33,7 @@
         "full_name": "yangzhou24/OmniWorld",
         "html_url": "https://github.com/yangzhou24/OmniWorld",
         "description": "OmniWorld: A Multi-Domain and Multi-Modal Dataset for 4D World Modeling",
-        "stargazers_count": 178,
+        "stargazers_count": 301,
         "language": "Python",
         "owner": {
             "login": "yangzhou24",
@@ -42,45 +42,45 @@
         }
     },
     {
-        "id": 1055978902,
-        "name": "maildrop",
-        "full_name": "haileyydev/maildrop",
-        "html_url": "https://github.com/haileyydev/maildrop",
+        "id": 1058015331,
+        "name": "LLaVA-OneVision-1.5",
+        "full_name": "EvolvingLMMs-Lab/LLaVA-OneVision-1.5",
+        "html_url": "https://github.com/EvolvingLMMs-Lab/LLaVA-OneVision-1.5",
         "description": null,
-        "stargazers_count": 119,
+        "stargazers_count": 204,
         "language": "Python",
         "owner": {
-            "login": "haileyydev",
-            "avatar_url": "https://avatars.githubusercontent.com/u/207059059?v=4",
-            "html_url": "https://github.com/haileyydev"
+            "login": "EvolvingLMMs-Lab",
+            "avatar_url": "https://avatars.githubusercontent.com/u/154951679?v=4",
+            "html_url": "https://github.com/EvolvingLMMs-Lab"
         }
     },
     {
-        "id": 1055554657,
-        "name": "pyLDAPGui",
-        "full_name": "ZephrFish/pyLDAPGui",
-        "html_url": "https://github.com/ZephrFish/pyLDAPGui",
-        "description": "Python based GUI for browsing LDAP",
-        "stargazers_count": 104,
+        "id": 1057897892,
+        "name": "VibeVoice-finetuning",
+        "full_name": "voicepowered-ai/VibeVoice-finetuning",
+        "html_url": "https://github.com/voicepowered-ai/VibeVoice-finetuning",
+        "description": "Unofficial WIP LoRa Finetuning repository for VibeVoice",
+        "stargazers_count": 129,
         "language": "Python",
         "owner": {
-            "login": "ZephrFish",
-            "avatar_url": "https://avatars.githubusercontent.com/u/5783068?v=4",
-            "html_url": "https://github.com/ZephrFish"
+            "login": "voicepowered-ai",
+            "avatar_url": "https://avatars.githubusercontent.com/u/191261731?v=4",
+            "html_url": "https://github.com/voicepowered-ai"
         }
     },
     {
-        "id": 1054542005,
-        "name": "RecIS",
-        "full_name": "alibaba/RecIS",
-        "html_url": "https://github.com/alibaba/RecIS",
-        "description": "A unified architecture deep learning framework designed specifically for ultra-large-scale sparse models.",
-        "stargazers_count": 91,
+        "id": 1057962659,
+        "name": "InternVLA-M1",
+        "full_name": "InternRobotics/InternVLA-M1",
+        "html_url": "https://github.com/InternRobotics/InternVLA-M1",
+        "description": null,
+        "stargazers_count": 81,
         "language": "Python",
         "owner": {
-            "login": "alibaba",
-            "avatar_url": "https://avatars.githubusercontent.com/u/1961952?v=4",
-            "html_url": "https://github.com/alibaba"
+            "login": "InternRobotics",
+            "avatar_url": "https://avatars.githubusercontent.com/u/127282590?v=4",
+            "html_url": "https://github.com/InternRobotics"
         }
     }
 ]
