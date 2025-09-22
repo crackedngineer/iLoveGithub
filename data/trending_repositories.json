@@ -5,7 +5,7 @@
         "full_name": "OpenBMB/VoxCPM",
         "html_url": "https://github.com/OpenBMB/VoxCPM",
         "description": "VoxCPM: Tokenizer-Free TTS for Context-Aware Speech Generation and True-to-Life Voice Cloning",
-        "stargazers_count": 971,
+        "stargazers_count": 1064,
         "language": "Python",
         "owner": {
             "login": "OpenBMB",
@@ -14,26 +14,12 @@
         }
     },
     {
-        "id": 1057828532,
-        "name": "Qwen3-ASR-Toolkit",
-        "full_name": "QwenLM/Qwen3-ASR-Toolkit",
-        "html_url": "https://github.com/QwenLM/Qwen3-ASR-Toolkit",
-        "description": "Official Python toolkit for the Qwen3-ASR API. Parallel high\u2011throughput calls, robust long\u2011audio transcription, multi\u2011sample\u2011rate support.",
-        "stargazers_count": 404,
-        "language": "Python",
-        "owner": {
-            "login": "QwenLM",
-            "avatar_url": "https://avatars.githubusercontent.com/u/141221163?v=4",
-            "html_url": "https://github.com/QwenLM"
-        }
-    },
-    {
         "id": 1059794903,
         "name": "MiMo-Audio",
         "full_name": "XiaomiMiMo/MiMo-Audio",
         "html_url": "https://github.com/XiaomiMiMo/MiMo-Audio",
         "description": null,
-        "stargazers_count": 393,
+        "stargazers_count": 472,
         "language": "Python",
         "owner": {
             "login": "XiaomiMiMo",
@@ -42,17 +28,17 @@
         }
     },
     {
-        "id": 1057239626,
-        "name": "OmniWorld",
-        "full_name": "yangzhou24/OmniWorld",
-        "html_url": "https://github.com/yangzhou24/OmniWorld",
-        "description": "OmniWorld: A Multi-Domain and Multi-Modal Dataset for 4D World Modeling",
-        "stargazers_count": 332,
+        "id": 1057828532,
+        "name": "Qwen3-ASR-Toolkit",
+        "full_name": "QwenLM/Qwen3-ASR-Toolkit",
+        "html_url": "https://github.com/QwenLM/Qwen3-ASR-Toolkit",
+        "description": "Official Python toolkit for the Qwen3-ASR API. Parallel high\u2011throughput calls, robust long\u2011audio transcription, multi\u2011sample\u2011rate support.",
+        "stargazers_count": 444,
         "language": "Python",
         "owner": {
-            "login": "yangzhou24",
-            "avatar_url": "https://avatars.githubusercontent.com/u/100454725?v=4",
-            "html_url": "https://github.com/yangzhou24"
+            "login": "QwenLM",
+            "avatar_url": "https://avatars.githubusercontent.com/u/141221163?v=4",
+            "html_url": "https://github.com/QwenLM"
         }
     },
     {
@@ -61,7 +47,7 @@
         "full_name": "EvolvingLMMs-Lab/LLaVA-OneVision-1.5",
         "html_url": "https://github.com/EvolvingLMMs-Lab/LLaVA-OneVision-1.5",
         "description": null,
-        "stargazers_count": 266,
+        "stargazers_count": 290,
         "language": "Python",
         "owner": {
             "login": "EvolvingLMMs-Lab",
@@ -75,12 +61,26 @@
         "full_name": "DecartAI/Lucy-Edit-ComfyUI",
         "html_url": "https://github.com/DecartAI/Lucy-Edit-ComfyUI",
         "description": null,
-        "stargazers_count": 164,
+        "stargazers_count": 219,
         "language": "Python",
         "owner": {
             "login": "DecartAI",
             "avatar_url": "https://avatars.githubusercontent.com/u/142676551?v=4",
             "html_url": "https://github.com/DecartAI"
+        }
+    },
+    {
+        "id": 1059949736,
+        "name": "OpenTrack",
+        "full_name": "GalaxyGeneralRobotics/OpenTrack",
+        "html_url": "https://github.com/GalaxyGeneralRobotics/OpenTrack",
+        "description": "Official implementation of OpenTrack.",
+        "stargazers_count": 194,
+        "language": "Python",
+        "owner": {
+            "login": "GalaxyGeneralRobotics",
+            "avatar_url": "https://avatars.githubusercontent.com/u/169434821?v=4",
+            "html_url": "https://github.com/GalaxyGeneralRobotics"
         }
     }
 ]
