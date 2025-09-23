@@ -1,25 +1,11 @@
 [
     {
-        "id": 1057664813,
-        "name": "VoxCPM",
-        "full_name": "OpenBMB/VoxCPM",
-        "html_url": "https://github.com/OpenBMB/VoxCPM",
-        "description": "VoxCPM: Tokenizer-Free TTS for Context-Aware Speech Generation and True-to-Life Voice Cloning",
-        "stargazers_count": 1064,
-        "language": "Python",
-        "owner": {
-            "login": "OpenBMB",
-            "avatar_url": "https://avatars.githubusercontent.com/u/89920203?v=4",
-            "html_url": "https://github.com/OpenBMB"
-        }
-    },
-    {
         "id": 1059794903,
         "name": "MiMo-Audio",
         "full_name": "XiaomiMiMo/MiMo-Audio",
         "html_url": "https://github.com/XiaomiMiMo/MiMo-Audio",
         "description": null,
-        "stargazers_count": 472,
+        "stargazers_count": 598,
         "language": "Python",
         "owner": {
             "login": "XiaomiMiMo",
@@ -28,40 +14,12 @@
         }
     },
     {
-        "id": 1057828532,
-        "name": "Qwen3-ASR-Toolkit",
-        "full_name": "QwenLM/Qwen3-ASR-Toolkit",
-        "html_url": "https://github.com/QwenLM/Qwen3-ASR-Toolkit",
-        "description": "Official Python toolkit for the Qwen3-ASR API. Parallel high\u2011throughput calls, robust long\u2011audio transcription, multi\u2011sample\u2011rate support.",
-        "stargazers_count": 444,
-        "language": "Python",
-        "owner": {
-            "login": "QwenLM",
-            "avatar_url": "https://avatars.githubusercontent.com/u/141221163?v=4",
-            "html_url": "https://github.com/QwenLM"
-        }
-    },
-    {
-        "id": 1058015331,
-        "name": "LLaVA-OneVision-1.5",
-        "full_name": "EvolvingLMMs-Lab/LLaVA-OneVision-1.5",
-        "html_url": "https://github.com/EvolvingLMMs-Lab/LLaVA-OneVision-1.5",
-        "description": null,
-        "stargazers_count": 290,
-        "language": "Python",
-        "owner": {
-            "login": "EvolvingLMMs-Lab",
-            "avatar_url": "https://avatars.githubusercontent.com/u/154951679?v=4",
-            "html_url": "https://github.com/EvolvingLMMs-Lab"
-        }
-    },
-    {
         "id": 1058729107,
         "name": "Lucy-Edit-ComfyUI",
         "full_name": "DecartAI/Lucy-Edit-ComfyUI",
         "html_url": "https://github.com/DecartAI/Lucy-Edit-ComfyUI",
         "description": null,
-        "stargazers_count": 219,
+        "stargazers_count": 311,
         "language": "Python",
         "owner": {
             "login": "DecartAI",
@@ -75,12 +33,54 @@
         "full_name": "GalaxyGeneralRobotics/OpenTrack",
         "html_url": "https://github.com/GalaxyGeneralRobotics/OpenTrack",
         "description": "Official implementation of OpenTrack.",
-        "stargazers_count": 194,
+        "stargazers_count": 272,
         "language": "Python",
         "owner": {
             "login": "GalaxyGeneralRobotics",
             "avatar_url": "https://avatars.githubusercontent.com/u/169434821?v=4",
             "html_url": "https://github.com/GalaxyGeneralRobotics"
+        }
+    },
+    {
+        "id": 1059032781,
+        "name": "ComfyUI-VoxCPM",
+        "full_name": "wildminder/ComfyUI-VoxCPM",
+        "html_url": "https://github.com/wildminder/ComfyUI-VoxCPM",
+        "description": "ComfyUI node for highly expressive speech and realistic zero-shot voice cloning",
+        "stargazers_count": 170,
+        "language": "Python",
+        "owner": {
+            "login": "wildminder",
+            "avatar_url": "https://avatars.githubusercontent.com/u/2853742?v=4",
+            "html_url": "https://github.com/wildminder"
+        }
+    },
+    {
+        "id": 1060656097,
+        "name": "VLA-Adapter",
+        "full_name": "OpenHelix-Team/VLA-Adapter",
+        "html_url": "https://github.com/OpenHelix-Team/VLA-Adapter",
+        "description": "VLA-Adapter: An Effective Paradigm for Tiny-Scale Vision-Language-Action Model",
+        "stargazers_count": 158,
+        "language": "Python",
+        "owner": {
+            "login": "OpenHelix-Team",
+            "avatar_url": "https://avatars.githubusercontent.com/u/216536714?v=4",
+            "html_url": "https://github.com/OpenHelix-Team"
+        }
+    },
+    {
+        "id": 1060447098,
+        "name": "CrystalLens",
+        "full_name": "SecFathy/CrystalLens",
+        "html_url": "https://github.com/SecFathy/CrystalLens",
+        "description": "CrystalLens is a social media screening and analysis platform that collects posts from multiple sources (via Apify scrapers) and applies local AI (Ollama) to generate character insights, behavioral patterns, and risk assessments for employees or candidates.",
+        "stargazers_count": 121,
+        "language": "Python",
+        "owner": {
+            "login": "SecFathy",
+            "avatar_url": "https://avatars.githubusercontent.com/u/6282454?v=4",
+            "html_url": "https://github.com/SecFathy"
         }
     }
 ]
