@@ -5,7 +5,7 @@
         "full_name": "XiaomiMiMo/MiMo-Audio",
         "html_url": "https://github.com/XiaomiMiMo/MiMo-Audio",
         "description": null,
-        "stargazers_count": 598,
+        "stargazers_count": 646,
         "language": "Python",
         "owner": {
             "login": "XiaomiMiMo",
@@ -14,26 +14,12 @@
         }
     },
     {
-        "id": 1058729107,
-        "name": "Lucy-Edit-ComfyUI",
-        "full_name": "DecartAI/Lucy-Edit-ComfyUI",
-        "html_url": "https://github.com/DecartAI/Lucy-Edit-ComfyUI",
-        "description": null,
-        "stargazers_count": 311,
-        "language": "Python",
-        "owner": {
-            "login": "DecartAI",
-            "avatar_url": "https://avatars.githubusercontent.com/u/142676551?v=4",
-            "html_url": "https://github.com/DecartAI"
-        }
-    },
-    {
         "id": 1059949736,
         "name": "OpenTrack",
         "full_name": "GalaxyGeneralRobotics/OpenTrack",
         "html_url": "https://github.com/GalaxyGeneralRobotics/OpenTrack",
         "description": "Official implementation of OpenTrack.",
-        "stargazers_count": 272,
+        "stargazers_count": 328,
         "language": "Python",
         "owner": {
             "login": "GalaxyGeneralRobotics",
@@ -42,26 +28,12 @@
         }
     },
     {
-        "id": 1059032781,
-        "name": "ComfyUI-VoxCPM",
-        "full_name": "wildminder/ComfyUI-VoxCPM",
-        "html_url": "https://github.com/wildminder/ComfyUI-VoxCPM",
-        "description": "ComfyUI node for highly expressive speech and realistic zero-shot voice cloning",
-        "stargazers_count": 170,
-        "language": "Python",
-        "owner": {
-            "login": "wildminder",
-            "avatar_url": "https://avatars.githubusercontent.com/u/2853742?v=4",
-            "html_url": "https://github.com/wildminder"
-        }
-    },
-    {
         "id": 1060656097,
         "name": "VLA-Adapter",
         "full_name": "OpenHelix-Team/VLA-Adapter",
         "html_url": "https://github.com/OpenHelix-Team/VLA-Adapter",
         "description": "VLA-Adapter: An Effective Paradigm for Tiny-Scale Vision-Language-Action Model",
-        "stargazers_count": 158,
+        "stargazers_count": 273,
         "language": "Python",
         "owner": {
             "login": "OpenHelix-Team",
@@ -70,12 +42,40 @@
         }
     },
     {
+        "id": 1060909285,
+        "name": "openpoke",
+        "full_name": "shlokkhemani/openpoke",
+        "html_url": "https://github.com/shlokkhemani/openpoke",
+        "description": "Open source implementation of Poke ",
+        "stargazers_count": 212,
+        "language": "Python",
+        "owner": {
+            "login": "shlokkhemani",
+            "avatar_url": "https://avatars.githubusercontent.com/u/19996714?v=4",
+            "html_url": "https://github.com/shlokkhemani"
+        }
+    },
+    {
+        "id": 1059095817,
+        "name": "HDMI",
+        "full_name": "LeCAR-Lab/HDMI",
+        "html_url": "https://github.com/LeCAR-Lab/HDMI",
+        "description": null,
+        "stargazers_count": 171,
+        "language": "Python",
+        "owner": {
+            "login": "LeCAR-Lab",
+            "avatar_url": "https://avatars.githubusercontent.com/u/142372369?v=4",
+            "html_url": "https://github.com/LeCAR-Lab"
+        }
+    },
+    {
         "id": 1060447098,
         "name": "CrystalLens",
         "full_name": "SecFathy/CrystalLens",
         "html_url": "https://github.com/SecFathy/CrystalLens",
         "description": "CrystalLens is a social media screening and analysis platform that collects posts from multiple sources (via Apify scrapers) and applies local AI (Ollama) to generate character insights, behavioral patterns, and risk assessments for employees or candidates.",
-        "stargazers_count": 121,
+        "stargazers_count": 144,
         "language": "Python",
         "owner": {
             "login": "SecFathy",
