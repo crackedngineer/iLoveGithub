@@ -1,39 +1,11 @@
 [
     {
-        "id": 1059794903,
-        "name": "MiMo-Audio",
-        "full_name": "XiaomiMiMo/MiMo-Audio",
-        "html_url": "https://github.com/XiaomiMiMo/MiMo-Audio",
-        "description": null,
-        "stargazers_count": 662,
-        "language": "Python",
-        "owner": {
-            "login": "XiaomiMiMo",
-            "avatar_url": "https://avatars.githubusercontent.com/u/208276378?v=4",
-            "html_url": "https://github.com/XiaomiMiMo"
-        }
-    },
-    {
-        "id": 1059949736,
-        "name": "OpenTrack",
-        "full_name": "GalaxyGeneralRobotics/OpenTrack",
-        "html_url": "https://github.com/GalaxyGeneralRobotics/OpenTrack",
-        "description": "Official implementation of OpenTrack.",
-        "stargazers_count": 374,
-        "language": "Python",
-        "owner": {
-            "login": "GalaxyGeneralRobotics",
-            "avatar_url": "https://avatars.githubusercontent.com/u/169434821?v=4",
-            "html_url": "https://github.com/GalaxyGeneralRobotics"
-        }
-    },
-    {
         "id": 1060656097,
         "name": "VLA-Adapter",
         "full_name": "OpenHelix-Team/VLA-Adapter",
         "html_url": "https://github.com/OpenHelix-Team/VLA-Adapter",
         "description": "VLA-Adapter: An Effective Paradigm for Tiny-Scale Vision-Language-Action Model",
-        "stargazers_count": 319,
+        "stargazers_count": 392,
         "language": "Python",
         "owner": {
             "login": "OpenHelix-Team",
@@ -47,7 +19,7 @@
         "full_name": "shlokkhemani/openpoke",
         "html_url": "https://github.com/shlokkhemani/openpoke",
         "description": "Open source implementation of Poke ",
-        "stargazers_count": 237,
+        "stargazers_count": 250,
         "language": "Python",
         "owner": {
             "login": "shlokkhemani",
@@ -56,31 +28,59 @@
         }
     },
     {
-        "id": 1060447098,
-        "name": "CrystalLens",
-        "full_name": "SecFathy/CrystalLens",
-        "html_url": "https://github.com/SecFathy/CrystalLens",
-        "description": "CrystalLens is a social media screening and analysis platform that collects posts from multiple sources (via Apify scrapers) and applies local AI (Ollama) to generate character insights, behavioral patterns, and risk assessments for employees or candidates.",
-        "stargazers_count": 159,
+        "id": 1062261519,
+        "name": "ml-simplefold",
+        "full_name": "apple/ml-simplefold",
+        "html_url": "https://github.com/apple/ml-simplefold",
+        "description": null,
+        "stargazers_count": 173,
         "language": "Python",
         "owner": {
-            "login": "SecFathy",
-            "avatar_url": "https://avatars.githubusercontent.com/u/6282454?v=4",
-            "html_url": "https://github.com/SecFathy"
+            "login": "apple",
+            "avatar_url": "https://avatars.githubusercontent.com/u/10639145?v=4",
+            "html_url": "https://github.com/apple"
         }
     },
     {
-        "id": 1059890479,
-        "name": "DiffusionNFT",
-        "full_name": "NVlabs/DiffusionNFT",
-        "html_url": "https://github.com/NVlabs/DiffusionNFT",
-        "description": "DiffusionNFT: Online Diffusion Reinforcement with Forward Process",
-        "stargazers_count": 128,
+        "id": 1061772265,
+        "name": "E-problem",
+        "full_name": "xiyuhang2003/E-problem",
+        "html_url": "https://github.com/xiyuhang2003/E-problem",
+        "description": "2025\u5e74\u4e2d\u56fd\u7814\u7a76\u751f\u6570\u5b66\u5efa\u6a21\u7ade\u8d5bE\u9898\uff1a\u9ad8\u901f\u5217\u8f66\u8f74\u627f\u667a\u80fd\u6545\u969c\u8bca\u65ad",
+        "stargazers_count": 126,
         "language": "Python",
         "owner": {
-            "login": "NVlabs",
-            "avatar_url": "https://avatars.githubusercontent.com/u/2695301?v=4",
-            "html_url": "https://github.com/NVlabs"
+            "login": "xiyuhang2003",
+            "avatar_url": "https://avatars.githubusercontent.com/u/105291549?v=4",
+            "html_url": "https://github.com/xiyuhang2003"
+        }
+    },
+    {
+        "id": 1061969082,
+        "name": "ComfyUI-WanAnimatePreprocess",
+        "full_name": "kijai/ComfyUI-WanAnimatePreprocess",
+        "html_url": "https://github.com/kijai/ComfyUI-WanAnimatePreprocess",
+        "description": "ComfyUI nodes for WanAnimate model input preprocessing",
+        "stargazers_count": 123,
+        "language": "Python",
+        "owner": {
+            "login": "kijai",
+            "avatar_url": "https://avatars.githubusercontent.com/u/40791699?v=4",
+            "html_url": "https://github.com/kijai"
+        }
+    },
+    {
+        "id": 1060546981,
+        "name": "VisualMimic",
+        "full_name": "visualmimic/VisualMimic",
+        "html_url": "https://github.com/visualmimic/VisualMimic",
+        "description": "[arXiv 2025] VisualMimic: Visual Humanoid Loco-Manipulation via Motion Tracking and Generation",
+        "stargazers_count": 100,
+        "language": "Python",
+        "owner": {
+            "login": "visualmimic",
+            "avatar_url": "https://avatars.githubusercontent.com/u/226833762?v=4",
+            "html_url": "https://github.com/visualmimic"
         }
     }
 ]
