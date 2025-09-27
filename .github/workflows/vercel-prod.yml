@@ -1,13 +1,9 @@
 name: Vercel Production Deployment
 
 on:
-  push:
-    tags:
-      - "refs/tags/v*.*.*"
-      - "v*"
   release:
-    types: [published]
-  workflow_dispatch:
+    types: 
+      - published
 
 permissions:
   contents: read
