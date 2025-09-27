@@ -4,6 +4,16 @@ All notable changes to this project will be documented in this file.
 
 ---
 
+## [0.12.6](https://github.com/crackedngineer/iLoveGithub/compare/v0.12.5...v0.12.6) (2025-09-27)
+
+
+### Bug Fixes
+
+* added github token inside release please ([d001f5a](https://github.com/crackedngineer/iLoveGithub/commit/d001f5a62c9adc256f3b6a41170e4f28674c4f16))
+* testing vercel prod depoyment changes ([f841451](https://github.com/crackedngineer/iLoveGithub/commit/f8414511f31a2b2c15060391064728248be2057e))
+* updated github token name to GH_TOKEN ([31edc6d](https://github.com/crackedngineer/iLoveGithub/commit/31edc6d3f0b8b851cd317a21ad0dad917648a2b1))
+* vercel deployment fixes ([b946610](https://github.com/crackedngineer/iLoveGithub/commit/b94661038f040643b603af6ce46da552fdf7a501))
+
 ## [0.12.5](https://github.com/crackedngineer/iLoveGithub/compare/v0.12.4...v0.12.5) (2025-09-27)
 
 
