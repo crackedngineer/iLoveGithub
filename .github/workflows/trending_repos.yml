@@ -3,7 +3,6 @@ name: Fetch Trending Repositories (Python)
 on:
   schedule:
     - cron: "0 0 * * *" # Daily at midnight UTC
-  workflow_dispatch:
 
 permissions:
   contents: write

@@ -1,0 +1,36 @@
+name: Vercel Production Deployment
+
+on:
+  push:
+    tags:
+      - "v*.*.*"
+
+permissions:
+  contents: read
+  pull-requests: write
+
+jobs:
+  deploy-prod:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      - name: Deploy to Vercel (Production)
+        id: vercel
+        uses: amondnet/vercel-action@v25
+        with:
+          vercel-token: ${{ secrets.VERCEL_TOKEN }}
+          vercel-args: --prod
+          vercel-org-id: ${{ secrets.ORG_ID }}
+          vercel-project-id: ${{ secrets.PROJECT_ID }}
+          github-comment: true
+
+      - name: Deployment Successful Notification
+        if: success()
+        run: |
+          echo "✅ Production deployment successful!"
+          echo "Production URL: ${{ steps.vercel.outputs.preview-url }}"
+          echo "Deployed from tag: ${{ github.ref_name }}"
+          echo "Commit SHA: ${{ github.sha }}"

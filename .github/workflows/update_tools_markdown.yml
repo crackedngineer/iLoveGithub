@@ -9,7 +9,6 @@ on:
       - master
     paths:
       - "tools.json"
-  workflow_dispatch:
 
 permissions:
   contents: write
