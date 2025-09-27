@@ -36,6 +36,47 @@ Thanks for taking the time to contribute! 🎉 Whether you're fixing a typo, imp
 
 ---
 
+## 📝 Commit Message Guidelines (Conventional Commits)
+
+We follow the [Conventional Commits](https://www.conventionalcommits.org/) standard.  
+This ensures clear commit history and enables automatic changelog generation.
+
+### 🔑 Format
+
+```
+<type>(optional scope): <short description>
+
+[optional body]
+[optional footer(s)]
+```
+
+### ✅ Common Types
+
+- **feat**: a new feature (`feat(auth): add GitHub OAuth login`)
+- **fix**: a bug fix (`fix(ui): correct dark mode toggle`)
+- **docs**: documentation only changes (`docs: update contributing guide`)
+- **style**: changes that don’t affect logic (e.g. formatting, spacing)
+- **refactor**: code changes that neither fix a bug nor add a feature
+- **perf**: improve performance (`perf(api): cache user profile lookups`)
+- **test**: add or fix tests
+- **chore**: maintenance tasks (configs, dependencies, CI/CD)
+
+### ⚡ Examples
+
+feat(tool-list): add filtering by category
+fix(search): handle empty queries gracefully
+docs: update README with installation steps
+
+### 🚨 Breaking Changes
+
+If your change breaks existing functionality, add a `BREAKING CHANGE` note in the commit body:
+
+feat(auth): update token validation
+
+BREAKING CHANGE: the login API now requires a session_id parameter
+
+---
+
 ## 💡 Tips for First-Time Contributors
 
 - Check for existing issues or discussions before opening a new one.
