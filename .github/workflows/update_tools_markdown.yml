@@ -1,13 +1,19 @@
 name: Update README from tools.json
 
 on:
+  pull_request:
+    paths:
+      - "tools.json"
   push:
+    branches:
+      - master
     paths:
       - "tools.json"
   workflow_dispatch:
 
 permissions:
   contents: write
+  pull-requests: write
 
 jobs:
   update-readme:
@@ -15,6 +21,8 @@ jobs:
     steps:
       - name: Checkout repository
         uses: actions/checkout@v4
+        with:
+          ref: ${{ github.head_ref || github.ref_name }} # PR branch or push branch
 
       - name: Set up Python
         uses: actions/setup-python@v5
@@ -33,5 +41,9 @@ jobs:
       - name: Commit and push changes
         run: |
           git add README.md
-          git commit -m "🔄 Update README from tools.json" || echo "No changes to commit"
-          git push origin master
+          if git diff --cached --quiet; then
+            echo "✅ No changes to commit"
+          else
+            git commit -m "🔄 Update README from tools.json"
+            git push origin HEAD:${{ github.head_ref || github.ref_name }}
+          fi
