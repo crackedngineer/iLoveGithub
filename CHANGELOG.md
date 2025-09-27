@@ -4,6 +4,14 @@ All notable changes to this project will be documented in this file.
 
 ---
 
+## [0.12.0](https://github.com/crackedngineer/iLoveGithub/compare/v0.11.1...v0.12.0) (2025-09-27)
+
+
+### Features
+
+* updated readme-update action to be trigger on PRs ([f07a90a](https://github.com/crackedngineer/iLoveGithub/commit/f07a90aa32b44cf1ec8884c798e5336120004a3b))
+* updated vercel deployment workflows ([8156f3f](https://github.com/crackedngineer/iLoveGithub/commit/8156f3f18f0c38a815d3fe35ecbed08320cae636))
+
 ## [0.11.1](https://github.com/crackedngineer/iLoveGithub/compare/v0.11.0...v0.11.1) (2025-09-27)
 
 
