@@ -5,6 +5,10 @@ on:
     branches:
       - master
 
+permissions:
+  contents: write
+  pull-requests: write
+
 jobs:
   release-please:
     runs-on: ubuntu-latest
@@ -13,7 +17,6 @@ jobs:
         with:
           release-type: node
           package-name: nextjs-app
-          # Optional: Customize changelog sections
           changelog-types: >
             [
               { "type": "feat", "section": "✨ Features", "hidden": false },
