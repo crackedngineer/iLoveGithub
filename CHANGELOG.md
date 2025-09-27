@@ -4,6 +4,13 @@ All notable changes to this project will be documented in this file.
 
 ---
 
+## [0.11.1](https://github.com/crackedngineer/iLoveGithub/compare/v0.11.0...v0.11.1) (2025-09-27)
+
+
+### Bug Fixes
+
+* updated release-please action ([721ef22](https://github.com/crackedngineer/iLoveGithub/commit/721ef2281a8c97afebb614692658d9da56188f29))
+
 ## [0.11.0](https://github.com/crackedngineer/iLoveGithub/compare/v0.10.0...v0.11.0) (2025-09-27)
 
 
