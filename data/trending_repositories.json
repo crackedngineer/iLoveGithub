@@ -1,39 +1,11 @@
 [
     {
-        "id": 1060656097,
-        "name": "VLA-Adapter",
-        "full_name": "OpenHelix-Team/VLA-Adapter",
-        "html_url": "https://github.com/OpenHelix-Team/VLA-Adapter",
-        "description": "VLA-Adapter: An Effective Paradigm for Tiny-Scale Vision-Language-Action Model",
-        "stargazers_count": 392,
-        "language": "Python",
-        "owner": {
-            "login": "OpenHelix-Team",
-            "avatar_url": "https://avatars.githubusercontent.com/u/216536714?v=4",
-            "html_url": "https://github.com/OpenHelix-Team"
-        }
-    },
-    {
-        "id": 1060909285,
-        "name": "openpoke",
-        "full_name": "shlokkhemani/openpoke",
-        "html_url": "https://github.com/shlokkhemani/openpoke",
-        "description": "Open source implementation of Poke ",
-        "stargazers_count": 250,
-        "language": "Python",
-        "owner": {
-            "login": "shlokkhemani",
-            "avatar_url": "https://avatars.githubusercontent.com/u/19996714?v=4",
-            "html_url": "https://github.com/shlokkhemani"
-        }
-    },
-    {
         "id": 1062261519,
         "name": "ml-simplefold",
         "full_name": "apple/ml-simplefold",
         "html_url": "https://github.com/apple/ml-simplefold",
         "description": null,
-        "stargazers_count": 173,
+        "stargazers_count": 414,
         "language": "Python",
         "owner": {
             "login": "apple",
@@ -42,17 +14,17 @@
         }
     },
     {
-        "id": 1061772265,
-        "name": "E-problem",
-        "full_name": "xiyuhang2003/E-problem",
-        "html_url": "https://github.com/xiyuhang2003/E-problem",
-        "description": "2025\u5e74\u4e2d\u56fd\u7814\u7a76\u751f\u6570\u5b66\u5efa\u6a21\u7ade\u8d5bE\u9898\uff1a\u9ad8\u901f\u5217\u8f66\u8f74\u627f\u667a\u80fd\u6545\u969c\u8bca\u65ad",
-        "stargazers_count": 126,
+        "id": 1064043780,
+        "name": "Hunyuan3D-Omni",
+        "full_name": "Tencent-Hunyuan/Hunyuan3D-Omni",
+        "html_url": "https://github.com/Tencent-Hunyuan/Hunyuan3D-Omni",
+        "description": "Hunyuan3D-Omni: A Unified Framework for Controllable Generation of 3D Assets",
+        "stargazers_count": 155,
         "language": "Python",
         "owner": {
-            "login": "xiyuhang2003",
-            "avatar_url": "https://avatars.githubusercontent.com/u/105291549?v=4",
-            "html_url": "https://github.com/xiyuhang2003"
+            "login": "Tencent-Hunyuan",
+            "avatar_url": "https://avatars.githubusercontent.com/u/210980732?v=4",
+            "html_url": "https://github.com/Tencent-Hunyuan"
         }
     },
     {
@@ -61,7 +33,7 @@
         "full_name": "kijai/ComfyUI-WanAnimatePreprocess",
         "html_url": "https://github.com/kijai/ComfyUI-WanAnimatePreprocess",
         "description": "ComfyUI nodes for WanAnimate model input preprocessing",
-        "stargazers_count": 123,
+        "stargazers_count": 134,
         "language": "Python",
         "owner": {
             "login": "kijai",
@@ -70,17 +42,45 @@
         }
     },
     {
-        "id": 1060546981,
-        "name": "VisualMimic",
-        "full_name": "visualmimic/VisualMimic",
-        "html_url": "https://github.com/visualmimic/VisualMimic",
-        "description": "[arXiv 2025] VisualMimic: Visual Humanoid Loco-Manipulation via Motion Tracking and Generation",
-        "stargazers_count": 100,
+        "id": 1061772265,
+        "name": "E-problem",
+        "full_name": "xiyuhang2003/E-problem",
+        "html_url": "https://github.com/xiyuhang2003/E-problem",
+        "description": "2025\u5e74\u4e2d\u56fd\u7814\u7a76\u751f\u6570\u5b66\u5efa\u6a21\u7ade\u8d5bE\u9898\uff1a\u9ad8\u901f\u5217\u8f66\u8f74\u627f\u667a\u80fd\u6545\u969c\u8bca\u65ad",
+        "stargazers_count": 125,
         "language": "Python",
         "owner": {
-            "login": "visualmimic",
-            "avatar_url": "https://avatars.githubusercontent.com/u/226833762?v=4",
-            "html_url": "https://github.com/visualmimic"
+            "login": "xiyuhang2003",
+            "avatar_url": "https://avatars.githubusercontent.com/u/105291549?v=4",
+            "html_url": "https://github.com/xiyuhang2003"
+        }
+    },
+    {
+        "id": 1064044497,
+        "name": "Hunyuan3D-Part",
+        "full_name": "Tencent-Hunyuan/Hunyuan3D-Part",
+        "html_url": "https://github.com/Tencent-Hunyuan/Hunyuan3D-Part",
+        "description": null,
+        "stargazers_count": 117,
+        "language": "Python",
+        "owner": {
+            "login": "Tencent-Hunyuan",
+            "avatar_url": "https://avatars.githubusercontent.com/u/210980732?v=4",
+            "html_url": "https://github.com/Tencent-Hunyuan"
+        }
+    },
+    {
+        "id": 1063909764,
+        "name": "search_evals",
+        "full_name": "perplexityai/search_evals",
+        "html_url": "https://github.com/perplexityai/search_evals",
+        "description": "Batteries-included eval framework for search APIs",
+        "stargazers_count": 99,
+        "language": "Python",
+        "owner": {
+            "login": "perplexityai",
+            "avatar_url": "https://avatars.githubusercontent.com/u/185426709?v=4",
+            "html_url": "https://github.com/perplexityai"
         }
     }
 ]
