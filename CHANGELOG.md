@@ -4,6 +4,14 @@ All notable changes to this project will be documented in this file.
 
 ---
 
+## [0.12.5](https://github.com/crackedngineer/iLoveGithub/compare/v0.12.4...v0.12.5) (2025-09-27)
+
+
+### Bug Fixes
+
+* testing vercel prod deployment ([209a497](https://github.com/crackedngineer/iLoveGithub/commit/209a4973fba425b66bbd3f1a0fd2ef051e37547c))
+* testing vercel prod deployment ([aac3de7](https://github.com/crackedngineer/iLoveGithub/commit/aac3de76bad13527e06b3971ee2751ed1d2feead))
+
 ## [0.12.4](https://github.com/crackedngineer/iLoveGithub/compare/v0.12.3...v0.12.4) (2025-09-27)
 
 
