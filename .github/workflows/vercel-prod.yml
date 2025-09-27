@@ -3,7 +3,7 @@ name: Vercel Production Deployment
 on:
   push:
     tags:
-      - "v*.*.*"
+      - "refs/tags/v*.*.*"
 
 permissions:
   contents: read
