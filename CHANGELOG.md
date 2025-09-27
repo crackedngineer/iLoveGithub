@@ -4,6 +4,13 @@ All notable changes to this project will be documented in this file.
 
 ---
 
+## [0.12.1](https://github.com/crackedngineer/iLoveGithub/compare/v0.12.0...v0.12.1) (2025-09-27)
+
+
+### Bug Fixes
+
+* added vercel preview deployment workflow ([8e0811d](https://github.com/crackedngineer/iLoveGithub/commit/8e0811d1845a1ee732253417f1c17df29fa05fab))
+
 ## [0.12.0](https://github.com/crackedngineer/iLoveGithub/compare/v0.11.1...v0.12.0) (2025-09-27)
 
 
