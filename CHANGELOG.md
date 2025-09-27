@@ -4,6 +4,15 @@ All notable changes to this project will be documented in this file.
 
 ---
 
+## [0.11.0](https://github.com/crackedngineer/iLoveGithub/compare/v0.10.0...v0.11.0) (2025-09-27)
+
+
+### Features
+
+* added release please ([3e387b3](https://github.com/crackedngineer/iLoveGithub/commit/3e387b3e97c2a0ef5dca0f6667a7defe7b3a7e1e))
+* customsed release please changelog ([7427626](https://github.com/crackedngineer/iLoveGithub/commit/7427626484f1511fd8a970bba5edd1bab9ea433a))
+* updated push branch to master ([64bfaa2](https://github.com/crackedngineer/iLoveGithub/commit/64bfaa253f388e4d989bbe9394216e246d76dcc4))
+
 ## [v0.8.0] - 2025-05-12
 
 ### 🚀 New Features
