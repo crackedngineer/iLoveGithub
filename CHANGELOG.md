@@ -4,6 +4,15 @@ All notable changes to this project will be documented in this file.
 
 ---
 
+## [0.12.3](https://github.com/crackedngineer/iLoveGithub/compare/v0.12.2...v0.12.3) (2025-09-27)
+
+
+### Bug Fixes
+
+* updated the commit messages in workflow to conventional commits ([2048511](https://github.com/crackedngineer/iLoveGithub/commit/2048511c0e7cd8cea66c82c0282af2cb047d3702))
+* updated the tags pattern to "v*" in vercel prod depplyment workflow ([66ce6ea](https://github.com/crackedngineer/iLoveGithub/commit/66ce6ea5ca4a360d1a54e64bfa61e2bb9c906da2))
+* vercel workflow improvements ([d9dd8d0](https://github.com/crackedngineer/iLoveGithub/commit/d9dd8d0bf2b88974bfed500b3cab78a5d2f3711b))
+
 ## [0.12.2](https://github.com/crackedngineer/iLoveGithub/compare/v0.12.1...v0.12.2) (2025-09-27)
 
 
