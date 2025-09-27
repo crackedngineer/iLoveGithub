@@ -4,6 +4,14 @@ All notable changes to this project will be documented in this file.
 
 ---
 
+## [0.12.4](https://github.com/crackedngineer/iLoveGithub/compare/v0.12.3...v0.12.4) (2025-09-27)
+
+
+### Bug Fixes
+
+* updated the workflow trigger to published releases ([204edaa](https://github.com/crackedngineer/iLoveGithub/commit/204edaa17dd79980669e3a6e66c252b3d6198941))
+* updated the workflow trigger to published releases ([8e7cc52](https://github.com/crackedngineer/iLoveGithub/commit/8e7cc52f67b4e9068cd9f5b07a5cfc33fa54ccf8))
+
 ## [0.12.3](https://github.com/crackedngineer/iLoveGithub/compare/v0.12.2...v0.12.3) (2025-09-27)
 
 
