@@ -5,7 +5,7 @@
   "homepage": "https://ilovegithub.oderna.in/",
   "scripts": {
     "format": "prettier --write .",
-    "prepare": "husky install",
+    "prepare": "husky",
     "dev": "next dev --turbopack",
     "build": "next build",
     "start": "next start",
