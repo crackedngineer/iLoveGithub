@@ -43,5 +43,5 @@ jobs:
       - name: Commit and push data/trending_repositories.json
         run: |
           git add data/trending_repositories.json
-          git commit -m "🤖 Update trending_repositories.json [automated]" || echo "No changes to commit"
+          git commit -m "chore(data): update trending_repositories.json [automated]" || echo "No changes to commit"
           git push origin master

@@ -43,6 +43,6 @@ jobs:
           if git diff --cached --quiet; then
             echo "✅ No changes to commit"
           else
-            git commit -m "🔄 Update README from tools.json"
+            git commit -m "chore(readme): update README from tools.json"
             git push origin HEAD:${{ github.head_ref || github.ref_name }}
           fi
