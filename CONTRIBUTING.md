@@ -63,15 +63,19 @@ This ensures clear commit history and enables automatic changelog generation.
 
 ### ⚡ Examples
 
+```
 feat(tool-list): add filtering by category
 fix(search): handle empty queries gracefully
 docs: update README with installation steps
+```
 
 ### 🚨 Breaking Changes
 
 If your change breaks existing functionality, add a `BREAKING CHANGE` note in the commit body:
 
+```
 feat(auth): update token validation
+```
 
 BREAKING CHANGE: the login API now requires a session_id parameter
 
