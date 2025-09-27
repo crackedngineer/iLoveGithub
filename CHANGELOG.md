@@ -4,6 +4,14 @@ All notable changes to this project will be documented in this file.
 
 ---
 
+## [0.12.2](https://github.com/crackedngineer/iLoveGithub/compare/v0.12.1...v0.12.2) (2025-09-27)
+
+
+### Bug Fixes
+
+* updated the tags trigger pattern for vercel prod deployment work… ([d3de61f](https://github.com/crackedngineer/iLoveGithub/commit/d3de61fad29c12c738a51a6dd6daff238b9ad0c8))
+* updated the tags trigger pattern for vercel prod deployment workflow ([7cdd06a](https://github.com/crackedngineer/iLoveGithub/commit/7cdd06a65eea4a0a29f29e2759a00b2438bed841))
+
 ## [0.12.1](https://github.com/crackedngineer/iLoveGithub/compare/v0.12.0...v0.12.1) (2025-09-27)
 
 
