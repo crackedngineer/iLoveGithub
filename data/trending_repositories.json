@@ -5,7 +5,7 @@
         "full_name": "apple/ml-simplefold",
         "html_url": "https://github.com/apple/ml-simplefold",
         "description": null,
-        "stargazers_count": 414,
+        "stargazers_count": 599,
         "language": "Python",
         "owner": {
             "login": "apple",
@@ -14,12 +14,26 @@
         }
     },
     {
+        "id": 1064789156,
+        "name": "spyder-osint",
+        "full_name": "yasadEv/spyder-osint",
+        "html_url": "https://github.com/yasadEv/spyder-osint",
+        "description": "A powerful osint tool.",
+        "stargazers_count": 482,
+        "language": "Python",
+        "owner": {
+            "login": "yasadEv",
+            "avatar_url": "https://avatars.githubusercontent.com/u/44752439?v=4",
+            "html_url": "https://github.com/yasadEv"
+        }
+    },
+    {
         "id": 1064043780,
         "name": "Hunyuan3D-Omni",
         "full_name": "Tencent-Hunyuan/Hunyuan3D-Omni",
         "html_url": "https://github.com/Tencent-Hunyuan/Hunyuan3D-Omni",
         "description": "Hunyuan3D-Omni: A Unified Framework for Controllable Generation of 3D Assets",
-        "stargazers_count": 155,
+        "stargazers_count": 225,
         "language": "Python",
         "owner": {
             "login": "Tencent-Hunyuan",
@@ -28,31 +42,31 @@
         }
     },
     {
-        "id": 1061969082,
-        "name": "ComfyUI-WanAnimatePreprocess",
-        "full_name": "kijai/ComfyUI-WanAnimatePreprocess",
-        "html_url": "https://github.com/kijai/ComfyUI-WanAnimatePreprocess",
-        "description": "ComfyUI nodes for WanAnimate model input preprocessing",
-        "stargazers_count": 134,
+        "id": 1064663442,
+        "name": "flareprox",
+        "full_name": "MrTurvey/flareprox",
+        "html_url": "https://github.com/MrTurvey/flareprox",
+        "description": "Use Cloudflare to create HTTP pass-through proxies for unique IP rotation, similar to fireprox",
+        "stargazers_count": 193,
         "language": "Python",
         "owner": {
-            "login": "kijai",
-            "avatar_url": "https://avatars.githubusercontent.com/u/40791699?v=4",
-            "html_url": "https://github.com/kijai"
+            "login": "MrTurvey",
+            "avatar_url": "https://avatars.githubusercontent.com/u/5578593?v=4",
+            "html_url": "https://github.com/MrTurvey"
         }
     },
     {
-        "id": 1061772265,
-        "name": "E-problem",
-        "full_name": "xiyuhang2003/E-problem",
-        "html_url": "https://github.com/xiyuhang2003/E-problem",
-        "description": "2025\u5e74\u4e2d\u56fd\u7814\u7a76\u751f\u6570\u5b66\u5efa\u6a21\u7ade\u8d5bE\u9898\uff1a\u9ad8\u901f\u5217\u8f66\u8f74\u627f\u667a\u80fd\u6545\u969c\u8bca\u65ad",
-        "stargazers_count": 125,
+        "id": 1064779665,
+        "name": "PharosTestnet-Bot",
+        "full_name": "kyomber/PharosTestnet-Bot",
+        "html_url": "https://github.com/kyomber/PharosTestnet-Bot",
+        "description": "Automation bot for pharos testnet",
+        "stargazers_count": 167,
         "language": "Python",
         "owner": {
-            "login": "xiyuhang2003",
-            "avatar_url": "https://avatars.githubusercontent.com/u/105291549?v=4",
-            "html_url": "https://github.com/xiyuhang2003"
+            "login": "kyomber",
+            "avatar_url": "https://avatars.githubusercontent.com/u/48459462?v=4",
+            "html_url": "https://github.com/kyomber"
         }
     },
     {
@@ -61,26 +75,12 @@
         "full_name": "Tencent-Hunyuan/Hunyuan3D-Part",
         "html_url": "https://github.com/Tencent-Hunyuan/Hunyuan3D-Part",
         "description": null,
-        "stargazers_count": 117,
+        "stargazers_count": 148,
         "language": "Python",
         "owner": {
             "login": "Tencent-Hunyuan",
             "avatar_url": "https://avatars.githubusercontent.com/u/210980732?v=4",
             "html_url": "https://github.com/Tencent-Hunyuan"
-        }
-    },
-    {
-        "id": 1063909764,
-        "name": "search_evals",
-        "full_name": "perplexityai/search_evals",
-        "html_url": "https://github.com/perplexityai/search_evals",
-        "description": "Batteries-included eval framework for search APIs",
-        "stargazers_count": 99,
-        "language": "Python",
-        "owner": {
-            "login": "perplexityai",
-            "avatar_url": "https://avatars.githubusercontent.com/u/185426709?v=4",
-            "html_url": "https://github.com/perplexityai"
         }
     }
 ]
