@@ -5,7 +5,7 @@
         "full_name": "apple/ml-simplefold",
         "html_url": "https://github.com/apple/ml-simplefold",
         "description": null,
-        "stargazers_count": 599,
+        "stargazers_count": 686,
         "language": "Python",
         "owner": {
             "login": "apple",
@@ -19,7 +19,7 @@
         "full_name": "yasadEv/spyder-osint",
         "html_url": "https://github.com/yasadEv/spyder-osint",
         "description": "A powerful osint tool.",
-        "stargazers_count": 482,
+        "stargazers_count": 584,
         "language": "Python",
         "owner": {
             "login": "yasadEv",
@@ -28,12 +28,26 @@
         }
     },
     {
+        "id": 1065166974,
+        "name": "HunyuanImage-3.0",
+        "full_name": "Tencent-Hunyuan/HunyuanImage-3.0",
+        "html_url": "https://github.com/Tencent-Hunyuan/HunyuanImage-3.0",
+        "description": "HunyuanImage-3.0: A Powerful Native Multimodal Model for Image Generation",
+        "stargazers_count": 583,
+        "language": "Python",
+        "owner": {
+            "login": "Tencent-Hunyuan",
+            "avatar_url": "https://avatars.githubusercontent.com/u/210980732?v=4",
+            "html_url": "https://github.com/Tencent-Hunyuan"
+        }
+    },
+    {
         "id": 1064043780,
         "name": "Hunyuan3D-Omni",
         "full_name": "Tencent-Hunyuan/Hunyuan3D-Omni",
         "html_url": "https://github.com/Tencent-Hunyuan/Hunyuan3D-Omni",
         "description": "Hunyuan3D-Omni: A Unified Framework for Controllable Generation of 3D Assets",
-        "stargazers_count": 225,
+        "stargazers_count": 273,
         "language": "Python",
         "owner": {
             "login": "Tencent-Hunyuan",
@@ -47,7 +61,7 @@
         "full_name": "MrTurvey/flareprox",
         "html_url": "https://github.com/MrTurvey/flareprox",
         "description": "Use Cloudflare to create HTTP pass-through proxies for unique IP rotation, similar to fireprox",
-        "stargazers_count": 193,
+        "stargazers_count": 225,
         "language": "Python",
         "owner": {
             "login": "MrTurvey",
@@ -56,31 +70,17 @@
         }
     },
     {
-        "id": 1064779665,
-        "name": "PharosTestnet-Bot",
-        "full_name": "kyomber/PharosTestnet-Bot",
-        "html_url": "https://github.com/kyomber/PharosTestnet-Bot",
-        "description": "Automation bot for pharos testnet",
-        "stargazers_count": 167,
+        "id": 1064765871,
+        "name": "grass-bot",
+        "full_name": "kyomber/grass-bot",
+        "html_url": "https://github.com/kyomber/grass-bot",
+        "description": "Grass automation python bot.",
+        "stargazers_count": 215,
         "language": "Python",
         "owner": {
             "login": "kyomber",
             "avatar_url": "https://avatars.githubusercontent.com/u/48459462?v=4",
             "html_url": "https://github.com/kyomber"
-        }
-    },
-    {
-        "id": 1064044497,
-        "name": "Hunyuan3D-Part",
-        "full_name": "Tencent-Hunyuan/Hunyuan3D-Part",
-        "html_url": "https://github.com/Tencent-Hunyuan/Hunyuan3D-Part",
-        "description": null,
-        "stargazers_count": 148,
-        "language": "Python",
-        "owner": {
-            "login": "Tencent-Hunyuan",
-            "avatar_url": "https://avatars.githubusercontent.com/u/210980732?v=4",
-            "html_url": "https://github.com/Tencent-Hunyuan"
         }
     }
 ]
