@@ -8,7 +8,6 @@ import {Input} from "@/components/ui/input";
 import {Card, CardContent} from "@/components/ui/card";
 import {Skeleton} from "@/components/ui/skeleton";
 import {RECENT_REPO_LOCAL_STORAGE_KEY, RECENT_TRENDING_REPO_UI_MAXCOUNT} from "@/constants";
-import {RepoData} from "./RepoInfo";
 
 interface TrendingRepo {
   id: number;
@@ -117,11 +116,11 @@ const RepoSearch = ({
     const fetchTrending = async () => {
       setLoading(true);
       try {
-        const res = await fetch("/api/repo/trending");
+        const res = await fetch("/api/repo/trending?limit=6&offset=0");
         if (!res.ok) throw new Error("Failed to fetch trending.json");
 
         const data = await res.json();
-        setTrendingRepos(data);
+        setTrendingRepos(data.items);
       } catch (e) {
         console.error("Failed to fetch trending repositories", e);
       } finally {
