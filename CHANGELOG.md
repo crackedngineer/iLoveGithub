@@ -4,6 +4,15 @@ All notable changes to this project will be documented in this file.
 
 ---
 
+## [0.13.0](https://github.com/crackedngineer/iLoveGithub/compare/v0.12.6...v0.13.0) (2025-09-29)
+
+
+### Features
+
+* removed script and github action for fetching trending repos ([b6db286](https://github.com/crackedngineer/iLoveGithub/commit/b6db286988f88e6d4cf82af4aa340dfeaf6c7088))
+* updated logic for fetching trending repos ([c327874](https://github.com/crackedngineer/iLoveGithub/commit/c327874c5a7ca8de6a0dd7a1d5025c21e629472b))
+* updated logic for fetching trending repos ([b1a3b56](https://github.com/crackedngineer/iLoveGithub/commit/b1a3b562f509c7c0997ad66c97c3e2b0825620dc))
+
 ## [0.12.6](https://github.com/crackedngineer/iLoveGithub/compare/v0.12.5...v0.12.6) (2025-09-27)
 
 
