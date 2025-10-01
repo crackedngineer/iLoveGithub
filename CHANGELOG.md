@@ -4,6 +4,14 @@ All notable changes to this project will be documented in this file.
 
 ---
 
+## [0.14.0](https://github.com/crackedngineer/iLoveGithub/compare/v0.13.0...v0.14.0) (2025-10-01)
+
+
+### Features
+
+* added deepgraph tool ([8049acf](https://github.com/crackedngineer/iLoveGithub/commit/8049acfc2a683096c2347313247a3285deb4229b))
+* merge tool/deepgraph branch ([13db370](https://github.com/crackedngineer/iLoveGithub/commit/13db3706e310ff9c43f1891b2b93a0009420cb9c))
+
 ## [0.13.0](https://github.com/crackedngineer/iLoveGithub/compare/v0.12.6...v0.13.0) (2025-09-29)
 
 
