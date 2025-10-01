@@ -8,7 +8,7 @@
     "icon": "/icons/tools/github1s.ico",
     "category": "Development Tools",
     "iframe": true,
-    "created_at": "2025-03-28T15:39:45Z"
+    "created_at": "2025-03-28"
   },
   {
     "name": "github-dev",
@@ -19,7 +19,7 @@
     "icon": "/icons/tools/github.ico",
     "category": "Development Tools",
     "iframe": false,
-    "created_at": "2025-03-28T15:39:45Z"
+    "created_at": "2025-03-28"
   },
   {
     "name": "gitdiagram",
@@ -30,7 +30,7 @@
     "icon": "/icons/tools/gitdiagram.ico",
     "category": "Code Visualization & Diagrams",
     "iframe": true,
-    "created_at": "2025-03-28T15:39:45Z"
+    "created_at": "2025-03-28"
   },
   {
     "name": "stackblitz",
@@ -41,7 +41,7 @@
     "icon": "/icons/tools/stackblitz.svg",
     "category": "Development Tools",
     "iframe": false,
-    "created_at": "2025-03-28T15:39:45Z"
+    "created_at": "2025-03-28"
   },
   {
     "name": "vscode",
@@ -52,7 +52,7 @@
     "icon": "/icons/tools/vscode.ico",
     "category": "Development Tools",
     "iframe": false,
-    "created_at": "2025-03-28T15:39:45Z"
+    "created_at": "2025-03-28"
   },
   {
     "name": "gitingest",
@@ -63,7 +63,7 @@
     "icon": "/icons/tools/gitingest.ico",
     "category": "Documentation & AI-Powered Understanding",
     "iframe": true,
-    "created_at": "2025-03-28T15:39:45Z"
+    "created_at": "2025-03-28"
   },
   {
     "name": "uithub",
@@ -74,7 +74,7 @@
     "icon": "/icons/tools/uithub.png",
     "category": "Analytics & Insights",
     "iframe": false,
-    "created_at": "2025-03-28T15:39:45Z"
+    "created_at": "2025-03-28"
   },
   {
     "name": "gitpodcast",
@@ -85,7 +85,7 @@
     "icon": "/icons/tools/gitpodcast.ico",
     "category": "Documentation & AI-Powered Understanding",
     "iframe": true,
-    "created_at": "2025-03-28T15:39:45Z"
+    "created_at": "2025-03-28"
   },
   {
     "name": "socialify",
@@ -96,7 +96,7 @@
     "icon": "/icons/tools/socialify.ico",
     "category": "Widgets & UI",
     "iframe": true,
-    "created_at": "2025-03-28T15:39:45Z"
+    "created_at": "2025-03-28"
   },
   {
     "name": "gitsummarize",
@@ -107,7 +107,7 @@
     "icon": "/icons/tools/gitsummarize.ico",
     "category": "Documentation & AI-Powered Understanding",
     "iframe": true,
-    "created_at": "2025-03-28T15:39:45Z"
+    "created_at": "2025-03-28"
   },
   {
     "name": "explaingithub",
@@ -118,7 +118,7 @@
     "icon": "/icons/tools/explaingithub.ico",
     "category": "Documentation & AI-Powered Understanding",
     "iframe": false,
-    "created_at": "2025-03-28T15:39:45Z"
+    "created_at": "2025-03-28"
   },
   {
     "name": "gituml",
@@ -129,7 +129,7 @@
     "icon": "/icons/tools/gituml.ico",
     "category": "Code Visualization & Diagrams",
     "iframe": false,
-    "created_at": "2025-03-28T15:39:45Z"
+    "created_at": "2025-03-28"
   },
   {
     "name": "googlecolab",
@@ -140,7 +140,7 @@
     "icon": "/icons/tools/googlecolab.ico",
     "category": "Development Tools",
     "iframe": false,
-    "created_at": "2025-03-28T15:39:45Z"
+    "created_at": "2025-03-28"
   },
   {
     "name": "bolt",
@@ -151,7 +151,7 @@
     "icon": "/icons/tools/bolt-new.svg",
     "category": "Development Tools",
     "iframe": false,
-    "created_at": "2025-03-28T15:39:45Z"
+    "created_at": "2025-03-28"
   },
   {
     "name": "codesandbox",
@@ -162,7 +162,7 @@
     "icon": "/icons/tools/codesandbox.ico",
     "category": "Development Tools",
     "iframe": false,
-    "created_at": "2025-03-28T15:39:45Z"
+    "created_at": "2025-03-28"
   },
   {
     "name": "repo-surf",
@@ -173,7 +173,7 @@
     "icon": "/icons/tools/repo-surf.ico",
     "category": "Analytics & Insights",
     "iframe": false,
-    "created_at": "2025-03-28T15:39:45Z"
+    "created_at": "2025-03-28"
   },
   {
     "name": "star-history",
@@ -184,7 +184,7 @@
     "icon": "/icons/tools/star-history.ico",
     "category": "Widgets & UI",
     "iframe": true,
-    "created_at": "2025-03-28T15:39:45Z"
+    "created_at": "2025-03-28"
   },
   {
     "name": "githubnext",
@@ -195,7 +195,7 @@
     "icon": "/icons/tools/githubnext.svg",
     "category": "Code Visualization & Diagrams",
     "iframe": true,
-    "created_at": "2025-03-28T15:39:45Z"
+    "created_at": "2025-03-28"
   },
   {
     "name": "github.gg",
@@ -206,7 +206,7 @@
     "icon": "/icons/tools/github-gg.png",
     "category": "Analytics & Insights",
     "iframe": true,
-    "created_at": "2025-03-28T15:39:45Z"
+    "created_at": "2025-03-28"
   },
   {
     "name": "chatforgithub",
@@ -217,7 +217,7 @@
     "icon": "/icons/tools/chatforgithub.ico",
     "category": "Documentation & AI-Powered Understanding",
     "iframe": false,
-    "created_at": "2025-03-28T15:39:45Z"
+    "created_at": "2025-03-28"
   },
   {
     "name": "entelligence",
@@ -228,7 +228,7 @@
     "icon": "/icons/tools/entelligence.svg",
     "category": "Analytics & Insights",
     "iframe": false,
-    "created_at": "2025-03-28T15:39:45Z"
+    "created_at": "2025-03-28"
   },
   {
     "name": "git1file",
@@ -239,7 +239,7 @@
     "icon": "/icons/tools/git1file.ico",
     "category": "Documentation & AI-Powered Understanding",
     "iframe": true,
-    "created_at": "2025-03-28T15:39:45Z"
+    "created_at": "2025-03-28"
   },
   {
     "name": "gitmcp",
@@ -250,7 +250,7 @@
     "icon": "/icons/tools/gitmcp.png",
     "category": "Development Tools",
     "iframe": true,
-    "created_at": "2025-03-28T15:39:45Z"
+    "created_at": "2025-03-28"
   },
   {
     "name": "flatgithub",
@@ -261,7 +261,7 @@
     "icon": "/icons/tools/flatgithub.png",
     "category": "Analytics & Insights",
     "iframe": true,
-    "created_at": "2025-03-28T15:39:45Z"
+    "created_at": "2025-03-28"
   },
   {
     "name": "deepwiki",
@@ -272,7 +272,7 @@
     "icon": "/icons/tools/deepwiki.ico",
     "category": "Documentation & AI-Powered Understanding",
     "iframe": false,
-    "created_at": "2025-04-26T19:02:42.848Z"
+    "created_at": "2025-04-26"
   },
   {
     "name": "talktogithub",
@@ -283,7 +283,7 @@
     "icon": "/icons/tools/talktogithub.svg",
     "category": "Documentation & AI-Powered Understanding",
     "iframe": true,
-    "created_at": "2025-04-29T18:56:38Z"
+    "created_at": "2025-04-29"
   },
   {
     "name": "answergit",
@@ -294,7 +294,7 @@
     "icon": null,
     "category": "Documentation & AI-Powered Understanding",
     "iframe": true,
-    "created_at": "2025-05-09T05:13:49Z"
+    "created_at": "2025-05-09"
   },
   {
     "name": "gittodoc",
@@ -305,7 +305,7 @@
     "icon": "/icons/tools/gittodoc.ico",
     "category": "Documentation & AI-Powered Understanding",
     "iframe": true,
-    "created_at": "2025-05-21T18:30:45Z"
+    "created_at": "2025-05-21"
   },
   {
     "name": "coding2tutorial",
@@ -316,7 +316,7 @@
     "icon": "/icons/tools/coding2tutorial.ico",
     "category": "Documentation & AI-Powered Understanding",
     "iframe": false,
-    "created_at": "2025-07-31T11:06:45Z"
+    "created_at": "2025-07-31"
   },
   {
     "name": "githubtree",
@@ -327,7 +327,7 @@
     "icon": "/icons/tools/githubtree.ico",
     "category": "Code Visualization & Diagrams",
     "iframe": false,
-    "created_at": "2025-08-19T15:39:45Z"
+    "created_at": "2025-08-19"
   },
   {
     "name": "gitmvp",
@@ -338,7 +338,7 @@
     "icon": "/icons/tools/gitmvp.png",
     "category": "Documentation & AI-Powered Understanding",
     "iframe": true,
-    "created_at": "2025-08-25T11:06:45Z"
+    "created_at": "2025-08-25"
   },
   {
     "name": "gitpod",
@@ -349,6 +349,17 @@
     "icon": "/icons/tools/gitpod.png",
     "category": "Development Tools",
     "iframe": false,
-    "created_at": "2025-03-31T14:39:45Z"
+    "created_at": "2025-08-31"
+  },
+  {
+    "name": "deepgraph",
+    "title": "DeepGraph",
+    "description": "Discover the hidden connections in your code",
+    "homepage": "https://www.deepgraph.co/",
+    "url": "https://www.deepgraph.co/{owner}/{repo}",
+    "icon": "/icons/tools/deepgraph.ico",
+    "category": "Code Visualization & Diagrams",
+    "iframe": false,
+    "created_at": "2025-10-01"
   }
 ]
