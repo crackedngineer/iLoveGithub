@@ -4,6 +4,14 @@ All notable changes to this project will be documented in this file.
 
 ---
 
+## [0.14.2](https://github.com/crackedngineer/iLoveGithub/compare/v0.14.1...v0.14.2) (2025-10-03)
+
+
+### Bug Fixes
+
+* merge fix/qrcode-blob-upload ([ab63f41](https://github.com/crackedngineer/iLoveGithub/commit/ab63f41708e3e247f421c4670f12586923a671f7))
+* updated the blob store path for qrcode images ([01ae678](https://github.com/crackedngineer/iLoveGithub/commit/01ae6782a653f16f8cddbd8c464e6a189bb58a06))
+
 ## [0.14.1](https://github.com/crackedngineer/iLoveGithub/compare/v0.14.0...v0.14.1) (2025-10-03)
 
 
