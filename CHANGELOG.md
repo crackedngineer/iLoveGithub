@@ -4,6 +4,14 @@ All notable changes to this project will be documented in this file.
 
 ---
 
+## [0.14.1](https://github.com/crackedngineer/iLoveGithub/compare/v0.14.0...v0.14.1) (2025-10-03)
+
+
+### Bug Fixes
+
+* merge feat/icons-url ([c9cf9f6](https://github.com/crackedngineer/iLoveGithub/commit/c9cf9f66d1071b163b0e0bbec4cef831bec1ef78))
+* updated tools icon from PATH to Url ([72283ba](https://github.com/crackedngineer/iLoveGithub/commit/72283babbb519c5e53fe3bcb3ad9ebbdd1df447f))
+
 ## [0.14.0](https://github.com/crackedngineer/iLoveGithub/compare/v0.13.0...v0.14.0) (2025-10-01)
 
 
