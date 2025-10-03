@@ -5,7 +5,7 @@
     "description": "One second to read GitHub code with VS Code.",
     "homepage": "https://github1s.com",
     "url": "https://github1s.com/{owner}/{repo}",
-    "icon": "/icons/tools/github1s.ico",
+    "icon": "https://aa3d4bqalqflkq22.public.blob.vercel-storage.com/tool-icons/github1s.ico",
     "category": "Development Tools",
     "iframe": true,
     "created_at": "2025-03-28"
@@ -16,7 +16,7 @@
     "description": "Open any GitHub repo in a browser-based VS Code editor.",
     "homepage": "https://github.dev",
     "url": "https://github.dev/{owner}/{repo}",
-    "icon": "/icons/tools/github.ico",
+    "icon": "https://aa3d4bqalqflkq22.public.blob.vercel-storage.com/tool-icons/github.ico",
     "category": "Development Tools",
     "iframe": false,
     "created_at": "2025-03-28"
@@ -27,7 +27,7 @@
     "description": "Turn any GitHub repository into an interactive diagram for Code Visualization & Diagrams.",
     "homepage": "https://gitdiagram.com/",
     "url": "https://gitdiagram.com/{owner}/{repo}",
-    "icon": "/icons/tools/gitdiagram.ico",
+    "icon": "https://aa3d4bqalqflkq22.public.blob.vercel-storage.com/tool-icons/gitdiagram.ico",
     "category": "Code Visualization & Diagrams",
     "iframe": true,
     "created_at": "2025-03-28"
@@ -38,7 +38,7 @@
     "description": "Turn text into working web apps.",
     "homepage": "https://stackblitz.com/",
     "url": "https://stackblitz.com/~/github.com/{owner}/{repo}",
-    "icon": "/icons/tools/stackblitz.svg",
+    "icon": "https://aa3d4bqalqflkq22.public.blob.vercel-storage.com/tool-icons/stackblitz.svg",
     "category": "Development Tools",
     "iframe": false,
     "created_at": "2025-03-28"
@@ -49,7 +49,7 @@
     "description": "Edit projects using the full VS Code experience in-browser.",
     "homepage": "https://code.visualstudio.com/docs/setup/vscode-web",
     "url": "https://vscode.dev/github/{owner}/{repo}",
-    "icon": "/icons/tools/vscode.ico",
+    "icon": "https://aa3d4bqalqflkq22.public.blob.vercel-storage.com/tool-icons/vscode.ico",
     "category": "Development Tools",
     "iframe": false,
     "created_at": "2025-03-28"
@@ -60,7 +60,7 @@
     "description": "Turn any Git repository into a simple text digest of its codebase.",
     "homepage": "https://gitingest.com/",
     "url": "https://gitingest.com/{owner}/{repo}",
-    "icon": "/icons/tools/gitingest.ico",
+    "icon": "https://aa3d4bqalqflkq22.public.blob.vercel-storage.com/tool-icons/gitingest.ico",
     "category": "Documentation & AI-Powered Understanding",
     "iframe": true,
     "created_at": "2025-03-28"
@@ -71,7 +71,7 @@
     "description": "Easily Ask Your LLM Coding Questions.",
     "homepage": "https://uithub.com/",
     "url": "https://uithub.com/{owner}/{repo}",
-    "icon": "/icons/tools/uithub.png",
+    "icon": "https://aa3d4bqalqflkq22.public.blob.vercel-storage.com/tool-icons/uithub.png",
     "category": "Analytics & Insights",
     "iframe": false,
     "created_at": "2025-03-28"
@@ -82,7 +82,7 @@
     "description": "Turn any GitHub repository into an engaging podcast in seconds.",
     "homepage": "https://www.gitpodcast.com/",
     "url": "https://www.gitpodcast.com/{owner}/{repo}",
-    "icon": "/icons/tools/gitpodcast.ico",
+    "icon": "https://aa3d4bqalqflkq22.public.blob.vercel-storage.com/tool-icons/gitpodcast.ico",
     "category": "Documentation & AI-Powered Understanding",
     "iframe": true,
     "created_at": "2025-03-28"
@@ -93,7 +93,7 @@
     "description": "Socialify your GitHub project to share with the world.",
     "homepage": "https://socialify.git.ci/",
     "url": "https://socialify.git.ci/{owner}/{repo}",
-    "icon": "/icons/tools/socialify.ico",
+    "icon": "https://aa3d4bqalqflkq22.public.blob.vercel-storage.com/tool-icons/socialify.ico",
     "category": "Widgets & UI",
     "iframe": true,
     "created_at": "2025-03-28"
@@ -104,7 +104,7 @@
     "description": "Turn any GitHub repository into a comprehensive AI-powered Documentation & AI-Powered Understanding hub.",
     "homepage": "https://gitsummarize.com/",
     "url": "https://gitsummarize.com/{owner}/{repo}",
-    "icon": "/icons/tools/gitsummarize.ico",
+    "icon": "https://aa3d4bqalqflkq22.public.blob.vercel-storage.com/tool-icons/gitsummarize.ico",
     "category": "Documentation & AI-Powered Understanding",
     "iframe": true,
     "created_at": "2025-03-28"
@@ -115,7 +115,7 @@
     "description": "Understand complex codebases with AI.",
     "homepage": "https://explaingithub.com/",
     "url": "https://explaingithub.com/{owner}/{repo}",
-    "icon": "/icons/tools/explaingithub.ico",
+    "icon": "https://aa3d4bqalqflkq22.public.blob.vercel-storage.com/tool-icons/explaingithub.ico",
     "category": "Documentation & AI-Powered Understanding",
     "iframe": false,
     "created_at": "2025-03-28"
@@ -126,7 +126,7 @@
     "description": "UML visualisation for Git repositories.",
     "homepage": "https://www.gituml.com/",
     "url": "https://www.gituml.com/ztree_scratchpad?user={owner}&repo={repo}&commit={default_branch}&repo-brand=github",
-    "icon": "/icons/tools/gituml.ico",
+    "icon": "https://aa3d4bqalqflkq22.public.blob.vercel-storage.com/tool-icons/gituml.ico",
     "category": "Code Visualization & Diagrams",
     "iframe": false,
     "created_at": "2025-03-28"
@@ -137,7 +137,7 @@
     "description": "Colaboratory is a research tool for machine learning education and research.",
     "homepage": "https://colab.research.google.com/",
     "url": "https://colab.research.google.com/github/{owner}/{repo}",
-    "icon": "/icons/tools/googlecolab.ico",
+    "icon": "https://aa3d4bqalqflkq22.public.blob.vercel-storage.com/tool-icons/googlecolab.ico",
     "category": "Development Tools",
     "iframe": false,
     "created_at": "2025-03-28"
@@ -148,7 +148,7 @@
     "description": "Prompt, run, edit, and deploy full-stack web applications.",
     "homepage": "https://bolt.new/",
     "url": "https://bolt.new/~/github.com/{owner}/{repo}",
-    "icon": "/icons/tools/bolt-new.svg",
+    "icon": "https://aa3d4bqalqflkq22.public.blob.vercel-storage.com/tool-icons/bolt-new.svg",
     "category": "Development Tools",
     "iframe": false,
     "created_at": "2025-03-28"
@@ -159,7 +159,7 @@
     "description": "Sandboxes built for scale.",
     "homepage": "https://codesandbox.io/",
     "url": "https://codesandbox.io/p/devbox/github/{owner}/{repo}",
-    "icon": "/icons/tools/codesandbox.ico",
+    "icon": "https://aa3d4bqalqflkq22.public.blob.vercel-storage.com/tool-icons/codesandbox.ico",
     "category": "Development Tools",
     "iframe": false,
     "created_at": "2025-03-28"
@@ -170,7 +170,7 @@
     "description": "repo-surf is a repository viewer that lets you dive through its commits and branches.",
     "homepage": "https://repo.surf/",
     "url": "https://repo.surf/{owner}/{repo}",
-    "icon": "/icons/tools/repo-surf.ico",
+    "icon": "https://aa3d4bqalqflkq22.public.blob.vercel-storage.com/tool-icons/repo-surf.ico",
     "category": "Analytics & Insights",
     "iframe": false,
     "created_at": "2025-03-28"
@@ -181,7 +181,7 @@
     "description": "View and compare GitHub star history graph of open source projects.",
     "homepage": "https://www.star-history.com/",
     "url": "https://www.star-history.com/#{owner}/{repo}",
-    "icon": "/icons/tools/star-history.ico",
+    "icon": "https://aa3d4bqalqflkq22.public.blob.vercel-storage.com/tool-icons/star-history.ico",
     "category": "Widgets & UI",
     "iframe": true,
     "created_at": "2025-03-28"
@@ -192,7 +192,7 @@
     "description": "Visualizing a Codebase.",
     "homepage": "https://githubnext.com/projects/repo-Code Visualization & Diagrams/",
     "url": "https://mango-dune-07a8b7110.1.azurestaticapps.net/?repo={owner}%2F{repo}",
-    "icon": "/icons/tools/githubnext.svg",
+    "icon": "https://aa3d4bqalqflkq22.public.blob.vercel-storage.com/tool-icons/githubnext.svg",
     "category": "Code Visualization & Diagrams",
     "iframe": true,
     "created_at": "2025-03-28"
@@ -203,7 +203,7 @@
     "description": "Analyze GitHub repositories with insights about code quality, dependencies, and more.",
     "homepage": "https://github.gg/",
     "url": "https://github.gg/{owner}/{repo}",
-    "icon": "/icons/tools/github-gg.png",
+    "icon": "https://aa3d4bqalqflkq22.public.blob.vercel-storage.com/tool-icons/github-gg.png",
     "category": "Analytics & Insights",
     "iframe": true,
     "created_at": "2025-03-28"
@@ -214,7 +214,7 @@
     "description": "Context-driven LLM Interface.",
     "homepage": "https://chat.forgithub.com/",
     "url": "https://chat.forgithub.com/{owner}/{repo}",
-    "icon": "/icons/tools/chatforgithub.ico",
+    "icon": "https://aa3d4bqalqflkq22.public.blob.vercel-storage.com/tool-icons/chatforgithub.ico",
     "category": "Documentation & AI-Powered Understanding",
     "iframe": false,
     "created_at": "2025-03-28"
@@ -225,7 +225,7 @@
     "description": "Empower and uplevel your engineering team",
     "homepage": "https://www.entelligence.ai/",
     "url": "https://www.entelligence.ai/{owner}/{repo}",
-    "icon": "/icons/tools/entelligence.svg",
+    "icon": "https://aa3d4bqalqflkq22.public.blob.vercel-storage.com/tool-icons/entelligence.svg",
     "category": "Analytics & Insights",
     "iframe": false,
     "created_at": "2025-03-28"
@@ -236,7 +236,7 @@
     "description": "Compress & Transform Git Repositories for AI",
     "homepage": "https://git1file.com/",
     "url": "https://git1file.com/{owner}/{repo}",
-    "icon": "/icons/tools/git1file.ico",
+    "icon": "https://aa3d4bqalqflkq22.public.blob.vercel-storage.com/tool-icons/git1file.ico",
     "category": "Documentation & AI-Powered Understanding",
     "iframe": true,
     "created_at": "2025-03-28"
@@ -247,7 +247,7 @@
     "description": "Instantly create a Remote MCP server for any GitHub project",
     "homepage": "https://gitmcp.io/",
     "url": "https://gitmcp.io/{owner}/{repo}",
-    "icon": "/icons/tools/gitmcp.png",
+    "icon": "https://aa3d4bqalqflkq22.public.blob.vercel-storage.com/tool-icons/gitmcp.png",
     "category": "Development Tools",
     "iframe": true,
     "created_at": "2025-03-28"
@@ -258,7 +258,7 @@
     "description": "A simple tool for exploring flat data files in GitHub repositories.",
     "homepage": "https://flatgithub.com/",
     "url": "https://flatgithub.com/{owner}/{repo}",
-    "icon": "/icons/tools/flatgithub.png",
+    "icon": "https://aa3d4bqalqflkq22.public.blob.vercel-storage.com/tool-icons/flatgithub.png",
     "category": "Analytics & Insights",
     "iframe": true,
     "created_at": "2025-03-28"
@@ -269,7 +269,7 @@
     "description": "Which repo would you like to understand?",
     "homepage": "https://deepwiki.com/",
     "url": "https://deepwiki.com/{owner}/{repo}",
-    "icon": "/icons/tools/deepwiki.ico",
+    "icon": "https://aa3d4bqalqflkq22.public.blob.vercel-storage.com/tool-icons/deepwiki.ico",
     "category": "Documentation & AI-Powered Understanding",
     "iframe": false,
     "created_at": "2025-04-26"
@@ -280,7 +280,7 @@
     "description": "Repo to Convo in seconds!",
     "homepage": "https://talktogithub.com/",
     "url": "https://talktogithub.com/{owner}/{repo}",
-    "icon": "/icons/tools/talktogithub.svg",
+    "icon": "https://aa3d4bqalqflkq22.public.blob.vercel-storage.com/tool-icons/talktogithub.svg",
     "category": "Documentation & AI-Powered Understanding",
     "iframe": true,
     "created_at": "2025-04-29"
@@ -302,7 +302,7 @@
     "description": "Turn any Git repository into a simple Documentation & AI-Powered Understanding link that LLMs can easily index.",
     "homepage": "https://www.gittodoc.com/",
     "url": "https://www.gittodoc.com/{owner}/{repo}",
-    "icon": "/icons/tools/gittodoc.ico",
+    "icon": "https://aa3d4bqalqflkq22.public.blob.vercel-storage.com/tool-icons/gittodoc.ico",
     "category": "Documentation & AI-Powered Understanding",
     "iframe": true,
     "created_at": "2025-05-21"
@@ -313,7 +313,7 @@
     "description": "Turn any GitHub repository into a comprehensive AI-powered tutorial.",
     "homepage": "https://coding2tutorial.com/",
     "url": "https://code2tutorial.com/repository/select-files?repoUrl=https://github.com/{owner}/{repo}",
-    "icon": "/icons/tools/coding2tutorial.ico",
+    "icon": "https://aa3d4bqalqflkq22.public.blob.vercel-storage.com/tool-icons/coding2tutorial.ico",
     "category": "Documentation & AI-Powered Understanding",
     "iframe": false,
     "created_at": "2025-07-31"
@@ -324,7 +324,7 @@
     "description": "GitHub repository explorer, online repo viewer, visualize GitHub project structure, directory tree, file explorer, open source navigation, copy file paths, GitHub project folders",
     "homepage": "https://githubtree.mgks.dev/",
     "url": "https://githubtree.mgks.dev/repo/{owner}/{repo}/{default_branch}/",
-    "icon": "/icons/tools/githubtree.ico",
+    "icon": "https://aa3d4bqalqflkq22.public.blob.vercel-storage.com/tool-icons/githubtree.ico",
     "category": "Code Visualization & Diagrams",
     "iframe": false,
     "created_at": "2025-08-19"
@@ -335,7 +335,7 @@
     "description": "Turn any GitHub repo into an MVP prompt",
     "homepage": "https://www.gitmvp.com/",
     "url": "https://www.gitmvp.com/{owner}/{repo}",
-    "icon": "/icons/tools/gitmvp.png",
+    "icon": "https://aa3d4bqalqflkq22.public.blob.vercel-storage.com/tool-icons/gitmvp.png",
     "category": "Documentation & AI-Powered Understanding",
     "iframe": true,
     "created_at": "2025-08-25"
@@ -346,7 +346,7 @@
     "description": "The developer platform for on-demand cloud development environments to create software faster and more securely.",
     "homepage": "https://gitpod.io/",
     "url": "https://gitpod.io/#https://github.com/{owner}/{repo}",
-    "icon": "/icons/tools/gitpod.png",
+    "icon": "https://aa3d4bqalqflkq22.public.blob.vercel-storage.com/tool-icons/gitpod.png",
     "category": "Development Tools",
     "iframe": false,
     "created_at": "2025-08-31"
@@ -357,7 +357,7 @@
     "description": "Discover the hidden connections in your code",
     "homepage": "https://www.deepgraph.co/",
     "url": "https://www.deepgraph.co/{owner}/{repo}",
-    "icon": "/icons/tools/deepgraph.ico",
+    "icon": "https://aa3d4bqalqflkq22.public.blob.vercel-storage.com/tool-icons/deepgraph.ico",
     "category": "Code Visualization & Diagrams",
     "iframe": false,
     "created_at": "2025-10-01"

@@ -22,7 +22,6 @@ export async function GET(req: NextRequest) {
     // Map and update URLs in a functional style
     const result = data.map((item: any) => ({
       ...item,
-      icon: item.icon !== null && process.env.BLOB_ICON_BASE_URL + parseImageFileName(item.icon),
       url: replaceUrlVariables(
         item.iframe ? `https://${rootDomain}/tools/${item.name}/{owner}/{repo}` : item.url,
         {owner, repo, default_branch},

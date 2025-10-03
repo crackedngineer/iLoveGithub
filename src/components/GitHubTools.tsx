@@ -80,7 +80,7 @@ const GitHubTools = ({tools}: {tools: Tool[]}) => {
                     )}
                     <CardHeader className="pb-1">
                       <CardTitle className="text-base sm:text-lg flex items-center gap-2 text-gray-900 dark:text-white">
-                        {tool.icon ? (
+                        {tool.icon && /\.(png|jpe?g|gif|svg|webp|bmp|ico)$/i.test(tool.icon) ? (
                           <Image
                             alt={`${tool.name} icon`}
                             src={tool.icon}
