@@ -44,7 +44,7 @@ export async function POST(req: NextRequest) {
     if (!qrResponse.ok) throw new Error("QRCode Monkey API failed");
 
     const buffer = await qrResponse.arrayBuffer();
-    const blob = await put(`qr-${hash}.png`, buffer, {
+    const blob = await put(`images/qrcode/qr-${hash}.png`, buffer, {
       access: "public",
       contentType: "image/png",
       allowOverwrite: true,
