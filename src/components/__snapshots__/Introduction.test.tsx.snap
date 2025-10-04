@@ -1,0 +1,63 @@
+// Jest Snapshot v1, https://jestjs.io/docs/snapshot-testing
+
+exports[`Introduction Component matches snapshot 1`] = `
+<div>
+  <div
+    class="text-center mb-10 px-2 sm:px-4"
+  >
+    <div
+      class="flex flex-wrap justify-center gap-4 p-2"
+    >
+      <a
+        class="transform hover:scale-105 transition duration-300"
+        href="https://www.producthunt.com/posts/ilovegithub?embed=true&utm_source=badge-featured&utm_medium=badge&utm_source=badge-ilovegithub"
+        rel="noopener noreferrer"
+        target="_blank"
+      >
+        <img
+          alt="iLoveGithub Product Hunt Badge"
+          class="rounded-md h-14"
+          src="https://api.producthunt.com/widgets/embed-image/v1/featured.svg?post_id=967157&theme=light&t=1747590463334"
+          width="250"
+        />
+      </a>
+      <a
+        class="transform hover:scale-105 transition duration-300"
+        href="https://peerlist.io/crackedngineer/project/ilovegithub"
+        rel="noopener noreferrer"
+        target="_blank"
+      >
+        <img
+          alt="iLoveGithub Peerlist Badge"
+          class="rounded-md h-14"
+          src="https://peerlist.io/api/v1/projects/embed/PRJH8OEJ9OJ8E88PJ3R66977NBDAOK?showUpvote=true&theme=light"
+          width="250"
+        />
+      </a>
+      <a
+        class="transform hover:scale-105 transition duration-300"
+        href="https://scoutforge.net/reviews/ilovegithub/"
+        rel="noopener noreferrer"
+        target="_blank"
+      >
+        <img
+          alt="Trusted and Reviewed by Scout Forge Badge"
+          class="rounded-md h-14"
+          src="https://scoutforge.net/wp-content/themes/wp-theme/assets/img/badges/badge-light.webp"
+          width="250"
+        />
+      </a>
+    </div>
+    <h1
+      class="text-4xl md:text-5xl font-bold bg-gradient-to-r from-github-blue to-github-green bg-clip-text text-transparent mt-6 mb-4"
+    >
+      Discover GitHub Tools
+    </h1>
+    <p
+      class="text-lg md:text-xl text-gray-600 dark:text-gray-400 max-w-2xl mx-auto mb-4"
+    >
+      Explore GitHub repositories and find the best tools to enhance your GitHub experience
+    </p>
+  </div>
+</div>
+`;
