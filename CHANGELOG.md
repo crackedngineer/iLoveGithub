@@ -4,6 +4,13 @@ All notable changes to this project will be documented in this file.
 
 ---
 
+## [0.14.6](https://github.com/crackedngineer/iLoveGithub/compare/v0.14.5...v0.14.6) (2025-10-07)
+
+
+### Bug Fixes
+
+* updated npm packages ([5c5e787](https://github.com/crackedngineer/iLoveGithub/commit/5c5e7871e60cc4a8dbb0ce1eea461dd9d311b4ef))
+
 ## [0.14.5](https://github.com/crackedngineer/iLoveGithub/compare/v0.14.4...v0.14.5) (2025-10-07)
 
 
