@@ -4,6 +4,14 @@ All notable changes to this project will be documented in this file.
 
 ---
 
+## [0.14.4](https://github.com/crackedngineer/iLoveGithub/compare/v0.14.3...v0.14.4) (2025-10-07)
+
+
+### Bug Fixes
+
+* updated default_branch param in tools api to branch ([2d6ad66](https://github.com/crackedngineer/iLoveGithub/commit/2d6ad66aa73de0235aebd9c4ef71bea8223c3463))
+* updated default_branch param in tools api to branch ([ef600d5](https://github.com/crackedngineer/iLoveGithub/commit/ef600d5d699c367998cb9e2f3bb2911f50659038))
+
 ## [0.14.3](https://github.com/crackedngineer/iLoveGithub/compare/v0.14.2...v0.14.3) (2025-10-04)
 
 
