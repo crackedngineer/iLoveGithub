@@ -4,6 +4,13 @@ All notable changes to this project will be documented in this file.
 
 ---
 
+## [0.15.1](https://github.com/crackedngineer/iLoveGithub/compare/v0.15.0...v0.15.1) (2025-10-18)
+
+
+### Bug Fixes
+
+* fixed authguard loading issue ([#121](https://github.com/crackedngineer/iLoveGithub/issues/121)) ([acc0b11](https://github.com/crackedngineer/iLoveGithub/commit/acc0b1182bf4bcd6b8b9d2d27ba4e757bd6cbe20))
+
 ## [0.15.0](https://github.com/crackedngineer/iLoveGithub/compare/v0.14.7...v0.15.0) (2025-10-18)
 
 
