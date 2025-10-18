@@ -15,7 +15,7 @@ export default function AuthGuard({children}: {children: React.ReactNode}) {
   }, []);
 
   useEffect(() => {
-    if (!session || !("accessToken" in session)) return;
+    if (!session || !("provider_token" in session)) return;
 
     const logoutTimer = setTimeout(() => {
       console.warn("No valid token, logging out...");
