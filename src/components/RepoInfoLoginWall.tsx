@@ -2,7 +2,7 @@
 
 import React, {useState, useEffect, ReactNode} from "react";
 import {Info} from "lucide-react";
-import {signIn} from "next-auth/react"; // 👈 import signIn from next-auth
+import {useAuth} from "./AuthProvider";
 
 interface RepoInfoLoginWallProps {
   children: ReactNode;
@@ -10,6 +10,7 @@ interface RepoInfoLoginWallProps {
 }
 
 const RepoInfoLoginWall: React.FC<RepoInfoLoginWallProps> = ({children, isLoggedIn}) => {
+  const {signInWithGitHub: signIn} = useAuth();
   const [showWall, setShowWall] = useState(!isLoggedIn);
 
   useEffect(() => {
@@ -24,7 +25,7 @@ const RepoInfoLoginWall: React.FC<RepoInfoLoginWallProps> = ({children, isLogged
     const githubUrl = `https://github.com/${owner}/${repo}`;
 
     sessionStorage.setItem("pendingRepoUrl", githubUrl); // Save GitHub URL
-    signIn("github", {callbackUrl: githubUrl}); // Redirect after login
+    signIn();
   };
 
   if (!showWall) {
@@ -48,7 +49,7 @@ const RepoInfoLoginWall: React.FC<RepoInfoLoginWallProps> = ({children, isLogged
             </div>
 
             <p className="text-gray-600 dark:text-gray-400 mb-4 text-sm">
-              You've reached the maximum limit of {process.env.NEXT_PUBLIC_MAX_REPO_LIMIT}{" "}
+              You&apos;ve reached the maximum limit of {process.env.NEXT_PUBLIC_MAX_REPO_LIMIT}{" "}
               repository analyses. Please sign in to continue using this tool without limitations.
             </p>
 

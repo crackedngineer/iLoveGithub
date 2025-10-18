@@ -2,6 +2,7 @@
 
 import {useEffect} from "react";
 import {usePathname, useRouter} from "next/navigation";
+import Link from "next/link";
 import {Button} from "@/components/ui/button";
 import {Home, ArrowLeft} from "lucide-react";
 import Header from "@/components/Header";
@@ -34,7 +35,7 @@ const NotFound = () => {
               Oops! Page not found
             </h2>
             <p className="text-lg text-gray-600 dark:text-gray-400 mb-2">
-              The page you're looking for seems to have wandered off into the digital void.
+              The page you&apos;re looking for seems to have wandered off into the digital void.
             </p>
           </div>
 
@@ -46,10 +47,10 @@ const NotFound = () => {
                 size="lg"
                 className="bg-gradient-to-r from-github-blue to-blue-600 hover:from-github-blue hover:to-blue-700 text-white shadow-lg hover:shadow-xl transition-all duration-300 hover:scale-105"
               >
-                <a href="/">
+                <Link href="/">
                   <Home className="h-5 w-5 mr-2" />
                   Return to Home
-                </a>
+                </Link>
               </Button>
 
               <Button

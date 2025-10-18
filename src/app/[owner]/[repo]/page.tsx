@@ -8,12 +8,12 @@ import RepoSearch from "@/components/RepoSearch";
 import AppLayout from "@/components/AppLayout";
 import {Introduction} from "@/components/Introduction";
 import {RECENT_REPO_LOCAL_STORAGE_KEY, RECENT_TRENDING_REPO_CACHE_MAXCOUNT} from "@/constants";
-import {useSession} from "next-auth/react";
 import {useApiLimit} from "@/components/ApiLimitContext";
 import {Tool} from "@/lib/types";
+import {useAuth} from "@/components/AuthProvider";
 
 export default function RepoPage() {
-  const {data: session, status} = useSession();
+  const {session, loading} = useAuth();
   const router = useRouter();
   const params = useParams() as {owner: string; repo: string};
   const {owner, repo} = params;
@@ -27,8 +27,8 @@ export default function RepoPage() {
   const fullName = useMemo(() => `${owner}/${repo}`.toLowerCase(), [owner, repo]);
 
   const token = useMemo(() => {
-    return session?.accessToken;
-  }, [status]);
+    return session?.provider_token;
+  }, [session?.provider_token]);
 
   const updateRecentRepos = (details: RepoData) => {
     const stored = JSON.parse(
@@ -46,7 +46,7 @@ export default function RepoPage() {
     setError(null);
 
     try {
-      if (status !== "authenticated" && !remaining) {
+      if (!session && !remaining) {
         setError("rate-limit");
         const fallbackRepo: RepoData = {
           name: repo,
@@ -98,13 +98,13 @@ export default function RepoPage() {
     } finally {
       setIsLoading(false);
     }
-  }, [owner, repo, status, session, remaining, updateRecentRepos]);
+  }, [session, owner, repo, fullName, token, remaining]);
 
   const fetchTools = useCallback(async () => {
     if (!repoData) return;
     try {
       const {data} = await axios.get(
-        `/api/tools?owner=${repoData.owner}&repo=${repoData.name}&default_branch=${repoData.default_branch}`,
+        `/api/tools?owner=${repoData.owner}&repo=${repoData.name}&branch=${repoData.default_branch}`,
       );
       setTools(data);
     } catch (err) {
@@ -114,10 +114,10 @@ export default function RepoPage() {
   }, [repoData]);
 
   useEffect(() => {
-    if (status !== "loading") {
+    if (!loading) {
       fetchRepoData();
     }
-  }, [owner, repo, status]);
+  }, [loading, fetchRepoData]);
 
   useEffect(() => {
     if (repoData) fetchTools();
@@ -132,7 +132,6 @@ export default function RepoPage() {
           key={`${owner}-${repo}`}
           value={`${owner}/${repo}`}
           trending={false}
-          onError={() => setError(null)}
           onRepoSubmit={(owner, repo) => {
             if (owner.trim() && repo.trim()) {
               router.push(`/${owner}/${repo}`);
@@ -158,7 +157,7 @@ export default function RepoPage() {
 
         {!isLoading && repoData && (
           <>
-            <RepoInfo repo={repoData} isLoggedIn={status === "authenticated" || !!remaining} />
+            <RepoInfo repo={repoData} isLoggedIn={!!session || !!remaining} />
             <GitHubTools tools={tools} />
           </>
         )}

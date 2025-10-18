@@ -4,8 +4,8 @@ import {Analytics} from "@vercel/analytics/react";
 import {SpeedInsights} from "@vercel/speed-insights/next";
 import {Geist, Geist_Mono} from "next/font/google";
 import "./globals.css";
-import AuthProvider from "@/components/AuthProvider";
-import AdBanner from "@/components/AdBanner";
+import {AuthProvider} from "@/components/AuthProvider";
+// import AdBanner from "@/components/AdBanner";
 import GoogleAnalytics from "@/components/GoogleAnalytics";
 import {ApiLimitProvider} from "@/components/ApiLimitContext";
 import AuthGuard from "@/components/AuthGuard";
@@ -82,6 +82,7 @@ export default function RootLayout({
         <link rel="canonical" href="https://ilovegithub.oderna.in" />
         {/* Theme script for preventing flicker */}
         <Script
+          id="theme-script"
           dangerouslySetInnerHTML={{
             __html: `(function() {
           try {
