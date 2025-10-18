@@ -1,7 +1,7 @@
 import {NextRequest, NextResponse} from "next/server";
 import fs from "fs/promises";
 import path from "path";
-import {replaceUrlVariables, parseImageFileName} from "@/app/helper";
+import {replaceUrlVariables} from "@/app/helper";
 import {rootDomain} from "@/lib/utils";
 
 export async function GET(req: NextRequest) {
