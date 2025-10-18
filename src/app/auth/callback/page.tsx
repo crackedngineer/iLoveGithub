@@ -15,10 +15,8 @@ export default function Callback() {
       } = await supabase.auth.getSession();
       if (session) {
         console.log("User logged in:", session.user);
-        router.push("/");
-      } else {
-        router.push("/");
       }
+      router.push("/");
     };
     handleSession();
   }, [router]);
