@@ -2,7 +2,7 @@
 
 import React, {useState, useEffect, ReactNode} from "react";
 import {Info} from "lucide-react";
-import {signIn} from "next-auth/react"; // 👈 import signIn from next-auth
+import {useAuth} from "./AuthProvider";
 
 interface RepoInfoLoginWallProps {
   children: ReactNode;
@@ -10,6 +10,7 @@ interface RepoInfoLoginWallProps {
 }
 
 const RepoInfoLoginWall: React.FC<RepoInfoLoginWallProps> = ({children, isLoggedIn}) => {
+  const {signInWithGitHub: signIn} = useAuth();
   const [showWall, setShowWall] = useState(!isLoggedIn);
 
   useEffect(() => {
@@ -24,7 +25,7 @@ const RepoInfoLoginWall: React.FC<RepoInfoLoginWallProps> = ({children, isLogged
     const githubUrl = `https://github.com/${owner}/${repo}`;
 
     sessionStorage.setItem("pendingRepoUrl", githubUrl); // Save GitHub URL
-    signIn("github", {callbackUrl: githubUrl}); // Redirect after login
+    signIn();
   };
 
   if (!showWall) {
