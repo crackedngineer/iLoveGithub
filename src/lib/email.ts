@@ -1,7 +1,7 @@
 import {sendWelcomeEmail, sendWelcomeBackEmail} from "./mailer";
 import type {User} from "@supabase/supabase-js";
 
-async function handleUserCreation(user: User): Promise<void> {
+async function handleUserCreation(user: User) {
   try {
     if (!user.email) {
       console.warn("User created without email address, skipping welcome email");
@@ -16,7 +16,7 @@ async function handleUserCreation(user: User): Promise<void> {
   }
 }
 
-async function handleReturningUser(user: User): Promise<void> {
+async function handleReturningUser(user: User) {
   try {
     if (!user.email) {
       console.warn("Returning user without email address, skipping welcome back email");
@@ -24,14 +24,14 @@ async function handleReturningUser(user: User): Promise<void> {
     }
 
     console.log(`Sending welcome back email to returning user: ${user.email}`);
-    await sendWelcomeBackEmail(user.email, user.user_metadata.full_name ?? "GitHub User");
+    // await sendWelcomeBackEmail(user.email, user.user_metadata.full_name ?? "GitHub User");
     console.log(`Welcome back email successfully queued for ${user.email}`);
   } catch (error) {
     console.error("Failed to process returning user:", error);
   }
 }
 
-export async function handleUserEmail(user: User): Promise<void> {
+export async function handleUserEmail(user: User) {
   try {
     const {created_at, last_sign_in_at} = user;
     const isNewUser = new Date(last_sign_in_at!).getTime() - new Date(created_at).getTime() < 10000;
