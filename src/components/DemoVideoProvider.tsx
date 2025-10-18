@@ -17,9 +17,6 @@ export const useDemoVideo = () => {
 };
 
 export const DemoVideoProvider: React.FC<{children: React.ReactNode}> = ({children}) => {
-  // Prevent execution during SSR
-  if (typeof window === "undefined") return;
-
   const [isVideoModalOpen, setIsVideoModalOpen] = useState(false);
   const [hasShownAutomatically, setHasShownAutomatically] = useState(false);
 
@@ -40,6 +37,9 @@ export const DemoVideoProvider: React.FC<{children: React.ReactNode}> = ({childr
       return () => clearTimeout(timer);
     }
   }, [hasShownAutomatically]);
+
+  // Prevent execution during SSR
+  if (typeof window === "undefined") return;
 
   const openVideoModal = () => {
     setIsVideoModalOpen(true);

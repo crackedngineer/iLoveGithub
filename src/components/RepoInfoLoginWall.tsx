@@ -49,7 +49,7 @@ const RepoInfoLoginWall: React.FC<RepoInfoLoginWallProps> = ({children, isLogged
             </div>
 
             <p className="text-gray-600 dark:text-gray-400 mb-4 text-sm">
-              You've reached the maximum limit of {process.env.NEXT_PUBLIC_MAX_REPO_LIMIT}{" "}
+              You&apos;ve reached the maximum limit of {process.env.NEXT_PUBLIC_MAX_REPO_LIMIT}{" "}
               repository analyses. Please sign in to continue using this tool without limitations.
             </p>
 
