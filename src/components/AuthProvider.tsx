@@ -2,9 +2,11 @@
 
 import {createContext, useContext, useEffect, useState, ReactNode} from "react";
 import {supabase} from "@/lib/supabaseClient";
-import type {Session} from "@supabase/supabase-js";
+import type {User, Session} from "@supabase/supabase-js";
+import {handleUserEmail} from "@/lib/email";
 
 type AuthContextType = {
+  user: User | null;
   session: Session | null;
   loading: boolean;
   signInWithGitHub: () => Promise<void>;
@@ -14,6 +16,7 @@ type AuthContextType = {
 const AuthContext = createContext<AuthContextType | undefined>(undefined);
 
 export const AuthProvider = ({children}: {children: ReactNode}) => {
+  const [user, setUser] = useState<User | null>(null);
   const [session, setSession] = useState<Session | null>(null);
   const [loading, setLoading] = useState(true);
 
@@ -21,6 +24,7 @@ export const AuthProvider = ({children}: {children: ReactNode}) => {
   useEffect(() => {
     supabase.auth.getSession().then(({data}) => {
       setSession(data.session);
+      setUser(data.session?.user ?? null);
       setLoading(false);
     });
 
@@ -28,6 +32,10 @@ export const AuthProvider = ({children}: {children: ReactNode}) => {
     const {
       data: {subscription},
     } = supabase.auth.onAuthStateChange((_event, session) => {
+      if (_event === "SIGNED_IN" && session?.user) {
+        handleUserEmail(session.user);
+      }
+      setUser(session?.user ?? null);
       setSession(session);
       setLoading(false);
     });
@@ -55,6 +63,7 @@ export const AuthProvider = ({children}: {children: ReactNode}) => {
   };
 
   const value: AuthContextType = {
+    user,
     session,
     loading,
     signInWithGitHub,

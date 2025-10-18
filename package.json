@@ -1,6 +1,6 @@
 {
   "name": "i-love-github",
-  "version": "0.12.6",
+  "version": "0.14.7",
   "private": true,
   "homepage": "https://ilovegithub.oderna.in/",
   "scripts": {
@@ -49,13 +49,12 @@
     "clsx": "^2.1.1",
     "date-fns": "^4.1.0",
     "framer-motion": "^12.23.12",
-    "lucide-react": "^0.542.0",
+    "lucide-react": "^0.544.0",
     "motion": "^12.23.14",
     "next": "^15.5.2",
-    "next-auth": "^4.24.11",
     "next-sitemap": "^4.2.3",
     "next-themes": "^0.4.6",
-    "nodemailer": "^6.10.1",
+    "nodemailer": "^7.0.9",
     "react": "^19.0.0",
     "react-dom": "^19.0.0",
     "react-use-measure": "^2.1.7",

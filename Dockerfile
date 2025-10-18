@@ -10,7 +10,7 @@ EXPOSE 3000
 FROM base AS deps
 WORKDIR /app
 COPY package*.json ./
-RUN npm install
+RUN npm install --legacy-peer-deps
 
 # Builder stage
 FROM base AS builder

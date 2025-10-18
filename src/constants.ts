@@ -22,3 +22,7 @@ export const DefaultGithubRepo = {
   owner: "crackedngineer",
   repo: "iLoveGithub",
 };
+
+export const GITHUB_API_URL = "https://api.github.com/search/repositories";
+
+export const TRENDING_REPO_TTL = 86400; // 24 hours

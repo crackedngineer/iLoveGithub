@@ -104,7 +104,7 @@ export default function RepoPage() {
     if (!repoData) return;
     try {
       const {data} = await axios.get(
-        `/api/tools?owner=${repoData.owner}&repo=${repoData.name}&default_branch=${repoData.default_branch}`,
+        `/api/tools?owner=${repoData.owner}&repo=${repoData.name}&branch=${repoData.default_branch}`,
       );
       setTools(data);
     } catch (err) {

@@ -116,11 +116,11 @@ const RepoSearch = ({
     const fetchTrending = async () => {
       setLoading(true);
       try {
-        const res = await fetch("/api/repo/trending");
+        const res = await fetch("/api/repo/trending?limit=6&offset=0");
         if (!res.ok) throw new Error("Failed to fetch trending.json");
 
         const data = await res.json();
-        setTrendingRepos(data);
+        setTrendingRepos(data.items);
       } catch (e) {
         console.error("Failed to fetch trending repositories", e);
       } finally {
