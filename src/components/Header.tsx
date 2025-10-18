@@ -3,7 +3,6 @@
 import React, {useState, useEffect} from "react";
 import Link from "next/link";
 import Image from "next/image";
-import {useSession, signOut, signIn} from "next-auth/react";
 import {Menu, X, Sun, Moon, User, Coffee, QrCode} from "lucide-react";
 import {Button} from "@/components/ui/button";
 import {appVersion} from "@/lib/version";
@@ -27,13 +26,16 @@ import {
 } from "@/constants";
 import {RateLimitDisplay} from "./RateLimitDisplay";
 import {useAppLocation} from "./AppLocationProvider";
+import {useAuth} from "./AuthProvider";
 
 const Header = () => {
-  const {data: session, status} = useSession();
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   const [isDarkMode, setIsDarkMode] = useState(false);
   const [isDonationModalOpen, setIsDonationModalOpen] = useState(false);
   const {isInIndia} = useAppLocation();
+  const {session, signOut, signInWithGitHub} = useAuth();
+
+  const status = session ? "authenticated" : "unauthenticated";
 
   useEffect(() => {
     setIsDarkMode(document.documentElement.classList.contains("dark"));
@@ -116,16 +118,18 @@ const Header = () => {
           <GitHubStarsButton
             username={DefaultGithubRepo.owner}
             repo={DefaultGithubRepo.repo}
-            onClick={(e) => window.open(GITHUB_REPO_URL, "_blank")}
+            onClick={() => window.open(GITHUB_REPO_URL, "_blank")}
           />
 
           <DropdownMenu>
             <DropdownMenuTrigger asChild>
               <button className="flex items-center gap-2 rounded-full">
-                {session?.user?.image ? (
-                  <img
-                    src={session.user.image}
+                {session?.user?.user_metadata?.avatar_url ? (
+                  <Image
+                    src={session.user.user_metadata.avatar_url}
                     alt="Profile"
+                    width={32}
+                    height={32}
                     className="w-8 h-8 rounded-full object-cover"
                   />
                 ) : (
@@ -142,7 +146,11 @@ const Header = () => {
                     Signed in as
                   </DropdownMenuLabel>
                   <div className="px-2 py-1">
-                    <p className="text-sm font-medium truncate">{session.user?.name}</p>
+                    <p className="text-sm font-medium truncate">
+                      {session.user?.user_metadata?.user_name ||
+                        session.user?.user_metadata?.name ||
+                        "User"}
+                    </p>
                     <p className="text-xs text-gray-500 dark:text-gray-400 truncate">
                       {session.user?.email}
                     </p>
@@ -150,7 +158,7 @@ const Header = () => {
                   <DropdownMenuSeparator />
                   <DropdownMenuItem
                     className="cursor-pointer text-sm text-red-600 hover:bg-red-50 dark:hover:bg-red-900/20"
-                    onClick={() => signOut({callbackUrl: "/"})}
+                    onClick={() => signOut()}
                   >
                     Log out
                   </DropdownMenuItem>
@@ -158,7 +166,7 @@ const Header = () => {
               ) : (
                 <DropdownMenuItem
                   className="cursor-pointer text-sm text-blue-600 hover:bg-blue-50 dark:hover:bg-blue-900/20"
-                  onClick={() => signIn("github", {callbackUrl: "/"})}
+                  onClick={signInWithGitHub}
                 >
                   Sign in with GitHub
                 </DropdownMenuItem>
@@ -213,11 +221,11 @@ const Header = () => {
           >
             Demo
           </Button>
-          {session?.githubProfile && (
+          {session && (
             <Button
               variant="ghost"
               className="w-full justify-start text-sm text-red-600 hover:bg-red-50 dark:hover:bg-red-900/20 mt-1"
-              onClick={() => signOut({callbackUrl: "/"})}
+              onClick={() => signOut()}
             >
               Log out
             </Button>

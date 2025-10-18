@@ -2,13 +2,13 @@
 
 import React, {useEffect, useState, useRef} from "react";
 import {Search} from "lucide-react";
-import {useSession, signIn} from "next-auth/react";
+import Image from "next/image";
 import {Button} from "@/components/ui/button";
 import {Input} from "@/components/ui/input";
 import {Card, CardContent} from "@/components/ui/card";
 import {Skeleton} from "@/components/ui/skeleton";
 import {RECENT_REPO_LOCAL_STORAGE_KEY, RECENT_TRENDING_REPO_UI_MAXCOUNT} from "@/constants";
-import {RepoData} from "./RepoInfo";
+import {useAuth} from "./AuthProvider";
 
 interface TrendingRepo {
   id: number;
@@ -36,7 +36,6 @@ type RepoSubmitHandler = {
 
 const RepoSearch = ({
   value = "",
-  onError,
   trending = true,
   onRepoSubmit,
 }: {
@@ -45,7 +44,7 @@ const RepoSearch = ({
   trending: boolean;
   onRepoSubmit: (owner: string, repo: string) => void;
 }) => {
-  const {data: session, status} = useSession();
+  const {session} = useAuth();
   const repoInputRef = useRef<HTMLInputElement>(null);
   const [repoUrl, setRepoUrl] = useState(value);
   const [error, setError] = useState("");
@@ -72,7 +71,7 @@ const RepoSearch = ({
     return null;
   };
 
-  const handleRepoSubmit = ({e, owner, repo, repoUrl, onSubmit, onError}: RepoSubmitHandler) => {
+  const handleRepoSubmit = ({owner, repo, repoUrl, onSubmit, onError}: RepoSubmitHandler) => {
     if (repoUrl?.trim()) {
       const details = extractRepoDetails(repoUrl);
       if (details) {
@@ -130,10 +129,10 @@ const RepoSearch = ({
     };
 
     if (trending) fetchTrending();
-  }, []);
+  }, [trending]);
 
   useEffect(() => {
-    if (status === "authenticated") {
+    if (session) {
       const pendingRepoUrl = sessionStorage.getItem("pendingRepoUrl");
       if (pendingRepoUrl) {
         setRepoUrl(pendingRepoUrl);
@@ -145,7 +144,7 @@ const RepoSearch = ({
         }
       }
     }
-  }, [status]);
+  }, [session, onRepoSubmit]);
 
   const handleRecentClick = (entry: string) => {
     const [owner, repo] = entry.split("/");
@@ -226,10 +225,12 @@ const RepoSearch = ({
                             {repo.description || "No description"}
                           </p>
                         </div>
-                        <img
+                        <Image
                           src={repo.owner.avatar_url}
                           alt={repo.owner.login}
-                          className="w-8 h-8 rounded-full"
+                          className="rounded-full object-cover"
+                          width={32}
+                          height={32}
                         />
                       </div>
                     </Card>
