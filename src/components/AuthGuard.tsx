@@ -5,8 +5,7 @@ import Loader from "./Loader";
 import {useAuth} from "./AuthProvider";
 
 export default function AuthGuard({children}: {children: React.ReactNode}) {
-  const {session, signOut, loading} = useAuth();
-  const [isLoggingOut, setIsLoggingOut] = useState(false);
+  const {loading} = useAuth();
   const [showInitialLoader, setShowInitialLoader] = useState(true);
 
   useEffect(() => {
@@ -14,19 +13,7 @@ export default function AuthGuard({children}: {children: React.ReactNode}) {
     return () => clearTimeout(timer);
   }, []);
 
-  useEffect(() => {
-    if (!session || !("provider_token" in session)) return;
-
-    const logoutTimer = setTimeout(() => {
-      console.warn("No valid token, logging out...");
-      setIsLoggingOut(true);
-      signOut();
-    }, 4500);
-
-    return () => clearTimeout(logoutTimer);
-  }, [session, signOut]);
-
-  const shouldShowLoader = showInitialLoader || loading || isLoggingOut;
+  const shouldShowLoader = showInitialLoader || loading;
 
   return shouldShowLoader ? <Loader /> : <>{children}</>;
 }
