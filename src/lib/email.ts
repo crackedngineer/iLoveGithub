@@ -34,7 +34,9 @@ async function handleReturningUser(user: User) {
 export async function handleUserEmail(user: User) {
   try {
     const {created_at, last_sign_in_at} = user;
-    const isNewUser = last_sign_in_at ? new Date(last_sign_in_at).getTime() - new Date(created_at).getTime() < 10000 : true;
+    const isNewUser = last_sign_in_at
+      ? new Date(last_sign_in_at).getTime() - new Date(created_at).getTime() < 10000
+      : true;
 
     if (isNewUser) {
       await handleUserCreation(user);

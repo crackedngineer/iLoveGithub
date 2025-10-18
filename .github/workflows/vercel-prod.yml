@@ -2,7 +2,7 @@ name: Vercel Production Deployment
 
 on:
   release:
-    types: 
+    types:
       - published
 
 permissions:
