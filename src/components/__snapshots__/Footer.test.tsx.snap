@@ -1,6 +1,6 @@
 // Jest Snapshot v1, https://jestjs.io/docs/snapshot-testing
 
-exports[`Footer Component Snapshot matches snapshot 1`] = `
+exports[`Footer Component matches snapshot 1`] = `
 <div>
   <footer
     class="w-full py-6 px-4 sm:px-6 bg-github-light-gray dark:bg-github-dark-blue border-t border-gray-200 dark:border-gray-800"
