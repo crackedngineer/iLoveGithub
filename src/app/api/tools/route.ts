@@ -3,6 +3,7 @@ import fs from "fs/promises";
 import path from "path";
 import {replaceUrlVariables} from "@/app/helper";
 import {rootDomain} from "@/lib/utils";
+import {Tool} from "@/lib/types";
 
 export async function GET(req: NextRequest) {
   try {
@@ -20,7 +21,7 @@ export async function GET(req: NextRequest) {
     const data = JSON.parse(await fs.readFile(filePath, "utf-8"));
 
     // Map and update URLs in a functional style
-    const result = data.map((item: any) => ({
+    const result = data.map((item: Tool) => ({
       ...item,
       url: replaceUrlVariables(
         item.iframe ? `https://${rootDomain}/tools/${item.name}/{owner}/{repo}` : item.url,

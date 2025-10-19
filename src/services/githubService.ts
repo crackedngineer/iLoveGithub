@@ -33,12 +33,17 @@ export const fetchRateLimit = async (): Promise<RateLimitResponse> => {
     }
 
     return rate;
-  } catch (error: any) {
+  } catch (error) {
     if (error instanceof RateLimitError) {
       throw error;
     }
-
-    console.error("Error fetching rate limit:", error?.response?.data || error.message);
+    if (axios.isAxiosError(error)) {
+      console.error("Error fetching rate limit:", error.response?.data || error.message);
+    } else if (error instanceof Error) {
+      console.error("Error fetching rate limit:", error.message);
+    } else {
+      console.error("Unknown error fetching rate limit:", error);
+    }
 
     return {
       limit: 60,
