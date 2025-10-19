@@ -3,7 +3,7 @@
 import {createContext, useContext, useEffect, useState, ReactNode} from "react";
 import {supabase} from "@/lib/supabaseClient";
 import type {User, Session} from "@supabase/supabase-js";
-import {handleUserEmail} from "@/lib/email";
+// import {handleUserEmail} from "@/lib/email";
 
 type AuthContextType = {
   user: User | null;

@@ -1,0 +1,48 @@
+// Jest Snapshot v1, https://jestjs.io/docs/snapshot-testing
+
+exports[`Footer Component matches snapshot 1`] = `
+<div>
+  <footer
+    class="w-full py-6 px-4 sm:px-6 bg-github-light-gray dark:bg-github-dark-blue border-t border-gray-200 dark:border-gray-800"
+  >
+    <div
+      class="flex flex-col gap-2 md:flex-row md:justify-center md:items-center text-sm text-center md:text-left text-gray-500 dark:text-gray-400"
+    >
+      <p>
+        © 
+        2024
+         iLoveGithub
+      </p>
+      <span
+        class="hidden sm:inline"
+      >
+        •
+      </span>
+      <p
+        class="flex justify-center md:justify-start items-center gap-2"
+      >
+        <span>
+          Made in
+        </span>
+        <img
+          alt="Indian Flag"
+          height="18"
+          src="/icons/indian-flag.svg"
+          width="18"
+        />
+        <span>
+          by
+        </span>
+        <a
+          class="hover:text-github-blue dark:hover:text-white transition-colors"
+          href="https://github.com/crackedngineer/"
+          rel="noopener noreferrer"
+          target="_blank"
+        >
+          Subhomoy Roy Choudhury
+        </a>
+      </p>
+    </div>
+  </footer>
+</div>
+`;

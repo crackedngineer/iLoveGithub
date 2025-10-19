@@ -53,7 +53,7 @@ const DonationModal = ({isOpen, onClose, isIndiaLocation}: DonationModalProps) =
     }, 800); // increased debounce delay
 
     return () => clearTimeout(handler);
-  }, [amount]);
+  }, [amount, debouncedAmount]);
 
   useEffect(() => {
     const generateQR = async () => {

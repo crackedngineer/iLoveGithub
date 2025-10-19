@@ -1,6 +1,7 @@
 // app/api/trending/route.ts
 import {NextResponse} from "next/server";
 import {GITHUB_API_URL, TRENDING_REPO_TTL} from "@/constants";
+import {GitHubRepo} from "@/lib/types";
 
 const GITHUB_TOKEN = process.env.GITHUB_TOKEN;
 
@@ -39,7 +40,7 @@ export async function GET(req: Request) {
 
     const data = await res.json();
 
-    const items = data.items.map((repo: any) => ({
+    const items = data.items.map((repo: GitHubRepo) => ({
       id: repo.id,
       name: repo.name,
       full_name: repo.full_name,
