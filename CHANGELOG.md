@@ -6,41 +6,36 @@ All notable changes to this project will be documented in this file.
 
 ## [0.15.3](https://github.com/crackedngineer/iLoveGithub/compare/v0.15.2...v0.15.3) (2025-10-20)
 
-
 ### Bug Fixes
 
-* text fixes in github tools component ([#125](https://github.com/crackedngineer/iLoveGithub/issues/125)) ([052f2b3](https://github.com/crackedngineer/iLoveGithub/commit/052f2b310fb7f1a868f22a2f164d2238e3a2d9f0))
+- text fixes in github tools component ([#125](https://github.com/crackedngineer/iLoveGithub/issues/125)) ([052f2b3](https://github.com/crackedngineer/iLoveGithub/commit/052f2b310fb7f1a868f22a2f164d2238e3a2d9f0))
 
 ## [0.15.2](https://github.com/crackedngineer/iLoveGithub/compare/v0.15.1...v0.15.2) (2025-10-18)
 
-
 ### Bug Fixes
 
-* upgrade version trigger ([20f6ffc](https://github.com/crackedngineer/iLoveGithub/commit/20f6ffc8256ff9a2cbc7019011ca8cb6e18781bd))
+- upgrade version trigger ([20f6ffc](https://github.com/crackedngineer/iLoveGithub/commit/20f6ffc8256ff9a2cbc7019011ca8cb6e18781bd))
 
 ## [0.15.1](https://github.com/crackedngineer/iLoveGithub/compare/v0.15.0...v0.15.1) (2025-10-18)
 
-
 ### Bug Fixes
 
-* fixed authguard loading issue ([#121](https://github.com/crackedngineer/iLoveGithub/issues/121)) ([acc0b11](https://github.com/crackedngineer/iLoveGithub/commit/acc0b1182bf4bcd6b8b9d2d27ba4e757bd6cbe20))
+- fixed authguard loading issue ([#121](https://github.com/crackedngineer/iLoveGithub/issues/121)) ([acc0b11](https://github.com/crackedngineer/iLoveGithub/commit/acc0b1182bf4bcd6b8b9d2d27ba4e757bd6cbe20))
 
 ## [0.15.0](https://github.com/crackedngineer/iLoveGithub/compare/v0.14.7...v0.15.0) (2025-10-18)
 
-
 ### Features
 
-* added supabase integration with Github oAuth provider ([c33f991](https://github.com/crackedngineer/iLoveGithub/commit/c33f99103851efb9d315bd9f346bcfb58de6493c))
-* integrated supabase auth ([f7ccc80](https://github.com/crackedngineer/iLoveGithub/commit/f7ccc80bc486a3eb56436dffc6136ca9be3e0014))
-
+- added supabase integration with Github oAuth provider ([c33f991](https://github.com/crackedngineer/iLoveGithub/commit/c33f99103851efb9d315bd9f346bcfb58de6493c))
+- integrated supabase auth ([f7ccc80](https://github.com/crackedngineer/iLoveGithub/commit/f7ccc80bc486a3eb56436dffc6136ca9be3e0014))
 
 ### Bug Fixes
 
-* fixed authguard issues ([1aeb6e5](https://github.com/crackedngineer/iLoveGithub/commit/1aeb6e5771f07ac4b42662ed12d662d005ed8fee))
-* fixed eslint issues ([84da6c8](https://github.com/crackedngineer/iLoveGithub/commit/84da6c87862032f72aea2774d2f6fb22fca0260d))
-* removed email trigger ([c3eb7bc](https://github.com/crackedngineer/iLoveGithub/commit/c3eb7bc9904271da76b01c45624182ff21176674))
-* removed next-auth references ([64a2799](https://github.com/crackedngineer/iLoveGithub/commit/64a2799fd7602bd3eac3fd748ea34b01fbaba1b9))
-* updated packages ([009b1b8](https://github.com/crackedngineer/iLoveGithub/commit/009b1b8d70be4e2a5e2c1aaad6eb1a052081b07c))
+- fixed authguard issues ([1aeb6e5](https://github.com/crackedngineer/iLoveGithub/commit/1aeb6e5771f07ac4b42662ed12d662d005ed8fee))
+- fixed eslint issues ([84da6c8](https://github.com/crackedngineer/iLoveGithub/commit/84da6c87862032f72aea2774d2f6fb22fca0260d))
+- removed email trigger ([c3eb7bc](https://github.com/crackedngineer/iLoveGithub/commit/c3eb7bc9904271da76b01c45624182ff21176674))
+- removed next-auth references ([64a2799](https://github.com/crackedngineer/iLoveGithub/commit/64a2799fd7602bd3eac3fd748ea34b01fbaba1b9))
+- updated packages ([009b1b8](https://github.com/crackedngineer/iLoveGithub/commit/009b1b8d70be4e2a5e2c1aaad6eb1a052081b07c))
 
 ## [0.14.7](https://github.com/crackedngineer/iLoveGithub/compare/v0.14.6...v0.14.7) (2025-10-07)
 
