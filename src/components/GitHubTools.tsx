@@ -56,9 +56,7 @@ const GitHubTools = ({tools}: {tools: Tool[]}) => {
       </div>
 
       {Object.entries(toolsByCategory).length === 0 ? (
-        <p className="text-center text-gray-600 dark:text-gray-400">
-          No tools found matching &quot;{searchTerm}&quot;
-        </p>
+        <p className="text-center text-gray-600 dark:text-gray-400">No tools found matching</p>
       ) : (
         Object.entries(toolsByCategory).map(([category, categoryTools]) => (
           <section key={category} className="mb-10 sm:mb-12">
