@@ -4,6 +4,18 @@ All notable changes to this project will be documented in this file.
 
 ---
 
+## [0.16.2](https://github.com/crackedngineer/iLoveGithub/compare/v0.16.1...v0.16.2) (2025-10-20)
+
+
+### Bug Fixes
+
+* fixed --json unknown flag issue ([2fd570e](https://github.com/crackedngineer/iLoveGithub/commit/2fd570ef65614906230d0c03b54f06fa0c5b5c46))
+* manually creating tools pr inorder to trigger update_tools_markdown ([8ae0d39](https://github.com/crackedngineer/iLoveGithub/commit/8ae0d39983096e8b115199d80b5f7445ae155439))
+* manually creating tools pr inorder to trigger update_tools_markdown ([#145](https://github.com/crackedngineer/iLoveGithub/issues/145)) ([d24efcd](https://github.com/crackedngineer/iLoveGithub/commit/d24efcd751e926a9d76d3092f8309815a286905c))
+* pr body issues ([966a9f9](https://github.com/crackedngineer/iLoveGithub/commit/966a9f9db92f8d804c64ac6f1e0141b0116d79d9))
+* **tool:** Add Glitch tool ([4b6ef30](https://github.com/crackedngineer/iLoveGithub/commit/4b6ef3076a2981211509c369072e0beda6e85a13))
+* updated fetching for pr details ([2a5bedc](https://github.com/crackedngineer/iLoveGithub/commit/2a5bedccf85882af91179d9ec01b808e7a782f32))
+
 ## [0.16.1](https://github.com/crackedngineer/iLoveGithub/compare/v0.16.0...v0.16.1) (2025-10-20)
 
 
