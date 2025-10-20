@@ -159,7 +159,7 @@ jobs:
             --fill)
 
           # Extract PR number from JSON output
-          pr_number=$(echo "$pr_json" | jq -r '.number')
+          pr_number=$(basename "$pr_url")
           echo "pr_number=$pr_number" >> "$GITHUB_OUTPUT"
 
       - name: Update issue
