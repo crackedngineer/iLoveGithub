@@ -28,7 +28,7 @@ jobs:
             // Parse issue form using field IDs
             const parseField = (id) => {
               const regex = new RegExp(`###\\s+[^\\n]+\\s+id:\\s*${id}\\s*([\\s\\S]*?)(?=###|$)`, 'i');
-              const match = issue.body.match(regex);
+              const match = issueBody.match(regex);
               if (match) {
                 return match[1].trim().replace(/^_No response_$/i, '');
               }
