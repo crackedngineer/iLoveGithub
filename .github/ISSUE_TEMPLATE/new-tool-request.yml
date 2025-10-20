@@ -20,6 +20,16 @@ body:
       placeholder: "e.g., GitHub1s"
     validations:
       required: true
+  
+  - type: textarea
+    id: description
+    attributes:
+      label: Description
+      description: Brief description of what the tool does
+      placeholder: "One second to read GitHub code with VS Code."
+    validations:
+      required: true
+
 
   - type: input
     id: homepage
@@ -42,15 +52,6 @@ body:
       label: Icon URL
       description: Direct link to the tool's icon/favicon
       placeholder: "https://github1s.com/favicon.ico"
-    validations:
-      required: true
-
-  - type: textarea
-    id: description
-    attributes:
-      label: Description
-      description: Brief description of what the tool does
-      placeholder: "One second to read GitHub code with VS Code."
     validations:
       required: true
 
