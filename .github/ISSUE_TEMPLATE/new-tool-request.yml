@@ -1,20 +1,28 @@
 name: 🚀 Suggest a New GitHub Tool
 description: Propose a new GitHub-related tool to be added to the curated list
-title: "[Tool Request] <Tool Name>"
-labels: [tool-request, enhancement]
+title: "[New Tool Request] <Tool Name>"
+labels: [new-tool-request]
 body:
   - type: input
-    id: tool-name
+    id: name
     attributes:
-      label: Tool Name
-      placeholder: "e.g., GitHub1s"
+      label: Name
+      placeholder: "e.g., github1s"
+    validations:
+      required: true
+
+  - type: input
+    id: title
+    attributes:
+      label: Title
+      placeholder: e.g., GitHub1s
     validations:
       required: true
 
   - type: input
     id: homepage
     attributes:
-      label: Tool Homepage
+      label: Homepage
       placeholder: "https://github1s.com"
     validations:
       required: true
@@ -22,7 +30,7 @@ body:
   - type: input
     id: url-pattern
     attributes:
-      label: URL pattern with placeholders
+      label: URL pattern
       placeholder: "https://github1s.com/{owner}/{repo}"
     validations:
       required: true
@@ -55,13 +63,10 @@ body:
     validations:
       required: true
 
-  - type: dropdown
+  - type: checkbox
     id: iframe
     attributes:
       label: Should this open inside an iframe?
-      options:
-        - "true"
-        - "false"
     validations:
       required: true
 
