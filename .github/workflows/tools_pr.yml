@@ -12,7 +12,7 @@ jobs:
       contents: write
       pull-requests: write
       issues: write
-    
+
     steps:
       - name: Checkout repository
         uses: actions/checkout@v4
@@ -26,14 +26,14 @@ jobs:
             const issueBody = context.payload.issue.body;
 
             console.log('Issue Body:', issueBody);
-            
+
             // Parse issue form using field IDs
             const parseField = (label) => {
               const regex = new RegExp(`### ${label}\\s*([\\s\\S]*?)(?=###|$)`, 'i');
               const match = issueBody.match(regex);
               return match ? match[1].trim() : '';
             };
-            
+
             // Extract fields using IDs from the issue form
             const toolName = parseField('Name');
             const toolTitle = parseField('Title');
@@ -43,7 +43,7 @@ jobs:
             const toolIcon = parseField('Icon URL');
             const toolCategory = parseField('Category');
             const toolIframe = parseField('iFrame Support');
-            
+
             // Parse checkbox - GitHub renders checked boxes as "[X]" or "[x]"
             const iframeSupport = toolIframe.includes('[X]') || toolIframe.includes('[x]')
 
@@ -58,7 +58,7 @@ jobs:
               iframe: iframeSupport,
               created_at: new Date().toISOString().split('T')[0]
             };
-            
+
             // Check for duplicates
             const toolsPath = './tools.json';
             if (fs.existsSync(toolsPath)) {
@@ -84,7 +84,7 @@ jobs:
                 return;
               }
             }
-            
+
             // Save tool data for next steps
             core.setOutput('tool_json', JSON.stringify(tool));
             core.setOutput('tool_name', tool.name);
@@ -98,15 +98,15 @@ jobs:
             const fs = require('fs');
             const tool = JSON.parse('${{ steps.parse.outputs.tool_json }}');
             const toolsPath = './tools.json';
-            
+
             // Read and update tools
             let tools = fs.existsSync(toolsPath) 
               ? JSON.parse(fs.readFileSync(toolsPath, 'utf8'))
               : [];
-            
+
             tools.push(tool);
             tools.sort((a, b) => a.name.localeCompare(b.name));
-            
+
             // Write updated file
             fs.writeFileSync(toolsPath, JSON.stringify(tools, null, 2) + '\n');
 
@@ -128,47 +128,64 @@ jobs:
         env:
           GITHUB_TOKEN: ${{ secrets.GH_TOKEN }} # use PAT if you want workflow to trigger PR events
         run: |
+          set -euo pipefail
+
           tool_json='${{ steps.parse.outputs.tool_json }}'
           branch_name='${{ steps.parse.outputs.branch_name }}'
           issue_number='${{ github.event.issue.number }}'
 
-          # Parse JSON fields using jq (if available)
+          # Parse JSON fields safely
           tool_title=$(echo "$tool_json" | jq -r '.title')
           tool_pretty=$(echo "$tool_json" | jq '.')
 
-          gh pr create \
+          # Create PR body as a temp file to avoid escaping issues
+          bodyfile=$(mktemp)
+          cat > "$bodyfile" <<EOF
+            ## New Tool Addition
+
+            This PR adds a new tool based on the request in #${issue_number}.
+
+            ### Tool Details
+            \`\`\`json
+            ${tool_pretty}
+            \`\`\`
+
+            Closes #${issue_number}
+            EOF
+
+          # Create PR and capture JSON output
+          pr_json=$(gh pr create \
             --title "fix(tool): Add ${tool_title} tool" \
-            --body "## New Tool Addition
+            --body-file "$bodyfile" \
             --base master \
             --head "$branch_name" \
             --label "tool:addition" \
-            --reviewer crackedngineer
+            --reviewer crackedngineer \
+            --json number)
 
-          This PR adds a new tool based on the request in #${issue_number}.
-
-          ### Tool Details
-          \`\`\`json
-          ${tool_pretty}
-          \`\`\`
-
-          Closes #${issue_number}" \
-                --base master \
-                --head "$branch_name"
+          # Extract PR number from JSON output
+          pr_number=$(echo "$pr_json" | jq -r '.number')
+          echo "pr_number=$pr_number" >> "$GITHUB_OUTPUT"
 
       - name: Update issue
         if: success()
         uses: actions/github-script@v7
         with:
           script: |
-            const prNumber = ${{ steps.create_pr.outputs.result }};
-            
+            const prNumber = "${{ steps.create_pr.outputs.pr_number }}";
+
+            if (!prNumber) {
+              core.setFailed("❌ Could not find PR number from previous step.");
+              return;
+            }
+
             await github.rest.issues.createComment({
               owner: context.repo.owner,
               repo: context.repo.repo,
               issue_number: context.issue.number,
               body: `🎉 Pull request created: #${prNumber}\n\nThe tool will be added once the PR is reviewed and merged.`
             });
-            
+
             await github.rest.issues.addLabels({
               owner: context.repo.owner,
               repo: context.repo.repo,
