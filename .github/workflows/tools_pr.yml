@@ -161,7 +161,8 @@ jobs:
             --head "$branch_name" \
             --label "tool:addition" \
             --reviewer crackedngineer \
-            --json number)
+            --repo "${{ github.repository }}" \
+            --fill)
 
           # Extract PR number from JSON output
           pr_number=$(echo "$pr_json" | jq -r '.number')
