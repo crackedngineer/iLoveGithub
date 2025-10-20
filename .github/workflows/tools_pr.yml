@@ -136,7 +136,7 @@ jobs:
 
           # Parse JSON fields safely
           tool_title=$(echo "$tool_json" | jq -r '.title')
-          tool_pretty=$(echo "$tool_json" | jq '{name,title,description,homepage,url,category,iframe}')
+          tool_pretty=$(echo "$tool_json" | jq '{name,title,homepage,url,category,iframe}')
 
           pr_body="## New Tool Addition
 
