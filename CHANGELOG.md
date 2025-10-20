@@ -4,6 +4,13 @@ All notable changes to this project will be documented in this file.
 
 ---
 
+## [0.16.0](https://github.com/crackedngineer/iLoveGithub/compare/v0.15.5...v0.16.0) (2025-10-20)
+
+
+### Features
+
+* added tools-pr workflow ([#137](https://github.com/crackedngineer/iLoveGithub/issues/137)) ([c9c4f91](https://github.com/crackedngineer/iLoveGithub/commit/c9c4f91ddf2a92717b748efdba500011632cafc5))
+
 ## [0.15.5](https://github.com/crackedngineer/iLoveGithub/compare/v0.15.4...v0.15.5) (2025-10-20)
 
 
