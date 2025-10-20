@@ -139,15 +139,13 @@ jobs:
           tool_pretty=$(echo "$tool_json" | jq '.')
 
           pr_body="## New Tool Addition
-
-          This PR adds a new tool based on the request in #${issue_number}.
+          
+          A new tool has been requested via issue #${issue_number}.
 
           ### Tool Details
           \`\`\`json
           ${tool_json}
-          \`\`\`
-
-          Closes #${issue_number}"
+          \`\`\`"
 
           # Create PR and capture JSON output
           pr_json=$(gh pr create \
