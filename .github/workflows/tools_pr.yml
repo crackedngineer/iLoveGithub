@@ -136,15 +136,15 @@ jobs:
 
           # Parse JSON fields safely
           tool_title=$(echo "$tool_json" | jq -r '.title')
-          tool_pretty=$(echo "$tool_json" | jq '.')
+          tool_pretty=$(echo "$tool_json" | jq '{name,title,description,homepage,url,category,iframe}')
 
           pr_body="## New Tool Addition
-          
+
           A new tool has been requested via issue #${issue_number}.
 
           ### Tool Details
           \`\`\`json
-          ${tool_json}
+          ${tool_pretty}
           \`\`\`"
 
           # Create PR and capture JSON output
