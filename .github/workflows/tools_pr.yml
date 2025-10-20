@@ -136,7 +136,7 @@ jobs:
               repo: context.repo.repo,
               title: `Add ${tool.title} tool`,
               head: branchName,
-              base: 'main',
+              base: 'master',
               body: `## New Tool Addition\n\nThis PR adds a new tool based on the request in #${context.issue.number}.\n\n### Tool Details\n\`\`\`json\n${JSON.stringify(tool, null, 2)}\n\`\`\`\n\nCloses #${context.issue.number}`
             });
             
