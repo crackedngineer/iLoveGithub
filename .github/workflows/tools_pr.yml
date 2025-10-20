@@ -24,28 +24,23 @@ jobs:
           script: |
             const fs = require('fs');
             const issueBody = context.payload.issue.body;
-
-            console.log('Issue Body:', issueBody);
             
             // Parse issue form using field IDs
-            const parseField = (id) => {
-              const regex = new RegExp(`###\\s+[^\\n]+\\s+id:\\s*${id}\\s*([\\s\\S]*?)(?=###|$)`, 'i');
+            const parseField = (label) => {
+              const regex = new RegExp(`### ${label}\\s*([\\s\\S]*?)(?=###|$)`, 'i');
               const match = issueBody.match(regex);
-              if (match) {
-                return match[1].trim().replace(/^_No response_$/i, '');
-              }
-              return '';
+              return match ? match[1].trim() : '';
             };
             
             // Extract fields using IDs from the issue form
-            const toolName = parseField('name');
-            const toolTitle = parseField('title');
-            const toolDescription = parseField('description');
-            const toolHomepage = parseField('homepage');
-            const toolUrl = parseField('url');
-            const toolIcon = parseField('icon-url');
-            const toolCategory = parseField('category');
-            const toolIframe = parseField('iframe');
+            const toolName = parseField('Name');
+            const toolTitle = parseField('Title');
+            const toolDescription = parseField('Description');
+            const toolHomepage = parseField('Homepage');
+            const toolUrl = parseField('URL Pattern');
+            const toolIcon = parseField('Icon URL');
+            const toolCategory = parseField('Category');
+            const toolIframe = parseField('iFrame Support');
             
             // Parse checkbox - GitHub renders checked boxes as "[X]" or "[x]"
             const iframeSupport = toolIframe.includes('[X]') || toolIframe.includes('[x]')
