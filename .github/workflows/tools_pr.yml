@@ -43,6 +43,7 @@ jobs:
             const toolUrl = parseField('url');
             const toolIcon = parseField('icon-url');
             const toolCategory = parseField('category');
+            const toolIframe = parseField('iframe');
             
             // Parse checkbox - GitHub renders checked boxes as "[X]" or "[x]"
             const iframeSupport = toolIframe.includes('[X]') || toolIframe.includes('[x]')
