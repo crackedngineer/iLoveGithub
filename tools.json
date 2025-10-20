@@ -275,6 +275,17 @@
     "created_at": "2025-03-28"
   },
   {
+    "name": "glitch",
+    "title": "Glitch",
+    "description": "Simple, powerful, free tools to create and use millions of apps.",
+    "homepage": "https://glitch.com/",
+    "url": "https://glitch.com/edit/#!/import/github/{owner}/{repo}",
+    "icon": "https://aa3d4bqalqflkq22.public.blob.vercel-storage.com/tool-icons/glitch.ico",
+    "category": "Development Tools",
+    "iframe": false,
+    "created_at": "2025-10-20"
+  },
+  {
     "name": "googlecolab",
     "title": "Google Colaboratory",
     "description": "Colaboratory is a research tool for machine learning education and research.",
