@@ -77,6 +77,7 @@
 | [**github1s**](https://github1s.com/{owner}/{repo}) | One second to read GitHub code with VS Code. | `https://github1s.com/{owner}/{repo}` |
 | [**gitmcp**](https://gitmcp.io/{owner}/{repo}) | Instantly create a Remote MCP server for any GitHub project | `https://gitmcp.io/{owner}/{repo}` |
 | [**gitpod**](https://gitpod.io/#https://github.com/{owner}/{repo}) | The developer platform for on-demand cloud development environments to create software faster and more securely. | `https://gitpod.io/#https://github.com/{owner}/{repo}` |
+| [**glitch**](https://glitch.com/edit/#!/import/github/{owner}/{repo}) | Simple, powerful, free tools to create and use millions of apps. | `https://glitch.com/edit/#!/import/github/{owner}/{repo}` |
 | [**googlecolab**](https://colab.research.google.com/github/{owner}/{repo}) | Colaboratory is a research tool for machine learning education and research. | `https://colab.research.google.com/github/{owner}/{repo}` |
 | [**stackblitz**](https://stackblitz.com/~/github.com/{owner}/{repo}) | Turn text into working web apps. | `https://stackblitz.com/~/github.com/{owner}/{repo}` |
 | [**vscode**](https://vscode.dev/github/{owner}/{repo}) | Edit projects using the full VS Code experience in-browser. | `https://vscode.dev/github/{owner}/{repo}` |
