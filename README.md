@@ -79,6 +79,7 @@
 | [**gitpod**](https://gitpod.io/#https://github.com/{owner}/{repo}) | The developer platform for on-demand cloud development environments to create software faster and more securely. | `https://gitpod.io/#https://github.com/{owner}/{repo}` |
 | [**glitch**](https://glitch.com/edit/#!/import/github/{owner}/{repo}) | Simple, powerful, free tools to create and use millions of apps. | `https://glitch.com/edit/#!/import/github/{owner}/{repo}` |
 | [**googlecolab**](https://colab.research.google.com/github/{owner}/{repo}) | Colaboratory is a research tool for machine learning education and research. | `https://colab.research.google.com/github/{owner}/{repo}` |
+| [**replit**](https://replit.com/github/{owner}/{repo}) | Build and deploy software collaboratively with the power of AI without spending a second on setup. | `https://replit.com/github/{owner}/{repo}` |
 | [**stackblitz**](https://stackblitz.com/~/github.com/{owner}/{repo}) | Turn text into working web apps. | `https://stackblitz.com/~/github.com/{owner}/{repo}` |
 | [**vscode**](https://vscode.dev/github/{owner}/{repo}) | Edit projects using the full VS Code experience in-browser. | `https://vscode.dev/github/{owner}/{repo}` |
 
