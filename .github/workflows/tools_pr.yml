@@ -125,22 +125,35 @@ jobs:
       - name: Create Pull Request
         if: success()
         id: create_pr
-        uses: actions/github-script@v7
-        with:
-          script: |
-            const tool = JSON.parse('${{ steps.parse.outputs.tool_json }}');
-            const branchName = '${{ steps.parse.outputs.branch_name }}';
-            
-            const pr = await github.rest.pulls.create({
-              owner: context.repo.owner,
-              repo: context.repo.repo,
-              title: `fix(tool): Add ${tool.title} tool`,
-              head: branchName,
-              base: 'master',
-              body: `## New Tool Addition\n\nThis PR adds a new tool based on the request in #${context.issue.number}.\n\n### Tool Details\n\`\`\`json\n${JSON.stringify(tool, null, 2)}\n\`\`\`\n\nCloses #${context.issue.number}`
-            });
-            
-            return pr.data.number;
+        env:
+          GITHUB_TOKEN: ${{ secrets.GH_TOKEN }} # use PAT if you want workflow to trigger PR events
+        run: |
+          tool_json='${{ steps.parse.outputs.tool_json }}'
+          branch_name='${{ steps.parse.outputs.branch_name }}'
+          issue_number='${{ github.event.issue.number }}'
+
+          # Parse JSON fields using jq (if available)
+          tool_title=$(echo "$tool_json" | jq -r '.title')
+          tool_pretty=$(echo "$tool_json" | jq '.')
+
+          gh pr create \
+            --title "fix(tool): Add ${tool_title} tool" \
+            --body "## New Tool Addition
+            --base master \
+            --head "$branch_name" \
+            --label "tool:addition" \
+            --reviewer crackedngineer
+
+          This PR adds a new tool based on the request in #${issue_number}.
+
+          ### Tool Details
+          \`\`\`json
+          ${tool_pretty}
+          \`\`\`
+
+          Closes #${issue_number}" \
+                --base master \
+                --head "$branch_name"
 
       - name: Update issue
         if: success()
