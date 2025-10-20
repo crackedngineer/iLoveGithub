@@ -7,6 +7,7 @@ body:
     id: name
     attributes:
       label: Name
+      description: Short identifier for the tool (lowercase, no spaces)
       placeholder: "e.g., github1s"
     validations:
       required: true
@@ -15,7 +16,8 @@ body:
     id: title
     attributes:
       label: Title
-      placeholder: e.g., GitHub1s
+      description: Display name for the tool
+      placeholder: "e.g., GitHub1s"
     validations:
       required: true
 
@@ -23,14 +25,16 @@ body:
     id: homepage
     attributes:
       label: Homepage
+      description: Main website URL for the tool
       placeholder: "https://github1s.com"
     validations:
       required: true
 
   - type: input
-    id: url-pattern
+    id: url
     attributes:
-      label: URL pattern
+      label: URL Pattern
+      description: URL template with {owner} and {repo} placeholders
       placeholder: "https://github1s.com/{owner}/{repo}"
     validations:
       required: true
@@ -39,6 +43,7 @@ body:
     id: icon-url
     attributes:
       label: Icon URL
+      description: Direct link to the tool's icon/favicon
       placeholder: "https://github1s.com/favicon.ico"
     validations:
       required: true
@@ -47,6 +52,7 @@ body:
     id: description
     attributes:
       label: Description
+      description: Brief description of what the tool does
       placeholder: "One second to read GitHub code with VS Code."
     validations:
       required: true
@@ -55,23 +61,28 @@ body:
     id: category
     attributes:
       label: Category
+      description: Select the most appropriate category
       options:
         - Development Tools
+        - Code Visualization & Diagrams
+        - Documentation & AI-Powered Understanding
         - Analytics & Insights
         - Widgets & UI
-        - Other
     validations:
       required: true
 
-  - type: checkbox
+  - type: checkboxes
     id: iframe
     attributes:
-      label: Should this open inside an iframe?
-    validations:
-      required: true
+      label: iFrame Support
+      description: Can this tool be embedded in an iframe?
+      options:
+        - label: This tool supports iframe embedding
 
   - type: textarea
     id: notes
     attributes:
       label: Additional Notes
+      description: Any extra context or information
       placeholder: "Any extra context?"
+      value: "_No additional notes_"
