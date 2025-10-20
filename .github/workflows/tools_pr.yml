@@ -148,7 +148,7 @@ jobs:
           \`\`\`"
 
           # Create PR and capture JSON output
-          pr_json=$(gh pr create \
+          pr_url=$(gh pr create \
             --title "fix(tool): Add ${tool_title} tool" \
             --body "$pr_body" \
             --base master \
@@ -157,6 +157,8 @@ jobs:
             --reviewer crackedngineer \
             --repo "${{ github.repository }}" \
             --fill)
+          
+          echo "PR URL: $pr_url"
 
           # Extract PR number from JSON output
           pr_number=$(basename "$pr_url")
