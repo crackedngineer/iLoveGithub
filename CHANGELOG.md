@@ -4,6 +4,13 @@ All notable changes to this project will be documented in this file.
 
 ---
 
+## [0.16.3](https://github.com/crackedngineer/iLoveGithub/compare/v0.16.2...v0.16.3) (2025-10-20)
+
+
+### Bug Fixes
+
+* reduced Pr body length ([b0e3527](https://github.com/crackedngineer/iLoveGithub/commit/b0e3527d3bbdbdd56c7963ba38d1027055e64547))
+
 ## [0.16.2](https://github.com/crackedngineer/iLoveGithub/compare/v0.16.1...v0.16.2) (2025-10-20)
 
 
