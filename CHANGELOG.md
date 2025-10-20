@@ -4,6 +4,14 @@ All notable changes to this project will be documented in this file.
 
 ---
 
+## [0.16.1](https://github.com/crackedngineer/iLoveGithub/compare/v0.16.0...v0.16.1) (2025-10-20)
+
+
+### Bug Fixes
+
+* added pull_request_target to trigger workflow for automated PRs ([4ca8e54](https://github.com/crackedngineer/iLoveGithub/commit/4ca8e54e5469b8e78352aab3728ebdceb3578036))
+* added pull_request_target to trigger workflow for automated PRs ([81500a1](https://github.com/crackedngineer/iLoveGithub/commit/81500a1524aaed067c7ed2afe65c36d736852365))
+
 ## [0.16.0](https://github.com/crackedngineer/iLoveGithub/compare/v0.15.5...v0.16.0) (2025-10-20)
 
 
