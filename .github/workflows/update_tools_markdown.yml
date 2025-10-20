@@ -1,7 +1,7 @@
 name: Update README from tools.json
 
 on:
-  pull_request_target:
+  pull_request:
     paths:
       - "tools.json"
   push:
