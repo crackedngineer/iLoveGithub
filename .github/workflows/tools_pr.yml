@@ -138,6 +138,8 @@ jobs:
           tool_title=$(echo "$tool_json" | jq -r '.title')
           tool_pretty=$(echo "$tool_json" | jq '.')
 
+          pr_body="## New Tool Addition
+
           This PR adds a new tool based on the request in #${issue_number}.
 
           ### Tool Details
@@ -150,7 +152,7 @@ jobs:
           # Create PR and capture JSON output
           pr_json=$(gh pr create \
             --title "fix(tool): Add ${tool_title} tool" \
-            --body-file "$bodyfile" \
+            --body-file "$pr_body" \
             --base master \
             --head "$branch_name" \
             --label "tool:addition" \
