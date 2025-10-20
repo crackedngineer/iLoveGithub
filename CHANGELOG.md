@@ -4,6 +4,13 @@ All notable changes to this project will be documented in this file.
 
 ---
 
+## [0.15.3](https://github.com/crackedngineer/iLoveGithub/compare/v0.15.2...v0.15.3) (2025-10-20)
+
+
+### Bug Fixes
+
+* text fixes in github tools component ([#125](https://github.com/crackedngineer/iLoveGithub/issues/125)) ([052f2b3](https://github.com/crackedngineer/iLoveGithub/commit/052f2b310fb7f1a868f22a2f164d2238e3a2d9f0))
+
 ## [0.15.2](https://github.com/crackedngineer/iLoveGithub/compare/v0.15.1...v0.15.2) (2025-10-18)
 
 
