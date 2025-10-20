@@ -138,20 +138,14 @@ jobs:
           tool_title=$(echo "$tool_json" | jq -r '.title')
           tool_pretty=$(echo "$tool_json" | jq '.')
 
-          # Create PR body as a temp file to avoid escaping issues
-          bodyfile=$(mktemp)
-          cat > "$bodyfile" <<EOF
-            ## New Tool Addition
+          This PR adds a new tool based on the request in #${issue_number}.
 
-            This PR adds a new tool based on the request in #${issue_number}.
+          ### Tool Details
+          \`\`\`json
+          ${tool_json}
+          \`\`\`
 
-            ### Tool Details
-            \`\`\`json
-            ${tool_pretty}
-            \`\`\`
-
-            Closes #${issue_number}
-            EOF
+          Closes #${issue_number}"
 
           # Create PR and capture JSON output
           pr_json=$(gh pr create \
