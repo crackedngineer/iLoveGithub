@@ -319,6 +319,17 @@
     "created_at": "2025-03-28"
   },
   {
+    "name": "sourcegraph",
+    "title": "Sourcegraph",
+    "description": "Industrializing software development with AI agents",
+    "homepage": "https://sourcegraph.com/",
+    "url": "https://sourcegraph.com/github.com/{owner}/{repo}@{branch}",
+    "icon": "https://aa3d4bqalqflkq22.public.blob.vercel-storage.com/tool-icons/sourcegraph.svg",
+    "category": "Analytics & Insights",
+    "iframe": false,
+    "created_at": "2025-10-20"
+  },
+  {
     "name": "stackblitz",
     "title": "StackBlitz",
     "description": "Turn text into working web apps.",
