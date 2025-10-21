@@ -80,6 +80,7 @@
 | [**glitch**](https://glitch.com/edit/#!/import/github/{owner}/{repo}) | Simple, powerful, free tools to create and use millions of apps. | `https://glitch.com/edit/#!/import/github/{owner}/{repo}` |
 | [**google-idx**](https://idx.google.com/import?url=https://github.com/{owner}/{repo}) | Firebase Studio is an entirely web-based workspace for full-stack application development, complete with the latest generative AI from Gemini, and full-fidelity app previews, powered by cloud emulators. | `https://idx.google.com/import?url=https://github.com/{owner}/{repo}` |
 | [**googlecolab**](https://colab.research.google.com/github/{owner}/{repo}) | Colaboratory is a research tool for machine learning education and research. | `https://colab.research.google.com/github/{owner}/{repo}` |
+| [**jsdelivr**](https://cdn.jsdelivr.net/gh/{owner}/{repo}) | Optimized for JS and ESM delivery from npm and GitHub. Works with all web formats. Serving more than 150 billion requests per month. | `https://cdn.jsdelivr.net/gh/{owner}/{repo}` |
 | [**replit**](https://replit.com/github/{owner}/{repo}) | Build and deploy software collaboratively with the power of AI without spending a second on setup. | `https://replit.com/github/{owner}/{repo}` |
 | [**stackblitz**](https://stackblitz.com/~/github.com/{owner}/{repo}) | Turn text into working web apps. | `https://stackblitz.com/~/github.com/{owner}/{repo}` |
 | [**vscode**](https://vscode.dev/github/{owner}/{repo}) | Edit projects using the full VS Code experience in-browser. | `https://vscode.dev/github/{owner}/{repo}` |

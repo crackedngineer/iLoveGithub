@@ -308,6 +308,17 @@
     "created_at": "2025-03-28"
   },
   {
+    "name": "jsdelivr",
+    "title": "JsDelivr",
+    "description": "Optimized for JS and ESM delivery from npm and GitHub. Works with all web formats. Serving more than 150 billion requests per month.",
+    "homepage": "https://www.jsdelivr.com/",
+    "url": "https://cdn.jsdelivr.net/gh/{owner}/{repo}",
+    "icon": "https://aa3d4bqalqflkq22.public.blob.vercel-storage.com/tool-icons/jsdelivr.ico",
+    "category": "Development Tools",
+    "iframe": false,
+    "created_at": "2025-10-21"
+  },
+  {
     "name": "replit",
     "title": "Repl.it",
     "description": "Build and deploy software collaboratively with the power of AI without spending a second on setup.",
