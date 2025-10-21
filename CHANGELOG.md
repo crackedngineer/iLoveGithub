@@ -4,6 +4,13 @@ All notable changes to this project will be documented in this file.
 
 ---
 
+## [0.17.1](https://github.com/crackedngineer/iLoveGithub/compare/v0.17.0...v0.17.1) (2025-10-21)
+
+
+### Bug Fixes
+
+* **tool:** Add JsDelivr tool ([515c62b](https://github.com/crackedngineer/iLoveGithub/commit/515c62be3ef481baba8a7167fd8c6e81987c5378))
+
 ## [0.17.0](https://github.com/crackedngineer/iLoveGithub/compare/v0.16.6...v0.17.0) (2025-10-21)
 
 
