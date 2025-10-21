@@ -286,6 +286,17 @@
     "created_at": "2025-10-20"
   },
   {
+    "name": "google-idx",
+    "title": "Google IDX (Firebase Studio)",
+    "description": "Firebase Studio is an entirely web-based workspace for full-stack application development, complete with the latest generative AI from Gemini, and full-fidelity app previews, powered by cloud emulators.",
+    "homepage": "https://firebase.studio/",
+    "url": "https://idx.google.com/import?url=https://github.com/{owner}/{repo}",
+    "icon": "https://aa3d4bqalqflkq22.public.blob.vercel-storage.com/tool-icons/google-idx.ico",
+    "category": "Development Tools",
+    "iframe": false,
+    "created_at": "2025-10-21"
+  },
+  {
     "name": "googlecolab",
     "title": "Google Colaboratory",
     "description": "Colaboratory is a research tool for machine learning education and research.",
