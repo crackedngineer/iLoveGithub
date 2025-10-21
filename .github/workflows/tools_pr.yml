@@ -6,7 +6,7 @@ on:
 
 jobs:
   create-tool-pr:
-    if: contains(github.event.issue.labels.*.name, 'new-template-request')
+    if: contains(github.event.issue.labels.*.name, 'new-tool-request')
     runs-on: ubuntu-latest
     permissions:
       contents: write
