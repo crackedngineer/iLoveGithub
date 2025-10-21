@@ -4,6 +4,14 @@ All notable changes to this project will be documented in this file.
 
 ---
 
+## [0.16.6](https://github.com/crackedngineer/iLoveGithub/compare/v0.16.5...v0.16.6) (2025-10-21)
+
+
+### Bug Fixes
+
+* fixed label check to new-tool-request in tools-pr workflow ([b9cdcfc](https://github.com/crackedngineer/iLoveGithub/commit/b9cdcfcab05724d6e0654de02cfaedae66dba5a8))
+* fixed label check to new-tool-request in tools-pr workflow ([84427dd](https://github.com/crackedngineer/iLoveGithub/commit/84427dd94f0f5c49e773ffbe5507c5073b912295))
+
 ## [0.16.5](https://github.com/crackedngineer/iLoveGithub/compare/v0.16.4...v0.16.5) (2025-10-20)
 
 
