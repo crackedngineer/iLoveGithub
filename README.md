@@ -73,7 +73,7 @@
 | ---- | ----------- | ------ |
 | [**bolt**](https://bolt.new/~/github.com/{owner}/{repo}) | Prompt, run, edit, and deploy full-stack web applications. | `https://bolt.new/~/github.com/{owner}/{repo}` |
 | [**codesandbox**](https://codesandbox.io/p/devbox/github/{owner}/{repo}) | Sandboxes built for scale. | `https://codesandbox.io/p/devbox/github/{owner}/{repo}` |
-| [**devpod**](https://devpod.sh/open#https://github.com/{owner}/{repo}) | DevPod is infrastructure-independent and client-only, which makes it incredibly easy to get started with. Codespaces but open-source, client-only and unopinionated. Works with any infra, any progamming language, any IDE, etc. | `https://devpod.sh/open#https://github.com/{owner}/{repo}` |
+| [**devpod**](https://devpod.sh/open#https://github.com/{owner}/{repo}) | DevPod is infrastructure-independent and client-only, which makes it incredibly easy to get started with. Codespaces but open-source, client-only and unopinionated. Works with any infra, any programming language, any IDE, etc. | `https://devpod.sh/open#https://github.com/{owner}/{repo}` |
 | [**github-dev**](https://github.dev/{owner}/{repo}) | Open any GitHub repo in a browser-based VS Code editor. | `https://github.dev/{owner}/{repo}` |
 | [**github1s**](https://github1s.com/{owner}/{repo}) | One second to read GitHub code with VS Code. | `https://github1s.com/{owner}/{repo}` |
 | [**gitmcp**](https://gitmcp.io/{owner}/{repo}) | Instantly create a Remote MCP server for any GitHub project | `https://gitmcp.io/{owner}/{repo}` |
