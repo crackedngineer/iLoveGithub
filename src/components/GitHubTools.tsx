@@ -71,7 +71,7 @@ const GitHubTools = ({tools}: {tools: Tool[]}) => {
         🔧 Popular GitHub Tools
       </h2>
 
-      <div className="mb-8 flex items-center gap-2">
+      <div className="flex flex-col w-full mb-8 items-center gap-2">
         <Input
           type="text"
           placeholder="Search by title or description..."
@@ -79,6 +79,9 @@ const GitHubTools = ({tools}: {tools: Tool[]}) => {
           onChange={(e) => setSearchTerm(e.target.value)}
           className="w-full"
         />
+        <p className="mt-2 text-sm text-gray-500 dark:text-gray-400">
+          Showing {filteredTools.length} of {tools.length} tools
+        </p>
       </div>
 
       {Object.entries(toolsByCategory).length === 0 ? (
