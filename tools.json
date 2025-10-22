@@ -429,6 +429,17 @@
     "created_at": "2025-03-28"
   },
   {
+    "name": "usefulforks",
+    "title": "Useful Forks",
+    "description": "Find useful forks of GitHub projects",
+    "homepage": "https://useful-forks.github.io/",
+    "url": "https://useful-forks.github.io/?repo={owner}/{repo}",
+    "icon": "https://aa3d4bqalqflkq22.public.blob.vercel-storage.com/tool-icons/useful-forks.ico",
+    "category": "Analytics & Insights",
+    "iframe": true,
+    "created_at": "2025-10-22"
+  },
+  {
     "name": "vscode",
     "title": "Visual Studio Code",
     "description": "Edit projects using the full VS Code experience in-browser.",

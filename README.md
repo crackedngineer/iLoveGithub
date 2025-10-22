@@ -59,6 +59,7 @@
 | [**repo-surf**](https://repo.surf/{owner}/{repo}) | repo-surf is a repository viewer that lets you dive through its commits and branches. | `https://repo.surf/{owner}/{repo}` |
 | [**sourcegraph**](https://sourcegraph.com/github.com/{owner}/{repo}@{branch}) | Industrializing software development with AI agents | `https://sourcegraph.com/github.com/{owner}/{repo}@{branch}` |
 | [**uithub**](https://uithub.com/{owner}/{repo}) | Easily Ask Your LLM Coding Questions. | `https://uithub.com/{owner}/{repo}` |
+| [**usefulforks**](https://useful-forks.github.io/?repo={owner}/{repo}) | Find useful forks of GitHub projects | `https://useful-forks.github.io/?repo={owner}/{repo}` |
 
 ---
 
