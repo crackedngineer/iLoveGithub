@@ -4,6 +4,13 @@ All notable changes to this project will be documented in this file.
 
 ---
 
+## [0.17.3](https://github.com/crackedngineer/iLoveGithub/compare/v0.17.2...v0.17.3) (2025-10-22)
+
+
+### Bug Fixes
+
+* **tool:** Add Gitpop2 tool ([29e3381](https://github.com/crackedngineer/iLoveGithub/commit/29e338195bbedab1bcb6599f0de7b58a4ccde626))
+
 ## [0.17.2](https://github.com/crackedngineer/iLoveGithub/compare/v0.17.1...v0.17.2) (2025-10-22)
 
 ### Bug Fixes
