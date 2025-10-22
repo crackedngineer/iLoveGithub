@@ -4,6 +4,13 @@ All notable changes to this project will be documented in this file.
 
 ---
 
+## [0.18.0](https://github.com/crackedngineer/iLoveGithub/compare/v0.17.4...v0.18.0) (2025-10-22)
+
+
+### Features
+
+* UI improvements + support for iframe check in tools viewer route ([#188](https://github.com/crackedngineer/iLoveGithub/issues/188)) ([323635e](https://github.com/crackedngineer/iLoveGithub/commit/323635e92eb9cb7cf17b279bf3668e7492184d2b))
+
 ## [0.17.4](https://github.com/crackedngineer/iLoveGithub/compare/v0.17.3...v0.17.4) (2025-10-22)
 
 
