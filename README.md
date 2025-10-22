@@ -107,6 +107,7 @@
 | [**entelligence**](https://www.entelligence.ai/{owner}/{repo}) | Empower and uplevel your engineering team | `https://www.entelligence.ai/{owner}/{repo}` |
 | [**flatgithub**](https://flatgithub.com/{owner}/{repo}) | A simple tool for exploring flat data files in GitHub repositories. | `https://flatgithub.com/{owner}/{repo}` |
 | [**github.gg**](https://github.gg/{owner}/{repo}) | Analyze GitHub repositories with insights about code quality, dependencies, and more. | `https://github.gg/{owner}/{repo}` |
+| [**gitpop2**](https://gitpop2.vercel.app/{owner}/{repo}) | Find the most popular fork on GitHub | `https://gitpop2.vercel.app/{owner}/{repo}` |
 | [**repo-surf**](https://repo.surf/{owner}/{repo}) | repo-surf is a repository viewer that lets you dive through its commits and branches. | `https://repo.surf/{owner}/{repo}` |
 | [**sourcegraph**](https://sourcegraph.com/github.com/{owner}/{repo}@{branch}) | Industrializing software development with AI agents | `https://sourcegraph.com/github.com/{owner}/{repo}@{branch}` |
 | [**uithub**](https://uithub.com/{owner}/{repo}) | Easily Ask Your LLM Coding Questions. | `https://uithub.com/{owner}/{repo}` |
