@@ -242,6 +242,17 @@
     "created_at": "2025-03-28"
   },
   {
+    "name": "gitpop2",
+    "title": "Gitpop2",
+    "description": "Find the most popular fork on GitHub",
+    "homepage": "https://gitpop2.vercel.app/",
+    "url": "https://gitpop2.vercel.app/{owner}/{repo}",
+    "icon": "https://aa3d4bqalqflkq22.public.blob.vercel-storage.com/tool-icons/gitpop2.ico",
+    "category": "Analytics & Insights",
+    "iframe": false,
+    "created_at": "2025-10-22"
+  },
+  {
     "name": "gitsummarize",
     "title": "GitSummarize",
     "description": "Turn any GitHub repository into a comprehensive AI-powered Documentation & AI-Powered Understanding hub.",
