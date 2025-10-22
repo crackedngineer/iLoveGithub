@@ -4,6 +4,13 @@ All notable changes to this project will be documented in this file.
 
 ---
 
+## [0.17.2](https://github.com/crackedngineer/iLoveGithub/compare/v0.17.1...v0.17.2) (2025-10-22)
+
+
+### Bug Fixes
+
+* **tool:** Add Active Forks tool ([#178](https://github.com/crackedngineer/iLoveGithub/issues/178)) ([9ee5055](https://github.com/crackedngineer/iLoveGithub/commit/9ee5055e11ebf7c641b68f99d28849c2137f3d7b))
+
 ## [0.17.1](https://github.com/crackedngineer/iLoveGithub/compare/v0.17.0...v0.17.1) (2025-10-21)
 
 
