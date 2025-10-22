@@ -79,7 +79,7 @@
   {
     "name": "devpod",
     "title": "DevPod",
-    "description": "DevPod is infrastructure-independent and client-only, which makes it incredibly easy to get started with. Codespaces but open-source, client-only and unopinionated. Works with any infra, any progamming language, any IDE, etc.",
+    "description": "DevPod is infrastructure-independent and client-only, which makes it incredibly easy to get started with. Codespaces but open-source, client-only and unopinionated. Works with any infra, any programming language, any IDE, etc.",
     "homepage": "https://devpod.sh/",
     "url": "https://devpod.sh/open#https://github.com/{owner}/{repo}",
     "icon": "https://aa3d4bqalqflkq22.public.blob.vercel-storage.com/tool-icons/devpod.png",
