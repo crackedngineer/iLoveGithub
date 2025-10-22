@@ -345,7 +345,7 @@
     "title": "JsDelivr",
     "description": "Optimized for JS and ESM delivery from npm and GitHub. Works with all web formats. Serving more than 150 billion requests per month.",
     "homepage": "https://www.jsdelivr.com/",
-    "url": "https://cdn.jsdelivr.net/gh/{owner}/{repo}",
+    "url": "https://cdn.jsdelivr.net/gh/{owner}/{repo}/",
     "icon": "https://aa3d4bqalqflkq22.public.blob.vercel-storage.com/tool-icons/jsdelivr.ico",
     "category": "Development Tools",
     "iframe": false,
