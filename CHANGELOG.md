@@ -4,6 +4,13 @@ All notable changes to this project will be documented in this file.
 
 ---
 
+## [0.17.4](https://github.com/crackedngineer/iLoveGithub/compare/v0.17.3...v0.17.4) (2025-10-22)
+
+
+### Bug Fixes
+
+* **tool:** Add DevPod tool ([#184](https://github.com/crackedngineer/iLoveGithub/issues/184)) ([f86fa69](https://github.com/crackedngineer/iLoveGithub/commit/f86fa696d3c607fcb620de208b1ddbbf5306a10a))
+
 ## [0.17.3](https://github.com/crackedngineer/iLoveGithub/compare/v0.17.2...v0.17.3) (2025-10-22)
 
 
