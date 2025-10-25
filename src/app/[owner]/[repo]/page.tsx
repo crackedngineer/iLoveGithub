@@ -11,6 +11,8 @@ import {RECENT_REPO_LOCAL_STORAGE_KEY, RECENT_TRENDING_REPO_CACHE_MAXCOUNT} from
 import {useApiLimit} from "@/components/ApiLimitContext";
 import {Tool} from "@/lib/types";
 import {useAuth} from "@/components/AuthProvider";
+import {fetchRepoDetails} from "@/services/github";
+import {fetchToolList} from "@/services/tools";
 
 export default function RepoPage() {
   const {session, loading} = useAuth();
@@ -68,11 +70,7 @@ export default function RepoPage() {
         return;
       }
 
-      const response = await axios.get(`/api/repo?owner=${owner}&repo=${repo}`, {
-        headers: token ? {Authorization: `Bearer ${token}`} : {},
-      });
-
-      const githubData = response.data;
+      const githubData = await fetchRepoDetails(owner, repo, token);
       const transformed: RepoData = {
         name: githubData.name,
         owner,
@@ -103,10 +101,8 @@ export default function RepoPage() {
   const fetchTools = useCallback(async () => {
     if (!repoData) return;
     try {
-      const {data} = await axios.get(
-        `/api/tools?owner=${repoData.owner}&repo=${repoData.name}&branch=${repoData.default_branch}`,
-      );
-      setTools(data);
+      const tools = await fetchToolList(repoData.owner, repoData.name, repoData.default_branch);
+      setTools(tools);
     } catch (err) {
       console.error("Error fetching tools:", err);
       setTools([]);

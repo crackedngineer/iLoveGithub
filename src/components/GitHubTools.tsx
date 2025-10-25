@@ -132,7 +132,7 @@ const GitHubTools = ({tools}: {tools: Tool[]}) => {
                     <CardContent className="mt-2">
                       <Button asChild variant="link" className="text-sm px-0 py-1">
                         <a
-                          href={tool.url}
+                          href={tool.link}
                           target="_blank"
                           rel="noopener noreferrer"
                           className="inline-flex items-center gap-1 text-github-blue hover:text-blue-700 group-hover:underline"

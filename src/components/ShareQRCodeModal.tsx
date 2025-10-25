@@ -10,6 +10,7 @@ import {
   DialogDescription,
 } from "@/components/ui/dialog";
 import {Button} from "@/components/ui/button";
+import {generateQRCode} from "@/services/qrcode";
 
 interface QRCodeModalProps {
   isOpen: boolean;
@@ -29,12 +30,8 @@ const ShareQRCodeModal = ({isOpen, onClose, repoName}: QRCodeModalProps) => {
         const origin = typeof window !== "undefined" ? window.location.origin : "";
         const imageUrl = `${origin}/icons/favicon.png`;
         try {
-          const {data: result} = await axios.post("/api/qrcode/generate", {
-            data: url,
-            image: imageUrl,
-          });
-
-          setQrImageUrl(result.image);
+          const image = await generateQRCode(imageUrl);
+          setQrImageUrl(image);
         } catch (err) {
           console.error("Failed to fetch QR code", err);
         } finally {

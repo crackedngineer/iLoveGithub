@@ -1,6 +1,7 @@
 // app/api/trending/route.ts
 import {NextResponse} from "next/server";
 import {GITHUB_API_URL, TRENDING_REPO_TTL} from "@/constants";
+import {GitHubRepo} from "@/lib/types";
 
 const GITHUB_TOKEN = process.env.GITHUB_TOKEN;
 
@@ -20,7 +21,7 @@ export async function GET(req: Request) {
   let query = `created:>${formattedDate}`;
   if (language) query += ` language:${language}`;
 
-  const url = `${GITHUB_API_URL}?q=${encodeURIComponent(
+  const url = `${GITHUB_API_URL}/search/repositories?q=${encodeURIComponent(
     query,
   )}&sort=stars&order=desc&per_page=${limit}&page=${page}`;
 
@@ -39,7 +40,7 @@ export async function GET(req: Request) {
 
     const data = await res.json();
 
-    const items = data.items.map((repo: any) => ({
+    const items = data.items.map((repo: GitHubRepo) => ({
       id: repo.id,
       name: repo.name,
       full_name: repo.full_name,

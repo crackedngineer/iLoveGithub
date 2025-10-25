@@ -1,12 +1,15 @@
 "use client";
+
 import * as React from "react";
 import {useState, useEffect} from "react";
-import GithubToolsList from "../../../../../../../tools.json";
+import {useMemo} from "react";
 import {replaceUrlVariables} from "@/app/helper";
-import {notFound, useParams} from "next/navigation";
+import {useParams} from "next/navigation";
 import ToolViewer from "@/components/ToolViewer";
 import ToolLoading from "@/components/ToolLoading";
-import {Tool} from "@/lib/types";
+import type {Tool} from "@/lib/types";
+import {fetchToolList} from "@/services/tools";
+import {getRepoDefaultBranch} from "@/services/github";
 
 async function checkIframeSupport(url: string): Promise<{
   allowed: boolean;
@@ -114,49 +117,69 @@ async function checkIframeSupport(url: string): Promise<{
   }
 }
 
-function fetchBranchName(params: {branch?: string | string[]}): string | undefined {
+function fetchBranchName(params: {branch?: string[]}): string | undefined {
   if (!params.branch || params.branch.length !== 1) {
     return;
   }
   return params.branch?.[0];
 }
 
+function formatToolUrl(url: string, owner: string, repo: string, branch: string): string {
+  return replaceUrlVariables(url, {
+    owner,
+    repo,
+    branch,
+  });
+}
+
 export default function ToolsPage() {
-  const params = useParams() as {tool: string; owner: string; repo: string; branch?: string};
+  const params = useParams() as {tool: string; owner: string; repo: string; branch?: string[]};
   const {tool, owner, repo} = params;
-  const branch = fetchBranchName(params);
+  const [branch, setBranch] = useState(fetchBranchName(params));
+  const [toolDetail, setToolDetail] = useState<Tool | null>(null);
 
-  const toolData = GithubToolsList.find((item: Tool) => item.name === tool);
-
-  const toolLink = toolData?.url
-    ? replaceUrlVariables(toolData.url, {
-        owner,
-        repo,
-        branch: branch || "",
-      })
-    : null;
+  const toolUrl = useMemo(() => {
+    return toolDetail?.url && formatToolUrl(toolDetail.url, owner, repo, branch!);
+  }, [owner, repo, branch, toolDetail]);
 
   const [showViewer, setShowViewer] = useState<boolean>(false);
 
   useEffect(() => {
+    if (branch) {
+      (async () => {
+        const data = await fetchToolList(owner, repo, branch);
+        const detail = data.find((item: Tool) => item.name === tool);
+        if (!detail) return;
+        setToolDetail(detail);
+      })();
+    }
+  }, [owner, repo, tool, branch]);
+
+  useEffect(() => {
+    if (!branch) {
+      (async () => {
+        const data = await getRepoDefaultBranch(owner, repo, branch);
+        setBranch(data);
+      })();
+    }
+  }, [owner, repo, branch]);
+
+  useEffect(() => {
     (async () => {
-      const iframeSupport = await checkIframeSupport(toolLink || "");
-      if (toolData?.iframe || iframeSupport.allowed) {
+      if (!toolDetail) return;
+      const iframeSupport = await checkIframeSupport(toolUrl || "");
+      if (toolDetail?.iframe || iframeSupport.allowed) {
         setShowViewer(true);
       } else {
-        window.location.href = toolLink!;
+        window.location.href = toolUrl!;
       }
     })();
-  }, [toolLink, toolData]);
-
-  if (!branch) {
-    return notFound();
-  }
+  }, [toolDetail, branch, owner, repo, toolUrl]);
 
   return (
     <div className="min-h-screen w-full overflow-hidden">
-      {toolLink && showViewer ? (
-        <ToolViewer url={toolLink} name={`${owner}/${repo}`} />
+      {showViewer && branch && toolDetail?.url ? (
+        <ToolViewer url={toolUrl!} name={`${owner}/${repo}`} />
       ) : (
         <ToolLoading tool={tool} owner={owner} repo={repo} />
       )}
