@@ -101,6 +101,7 @@
 | [**replit**](https://replit.com/github/{owner}/{repo}) | Build and deploy software collaboratively with the power of AI without spending a second on setup. | `https://replit.com/github/{owner}/{repo}` |
 | [**stackblitz**](https://stackblitz.com/~/github.com/{owner}/{repo}) | Turn text into working web apps. | `https://stackblitz.com/~/github.com/{owner}/{repo}` |
 | [**vscode**](https://vscode.dev/github/{owner}/{repo}) | Edit projects using the full VS Code experience in-browser. | `https://vscode.dev/github/{owner}/{repo}` |
+| [**vscode-insider**](https://insiders.vscode.dev/github/{owner}/{repo}) | Visual Studio Code is a new choice of tool that combines the simplicity of a code editor with what developers need for the core edit, build, and debug cycle. | `https://insiders.vscode.dev/github/{owner}/{repo}` |
 
 ---
 
