@@ -4,6 +4,13 @@ All notable changes to this project will be documented in this file.
 
 ---
 
+## [0.19.0](https://github.com/crackedngineer/iLoveGithub/compare/v0.18.1...v0.19.0) (2025-10-26)
+
+
+### Features
+
+* added dropdown to open in code editors ([#195](https://github.com/crackedngineer/iLoveGithub/issues/195)) ([92a6c7a](https://github.com/crackedngineer/iLoveGithub/commit/92a6c7a43f081095888376dbe5418fd14b54c823))
+
 ## [0.18.1](https://github.com/crackedngineer/iLoveGithub/compare/v0.18.0...v0.18.1) (2025-10-26)
 
 ### Bug Fixes
