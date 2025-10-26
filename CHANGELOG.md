@@ -4,26 +4,33 @@ All notable changes to this project will be documented in this file.
 
 ---
 
-## [0.18.0](https://github.com/crackedngineer/iLoveGithub/compare/v0.17.4...v0.18.0) (2025-10-22)
+## [0.18.1](https://github.com/crackedngineer/iLoveGithub/compare/v0.18.0...v0.18.1) (2025-10-26)
 
+### Bug Fixes
+
+- **tool:** Add Cache for GitHub tool ([#196](https://github.com/crackedngineer/iLoveGithub/issues/196)) ([dae0ea4](https://github.com/crackedngineer/iLoveGithub/commit/dae0ea4a5ae3fb2a5a81423cf7456a989eccfd32))
+- **tool:** Add GithubTracker tool ([#200](https://github.com/crackedngineer/iLoveGithub/issues/200)) ([c98788c](https://github.com/crackedngineer/iLoveGithub/commit/c98788cc06adb899af60c0f0c37071525724b616))
+- **tool:** Add OpenRepoWiki tool ([#193](https://github.com/crackedngineer/iLoveGithub/issues/193)) ([6296d08](https://github.com/crackedngineer/iLoveGithub/commit/6296d08a1005e0bc2bf45292e9e2fec19ca83439))
+- **tool:** Add Threads for GitHub tool ([#198](https://github.com/crackedngineer/iLoveGithub/issues/198)) ([050f1cd](https://github.com/crackedngineer/iLoveGithub/commit/050f1cd902030e493ee6957db41cd028cadc37a3))
+- **tool:** Add Vscode Insider tool ([#191](https://github.com/crackedngineer/iLoveGithub/issues/191)) ([664cb7a](https://github.com/crackedngineer/iLoveGithub/commit/664cb7a790b7df4814dc9c2f543126fd8891a252))
+
+## [0.18.0](https://github.com/crackedngineer/iLoveGithub/compare/v0.17.4...v0.18.0) (2025-10-22)
 
 ### Features
 
-* UI improvements + support for iframe check in tools viewer route ([#188](https://github.com/crackedngineer/iLoveGithub/issues/188)) ([323635e](https://github.com/crackedngineer/iLoveGithub/commit/323635e92eb9cb7cf17b279bf3668e7492184d2b))
+- UI improvements + support for iframe check in tools viewer route ([#188](https://github.com/crackedngineer/iLoveGithub/issues/188)) ([323635e](https://github.com/crackedngineer/iLoveGithub/commit/323635e92eb9cb7cf17b279bf3668e7492184d2b))
 
 ## [0.17.4](https://github.com/crackedngineer/iLoveGithub/compare/v0.17.3...v0.17.4) (2025-10-22)
 
-
 ### Bug Fixes
 
-* **tool:** Add DevPod tool ([#184](https://github.com/crackedngineer/iLoveGithub/issues/184)) ([f86fa69](https://github.com/crackedngineer/iLoveGithub/commit/f86fa696d3c607fcb620de208b1ddbbf5306a10a))
+- **tool:** Add DevPod tool ([#184](https://github.com/crackedngineer/iLoveGithub/issues/184)) ([f86fa69](https://github.com/crackedngineer/iLoveGithub/commit/f86fa696d3c607fcb620de208b1ddbbf5306a10a))
 
 ## [0.17.3](https://github.com/crackedngineer/iLoveGithub/compare/v0.17.2...v0.17.3) (2025-10-22)
 
-
 ### Bug Fixes
 
-* **tool:** Add Gitpop2 tool ([29e3381](https://github.com/crackedngineer/iLoveGithub/commit/29e338195bbedab1bcb6599f0de7b58a4ccde626))
+- **tool:** Add Gitpop2 tool ([29e3381](https://github.com/crackedngineer/iLoveGithub/commit/29e338195bbedab1bcb6599f0de7b58a4ccde626))
 
 ## [0.17.2](https://github.com/crackedngineer/iLoveGithub/compare/v0.17.1...v0.17.2) (2025-10-22)
 
