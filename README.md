@@ -80,6 +80,7 @@
 | [**gitsummarize**](https://gitsummarize.com/{owner}/{repo}) | Turn any GitHub repository into a comprehensive AI-powered Documentation & AI-Powered Understanding hub. | `https://gitsummarize.com/{owner}/{repo}` |
 | [**gittodoc**](https://www.gittodoc.com/{owner}/{repo}) | Turn any Git repository into a simple Documentation & AI-Powered Understanding link that LLMs can easily index. | `https://www.gittodoc.com/{owner}/{repo}` |
 | [**talktogithub**](https://talktogithub.com/{owner}/{repo}) | Repo to Convo in seconds! | `https://talktogithub.com/{owner}/{repo}` |
+| [**threads-for-github**](https://threads.forgithub.com/{owner}/{repo}) | Creating a Bridge Between GitHub and X | `https://threads.forgithub.com/{owner}/{repo}` |
 
 ---
 
