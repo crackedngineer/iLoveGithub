@@ -209,6 +209,17 @@
     "created_at": "2025-03-28"
   },
   {
+    "name": "githubtracker",
+    "title": "GithubTracker",
+    "description": "Track commits, issues, pull requests, contributors, and releases of multiple GitHub repositories on a single page.",
+    "homepage": "https://githubtracker.com/",
+    "url": "https://githubtracker.com/{owner}/{repo}",
+    "icon": "https://aa3d4bqalqflkq22.public.blob.vercel-storage.com/tool-icons/githubtracker.ico",
+    "category": "Analytics & Insights",
+    "iframe": false,
+    "created_at": "2025-10-26"
+  },
+  {
     "name": "githubtree",
     "title": "GitHubTree",
     "description": "GitHub repository explorer, online repo viewer, visualize GitHub project structure, directory tree, file explorer, open source navigation, copy file paths, GitHub project folders",
