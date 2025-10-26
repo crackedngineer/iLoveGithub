@@ -9,6 +9,7 @@ export interface Tool {
   category: string;
   iframe: boolean;
   created_at: string;
+  type?: string;
 }
 
 export interface GitHubRepo {

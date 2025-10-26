@@ -153,8 +153,12 @@ export default function RepoPage() {
 
         {!isLoading && repoData && (
           <>
-            <RepoInfo repo={repoData} isLoggedIn={!!session || !!remaining} />
-            <GitHubTools tools={tools} />
+            <RepoInfo
+              repo={repoData}
+              isLoggedIn={!!session || !!remaining}
+              tools={tools.filter((item: Tool) => item.type === "application")}
+            />
+            <GitHubTools tools={tools.filter((item: Tool) => item.type !== "application")} />
           </>
         )}
       </main>

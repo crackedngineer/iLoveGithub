@@ -93,7 +93,7 @@
     "description": "DevPod is infrastructure-independent and client-only, which makes it incredibly easy to get started with. Codespaces but open-source, client-only and unopinionated. Works with any infra, any programming language, any IDE, etc.",
     "homepage": "https://devpod.sh/",
     "url": "https://devpod.sh/open#https://github.com/{owner}/{repo}",
-    "icon": "https://aa3d4bqalqflkq22.public.blob.vercel-storage.com/tool-icons/devpod.png",
+    "icon": "<svg width='16' height='16' viewBox='0 0 200 200'><g style='scale:1.0376'><polygon fill='currentColor' points='67.4,147.6 144.4,3.1 117,3.1 52.9,123.4 39.5,99.2 66.2,51.1 39.5,51.1 12.8,99.2 39.5,147.3 40.2,147.3 40,147.6'></polygon><polygon fill='currentColor' points='157.3,51.7 156.7,51.7 156.8,51.4 129.4,51.4 52.4,195.9 79.8,195.9 143.9,75.6 157.3,99.8 130.6,147.9 157.3,147.9 184,99.8'></polygon></g></svg>",
     "category": "Development Tools",
     "iframe": false,
     "created_at": "2025-10-22"
@@ -471,5 +471,77 @@
     "category": "Development Tools",
     "iframe": false,
     "created_at": "2025-03-28"
+  },
+  {
+    "name": "clone-in-vscode",
+    "type": "application",
+    "title": "Clone in VSCode",
+    "description": "Clone in VSCode",
+    "homepage": "https://code.visualstudio.com/",
+    "url": "vscode://vscode.git/clone?url=https://github.com/{owner}/{repo}",
+    "icon": "<svg width='16' height='16' viewBox='0 0 24 24'><path fill='currentColor' d='M23.15 2.587L18.21.21a1.494 1.494 0 0 0-1.705.29l-9.46 8.63-4.12-3.128a.999.999 0 0 0-1.276.057L.327 7.261A1 1 0 0 0 .326 8.74L3.899 12 .326 15.26a1 1 0 0 0 .001 1.479L1.65 17.94a.999.999 0 0 0 1.276.057l4.12-3.128 9.46 8.63a1.492 1.492 0 0 0 1.704.29l4.942-2.377A1.5 1.5 0 0 0 24 20.06V3.939a1.5 1.5 0 0 0-.85-1.352zm-5.146 14.861L10.826 12l7.178-5.448v10.896z'/></svg>",
+    "category": "Development Tools",
+    "iframe": false,
+    "created_at": "2025-10-26"
+  },
+  {
+    "name": "clone-in-vscode-insider",
+    "type": "application",
+    "title": "Clone in VSCode Insiders",
+    "description": "Clone in VSCode Insiders",
+    "homepage": "https://code.visualstudio.com/insiders/",
+    "url": "vscode-insiders://vscode.git/clone?url=https://github.com/{owner}/{repo}",
+    "icon": "<svg width='16' height='16' viewBox='0 0 24 24'><path fill='currentColor' d='M23.15 2.587L18.21.21a1.494 1.494 0 0 0-1.705.29l-9.46 8.63-4.12-3.128a.999.999 0 0 0-1.276.057L.327 7.261A1 1 0 0 0 .326 8.74L3.899 12 .326 15.26a1 1 0 0 0 .001 1.479L1.65 17.94a.999.999 0 0 0 1.276.057l4.12-3.128 9.46 8.63a1.492 1.492 0 0 0 1.704.29l4.942-2.377A1.5 1.5 0 0 0 24 20.06V3.939a1.5 1.5 0 0 0-.85-1.352zm-5.146 14.861L10.826 12l7.178-5.448v10.896z'/></svg>",
+    "category": "Development Tools",
+    "iframe": false,
+    "created_at": "2025-10-26"
+  },
+  {
+    "name": "clone-in-cursor",
+    "type": "application",
+    "title": "Clone in Cursor",
+    "description": "Clone in Cursor",
+    "homepage": "https://cursor.com/",
+    "url": "cursor://vscode.git/clone?url=https://github.com/{owner}/{repo}",
+    "icon": "<svg width='16' height='16' viewBox='0 0 24 24'><path d='M11.925 24l10.425-6-10.425-6L1.5 18l10.425 6z' fill='url(#lobe-icons-cursorundefined-fill-0)'/><path d='M22.35 18V6L11.925 0v12l10.425 6z' fill='url(#lobe-icons-cursorundefined-fill-1)'/><path d='M11.925 0L1.5 6v12l10.425-6V0z' fill='url(#lobe-icons-cursorundefined-fill-2)'/><path d='M22.35 6L11.925 24V12L22.35 6z' fill='#555'/><path d='M22.35 6l-10.425 6L1.5 6h20.85z' fill='#000'/><defs><linearGradient gradientUnits='userSpaceOnUse' id='lobe-icons-cursorundefined-fill-0' x1='11.925' x2='11.925' y1='12' y2='24'><stop offset='.16' stop-color='#000' stop-opacity='.39'/><stop offset='.658' stop-color='#000' stop-opacity='.8'/></linearGradient><linearGradient gradientUnits='userSpaceOnUse' id='lobe-icons-cursorundefined-fill-1' x1='22.35' x2='11.925' y1='6.037' y2='12.15'><stop offset='.182' stop-color='#000' stop-opacity='.31'/><stop offset='.715' stop-color='#000' stop-opacity='0'/></linearGradient><linearGradient gradientUnits='userSpaceOnUse' id='lobe-icons-cursorundefined-fill-2' x1='11.925' x2='1.5' y1='0' y2='18'><stop stop-color='#000' stop-opacity='.6'/><stop offset='.667' stop-color='#000' stop-opacity='.22'/></linearGradient></defs></svg>",
+    "category": "Development Tools",
+    "iframe": false,
+    "created_at": "2025-10-26"
+  },
+  {
+    "name": "clone-in-windsurf",
+    "type": "application",
+    "title": "Clone in Windsurf",
+    "description": "Clone in Windsurf",
+    "homepage": "https://windsurf.com/",
+    "url": "windsurf://vscode.git/clone?url=https://github.com/{owner}/{repo}",
+    "icon": "<svg width='16' height='16' viewBox='0 0 512 297' fill='none'><path fill='currentColor' d='M507.28 0.142623H502.4C476.721 0.10263 455.882 20.899 455.882 46.5745V150.416C455.882 171.153 438.743 187.95 418.344 187.95C406.224 187.95 394.125 181.851 386.945 171.613L280.889 20.1391C272.089 7.56133 257.77 0.0626373 242.271 0.0626373C218.091 0.0626373 196.332 20.6191 196.332 45.9946V150.436C196.332 171.173 179.333 187.97 158.794 187.97C146.634 187.97 134.555 181.871 127.375 171.633L8.69966 2.12228C6.01976 -1.71705 0 0.182617 0 4.8618V95.426C0 100.005 1.39995 104.444 4.01984 108.204L120.815 274.995C127.715 284.853 137.895 292.172 149.634 294.831C179.013 301.51 206.052 278.894 206.052 250.079V145.697C206.052 124.961 222.851 108.164 243.59 108.164H243.65C256.15 108.164 267.87 114.263 275.049 124.501L381.125 275.955C389.945 288.552 403.524 296.031 419.724 296.031C444.443 296.031 465.622 275.455 465.622 250.099V145.677C465.622 124.941 482.421 108.144 503.16 108.144H507.3C509.9 108.144 512 106.044 512 103.445V4.8418C512 2.24226 509.9 0.142623 507.3 0.142623H507.28Z'/></svg>",
+    "category": "Development Tools",
+    "iframe": false,
+    "created_at": "2025-10-26"
+  },
+  {
+    "name": "clone-in-windsurf-next",
+    "type": "application",
+    "title": "Clone in Windsurf Next",
+    "description": "Clone in Windsurf Next",
+    "homepage": "https://windsurf.com/download/editor",
+    "url": "windsurf-next://vscode.git/clone?url=https://github.com/{owner}/{repo}",
+    "icon": "<svg width='16' height='16' viewBox='0 0 512 297' fill='none'><path fill='currentColor' d='M507.28 0.142623H502.4C476.721 0.10263 455.882 20.899 455.882 46.5745V150.416C455.882 171.153 438.743 187.95 418.344 187.95C406.224 187.95 394.125 181.851 386.945 171.613L280.889 20.1391C272.089 7.56133 257.77 0.0626373 242.271 0.0626373C218.091 0.0626373 196.332 20.6191 196.332 45.9946V150.436C196.332 171.173 179.333 187.97 158.794 187.97C146.634 187.97 134.555 181.871 127.375 171.633L8.69966 2.12228C6.01976 -1.71705 0 0.182617 0 4.8618V95.426C0 100.005 1.39995 104.444 4.01984 108.204L120.815 274.995C127.715 284.853 137.895 292.172 149.634 294.831C179.013 301.51 206.052 278.894 206.052 250.079V145.697C206.052 124.961 222.851 108.164 243.59 108.164H243.65C256.15 108.164 267.87 114.263 275.049 124.501L381.125 275.955C389.945 288.552 403.524 296.031 419.724 296.031C444.443 296.031 465.622 275.455 465.622 250.099V145.677C465.622 124.941 482.421 108.144 503.16 108.144H507.3C509.9 108.144 512 106.044 512 103.445V4.8418C512 2.24226 509.9 0.142623 507.3 0.142623H507.28Z'/></svg>",
+    "category": "Development Tools",
+    "iframe": false,
+    "created_at": "2025-10-26"
+  },
+  {
+    "name": "clone-in-kiro",
+    "type": "application",
+    "title": "Clone in Kiro",
+    "description": "Clone in Kiro",
+    "homepage": "https://kiro.dev/",
+    "url": "kiro://vscode.git/clone?url=https://github.com/{owner}/{repo}",
+    "icon": "<svg width='16' height='16' viewBox='0 0 20 24' fill='none'><path d='M3.80081 18.5661C1.32306 24.0572 6.59904 25.434 10.4904 22.2205C11.6339 25.8242 15.926 23.1361 17.4652 20.3445C20.8578 14.1915 19.4877 7.91459 19.1361 6.61988C16.7244 -2.20972 4.67055 -2.21852 2.59581 6.6649C2.11136 8.21946 2.10284 9.98752 1.82846 11.8233C1.69011 12.749 1.59258 13.3398 1.23436 14.3135C1.02841 14.8733 0.745043 15.3704 0.299833 16.2082C-0.391594 17.5095 -0.0998802 20.021 3.46397 18.7186V18.7195L3.80081 18.5661Z' fill='currentColor'></path><path d='M10.9614 10.4413C9.97202 10.4413 9.82422 9.25893 9.82422 8.55407C9.82422 7.91791 9.93824 7.4124 10.1542 7.09197C10.3441 6.81003 10.6158 6.66699 10.9614 6.66699C11.3071 6.66699 11.6036 6.81228 11.8128 7.09892C12.0511 7.42554 12.177 7.92861 12.177 8.55407C12.177 9.73591 11.7226 10.4413 10.9616 10.4413H10.9614Z' fill='white'></path><path d='M15.0318 10.4413C14.0423 10.4413 13.8945 9.25893 13.8945 8.55407C13.8945 7.91791 14.0086 7.4124 14.2245 7.09197C14.4144 6.81003 14.6861 6.66699 15.0318 6.66699C15.3774 6.66699 15.6739 6.81228 15.8831 7.09892C16.1214 7.42554 16.2474 7.92861 16.2474 8.55407C16.2474 9.73591 15.793 10.4413 15.0319 10.4413H15.0318Z' fill='white'></path></svg>",
+    "category": "Development Tools",
+    "iframe": false,
+    "created_at": "2025-10-26"
   }
 ]
