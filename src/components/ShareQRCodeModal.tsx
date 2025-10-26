@@ -30,7 +30,7 @@ const ShareQRCodeModal = ({isOpen, onClose, repoName}: QRCodeModalProps) => {
         const origin = typeof window !== "undefined" ? window.location.origin : "";
         const imageUrl = `${origin}/icons/favicon.png`;
         try {
-          const image = await generateQRCode(url);
+          const image = await generateQRCode(url, imageUrl);
           setQrImageUrl(image);
         } catch (err) {
           console.error("Failed to fetch QR code", err);
