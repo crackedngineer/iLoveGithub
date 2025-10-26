@@ -158,7 +158,7 @@ export default function ToolsPage() {
   useEffect(() => {
     if (!branch) {
       (async () => {
-        const data = await getRepoDefaultBranch(owner, repo, branch);
+        const data = await getRepoDefaultBranch(owner, repo);
         setBranch(data);
       })();
     }
