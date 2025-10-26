@@ -17,7 +17,7 @@ export async function GET(req: NextRequest) {
       return NextResponse.json({error: "Missing owner"}, {status: 400});
     }
     if (!repo) {
-      return NextResponse.json({error: "Missing owner"}, {status: 400});
+      return NextResponse.json({error: "Missing repo"}, {status: 400});
     }
     if (!branch) {
       return NextResponse.json({error: "Missing branch"}, {status: 400});
