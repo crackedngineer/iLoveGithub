@@ -104,7 +104,7 @@
     "description": "DevPod is infrastructure-independent and client-only, which makes it incredibly easy to get started with. Codespaces but open-source, client-only and unopinionated. Works with any infra, any programming language, any IDE, etc.",
     "homepage": "https://devpod.sh/",
     "url": "https://devpod.sh/open#https://github.com/{owner}/{repo}",
-    "icon": "<svg width='16' height='16' viewBox='0 0 200 200'><g style='scale:1.0376'><polygon fill='currentColor' points='67.4,147.6 144.4,3.1 117,3.1 52.9,123.4 39.5,99.2 66.2,51.1 39.5,51.1 12.8,99.2 39.5,147.3 40.2,147.3 40,147.6'></polygon><polygon fill='currentColor' points='157.3,51.7 156.7,51.7 156.8,51.4 129.4,51.4 52.4,195.9 79.8,195.9 143.9,75.6 157.3,99.8 130.6,147.9 157.3,147.9 184,99.8'></polygon></g></svg>",
+    "icon": "https://aa3d4bqalqflkq22.public.blob.vercel-storage.com/tool-icons/devpod.png",
     "category": "Development Tools",
     "iframe": false,
     "created_at": "2025-10-22"
