@@ -357,7 +357,7 @@
     "description": "A Wikipedia of GitHub repositories on how it is made.",
     "homepage": "https://www.openrepowiki.xyz/",
     "url": "https://www.openrepowiki.xyz/{owner}/{repo}",
-    "icon": "https://aa3d4bqalqflkq22.public.blob.vercel-storage.com/openrepowiki.ico",
+    "icon": "https://aa3d4bqalqflkq22.public.blob.vercel-storage.com/tool-icons/openrepowiki.ico",
     "category": "Development Tools",
     "iframe": false,
     "created_at": "2025-10-26"
