@@ -21,8 +21,9 @@ export const DEMO_VIDEO_URL =
 export const DefaultGithubRepo = {
   owner: "crackedngineer",
   repo: "iLoveGithub",
+  branch: "main",
 };
 
-export const GITHUB_API_URL = "https://api.github.com/search/repositories";
+export const GITHUB_API_URL = "https://api.github.com";
 
 export const TRENDING_REPO_TTL = 86400; // 24 hours

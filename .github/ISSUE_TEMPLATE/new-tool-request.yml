@@ -52,8 +52,6 @@ body:
       label: Icon URL
       description: Direct link to the tool's icon/favicon
       placeholder: "https://github1s.com/favicon.ico"
-    validations:
-      required: true
 
   - type: dropdown
     id: category
