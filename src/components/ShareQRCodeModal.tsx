@@ -1,6 +1,7 @@
 "use client";
-import axios from "axios";
+
 import React, {useEffect, useState} from "react";
+import Image from "next/image";
 import {QrCode, Download} from "lucide-react";
 import {
   Dialog,
@@ -87,8 +88,8 @@ const ShareQRCodeModal = ({isOpen, onClose, repoName}: QRCodeModalProps) => {
                 src={qrImageUrl}
                 alt="AI QR Code"
                 className="object-contain"
-                width={56}
-                height={56}
+                width={220}
+                height={220}
               />
             ) : (
               <p className="text-gray-400">Failed to load QR</p>

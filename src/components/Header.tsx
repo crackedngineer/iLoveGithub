@@ -21,14 +21,12 @@ import {
   SUBSTACK_NEWSLETTER_URL,
   GITHUB_REPO_URL,
   GITHUB_SUBMIT_TOOL_URL,
-  DEMO_VIDEO_URL,
   DefaultGithubRepo,
 } from "@/constants";
 import {RateLimitDisplay} from "./RateLimitDisplay";
 import {useAppLocation} from "./AppLocationProvider";
 import {useAuth} from "./AuthProvider";
 import type {Session} from "@supabase/supabase-js";
-import {sign} from "crypto";
 
 export function UserDropdown({
   session,

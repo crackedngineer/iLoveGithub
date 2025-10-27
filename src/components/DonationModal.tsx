@@ -1,7 +1,7 @@
 "use client";
 
 import React, {useEffect, useState} from "react";
-import axios from "axios";
+import Image from "next/image";
 import {IndianRupee, Plus, Minus, Coffee} from "lucide-react";
 import {Button} from "@/components/ui/button";
 import {Slider} from "@/components/ui/slider";
@@ -14,7 +14,7 @@ import {
   DialogDescription,
 } from "@/components/ui/dialog";
 import {DONATION_MERCHANT_NAME} from "@/constants";
-import Image from "next/image";
+import {generateQRCode} from "@/services/qrcode";
 
 interface DonationModalProps {
   isOpen: boolean;
@@ -62,12 +62,12 @@ const DonationModal = ({isOpen, onClose, isIndiaLocation}: DonationModalProps) =
         const origin = typeof window !== "undefined" ? window.location.origin : "";
         const imageUrl = `${origin}/icons/favicon.png`;
 
-        const {data: result} = await axios.post("/api/qrcode/generate", {
-          data: `upi://pay?pa=${process.env.NEXT_PUBLIC_DONATION_UPI_ID}&pn=${DONATION_MERCHANT_NAME}&am=${debouncedAmount}&cu=INR`,
-          image: imageUrl,
-        });
+        const image = await generateQRCode(
+          `upi://pay?pa=${process.env.NEXT_PUBLIC_DONATION_UPI_ID}&pn=${DONATION_MERCHANT_NAME}&am=${debouncedAmount}&cu=INR`,
+          imageUrl,
+        );
 
-        setQrImage(result.image);
+        setQrImage(image);
       } catch (error) {
         console.error("QR code generation failed:", error);
       } finally {
