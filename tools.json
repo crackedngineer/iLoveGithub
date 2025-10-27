@@ -201,7 +201,7 @@
     "name": "githubnext",
     "title": "GitHubNext",
     "description": "Visualizing a Codebase.",
-    "homepage": "https://githubnext.com/projects/repo-Code Visualization & Diagrams/",
+    "homepage": "https://githubnext.com/projects/repo-visualization/",
     "url": "https://mango-dune-07a8b7110.1.azurestaticapps.net/?repo={owner}%2F{repo}",
     "icon": "https://aa3d4bqalqflkq22.public.blob.vercel-storage.com/tool-icons/githubnext.svg",
     "category": "Code Visualization & Diagrams",
