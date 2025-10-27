@@ -3,17 +3,24 @@ import fs from "fs/promises";
 import path from "path";
 import {replaceUrlVariables} from "@/app/helper";
 import {rootDomain} from "@/lib/utils";
-import {Tool} from "@/lib/types";
+import type {Tool} from "@/lib/types";
 
 export async function GET(req: NextRequest) {
   try {
     // Fetch query parameters efficiently
     const params = req.nextUrl.searchParams;
-    const owner = params.get("owner") || "";
-    const repo = params.get("repo") || "";
-    const branch = params.get("branch") || "";
-    if (!owner || !repo) {
-      return NextResponse.json({error: "Missing owner or repo parameter"}, {status: 400});
+    const owner = params.get("owner");
+    const repo = params.get("repo");
+    const branch = params.get("branch");
+
+    if (!owner) {
+      return NextResponse.json({error: "Missing owner"}, {status: 400});
+    }
+    if (!repo) {
+      return NextResponse.json({error: "Missing repo"}, {status: 400});
+    }
+    if (!branch) {
+      return NextResponse.json({error: "Missing branch"}, {status: 400});
     }
 
     // Read and parse tools.json in one step
@@ -23,9 +30,13 @@ export async function GET(req: NextRequest) {
     // Map and update URLs in a functional style
     const result = data.map((item: Tool) => ({
       ...item,
-      url: replaceUrlVariables(
-        item.iframe ? `https://${rootDomain}/tools/${item.name}/{owner}/{repo}` : item.url,
-        {owner, repo, branch},
+      link: replaceUrlVariables(
+        `https://${rootDomain}/tools/${item.name}/{owner}/{repo}/{branch}`,
+        {
+          owner,
+          repo,
+          branch,
+        },
       ),
     }));
     return NextResponse.json(result);

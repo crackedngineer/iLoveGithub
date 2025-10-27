@@ -16,6 +16,32 @@ function isNew(createdAt: string): boolean {
   return diffDays <= 15;
 }
 
+export function ToolDescription({description}: {description: string}) {
+  const [expanded, setExpanded] = useState(false);
+  const maxLength = 100; // limit before truncation
+
+  const toggleExpand = () => setExpanded(!expanded);
+
+  const displayText =
+    description.length > maxLength && !expanded
+      ? description.slice(0, maxLength) + "..."
+      : description;
+
+  return (
+    <CardDescription className="mt-1 text-sm text-gray-600 dark:text-gray-400">
+      {displayText}
+      {description.length > maxLength && (
+        <button
+          onClick={toggleExpand}
+          className="ml-1 text-blue-600 dark:text-blue-400 hover:underline font-medium"
+        >
+          {expanded ? "See less" : "See more"}
+        </button>
+      )}
+    </CardDescription>
+  );
+}
+
 const GitHubTools = ({tools}: {tools: Tool[]}) => {
   const [searchTerm, setSearchTerm] = useState("");
 
@@ -45,7 +71,7 @@ const GitHubTools = ({tools}: {tools: Tool[]}) => {
         🔧 Popular GitHub Tools
       </h2>
 
-      <div className="mb-8 flex items-center gap-2">
+      <div className="flex flex-col w-full mb-8 items-center gap-2">
         <Input
           type="text"
           placeholder="Search by title or description..."
@@ -53,12 +79,13 @@ const GitHubTools = ({tools}: {tools: Tool[]}) => {
           onChange={(e) => setSearchTerm(e.target.value)}
           className="w-full"
         />
+        <p className="mt-2 text-sm text-gray-500 dark:text-gray-400">
+          Showing {filteredTools.length} of {tools.length} tools
+        </p>
       </div>
 
       {Object.entries(toolsByCategory).length === 0 ? (
-        <p className="text-center text-gray-600 dark:text-gray-400">
-          No tools found matching &quot;{searchTerm}&quot;
-        </p>
+        <p className="text-center text-gray-600 dark:text-gray-400">No tools found matching</p>
       ) : (
         Object.entries(toolsByCategory).map(([category, categoryTools]) => (
           <section key={category} className="mb-10 sm:mb-12">
@@ -99,15 +126,13 @@ const GitHubTools = ({tools}: {tools: Tool[]}) => {
                         {tool.title}
                       </CardTitle>
 
-                      <CardDescription className="mt-1 text-sm text-gray-600 dark:text-gray-400">
-                        {tool.description}
-                      </CardDescription>
+                      <ToolDescription description={tool.description} />
                     </CardHeader>
 
                     <CardContent className="mt-2">
                       <Button asChild variant="link" className="text-sm px-0 py-1">
                         <a
-                          href={tool.url}
+                          href={tool.link}
                           target="_blank"
                           rel="noopener noreferrer"
                           className="inline-flex items-center gap-1 text-github-blue hover:text-blue-700 group-hover:underline"

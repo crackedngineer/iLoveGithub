@@ -4,10 +4,12 @@ export interface Tool {
   description: string;
   homepage: string;
   url: string;
+  link?: string;
   icon: string | null;
   category: string;
   iframe: boolean;
   created_at: string;
+  type?: string;
 }
 
 export interface GitHubRepo {

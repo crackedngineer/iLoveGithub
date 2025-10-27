@@ -1,7 +1,7 @@
 "use client";
 
 import React, {createContext, useContext, useEffect, useState, ReactNode} from "react";
-import {fetchRateLimit, RateLimitError, RateLimitResponse} from "@/services/githubService";
+import {fetchRateLimit, RateLimitError, RateLimitResponse} from "@/services/github";
 
 interface ApiLimitContextType {
   rateLimit: RateLimitResponse | null;

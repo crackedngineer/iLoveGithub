@@ -21,7 +21,7 @@ export async function GET(req: Request) {
   let query = `created:>${formattedDate}`;
   if (language) query += ` language:${language}`;
 
-  const url = `${GITHUB_API_URL}?q=${encodeURIComponent(
+  const url = `${GITHUB_API_URL}/search/repositories?q=${encodeURIComponent(
     query,
   )}&sort=stars&order=desc&per_page=${limit}&page=${page}`;
 

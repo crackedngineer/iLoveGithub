@@ -27,6 +27,73 @@ import {
 import {RateLimitDisplay} from "./RateLimitDisplay";
 import {useAppLocation} from "./AppLocationProvider";
 import {useAuth} from "./AuthProvider";
+import type {Session} from "@supabase/supabase-js";
+import {sign} from "crypto";
+
+export function UserDropdown({
+  session,
+  signOut,
+  signInWithGitHub,
+}: {
+  session: Session;
+  signOut: () => void;
+  signInWithGitHub: () => void;
+}) {
+  const user = session?.user?.user_metadata;
+  const isLoggedIn = Boolean(session);
+
+  return (
+    <DropdownMenu>
+      <DropdownMenuTrigger asChild>
+        <button
+          onClick={() => !isLoggedIn && signInWithGitHub()}
+          className="flex items-center gap-2 rounded-full focus:outline-none"
+          aria-label={isLoggedIn ? "User menu" : "Sign in with GitHub"}
+        >
+          {user?.avatar_url ? (
+            <Image
+              src={user.avatar_url}
+              alt="Profile"
+              width={32}
+              height={32}
+              className="w-8 h-8 rounded-full object-cover"
+            />
+          ) : (
+            <div className="w-8 h-8 flex items-center justify-center bg-gray-300 dark:bg-gray-600 rounded-full">
+              <User className="w-4 h-4 text-white" />
+            </div>
+          )}
+        </button>
+      </DropdownMenuTrigger>
+
+      {isLoggedIn && (
+        <DropdownMenuContent align="end" className="w-56 p-2">
+          <DropdownMenuLabel className="text-sm text-muted-foreground">
+            Signed in as
+          </DropdownMenuLabel>
+
+          <div className="px-2 py-1">
+            <p className="text-sm font-medium truncate">
+              {user?.user_name || user?.name || "User"}
+            </p>
+            <p className="text-xs text-gray-500 dark:text-gray-400 truncate">
+              {session.user?.email}
+            </p>
+          </div>
+
+          <DropdownMenuSeparator />
+
+          <DropdownMenuItem
+            onClick={signOut}
+            className="cursor-pointer text-sm text-red-600 hover:bg-red-50 dark:hover:bg-red-900/20"
+          >
+            Log out
+          </DropdownMenuItem>
+        </DropdownMenuContent>
+      )}
+    </DropdownMenu>
+  );
+}
 
 const Header = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -121,58 +188,7 @@ const Header = () => {
             onClick={() => window.open(GITHUB_REPO_URL, "_blank")}
           />
 
-          <DropdownMenu>
-            <DropdownMenuTrigger asChild>
-              <button className="flex items-center gap-2 rounded-full">
-                {session?.user?.user_metadata?.avatar_url ? (
-                  <Image
-                    src={session.user.user_metadata.avatar_url}
-                    alt="Profile"
-                    width={32}
-                    height={32}
-                    className="w-8 h-8 rounded-full object-cover"
-                  />
-                ) : (
-                  <div className="w-8 h-8 flex items-center justify-center bg-gray-300 dark:bg-gray-600 rounded-full">
-                    <User className="w-4 h-4 text-white" />
-                  </div>
-                )}
-              </button>
-            </DropdownMenuTrigger>
-            <DropdownMenuContent align="end" className="w-56 p-2">
-              {session ? (
-                <>
-                  <DropdownMenuLabel className="text-sm text-muted-foreground">
-                    Signed in as
-                  </DropdownMenuLabel>
-                  <div className="px-2 py-1">
-                    <p className="text-sm font-medium truncate">
-                      {session.user?.user_metadata?.user_name ||
-                        session.user?.user_metadata?.name ||
-                        "User"}
-                    </p>
-                    <p className="text-xs text-gray-500 dark:text-gray-400 truncate">
-                      {session.user?.email}
-                    </p>
-                  </div>
-                  <DropdownMenuSeparator />
-                  <DropdownMenuItem
-                    className="cursor-pointer text-sm text-red-600 hover:bg-red-50 dark:hover:bg-red-900/20"
-                    onClick={() => signOut()}
-                  >
-                    Log out
-                  </DropdownMenuItem>
-                </>
-              ) : (
-                <DropdownMenuItem
-                  className="cursor-pointer text-sm text-blue-600 hover:bg-blue-50 dark:hover:bg-blue-900/20"
-                  onClick={signInWithGitHub}
-                >
-                  Sign in with GitHub
-                </DropdownMenuItem>
-              )}
-            </DropdownMenuContent>
-          </DropdownMenu>
+          <UserDropdown session={session!} signOut={signOut} signInWithGitHub={signInWithGitHub} />
         </div>
 
         <button
@@ -212,7 +228,7 @@ const Header = () => {
           >
             {isDarkMode ? "Light Mode ☀️" : "Dark Mode 🌙"}
           </Button>
-          <Button
+          {/* <Button
             variant="ghost"
             className="w-full justify-start text-github-gray dark:text-white/90 hover:text-github-blue dark:hover:text-white"
             onClick={() => {
@@ -220,16 +236,7 @@ const Header = () => {
             }}
           >
             Demo
-          </Button>
-          {session && (
-            <Button
-              variant="ghost"
-              className="w-full justify-start text-sm text-red-600 hover:bg-red-50 dark:hover:bg-red-900/20 mt-1"
-              onClick={() => signOut()}
-            >
-              Log out
-            </Button>
-          )}
+          </Button> */}
           <a href={BUY_ME_COFFEE_URL} target="_blank" rel="noopener noreferrer" className="w-full">
             <Button
               variant="ghost"
@@ -239,14 +246,31 @@ const Header = () => {
             </Button>
           </a>
 
-          <GitHubStarsButton
-            username={DefaultGithubRepo.owner}
-            repo={DefaultGithubRepo.repo}
-            onClick={() => {
-              setIsMenuOpen(false);
-              window.open(GITHUB_REPO_URL, "_blank");
-            }}
-          />
+          <Button
+            variant="ghost"
+            className="w-full justify-start text-github-gray dark:text-white/90 hover:text-github-blue dark:hover:text-white"
+            onClick={() => window.open(GITHUB_REPO_URL, "_blank")}
+          >
+            Repository 🔗
+          </Button>
+
+          {session ? (
+            <Button
+              variant="ghost"
+              className="w-full justify-start text-sm text-red-600 hover:bg-red-50 dark:hover:bg-red-900/20 mt-1"
+              onClick={() => signOut()}
+            >
+              Log out
+            </Button>
+          ) : (
+            <Button
+              variant="ghost"
+              className="w-full justify-start text-github-gray dark:text-white/90 hover:text-github-blue dark:hover:text-white"
+              onClick={signInWithGitHub}
+            >
+              Login with GitHub
+            </Button>
+          )}
         </div>
       )}
 

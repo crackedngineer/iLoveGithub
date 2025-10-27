@@ -1,15 +1,5 @@
 import React, {useState} from "react";
-import {
-  ExternalLink,
-  Star,
-  GitFork,
-  Eye,
-  Calendar,
-  GitBranch,
-  FileCode,
-  Info,
-  QrCode,
-} from "lucide-react";
+import {Star, GitFork, Eye, Calendar, GitBranch, FileCode, Info, QrCode} from "lucide-react";
 import {
   Card,
   CardContent,
@@ -23,6 +13,8 @@ import {Badge} from "@/components/ui/badge";
 import {formatDistanceToNow} from "date-fns";
 import RepoInfoLoginWall from "./RepoInfoLoginWall";
 import ShareQRCodeModal from "./ShareQRCodeModal";
+import {ViewCodeDropdown} from "./ViewCodeDropdown";
+import type {Tool} from "../lib/types";
 
 export interface RepoData {
   name: string;
@@ -84,7 +76,15 @@ const HealthProgressBar = ({value}: {value: number}) => {
   );
 };
 
-const RepoInfo = ({repo, isLoggedIn = false}: {repo: RepoData; isLoggedIn: boolean}) => {
+const RepoInfo = ({
+  tools,
+  repo,
+  isLoggedIn = false,
+}: {
+  tools: Tool[];
+  repo: RepoData;
+  isLoggedIn: boolean;
+}) => {
   const [isQRModalOpen, setIsQRModalOpen] = useState(false);
 
   const formattedDate = (dateString: string) => {
@@ -151,12 +151,12 @@ const RepoInfo = ({repo, isLoggedIn = false}: {repo: RepoData; isLoggedIn: boole
                 <QrCode size={14} />
                 QR Code
               </Button>
-              <Button variant="outline" size="sm" className="flex items-center gap-1 w-fit" asChild>
-                <a href={repo.url} target="_blank" rel="noopener noreferrer">
-                  <ExternalLink size={14} />
-                  View on GitHub
-                </a>
-              </Button>
+              <ViewCodeDropdown
+                owner={repo.owner}
+                repo={repo.name}
+                branch={repo.default_branch}
+                tools={tools}
+              />
             </div>
           </div>
         </CardHeader>
