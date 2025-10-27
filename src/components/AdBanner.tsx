@@ -5,7 +5,7 @@ import {ChevronDown, ChevronUp} from "lucide-react";
 // Define types for AdSense window object
 declare global {
   interface Window {
-    adsbygoogle: any[];
+    adsbygoogle: Array<Record<string, unknown>>; // { [key: string]: unknown }
   }
 }
 

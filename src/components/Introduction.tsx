@@ -1,5 +1,11 @@
+type BadgeType = {
+  href: string;
+  src: string;
+  alt: string;
+};
+
 export const Introduction = () => {
-  const badges = [
+  const badges: BadgeType[] = [
     {
       href: "https://www.producthunt.com/posts/ilovegithub?embed=true&utm_source=badge-featured&utm_medium=badge&utm_source=badge-ilovegithub",
       src: "https://api.producthunt.com/widgets/embed-image/v1/featured.svg?post_id=967157&theme=light&t=1747590463334",
@@ -21,7 +27,7 @@ export const Introduction = () => {
     <div className="text-center mb-10 px-2 sm:px-4">
       {/* Badge Container without Background */}
       <div className="flex flex-wrap justify-center gap-4 p-2">
-        {badges.map((badge, index) => (
+        {badges.map((badge: BadgeType, index) => (
           <a
             key={index}
             href={badge.href}
@@ -29,7 +35,10 @@ export const Introduction = () => {
             rel="noopener noreferrer"
             className="transform hover:scale-105 transition duration-300"
           >
-            <img src={badge.src} alt={badge.alt} width={250} className="rounded-md h-14" />
+            {
+              // eslint-disable-next-line @next/next/no-img-element
+              <img src={badge.src} alt={badge.alt} className="rounded-md h-14" width={250} />
+            }
           </a>
         ))}
       </div>

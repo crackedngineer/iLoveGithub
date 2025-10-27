@@ -47,7 +47,12 @@ export async function GET(req: NextRequest) {
     await redis.set(cacheKey, data, {ex: 3600});
 
     return NextResponse.json(data);
-  } catch (error: any) {
+  } catch (error: unknown) {
+    if (!(error instanceof axios.AxiosError)) {
+      console.error("Unexpected error:", error);
+      return NextResponse.json({error: "An unexpected error occurred"}, {status: 500});
+    }
+
     const status = error?.response?.status;
     const rateLimitRemaining = error?.response?.headers?.["x-ratelimit-remaining"];
 

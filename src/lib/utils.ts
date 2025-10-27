@@ -12,8 +12,13 @@ export function getHostnameFromUrl(urlString: string): string | null {
   try {
     const url = new URL(urlString);
     return url.hostname;
-  } catch (err) {
-    console.error("Invalid URL:", urlString);
+  } catch (error) {
+    if (error instanceof Error) {
+      console.error("Invalid URL:", urlString, "-", error.message);
+    } else {
+      console.error("Invalid URL:", urlString);
+    }
+
     return null;
   }
 }

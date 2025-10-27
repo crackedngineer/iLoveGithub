@@ -1,5 +1,5 @@
 "use client";
-import axios from "axios";
+
 import {useCallback, useMemo, useEffect, useState} from "react";
 import {useRouter, useParams} from "next/navigation";
 import RepoInfo, {RepoData} from "@/components/RepoInfo";

@@ -9,21 +9,7 @@ import {Card, CardContent} from "@/components/ui/card";
 import {Skeleton} from "@/components/ui/skeleton";
 import {RECENT_REPO_LOCAL_STORAGE_KEY, RECENT_TRENDING_REPO_UI_MAXCOUNT} from "@/constants";
 import {useAuth} from "./AuthProvider";
-
-interface TrendingRepo {
-  id: number;
-  name: string;
-  full_name: string;
-  html_url: string;
-  description: string;
-  stargazers_count: number;
-  language: string;
-  owner: {
-    login: string;
-    avatar_url: string;
-    html_url: string;
-  };
-}
+import {GitHubRepo} from "@/lib/types";
 
 type RepoSubmitHandler = {
   e: React.FormEvent;
@@ -31,7 +17,7 @@ type RepoSubmitHandler = {
   repo?: string;
   repoUrl?: string;
   onSubmit: (owner: string, repo: string) => void;
-  onError?: (error: any) => void;
+  onError?: (error: unknown) => void;
 };
 
 const RepoSearch = ({
@@ -40,7 +26,6 @@ const RepoSearch = ({
   onRepoSubmit,
 }: {
   value: string;
-  onError?: (error: string | null) => void;
   trending: boolean;
   onRepoSubmit: (owner: string, repo: string) => void;
 }) => {
@@ -48,7 +33,7 @@ const RepoSearch = ({
   const repoInputRef = useRef<HTMLInputElement>(null);
   const [repoUrl, setRepoUrl] = useState(value);
   const [error, setError] = useState("");
-  const [trendingRepos, setTrendingRepos] = useState<TrendingRepo[]>([]);
+  const [trendingRepos, setTrendingRepos] = useState<GitHubRepo[]>([]);
   const [recent, setRecent] = useState<string[]>([]);
   const [loading, setLoading] = useState(true);
 
@@ -77,7 +62,7 @@ const RepoSearch = ({
       if (details) {
         onSubmit(details.owner, details.repo);
       } else {
-        onError?.(null);
+        onError?.("");
       }
     } else if (owner && repo) {
       onSubmit(owner, repo);
@@ -92,7 +77,7 @@ const RepoSearch = ({
       e,
       repoUrl: repoInputRef.current?.value || "",
       onSubmit: onRepoSubmit,
-      onError: setError,
+      onError: (err) => setError(String(err)),
     });
   };
 
@@ -117,10 +102,10 @@ const RepoSearch = ({
       setLoading(true);
       try {
         const res = await fetch("/api/repo/trending?limit=6&offset=0");
-        if (!res.ok) throw new Error("Failed to fetch trending.json");
-
-        const data = await res.json();
-        setTrendingRepos(data.items);
+        if (res.ok) {
+          const data = await res.json();
+          setTrendingRepos(data.items);
+        }
       } catch (e) {
         console.error("Failed to fetch trending repositories", e);
       } finally {
