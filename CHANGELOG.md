@@ -4,6 +4,13 @@ All notable changes to this project will be documented in this file.
 
 ---
 
+## [0.19.1](https://github.com/crackedngineer/iLoveGithub/compare/v0.19.0...v0.19.1) (2025-11-02)
+
+
+### Bug Fixes
+
+* upgrade lucide-react from 0.544.0 to 0.545.0 ([#204](https://github.com/crackedngineer/iLoveGithub/issues/204)) ([865eb74](https://github.com/crackedngineer/iLoveGithub/commit/865eb749fc52d67a671806425ce4aa9aaae276c9))
+
 ## [0.19.0](https://github.com/crackedngineer/iLoveGithub/compare/v0.18.1...v0.19.0) (2025-10-26)
 
 
