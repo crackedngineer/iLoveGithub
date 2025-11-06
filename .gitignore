@@ -45,3 +45,8 @@ next-env.d.ts
 coverage/
 .jest-cache/
 *.lcov
+
+.vscode/*
+!.vscode/settings.json
+
+linkedin_oauth_token.json
