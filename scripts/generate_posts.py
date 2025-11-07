@@ -212,8 +212,7 @@ class BasePlatformProvider(ABC):
         )
 
         self.post = str(response.choices[0].message.content)
-        rprint(self.post, end="\n\n")
-        return str(self.post)
+        return self.post
 
     @abstractmethod
     def _publish(self, *args, **kawgs):
@@ -500,7 +499,8 @@ class ReleasePostApp:
         )
 
         # Generate post content
-        generator.generate()
+        post = generator.generate()
+        rprint(post, end="\n\n")
 
         is_post_ok = input("✅ Proceed to generate post? [Y/n]: ").lower()
         if is_post_ok.lower() != "y":
