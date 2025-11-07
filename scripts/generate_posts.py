@@ -1,9 +1,17 @@
 """
-pip install openai requests pydantic pydantic_settings
+pip install openai requests pydantic pydantic_settings rich tweepy
 
-export GITHUB_TOKEN=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
-export API_KEY=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
-export NEW_RELEASE=v0.17.0
+export GITHUB_TOKEN=<your_github_token>
+export API_KEY=<your_groq_api_key>
+export X_API_KEY=<your_x_api_key>
+export X_API_SECRET=<your_x_api_secret>
+export X_API_SECRET=<your_x_api_secret>
+export X_ACCESS_TOKEN=<your_x_access_token>
+export X_ACCESS_SECRET=<your_x_access_secret>
+export LINKEDIN_REFRESH_TOKEN=<your_linkedin_refresh_token>
+export LINKEDIN_AUTHOR_URN=<your_linkedin_author_urn>
+export LINKEDIN_CLIENT_ID=<your_linkedin_client_id>
+export LINKEDIN_CLIENT_SECRET=<your_linkedin_client_secret>
 
 
 --> Fetching Linkediin RefreshToken after expiry
