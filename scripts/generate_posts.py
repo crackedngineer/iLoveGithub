@@ -1,6 +1,8 @@
 """
 pip install openai requests pydantic pydantic_settings rich tweepy
 
+Add the secrets in environment variables or in a .env file.
+
 --> Fetching Linkediin RefreshToken after expiry
 Goto https://www.linkedin.com/developers/tools/oauth?clientId=8657g0g8iblf08 in different browser where linkedin profile is not logged in.
 """
