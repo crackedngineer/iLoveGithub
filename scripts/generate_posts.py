@@ -1,18 +1,7 @@
 """
 pip install openai requests pydantic pydantic_settings rich tweepy
 
-export GITHUB_TOKEN=<your_github_token>
-export API_KEY=<your_groq_api_key>
-export X_API_KEY=<your_x_api_key>
-export X_API_SECRET=<your_x_api_secret>
-export X_API_SECRET=<your_x_api_secret>
-export X_ACCESS_TOKEN=<your_x_access_token>
-export X_ACCESS_SECRET=<your_x_access_secret>
-export LINKEDIN_REFRESH_TOKEN=<your_linkedin_refresh_token>
-export LINKEDIN_AUTHOR_URN=<your_linkedin_author_urn>
-export LINKEDIN_CLIENT_ID=<your_linkedin_client_id>
-export LINKEDIN_CLIENT_SECRET=<your_linkedin_client_secret>
-
+Add the secrets in environment variables or in a .env file.
 
 --> Fetching Linkediin RefreshToken after expiry
 Goto https://www.linkedin.com/developers/tools/oauth?clientId=8657g0g8iblf08 in different browser where linkedin profile is not logged in.
