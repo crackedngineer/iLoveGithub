@@ -4,6 +4,16 @@ All notable changes to this project will be documented in this file.
 
 ---
 
+## [0.19.2](https://github.com/crackedngineer/iLoveGithub/compare/v0.19.1...v0.19.2) (2025-11-16)
+
+
+### Bug Fixes
+
+* upgrade @supabase/supabase-js from 2.75.1 to 2.76.1 ([#210](https://github.com/crackedngineer/iLoveGithub/issues/210)) ([3eadbe7](https://github.com/crackedngineer/iLoveGithub/commit/3eadbe797799dfd257c97ed0aff5880d9da57a50))
+* upgrade lucide-react from 0.545.0 to 0.546.0 ([#209](https://github.com/crackedngineer/iLoveGithub/issues/209)) ([d56ded0](https://github.com/crackedngineer/iLoveGithub/commit/d56ded0415978c9c43a0ad1ec9c427d03db09db6))
+* upgrade lucide-react from 0.546.0 to 0.548.0 ([#211](https://github.com/crackedngineer/iLoveGithub/issues/211)) ([9bdb824](https://github.com/crackedngineer/iLoveGithub/commit/9bdb824862aee577b5fd15a5c418b58d486ea308))
+* upgrade nodemailer from 7.0.9 to 7.0.10 ([#212](https://github.com/crackedngineer/iLoveGithub/issues/212)) ([e4828e7](https://github.com/crackedngineer/iLoveGithub/commit/e4828e7403fe3eef8e636aa83af37c3dffbdc409))
+
 ## [0.19.1](https://github.com/crackedngineer/iLoveGithub/compare/v0.19.0...v0.19.1) (2025-11-02)
 
 
