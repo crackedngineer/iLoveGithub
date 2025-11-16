@@ -1,5 +1,12 @@
 """
-pip install openai requests pydantic pydantic_settings rich tweepy
+pip install -qU \
+    langchain \
+    requests \
+    pydantic \
+    pydantic_settings \
+    rich \
+    tweepy \
+    langchain-openai
 
 Add the secrets in environment variables or in a .env file.
 
@@ -18,8 +25,12 @@ from rich.console import Console
 from enum import Enum
 from typing import List
 from tweepy.client import Response
-from openai import OpenAI
+from pydantic import BaseModel, Field, SecretStr
 from pydantic_settings import BaseSettings
+import os
+from typing import Dict, Type
+from langchain.agents import create_agent
+from langchain_openai import ChatOpenAI
 
 console = Console()
 rprint = console.print
@@ -32,6 +43,60 @@ GITHUB_REPO = "crackedngineer/iLoveGithub"
 LINKEDIN_API_URL = "https://api.linkedin.com/v2/ugcPosts"
 MAX_XCOM_CHARS = 280
 MAX_LINKEDIN_CHARS = 1300
+BOLD_CHARS = {
+    "a": "𝗮",
+    "b": "𝗯",
+    "c": "𝗰",
+    "d": "𝗱",
+    "e": "𝗲",
+    "f": "𝗳",
+    "g": "𝗴",
+    "h": "𝗵",
+    "i": "𝗶",
+    "j": "𝗷",
+    "k": "𝗸",
+    "l": "𝗹",
+    "m": "𝗺",
+    "n": "𝗻",
+    "o": "𝗼",
+    "p": "𝗽",
+    "q": "𝗾",
+    "r": "𝗿",
+    "s": "𝘀",
+    "t": "𝘁",
+    "u": "𝘂",
+    "v": "𝘃",
+    "w": "𝘄",
+    "x": "𝘅",
+    "y": "𝘆",
+    "z": "𝘇",
+    "A": "𝗔",
+    "B": "𝗕",
+    "C": "𝗖",
+    "D": "𝗗",
+    "E": "𝗘",
+    "F": "𝗙",
+    "G": "𝗚",
+    "H": "𝗛",
+    "I": "𝗜",
+    "J": "𝗝",
+    "K": "𝗞",
+    "L": "𝗟",
+    "M": "𝗠",
+    "N": "𝗡",
+    "O": "𝗢",
+    "P": "𝗣",
+    "Q": "𝗤",
+    "R": "𝗥",
+    "S": "𝗦",
+    "T": "𝗧",
+    "U": "𝗨",
+    "V": "𝗩",
+    "W": "𝗪",
+    "X": "𝗫",
+    "Y": "𝗬",
+    "Z": "𝗭",
+}
 
 
 # ---------------------------------------------
@@ -145,14 +210,14 @@ class BasePlatformProvider(ABC):
 
     def __init__(
         self,
-        client: OpenAI,
+        client: ChatOpenAI,
         repo_info: dict,
         diff_summary: str,
         base_tag: str,
         new_tag: str,
     ):
         self.platform_name = None
-        self._post = None
+        self._post = str()
         self.max_char_limit = 0
 
         self.client = client
@@ -163,6 +228,7 @@ class BasePlatformProvider(ABC):
 
         self._user_prompt = None
         self._system_prompt = None
+        self.response_format = BaseModel
 
     @property
     def post(self) -> str:
@@ -203,16 +269,26 @@ class BasePlatformProvider(ABC):
     def generate(self) -> str:
         rprint(f"🧠 Generating {self.platform_name} Post using AI...\n")
 
-        response = self.client.chat.completions.create(
-            model="openai/gpt-oss-120b",
-            messages=[
-                {"role": "system", "content": self.system_prompt},
-                {"role": "user", "content": self.user_prompt},
-            ],
+        agent = create_agent(
+            model=self.client,
+            response_format=self.response_format,
         )
 
-        self.post = str(response.choices[0].message.content)
+        result = agent.invoke(
+            {
+                "messages": [
+                    {"role": "system", "content": self.system_prompt},
+                    {"role": "user", "content": self.user_prompt},
+                ]
+            }
+        )
+
+        self._create_post_content(result["structured_response"])
         return self.post
+
+    @abstractmethod
+    def _create_post_content(self, info: BaseModel) -> str:
+        pass
 
     @abstractmethod
     def _publish(self, *args, **kawgs):
@@ -231,6 +307,9 @@ class BasePlatformProvider(ABC):
 # ---------------------------------------------
 # X (Twitter) Post Generator
 # ---------------------------------------------
+class XComLLMResponse(BaseModel):
+    content: str = Field(description="Generated tweet content based on the provided release information and highlights.")
+
 class XComProvier(BasePlatformProvider):
     """Generates a Twitter thread for a new release."""
 
@@ -242,6 +321,7 @@ class XComProvier(BasePlatformProvider):
         self.platform_name = "X (Twitter)"
         self.max_char_limit = MAX_XCOM_CHARS
         self.settings = XComSettings()
+        self.response_format = XComLLMResponse
 
         self.user_prompt = (
             "You are a **Senior Developer Advocate** with an elegant, concise, and highly **technical voice**. "
@@ -266,6 +346,8 @@ Using the provided release information, generate a **single, highly-engaging twe
 * Employ elegant formatting (e.g., unicode characters, subtle emojis).
 * **CTA:** "Explore the docs and integrate now: {LIVE_URL}."
 """
+    def _create_post_content(self, info: XComLLMResponse):
+        self.post=  info.content
 
     def _publish(self):
         oauth_client = tweepy.Client(
@@ -281,6 +363,24 @@ Using the provided release information, generate a **single, highly-engaging twe
 # ---------------------------------------------
 # Linkedin Post Generator
 # ---------------------------------------------
+class ContentModel(BaseModel):
+    name: str = Field(description="Name of the feature or bug fix")
+    short_description: str = Field(
+        description="Short description of the feature or bug fix"
+    )
+
+
+class LinkedinLLMResponse(BaseModel):
+    introduction: str = Field(description="Header of the Linkedin post")
+    changes: List[ContentModel] = Field(
+        description="List of new features, bug fixes etc."
+    )
+    hashtags : List[str] = Field(description="List of hastags relevant to the Linkedin Post content")
+    call_to_action: str = Field(
+        description="Short call-to-action encouraging readers to visit the repository, star it, and contribute (e.g., open issues or submit PRs). May include brief next steps or a link to docs."
+    )
+    footer: str = Field(description="Footer note of the Linkedin post")
+
 class LinkedInProvider(BasePlatformProvider):
     """Generates a LinkedIn post for a new release."""
 
@@ -289,6 +389,8 @@ class LinkedInProvider(BasePlatformProvider):
         self.platform_name = "LinkedIn"
         self.max_char_limit = MAX_LINKEDIN_CHARS
         self.settings = LinkedInSettings()
+        self.response_format = LinkedinLLMResponse
+
         self.user_prompt = (
             "You are a **Senior Developer Advocate** with a strong, professional, and engaging voice. "
             "Write a concise LinkedIn post announcing a new software release. "
@@ -296,7 +398,7 @@ class LinkedInProvider(BasePlatformProvider):
             "Avoid hashtags except 5–6 at the end. Keep it under 1300 characters."
         )
         self.system_prompt = f"""
-Using the provided release information, generate a **concise LinkedIn post** that is professional, engaging, and informative.
+Using the provided release information, generate the dictionary of information based on the response format.
 
 **Project Information:**
 - Version: {self.new_tag} (previous: {self.base_tag})
@@ -362,6 +464,20 @@ Include something like “Explore more at {LIVE_URL}”.
                 f"🛑 Failed to refresh token: {response.status_code} {response.text}"
             )
 
+    def __to_bold_text(self, input_text: str) -> str:
+        return "".join(BOLD_CHARS.get(c, c) for c in input_text)
+
+    def _create_post_content(self, info: LinkedinLLMResponse) -> None:
+        self.post += f"{info.introduction}\n\n"
+        self.post += f"{self.__to_bold_text("What's new")}\n"
+        for content in info.changes:
+            self.post += (
+                f"{self.__to_bold_text(content.name)} - {content.short_description}\n"
+            )
+        self.post += f"\n{info.call_to_action}\n"
+        self.post += ' '.join(f'#{tag}' for tag in info.hashtags)
+        self.post += f"\n{info.footer}"
+
     def _publish(self):
         """Publish the generated post on LinkedIn."""
         # Load your LinkedIn OAuth access token from settings or environment
@@ -423,16 +539,51 @@ class XPublisher:
 # ---------------------------------------------
 # Post Generator Factory (Factory Pattern)
 # ---------------------------------------------
-class PlatformProviderFactory:
-    """Factory for creating platform-specific post generators."""
+class PlatformProvider:
+    """
+    Strategy-based factory/delegate for platform providers.
 
-    @staticmethod
-    def create(platform: PlatformEnum, **kwargs) -> BasePlatformProvider:
-        if platform == PlatformEnum.XCOM:
-            return XComProvier(**kwargs)
-        elif platform == PlatformEnum.LINKEDIN:
-            return LinkedInProvider(**kwargs)
-        raise ValueError(f"Unsupported platform: {platform}")
+    Usage:
+      - Pass `platform` explicitly (e.g. "xcom", "linkedin").
+      - Falls back to env var PLATFORM.
+      - If neither provided, defaults to XCOM.
+    """
+
+    STRATEGIES: Dict[PlatformEnum, Type[BasePlatformProvider]] = {
+        PlatformEnum.XCOM: XComProvier,
+        PlatformEnum.LINKEDIN: LinkedInProvider,
+    }
+
+    def __init__(self, platform: str | PlatformEnum | None = None, **kwargs):
+        # determine platform (priority: explicit arg -> env -> default XCOM)
+        raw = platform or os.getenv("PLATFORM") or PlatformEnum.XCOM.value
+        self.platform = (
+            raw if isinstance(raw, PlatformEnum) else PlatformEnum(str(raw).lower())
+        )
+
+        provider_cls = self.STRATEGIES.get(self.platform)
+        if provider_cls is None:
+            raise NotImplementedError(
+                f"No provider implemented for platform '{self.platform}'."
+            )
+
+        # instantiate the concrete provider strategy with provided context kwargs
+        self._provider: BasePlatformProvider = provider_cls(**kwargs)
+
+    # Delegate commonly used operations to the selected provider
+    def generate(self) -> str:
+        return self._provider.generate()
+
+    def publish(self, *args, **kwargs):
+        return self._provider.publish(*args, **kwargs)
+
+    @property
+    def post(self) -> str:
+        return self._provider.post
+
+    def __getattr__(self, name):
+        # fallback delegation for other methods/attrs
+        return getattr(self._provider, name)
 
 
 # ---------------------------------------------
@@ -441,12 +592,13 @@ class PlatformProviderFactory:
 class ReleasePostApp:
     """Main application class orchestrating the workflow."""
 
-    def __init__(self, platform: str, new_release: str):
-        self.platform = PlatformEnum(platform.lower())
+    def __init__(self, new_release: str):
         self.settings = Settings()
         self.github = GitHubClient(self.settings.github_token)
-        self.client = OpenAI(
-            base_url="https://api.groq.com/openai/v1", api_key=self.settings.api_key
+        self.client = ChatOpenAI(
+            model="openai/gpt-oss-120b",
+            base_url="https://api.groq.com/openai/v1",
+            api_key=lambda: self.settings.api_key,
         )
         self.new_release = (
             self.__fetch_latest_release_tag()
@@ -489,26 +641,49 @@ class ReleasePostApp:
             GITHUB_REPO, prev_release, self.new_release
         )
 
-        generator = PlatformProviderFactory.create(
-            platform=self.platform,
-            client=self.client,
-            repo_info=repo_info,
-            diff_summary=diff_summary,
-            base_tag=prev_release,
-            new_tag=self.new_release,
-        )
+        PLATFORMS = [PlatformEnum.LINKEDIN, PlatformEnum.XCOM]
 
-        # Generate post content
-        post = generator.generate()
-        rprint(post, end="\n\n")
+        for platform in PLATFORMS:
+            rprint(f"\n🔁 Processing platform: [bold]{platform.value}[/bold]\n")
 
-        is_post_ok = input("✅ Proceed to generate post? [Y/n]: ").lower()
-        if is_post_ok.lower() != "y":
-            print("🚫 Post generation cancelled.")
-            return
+            # instantiate provider/strategy for this specific platform
+            try:
+                provider = PlatformProvider(
+                    platform=platform,
+                    client=self.client,
+                    repo_info=repo_info,
+                    diff_summary=diff_summary,
+                    base_tag=prev_release,
+                    new_tag=self.new_release,
+                )
+            except NotImplementedError as e:
+                rprint(f"🛑 No provider for {platform.value}: {e}")
+                continue
 
-        # Publish post
-        generator.publish()
+            # Generate post content using the selected strategy
+            try:
+                post = provider.generate()
+                rprint(post, end="\n\n")
+            except Exception as e:
+                rprint(f"🛑 Failed to generate post for {platform.value}: {e}")
+                continue
+
+            # Confirm before publishing
+            proceed = (
+                input(f"✅ Proceed to publish to {platform.value}? [Y/n]: ")
+                .strip()
+                .lower()
+            )
+            if proceed and proceed != "y":
+                rprint(f"🚫 Publishing cancelled for {platform.value}.")
+                continue
+
+            # Publish using the provider's publish() method
+            try:
+                provider.publish()
+            except Exception as e:
+                rprint(f"🛑 Publishing failed for {platform.value}: {e}")
+                continue
 
 
 # ---------------------------------------------
@@ -520,12 +695,6 @@ def main():
             description="Generate and publish release posts."
         )
         parser.add_argument(
-            "-p",
-            "--platform",
-            required=True,
-            help="Platform name (xcom, linkedin, reddit)",
-        )
-        parser.add_argument(
             "-r",
             "--release",
             required=False,
@@ -534,7 +703,7 @@ def main():
         )
         args = parser.parse_args()
 
-        ReleasePostApp(args.platform, args.release).run()
+        ReleasePostApp(args.release).run()
 
     except KeyboardInterrupt:
         rprint("\n\n🛑 [bold]Keyboard Interrupt detected![/bold]")
