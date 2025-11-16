@@ -6,7 +6,8 @@ pip install -qU \
     pydantic_settings \
     rich \
     tweepy \
-    langchain-openai
+    langchain-openai \
+    toon-python
 
 Add the secrets in environment variables or in a .env file.
 
@@ -14,23 +15,24 @@ Add the secrets in environment variables or in a .env file.
 Goto https://www.linkedin.com/developers/tools/oauth?clientId=8657g0g8iblf08 in different browser where linkedin profile is not logged in.
 """
 
+import os
 import sys
 import json
 import tweepy
 import argparse
 import requests
+from enum import Enum
+from typing import List, Dict, Type
 from datetime import datetime
 from abc import ABC, abstractmethod
+
 from rich.console import Console
-from enum import Enum
-from typing import List
 from tweepy.client import Response
-from pydantic import BaseModel, Field, SecretStr
+from pydantic import BaseModel, Field
 from pydantic_settings import BaseSettings
-import os
-from typing import Dict, Type
 from langchain.agents import create_agent
 from langchain_openai import ChatOpenAI
+from toon_format import encode as toon_encode
 
 console = Console()
 rprint = console.print
@@ -222,7 +224,7 @@ class BasePlatformProvider(ABC):
 
         self.client = client
         self.repo_info = repo_info
-        self.diff_summary = diff_summary
+        self.diff_summary = toon_encode(diff_summary)
         self.base_tag = base_tag
         self.new_tag = new_tag
 
