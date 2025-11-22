@@ -43,6 +43,7 @@ next-env.d.ts
 
 node_modules
 .env
+.vscode/*
 
 # Hugo files
 blog/public
