@@ -1,8 +1,10 @@
-baseURL: https://ilovegithub-blog.netlify.app/
+baseURL: https://ilovegithub.oderna.in/blog/
 languageCode: en-us
 title: iLoveGithub
 
 mainsections: ["posts"]
+relativeURLs: true
+
 
 module:
   imports:
