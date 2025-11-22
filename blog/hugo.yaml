@@ -1,0 +1,9 @@
+baseURL: https://ilovegithbub.oderna.in
+languageCode: en-us
+title: iLoveGithub
+
+mainsections: ["posts"]
+
+module:
+  imports:
+  - path: github.com/adityatelange/hugo-PaperMod
