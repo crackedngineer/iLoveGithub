@@ -40,7 +40,7 @@
     "@radix-ui/react-slot": "^1.1.2",
     "@radix-ui/react-tooltip": "^1.2.6",
     "@supabase/ssr": "^0.7.0",
-    "@supabase/supabase-js": "^2.76.1",
+    "@supabase/supabase-js": "^2.78.0",
     "@upstash/redis": "^1.35.1",
     "@vercel/analytics": "^1.5.0",
     "@vercel/blob": "^1.0.1",
