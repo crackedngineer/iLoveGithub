@@ -14,7 +14,7 @@
     "lint": "next lint",
     "lint:fix": "next lint --fix",
     "commit": "cz",
-    "hugo:minify": "hugo --gc --minify -s blog -d ../public/blog",
+    "hugo:build": "hugo --gc --minify -s blog",
     "hugo:serve": "hugo server -s blog"
   },
   "husky": {
