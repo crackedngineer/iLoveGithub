@@ -3,6 +3,8 @@ languageCode: en-us
 title: iLoveGithub
 
 mainsections: ["posts"]
+relativeURLs: true
+
 
 module:
   imports:
