@@ -4,6 +4,23 @@ All notable changes to this project will be documented in this file.
 
 ---
 
+## [0.21.0](https://github.com/crackedngineer/iLoveGithub/compare/v0.20.0...v0.21.0) (2025-11-22)
+
+
+### Features
+
+* added canonifyURLs to true and relativeURLs to false ([bfe3269](https://github.com/crackedngineer/iLoveGithub/commit/bfe32691e6b83467bb9d4ddb6edea7dc85236fdc))
+* added relativeURL to true ([6715c36](https://github.com/crackedngineer/iLoveGithub/commit/6715c36cf7966520c7fff4f646be6022b071d110))
+
+
+### Bug Fixes
+
+* added HUGO_BASEURL in netlify.toml ([66170c8](https://github.com/crackedngineer/iLoveGithub/commit/66170c8b57819c09879e6dbdfaf244db00c5b61c))
+* fixed Hugo blog CSS issue ([#219](https://github.com/crackedngineer/iLoveGithub/issues/219)) ([508c0a0](https://github.com/crackedngineer/iLoveGithub/commit/508c0a0400decd3cb94fa573f5699db03b2a2ffc))
+* removed relativeurl from hugo yml ([#221](https://github.com/crackedngineer/iLoveGithub/issues/221)) ([2241798](https://github.com/crackedngineer/iLoveGithub/commit/22417981735b00a1b95f999e2595614a68cacf59))
+* testing hugo site redirection issue fixes ([a5cadb6](https://github.com/crackedngineer/iLoveGithub/commit/a5cadb61e90eea9231c84528f3e325f0431e2f2e))
+* updated redirect routes in vercel.json ([bacd01b](https://github.com/crackedngineer/iLoveGithub/commit/bacd01bffb2b9d526df1a5327bafe47a583f8763))
+
 ## [0.20.0](https://github.com/crackedngineer/iLoveGithub/compare/v0.19.2...v0.20.0) (2025-11-22)
 
 
