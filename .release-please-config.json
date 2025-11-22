@@ -3,12 +3,39 @@
     ".": {
       "release-type": "node",
       "changelog-types": [
-        {"type": "feat", "section": "🚀 Features", "hidden": false},
-        {"type": "fix", "section": "🐛 Bug Fixes", "hidden": false},
-        {"type": "docs", "section": "📝 Docs", "hidden": false},
-        {"type": "style", "section": "💅 Styling", "hidden": false},
-        {"type": "refactor", "section": "♻️ Refactors", "hidden": false},
-        {"type": "test", "section": "✅ Tests", "hidden": true}
+        {
+          "type": "feat",
+          "section": "🚀 Features",
+          "hidden": false
+        },
+        {
+          "type": "fix",
+          "section": "🐛 Bug Fixes",
+          "hidden": false
+        },
+        {
+          "type": "docs",
+          "section": "📝 Docs",
+          "hidden": false
+        },
+        {
+          "type": "style",
+          "section": "💅 Styling",
+          "hidden": false
+        },
+        {
+          "type": "refactor",
+          "section": "♻️ Refactors",
+          "hidden": false
+        },
+        {
+          "type": "test",
+          "section": "✅ Tests",
+          "hidden": true
+        }
+      ],
+      "exclude-paths": [
+        "blog"
       ]
     }
   }
