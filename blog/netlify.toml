@@ -4,4 +4,4 @@
 
 [build.environment]
   HUGO_VERSION = "0.152.2"
-  HUGO_BASEURL = "https://ilovegithub.oderna.in/blog/"
+  HUGO_BASEURL = "https://ilovegithub.oderna.in/blog"
