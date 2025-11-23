@@ -1,4 +1,4 @@
-baseURL: https://ilovegithub.oderna.in/
+baseURL: https://ilovegithub-blog.netlify.app
 languageCode: en-us
 title: iLoveGithub
 
@@ -9,6 +9,3 @@ mainsections: ["posts"]
 module:
   imports:
     - path: github.com/adityatelange/hugo-PaperMod
-
-permalinks:
-  posts: "blog/:title"
