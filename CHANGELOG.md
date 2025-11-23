@@ -4,6 +4,19 @@ All notable changes to this project will be documented in this file.
 
 ---
 
+## [0.21.1](https://github.com/crackedngineer/iLoveGithub/compare/v0.21.0...v0.21.1) (2025-11-23)
+
+
+### Bug Fixes
+
+* changes baseUrl for hugo yml ([2ede24c](https://github.com/crackedngineer/iLoveGithub/commit/2ede24c26dbb44abe8ab4d6b4f4ed160243a38dc))
+* chnged baseurl to netlify url ([891def8](https://github.com/crackedngineer/iLoveGithub/commit/891def87a2303ff12e06e2ce3608f5f71d1c637d))
+* fix redirect issue for hugo blog ([6e633e4](https://github.com/crackedngineer/iLoveGithub/commit/6e633e484f876c3c26c72f2b3eff40dc17bcb3d7))
+* fix url routes for hugo blog site ([9612597](https://github.com/crackedngineer/iLoveGithub/commit/96125978e7cd5d6d6bc9f44e8cec211ebbf43e2b))
+* hugo yml changes ([05faf88](https://github.com/crackedngineer/iLoveGithub/commit/05faf88847222779c08f2b73436e77419313213d))
+* netlify toml changes ([cfb1745](https://github.com/crackedngineer/iLoveGithub/commit/cfb1745343628264d5a8124a95208fdd7fc29c5a))
+* removed HUGO_BASEURL from netlify.toml ([a43cdbf](https://github.com/crackedngineer/iLoveGithub/commit/a43cdbfa4ec144541a9f9f05a7f78e5690ec4390))
+
 ## [0.21.0](https://github.com/crackedngineer/iLoveGithub/compare/v0.20.0...v0.21.0) (2025-11-22)
 
 
