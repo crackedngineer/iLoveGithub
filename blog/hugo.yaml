@@ -2,8 +2,8 @@ baseURL: "https://ilovegithub.oderna.in/blog/"
 languageCode: en-us
 title: iLoveGithub
 
-relativeURLs: true
-canonifyURLs: true
+relativeURLs: false
+canonifyURLs: false
 
 mainsections: ["posts"]
 
