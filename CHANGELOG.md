@@ -4,6 +4,13 @@ All notable changes to this project will be documented in this file.
 
 ---
 
+## [0.21.2](https://github.com/crackedngineer/iLoveGithub/compare/v0.21.1...v0.21.2) (2025-11-23)
+
+
+### Bug Fixes
+
+* fix vercel.json source route ([8b4c2e3](https://github.com/crackedngineer/iLoveGithub/commit/8b4c2e395063084e93777e72c1ca0e20fc46ffe3))
+
 ## [0.21.1](https://github.com/crackedngineer/iLoveGithub/compare/v0.21.0...v0.21.1) (2025-11-23)
 
 
