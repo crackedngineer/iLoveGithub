@@ -4,6 +4,13 @@ All notable changes to this project will be documented in this file.
 
 ---
 
+## [0.21.3](https://github.com/crackedngineer/iLoveGithub/compare/v0.21.2...v0.21.3) (2025-11-23)
+
+
+### Bug Fixes
+
+* updated hugo config ([d15e756](https://github.com/crackedngineer/iLoveGithub/commit/d15e7562df395d4c87e993401b1f52163fe26884))
+
 ## [0.21.2](https://github.com/crackedngineer/iLoveGithub/compare/v0.21.1...v0.21.2) (2025-11-23)
 
 
