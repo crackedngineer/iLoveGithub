@@ -4,6 +4,18 @@ All notable changes to this project will be documented in this file.
 
 ---
 
+## [0.21.3](https://github.com/crackedngineer/iLoveGithub/compare/v0.21.2...v0.21.3) (2025-12-01)
+
+
+### Bug Fixes
+
+* updated hugo config ([d15e756](https://github.com/crackedngineer/iLoveGithub/commit/d15e7562df395d4c87e993401b1f52163fe26884))
+* upgrade @radix-ui/react-progress from 1.1.7 to 1.1.8 ([#229](https://github.com/crackedngineer/iLoveGithub/issues/229)) ([b435df7](https://github.com/crackedngineer/iLoveGithub/commit/b435df7de63b778b5002448892a58f2803dcbbe1))
+* upgrade @radix-ui/react-slot from 1.2.3 to 1.2.4 ([#228](https://github.com/crackedngineer/iLoveGithub/issues/228)) ([fc2c568](https://github.com/crackedngineer/iLoveGithub/commit/fc2c5689559b25712a13825e1f9df58415e4e480))
+* upgrade @supabase/supabase-js from 2.76.1 to 2.78.0 ([#214](https://github.com/crackedngineer/iLoveGithub/issues/214)) ([0d7d258](https://github.com/crackedngineer/iLoveGithub/commit/0d7d2587f3566823ff4d8759472678896952ef8a))
+* upgrade axios from 1.12.2 to 1.13.1 ([#216](https://github.com/crackedngineer/iLoveGithub/issues/216)) ([a36e1d7](https://github.com/crackedngineer/iLoveGithub/commit/a36e1d743384b774429c0c33f5787e1bc97ce1c3))
+* upgrade lucide-react from 0.548.0 to 0.552.0 ([#215](https://github.com/crackedngineer/iLoveGithub/issues/215)) ([ab73923](https://github.com/crackedngineer/iLoveGithub/commit/ab7392304de584fe7286af38f19f8eb593e46a7f))
+
 ## [0.21.2](https://github.com/crackedngineer/iLoveGithub/compare/v0.21.1...v0.21.2) (2025-11-23)
 
 
