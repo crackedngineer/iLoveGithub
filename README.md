@@ -72,6 +72,7 @@
 | ---- | ----------- | ------ |
 | [**answergit**](https://answergit.vercel.app/) | AI-Powered GitHub Repository Explorer | `https://answergit.vercel.app/{owner}/{repo}` |
 | [**chatforgithub**](https://chat.forgithub.com/) | Context-driven LLM Interface. | `https://chat.forgithub.com/{owner}/{repo}` |
+| [**code-wiki**](https://codewiki.google/) | Basically a real time deepwiki for understanding codebases by google. | `https://codewiki.google/github.com/tinygrad/tinygrad` |
 | [**coding2tutorial**](https://coding2tutorial.com/) | Turn any GitHub repository into a comprehensive AI-powered tutorial. | `https://code2tutorial.com/repository/select-files?repoUrl=https://github.com/{owner}/{repo}` |
 | [**deepwiki**](https://deepwiki.com/) | Which repo would you like to understand? | `https://deepwiki.com/{owner}/{repo}` |
 | [**explaingithub**](https://explaingithub.com/) | Understand complex codebases with AI. | `https://explaingithub.com/{owner}/{repo}` |
@@ -91,6 +92,12 @@
 | Tool | Description | Launch |
 | ---- | ----------- | ------ |
 | [**bolt**](https://bolt.new/) | Prompt, run, edit, and deploy full-stack web applications. | `https://bolt.new/~/github.com/{owner}/{repo}` |
+| [**clone-in-cursor**](https://cursor.com/) | Clone in Cursor | `cursor://vscode.git/clone?url=https://github.com/{owner}/{repo}` |
+| [**clone-in-kiro**](https://kiro.dev/) | Clone in Kiro | `kiro://vscode.git/clone?url=https://github.com/{owner}/{repo}` |
+| [**clone-in-vscode**](https://code.visualstudio.com/) | Clone in VSCode | `vscode://vscode.git/clone?url=https://github.com/{owner}/{repo}` |
+| [**clone-in-vscode-insider**](https://code.visualstudio.com/insiders/) | Clone in VSCode Insiders | `vscode-insiders://vscode.git/clone?url=https://github.com/{owner}/{repo}` |
+| [**clone-in-windsurf**](https://windsurf.com/) | Clone in Windsurf | `windsurf://vscode.git/clone?url=https://github.com/{owner}/{repo}` |
+| [**clone-in-windsurf-next**](https://windsurf.com/download/editor) | Clone in Windsurf Next | `windsurf-next://vscode.git/clone?url=https://github.com/{owner}/{repo}` |
 | [**codesandbox**](https://codesandbox.io/) | Sandboxes built for scale. | `https://codesandbox.io/p/devbox/github/{owner}/{repo}` |
 | [**devpod**](https://devpod.sh/) | DevPod is infrastructure-independent and client-only, which makes it incredibly easy to get started with. Codespaces but open-source, client-only and unopinionated. Works with any infra, any programming language, any IDE, etc. | `https://devpod.sh/open#https://github.com/{owner}/{repo}` |
 | [**github-dev**](https://github.dev) | Open any GitHub repo in a browser-based VS Code editor. | `https://github.dev/{owner}/{repo}` |
@@ -105,12 +112,6 @@
 | [**replit**](https://replit.com/) | Build and deploy software collaboratively with the power of AI without spending a second on setup. | `https://replit.com/github/{owner}/{repo}` |
 | [**stackblitz**](https://stackblitz.com/) | Turn text into working web apps. | `https://stackblitz.com/~/github.com/{owner}/{repo}` |
 | [**vscode**](https://code.visualstudio.com/docs/setup/vscode-web) | Edit projects using the full VS Code experience in-browser. | `https://vscode.dev/github/{owner}/{repo}` |
-| [**clone-in-vscode**](https://code.visualstudio.com/) | Clone in VSCode | `vscode://vscode.git/clone?url=https://github.com/{owner}/{repo}` |
-| [**clone-in-vscode-insider**](https://code.visualstudio.com/insiders/) | Clone in VSCode Insiders | `vscode-insiders://vscode.git/clone?url=https://github.com/{owner}/{repo}` |
-| [**clone-in-cursor**](https://cursor.com/) | Clone in Cursor | `cursor://vscode.git/clone?url=https://github.com/{owner}/{repo}` |
-| [**clone-in-windsurf**](https://windsurf.com/) | Clone in Windsurf | `windsurf://vscode.git/clone?url=https://github.com/{owner}/{repo}` |
-| [**clone-in-windsurf-next**](https://windsurf.com/download/editor) | Clone in Windsurf Next | `windsurf-next://vscode.git/clone?url=https://github.com/{owner}/{repo}` |
-| [**clone-in-kiro**](https://kiro.dev/) | Clone in Kiro | `kiro://vscode.git/clone?url=https://github.com/{owner}/{repo}` |
 | [**vscode-insider**](https://code.visualstudio.com/insiders/) | Visual Studio Code is a new choice of tool that combines the simplicity of a code editor with what developers need for the core edit, build, and debug cycle. | `https://insiders.vscode.dev/github/{owner}/{repo}` |
 
 ---
