@@ -4,6 +4,15 @@ All notable changes to this project will be documented in this file.
 
 ---
 
+## [0.21.6](https://github.com/crackedngineer/iLoveGithub/compare/v0.21.5...v0.21.6) (2025-12-08)
+
+
+### Bug Fixes
+
+* added rewrites for blog ([4396250](https://github.com/crackedngineer/iLoveGithub/commit/43962502b19d0160f36ef19f7125a796e4b412fb))
+* updated the old domain references to https://ilovegithub.vercel.app ([0bb5fba](https://github.com/crackedngineer/iLoveGithub/commit/0bb5fba2616fb50f5767afdc48a3d1871ad549fd))
+* updated the old domain references to https://ilovegithub.vercel.app ([a46f506](https://github.com/crackedngineer/iLoveGithub/commit/a46f5063557dfd8481f0b18e16a79f797ec1bd79))
+
 ## [0.21.5](https://github.com/crackedngineer/iLoveGithub/compare/v0.21.4...v0.21.5) (2025-12-08)
 
 
