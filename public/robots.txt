@@ -3,7 +3,7 @@ User-agent: *
 Allow: /
 
 # Host
-Host: https://ilovegithub.oderna.in
+Host: https://ilovegithub.vercel.app
 
 # Sitemaps
-Sitemap: https://ilovegithub.oderna.in/sitemap.xml
+Sitemap: https://ilovegithub.vercel.app/sitemap.xml
