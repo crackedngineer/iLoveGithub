@@ -4,6 +4,13 @@ All notable changes to this project will be documented in this file.
 
 ---
 
+## [0.21.5](https://github.com/crackedngineer/iLoveGithub/compare/v0.21.4...v0.21.5) (2025-12-08)
+
+
+### Bug Fixes
+
+* **tool:** Add code wiki tool ([b3ae7e3](https://github.com/crackedngineer/iLoveGithub/commit/b3ae7e3aea84d2477a819c382321b8bc715847d9))
+
 ## [0.21.4](https://github.com/crackedngineer/iLoveGithub/compare/v0.21.3...v0.21.4) (2025-12-08)
 
 
