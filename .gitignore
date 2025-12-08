@@ -41,6 +41,10 @@ yarn-error.log*
 *.tsbuildinfo
 next-env.d.ts
 
+# Testing
+coverage/
+.jest-cache/
+*.lcov
 node_modules
 .env
 .vscode/*

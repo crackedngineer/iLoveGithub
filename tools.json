@@ -33,12 +33,12 @@
     "created_at": "2025-03-28"
   },
   {
-    "name": "cache-for-github-tool",
+    "name": "cache-for-github",
     "title": "Cache for GitHub",
     "description": "Optimize Your GitHub Workflow",
     "homepage": "https://cache.forgithub.com/",
     "url": "https://cache.forgithub.com/{owner}/{repo}",
-    "icon": "https://www.google.com/s2/favicons?domain=https://cache.forgithub.com&sz=40",
+    "icon": null,
     "category": "Analytics & Insights",
     "iframe": false,
     "created_at": "2025-10-26"
@@ -561,7 +561,7 @@
     "description": "Creating a Bridge Between GitHub and X",
     "homepage": "https://threads.forgithub.com/",
     "url": "https://threads.forgithub.com/{owner}/{repo}",
-    "icon": "https://www.google.com/s2/favicons?domain=https://cache.forgithub.com&sz=40",
+    "icon": null,
     "category": "Documentation & AI-Powered Understanding",
     "iframe": false,
     "created_at": "2025-10-26"

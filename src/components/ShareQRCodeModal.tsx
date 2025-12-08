@@ -1,6 +1,7 @@
 "use client";
-import axios from "axios";
+
 import React, {useEffect, useState} from "react";
+import Image from "next/image";
 import {QrCode, Download} from "lucide-react";
 import {
   Dialog,
@@ -43,7 +44,7 @@ const ShareQRCodeModal = ({isOpen, onClose, repoName}: QRCodeModalProps) => {
     } else {
       setQrImageUrl(null); // reset
     }
-  }, [isOpen, repoName]);
+  }, [url, isOpen, repoName]);
 
   const handleDownload = async () => {
     if (!qrImageUrl) return;
@@ -83,7 +84,13 @@ const ShareQRCodeModal = ({isOpen, onClose, repoName}: QRCodeModalProps) => {
             {loading ? (
               <div className="w-56 h-56 bg-gray-200 dark:bg-gray-700 animate-pulse-subtle" />
             ) : qrImageUrl ? (
-              <img src={qrImageUrl} alt="AI QR Code" className="w-56 h-56 object-contain" />
+              <Image
+                src={qrImageUrl}
+                alt="AI QR Code"
+                className="object-contain"
+                width={220}
+                height={220}
+              />
             ) : (
               <p className="text-gray-400">Failed to load QR</p>
             )}

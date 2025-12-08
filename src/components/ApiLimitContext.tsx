@@ -33,7 +33,7 @@ export const ApiLimitProvider = ({children}: {children: ReactNode}) => {
         if (limitData.remaining === 0) {
           throw new RateLimitError(limitData);
         }
-      } catch (err: any) {
+      } catch (err) {
         const message =
           err instanceof RateLimitError
             ? "GitHub API rate limit exceeded."

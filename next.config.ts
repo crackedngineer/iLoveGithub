@@ -8,6 +8,13 @@ const iframeOrigins = GithubToolsList.filter((tool) => tool.iframe).map(
   (tool) => `https://${tool.name}.${rootDomain}`,
 );
 
+const remotePatterns = [
+  "*.blob.vercel-storage.com",
+  "avatars.githubusercontent.com",
+  "peerlist.io",
+  "scoutforge.net",
+];
+
 /**
  * Custom config (use in your own code if needed)
  */
@@ -23,16 +30,10 @@ const nextConfig = {
 
   /** Allow remote images from Vercel Blob storage */
   images: {
-    remotePatterns: [
-      {
-        protocol: "https",
-        hostname: "*.blob.vercel-storage.com",
-      },
-      {
-        protocol: "https",
-        hostname: "avatars.githubusercontent.com",
-      },
-    ],
+    remotePatterns: remotePatterns.map((hostname) => ({
+      protocol: "https",
+      hostname,
+    })),
   },
 
   /** Custom headers for security */
