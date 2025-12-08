@@ -48,11 +48,11 @@ export const metadata: Metadata = {
     title: "iLoveGithub - GitHub Tools & Repo Transformers",
     description:
       "A curated collection of magical tools built around GitHub — open a repo in VS Code, visualize it, generate AI-powered summaries, convert it to a podcast, and so much more.",
-    url: "https://ilovegithub.oderna.in",
+    url: "https://ilovegithub.vercel.app",
     siteName: "iLoveGithub",
     images: [
       {
-        url: "https://ilovegithub.oderna.in/og-image.png",
+        url: "https://ilovegithub.vercel.app/og-image.png",
         width: 1200,
         height: 630,
         alt: "iLoveGithub - GitHub Tools Screenshot",
@@ -66,9 +66,9 @@ export const metadata: Metadata = {
     title: "iLoveGithub - GitHub Tools & Repo Transformers",
     description:
       "Explore magical GitHub tools to open repos in VS Code, summarize repositories with AI, and transform GitHub URLs easily!",
-    images: ["https://ilovegithub.oderna.in/og-image.jpg"],
+    images: ["https://ilovegithub.vercel.app/og-image.jpg"],
   },
-  metadataBase: new URL("https://ilovegithub.oderna.in"),
+  metadataBase: new URL("https://ilovegithub.vercel.app"),
 };
 
 export default function RootLayout({
@@ -79,7 +79,7 @@ export default function RootLayout({
   return (
     <html lang="en" suppressHydrationWarning>
       <head>
-        <link rel="canonical" href="https://ilovegithub.oderna.in" />
+        <link rel="canonical" href="https://ilovegithub.vercel.app" />
         {/* Theme script for preventing flicker */}
         <Script
           id="theme-script"
