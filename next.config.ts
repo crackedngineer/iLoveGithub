@@ -53,6 +53,15 @@ const nextConfig = {
       },
     ];
   },
+
+  async rewrites() {
+    return [
+      {
+        source: "/blog/:path*",
+        destination: "https://ilovegithub-blog.netlify.app/:path*",
+      },
+    ];
+  },
 };
 
 // Export both if needed in your app
