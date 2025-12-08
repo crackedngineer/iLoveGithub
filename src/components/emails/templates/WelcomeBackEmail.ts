@@ -1,6 +1,6 @@
 export const generateWelcomeBackEmail = ({name, email}: {name: string; email: string}) => {
   const year = new Date().getFullYear();
-  const appUrl = process.env.NEXT_PUBLIC_APP_URL || "https://ilovegithub.oderna.in";
+  const appUrl = process.env.NEXT_PUBLIC_APP_URL || "https://ilovegithub.vercel.app";
 
   const html = `
   <!DOCTYPE html>

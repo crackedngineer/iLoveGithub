@@ -1,0 +1,8 @@
+{
+  "rewrites": [
+    {
+      "source": "/blog/:path*",
+      "destination": "https://ilovegithub-blog.netlify.app/:path*"
+    }
+  ]
+}

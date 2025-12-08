@@ -1,5 +1,5 @@
 module.exports = {
-  siteUrl: "https://ilovegithub.oderna.in",
+  siteUrl: "https://ilovegithub.vercel.app",
   generateRobotsTxt: true,
   changefreq: "weekly",
   priority: 0.7,

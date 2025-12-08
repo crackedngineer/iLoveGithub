@@ -1,0 +1,12 @@
+baseURL: "https://ilovegithub.vercel.app/blog/"
+languageCode: en-us
+title: iLoveGithub
+
+relativeURLs: false
+canonifyURLs: false
+
+mainsections: ["posts"]
+
+module:
+  imports:
+    - path: github.com/adityatelange/hugo-PaperMod

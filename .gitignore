@@ -45,3 +45,10 @@ next-env.d.ts
 coverage/
 .jest-cache/
 *.lcov
+node_modules
+.env
+.vscode/*
+
+# Hugo files
+blog/public
+blog/resources
