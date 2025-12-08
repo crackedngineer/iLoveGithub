@@ -4,6 +4,13 @@ All notable changes to this project will be documented in this file.
 
 ---
 
+## [0.21.4](https://github.com/crackedngineer/iLoveGithub/compare/v0.21.3...v0.21.4) (2025-12-08)
+
+
+### Bug Fixes
+
+* package.json & package-lock.json to reduce vulnerabilities ([#230](https://github.com/crackedngineer/iLoveGithub/issues/230)) ([bf61f32](https://github.com/crackedngineer/iLoveGithub/commit/bf61f32c51bc2d2e8c0a371d93f86c59bfe5f1ae))
+
 ## [0.21.3](https://github.com/crackedngineer/iLoveGithub/compare/v0.21.2...v0.21.3) (2025-12-01)
 
 
