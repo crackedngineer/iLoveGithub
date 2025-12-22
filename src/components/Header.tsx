@@ -28,6 +28,7 @@ import {useAppLocation} from "./AppLocationProvider";
 import {useAuth} from "./AuthProvider";
 import type {Session} from "@supabase/supabase-js";
 import {useRouter} from "next/navigation";
+import {useTheme} from "next-themes";
 
 export function UserDropdown({
   session,
@@ -96,23 +97,14 @@ export function UserDropdown({
 
 const Header = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
-  const [isDarkMode, setIsDarkMode] = useState(false);
   const [isDonationModalOpen, setIsDonationModalOpen] = useState(false);
   const {isInIndia} = useAppLocation();
   const {session, signOut, signInWithGitHub} = useAuth();
   const router = useRouter();
+  const {theme, setTheme} = useTheme();
+  const isDarkMode = theme === "dark";
 
   const status = session ? "authenticated" : "unauthenticated";
-
-  useEffect(() => {
-    setIsDarkMode(document.documentElement.classList.contains("dark"));
-  }, []);
-
-  const toggleTheme = () => {
-    const isDark = document.documentElement.classList.toggle("dark");
-    localStorage.setItem("theme", isDark ? "dark" : "light");
-    setIsDarkMode(isDark);
-  };
 
   return (
     <header className="w-full bg-white dark:bg-github-dark-blue border-b border-gray-200 dark:border-gray-700 sticky top-0 z-50 shadow-sm dark:shadow-md transition-colors duration-300">
@@ -160,7 +152,12 @@ const Header = () => {
           {/* GitHub API Rate Limit Display */}
           {status === "unauthenticated" && <RateLimitDisplay />}
 
-          <Button variant="ghost" size="icon" onClick={toggleTheme} aria-label="Toggle Theme">
+          <Button
+            variant="ghost"
+            size="icon"
+            onClick={() => setTheme(isDarkMode ? "light" : "dark")}
+            aria-label="Toggle Theme"
+          >
             {isDarkMode ? <Sun className="h-5 w-5" /> : <Moon className="h-5 w-5" />}
           </Button>
 
@@ -244,7 +241,7 @@ const Header = () => {
           <Button
             variant="ghost"
             className="w-full justify-start text-github-gray dark:text-white/90 hover:text-github-blue dark:hover:text-white"
-            onClick={toggleTheme}
+            onClick={() => setTheme(isDarkMode ? "light" : "dark")}
           >
             {isDarkMode ? "Light Mode ☀️" : "Dark Mode 🌙"}
           </Button>

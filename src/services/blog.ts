@@ -1,5 +1,5 @@
 import axios from "axios";
-import type {BlogPostFrontMatter} from "@/lib/types";
+import type {BlogPostDetail, BlogPostFrontMatter, SeriesInfo} from "@/lib/types";
 import {fullRootDomain} from "@/lib/utils";
 
 type BlogPostsResponse = {
@@ -28,5 +28,5 @@ export async function getAllBlogPosts(
 
 export async function getBlogPostBySlug(slug: string) {
   const response = await axios.get(`${fullRootDomain}/api/blog/${slug}`);
-  return response.data as {content: string; frontMatter: BlogPostFrontMatter};
+  return response.data as BlogPostDetail;
 }

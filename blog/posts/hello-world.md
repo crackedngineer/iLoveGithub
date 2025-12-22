@@ -2,6 +2,7 @@
 title: Building Accessible React Components
 excerpt: A comprehensive guide to building React components that are accessible to all users, including those using assistive technologies.
 author: Dev Team
+series: Awesome Tools
 created: 2024-01-05
 tags: React, Accessibility, A11y
 coverImage: https://images.unsplash.com/photo-1551288049-bebda4e38f71?w=800&auto=format&fit=crop&q=60

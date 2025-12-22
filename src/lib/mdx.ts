@@ -1,7 +1,7 @@
 import {promises as fs} from "fs";
 import path from "path";
 import matter from "gray-matter";
-import type {FrontMatter} from "@/lib/types";
+import type {BlogPostFrontMatter, BlogPostDetail} from "@/lib/types";
 
 const root = process.cwd();
 
@@ -31,27 +31,25 @@ export async function getFileBySlug(mdxpath: string, slug: string) {
     data.tags = data.tags?.toString().trim().split(",") || [];
     return {
       contentHtml: content,
-      frontMatter: {
-        slug: slug || null,
-        ...data,
-      } as FrontMatter,
-    };
+      slug: slug || null,
+      ...data,
+    } as BlogPostDetail;
   } catch (error) {
     console.error(`Error processing ${slug}.mdx:`, error);
     return {
       contentHtml: "<p>Error loading content.</p>",
-      frontMatter: {
-        slug: slug || null,
-        title: "Error",
-        created: "",
-        description: "There was an error loading this content.",
-        project: "",
-      } as FrontMatter,
-    };
+      slug: slug || null,
+      title: "Error",
+      created: "",
+      description: "There was an error loading this content.",
+      project: "",
+      tags: [],
+      category: "",
+    } as BlogPostDetail;
   }
 }
 
-export async function getAllFilesFrontMatter(mdxpath: string): Promise<FrontMatter[]> {
+export async function getAllFilesFrontMatter(mdxpath: string): Promise<BlogPostFrontMatter[]> {
   try {
     const files = await getFiles(mdxpath);
 
@@ -64,14 +62,14 @@ export async function getAllFilesFrontMatter(mdxpath: string): Promise<FrontMatt
         }
         data.tags = data.tags.toString().trim().split(",") || [];
         return {
-          ...(data as FrontMatter),
+          ...(data as BlogPostFrontMatter),
           slug: file.replace(/\.(mdx|md)$/, ""),
         };
       }),
     );
 
     const filteredAndSortedPosts = posts
-      .filter((post): post is FrontMatter => Boolean(post?.created ?? ""))
+      .filter((post): post is BlogPostFrontMatter => Boolean(post?.created ?? ""))
       .sort((a, b) => {
         const dateA = new Date(a.created).getTime();
         const dateB = new Date(b.created).getTime();

@@ -2,11 +2,11 @@ import {getFileBySlug} from "@/lib/mdx";
 import {NextResponse} from "next/server";
 import path from "path";
 
-export async function GET(request: Request, context: {params: {slug: string}}) {
+export async function GET(request: Request, context: {params: Promise<{slug: string}>}) {
   try {
     const {params} = context;
-    console.log("Fetching blog post with slug:", params);
-    const slug = params.slug;
+    const resolvedParams = await params;
+    const slug = resolvedParams.slug;
     const mdxpath = path.join("blog", "posts");
     const posts = await getFileBySlug(mdxpath, slug);
     return NextResponse.json(posts);

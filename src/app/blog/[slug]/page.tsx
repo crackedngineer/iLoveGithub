@@ -1,54 +1,44 @@
 "use client";
 
-import {useMemo} from "react";
-import {notFound} from "next/navigation";
+import {useEffect, useState} from "react";
+import {useParams} from "next/navigation";
 import Link from "next/link";
 import {ArrowLeft, Calendar, Check, Clock, Copy, Linkedin, Twitter, User} from "lucide-react";
 import {Badge} from "@/components/ui/badge";
 import {Button} from "@/components/ui/button";
 import SEOHead from "@/components/blog/SeoHead";
+import BookmarkButton from "@/components/blog/BookmarkButton";
 import Header from "@/components/Header";
 import ReadingProgress from "@/components/blog/ReadingProgress";
+import MarkdownRenderer from "@/components/blog/MarkdownRenderer";
+import TableOfContents from "@/components/blog/TableOfContents";
+import {getAllBlogPosts, getBlogPostBySlug} from "@/services/blog";
 import {BlogPostDetail, BlogPostFrontMatter} from "@/lib/types";
-import {fullRootDomain} from "@/lib/utils";
+import {useTheme} from "next-themes";
 
-// Fetch all posts (adjust the path as needed)
-async function getAllPosts(): Promise<BlogPostFrontMatter[]> {
-  const res = await fetch(`${fullRootDomain}/api/blog`, {cache: "force-cache"});
-  const data = await res.json();
-  return data.posts;
-}
+export default function BlogPost() {
+  const {slug} = useParams() as {slug: string};
+  const [copied, setCopied] = useState(false);
+  const [post, setPost] = useState<BlogPostDetail | null>(null);
+  const [allPosts, setAllPosts] = useState<BlogPostFrontMatter[]>([]);
+  const {theme} = useTheme();
+  const isDarkMode = theme === "dark";
 
-// Fetch a single post by slug
-async function getPost(
-  slug: string,
-): Promise<{frontMatter: BlogPostDetail; contentHtml: string} | null> {
-  const res = await fetch(`${fullRootDomain}/api/blog/${slug}`, {cache: "force-cache"});
-  if (!res.ok) return null;
-  return res.json();
-}
-
-// Generate static params for all slugs
-export async function generateStaticParams() {
-  const posts = await getAllPosts();
-  return posts.map((post) => ({slug: post.slug}));
-}
-
-export default async function BlogPost(
-  props: {params: {slug: string}} | Promise<{params: {slug: string}}>,
-) {
-  const {params} = await props;
-  const post = await getPost(params.slug);
-  const allPosts = await getAllPosts();
-
-  if (!post) notFound();
+  useEffect(() => {
+    (async () => {
+      const fetchedPost = await getBlogPostBySlug(slug);
+      setPost(fetchedPost);
+      const resAllPosts = await getAllBlogPosts(1, 1000).then((res) => res.posts);
+      setAllPosts(resAllPosts);
+    })();
+  }, [slug]);
 
   // Related posts logic
   let relatedPosts = allPosts
-    .filter((p) => p.slug !== params.slug)
+    .filter((p) => p.slug !== slug)
     .filter((p) => {
-      if (post.frontMatter.tags && p.tags) {
-        return p.tags.some((tag: string) => post.frontMatter.tags?.includes(tag));
+      if (post?.tags && p.tags) {
+        return p.tags.some((tag: string) => post.tags?.includes(tag));
       }
       return false;
     })
@@ -56,27 +46,52 @@ export default async function BlogPost(
 
   if (relatedPosts.length < 3) {
     const recentPosts = allPosts
-      .filter((p) => p.slug !== params.slug)
+      .filter((p) => p.slug !== slug)
       .filter((p) => !relatedPosts.some((rp) => rp.slug === p.slug))
       .slice(0, 3 - relatedPosts.length);
 
     relatedPosts = [...relatedPosts, ...recentPosts];
   }
 
-  const seriesInfo = useMemo(() => {
-    return slug ? getSeriesInfo(slug) : null;
-  }, [slug]);
+  const handleShare = async () => {
+    const url = window.location.href;
+    await navigator.clipboard.writeText(url);
+    setCopied(true);
+    setTimeout(() => setCopied(false), 2000);
+  };
+
+  if (!post) {
+    return (
+      <div className="min-h-screen flex flex-col bg-background">
+        <Header />
+        <main className="flex-1 flex items-center justify-center">
+          <div className="text-center animate-fade-in">
+            <h1 className="text-4xl font-bold text-foreground mb-4">Post Not Found</h1>
+            <p className="text-muted-foreground mb-6">
+              The blog post you are looking for does not exist.
+            </p>
+            <Button asChild>
+              <Link href="/blog">
+                <ArrowLeft className="h-4 w-4 mr-2" />
+                Back to Blog
+              </Link>
+            </Button>
+          </div>
+        </main>
+      </div>
+    );
+  }
 
   return (
     <div className="min-h-screen flex flex-col bg-background">
       <SEOHead
-        title={post.frontMatter.title}
-        description={post.frontMatter.description}
-        image={post.frontMatter.coverImage || undefined}
+        title={post.title}
+        description={post.description}
+        image={post.coverImage || undefined}
         type="article"
-        author={post.frontMatter.author}
-        publishedTime={post.frontMatter.created}
-        tags={post.frontMatter.tags}
+        author={post.author}
+        publishedTime={post.created}
+        tags={post.tags}
       />
       <ReadingProgress />
       <Header />
@@ -95,13 +110,13 @@ export default async function BlogPost(
           {/* Main Content */}
           <article className="flex-1 max-w-4xl animate-fade-in">
             {/* Series Badge */}
-            {seriesInfo && (
+            {/* {seriesInfo && (
               <div className="mb-4">
                 <Badge variant="outline" className="text-primary border-primary">
                   {seriesInfo.name} • Part {seriesInfo.currentIndex + 1} of {seriesInfo.total}
                 </Badge>
               </div>
-            )}
+            )} */}
 
             {/* Cover Image */}
             {post.coverImage && (
@@ -126,20 +141,20 @@ export default async function BlogPost(
               </div>
 
               <h1 className="text-3xl md:text-4xl lg:text-5xl font-bold text-foreground mb-6">
-                {post.frontMatter.title}
+                {post.title}
               </h1>
 
               <div className="flex flex-wrap items-center gap-6 text-muted-foreground border-b border-border pb-6">
                 <Link
-                  href={`/author/${encodeURIComponent(post.frontMatter.author)}`}
+                  href={`/author/${encodeURIComponent(post.author || "unknown")}`}
                   className="flex items-center gap-2 hover:text-primary transition-colors"
                 >
                   <User className="h-5 w-5" />
-                  {post.frontMatter.author}
+                  {post.author}
                 </Link>
                 <span className="flex items-center gap-2">
                   <Calendar className="h-5 w-5" />
-                  {new Date(post.frontMatter.created).toLocaleDateString("en-US", {
+                  {new Date(post.created).toLocaleDateString("en-US", {
                     month: "long",
                     day: "numeric",
                     year: "numeric",
@@ -147,7 +162,7 @@ export default async function BlogPost(
                 </span>
                 <span className="flex items-center gap-2">
                   <Clock className="h-5 w-5" />
-                  {post.frontMatter.readTime}
+                  {post.readTimeMinutes}
                 </span>
                 {/* <ViewCounter slug={post.slug} trackView /> */}
               </div>
@@ -181,7 +196,7 @@ export default async function BlogPost(
                       <Linkedin className="h-4 w-4" />
                     </a>
                   </Button>
-                  <BookmarkButton slug={post.slug} title={post.frontMatter.title} />
+                  <BookmarkButton slug={post.slug} title={post.title} />
                 </div>
 
                 {/* <CodeThemeSelector value={codeTheme} onChange={setCodeTheme} /> */}
@@ -189,47 +204,43 @@ export default async function BlogPost(
             </header>
 
             {/* Series Navigation (Top) */}
-            {seriesInfo && (
+            {/* {seriesInfo && (
               <div className="mb-8">
                 <SeriesNavigation series={seriesInfo} />
               </div>
-            )}
+            )} */}
 
             {/* Content */}
             <div className="bg-card rounded-xl shadow-lg p-6 md:p-10 border border-border">
-              <MarkdownRenderer
-                content={post.content}
-                isDarkMode={isDarkMode}
-                codeTheme={codeTheme}
-              />
+              <MarkdownRenderer content={post.contentHtml} isDarkMode={isDarkMode} />
             </div>
 
             {/* Series Navigation (Bottom) */}
-            {seriesInfo && (
+            {/* {seriesInfo && (
               <div className="mt-8">
                 <SeriesNavigation series={seriesInfo} />
               </div>
-            )}
+            )} */}
 
             {/* Newsletter */}
-            <div className="mt-8">
+            {/* <div className="mt-8">
               <NewsletterSubscribe />
-            </div>
+            </div> */}
 
             {/* Related Posts */}
-            <div className="bg-card rounded-xl shadow-lg p-6 md:p-10 mt-8 border border-border">
+            {/* <div className="bg-card rounded-xl shadow-lg p-6 md:p-10 mt-8 border border-border">
               <RelatedPosts currentSlug={post.slug} currentTags={post.tags} />
-            </div>
+            </div> */}
 
             {/* GitHub Comments Section */}
-            <div className="bg-card rounded-xl shadow-lg p-6 md:p-10 mt-8 border border-border">
+            {/* <div className="bg-card rounded-xl shadow-lg p-6 md:p-10 mt-8 border border-border">
               <GiscusComments postId={post.slug} postTitle={post.title} />
-            </div>
+            </div> */}
           </article>
 
           {/* Table of Contents Sidebar */}
           <aside className="hidden lg:block w-72 shrink-0">
-            <TableOfContents content={post.content} />
+            <TableOfContents content={post.contentHtml} />
           </aside>
         </div>
       </main>

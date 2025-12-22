@@ -38,10 +38,19 @@ export type BlogPostFrontMatter = {
   category: string;
   excerpt?: string;
   readTimeMinutes?: number;
+  coverImage: string;
 };
 
 export type BlogPostDetail = BlogPostFrontMatter & {
   author?: string;
   excerpt?: string;
+  series?: string;
   contentHtml: string;
 };
+
+export interface SeriesInfo {
+  name: string;
+  posts: BlogPostDetail[];
+  currentIndex: number;
+  total: number;
+}
