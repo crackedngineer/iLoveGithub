@@ -3,7 +3,7 @@
 import React from "react";
 import Link from "next/link";
 import {motion} from "framer-motion";
-import {FrontMatter} from "@/lib/mdx";
+import type {FrontMatter} from "@/lib/types";
 
 interface RecommendedPostsProps {
   posts: FrontMatter[];

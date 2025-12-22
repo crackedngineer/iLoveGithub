@@ -27,3 +27,21 @@ export interface GitHubRepo {
     html_url: string;
   };
 }
+
+export type BlogPostFrontMatter = {
+  title: string;
+  created: string;
+  description: string;
+  slug: string;
+  project: string;
+  tags: string[];
+  category: string;
+  excerpt?: string;
+  readTimeMinutes?: number;
+};
+
+export type BlogPostDetail = BlogPostFrontMatter & {
+  author?: string;
+  excerpt?: string;
+  contentHtml: string;
+};

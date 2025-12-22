@@ -21,14 +21,13 @@ import {
   SUBSTACK_NEWSLETTER_URL,
   GITHUB_REPO_URL,
   GITHUB_SUBMIT_TOOL_URL,
-  DEMO_VIDEO_URL,
   DefaultGithubRepo,
 } from "@/constants";
 import {RateLimitDisplay} from "./RateLimitDisplay";
 import {useAppLocation} from "./AppLocationProvider";
 import {useAuth} from "./AuthProvider";
 import type {Session} from "@supabase/supabase-js";
-import {sign} from "crypto";
+import {useRouter} from "next/navigation";
 
 export function UserDropdown({
   session,
@@ -101,6 +100,7 @@ const Header = () => {
   const [isDonationModalOpen, setIsDonationModalOpen] = useState(false);
   const {isInIndia} = useAppLocation();
   const {session, signOut, signInWithGitHub} = useAuth();
+  const router = useRouter();
 
   const status = session ? "authenticated" : "unauthenticated";
 
@@ -146,6 +146,15 @@ const Header = () => {
             onClick={() => window.open(SUBSTACK_NEWSLETTER_URL, "_blank")}
           >
             Join Newsletter
+          </Button>
+          <Button
+            variant="ghost"
+            size="sm"
+            onClick={() => {
+              router.push("/blog");
+            }}
+          >
+            Blogs
           </Button>
 
           {/* GitHub API Rate Limit Display */}
@@ -221,6 +230,17 @@ const Header = () => {
           >
             Join Newsletter
           </Button>
+
+          <Button
+            variant="ghost"
+            className="w-full justify-start text-github-gray dark:text-white/90 hover:text-github-blue dark:hover:text-white"
+            onClick={() => {
+              router.push("/blog");
+            }}
+          >
+            Blogs
+          </Button>
+
           <Button
             variant="ghost"
             className="w-full justify-start text-github-gray dark:text-white/90 hover:text-github-blue dark:hover:text-white"
