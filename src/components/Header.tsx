@@ -146,7 +146,7 @@ const Header = () => {
               router.push("/blog");
             }}
           >
-            Blogs
+            Blog
           </Button>
 
           {/* GitHub API Rate Limit Display */}
@@ -235,7 +235,7 @@ const Header = () => {
               router.push("/blog");
             }}
           >
-            Blogs
+            Blog
           </Button>
 
           <Button
