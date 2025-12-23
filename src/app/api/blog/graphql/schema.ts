@@ -1,4 +1,12 @@
 export const typeDefs = `
+  type RelatedPosts {
+    slug: String!
+    title: String!
+    tags: [String!]!
+    coverImage: String
+    excerpt: String
+  }
+
   type Blog {
     slug: String!
     title: String!
@@ -11,6 +19,7 @@ export const typeDefs = `
     category: String
     author: String
     series: String
+    related: [RelatedPosts!]!
   }
 
   type BlogListResponse {

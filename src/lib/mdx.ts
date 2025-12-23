@@ -1,43 +1,23 @@
 import type {BlogPostDetail} from "@/lib/types";
-import {fullRootDomain} from "./utils";
 import MiniSearch from "minisearch";
+import RelatedPosts from "../../public/blog.related.json";
+import BlogList from "../../public/blog.index.json";
+import BlogSearch from "../../public/blog.search.json";
 
 let miniSearch: MiniSearch | null = null;
 
-const BLOG_INDEX_URL = `${fullRootDomain}/blog.index.json`;
-const BLOG_SEARCH_URL = `${fullRootDomain}/blog.search.json`;
-
-export async function getBlogPosts(): Promise<BlogPostDetail[]> {
-  const res = await fetch(BLOG_INDEX_URL, {
-    next: {
-      revalidate: 60,
-      tags: ["blog"],
-    },
-  });
-
-  if (!res.ok) {
-    throw new Error("Failed to load blog index");
-  }
-
-  return res.json();
+export function getBlogPosts(): BlogPostDetail[] {
+  return BlogList as BlogPostDetail[];
 }
 
-export async function getBlogBySlug(slug: string) {
-  const posts = await getBlogPosts();
-  return posts.find((p) => p.slug === slug) ?? null;
+export function getBlogBySlug(slug: string) {
+  return BlogList.find((p) => p.slug === slug) ?? null;
 }
 
-export async function rankPosts(posts: BlogPostDetail[], query: string) {
+export function rankPosts(posts: BlogPostDetail[], query: string) {
   const q = query.toLowerCase();
   if (!miniSearch) {
-    const res = await fetch(BLOG_SEARCH_URL, {
-      next: {
-        revalidate: 3600,
-        tags: ["blog"],
-      },
-    });
-    const data = await res.json();
-    miniSearch = MiniSearch.loadJSON(JSON.stringify(data), {
+    miniSearch = MiniSearch.loadJSON(JSON.stringify(BlogSearch), {
       fields: ["title", "description", "tags", "body"],
       idField: "slug",
     });
@@ -48,4 +28,8 @@ export async function rankPosts(posts: BlogPostDetail[], query: string) {
   const postMap = new Map(posts.map((p) => [p.slug, p]));
 
   return results.map((r) => postMap.get(r.id)).filter(Boolean) as BlogPostDetail[];
+}
+
+export function getRelatedSlugs(slug: string, limit = 3): string[] {
+  return RelatedPosts[slug as keyof typeof RelatedPosts]?.slice(0, limit) ?? [];
 }

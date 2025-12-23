@@ -1,6 +1,7 @@
 import {unstable_cache} from "next/cache";
-import {getBlogPosts, rankPosts} from "@/lib/mdx";
-import {BlogPostDetail} from "@/lib/types";
+import {getBlogPosts, rankPosts, getRelatedSlugs} from "@/lib/mdx";
+import {BlogPostDetail, BlogRelatedPost} from "@/lib/types";
+import {get} from "http";
 
 const getCachedPosts = unstable_cache(async () => getBlogPosts(), ["all-blog-posts"], {
   revalidate: 60, // ISR: regenerate every 60s
@@ -39,7 +40,17 @@ export const resolvers = {
 
     blog: async (_: unknown, {slug}: {slug: string}) => {
       const posts = await getCachedPosts();
-      return posts.find((p) => p.slug === slug) || null;
+      const post = posts.find((p) => p.slug === slug);
+      if (!post) return null;
+
+      const related = getRelatedSlugs(slug)
+        .map((rs) => posts.find((p) => p.slug === rs))
+        .filter(Boolean) as BlogRelatedPost[];
+
+      return {
+        ...post,
+        related: related,
+      };
     },
   },
 };

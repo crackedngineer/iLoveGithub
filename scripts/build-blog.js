@@ -7,6 +7,7 @@ import MiniSearch from "minisearch";
 const POSTS_DIR = path.join(process.cwd(), "blog/posts");
 const OUT_INDEX_FILE = path.join(process.cwd(), "public/blog.index.json");
 const OUT_SEARCH_FILE = path.join(process.cwd(), "public/blog.search.json");
+const OUT_RELATED_FILE = path.join(process.cwd(), "public/blog.related.json");
 
 const files = fs.readdirSync(POSTS_DIR);
 
@@ -28,10 +29,10 @@ const posts = files.map((file) => {
     category: data.category,
     body: content,
     excerpt: data.excerpt || "",
-    readTimeMinutes: data.readTimeMinutes || null,
-    coverImage: data.coverImage || null,
-    author: data.author || null,
-    series: data.series || null,
+    readTimeMinutes: data?.readTimeMinutes,
+    coverImage: data?.coverImage,
+    author: data?.author,
+    series: data?.series,
 
   };
 });
@@ -68,3 +69,64 @@ fs.writeFileSync(
   JSON.stringify(search.toJSON())
 );
 console.log("✅ blog.search.json generated");
+
+const STOP_WORDS = new Set([
+  "the", "and", "for", "with", "this", "that", "from", "you",
+  "your", "are", "was", "were", "has", "have"
+]);
+
+function vectorize(text) {
+  const freq = {};
+
+  text
+    .toLowerCase()
+    .split(/\W+/)
+    .filter(w => w.length > 2 && !STOP_WORDS.has(w))
+    .forEach(w => {
+      freq[w] = (freq[w] || 0) + 1;
+    });
+
+  return freq;
+}
+
+function cosine(a, b) {
+  let dot = 0, magA = 0, magB = 0;
+  const keys = new Set([...Object.keys(a), ...Object.keys(b)]);
+
+  for (const k of keys) {
+    const x = a[k] || 0;
+    const y = b[k] || 0;
+    dot += x * y;
+    magA += x * x;
+    magB += y * y;
+  }
+
+  return dot && magA && magB
+    ? dot / (Math.sqrt(magA) * Math.sqrt(magB))
+    : 0;
+}
+
+const vectors = posts.map(p => ({
+  slug: p.slug,
+  vector: vectorize(
+    `${p.title} ${p.description ?? ""} ${p.tags?.join(" ") ?? ""}`
+  ),
+}));
+
+const related = {};
+
+for (const a of vectors) {
+  related[a.slug] = vectors
+    .filter(b => b.slug !== a.slug)
+    .map(b => ({
+      slug: b.slug,
+      score: cosine(a.vector, b.vector),
+    }))
+    .filter(r => r.score > 0.15)
+    .sort((x, y) => y.score - x.score)
+    .slice(0, 5)
+    .map(r => r.slug);
+}
+
+fs.writeFileSync(OUT_RELATED_FILE, JSON.stringify(related));
+console.log("✅ Related posts built");

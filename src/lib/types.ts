@@ -40,10 +40,19 @@ export type BlogPostFrontMatter = {
   coverImage: string;
 };
 
+export interface BlogRelatedPost {
+  slug: string;
+  title: string;
+  tags: string[];
+  excerpt?: string;
+  coverImage?: string;
+}
+
 export type BlogPostDetail = BlogPostFrontMatter & {
   author?: string;
   series?: string;
   body: string;
+  related: BlogRelatedPost[];
 };
 
 export interface SeriesInfo {

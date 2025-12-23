@@ -12,6 +12,7 @@ import Header from "@/components/Header";
 import ReadingProgress from "@/components/blog/ReadingProgress";
 import MarkdownRenderer from "@/components/blog/MarkdownRenderer";
 import TableOfContents from "@/components/blog/TableOfContents";
+import RelatedPosts from "@/components/blog/RelatedPosts";
 import {getAllBlogPosts, getBlogPostBySlug} from "@/services/blog";
 import {BlogPostDetail, BlogPostFrontMatter} from "@/lib/types";
 import {useTheme} from "next-themes";
@@ -228,9 +229,11 @@ export default function BlogPost() {
             </div> */}
 
             {/* Related Posts */}
-            {/* <div className="bg-card rounded-xl shadow-lg p-6 md:p-10 mt-8 border border-border">
-              <RelatedPosts currentSlug={post.slug} currentTags={post.tags} />
-            </div> */}
+            {post.related.length > 0 && (
+              <div className="bg-card rounded-xl shadow-lg p-6 md:p-10 mt-8 border border-border">
+                <RelatedPosts posts={post.related} />
+              </div>
+            )}
 
             {/* GitHub Comments Section */}
             {/* <div className="bg-card rounded-xl shadow-lg p-6 md:p-10 mt-8 border border-border">

@@ -51,6 +51,13 @@ const BLOG_QUERY = `
       created
       tags
       body
+      related {
+        slug
+        title
+        tags
+        excerpt
+        coverImage
+      }
     }
   }
 `;

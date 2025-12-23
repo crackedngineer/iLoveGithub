@@ -1,43 +1,20 @@
-import {useEffect, useState} from "react";
 import Link from "next/link";
-import {getAllBlogPosts} from "@/services/blog";
-import {BlogPostFrontMatter} from "@/lib/types";
 import {ArrowRight, Tag} from "lucide-react";
 import {Badge} from "@/components/ui/badge";
+import {BlogRelatedPost} from "@/lib/types";
 
 interface RelatedPostsProps {
-  currentSlug: string;
-  currentTags: string[];
-  maxPosts?: number;
+  posts: BlogRelatedPost[];
 }
 
-const RelatedPosts = ({currentSlug, currentTags, maxPosts = 3}: RelatedPostsProps) => {
-  const [relatedPosts, setRelatedPosts] = useState<
-    Array<{post: BlogPostFrontMatter; score: number; matchingTags: string[]}>
-  >([]);
+const RelatedPosts = ({posts}: RelatedPostsProps) => {
+  if (posts.length === 0) return null;
 
-  useEffect(() => {
-    (async () => {
-      const allPosts = await getAllBlogPosts(1, 1000);
-
-      // Score posts by matching tags
-      const scoredPosts = allPosts.posts
-        .filter((post) => post.slug !== currentSlug)
-        .map((post) => {
-          const matchingTags = post.tags.filter((tag) =>
-            currentTags.some((currentTag) => currentTag.toLowerCase() === tag.toLowerCase()),
-          );
-          return {post, score: matchingTags.length, matchingTags};
-        })
-        .filter(({score}) => score > 0)
-        .sort((a, b) => b.score - a.score)
-        .slice(0, maxPosts);
-
-      setRelatedPosts(scoredPosts);
-    })();
-  }, [currentSlug, currentTags, maxPosts]);
-
-  if (relatedPosts.length === 0) return null;
+  // add matching tags to each post
+  const postsWithTags = posts.map((p) => ({
+    ...p,
+    matchingTags: p.tags,
+  }));
 
   return (
     <div className="mt-12 pt-8 border-t border-gray-200 dark:border-gray-700">
@@ -47,17 +24,17 @@ const RelatedPosts = ({currentSlug, currentTags, maxPosts = 3}: RelatedPostsProp
       </h3>
 
       <div className="grid gap-4 md:grid-cols-3">
-        {relatedPosts.map(({post, matchingTags}) => (
+        {postsWithTags.map(({slug, title, coverImage, excerpt, matchingTags}) => (
           <Link
-            key={post.slug}
-            href={`/blog/${post.slug}`}
+            key={slug}
+            href={`/blog/${slug}`}
             className="group block bg-gray-50 dark:bg-gray-800 rounded-xl p-4 hover:bg-gray-100 dark:hover:bg-gray-700 transition-all duration-300 hover:shadow-lg"
           >
-            {post.coverImage && (
+            {coverImage && (
               <div className="relative h-32 rounded-lg overflow-hidden mb-3">
                 <img
-                  src={post.coverImage}
-                  alt={post.title}
+                  src={coverImage}
+                  alt={title}
                   className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300"
                 />
               </div>
@@ -76,12 +53,10 @@ const RelatedPosts = ({currentSlug, currentTags, maxPosts = 3}: RelatedPostsProp
             </div>
 
             <h4 className="font-semibold text-github-gray dark:text-white group-hover:text-github-blue transition-colors line-clamp-2 mb-2">
-              {post.title}
+              {title}
             </h4>
 
-            <p className="text-sm text-gray-600 dark:text-gray-400 line-clamp-2 mb-3">
-              {post.excerpt}
-            </p>
+            <p className="text-sm text-gray-600 dark:text-gray-400 line-clamp-2 mb-3">{excerpt}</p>
 
             <span className="inline-flex items-center gap-1 text-sm text-github-blue font-medium">
               Read more
