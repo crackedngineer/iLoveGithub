@@ -33,7 +33,6 @@ export type BlogPostFrontMatter = {
   created: string;
   description: string;
   slug: string;
-  project: string;
   tags: string[];
   category: string;
   excerpt?: string;
@@ -43,9 +42,8 @@ export type BlogPostFrontMatter = {
 
 export type BlogPostDetail = BlogPostFrontMatter & {
   author?: string;
-  excerpt?: string;
   series?: string;
-  contentHtml: string;
+  body: string;
 };
 
 export interface SeriesInfo {

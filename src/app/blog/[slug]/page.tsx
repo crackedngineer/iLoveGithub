@@ -212,7 +212,7 @@ export default function BlogPost() {
 
             {/* Content */}
             <div className="bg-card rounded-xl shadow-lg p-6 md:p-10 border border-border">
-              <MarkdownRenderer content={post.contentHtml} isDarkMode={isDarkMode} />
+              <MarkdownRenderer content={post.body} isDarkMode={isDarkMode} />
             </div>
 
             {/* Series Navigation (Bottom) */}
@@ -240,7 +240,7 @@ export default function BlogPost() {
 
           {/* Table of Contents Sidebar */}
           <aside className="hidden lg:block w-72 shrink-0">
-            <TableOfContents content={post.contentHtml} />
+            <TableOfContents content={post.body} />
           </aside>
         </div>
       </main>
