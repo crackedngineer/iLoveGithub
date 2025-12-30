@@ -3,6 +3,7 @@
   "version": "0.21.7",
   "private": true,
   "homepage": "https://ilovegithub.vercel.app",
+  "type": "module",
   "scripts": {
     "format": "prettier --write .",
     "prepare": "husky",
