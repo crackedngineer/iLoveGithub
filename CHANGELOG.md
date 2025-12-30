@@ -4,6 +4,14 @@ All notable changes to this project will be documented in this file.
 
 ---
 
+## [0.21.9](https://github.com/crackedngineer/iLoveGithub/compare/v0.21.8...v0.21.9) (2025-12-30)
+
+
+### Bug Fixes
+
+* upgrade @supabase/ssr from 0.7.0 to 0.8.0 ([77c4880](https://github.com/crackedngineer/iLoveGithub/commit/77c48802c7ddea710f04c22c0664a0945a77f624))
+* upgrade lucide-react from 0.555.0 to 0.556.0 ([97512b4](https://github.com/crackedngineer/iLoveGithub/commit/97512b4775e7863e96efc0a2ab1b7d5e02b3892c))
+
 ## [0.21.8](https://github.com/crackedngineer/iLoveGithub/compare/v0.21.7...v0.21.8) (2025-12-20)
 
 
