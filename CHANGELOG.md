@@ -4,6 +4,14 @@ All notable changes to this project will be documented in this file.
 
 ---
 
+## [0.21.10](https://github.com/crackedngineer/iLoveGithub/compare/v0.21.9...v0.21.10) (2026-01-06)
+
+
+### Bug Fixes
+
+* upgrade react from 19.2.1 to 19.2.3 ([f2efa91](https://github.com/crackedngineer/iLoveGithub/commit/f2efa91535b2a4e0ebb66c96d71ac4a84a93dcd3))
+* upgrade react-dom from 19.2.1 to 19.2.3 ([e082b77](https://github.com/crackedngineer/iLoveGithub/commit/e082b772dc61c1fa7d87e612e3fcc7ae034d76c8))
+
 ## [0.21.9](https://github.com/crackedngineer/iLoveGithub/compare/v0.21.8...v0.21.9) (2025-12-30)
 
 
