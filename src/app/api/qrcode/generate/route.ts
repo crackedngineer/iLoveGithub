@@ -1,7 +1,22 @@
 import {NextRequest, NextResponse} from "next/server";
-import {redis} from "@/lib/redis";
+import axios from "axios";
 import crypto from "crypto";
 import {put} from "@vercel/blob";
+import {JSDOM} from "jsdom";
+import nodeCanvas from "canvas";
+import QRCodeStyling, {Options} from "qr-code-styling";
+import {redis} from "@/lib/redis";
+import QrCodeStylingOption from "./qr-code-styling.option.json";
+
+async function getImageBuffer(imageUrl: string): Promise<string> {
+  const response = await axios.get(imageUrl, {
+    responseType: "arraybuffer",
+  });
+  return (
+    `data:${response.headers["content-type"]};base64,` +
+    Buffer.from(response.data).toString("base64")
+  );
+}
 
 export async function POST(req: NextRequest) {
   try {
@@ -26,27 +41,21 @@ export async function POST(req: NextRequest) {
     }
 
     // Generate QR code from QRCode Monkey
-    const qrResponse = await fetch("https://api.qrcode-monkey.com/qr/custom", {
-      method: "POST",
-      headers: {"Content-Type": "application/json"},
-      body: JSON.stringify({
-        data,
-        config: {
-          body: "circle",
-          logo: image,
-        },
-        size: 300,
-        download: false,
-        file: "png",
-      }),
+    const qrCodeImage = new QRCodeStyling({
+      ...(QrCodeStylingOption as Options),
+      type: "svg",
+      jsdom: JSDOM,
+      nodeCanvas,
+      image: await getImageBuffer(image),
     });
 
-    if (!qrResponse.ok) throw new Error("QRCode Monkey API failed");
-
-    const buffer = await qrResponse.arrayBuffer();
-    const blob = await put(`images/qrcode/qr-${hash}.png`, buffer, {
+    const qrBuffer = await qrCodeImage.getRawData("svg");
+    if (!qrBuffer) {
+      return NextResponse.json({error: "Failed to generate QR code buffer"}, {status: 500});
+    }
+    const blob = await put(`images/qrcode/qr-${hash}.svg`, qrBuffer, {
       access: "public",
-      contentType: "image/png",
+      contentType: "image/svg+xml",
       allowOverwrite: true,
     });
 
