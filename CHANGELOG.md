@@ -4,6 +4,13 @@ All notable changes to this project will be documented in this file.
 
 ---
 
+## [0.23.2](https://github.com/crackedngineer/iLoveGithub/compare/v0.23.1...v0.23.2) (2026-01-10)
+
+
+### Bug Fixes
+
+* update uptime status and README badge URL ([92912f4](https://github.com/crackedngineer/iLoveGithub/commit/92912f48edb317f9c6093ba2a562a6f6db4cb10d))
+
 ## [0.23.1](https://github.com/crackedngineer/iLoveGithub/compare/v0.23.0...v0.23.1) (2026-01-10)
 
 
