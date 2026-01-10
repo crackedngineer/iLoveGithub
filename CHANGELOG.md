@@ -4,6 +4,13 @@ All notable changes to this project will be documented in this file.
 
 ---
 
+## [0.23.0](https://github.com/crackedngineer/iLoveGithub/compare/v0.22.0...v0.23.0) (2026-01-10)
+
+
+### Features
+
+* implement health monitoring and circuit breaker for critical se… ([2b39681](https://github.com/crackedngineer/iLoveGithub/commit/2b39681c8510f5c1e963d689ac65b64d81da6b3f))
+
 ## [0.22.0](https://github.com/crackedngineer/iLoveGithub/compare/v0.21.10...v0.22.0) (2026-01-08)
 
 
