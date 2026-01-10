@@ -4,6 +4,14 @@ All notable changes to this project will be documented in this file.
 
 ---
 
+## [0.22.0](https://github.com/crackedngineer/iLoveGithub/compare/v0.21.10...v0.22.0) (2026-01-08)
+
+
+### Features
+
+* **qrcode:** integrate qr-code-styling for SVG QR code generation ([21adb64](https://github.com/crackedngineer/iLoveGithub/commit/21adb641c1a68dfeeaaaf042917c3511c58e1eb2))
+* **qrcode:** integrate qr-code-styling for SVG QR code generation ([b220af9](https://github.com/crackedngineer/iLoveGithub/commit/b220af92ed26725827c724370ab1a0f897605b89))
+
 ## [0.21.10](https://github.com/crackedngineer/iLoveGithub/compare/v0.21.9...v0.21.10) (2026-01-06)
 
 
