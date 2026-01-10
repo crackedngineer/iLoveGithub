@@ -29,7 +29,7 @@ jobs:
           TS=$(date -u +"%Y-%m-%d %H:%M UTC")
 
           STATUS="UP"
-          COLOR="brightgreen"
+          COLOR="green"
 
           if [[ "$READYZ" != "200" || "$HEALTH" != "200" ]]; then
             STATUS="DOWN"
@@ -94,10 +94,15 @@ jobs:
           _Updated automatically every 5 minutes via GitHub Actions._
           EOF
 
+      - name: Bust SVG cache in README
+        run: |
+          TS=$(date +%s)
+          sed -i "s/v=[0-9]*/v=$TS/g" README.md
+
       - name: Commit changes
         run: |
           git config user.name "github-actions[bot]"
           git config user.email "github-actions[bot]@users.noreply.github.com"
-          git add status/
+          git add status/ README.md
           git commit -m "chore: update uptime status" || exit 0
           git push
