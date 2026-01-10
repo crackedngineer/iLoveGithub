@@ -23,8 +23,8 @@ jobs:
       - name: Check endpoints
         id: check
         run: |
-          READYZ=$(curl -s -o /dev/null -w "%{http_code}" ${{ env.BASE_URL }}/readyz)
-          HEALTH=$(curl -s -o /dev/null -w "%{http_code}" ${{ env.BASE_URL }}/health)
+          READYZ=$(curl -s -o /dev/null -w "%{http_code}" ${{ env.BASE_URL }}/api/readyz)
+          HEALTH=$(curl -s -o /dev/null -w "%{http_code}" ${{ env.BASE_URL }}/api/health)
 
           TS=$(date -u +"%Y-%m-%d %H:%M UTC")
 
