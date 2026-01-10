@@ -1,6 +1,6 @@
 {
-  "status": "DOWN",
+  "status": "UP",
   "readyz": "",
   "health": "",
-  "checked_at": "2026-01-10 02:48 UTC"
+  "checked_at": "2026-01-10 02:59 UTC"
 }

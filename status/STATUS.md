@@ -1,7 +1,7 @@
 # 🩺 Service Status
 
-**Current Status:** `DOWN`  
-**Last Checked:** 2026-01-10 02:48 UTC
+**Current Status:** `UP`  
+**Last Checked:** 2026-01-10 02:59 UTC
 
 ## Endpoints
 | Endpoint | Status |
