@@ -1,0 +1,108 @@
+name: Uptime Monitor
+
+on:
+  schedule:
+    - cron: "*/5 * * * *"
+  workflow_dispatch:
+
+permissions:
+  contents: write
+  pull-requests: write
+
+env: 
+    BASE_URL: "https://ilovegithub.vercel.app"
+
+jobs:
+  uptime:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout repo
+        uses: actions/checkout@v4
+
+      - name: Check endpoints
+        id: check
+        run: |
+          READYZ=$(curl -s -o /dev/null -w "%{http_code}" ${{ env.BASE_URL }}/api/readyz)
+          HEALTH=$(curl -s -o /dev/null -w "%{http_code}" ${{ env.BASE_URL }}/api/health)
+
+          TS=$(date -u +"%Y-%m-%d %H:%M UTC")
+
+          STATUS="UP"
+          COLOR="green"
+
+          if [[ "$READYZ" != "200" || "$HEALTH" != "200" ]]; then
+            STATUS="DOWN"
+            COLOR="red"
+          fi
+
+          echo "status=$STATUS" >> $GITHUB_OUTPUT
+          echo "color=$COLOR" >> $GITHUB_OUTPUT
+          echo "ts=$TS" >> $GITHUB_OUTPUT
+
+      - name: Generate status.json
+        run: |
+          cat > status/status.json <<EOF
+          {
+            "status": "${{ steps.check.outputs.status }}",
+            "readyz": "${READYZ}",
+            "health": "${HEALTH}",
+            "checked_at": "${{ steps.check.outputs.ts }}"
+          }
+          EOF
+
+      - name: Generate SVG badge
+        run: |
+          cat > status/badge.svg <<EOF
+          <svg xmlns="http://www.w3.org/2000/svg" width="120" height="20">
+            <linearGradient id="b" x2="0" y2="100%">
+              <stop offset="0" stop-color="#bbb" stop-opacity=".1"/>
+              <stop offset="1" stop-opacity=".1"/>
+            </linearGradient>
+            <mask id="a">
+              <rect width="120" height="20" rx="3" fill="#fff"/>
+            </mask>
+            <g mask="url(#a)">
+              <rect width="70" height="20" fill="#555"/>
+              <rect x="70" width="50" height="20" fill="${{ steps.check.outputs.color }}"/>
+              <rect width="120" height="20" fill="url(#b)"/>
+            </g>
+            <g fill="#fff" text-anchor="middle"
+               font-family="Verdana,Geneva,DejaVu Sans,sans-serif"
+               font-size="11">
+              <text x="35" y="15">status</text>
+              <text x="95" y="15">${{ steps.check.outputs.status }}</text>
+            </g>
+          </svg>
+          EOF
+
+      - name: Generate STATUS.md
+        run: |
+          cat > status/STATUS.md <<EOF
+          # 🩺 Service Status
+
+          **Current Status:** \`${{ steps.check.outputs.status }}\`  
+          **Last Checked:** ${{ steps.check.outputs.ts }}
+
+          ## Endpoints
+          | Endpoint | Status |
+          |---------|--------|
+          | /readyz | ${READYZ} |
+          | /health | ${HEALTH} |
+
+          ---
+          _Updated automatically every 5 minutes via GitHub Actions._
+          EOF
+
+      - name: Bust SVG cache in README
+        run: |
+          TS=$(date +%s)
+          sed -i "s/v=[0-9]*/v=$TS/g" README.md
+
+      - name: Commit changes
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "github-actions[bot]@users.noreply.github.com"
+          git add status/ README.md
+          git commit -m "chore: update uptime status" || exit 0
+          git push

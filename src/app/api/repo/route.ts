@@ -1,6 +1,7 @@
 import {NextRequest, NextResponse} from "next/server";
 import axios from "axios";
 import {redis} from "@/lib/redis";
+import {redisCircuit} from "@/lib/circuit-breaker";
 
 export async function GET(req: NextRequest) {
   const {searchParams} = new URL(req.url);
@@ -13,7 +14,7 @@ export async function GET(req: NextRequest) {
   }
 
   const cacheKey = `github:repo:${owner}/${repo}`;
-  const cachedDataStr = await redis.get(cacheKey);
+  const cachedDataStr = await redisCircuit.execute(async () => await redis.get(cacheKey));
 
   if (cachedDataStr) {
     return NextResponse.json(cachedDataStr);
@@ -44,10 +45,21 @@ export async function GET(req: NextRequest) {
     };
 
     // Cache the data with TTL of 1 hour
-    await redis.set(cacheKey, data, {ex: 3600});
+    await redisCircuit.execute(async () => await redis.set(cacheKey, data, {ex: 3600}));
 
     return NextResponse.json(data);
   } catch (error: any) {
+    // Check if it's a circuit breaker error
+    if (error instanceof Error && error.message.includes("Circuit breaker OPEN")) {
+      return NextResponse.json(
+        {
+          error: "Service Temporarily Unavailable",
+          message: "Database service is temporarily unavailable. Please try again later.",
+        },
+        {status: 503},
+      );
+    }
+
     const status = error?.response?.status;
     const rateLimitRemaining = error?.response?.headers?.["x-ratelimit-remaining"];
 
