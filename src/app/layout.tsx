@@ -12,6 +12,8 @@ import AuthGuard from "@/components/AuthGuard";
 import DemoVideoProvider from "@/components/DemoVideoProvider";
 import AppVersionSync from "@/components/AppVersionSync";
 import {AppLocationProvider} from "@/components/AppLocationProvider";
+import {ThemeProvider} from "next-themes";
+import RouteLoader from "@/components/RouteLoader";
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -119,16 +121,19 @@ export default function RootLayout({
         <GoogleAnalytics measurementId={process.env.NEXT_PUBLIC_GA_MEASUREMENT_ID} />
         <SpeedInsights />
         <AppVersionSync />
+        <RouteLoader />
 
-        <DemoVideoProvider>
-          <AppLocationProvider>
-            <AuthProvider>
-              <ApiLimitProvider>
-                <AuthGuard>{children}</AuthGuard>
-              </ApiLimitProvider>
-            </AuthProvider>
-          </AppLocationProvider>
-        </DemoVideoProvider>
+        <ThemeProvider attribute="class" enableSystem={true} defaultTheme="light">
+          <DemoVideoProvider>
+            <AppLocationProvider>
+              <AuthProvider>
+                <ApiLimitProvider>
+                  <AuthGuard>{children}</AuthGuard>
+                </ApiLimitProvider>
+              </AuthProvider>
+            </AppLocationProvider>
+          </DemoVideoProvider>
+        </ThemeProvider>
 
         {/* Add the AdBanner component at the end of body to ensure it's at the bottom */}
         {/* <AdBanner adSlot="8130644563" /> */}

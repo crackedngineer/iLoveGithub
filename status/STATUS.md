@@ -4,10 +4,12 @@
 **Last Checked:** 2026-01-10 04:51 UTC
 
 ## Endpoints
+
 | Endpoint | Status |
-|---------|--------|
-| /readyz |  |
-| /health |  |
+| -------- | ------ |
+| /readyz  |        |
+| /health  |        |
 
 ---
+
 _Updated automatically every 5 minutes via GitHub Actions._
