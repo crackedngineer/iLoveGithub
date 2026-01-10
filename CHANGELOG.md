@@ -4,6 +4,13 @@ All notable changes to this project will be documented in this file.
 
 ---
 
+## [0.23.1](https://github.com/crackedngineer/iLoveGithub/compare/v0.23.0...v0.23.1) (2026-01-10)
+
+
+### Bug Fixes
+
+* added status empty folder ([75554a8](https://github.com/crackedngineer/iLoveGithub/commit/75554a89b84d0dafd5cdc94aab226ccc4a2e024f))
+
 ## [0.23.0](https://github.com/crackedngineer/iLoveGithub/compare/v0.22.0...v0.23.0) (2026-01-10)
 
 
