@@ -36,7 +36,7 @@
     <img alt="GitHub Pull Requests" src="https://img.shields.io/github/issues-pr/crackedngineer/iLoveGithub" />
     <img alt="Github License" src="https://img.shields.io/github/license/crackedngineer/iLoveGithub" />
     <a href="./status/STATUS.md">
-      <img src="https://raw.githubusercontent.com/crackedngineer/iLoveGithub/master/status/badge.svg?v=1768157985" alt="Uptime Status" />
+      <img src="https://raw.githubusercontent.com/crackedngineer/iLoveGithub/master/status/badge.svg?v=1768159476" alt="Uptime Status" />
     </a>
 
 </p>
