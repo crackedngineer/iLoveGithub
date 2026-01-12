@@ -4,6 +4,14 @@ All notable changes to this project will be documented in this file.
 
 ---
 
+## [0.23.3](https://github.com/crackedngineer/iLoveGithub/compare/v0.23.2...v0.23.3) (2026-01-12)
+
+
+### Bug Fixes
+
+* update uptime status and improve badge generation iusing shield.io ([449bc17](https://github.com/crackedngineer/iLoveGithub/commit/449bc17b7eb9dc5405ee61e7aa25c8f75329316e))
+* update uptime status and improve badge generation iusing shield.io ([c4ce6ea](https://github.com/crackedngineer/iLoveGithub/commit/c4ce6eaddd193fcb3bc63dafef087b0a2f2188d6))
+
 ## [0.23.2](https://github.com/crackedngineer/iLoveGithub/compare/v0.23.1...v0.23.2) (2026-01-10)
 
 
