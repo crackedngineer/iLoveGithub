@@ -10,11 +10,11 @@ export const Introduction = () => {
       src: "https://peerlist.io/api/v1/projects/embed/PRJH8OEJ9OJ8E88PJ3R66977NBDAOK?showUpvote=true&theme=light",
       alt: "iLoveGithub Peerlist Badge",
     },
-    {
-      href: "https://scoutforge.net/reviews/ilovegithub/",
-      src: "https://scoutforge.net/wp-content/themes/wp-theme/assets/img/badges/badge-light.webp",
-      alt: "Trusted and Reviewed by Scout Forge Badge",
-    },
+    // {
+    //   href: "https://scoutforge.net/reviews/ilovegithub/",
+    //   src: "https://scoutforge.net/wp-content/themes/wp-theme/assets/img/badges/badge-light.webp",
+    //   alt: "Trusted and Reviewed by Scout Forge Badge",
+    // },
   ];
 
   return (
