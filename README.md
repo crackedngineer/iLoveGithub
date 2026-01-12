@@ -35,8 +35,8 @@
     <img alt="Repo Size" src="https://img.shields.io/github/repo-size/crackedngineer/iLoveGithub" />
     <img alt="GitHub Pull Requests" src="https://img.shields.io/github/issues-pr/crackedngineer/iLoveGithub" />
     <img alt="Github License" src="https://img.shields.io/github/license/crackedngineer/iLoveGithub" />
-    <a href="./status/STATUS.md">
-      <img src="https://raw.githubusercontent.com/crackedngineer/iLoveGithub/master/status/badge.svg?v=1768187834" alt="Uptime Status" />
+    <a href="https://raw.githubusercontent.com/crackedngineer/iLoveGithub/status/status/STATUS.md">
+      <img src="https://img.shields.io/endpoint?url=https://raw.githubusercontent.com/crackedngineer/iLoveGithub/status/status/shields.json" alt="Uptime Status" />
     </a>
 
 </p>
