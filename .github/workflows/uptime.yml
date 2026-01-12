@@ -9,8 +9,8 @@ permissions:
   contents: write
   pull-requests: write
 
-env: 
-    BASE_URL: "https://ilovegithub.vercel.app"
+env:
+  BASE_URL: "https://ilovegithub.vercel.app"
 
 jobs:
   uptime:
@@ -40,6 +40,15 @@ jobs:
           echo "color=$COLOR" >> $GITHUB_OUTPUT
           echo "ts=$TS" >> $GITHUB_OUTPUT
 
+        # -----------------------------
+      # 2. Create EMPTY orphan branch
+      # -----------------------------
+      - name: Create clean status branch
+        run: |
+          git checkout --orphan status
+          git rm -rf . || true
+          mkdir -p status
+
       - name: Generate status.json
         run: |
           cat > status/status.json <<EOF
@@ -51,29 +60,22 @@ jobs:
           }
           EOF
 
-      - name: Generate SVG badge
+      - name: Generate shields.json
         run: |
-          cat > status/badge.svg <<EOF
-          <svg xmlns="http://www.w3.org/2000/svg" width="120" height="20">
-            <linearGradient id="b" x2="0" y2="100%">
-              <stop offset="0" stop-color="#bbb" stop-opacity=".1"/>
-              <stop offset="1" stop-opacity=".1"/>
-            </linearGradient>
-            <mask id="a">
-              <rect width="120" height="20" rx="3" fill="#fff"/>
-            </mask>
-            <g mask="url(#a)">
-              <rect width="70" height="20" fill="#555"/>
-              <rect x="70" width="50" height="20" fill="${{ steps.check.outputs.color }}"/>
-              <rect width="120" height="20" fill="url(#b)"/>
-            </g>
-            <g fill="#fff" text-anchor="middle"
-               font-family="Verdana,Geneva,DejaVu Sans,sans-serif"
-               font-size="11">
-              <text x="35" y="15">status</text>
-              <text x="95" y="15">${{ steps.check.outputs.status }}</text>
-            </g>
-          </svg>
+          COLOR="brightgreen"
+          MESSAGE="${{ steps.check.outputs.status }}"
+
+          if [ "$MESSAGE" != "UP" ]; then
+            COLOR="red"
+          fi
+
+          cat > status/shields.json <<EOF
+          {
+            "schemaVersion": 1,
+            "label": "status",
+            "message": "$MESSAGE",
+            "color": "$COLOR"
+          }
           EOF
 
       - name: Generate STATUS.md
@@ -94,15 +96,12 @@ jobs:
           _Updated automatically every 10 minutes via GitHub Actions._
           EOF
 
-      - name: Bust SVG cache in README
-        run: |
-          TS=$(date +%s)
-          sed -i "s/v=[0-9]*/v=$TS/g" README.md
-
-      - name: Commit changes
+      - name: Commit changes to status branch
         run: |
           git config user.name "github-actions[bot]"
           git config user.email "github-actions[bot]@users.noreply.github.com"
-          git add status/ README.md
-          git commit -m "chore: update uptime status" || exit 0
-          git push
+          git add status/
+          git commit -m "chore(status): update uptime (${{
+            steps.check.outputs.status
+          }})" || exit 0
+          git push origin status --force
