@@ -4,6 +4,14 @@ All notable changes to this project will be documented in this file.
 
 ---
 
+## [0.23.4](https://github.com/crackedngineer/iLoveGithub/compare/v0.23.3...v0.23.4) (2026-01-13)
+
+
+### Bug Fixes
+
+* enable force check for readiness probe in uptime workflow ([adb0664](https://github.com/crackedngineer/iLoveGithub/commit/adb066450bf289c9c544dd07698a2ed5748c9c5f))
+* enable force check for readiness probe in uptime workflow ([20fa128](https://github.com/crackedngineer/iLoveGithub/commit/20fa1285890da1c3b2032e35228daabf1f75fd94))
+
 ## [0.23.3](https://github.com/crackedngineer/iLoveGithub/compare/v0.23.2...v0.23.3) (2026-01-12)
 
 
