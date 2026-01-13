@@ -1,5 +1,5 @@
 // app/api/readyz/route.ts
-import {NextResponse} from "next/server";
+import {NextRequest, NextResponse} from "next/server";
 import {healthMonitor} from "@/lib/health-monitor";
 import {supabaseCircuit, redisCircuit} from "@/lib/circuit-breaker";
 
@@ -8,7 +8,12 @@ import {supabaseCircuit, redisCircuit} from "@/lib/circuit-breaker";
  * This checks all critical dependencies (DB, Redis, etc.)
  * Used by load balancers to determine if traffic should be routed to this instance
  */
-export async function GET() {
+export async function GET(req: NextRequest) {
+  // parameter to force check
+  const forceCheck = req.nextUrl.searchParams.get("force_check") === "true";
+  if (forceCheck) {
+    await healthMonitor.forceCheck();
+  }
   const status = healthMonitor.getStatus();
 
   const isInitializing =
