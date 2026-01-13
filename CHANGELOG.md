@@ -22,166 +22,146 @@ All notable changes to this project will be documented in this file.
 
 ## [0.23.2](https://github.com/crackedngineer/iLoveGithub/compare/v0.23.1...v0.23.2) (2026-01-10)
 
-
 ### Bug Fixes
 
-* update uptime status and README badge URL ([92912f4](https://github.com/crackedngineer/iLoveGithub/commit/92912f48edb317f9c6093ba2a562a6f6db4cb10d))
+- update uptime status and README badge URL ([92912f4](https://github.com/crackedngineer/iLoveGithub/commit/92912f48edb317f9c6093ba2a562a6f6db4cb10d))
 
 ## [0.23.1](https://github.com/crackedngineer/iLoveGithub/compare/v0.23.0...v0.23.1) (2026-01-10)
 
-
 ### Bug Fixes
 
-* added status empty folder ([75554a8](https://github.com/crackedngineer/iLoveGithub/commit/75554a89b84d0dafd5cdc94aab226ccc4a2e024f))
+- added status empty folder ([75554a8](https://github.com/crackedngineer/iLoveGithub/commit/75554a89b84d0dafd5cdc94aab226ccc4a2e024f))
 
 ## [0.23.0](https://github.com/crackedngineer/iLoveGithub/compare/v0.22.0...v0.23.0) (2026-01-10)
 
-
 ### Features
 
-* implement health monitoring and circuit breaker for critical se… ([2b39681](https://github.com/crackedngineer/iLoveGithub/commit/2b39681c8510f5c1e963d689ac65b64d81da6b3f))
+- implement health monitoring and circuit breaker for critical se… ([2b39681](https://github.com/crackedngineer/iLoveGithub/commit/2b39681c8510f5c1e963d689ac65b64d81da6b3f))
 
 ## [0.22.0](https://github.com/crackedngineer/iLoveGithub/compare/v0.21.10...v0.22.0) (2026-01-08)
 
-
 ### Features
 
-* **qrcode:** integrate qr-code-styling for SVG QR code generation ([21adb64](https://github.com/crackedngineer/iLoveGithub/commit/21adb641c1a68dfeeaaaf042917c3511c58e1eb2))
-* **qrcode:** integrate qr-code-styling for SVG QR code generation ([b220af9](https://github.com/crackedngineer/iLoveGithub/commit/b220af92ed26725827c724370ab1a0f897605b89))
+- **qrcode:** integrate qr-code-styling for SVG QR code generation ([21adb64](https://github.com/crackedngineer/iLoveGithub/commit/21adb641c1a68dfeeaaaf042917c3511c58e1eb2))
+- **qrcode:** integrate qr-code-styling for SVG QR code generation ([b220af9](https://github.com/crackedngineer/iLoveGithub/commit/b220af92ed26725827c724370ab1a0f897605b89))
 
 ## [0.21.10](https://github.com/crackedngineer/iLoveGithub/compare/v0.21.9...v0.21.10) (2026-01-06)
 
-
 ### Bug Fixes
 
-* upgrade react from 19.2.1 to 19.2.3 ([f2efa91](https://github.com/crackedngineer/iLoveGithub/commit/f2efa91535b2a4e0ebb66c96d71ac4a84a93dcd3))
-* upgrade react-dom from 19.2.1 to 19.2.3 ([e082b77](https://github.com/crackedngineer/iLoveGithub/commit/e082b772dc61c1fa7d87e612e3fcc7ae034d76c8))
+- upgrade react from 19.2.1 to 19.2.3 ([f2efa91](https://github.com/crackedngineer/iLoveGithub/commit/f2efa91535b2a4e0ebb66c96d71ac4a84a93dcd3))
+- upgrade react-dom from 19.2.1 to 19.2.3 ([e082b77](https://github.com/crackedngineer/iLoveGithub/commit/e082b772dc61c1fa7d87e612e3fcc7ae034d76c8))
 
 ## [0.21.9](https://github.com/crackedngineer/iLoveGithub/compare/v0.21.8...v0.21.9) (2025-12-30)
 
-
 ### Bug Fixes
 
-* upgrade @supabase/ssr from 0.7.0 to 0.8.0 ([77c4880](https://github.com/crackedngineer/iLoveGithub/commit/77c48802c7ddea710f04c22c0664a0945a77f624))
-* upgrade lucide-react from 0.555.0 to 0.556.0 ([97512b4](https://github.com/crackedngineer/iLoveGithub/commit/97512b4775e7863e96efc0a2ab1b7d5e02b3892c))
+- upgrade @supabase/ssr from 0.7.0 to 0.8.0 ([77c4880](https://github.com/crackedngineer/iLoveGithub/commit/77c48802c7ddea710f04c22c0664a0945a77f624))
+- upgrade lucide-react from 0.555.0 to 0.556.0 ([97512b4](https://github.com/crackedngineer/iLoveGithub/commit/97512b4775e7863e96efc0a2ab1b7d5e02b3892c))
 
 ## [0.21.8](https://github.com/crackedngineer/iLoveGithub/compare/v0.21.7...v0.21.8) (2025-12-20)
 
-
 ### Bug Fixes
 
-* upgrade @supabase/ssr from 0.7.0 to 0.8.0 ([ab92d86](https://github.com/crackedngineer/iLoveGithub/commit/ab92d865d11c63bfe80b218a537a06aebb00c69c))
-* upgrade lucide-react from 0.552.0 to 0.555.0 ([e9c9e03](https://github.com/crackedngineer/iLoveGithub/commit/e9c9e03a149ac92fe7e3dc105dc0b6ba4c5f3b4a))
+- upgrade @supabase/ssr from 0.7.0 to 0.8.0 ([ab92d86](https://github.com/crackedngineer/iLoveGithub/commit/ab92d865d11c63bfe80b218a537a06aebb00c69c))
+- upgrade lucide-react from 0.552.0 to 0.555.0 ([e9c9e03](https://github.com/crackedngineer/iLoveGithub/commit/e9c9e03a149ac92fe7e3dc105dc0b6ba4c5f3b4a))
 
 ## [0.21.7](https://github.com/crackedngineer/iLoveGithub/compare/v0.21.6...v0.21.7) (2025-12-15)
 
-
 ### Bug Fixes
 
-* package.json & package-lock.json to reduce vulnerabilities ([538d2c5](https://github.com/crackedngineer/iLoveGithub/commit/538d2c5596c553229b1341a62c56535a87f061b5))
+- package.json & package-lock.json to reduce vulnerabilities ([538d2c5](https://github.com/crackedngineer/iLoveGithub/commit/538d2c5596c553229b1341a62c56535a87f061b5))
 
 ## [0.21.6](https://github.com/crackedngineer/iLoveGithub/compare/v0.21.5...v0.21.6) (2025-12-08)
 
-
 ### Bug Fixes
 
-* added rewrites for blog ([4396250](https://github.com/crackedngineer/iLoveGithub/commit/43962502b19d0160f36ef19f7125a796e4b412fb))
-* updated the old domain references to https://ilovegithub.vercel.app ([0bb5fba](https://github.com/crackedngineer/iLoveGithub/commit/0bb5fba2616fb50f5767afdc48a3d1871ad549fd))
-* updated the old domain references to https://ilovegithub.vercel.app ([a46f506](https://github.com/crackedngineer/iLoveGithub/commit/a46f5063557dfd8481f0b18e16a79f797ec1bd79))
+- added rewrites for blog ([4396250](https://github.com/crackedngineer/iLoveGithub/commit/43962502b19d0160f36ef19f7125a796e4b412fb))
+- updated the old domain references to https://ilovegithub.vercel.app ([0bb5fba](https://github.com/crackedngineer/iLoveGithub/commit/0bb5fba2616fb50f5767afdc48a3d1871ad549fd))
+- updated the old domain references to https://ilovegithub.vercel.app ([a46f506](https://github.com/crackedngineer/iLoveGithub/commit/a46f5063557dfd8481f0b18e16a79f797ec1bd79))
 
 ## [0.21.5](https://github.com/crackedngineer/iLoveGithub/compare/v0.21.4...v0.21.5) (2025-12-08)
 
-
 ### Bug Fixes
 
-* **tool:** Add code wiki tool ([b3ae7e3](https://github.com/crackedngineer/iLoveGithub/commit/b3ae7e3aea84d2477a819c382321b8bc715847d9))
+- **tool:** Add code wiki tool ([b3ae7e3](https://github.com/crackedngineer/iLoveGithub/commit/b3ae7e3aea84d2477a819c382321b8bc715847d9))
 
 ## [0.21.4](https://github.com/crackedngineer/iLoveGithub/compare/v0.21.3...v0.21.4) (2025-12-08)
 
-
 ### Bug Fixes
 
-* package.json & package-lock.json to reduce vulnerabilities ([#230](https://github.com/crackedngineer/iLoveGithub/issues/230)) ([bf61f32](https://github.com/crackedngineer/iLoveGithub/commit/bf61f32c51bc2d2e8c0a371d93f86c59bfe5f1ae))
+- package.json & package-lock.json to reduce vulnerabilities ([#230](https://github.com/crackedngineer/iLoveGithub/issues/230)) ([bf61f32](https://github.com/crackedngineer/iLoveGithub/commit/bf61f32c51bc2d2e8c0a371d93f86c59bfe5f1ae))
 
 ## [0.21.3](https://github.com/crackedngineer/iLoveGithub/compare/v0.21.2...v0.21.3) (2025-12-01)
 
-
 ### Bug Fixes
 
-* updated hugo config ([d15e756](https://github.com/crackedngineer/iLoveGithub/commit/d15e7562df395d4c87e993401b1f52163fe26884))
-* upgrade @radix-ui/react-progress from 1.1.7 to 1.1.8 ([#229](https://github.com/crackedngineer/iLoveGithub/issues/229)) ([b435df7](https://github.com/crackedngineer/iLoveGithub/commit/b435df7de63b778b5002448892a58f2803dcbbe1))
-* upgrade @radix-ui/react-slot from 1.2.3 to 1.2.4 ([#228](https://github.com/crackedngineer/iLoveGithub/issues/228)) ([fc2c568](https://github.com/crackedngineer/iLoveGithub/commit/fc2c5689559b25712a13825e1f9df58415e4e480))
-* upgrade @supabase/supabase-js from 2.76.1 to 2.78.0 ([#214](https://github.com/crackedngineer/iLoveGithub/issues/214)) ([0d7d258](https://github.com/crackedngineer/iLoveGithub/commit/0d7d2587f3566823ff4d8759472678896952ef8a))
-* upgrade axios from 1.12.2 to 1.13.1 ([#216](https://github.com/crackedngineer/iLoveGithub/issues/216)) ([a36e1d7](https://github.com/crackedngineer/iLoveGithub/commit/a36e1d743384b774429c0c33f5787e1bc97ce1c3))
-* upgrade lucide-react from 0.548.0 to 0.552.0 ([#215](https://github.com/crackedngineer/iLoveGithub/issues/215)) ([ab73923](https://github.com/crackedngineer/iLoveGithub/commit/ab7392304de584fe7286af38f19f8eb593e46a7f))
+- updated hugo config ([d15e756](https://github.com/crackedngineer/iLoveGithub/commit/d15e7562df395d4c87e993401b1f52163fe26884))
+- upgrade @radix-ui/react-progress from 1.1.7 to 1.1.8 ([#229](https://github.com/crackedngineer/iLoveGithub/issues/229)) ([b435df7](https://github.com/crackedngineer/iLoveGithub/commit/b435df7de63b778b5002448892a58f2803dcbbe1))
+- upgrade @radix-ui/react-slot from 1.2.3 to 1.2.4 ([#228](https://github.com/crackedngineer/iLoveGithub/issues/228)) ([fc2c568](https://github.com/crackedngineer/iLoveGithub/commit/fc2c5689559b25712a13825e1f9df58415e4e480))
+- upgrade @supabase/supabase-js from 2.76.1 to 2.78.0 ([#214](https://github.com/crackedngineer/iLoveGithub/issues/214)) ([0d7d258](https://github.com/crackedngineer/iLoveGithub/commit/0d7d2587f3566823ff4d8759472678896952ef8a))
+- upgrade axios from 1.12.2 to 1.13.1 ([#216](https://github.com/crackedngineer/iLoveGithub/issues/216)) ([a36e1d7](https://github.com/crackedngineer/iLoveGithub/commit/a36e1d743384b774429c0c33f5787e1bc97ce1c3))
+- upgrade lucide-react from 0.548.0 to 0.552.0 ([#215](https://github.com/crackedngineer/iLoveGithub/issues/215)) ([ab73923](https://github.com/crackedngineer/iLoveGithub/commit/ab7392304de584fe7286af38f19f8eb593e46a7f))
 
 ## [0.21.2](https://github.com/crackedngineer/iLoveGithub/compare/v0.21.1...v0.21.2) (2025-11-23)
 
-
 ### Bug Fixes
 
-* fix vercel.json source route ([8b4c2e3](https://github.com/crackedngineer/iLoveGithub/commit/8b4c2e395063084e93777e72c1ca0e20fc46ffe3))
+- fix vercel.json source route ([8b4c2e3](https://github.com/crackedngineer/iLoveGithub/commit/8b4c2e395063084e93777e72c1ca0e20fc46ffe3))
 
 ## [0.21.1](https://github.com/crackedngineer/iLoveGithub/compare/v0.21.0...v0.21.1) (2025-11-23)
 
-
 ### Bug Fixes
 
-* changes baseUrl for hugo yml ([2ede24c](https://github.com/crackedngineer/iLoveGithub/commit/2ede24c26dbb44abe8ab4d6b4f4ed160243a38dc))
-* chnged baseurl to netlify url ([891def8](https://github.com/crackedngineer/iLoveGithub/commit/891def87a2303ff12e06e2ce3608f5f71d1c637d))
-* fix redirect issue for hugo blog ([6e633e4](https://github.com/crackedngineer/iLoveGithub/commit/6e633e484f876c3c26c72f2b3eff40dc17bcb3d7))
-* fix url routes for hugo blog site ([9612597](https://github.com/crackedngineer/iLoveGithub/commit/96125978e7cd5d6d6bc9f44e8cec211ebbf43e2b))
-* hugo yml changes ([05faf88](https://github.com/crackedngineer/iLoveGithub/commit/05faf88847222779c08f2b73436e77419313213d))
-* netlify toml changes ([cfb1745](https://github.com/crackedngineer/iLoveGithub/commit/cfb1745343628264d5a8124a95208fdd7fc29c5a))
-* removed HUGO_BASEURL from netlify.toml ([a43cdbf](https://github.com/crackedngineer/iLoveGithub/commit/a43cdbfa4ec144541a9f9f05a7f78e5690ec4390))
+- changes baseUrl for hugo yml ([2ede24c](https://github.com/crackedngineer/iLoveGithub/commit/2ede24c26dbb44abe8ab4d6b4f4ed160243a38dc))
+- chnged baseurl to netlify url ([891def8](https://github.com/crackedngineer/iLoveGithub/commit/891def87a2303ff12e06e2ce3608f5f71d1c637d))
+- fix redirect issue for hugo blog ([6e633e4](https://github.com/crackedngineer/iLoveGithub/commit/6e633e484f876c3c26c72f2b3eff40dc17bcb3d7))
+- fix url routes for hugo blog site ([9612597](https://github.com/crackedngineer/iLoveGithub/commit/96125978e7cd5d6d6bc9f44e8cec211ebbf43e2b))
+- hugo yml changes ([05faf88](https://github.com/crackedngineer/iLoveGithub/commit/05faf88847222779c08f2b73436e77419313213d))
+- netlify toml changes ([cfb1745](https://github.com/crackedngineer/iLoveGithub/commit/cfb1745343628264d5a8124a95208fdd7fc29c5a))
+- removed HUGO_BASEURL from netlify.toml ([a43cdbf](https://github.com/crackedngineer/iLoveGithub/commit/a43cdbfa4ec144541a9f9f05a7f78e5690ec4390))
 
 ## [0.21.0](https://github.com/crackedngineer/iLoveGithub/compare/v0.20.0...v0.21.0) (2025-11-22)
 
-
 ### Features
 
-* added canonifyURLs to true and relativeURLs to false ([bfe3269](https://github.com/crackedngineer/iLoveGithub/commit/bfe32691e6b83467bb9d4ddb6edea7dc85236fdc))
-* added relativeURL to true ([6715c36](https://github.com/crackedngineer/iLoveGithub/commit/6715c36cf7966520c7fff4f646be6022b071d110))
-
+- added canonifyURLs to true and relativeURLs to false ([bfe3269](https://github.com/crackedngineer/iLoveGithub/commit/bfe32691e6b83467bb9d4ddb6edea7dc85236fdc))
+- added relativeURL to true ([6715c36](https://github.com/crackedngineer/iLoveGithub/commit/6715c36cf7966520c7fff4f646be6022b071d110))
 
 ### Bug Fixes
 
-* added HUGO_BASEURL in netlify.toml ([66170c8](https://github.com/crackedngineer/iLoveGithub/commit/66170c8b57819c09879e6dbdfaf244db00c5b61c))
-* fixed Hugo blog CSS issue ([#219](https://github.com/crackedngineer/iLoveGithub/issues/219)) ([508c0a0](https://github.com/crackedngineer/iLoveGithub/commit/508c0a0400decd3cb94fa573f5699db03b2a2ffc))
-* removed relativeurl from hugo yml ([#221](https://github.com/crackedngineer/iLoveGithub/issues/221)) ([2241798](https://github.com/crackedngineer/iLoveGithub/commit/22417981735b00a1b95f999e2595614a68cacf59))
-* testing hugo site redirection issue fixes ([a5cadb6](https://github.com/crackedngineer/iLoveGithub/commit/a5cadb61e90eea9231c84528f3e325f0431e2f2e))
-* updated redirect routes in vercel.json ([bacd01b](https://github.com/crackedngineer/iLoveGithub/commit/bacd01bffb2b9d526df1a5327bafe47a583f8763))
+- added HUGO_BASEURL in netlify.toml ([66170c8](https://github.com/crackedngineer/iLoveGithub/commit/66170c8b57819c09879e6dbdfaf244db00c5b61c))
+- fixed Hugo blog CSS issue ([#219](https://github.com/crackedngineer/iLoveGithub/issues/219)) ([508c0a0](https://github.com/crackedngineer/iLoveGithub/commit/508c0a0400decd3cb94fa573f5699db03b2a2ffc))
+- removed relativeurl from hugo yml ([#221](https://github.com/crackedngineer/iLoveGithub/issues/221)) ([2241798](https://github.com/crackedngineer/iLoveGithub/commit/22417981735b00a1b95f999e2595614a68cacf59))
+- testing hugo site redirection issue fixes ([a5cadb6](https://github.com/crackedngineer/iLoveGithub/commit/a5cadb61e90eea9231c84528f3e325f0431e2f2e))
+- updated redirect routes in vercel.json ([bacd01b](https://github.com/crackedngineer/iLoveGithub/commit/bacd01bffb2b9d526df1a5327bafe47a583f8763))
 
 ## [0.20.0](https://github.com/crackedngineer/iLoveGithub/compare/v0.19.2...v0.20.0) (2025-11-22)
 
-
 ### Features
 
-* hugo blog site setup ([#217](https://github.com/crackedngineer/iLoveGithub/issues/217)) ([6347938](https://github.com/crackedngineer/iLoveGithub/commit/634793810976f811e2fe6cec81d2527f4e02300d))
+- hugo blog site setup ([#217](https://github.com/crackedngineer/iLoveGithub/issues/217)) ([6347938](https://github.com/crackedngineer/iLoveGithub/commit/634793810976f811e2fe6cec81d2527f4e02300d))
 
 ## [0.19.2](https://github.com/crackedngineer/iLoveGithub/compare/v0.19.1...v0.19.2) (2025-11-16)
 
-
 ### Bug Fixes
 
-* upgrade @supabase/supabase-js from 2.75.1 to 2.76.1 ([#210](https://github.com/crackedngineer/iLoveGithub/issues/210)) ([3eadbe7](https://github.com/crackedngineer/iLoveGithub/commit/3eadbe797799dfd257c97ed0aff5880d9da57a50))
-* upgrade lucide-react from 0.545.0 to 0.546.0 ([#209](https://github.com/crackedngineer/iLoveGithub/issues/209)) ([d56ded0](https://github.com/crackedngineer/iLoveGithub/commit/d56ded0415978c9c43a0ad1ec9c427d03db09db6))
-* upgrade lucide-react from 0.546.0 to 0.548.0 ([#211](https://github.com/crackedngineer/iLoveGithub/issues/211)) ([9bdb824](https://github.com/crackedngineer/iLoveGithub/commit/9bdb824862aee577b5fd15a5c418b58d486ea308))
-* upgrade nodemailer from 7.0.9 to 7.0.10 ([#212](https://github.com/crackedngineer/iLoveGithub/issues/212)) ([e4828e7](https://github.com/crackedngineer/iLoveGithub/commit/e4828e7403fe3eef8e636aa83af37c3dffbdc409))
+- upgrade @supabase/supabase-js from 2.75.1 to 2.76.1 ([#210](https://github.com/crackedngineer/iLoveGithub/issues/210)) ([3eadbe7](https://github.com/crackedngineer/iLoveGithub/commit/3eadbe797799dfd257c97ed0aff5880d9da57a50))
+- upgrade lucide-react from 0.545.0 to 0.546.0 ([#209](https://github.com/crackedngineer/iLoveGithub/issues/209)) ([d56ded0](https://github.com/crackedngineer/iLoveGithub/commit/d56ded0415978c9c43a0ad1ec9c427d03db09db6))
+- upgrade lucide-react from 0.546.0 to 0.548.0 ([#211](https://github.com/crackedngineer/iLoveGithub/issues/211)) ([9bdb824](https://github.com/crackedngineer/iLoveGithub/commit/9bdb824862aee577b5fd15a5c418b58d486ea308))
+- upgrade nodemailer from 7.0.9 to 7.0.10 ([#212](https://github.com/crackedngineer/iLoveGithub/issues/212)) ([e4828e7](https://github.com/crackedngineer/iLoveGithub/commit/e4828e7403fe3eef8e636aa83af37c3dffbdc409))
 
 ## [0.19.1](https://github.com/crackedngineer/iLoveGithub/compare/v0.19.0...v0.19.1) (2025-11-02)
 
-
 ### Bug Fixes
 
-* upgrade lucide-react from 0.544.0 to 0.545.0 ([#204](https://github.com/crackedngineer/iLoveGithub/issues/204)) ([865eb74](https://github.com/crackedngineer/iLoveGithub/commit/865eb749fc52d67a671806425ce4aa9aaae276c9))
+- upgrade lucide-react from 0.544.0 to 0.545.0 ([#204](https://github.com/crackedngineer/iLoveGithub/issues/204)) ([865eb74](https://github.com/crackedngineer/iLoveGithub/commit/865eb749fc52d67a671806425ce4aa9aaae276c9))
 
 ## [0.19.0](https://github.com/crackedngineer/iLoveGithub/compare/v0.18.1...v0.19.0) (2025-10-26)
 
-
 ### Features
 
-* added dropdown to open in code editors ([#195](https://github.com/crackedngineer/iLoveGithub/issues/195)) ([92a6c7a](https://github.com/crackedngineer/iLoveGithub/commit/92a6c7a43f081095888376dbe5418fd14b54c823))
+- added dropdown to open in code editors ([#195](https://github.com/crackedngineer/iLoveGithub/issues/195)) ([92a6c7a](https://github.com/crackedngineer/iLoveGithub/commit/92a6c7a43f081095888376dbe5418fd14b54c823))
 
 ## [0.18.1](https://github.com/crackedngineer/iLoveGithub/compare/v0.18.0...v0.18.1) (2025-10-26)
 

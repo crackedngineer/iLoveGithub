@@ -16,3 +16,6 @@ export const parseImageFileName = (url: string): string => {
   const parts = url.split("/");
   return parts[parts.length - 1];
 };
+
+export const toBase64 = (str: string) =>
+  typeof window === "undefined" ? Buffer.from(str).toString("base64") : window.btoa(str);

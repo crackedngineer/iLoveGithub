@@ -48,3 +48,4 @@ node_modules
 # Hugo files
 blog/public
 blog/resources
+public/blog.*
