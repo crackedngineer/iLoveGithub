@@ -53,16 +53,11 @@ const nextConfig = {
       },
     ];
   },
-
-  async rewrites() {
-    return [
-      {
-        source: "/blog/:path*",
-        destination: "https://ilovegithub-blog.netlify.app/:path*",
-      },
-    ];
-  },
 };
+
+// const withMDX = require('@next/mdx')({
+// 	extension: /\.mdx$/,
+// })
 
 // Export both if needed in your app
 export default {
