@@ -1,15 +1,14 @@
-import {getAllFilesFrontMatter} from "./mdx";
-import type {FrontMatter} from "@/lib/types";
+import {getAllBlogPosts} from "@/services/blog";
 
-export function generateRssFeed(): string {
-  const posts = getAllFilesFrontMatter("blog");
+export async function generateRssFeed(): Promise<string> {
+  const posts = await getAllBlogPosts(1, 1000).then((res) => res.posts);
   const siteUrl = window.location.origin;
   const feedUrl = `${siteUrl}/rss.xml`;
 
   const rssItems = posts
-    .map((post: FrontMatter) => {
+    .map((post) => {
       const postUrl = `${siteUrl}/blog/${post.slug}`;
-      const pubDate = new Date(post.date ?? "").toUTCString();
+      const pubDate = new Date(post.created ?? "").toUTCString();
       const categories = (post.tags ?? [])
         .map((tag) => `<category>${escapeXml(tag)}</category>`)
         .join("\n        ");
@@ -21,7 +20,7 @@ export function generateRssFeed(): string {
       <guid isPermaLink="true">${postUrl}</guid>
       <description>${escapeXml(post.excerpt ?? "")}</description>
       <pubDate>${pubDate}</pubDate>
-      <author>${escapeXml(post.author ?? "")}</author>
+      <author>${escapeXml((post as any).author ?? "")}</author>
       ${categories}
     </item>`;
     })
@@ -52,8 +51,8 @@ function escapeXml(text: string): string {
     .replace(/'/g, "&apos;");
 }
 
-export function downloadRssFeed(): void {
-  const rssFeed = generateRssFeed();
+export async function downloadRssFeed(): Promise<void> {
+  const rssFeed = await generateRssFeed();
   const blob = new Blob([rssFeed], {type: "application/rss+xml"});
   const url = URL.createObjectURL(blob);
 
