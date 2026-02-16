@@ -24,7 +24,7 @@ export async function GET(req: NextRequest) {
     baseURL: "https://api.github.com",
     headers: {
       Accept: "application/vnd.github+json",
-      ...(process.env.NEXT_PUBLIC_GITHUB_TOKEN
+      ...(token || process.env.NEXT_PUBLIC_GITHUB_TOKEN
         ? {
             Authorization: token || `Bearer ${process.env.NEXT_PUBLIC_GITHUB_TOKEN}`,
           }
