@@ -34,7 +34,7 @@
           "hidden": true
         }
       ],
-      "exclude-paths": ["blog", "status"]
+      "exclude-paths": ["blog"]
     }
   }
 }
