@@ -23,23 +23,22 @@ jobs:
       - name: Checkout repository
         uses: actions/checkout@v4
 
+      - name: Install pipreqs
+        run: pip install pipreqs
+      
       - name: Set up Python
         uses: actions/setup-python@v5
         with:
           python-version: '3.12'
-          cache: 'pip'
 
-      - name: Install pipreqs
-        run: pip install pipreqs
-
-      - name: Generate requirements.txt
-        run: pipreqs . --force
+      - name: Generate requirements.txt from scripts folder
+        run: pipreqs ./scripts --force
 
       - name: Install dependencies
-        run: pip install -r requirements.txt
+        run: pip install -r scripts/requirements.txt
 
       - name: Run keep-alive script
-        run: python main.py
+        run: python scripts/supabase_keep_alive.py
         env:
           SUPABASE_URL: ${{ secrets.SUPABASE_URL }}
           SUPABASE_KEY: ${{ secrets.SUPABASE_KEY }}
