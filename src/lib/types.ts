@@ -27,3 +27,9 @@ export interface GitHubRepo {
     html_url: string;
   };
 }
+
+export interface CardGeneratorGitRepo extends GitHubRepo {
+  open_issues: number;
+  watchers: number;
+  forks_count: number;
+}

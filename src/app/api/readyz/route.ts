@@ -14,7 +14,10 @@ export async function GET(req: NextRequest) {
   if (forceCheck) {
     await healthMonitor.forceCheck();
   }
-  const status = healthMonitor.getStatus();
+  // Note :- instrumentation is disabled for now as it is interfering with the compilation of the app, we will enable it once we have a better understanding of the issue and how to fix it without breaking the app
+  // const status = healthMonitor.getStatus();
+
+  const status = await healthMonitor.forceCheck(); // Ensure we get the latest status on each request
 
   const isInitializing =
     status.services.supabase.status === "unknown" || status.services.redis.status === "unknown";

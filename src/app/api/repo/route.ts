@@ -1,13 +1,13 @@
 import {NextRequest, NextResponse} from "next/server";
-import axios from "axios";
 import {redis} from "@/lib/redis";
 import {redisCircuit} from "@/lib/circuit-breaker";
+import {getRepoDetails} from "@/lib/utils";
 
 export async function GET(req: NextRequest) {
   const {searchParams} = new URL(req.url);
   const owner = searchParams.get("owner");
   const repo = searchParams.get("repo");
-  const token = req.headers.get("Authorization");
+  const token = req.headers.get("Authorization") || "";
 
   if (!owner || !repo) {
     return NextResponse.json({error: "Missing 'owner', 'repo'"}, {status: 400});
@@ -20,27 +20,11 @@ export async function GET(req: NextRequest) {
     return NextResponse.json(cachedDataStr);
   }
 
-  const githubClient = axios.create({
-    baseURL: "https://api.github.com",
-    headers: {
-      Accept: "application/vnd.github+json",
-      ...(token || process.env.NEXT_PUBLIC_GITHUB_TOKEN
-        ? {
-            Authorization: token || `Bearer ${process.env.NEXT_PUBLIC_GITHUB_TOKEN}`,
-          }
-        : {}),
-    },
-  });
-
   try {
-    const [repoRes, topicsRes] = await Promise.all([
-      githubClient.get(`/repos/${owner}/${repo}`),
-      githubClient.get(`/repos/${owner}/${repo}/topics`),
-    ]);
+    const repoDetails = await getRepoDetails(token, owner, repo);
 
     const data = {
-      ...repoRes.data,
-      topics: topicsRes.data.names || [],
+      ...repoDetails,
       cached_at: new Date().toISOString(),
     };
 
@@ -48,7 +32,7 @@ export async function GET(req: NextRequest) {
     await redisCircuit.execute(async () => await redis.set(cacheKey, data, {ex: 3600}));
 
     return NextResponse.json(data);
-  } catch (error: any) {
+  } catch (error: unknown) {
     // Check if it's a circuit breaker error
     if (error instanceof Error && error.message.includes("Circuit breaker OPEN")) {
       return NextResponse.json(
@@ -60,8 +44,11 @@ export async function GET(req: NextRequest) {
       );
     }
 
-    const status = error?.response?.status;
-    const rateLimitRemaining = error?.response?.headers?.["x-ratelimit-remaining"];
+    const axiosError = error as {
+      response?: {status?: number; headers?: Record<string, string>; data?: unknown};
+    };
+    const status = axiosError.response?.status;
+    const rateLimitRemaining = axiosError.response?.headers?.["x-ratelimit-remaining"];
 
     if (status === 403 && rateLimitRemaining === "0") {
       return NextResponse.json(
@@ -72,7 +59,11 @@ export async function GET(req: NextRequest) {
       );
     }
 
-    console.error("GitHub API error:", error?.response?.data || error.message);
+    if (error instanceof Error) {
+      console.error("GitHub API error:", axiosError.response?.data || error.message);
+    } else {
+      console.error("GitHub API error:", axiosError.response?.data || "Unknown error");
+    }
 
     return NextResponse.json({error: "Failed to fetch repository details"}, {status: 500});
   }
