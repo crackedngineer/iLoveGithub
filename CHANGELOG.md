@@ -4,6 +4,13 @@ All notable changes to this project will be documented in this file.
 
 ---
 
+## [0.25.0](https://github.com/crackedngineer/iLoveGithub/compare/v0.24.0...v0.25.0) (2026-04-07)
+
+
+### Features
+
+* add visualify card generation and theme management ([a415ca9](https://github.com/crackedngineer/iLoveGithub/commit/a415ca944d653a657eb82d4e3448aec11db0cd63))
+
 ## [0.24.0](https://github.com/crackedngineer/iLoveGithub/compare/v0.23.4...v0.24.0) (2026-03-19)
 
 

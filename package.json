@@ -1,6 +1,6 @@
 {
   "name": "i-love-github",
-  "version": "0.24.0",
+  "version": "0.25.0",
   "private": true,
   "homepage": "https://ilovegithub.vercel.app",
   "scripts": {
