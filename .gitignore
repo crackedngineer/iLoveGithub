@@ -48,3 +48,5 @@ node_modules
 # Hugo files
 blog/public
 blog/resources
+# Added by code-review-graph
+.code-review-graph/

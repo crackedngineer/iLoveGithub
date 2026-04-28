@@ -2,305 +2,196 @@
 
 This file provides guidance to Claude Code (claude.ai/code) when working with code in this repository.
 
-## Project Overview
+## Project Overvi**iLoveGithub** is a curated collection of tools and visualizations built around GitHub:
 
-**iLoveGithub** is a curated collection of magical tools and visualizations built around GitHub. Key features:
-
-- Repository analytics and visualization
-- AI-powered repo summaries
-- Dynamic SVG card generation for repos (for README embeds, etc.)
+- Repository analytics and visualization (SVG cards)
 - QR code generation
 - Integration with 100+ external GitHub tools
+- Hugo blog (proxied to Netlify at `/blog/*`)
 
-**Version**: 0.24.0 | **Deployment**: Vercel
+**Version**: 0.25.0 | **Deployment**: Vercel
 
 ---
 
 ## Tech Stack
 
 - **Framework**: Next.js 16+ (App Router, React 19)
-- **Language**: TypeScript (strict mode)
-- **Styling**: Tailwind CSS 4, Radix UI components
+- **Language**: TypeScript (strict mode, `@/*` → `./src/*`)
+- **Styling**: Tailwind CSS 4, Radix UI, Lucide icons, Motion
 - **Database/Cache**: Upstash Redis (KV storage)
 - **Authentication**: Supabase
 - **API Client**: Axios
-- **SVG Generation**: Satori (for image generation), custom SVG templating
-
----
-
-## Project Structure
-
-```
-src/
-├── app/
-│   ├── api/                    # Next.js API routes
-│   │   ├── repo/              # Repository data & visualization endpoints
-│   │   │   ├── route.ts       # Get repo details (JSON)
-│   │   │   └── trending/      # Trending repos endpoint
-│   │   ├── visualify/         # Repo visualization
-│   │   ├── qrcode/            # QR code generation
-│   │   ├── tools/             # Tools directory endpoint
-│   │   ├── healthz/           # Health check
-│   │   └── readyz/            # Readiness probe
-│   ├── layout.tsx             # Root layout
-│   ├── page.tsx               # Home page
-│   └── helper.ts              # Helper utilities
-├── lib/
-│   ├── utils.ts               # GitHub API client (getRepoDetails), URL parsing
-│   ├── redis.ts               # Upstash Redis setup & health checks
-│   ├── circuit-breaker.ts     # Circuit breaker for resilience
-│   ├── supabase.ts            # Auth & database
-│   ├── email.ts               # Email service
-│   ├── mailer.ts              # Nodemailer config
-│   ├── health-monitor.ts      # Service health monitoring
-│   ├── types.ts               # TypeScript types
-│   └── version.ts             # Version info
-├── services/
-│   ├── github.ts              # GitHub service layer
-│   ├── tools.ts               # Tools service
-│   └── qrcode.ts              # QR code service
-├── components/
-│   ├── ui/                    # Radix UI components (reusable)
-│   └── emails/                # Email templates
-├── constants.ts               # App-wide constants
-├── instrumentation.ts         # Monitoring/observability
-└── proxy.ts                   # Proxy configuration
-```
+- **SVG Rendering**: `@resvg/resvg-js` (server external package)
 
 ---
 
 ## Common Development Commands
 
-### Development
-
 ```bash
-npm run dev                    # Start dev server with Turbopack (http://localhost:3000)
+npm run dev          # Dev server with Turbopack (http://localhost:3000)
+npm run build        # Production build (postbuild: next-sitemap)
+npm run lint         # ESLint
+npm run lint:fix     # Fix ESLint errors
+npm run format       # Prettier (entire project)
+npm run commit       # Commitizen interactive commit CLI
+npm run hugo:serve   # Hugo blog dev server (in /blog dir)
 ```
 
-### Building & Production
+There are no automated tests; quality is enforced via TypeScript strict mode and pre-commit hooks (Husky + lint-staged runs Prettier on staged files).
 
-```bash
-npm run build                  # Build for production
-npm start                      # Start production server
-npm run export                 # Export static site
-```
+---
 
-### Linting & Formatting
+## API Routes
 
-```bash
-npm run lint                   # Run ESLint
-npm run lint:fix              # Fix ESLint errors automatically
-npm run format                # Format code with Prettier (entire project)
-```
+All routes are in `src/app/api/`:
 
-### Git & Releases
-
-```bash
-npm run commit                # Commitizen CLI for structured commits
-```
-
-### Blog
-
-```bash
-npm run hugo:build            # Build Hugo blog (in /blog directory)
-npm run hugo:serve            # Serve Hugo blog locally
-```
+| Route                         | Description                             |
+| ----------------------------- | --------------------------------------- |
+| `GET /api/repo`               | Repo JSON data (cached, circuit-broken) |
+| `GET /api/repo/trending`      | Trending repos                          |
+| `GET /api/visualify/generate` | SVG card generation                     |
+| `GET /api/qrcode/generate`    | QR code generation                      |
+| `GET /api/tools`              | Tools directory (from `tools.json`)     |
+| `GET /api/healthz`            | Health check                            |
+| `GET /api/readyz`             | Readiness probe                         |
 
 ---
 
 ## Key Architecture Patterns
 
-### 1. **GitHub API Integration with Circuit Breaker**
+### 1. GitHub API Client
 
-All GitHub API calls go through `getRepoDetails()` in `src/lib/utils.ts`:
+`src/lib/utils.ts` exports two functions:
 
 ```typescript
+export function newGithubClient(token: string); // Returns axios instance
 export async function getRepoDetails(token: string, owner: string, repo: string);
 ```
 
-Uses Axios with GitHub's REST API v3. The circuit breaker pattern (`src/lib/circuit-breaker.ts`) protects against cascading failures:
+`getRepoDetails` fetches `GET /repos/{owner}/{repo}` only. Additional data (contributors, watchers, languages) is fetched by individual card generators using `newGithubClient` directly with `process.env.GITHUB_TOKEN`.
 
-- **CLOSED**: Normal operation
-- **OPEN**: Stops requests after 5 failures (60s timeout before retry)
-- **HALF_OPEN**: Test recovery with 2 consecutive successes before closing
+### 2. Redis + Circuit Breaker
 
-Error handling example from API routes:
+Redis cache wraps all external calls via two circuit breaker singletons from `src/lib/circuit-breaker.ts`:
 
 ```typescript
-const cacheKey = `github:repo:${owner}/${repo}`;
-const cachedDataStr = await redisCircuit.execute(async () => await redis.get(cacheKey));
+import {redisCircuit, supabaseCircuit} from "@/lib/circuit-breaker";
+
+const cachedData = await redisCircuit.execute(() => redis.get(cacheKey));
 ```
 
-### 2. **Caching Strategy**
+Circuit breaker states: CLOSED → OPEN (after 5 failures) → HALF_OPEN (after 60s) → CLOSED (after 2 successes). Check state with `circuitBreaker.getStats()`.
 
-All repo data is cached in Redis with 1-hour TTL:
+Cache keys: `github:repo:${owner}/${repo}`. TTL: 3600s (1 hour).
+
+### 3. Visualify SVG Card Generation
+
+`/api/visualify/generate` uses an OOP factory pattern in `src/app/api/visualify/generate/themes/`:
+
+- `base.ts` — Abstract `BaseCardGenerator` with `generateCard(repoDetails)` and `setConfig(params)`
+- `classic.ts` — Concrete `ClassicCardGenerator` with `LightClassicCardGenerator` and `DarkClassicCardGenerator` subclasses
+- `factory.ts` — `getCardGeneratorFactory(theme)` maps theme identifier strings to generator instances
+- `utils.ts` — Shared helpers: `formatNumber`, `escapeXml`, `truncateText`
+
+**Query params for `/api/visualify/generate`:**
+
+- `owner`, `repo` (required)
+- `theme`: `light-classic` | `dark-classic`
+- `width`, `height`: Card dimensions in px (defaults: 400×200)
+- `elements`: Comma-separated list to control visible stats — `contributors,issues,stars,forks,watchers,description,language` (all shown by default)
+
+**Adding a new theme:** Create a class extending `ClassicCardGenerator` or `BaseCardGenerator`, set a static `themeIdentifier`, and register it in `factory.ts`.
+
+The classic generator uses a two-pass layout engine: top-down for title/description, bottom-up for stats/language/strip anchored to card bottom.
+
+### 4. Standard API Route Pattern
 
 ```typescript
-await redis.set(cacheKey, repoDetails, {ex: 3600}); // 3600 seconds = 1 hour
+// 1. Extract & validate params
+const owner = searchParams.get("owner");
+if (!owner || !repo) return NextResponse.json({error: "..."}, {status: 400});
+
+// 2. Cache lookup (circuit-broken)
+const cached = await redisCircuit.execute(() => redis.get(cacheKey));
+if (cached) return NextResponse.json(cached);
+
+// 3. Fetch from GitHub, cache result
+const data = await getRepoDetails(token, owner, repo);
+await redisCircuit.execute(() => redis.set(cacheKey, data, {ex: 3600}));
+
+// 4. Return with headers
+return new NextResponse(svg, {
+  headers: {"Content-Type": "image/svg+xml", "Cache-Control": "public, max-age=3600"},
+});
 ```
 
-Cache keys follow pattern: `github:repo:${owner}/${repo}`
+For SVG endpoints, always use `escapeXml()` from `src/app/api/visualify/generate/themes/utils.ts` on all user-derived content (owner, repo, description).
 
-### 3. **SVG Card Generation (Dynamic)**
+### 5. Tools Directory
 
-Two main endpoints for dynamic SVG generation:
+`tools.json` at the project root is the source of truth for all external tools. It also drives `next.config.ts` to dynamically build allowed iframe origins (`https://{tool.name}.{rootDomain}`).
 
-- **`/api/repo/card`** (1000x480px) - Full detailed card with stats & progress bar
-- **`/api/repo/simple-card`** (900x300px) - Compact version
+---
 
-Query parameters:
-
-- `owner`: GitHub owner
-- `repo`: Repository name
-- `theme` (optional): `minimal`, `gradient`, `geometric`, `waves`, `dark`, `colorful`
-
-Example:
-
-```
-GET /api/repo/card?owner=torvalds&repo=linux&theme=dark
-```
-
-Features:
-
-- Dynamic data from GitHub API
-- Theme-based styling with background patterns
-- Number formatting (k/M suffix)
-- Safe HTML escaping for user input
-- Responsive icon designs
-- Language/progress bar visualization
-
-### 4. **Error Handling**
-
-Standard pattern for API routes:
-
-```typescript
-if (!owner || !repo) {
-  return NextResponse.json({error: "Missing 'owner' or 'repo'"}, {status: 400});
-}
-
-try {
-  // ...fetch & process
-  return new NextResponse(svg, {
-    headers: {"Content-Type": "image/svg+xml"},
-  });
-} catch (error) {
-  console.error("Error:", error);
-  return NextResponse.json({error: "..."}, {status: 500});
-}
-```
-
-### 5. **Environment Variables**
-
-Required env vars:
+## Environment Variables
 
 ```
 KV_REST_API_URL          # Upstash Redis URL
 KV_REST_API_TOKEN        # Upstash Redis token
 NEXT_PUBLIC_ROOT_DOMAIN  # Root domain (e.g., ilovegithub.vercel.app)
-GITHUB_TOKEN (optional)  # For increased rate limits
-SUPABASE_URL            # Supabase project URL
-SUPABASE_ANON_KEY       # Supabase anon key
+GITHUB_TOKEN             # GitHub PAT for increased rate limits (used directly in card generators)
+SUPABASE_URL             # Supabase project URL
+SUPABASE_ANON_KEY        # Supabase anon key
 ```
 
 ---
 
-## Important Conventions
+## Deployment Notes
 
-### API Route Pattern
+- **Platform**: Vercel (auto-deploy on push to master)
+- **Blog**: Rewritten at `/blog/:path*` → `https://ilovegithub-blog.netlify.app/:path*`
+- **Security headers**: `X-Frame-Options: DENY` and `Content-Security-Policy: frame-ancestors 'none'` applied globally
+- **`@resvg/resvg-js`** is listed as a `serverExternalPackage` in `next.config.ts` (native binary)
+- **Post-build**: `next-sitemap` runs automatically after `next build`
+  verview`| Understanding high-level codebase structure |
+|`refactor_tool` | Planning renames, finding dead code |
 
-All API routes follow this pattern:
+<!-- code-review-graph MCP tools -->
 
-1. Extract query params from `searchParams`
-2. Validate required params with early returns
-3. Check circuit breaker + Redis cache
-4. Fallback to GitHub API if cache miss
-5. Cache result with TTL
-6. Return response with appropriate headers
+## MCP Tools: code-review-graph
 
-### SVG Generation
+**IMPORTANT: This project has a knowledge graph. ALWAYS use the
+code-review-graph MCP tools BEFORE using Grep/Glob/Read to explore
+the codebase.** The graph is faster, cheaper (fewer tokens), and gives
+you structural context (callers, dependents, test coverage) that file
+scanning cannot.
 
-- Always escape user input with `escapeHtml()`
-- Use template literals with `${variable}` for dynamic content
-- Define styles in `<defs><style>` for reusability
-- Return with `Content-Type: image/svg+xml` header
-- Cache SVG responses with 1-hour max-age
+### When to use graph tools FIRST
 
-### Code Organization
+- **Exploring code**: `semantic_search_nodes` or `query_graph` instead of Grep
+- **Understanding impact**: `get_impact_radius` instead of manually tracing imports
+- **Code review**: `detect_changes` + `get_review_context` instead of reading entire files
+- **Finding relationships**: `query_graph` with callers_of/callees_of/imports_of/tests_for
+- **Architecture questions**: `get_architecture_overview` + `list_communities`
 
-- `lib/` = Core utilities & services (auth, DB, utils)
-- `services/` = Business logic layer
-- `components/` = React UI components
-- `app/api/` = API routes (one file = one endpoint)
-- `app/` = Pages & layouts
+Fall back to Grep/Glob/Read **only** when the graph doesn't cover what you need.
 
----
+### Key Tools
 
-## Testing & Quality Checks
+| Tool                        | Use when                                               |
+| --------------------------- | ------------------------------------------------------ |
+| `detect_changes`            | Reviewing code changes — gives risk-scored analysis    |
+| `get_review_context`        | Need source snippets for review — token-efficient      |
+| `get_impact_radius`         | Understanding blast radius of a change                 |
+| `get_affected_flows`        | Finding which execution paths are impacted             |
+| `query_graph`               | Tracing callers, callees, imports, tests, dependencies |
+| `semantic_search_nodes`     | Finding functions/classes by name or keyword           |
+| `get_architecture_overview` | Understanding high-level codebase structure            |
+| `refactor_tool`             | Planning renames, finding dead code                    |
 
-**Pre-commit hooks** (Husky):
+### Workflow
 
-- Runs `prettier` on staged files
-- Enforced via `lint-staged`
-
-**Structured commits** (Commitizen):
-
-```bash
-npm run commit  # Opens interactive commit CLI
-```
-
-**Type safety**:
-
-- Strict TypeScript mode enabled
-- No `any` types allowed
-- Path aliases configured: `@/*` → `./src/*`
-
----
-
-## Deployment
-
-- **Platform**: Vercel (automatic CI/CD on push to main)
-- **Analytics**: Vercel Analytics & Speed Insights
-- **Blob Storage**: Vercel Blob for images
-- **Post-build**: Automatic sitemap generation (`next-sitemap`)
-
----
-
-## Performance Optimization
-
-1. **Caching**: All GitHub API responses cached 1 hour
-2. **Circuit Breaker**: Prevents thundering herd on external API failures
-3. **Redis**: KV store for fast cache lookups
-4. **Turbopack**: Used in dev mode for fast builds
-5. **Next.js 16**: Latest optimizations, React 19
-
----
-
-## Common Tasks
-
-### Adding a new SVG card endpoint
-
-1. Create file: `src/app/api/repo/[cardname]/route.ts`
-2. Fetch repo data via `getRepoDetails()`
-3. Implement `generateCard()` function
-4. Return SVG with theme support
-5. Add caching with 1-hour TTL
-
-### Debugging
-
-- Check circuit breaker state: `circuitBreaker.getStats()`
-- Verify Redis connection: Check `KV_REST_API_URL` env var
-- Logs available in Vercel dashboard
-
-### Adding GitHub API fields
-
-Edit `src/lib/utils.ts` `getRepoDetails()` function or extend the Promise.all() calls to fetch additional endpoints.
-
----
-
-## Useful References
-
-- [Next.js Docs](https://nextjs.org/docs)
-- [GitHub API v3](https://docs.github.com/en/rest)
-- [Upstash Redis](https://upstash.com/docs/redis/overall/getstarted)
-- [Radix UI](https://radix-ui.com/)
-- [Tailwind CSS](https://tailwindcss.com/)
+1. The graph auto-updates on file changes (via hooks).
+2. Use `detect_changes` for code review.
+3. Use `get_affected_flows` to understand impact.
+4. Use `query_graph` pattern="tests_for" to check coverage.
