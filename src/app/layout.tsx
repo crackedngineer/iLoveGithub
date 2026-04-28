@@ -12,6 +12,7 @@ import AuthGuard from "@/components/AuthGuard";
 import DemoVideoProvider from "@/components/DemoVideoProvider";
 import AppVersionSync from "@/components/AppVersionSync";
 import {AppLocationProvider} from "@/components/AppLocationProvider";
+import {Toaster} from "@/components/ui/sonner";
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -119,6 +120,7 @@ export default function RootLayout({
         <GoogleAnalytics measurementId={process.env.NEXT_PUBLIC_GA_MEASUREMENT_ID} />
         <SpeedInsights />
         <AppVersionSync />
+        <Toaster />
 
         <DemoVideoProvider>
           <AppLocationProvider>
