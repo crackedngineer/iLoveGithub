@@ -12,22 +12,6 @@ export interface Tool {
   type?: string;
 }
 
-export interface GitHubRepo {
-  id: number;
-  name: string;
-  full_name: string;
-  html_url: string;
-  description: string;
-  stargazers_count: number;
-  language: string;
-  created_at: string;
-  owner: {
-    login: string;
-    avatar_url: string;
-    html_url: string;
-  };
-}
-
 export type BlogPostFrontMatter = {
   title: string;
   created: string;
@@ -60,4 +44,26 @@ export interface SeriesInfo {
   posts: BlogPostDetail[];
   currentIndex: number;
   total: number;
+}
+
+export interface GitHubRepo {
+  id: number;
+  name: string;
+  full_name: string;
+  html_url: string;
+  description: string;
+  stargazers_count: number;
+  language: string;
+  created_at: string;
+  owner: {
+    login: string;
+    avatar_url: string;
+    html_url: string;
+  };
+}
+
+export interface CardGeneratorGitRepo extends GitHubRepo {
+  open_issues: number;
+  watchers: number;
+  forks_count: number;
 }

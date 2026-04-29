@@ -1,5 +1,5 @@
 // app/api/readyz/route.ts
-import {NextResponse} from "next/server";
+import {NextRequest, NextResponse} from "next/server";
 import {healthMonitor} from "@/lib/health-monitor";
 import {supabaseCircuit, redisCircuit} from "@/lib/circuit-breaker";
 
@@ -8,8 +8,16 @@ import {supabaseCircuit, redisCircuit} from "@/lib/circuit-breaker";
  * This checks all critical dependencies (DB, Redis, etc.)
  * Used by load balancers to determine if traffic should be routed to this instance
  */
-export async function GET() {
-  const status = healthMonitor.getStatus();
+export async function GET(req: NextRequest) {
+  // parameter to force check
+  const forceCheck = req.nextUrl.searchParams.get("force_check") === "true";
+  if (forceCheck) {
+    await healthMonitor.forceCheck();
+  }
+  // Note :- instrumentation is disabled for now as it is interfering with the compilation of the app, we will enable it once we have a better understanding of the issue and how to fix it without breaking the app
+  // const status = healthMonitor.getStatus();
+
+  const status = await healthMonitor.forceCheck(); // Ensure we get the latest status on each request
 
   const isInitializing =
     status.services.supabase.status === "unknown" || status.services.redis.status === "unknown";

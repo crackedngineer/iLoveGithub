@@ -4,13 +4,54 @@ All notable changes to this project will be documented in this file.
 
 ---
 
-## [0.23.3](https://github.com/crackedngineer/iLoveGithub/compare/v0.23.2...v0.23.3) (2026-01-12)
+## [0.26.0](https://github.com/crackedngineer/iLoveGithub/compare/v0.25.0...v0.26.0) (2026-04-29)
 
+### Features
+
+- daily keep-alive schedule and code-review-graph config ([792debc](https://github.com/crackedngineer/iLoveGithub/commit/792debcc144eaec9833d027a23be6ec90e68624f))
+- enhance ToolLoading and ToolViewer components with improved UI and loading states; add RepoExplorer component for repository analysis ([74277dd](https://github.com/crackedngineer/iLoveGithub/commit/74277dd249c0f43cdf320470de6ff63bab199d94))
+- implement new feature for user authentication and improve error handling ([68bdeae](https://github.com/crackedngineer/iLoveGithub/commit/68bdeae0eab4f7cecc3d911be04e4f976dbb9613))
+- increase header max length to 150 characters in commitlint configuration ([0ff3a0f](https://github.com/crackedngineer/iLoveGithub/commit/0ff3a0f3531712ea2b961d6d8106e4931aa29fa7))
+
+## [0.25.0](https://github.com/crackedngineer/iLoveGithub/compare/v0.24.0...v0.25.0) (2026-04-07)
+
+### Features
+
+- add visualify card generation and theme management ([a415ca9](https://github.com/crackedngineer/iLoveGithub/commit/a415ca944d653a657eb82d4e3448aec11db0cd63))
+
+## [0.24.0](https://github.com/crackedngineer/iLoveGithub/compare/v0.23.4...v0.24.0) (2026-03-19)
+
+### Features
+
+- add Supabase keep-alive workflow and script for database maintenance ([9be1cf2](https://github.com/crackedngineer/iLoveGithub/commit/9be1cf2f12abf704bdde7d4051289ab297910577))
+- merge fixes ([85da3ca](https://github.com/crackedngineer/iLoveGithub/commit/85da3ca7c1a0194a1b6477eba6a79b44e4935618))
 
 ### Bug Fixes
 
-* update uptime status and improve badge generation iusing shield.io ([449bc17](https://github.com/crackedngineer/iLoveGithub/commit/449bc17b7eb9dc5405ee61e7aa25c8f75329316e))
-* update uptime status and improve badge generation iusing shield.io ([c4ce6ea](https://github.com/crackedngineer/iLoveGithub/commit/c4ce6eaddd193fcb3bc63dafef087b0a2f2188d6))
+- package.json & package-lock.json to reduce vulnerabilities ([e4963f4](https://github.com/crackedngineer/iLoveGithub/commit/e4963f4175efd97d000e9a2b0466baeafe76436f))
+- package.json & package-lock.json to reduce vulnerabilities ([7b85569](https://github.com/crackedngineer/iLoveGithub/commit/7b85569606b716fc390db1e8f305a8661976f109))
+- package.json & package-lock.json to reduce vulnerabilities ([c7d3c6c](https://github.com/crackedngineer/iLoveGithub/commit/c7d3c6c5294d053da36fe84b239a2aa05c97bab2))
+- package.json & package-lock.json to reduce vulnerabilities ([6742805](https://github.com/crackedngineer/iLoveGithub/commit/67428050982aee32d125ee66a328a5e8391b006f))
+- update Supabase keep-alive workflow to correctly generate requirements and run script ([9c787a3](https://github.com/crackedngineer/iLoveGithub/commit/9c787a382549dc6696f58f11cb3a4b79063d866e))
+- upgrade @supabase/supabase-js from 2.87.1 to 2.89.0 ([feebfe1](https://github.com/crackedngineer/iLoveGithub/commit/feebfe1c464211ccfcaf88ad7506871257875682))
+- upgrade @upstash/redis from 1.35.8 to 1.36.0 ([42b8508](https://github.com/crackedngineer/iLoveGithub/commit/42b8508638079243b2c0fd3d0bf2657a46dc896e))
+- upgrade lucide-react from 0.561.0 to 0.562.0 ([362d28f](https://github.com/crackedngineer/iLoveGithub/commit/362d28fb8cefb48bed17da435c8c62ad65a97648))
+- upgrade motion from 12.23.25 to 12.23.26 ([8469ba6](https://github.com/crackedngineer/iLoveGithub/commit/8469ba68f0be27ff190c20f3cea989bc8888211b))
+- upgrade nodemailer from 7.0.11 to 7.0.12 ([339ddfe](https://github.com/crackedngineer/iLoveGithub/commit/339ddfe1beebf584c2b6a1226744a0d4fbf63c0e))
+
+## [0.23.4](https://github.com/crackedngineer/iLoveGithub/compare/v0.23.3...v0.23.4) (2026-01-13)
+
+### Bug Fixes
+
+- enable force check for readiness probe in uptime workflow ([adb0664](https://github.com/crackedngineer/iLoveGithub/commit/adb066450bf289c9c544dd07698a2ed5748c9c5f))
+- enable force check for readiness probe in uptime workflow ([20fa128](https://github.com/crackedngineer/iLoveGithub/commit/20fa1285890da1c3b2032e35228daabf1f75fd94))
+
+## [0.23.3](https://github.com/crackedngineer/iLoveGithub/compare/v0.23.2...v0.23.3) (2026-01-12)
+
+### Bug Fixes
+
+- update uptime status and improve badge generation iusing shield.io ([449bc17](https://github.com/crackedngineer/iLoveGithub/commit/449bc17b7eb9dc5405ee61e7aa25c8f75329316e))
+- update uptime status and improve badge generation iusing shield.io ([c4ce6ea](https://github.com/crackedngineer/iLoveGithub/commit/c4ce6eaddd193fcb3bc63dafef087b0a2f2188d6))
 
 ## [0.23.2](https://github.com/crackedngineer/iLoveGithub/compare/v0.23.1...v0.23.2) (2026-01-10)
 

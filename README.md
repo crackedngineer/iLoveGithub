@@ -23,7 +23,7 @@
   <!-- Product Hunt -->
   <a href="https://www.producthunt.com/products/ilovegithub?embed=true&utm_source=badge-featured&utm_medium=badge&utm_source=badge-ilovegithub" target="_blank"><img src="https://api.producthunt.com/widgets/embed-image/v1/featured.svg?post_id=967157&theme=light&t=1765774887097" alt="iLoveGithub - A&#0032;curated&#0032;collection&#0032;of&#0032;magical&#0032;tools&#0032;built&#0032;around&#0032;GitHub&#0032; | Product Hunt" style="width: 250px; height: 54px;" width="250" height="54" /></a>
   <!-- ScoutForge -->
-  <a href="https://scoutforge.net/reviews/ilovegithub/" target="_blank" rel="noopener noreferrer" class="transform hover:scale-105 transition duration-300"><img alt="Trusted and Reviewed by Scout Forge Badge" width="250" height="54" class="rounded-md h-14" src="https://scoutforge.net/wp-content/themes/wp-theme/assets/img/badges/badge-light.webp"></a>
+  <!-- <a href="https://scoutforge.net/reviews/ilovegithub/" target="_blank" rel="noopener noreferrer" class="transform hover:scale-105 transition duration-300"><img alt="Trusted and Reviewed by Scout Forge Badge" width="250" height="54" class="rounded-md h-14" src="https://scoutforge.net/wp-content/themes/wp-theme/assets/img/badges/badge-light.webp"></a> -->
   <!-- Peerlist -->
   <a href="https://peerlist.io/crackedngineer/project/ilovegithub" target="_blank" rel="noopener noreferrer" class="transform hover:scale-105 transition duration-300"><img alt="iLoveGithub Peerlist Badge" width="250" height="54" class="rounded-md h-14" src="https://peerlist.io/api/v1/projects/embed/PRJH8OEJ9OJ8E88PJ3R66977NBDAOK?showUpvote=true&amp;theme=light"></a>
 </p>

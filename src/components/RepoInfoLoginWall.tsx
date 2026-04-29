@@ -33,7 +33,7 @@ const RepoInfoLoginWall: React.FC<RepoInfoLoginWallProps> = ({children, isLogged
   }
 
   return (
-    <div className="w-full max-w-4xl mx-auto mt-8 relative">
+    <div className="w-full mt-8 relative">
       {/* Blurred background */}
       <div className="filter blur-sm opacity-40">{children}</div>
 

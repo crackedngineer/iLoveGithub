@@ -1,3 +1,4 @@
+import path from "path";
 import GithubToolsList from "./tools.json";
 import {rootDomain} from "@/lib/utils";
 
@@ -20,9 +21,18 @@ const customConfig = {
  */
 const nextConfig = {
   reactStrictMode: true,
+  serverExternalPackages: ["@resvg/resvg-js"],
 
   /** Allow remote images from Vercel Blob storage */
   images: {
+    localPatterns: [
+      {
+        pathname: "/api/visualify/**",
+      },
+      {
+        pathname: "/icons/**",
+      },
+    ],
     remotePatterns: [
       {
         protocol: "https",
@@ -60,7 +70,12 @@ const nextConfig = {
 // })
 
 // Export both if needed in your app
-export default {
+const config = {
   ...nextConfig,
   ...customConfig,
+  turbopack: {
+    root: path.join(__dirname, ".."),
+  },
 };
+
+export default config;

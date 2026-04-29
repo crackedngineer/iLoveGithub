@@ -1,9 +1,9 @@
+import axios from "axios";
 import {clsx, type ClassValue} from "clsx";
 import {twMerge} from "tailwind-merge";
 
 export const protocol = process.env.NODE_ENV === "production" ? "https" : "http";
 export const rootDomain = process.env.NEXT_PUBLIC_ROOT_DOMAIN || "localhost";
-export const fullRootDomain = `${protocol}://${rootDomain}`;
 
 export function cn(...inputs: ClassValue[]) {
   return twMerge(clsx(inputs));
@@ -14,7 +14,11 @@ export function getHostnameFromUrl(urlString: string): string | null {
     const url = new URL(urlString);
     return url.hostname;
   } catch (err) {
-    console.error("Invalid URL:", urlString);
+    if (err instanceof TypeError) {
+      console.error("Invalid URL:", urlString, err.message);
+    } else {
+      console.error("Unexpected error while parsing URL:", urlString, err);
+    }
     return null;
   }
 }
@@ -52,4 +56,29 @@ export function extractSubdomainFromHostname(hostname: string): string | null {
     hostname !== root && hostname !== `www.${root}` && hostname.endsWith(`.${root}`);
 
   return isSubdomain ? hostname.replace(`.${root}`, "") : null;
+}
+
+export function newGithubClient(token: string) {
+  return axios.create({
+    baseURL: "https://api.github.com",
+    headers: {
+      Accept: "application/vnd.github+json",
+      Authorization: token,
+    },
+  });
+}
+
+export async function getRepoDetails(token: string, owner: string, repo: string) {
+  const githubClient = newGithubClient(token);
+
+  try {
+    const repoRes = await githubClient.get(`/repos/${owner}/${repo}`);
+    return repoRes.data;
+  } catch (error) {
+    if (error instanceof Error) {
+      console.error("Error fetching repo details:", error.message);
+    } else {
+      console.error("Error fetching repo details:", error);
+    }
+  }
 }

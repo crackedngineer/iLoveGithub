@@ -1,0 +1,11 @@
+{
+  "permissions": {
+    "allow": [
+      "mcp__code-review-graph__get_architecture_overview_tool",
+      "Bash(npx tsc *)",
+      "Bash(grep -v \"//.*max-w\")",
+      "Bash(sort -t: -k1,1)"
+    ]
+  },
+  "enabledMcpjsonServers": ["code-review-graph"]
+}

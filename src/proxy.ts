@@ -2,13 +2,16 @@ import {type NextRequest, NextResponse} from "next/server";
 import {extractSubdomainFromHostname} from "./lib/utils";
 import {healthMonitor} from "./lib/health-monitor";
 
+const GITHUB_TOKEN = process.env.NEXT_PUBLIC_GITHUB_TOKEN;
+const AUTH_HEADER = "authorization";
+
 function extractSubdomain(req: NextRequest): string | null {
   const host = req.headers.get("host") || "";
   const hostname = host.split(":")[0];
   return extractSubdomainFromHostname(hostname);
 }
 
-export function middleware(request: NextRequest) {
+export function proxy(request: NextRequest) {
   const {pathname} = request.nextUrl;
 
   // Always allow health check endpoints
@@ -63,6 +66,24 @@ export function middleware(request: NextRequest) {
     // Rewrite to /tools/[subdomain]/[owner]/[repo]
     return NextResponse.rewrite(new URL(`/tools/${subdomain}/${owner}/${repo}`, request.url));
   }
+
+  // Only apply token injection for GitHub-related API routes
+  const isGithubApiRoute =
+    pathname.startsWith("/api/repo") || pathname.startsWith("/api/visualify");
+  if (!isGithubApiRoute || !GITHUB_TOKEN) {
+    return NextResponse.next();
+  }
+
+  const incomingAuth = request.headers.get(AUTH_HEADER);
+  if (incomingAuth && incomingAuth.trim().length > 0) {
+    // Keep provided token if client already sent one
+    return NextResponse.next();
+  }
+
+  const headers = new Headers(request.headers);
+  headers.set(AUTH_HEADER, `Bearer ${GITHUB_TOKEN}`);
+
+  return NextResponse.next({request: {headers}});
 }
 
 export const config = {
