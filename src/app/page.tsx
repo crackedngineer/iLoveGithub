@@ -1,8 +1,8 @@
 "use client";
 
-import "./style.css";
+import {useEffect} from "react";
 import {useRouter} from "next/navigation";
-import RepoSearch from "@/components/RepoSearch";
+import RepoExplorer from "@/components/RepoExplorer";
 import AppLayout from "@/components/AppLayout";
 import {Introduction} from "@/components/Introduction";
 import {getHostnameFromUrl, extractSubdomainFromHostname, rootDomain} from "@/lib/utils";
@@ -10,34 +10,31 @@ import {getHostnameFromUrl, extractSubdomainFromHostname, rootDomain} from "@/li
 function hasSubdomain(urlString: string): boolean {
   const hostname = getHostnameFromUrl(urlString);
   if (!hostname) return false;
-
   const subdomain = extractSubdomainFromHostname(hostname);
   return !!subdomain && subdomain !== "www";
 }
 
 export default function Home() {
   const router = useRouter();
-  const url = window?.location?.href || "";
 
-  if (hasSubdomain(url)) {
-    const protocol = window.location.protocol;
-    window.location.href = `${protocol}//${rootDomain}`;
-  }
+  useEffect(() => {
+    const url = window.location.href;
+    if (hasSubdomain(url)) {
+      window.location.href = `${window.location.protocol}//${rootDomain}`;
+    }
+  }, []);
 
   return (
     <AppLayout>
-      <main className="flex-1 w-full max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 py-8">
+      <div className="w-full max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8">
         <Introduction />
-        <RepoSearch
+        <RepoExplorer
           trending={true}
-          onRepoSubmit={(owner: string, repo: string) => {
-            if (owner.trim() && repo.trim()) {
-              router.push(`/${owner}/${repo}`);
-            }
+          onRepoSubmit={(owner, repo) => {
+            if (owner.trim() && repo.trim()) router.push(`/${owner}/${repo}`);
           }}
-          value={""}
         />
-      </main>
+      </div>
     </AppLayout>
   );
 }
