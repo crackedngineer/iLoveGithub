@@ -4,6 +4,24 @@ All notable changes to this project will be documented in this file.
 
 ---
 
+## [0.27.0](https://github.com/crackedngineer/iLoveGithub/compare/v0.26.0...v0.27.0) (2026-04-30)
+
+
+### Features
+
+* add swipe navigation and hint for blog post navigation ([368fac9](https://github.com/crackedngineer/iLoveGithub/commit/368fac9d5b76618dc872de7a4d2ee7c5662cd465))
+* **blog:** add BlogPostClient component with swipe navigation and structured data ([5ab58dc](https://github.com/crackedngineer/iLoveGithub/commit/5ab58dcb6ea0c24906b708890b2afd9b852746a5))
+* **blog:** create blog layout with metadata for SEO and social sharing ([5ab58dc](https://github.com/crackedngineer/iLoveGithub/commit/5ab58dcb6ea0c24906b708890b2afd9b852746a5))
+* enhance blog features with view tracking, comments, and UI improvements ([097e521](https://github.com/crackedngineer/iLoveGithub/commit/097e521c28a11f44fced9b237a5bf264dede28be))
+
+
+### Bug Fixes
+
+* **layout:** update metadata images and add robots and alternates for better indexing ([5ab58dc](https://github.com/crackedngineer/iLoveGithub/commit/5ab58dcb6ea0c24906b708890b2afd9b852746a5))
+* updated package-lock.json ([7100af9](https://github.com/crackedngineer/iLoveGithub/commit/7100af9a66547f9bf95e2e705e295f3ef38ceee6))
+* updated sitemap ([7187131](https://github.com/crackedngineer/iLoveGithub/commit/7187131a9b450b96d2824c009a7ba8b15680b3ed))
+* updated vercel acyion to v42 ([c717ea0](https://github.com/crackedngineer/iLoveGithub/commit/c717ea00b1d508bde094345250fb73dcccbdd962))
+
 ## [0.26.0](https://github.com/crackedngineer/iLoveGithub/compare/v0.25.0...v0.26.0) (2026-04-29)
 
 ### Features
