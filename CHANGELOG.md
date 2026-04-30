@@ -4,6 +4,13 @@ All notable changes to this project will be documented in this file.
 
 ---
 
+## [0.27.1](https://github.com/crackedngineer/iLoveGithub/compare/v0.27.0...v0.27.1) (2026-04-30)
+
+
+### Bug Fixes
+
+* remove outdated rewrites from vercel configuration ([a3ec6b6](https://github.com/crackedngineer/iLoveGithub/commit/a3ec6b6dcdfa30cc8f6c3a164ef18ec3e1c83241))
+
 ## [0.27.0](https://github.com/crackedngineer/iLoveGithub/compare/v0.26.0...v0.27.0) (2026-04-30)
 
 
