@@ -1,0 +1,23 @@
+[
+  {
+    "rule": "frontmatter_required",
+    "severity": "error",
+    "message": "Missing frontmatter field: slug",
+    "file": "blog/posts/hello-world.md",
+    "line": 1
+  },
+  {
+    "rule": "frontmatter_required",
+    "severity": "error",
+    "message": "Missing frontmatter field: date",
+    "file": "blog/posts/hello-world.md",
+    "line": 1
+  },
+  {
+    "rule": "ai_review",
+    "severity": "warning",
+    "message": "AI review failed or returned invalid JSON",
+    "file": "blog/posts/hello-world.md",
+    "line": 1
+  }
+]

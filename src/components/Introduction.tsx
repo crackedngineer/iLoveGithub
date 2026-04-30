@@ -57,7 +57,7 @@ export const Introduction = () => {
 
       {/* Heading — text-4xl on mobile avoids single-word wrapping on 375px screens */}
       <h1
-        className="text-4xl sm:text-5xl 
+        className="text-4xl sm:text-5xl xl:text-6xl
                      font-bold tracking-tight leading-[1.08] mb-4"
       >
         <span className="text-foreground">Discover </span>
@@ -68,7 +68,7 @@ export const Introduction = () => {
       </h1>
 
       {/* Subtitle */}
-      <p className="text-sm sm:text-base text-muted-foreground max-w-md mx-auto leading-relaxed mb-6">
+      <p className="text-sm sm:text-base xl:text-lg text-muted-foreground max-w-2xl mx-auto leading-relaxed mb-6">
         Explore repositories and discover the best tools to transform your GitHub experience — all
         in one place.
       </p>

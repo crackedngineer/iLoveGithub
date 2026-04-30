@@ -1,0 +1,33 @@
+severity_threshold: error   # info | warning | error
+
+rules:
+  frontmatter_required:
+    enabled: true
+    severity: error
+    fields: ["title", "slug", "date", "description"]
+
+  heading_hierarchy:
+    enabled: true
+    severity: warning
+
+  trailing_whitespace:
+    enabled: true
+    severity: info
+
+  broken_links:
+    enabled: true
+    severity: error
+
+ai_review:
+  enabled: true
+  severity: warning
+  model: gemini-2.5-flash
+  # model: openai/gpt-oss-120b
+  max_tokens: 300
+  checks:
+    - clarity
+    - seo
+    - tone
+    - engagement
+    - grammar
+    - techical_accuracy

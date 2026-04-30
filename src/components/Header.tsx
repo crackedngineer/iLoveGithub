@@ -1,9 +1,22 @@
 "use client";
 
-import React, {useState, useEffect} from "react";
+import React, {useState, useEffect, useRef} from "react";
 import Link from "next/link";
 import Image from "next/image";
-import {Menu, X, Sun, Moon, User, Coffee, QrCode} from "lucide-react";
+import {
+  Menu,
+  X,
+  Sun,
+  Moon,
+  User,
+  Coffee,
+  QrCode,
+  BookOpen,
+  FileClock,
+  Github,
+  Mail,
+  Send,
+} from "lucide-react";
 import {appVersion} from "@/lib/version";
 import {
   DropdownMenu,
@@ -13,41 +26,73 @@ import {
   DropdownMenuSeparator,
   DropdownMenuItem,
 } from "@/components/ui/dropdown-menu";
-import {GitHubStarsButton} from "@/components/ui/shadcn-io/github-stars-button";
 import DonationModal from "./DonationModal";
 import {
   BUY_ME_COFFEE_URL,
   SUBSTACK_NEWSLETTER_URL,
   GITHUB_REPO_URL,
   GITHUB_SUBMIT_TOOL_URL,
-  DefaultGithubRepo,
 } from "@/constants";
-import {RateLimitDisplay} from "./RateLimitDisplay";
 import {useAppLocation} from "./AppLocationProvider";
 import {useAuth} from "./AuthProvider";
 import type {Session} from "@supabase/supabase-js";
+import {usePathname} from "next/navigation";
+import {useTheme} from "next-themes";
+import {cn} from "@/lib/utils";
 
-/* ── Nav text link ─────────────────────────────────────────── */
-function NavLink({onClick, children}: {onClick: () => void; children: React.ReactNode}) {
+/* ─────────────────────────────────────────────────────────────
+   NAV LINKS — defined once, reused in both desktop and sidebar
+───────────────────────────────────────────────────────────── */
+const NAV_LINKS = [
+  {label: "Blog", href: "/blog", icon: BookOpen, internal: true},
+  {label: "Changelog", href: "/changelog", icon: FileClock, internal: true},
+  {label: "Submit a Tool", href: GITHUB_SUBMIT_TOOL_URL, icon: Send, internal: false},
+  {label: "Newsletter", href: SUBSTACK_NEWSLETTER_URL, icon: Mail, internal: false},
+  {label: "Repository", href: GITHUB_REPO_URL, icon: Github, internal: false},
+] as const;
+
+/* ─────────────────────────────────────────────────────────────
+   NavLink — clean text link, active state via colour only
+───────────────────────────────────────────────────────────── */
+function NavLink({
+  href,
+  onClick,
+  active,
+  children,
+}: {
+  href?: string;
+  onClick?: () => void;
+  active?: boolean;
+  children: React.ReactNode;
+}) {
+  const base = cn(
+    "text-sm font-medium transition-colors duration-150 whitespace-nowrap px-1 py-0.5",
+    active
+      ? "text-github-blue dark:text-blue-400"
+      : "text-gray-500 dark:text-gray-400 hover:text-foreground dark:hover:text-white",
+  );
+
+  if (href)
+    return (
+      <Link href={href} className={base}>
+        {children}
+      </Link>
+    );
   return (
-    <button
-      onClick={onClick}
-      className="relative text-sm text-gray-500 dark:text-gray-400 hover:text-foreground
-                 transition-colors duration-150 py-1 group whitespace-nowrap"
-    >
+    <button onClick={onClick} className={base}>
       {children}
-      <span className="absolute bottom-0 left-0 h-px w-0 bg-github-blue group-hover:w-full transition-all duration-200" />
     </button>
   );
 }
 
-/* ── Sliding pill theme toggle ─────────────────────────────── */
+/* ─────────────────────────────────────────────────────────────
+   ThemeToggle — sliding pill with icon
+───────────────────────────────────────────────────────────── */
 function ThemeToggle({isDark, onToggle}: {isDark: boolean; onToggle: () => void}) {
   return (
     <button
       onClick={onToggle}
-      aria-label="Toggle theme"
-      title={isDark ? "Switch to light mode" : "Switch to dark mode"}
+      aria-label={isDark ? "Switch to light mode" : "Switch to dark mode"}
       className="relative w-[50px] h-[26px] rounded-full shrink-0
                  bg-gray-200 dark:bg-gray-700 transition-colors duration-300
                  focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-github-blue/50"
@@ -67,7 +112,68 @@ function ThemeToggle({isDark, onToggle}: {isDark: boolean; onToggle: () => void}
   );
 }
 
-/* ── User avatar dropdown ──────────────────────────────────── */
+/* ─────────────────────────────────────────────────────────────
+   MenuButton — accessible hamburger / close toggle
+───────────────────────────────────────────────────────────── */
+function MenuButton({open, onClick}: {open: boolean; onClick: () => void}) {
+  return (
+    <button
+      onClick={onClick}
+      aria-label={open ? "Close menu" : "Open menu"}
+      aria-expanded={open}
+      aria-controls="mobile-sidebar"
+      className="lg:hidden p-2 -mr-1 rounded-xl text-gray-600 dark:text-gray-300
+                 bg-background/70 border border-border/70 shadow-sm
+                 hover:bg-gray-100 dark:hover:bg-gray-800 transition-all"
+    >
+      {open ? <X className="w-5 h-5" /> : <Menu className="w-5 h-5" />}
+    </button>
+  );
+}
+
+/* ─────────────────────────────────────────────────────────────
+   DonateButton — donate dropdown (Buy Me a Coffee / QR)
+───────────────────────────────────────────────────────────── */
+function DonateButton({isInIndia, onQrOpen}: {isInIndia: boolean | null; onQrOpen: () => void}) {
+  return (
+    <DropdownMenu>
+      <DropdownMenuTrigger asChild>
+        <button
+          aria-label="Support the project"
+          className="inline-flex items-center gap-1.5 h-9 px-4 rounded-full text-sm font-medium
+                     bg-github-pink hover:bg-github-dark-pink text-white
+                     shadow-sm shadow-github-pink/20 hover:-translate-y-0.5
+                     transition-all duration-200 shrink-0 focus:outline-none
+                     focus-visible:ring-2 focus-visible:ring-github-pink/50"
+        >
+          <span className="animate-pulse-subtle text-[13px] leading-none" aria-hidden>
+            ♥
+          </span>
+          Donate
+        </button>
+      </DropdownMenuTrigger>
+      <DropdownMenuContent align="end" className="w-44 p-1.5">
+        <DropdownMenuItem
+          className="cursor-pointer text-sm gap-2"
+          onClick={() => window.open(BUY_ME_COFFEE_URL, "_blank")}
+        >
+          <Coffee className="h-3.5 w-3.5 shrink-0" />
+          Buy me a coffee
+        </DropdownMenuItem>
+        {isInIndia && (
+          <DropdownMenuItem className="cursor-pointer text-sm gap-2" onClick={onQrOpen}>
+            <QrCode className="h-3.5 w-3.5 shrink-0" />
+            Scan QR code
+          </DropdownMenuItem>
+        )}
+      </DropdownMenuContent>
+    </DropdownMenu>
+  );
+}
+
+/* ─────────────────────────────────────────────────────────────
+   UserDropdown — avatar button + sign-in / sign-out menu
+───────────────────────────────────────────────────────────── */
 export function UserDropdown({
   session,
   signOut,
@@ -85,9 +191,9 @@ export function UserDropdown({
       <DropdownMenuTrigger asChild>
         <button
           onClick={() => !isLoggedIn && signInWithGitHub()}
+          aria-label={isLoggedIn ? "User menu" : "Sign in with GitHub"}
           className="rounded-full ring-2 ring-transparent hover:ring-github-blue/30
                      transition-all duration-200 focus:outline-none shrink-0"
-          aria-label={isLoggedIn ? "User menu" : "Sign in with GitHub"}
         >
           {user?.avatar_url ? (
             <Image
@@ -99,8 +205,8 @@ export function UserDropdown({
             />
           ) : (
             <div
-              className="w-8 h-8 flex items-center justify-center
-                            bg-gray-100 dark:bg-gray-800 rounded-full border border-gray-200 dark:border-gray-700"
+              className="w-8 h-8 flex items-center justify-center rounded-full
+                            bg-gray-100 dark:bg-gray-800 border border-gray-200 dark:border-gray-700"
             >
               <User className="w-4 h-4 text-gray-400" />
             </div>
@@ -132,231 +238,367 @@ export function UserDropdown({
   );
 }
 
-/* ── Header ────────────────────────────────────────────────── */
-const Header = () => {
-  const [isMenuOpen, setIsMenuOpen] = useState(false);
-  const [isDarkMode, setIsDarkMode] = useState(false);
-  const [isDonationModalOpen, setIsDonationModalOpen] = useState(false);
-  const {isInIndia} = useAppLocation();
-  const {session, signOut, signInWithGitHub} = useAuth();
+/* ─────────────────────────────────────────────────────────────
+   Sidebar — slide-in drawer for mobile & tablet (< lg)
+   Stays mounted so CSS transitions animate both open and close.
+───────────────────────────────────────────────────────────── */
+function Sidebar({
+  open,
+  onClose,
+  pathname,
+  isDarkMode,
+  onToggleTheme,
+  session,
+  onSignIn,
+  onSignOut,
+  isInIndia,
+  onDonate,
+}: {
+  open: boolean;
+  onClose: () => void;
+  pathname: string | null;
+  isDarkMode: boolean;
+  onToggleTheme: () => void;
+  session: Session | null;
+  onSignIn: () => void;
+  onSignOut: () => void;
+  isInIndia: boolean | null;
+  onDonate: () => void;
+}) {
+  const sidebarRef = useRef<HTMLElement>(null);
+  const [mounted, setMounted] = useState(false);
 
+  /* Keep in DOM until exit transition completes */
   useEffect(() => {
-    setIsDarkMode(document.documentElement.classList.contains("dark"));
-  }, []);
+    if (open) {
+      setMounted(true);
+    }
+  }, [open]);
 
-  const toggleTheme = () => {
-    const isDark = document.documentElement.classList.toggle("dark");
-    localStorage.setItem("theme", isDark ? "dark" : "light");
-    setIsDarkMode(isDark);
+  const handleTransitionEnd = () => {
+    if (!open) setMounted(false);
   };
 
+  /* Close on Escape */
+  useEffect(() => {
+    if (!open) return;
+    const onKey = (e: KeyboardEvent) => {
+      if (e.key === "Escape") onClose();
+    };
+    document.addEventListener("keydown", onKey);
+    return () => document.removeEventListener("keydown", onKey);
+  }, [open, onClose]);
+
+  /* Prevent body scroll when open */
+  useEffect(() => {
+    document.body.style.overflow = open ? "hidden" : "";
+    return () => {
+      document.body.style.overflow = "";
+    };
+  }, [open]);
+
+  if (!mounted && !open) return null;
+
+  const close = () => onClose();
+
+  const linkClass =
+    "flex items-center gap-3 h-11 px-3 rounded-xl text-sm font-medium " +
+    "text-gray-700 dark:text-gray-300 " +
+    "hover:bg-gray-50 dark:hover:bg-gray-800/70 " +
+    "hover:text-github-blue dark:hover:text-white " +
+    "transition-all focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-github-blue/40";
+
   return (
-    <header
-      className="w-full sticky top-0 z-50
-                       bg-white/90 dark:bg-[#0d1117]/90 backdrop-blur-md
-                       transition-colors duration-300"
+    <div
+      role="dialog"
+      aria-modal="true"
+      aria-label="Navigation menu"
+      id="mobile-sidebar"
+      className={cn(
+        "lg:hidden fixed inset-0 z-50 transition-opacity duration-300 ease-in-out",
+        open ? "opacity-100 pointer-events-auto" : "opacity-0 pointer-events-none",
+      )}
+      onTransitionEnd={handleTransitionEnd}
     >
-      {/* Bottom gradient rule */}
-      <div
-        className="absolute bottom-0 left-0 right-0 h-px
-                      bg-gradient-to-r from-github-blue via-gray-200 to-github-green
-                      dark:via-gray-800 opacity-60"
+      {/* Scrim */}
+      <button
+        type="button"
+        aria-label="Close menu"
+        tabIndex={-1}
+        className="absolute inset-0 bg-black/35 backdrop-blur-[2px] cursor-default"
+        onClick={close}
       />
 
-      {/* ── Main bar ──────────────────────────────────────────── */}
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 h-[60px] flex items-center gap-6">
-        {/* Logo */}
-        <Link href="/" className="flex items-center gap-2 shrink-0 group">
-          <Image
-            alt="iLoveGithub"
-            src="/icons/favicon.png"
-            width={22}
-            height={22}
-            className="group-hover:rotate-12 transition-transform duration-300"
-          />
-          <span className="font-display text-[15px] font-bold tracking-tight text-github-gray dark:text-white">
-            iLove<span className="text-github-blue">Github</span>
-            <span className="ml-1.5 text-[10px] font-mono font-normal text-gray-400 dark:text-gray-600 tracking-wider">
-              v{appVersion}
-            </span>
-          </span>
-        </Link>
-
-        {/* Hairline divider + nav (desktop) */}
-        <div className="hidden md:flex items-center gap-5">
-          <span className="w-px h-5 bg-gray-200 dark:bg-gray-700 shrink-0" />
-          <NavLink onClick={() => window.open(GITHUB_SUBMIT_TOOL_URL, "_blank")}>
-            Submit a Tool
-          </NavLink>
-          <NavLink onClick={() => window.open(SUBSTACK_NEWSLETTER_URL, "_blank")}>
-            Newsletter
-          </NavLink>
-        </div>
-
-        {/* Push right */}
-        <div className="flex-1" />
-
-        {/* ── Right actions (desktop) — all h-9 ─────────────── */}
-        <div className="hidden md:flex items-center gap-2.5">
-          {/* Rate limit — only when not logged in */}
-          {!session && (
-            <div className="mr-1">
-              <RateLimitDisplay />
-            </div>
-          )}
-
-          <ThemeToggle isDark={isDarkMode} onToggle={toggleTheme} />
-
-          {/* Donate */}
-          <DropdownMenu>
-            <DropdownMenuTrigger asChild>
-              <button
-                className="inline-flex items-center gap-1.5 h-9 px-4 rounded-full text-sm font-medium
-                           bg-github-pink hover:bg-github-dark-pink text-white
-                           transition-colors duration-150 shrink-0 focus:outline-none"
-              >
-                <span className="animate-pulse-subtle text-[13px] leading-none">♥</span>
-                Donate
-              </button>
-            </DropdownMenuTrigger>
-            {!isDonationModalOpen && (
-              <DropdownMenuContent align="end" className="w-44 p-1.5">
-                <DropdownMenuItem
-                  className="cursor-pointer text-sm gap-2"
-                  onClick={() => window.open(BUY_ME_COFFEE_URL, "_blank")}
-                >
-                  <Coffee className="h-3.5 w-3.5 shrink-0" />
-                  Buy me a coffee
-                </DropdownMenuItem>
-                {isInIndia && (
-                  <DropdownMenuItem
-                    className="cursor-pointer text-sm gap-2"
-                    onClick={() => setIsDonationModalOpen(true)}
-                  >
-                    <QrCode className="h-3.5 w-3.5 shrink-0" />
-                    Scan QR code
-                  </DropdownMenuItem>
-                )}
-              </DropdownMenuContent>
-            )}
-          </DropdownMenu>
-
-          {/* Stars — hidden at md, shown from lg to avoid crowding */}
-          <div className="hidden lg:block">
-            <GitHubStarsButton
-              username={DefaultGithubRepo.owner}
-              repo={DefaultGithubRepo.repo}
-              className="h-9 text-sm px-3"
-              onClick={() => window.open(GITHUB_REPO_URL, "_blank")}
-            />
-          </div>
-
-          <UserDropdown session={session!} signOut={signOut} signInWithGitHub={signInWithGitHub} />
-        </div>
-
-        {/* Mobile hamburger */}
-        <button
-          className="md:hidden p-1.5 -mr-1 rounded-md text-gray-600 dark:text-gray-300
-                     hover:bg-gray-100 dark:hover:bg-gray-800 transition-colors"
-          onClick={() => setIsMenuOpen((p) => !p)}
-          aria-label="Toggle menu"
-          aria-expanded={isMenuOpen}
+      {/* Drawer */}
+      <aside
+        ref={sidebarRef}
+        className={cn(
+          "absolute right-0 top-0 h-dvh w-[min(88vw,340px)] flex flex-col",
+          "bg-white dark:bg-[#0d1117]",
+          "border-l border-gray-200 dark:border-gray-800 shadow-2xl overflow-y-auto",
+          "transition-transform duration-300 ease-in-out",
+          open ? "translate-x-0" : "translate-x-full",
+        )}
+      >
+        {/* ── Drawer header ───────────────────────── */}
+        <div
+          className="flex items-center justify-between px-4 py-4
+                        border-b border-gray-100 dark:border-gray-800 shrink-0"
         >
-          {isMenuOpen ? <X className="w-5 h-5" /> : <Menu className="w-5 h-5" />}
-        </button>
-      </div>
+          <Link href="/" onClick={close} className="flex items-center gap-2">
+            <span
+              className="flex h-8 w-8 items-center justify-center rounded-xl
+                             bg-github-blue/10 ring-1 ring-github-blue/20"
+            >
+              <Image alt="iLoveGithub" src="/icons/favicon.png" width={20} height={20} />
+            </span>
+            <span className="font-display text-sm font-bold text-foreground">
+              iLove<span className="text-github-blue">Github</span>
+            </span>
+          </Link>
+          <button
+            onClick={close}
+            aria-label="Close menu"
+            className="p-1.5 rounded-lg text-gray-500 hover:bg-gray-100 dark:hover:bg-gray-800 transition-colors"
+          >
+            <X className="h-5 w-5" />
+          </button>
+        </div>
 
-      {/* ── Mobile drawer ─────────────────────────────────────── */}
-      {isMenuOpen && (
-        <div className="md:hidden border-t border-gray-100 dark:border-gray-800 animate-slide-down">
-          <div className="px-3 py-2 space-y-0.5">
-            {/* Nav links */}
-            {[
-              {label: "Submit a Tool", href: GITHUB_SUBMIT_TOOL_URL},
-              {label: "Newsletter", href: SUBSTACK_NEWSLETTER_URL},
-              {label: "Repository", href: GITHUB_REPO_URL},
-            ].map(({label, href}) => (
+        {/* ── Nav links ───────────────────────────── */}
+        <nav aria-label="Mobile navigation" className="flex-1 px-3 py-3 space-y-0.5">
+          {NAV_LINKS.map(({label, href, icon: Icon, internal}) => {
+            const isActive = internal && (pathname?.startsWith(href) ?? false);
+            const cls = cn(
+              linkClass,
+              isActive && "text-github-blue bg-github-blue/5 dark:bg-github-blue/10",
+            );
+
+            return internal ? (
+              <Link key={label} href={href} onClick={close} className={cls}>
+                <Icon size={16} />
+                {label}
+              </Link>
+            ) : (
               <a
                 key={label}
                 href={href}
                 target="_blank"
                 rel="noopener noreferrer"
-                onClick={() => setIsMenuOpen(false)}
-                className="flex items-center h-11 px-3 rounded-lg text-sm
-                           text-gray-700 dark:text-gray-300
-                           hover:bg-gray-50 dark:hover:bg-gray-800/60
-                           hover:text-github-blue dark:hover:text-white
-                           transition-colors"
+                onClick={close}
+                className={cls}
               >
+                <Icon size={16} />
                 {label}
               </a>
-            ))}
+            );
+          })}
+        </nav>
 
-            <div className="py-1">
-              <div className="h-px bg-gray-100 dark:bg-gray-800" />
-            </div>
+        {/* ── Utilities ───────────────────────────── */}
+        <div className="px-3 py-3 space-y-0.5 border-t border-gray-100 dark:border-gray-800 shrink-0">
+          {/* Theme toggle */}
+          <div className="flex items-center justify-between h-11 px-3">
+            <span className="text-sm text-gray-600 dark:text-gray-400">
+              {isDarkMode ? "Dark mode" : "Light mode"}
+            </span>
+            <ThemeToggle isDark={isDarkMode} onToggle={onToggleTheme} />
+          </div>
 
-            {/* Theme + Donate row */}
-            <div className="flex items-center justify-between h-11 px-3">
-              <span className="text-sm text-gray-600 dark:text-gray-400">
-                {isDarkMode ? "Dark mode" : "Light mode"}
+          {/* Donate */}
+          <a
+            href={BUY_ME_COFFEE_URL}
+            target="_blank"
+            rel="noopener noreferrer"
+            onClick={close}
+            className={cn(linkClass, "text-github-pink hover:text-github-pink")}
+          >
+            <span className="animate-pulse-subtle" aria-hidden>
+              ♥
+            </span>
+            Donate
+          </a>
+
+          {/* QR (India only) */}
+          {isInIndia && (
+            <button
+              onClick={() => {
+                onDonate();
+                close();
+              }}
+              className={linkClass}
+            >
+              <QrCode size={16} />
+              Scan QR Code
+            </button>
+          )}
+        </div>
+
+        {/* ── Auth ────────────────────────────────── */}
+        <div className="px-3 pb-4 pt-3 border-t border-gray-100 dark:border-gray-800 shrink-0">
+          {session ? (
+            <button
+              onClick={() => {
+                onSignOut();
+                close();
+              }}
+              className="flex items-center w-full h-11 px-3 rounded-xl text-sm font-medium
+                         text-red-600 hover:bg-red-50 dark:hover:bg-red-900/20 transition-colors"
+            >
+              Log out
+            </button>
+          ) : (
+            <button
+              onClick={() => {
+                onSignIn();
+                close();
+              }}
+              className={linkClass + " w-full"}
+            >
+              <Github size={16} />
+              Login with GitHub
+            </button>
+          )}
+        </div>
+      </aside>
+    </div>
+  );
+}
+
+/* ─────────────────────────────────────────────────────────────
+   Header — sticky top bar
+   Desktop (≥ lg):  Logo | Nav links        | ThemeToggle Donate GitHub UserDropdown
+   Mobile/Tablet:   Logo                    | MenuButton → Sidebar
+───────────────────────────────────────────────────────────── */
+const Header = () => {
+  const [sidebarOpen, setSidebarOpen] = useState(false);
+  const [donationOpen, setDonationOpen] = useState(false);
+  const {isInIndia} = useAppLocation();
+  const {session, signOut, signInWithGitHub} = useAuth();
+  const {theme, setTheme} = useTheme();
+  const pathname = usePathname();
+  const isDarkMode = theme === "dark";
+
+  const toggleTheme = () => setTheme(isDarkMode ? "light" : "dark");
+
+  return (
+    <>
+      <header
+        className="w-full sticky top-0 z-50
+                   bg-white/80 dark:bg-[#0d1117]/80 backdrop-blur-xl
+                   border-b border-gray-200/60 dark:border-white/5
+                   shadow-sm shadow-black/[0.03] dark:shadow-black/20
+                   transition-colors duration-300"
+      >
+        {/* Gradient accent rule */}
+        <div
+          aria-hidden
+          className="absolute bottom-0 left-0 right-0 h-px
+                     bg-gradient-to-r from-github-blue/60 via-github-pink/30 to-github-green/60
+                     opacity-70"
+        />
+
+        <div
+          className="max-w-screen-2xl mx-auto px-4 sm:px-6 lg:px-8 2xl:px-12
+                        h-[60px] flex items-center gap-6"
+        >
+          {/* ── Logo ──────────────────────────────── */}
+          <Link href="/" className="flex items-center gap-2.5 shrink-0 group">
+            <span
+              className="flex h-9 w-9 items-center justify-center rounded-xl
+                             bg-github-blue/10 ring-1 ring-github-blue/20
+                             transition-all duration-300
+                             group-hover:bg-github-blue/15 group-hover:ring-github-blue/40"
+            >
+              <Image
+                alt="iLoveGithub"
+                src="/icons/favicon.png"
+                width={22}
+                height={22}
+                className="group-hover:rotate-12 transition-transform duration-300"
+              />
+            </span>
+            <span
+              className="font-display text-[15px] font-bold tracking-tight
+                             text-github-gray dark:text-white"
+            >
+              iLove<span className="text-github-blue">Github</span>
+              <span
+                className="ml-1.5 text-[10px] font-mono font-normal
+                               text-gray-400 dark:text-gray-600 tracking-wider"
+              >
+                v{appVersion}
               </span>
-              <ThemeToggle isDark={isDarkMode} onToggle={toggleTheme} />
-            </div>
+            </span>
+          </Link>
 
+          {/* ── Desktop nav ───────────────────────── */}
+          <nav aria-label="Main navigation" className="hidden lg:flex items-center gap-5 ml-2">
+            <span aria-hidden className="w-px h-5 bg-gray-200 dark:bg-gray-700 shrink-0" />
+            {NAV_LINKS.map(({label, href, internal}) => {
+              if (!internal) return null;
+              return (
+                <NavLink key={label} href={href} active={pathname?.startsWith(href)}>
+                  {label}
+                </NavLink>
+              );
+            })}
+          </nav>
+
+          {/* ── Spacer ────────────────────────────── */}
+          <div className="flex-1" aria-hidden />
+
+          {/* ── Desktop actions ───────────────────── */}
+          <div className="hidden lg:flex items-center gap-3" role="toolbar" aria-label="Actions">
+            <ThemeToggle isDark={isDarkMode} onToggle={toggleTheme} />
+
+            <DonateButton isInIndia={isInIndia} onQrOpen={() => setDonationOpen(true)} />
+
+            {/* GitHub repo — icon-only, replaces the GitHubStarsButton */}
             <a
-              href={BUY_ME_COFFEE_URL}
+              href={GITHUB_REPO_URL}
               target="_blank"
               rel="noopener noreferrer"
-              onClick={() => setIsMenuOpen(false)}
-              className="flex items-center gap-2 h-11 px-3 rounded-lg text-sm
-                         text-github-pink hover:bg-gray-50 dark:hover:bg-gray-800/60
-                         transition-colors"
+              aria-label="View on GitHub"
+              className="p-2 rounded-lg text-gray-500 dark:text-gray-400
+                         hover:text-foreground dark:hover:text-white
+                         hover:bg-gray-100 dark:hover:bg-gray-800
+                         transition-all duration-150 shrink-0"
             >
-              <span className="animate-pulse-subtle">♥</span>
-              Donate
+              <Github className="w-[18px] h-[18px]" />
             </a>
 
-            <div className="py-1">
-              <div className="h-px bg-gray-100 dark:bg-gray-800" />
-            </div>
-
-            {/* Auth */}
-            {session ? (
-              <button
-                className="flex items-center h-11 px-3 w-full rounded-lg text-sm
-                           text-red-600 hover:bg-red-50 dark:hover:bg-red-900/20 transition-colors"
-                onClick={() => {
-                  signOut();
-                  setIsMenuOpen(false);
-                }}
-              >
-                Log out
-              </button>
-            ) : (
-              <button
-                className="flex items-center h-11 px-3 w-full rounded-lg text-sm
-                           text-gray-700 dark:text-gray-300
-                           hover:bg-gray-50 dark:hover:bg-gray-800/60
-                           hover:text-github-blue dark:hover:text-white transition-colors"
-                onClick={() => {
-                  signInWithGitHub();
-                  setIsMenuOpen(false);
-                }}
-              >
-                Login with GitHub
-              </button>
-            )}
+            <UserDropdown
+              session={session!}
+              signOut={signOut}
+              signInWithGitHub={signInWithGitHub}
+            />
           </div>
+
+          {/* ── Mobile/tablet menu button ──────────── */}
+          <MenuButton open={sidebarOpen} onClick={() => setSidebarOpen((p) => !p)} />
         </div>
-      )}
+      </header>
+
+      <Sidebar
+        open={sidebarOpen}
+        onClose={() => setSidebarOpen(false)}
+        pathname={pathname}
+        isDarkMode={isDarkMode}
+        onToggleTheme={toggleTheme}
+        session={session}
+        onSignIn={signInWithGitHub}
+        onSignOut={signOut}
+        isInIndia={isInIndia}
+        onDonate={() => setDonationOpen(true)}
+      />
 
       <DonationModal
-        isOpen={isDonationModalOpen}
-        onClose={() => setIsDonationModalOpen(false)}
+        isOpen={donationOpen}
+        onClose={() => setDonationOpen(false)}
         isIndiaLocation={isInIndia}
       />
-    </header>
+    </>
   );
 };
 

@@ -6,13 +6,12 @@ All notable changes to this project will be documented in this file.
 
 ## [0.26.0](https://github.com/crackedngineer/iLoveGithub/compare/v0.25.0...v0.26.0) (2026-04-29)
 
-
 ### Features
 
-* daily keep-alive schedule and code-review-graph config ([792debc](https://github.com/crackedngineer/iLoveGithub/commit/792debcc144eaec9833d027a23be6ec90e68624f))
-* enhance ToolLoading and ToolViewer components with improved UI and loading states; add RepoExplorer component for repository analysis ([74277dd](https://github.com/crackedngineer/iLoveGithub/commit/74277dd249c0f43cdf320470de6ff63bab199d94))
-* implement new feature for user authentication and improve error handling ([68bdeae](https://github.com/crackedngineer/iLoveGithub/commit/68bdeae0eab4f7cecc3d911be04e4f976dbb9613))
-* increase header max length to 150 characters in commitlint configuration ([0ff3a0f](https://github.com/crackedngineer/iLoveGithub/commit/0ff3a0f3531712ea2b961d6d8106e4931aa29fa7))
+- daily keep-alive schedule and code-review-graph config ([792debc](https://github.com/crackedngineer/iLoveGithub/commit/792debcc144eaec9833d027a23be6ec90e68624f))
+- enhance ToolLoading and ToolViewer components with improved UI and loading states; add RepoExplorer component for repository analysis ([74277dd](https://github.com/crackedngineer/iLoveGithub/commit/74277dd249c0f43cdf320470de6ff63bab199d94))
+- implement new feature for user authentication and improve error handling ([68bdeae](https://github.com/crackedngineer/iLoveGithub/commit/68bdeae0eab4f7cecc3d911be04e4f976dbb9613))
+- increase header max length to 150 characters in commitlint configuration ([0ff3a0f](https://github.com/crackedngineer/iLoveGithub/commit/0ff3a0f3531712ea2b961d6d8106e4931aa29fa7))
 
 ## [0.25.0](https://github.com/crackedngineer/iLoveGithub/compare/v0.24.0...v0.25.0) (2026-04-07)
 

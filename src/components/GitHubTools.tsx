@@ -240,8 +240,8 @@ const GitHubTools = ({tools}: {tools: Tool[]}) => {
         </div>
       ) : (
         <div className="space-y-14">
-          {categories.map(([category, categoryTools]) => {
-            const accent = categoryAccent(category);
+          {categories.map(([category, categoryTools], index) => {
+            const accent = ACCENTS[index];
             return (
               <section key={category}>
                 {/* Category header */}
@@ -255,7 +255,7 @@ const GitHubTools = ({tools}: {tools: Tool[]}) => {
                   </span>
                 </div>
 
-                <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-5">
+                <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 2xl:grid-cols-5 gap-5">
                   {categoryTools.map((tool) => (
                     <ToolCard key={tool.name} tool={tool} accent={accent} />
                   ))}

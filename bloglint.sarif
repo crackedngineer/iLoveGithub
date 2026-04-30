@@ -1,0 +1,72 @@
+{
+  "version": "2.1.0",
+  "runs": [
+    {
+      "tool": {
+        "driver": {
+          "name": "BlogLint",
+          "rules": []
+        }
+      },
+      "results": [
+        {
+          "ruleId": "frontmatter_required",
+          "level": "error",
+          "message": {
+            "text": "Missing frontmatter field: slug"
+          },
+          "locations": [
+            {
+              "physicalLocation": {
+                "artifactLocation": {
+                  "uri": "blog/posts/hello-world.md"
+                },
+                "region": {
+                  "startLine": 1
+                }
+              }
+            }
+          ]
+        },
+        {
+          "ruleId": "frontmatter_required",
+          "level": "error",
+          "message": {
+            "text": "Missing frontmatter field: date"
+          },
+          "locations": [
+            {
+              "physicalLocation": {
+                "artifactLocation": {
+                  "uri": "blog/posts/hello-world.md"
+                },
+                "region": {
+                  "startLine": 1
+                }
+              }
+            }
+          ]
+        },
+        {
+          "ruleId": "ai_review",
+          "level": "warning",
+          "message": {
+            "text": "AI review failed or returned invalid JSON"
+          },
+          "locations": [
+            {
+              "physicalLocation": {
+                "artifactLocation": {
+                  "uri": "blog/posts/hello-world.md"
+                },
+                "region": {
+                  "startLine": 1
+                }
+              }
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

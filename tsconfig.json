@@ -28,6 +28,7 @@
     "**/*.tsx",
     ".next/types/**/*.ts",
     "next-sitemap.config.js",
+    "scripts/build-blog.js",
     ".next/dev/types/**/*.ts"
   ],
   "exclude": ["node_modules"]
