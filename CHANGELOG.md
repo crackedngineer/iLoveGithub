@@ -4,6 +4,13 @@ All notable changes to this project will be documented in this file.
 
 ---
 
+## [0.27.2](https://github.com/crackedngineer/iLoveGithub/compare/v0.27.1...v0.27.2) (2026-04-30)
+
+
+### Bug Fixes
+
+* remove unused blog lint configuration and update GiscusComments repo handling ([46eb228](https://github.com/crackedngineer/iLoveGithub/commit/46eb228b9ec05a20ec41aa33e6f05cade22e2496))
+
 ## [0.27.1](https://github.com/crackedngineer/iLoveGithub/compare/v0.27.0...v0.27.1) (2026-04-30)
 
 
