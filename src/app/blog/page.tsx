@@ -167,7 +167,7 @@ export default function Blog() {
             <span className="w-6 h-px bg-current opacity-60" />
           </p>
 
-          <h1 className="text-4xl sm:text-5xl xl:text-6xl font-extrabold tracking-tight leading-tight mb-3">
+          <h1 className="text-4xl sm:text-5xl xl:text-6xl font-bold tracking-tight leading-tight mb-3">
             <span className="text-foreground">Engineering </span>
             <span className="bg-gradient-to-r from-github-blue to-github-green bg-clip-text text-transparent">
               Blog

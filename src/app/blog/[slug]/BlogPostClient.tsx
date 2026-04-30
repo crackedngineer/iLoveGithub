@@ -410,7 +410,7 @@ export default function BlogPostClient() {
               )}
 
               <h1
-                className="font-display text-2xl sm:text-3xl md:text-4xl xl:text-5xl font-extrabold
+                className="font-display text-2xl sm:text-3xl md:text-4xl xl:text-5xl font-bold
                              text-foreground leading-[1.12] tracking-tight mb-5 break-words"
               >
                 {post.title}

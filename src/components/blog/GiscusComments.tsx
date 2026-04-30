@@ -2,12 +2,13 @@
 
 import {useEffect, useRef} from "react";
 import {useTheme} from "next-themes";
+import {GITHUB_REPO_URL} from "@/constants";
 
 const GiscusComments = ({slug}: {slug: string}) => {
   const containerRef = useRef<HTMLDivElement>(null);
   const {resolvedTheme} = useTheme();
 
-  const repo = process.env.NEXT_PUBLIC_GISCUS_REPO;
+  const repo = GITHUB_REPO_URL.replace("https://github.com/", "");
   const repoId = process.env.NEXT_PUBLIC_GISCUS_REPO_ID;
   const category = process.env.NEXT_PUBLIC_GISCUS_CATEGORY || "Announcements";
   const categoryId = process.env.NEXT_PUBLIC_GISCUS_CATEGORY_ID;
