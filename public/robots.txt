@@ -1,6 +1,10 @@
-# *
+# iLoveGithub — https://ilovegithub.vercel.app
 User-agent: *
 Allow: /
+
+# Keep auth callbacks and API routes out of the index
+Disallow: /auth/
+Disallow: /api/
 
 # Host
 Host: https://ilovegithub.vercel.app
