@@ -1,5 +1,5 @@
-const fs = require("fs");
-const path = require("path");
+import fs from "fs";
+import path from "path";
 
 /** Read the blog index built by the prebuild script */
 function getBlogPosts() {
@@ -13,7 +13,7 @@ function getBlogPosts() {
 }
 
 /** @type {import('next-sitemap').IConfig} */
-module.exports = {
+export default {
   siteUrl: "https://ilovegithub.vercel.app",
   generateRobotsTxt: false, // managed manually in public/robots.txt
   generateIndexSitemap: false,
