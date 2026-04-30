@@ -29,6 +29,11 @@ import {getAllBlogPosts, getBlogPostBySlug} from "@/services/blog";
 import {BlogPostDetail, BlogPostFrontMatter} from "@/lib/types";
 import {useTheme} from "next-themes";
 import {Skeleton} from "@/components/ui/skeleton";
+import {cn} from "@/lib/utils";
+
+const SWIPE_THRESHOLD = 80;
+const PANEL_REST_WIDTH = 20; // px — chevron peek at rest
+const PANEL_MAX_WIDTH = 154; // px — fully expanded
 
 /* ── Loading skeleton ───────────────────────────────────────── */
 function PostSkeleton() {
@@ -56,6 +61,151 @@ function PostSkeleton() {
   );
 }
 
+/* ── Swipe navigation edge panels ──────────────────────────── */
+function SwipeNavOverlay({
+  previousPost,
+  nextPost,
+  swipeDelta,
+}: {
+  previousPost: BlogPostFrontMatter | null;
+  nextPost: BlogPostFrontMatter | null;
+  swipeDelta: number;
+}) {
+  if (!previousPost && !nextPost) return null;
+
+  const progress = Math.min(Math.abs(swipeDelta) / SWIPE_THRESHOLD, 1);
+  const isSwipingRight = swipeDelta > 12 && !!previousPost;
+  const isSwipingLeft = swipeDelta < -12 && !!nextPost;
+
+  const leftWidth = isSwipingRight
+    ? PANEL_REST_WIDTH + Math.round(progress * (PANEL_MAX_WIDTH - PANEL_REST_WIDTH))
+    : PANEL_REST_WIDTH;
+
+  const rightWidth = isSwipingLeft
+    ? PANEL_REST_WIDTH + Math.round(progress * (PANEL_MAX_WIDTH - PANEL_REST_WIDTH))
+    : PANEL_REST_WIDTH;
+
+  const edgePanel =
+    "flex items-center h-full bg-white/95 dark:bg-[#0d1117]/95 " +
+    "border-y shadow-xl overflow-hidden";
+
+  return (
+    <div className="lg:hidden fixed inset-0 z-40 pointer-events-none" aria-hidden>
+      {/* ── Left edge — previous post ──────────────────── */}
+      {previousPost && (
+        <>
+          <div
+            className="absolute left-0 top-0 h-full overflow-hidden"
+            style={{
+              width: `${leftWidth}px`,
+              opacity: isSwipingRight ? 0.35 + progress * 0.6 : 0.4,
+              transition: isSwipingRight ? "none" : "width 0.35s ease, opacity 0.35s ease",
+            }}
+          >
+            <div
+              className={cn(
+                edgePanel,
+                "gap-1.5 px-1.5 rounded-r-2xl border-r border-gray-200 dark:border-gray-700/80",
+              )}
+            >
+              <ChevronLeft size={14} className="shrink-0 text-github-blue" />
+              {isSwipingRight && progress > 0.38 && (
+                <span className="text-[10px] font-semibold text-foreground line-clamp-4 leading-tight">
+                  {previousPost.title}
+                </span>
+              )}
+            </div>
+          </div>
+
+          {/* Edge glow */}
+          {isSwipingRight && (
+            <div
+              className="absolute inset-y-0 left-0 w-24"
+              style={{
+                background: `linear-gradient(to right, rgba(59,130,246,${(progress * 0.1).toFixed(2)}), transparent)`,
+              }}
+            />
+          )}
+        </>
+      )}
+
+      {/* ── Right edge — next post ─────────────────────── */}
+      {nextPost && (
+        <>
+          <div
+            className="absolute right-0 top-0 h-full overflow-hidden"
+            style={{
+              width: `${rightWidth}px`,
+              opacity: isSwipingLeft ? 0.35 + progress * 0.6 : 0.4,
+              transition: isSwipingLeft ? "none" : "width 0.35s ease, opacity 0.35s ease",
+            }}
+          >
+            <div
+              className={cn(
+                edgePanel,
+                "justify-end gap-1.5 px-1.5 rounded-l-2xl border-l border-gray-200 dark:border-gray-700/80",
+              )}
+            >
+              {isSwipingLeft && progress > 0.38 && (
+                <span className="text-[10px] font-semibold text-foreground line-clamp-4 leading-tight text-right">
+                  {nextPost.title}
+                </span>
+              )}
+              <ChevronRight size={14} className="shrink-0 text-github-blue" />
+            </div>
+          </div>
+
+          {/* Edge glow */}
+          {isSwipingLeft && (
+            <div
+              className="absolute inset-y-0 right-0 w-24"
+              style={{
+                background: `linear-gradient(to left, rgba(59,130,246,${(progress * 0.1).toFixed(2)}), transparent)`,
+              }}
+            />
+          )}
+        </>
+      )}
+    </div>
+  );
+}
+
+/* ── One-time swipe discoverability hint ──────────────────── */
+function SwipeHint({
+  previousPost,
+  nextPost,
+  visible,
+}: {
+  previousPost: BlogPostFrontMatter | null;
+  nextPost: BlogPostFrontMatter | null;
+  visible: boolean;
+}) {
+  if (!previousPost && !nextPost) return null;
+
+  return (
+    <div
+      className={cn(
+        "fixed bottom-24 inset-x-0 flex justify-center z-50 lg:hidden pointer-events-none",
+        "transition-all duration-500 ease-in-out",
+        visible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-2",
+      )}
+      aria-hidden
+    >
+      <div
+        className="flex items-center gap-2 px-4 py-2 rounded-full
+                   bg-gray-900/85 dark:bg-gray-800/90 text-white
+                   text-[11px] font-medium shadow-xl backdrop-blur-sm
+                   border border-white/10"
+      >
+        {previousPost && <ChevronLeft size={11} />}
+        <span>Swipe to navigate</span>
+        {nextPost && <ChevronRight size={11} />}
+      </div>
+    </div>
+  );
+}
+
+/* ── Blog post page ─────────────────────────────────────────── */
 export default function BlogPost() {
   const {slug} = useParams() as {slug: string};
   const router = useRouter();
@@ -65,11 +215,12 @@ export default function BlogPost() {
   const [isLoading, setIsLoading] = useState(true);
   const [pageUrl, setPageUrl] = useState("");
   const [tocOpen, setTocOpen] = useState(false);
+  const [swipeDelta, setSwipeDelta] = useState(0);
+  const [showSwipeHint, setShowSwipeHint] = useState(false);
   const touchStart = useRef<{x: number; y: number} | null>(null);
   const {theme} = useTheme();
   const isDarkMode = theme === "dark";
 
-  /* Stable page URL for share buttons */
   useEffect(() => {
     setPageUrl(window.location.href);
   }, []);
@@ -101,6 +252,21 @@ export default function BlogPost() {
     };
   }, [allPosts, slug]);
 
+  /* Show swipe hint once per session when adjacent posts exist */
+  useEffect(() => {
+    if (!post || (!previousPost && !nextPost)) return;
+    if (typeof window !== "undefined" && sessionStorage.getItem("blog-swipe-hint-seen")) return;
+    const showId = setTimeout(() => setShowSwipeHint(true), 1200);
+    const hideId = setTimeout(() => {
+      setShowSwipeHint(false);
+      sessionStorage.setItem("blog-swipe-hint-seen", "1");
+    }, 4700);
+    return () => {
+      clearTimeout(showId);
+      clearTimeout(hideId);
+    };
+  }, [post, previousPost, nextPost]);
+
   const goToPost = (targetSlug?: string) => {
     if (targetSlug) router.push(`/blog/${targetSlug}`);
   };
@@ -116,9 +282,24 @@ export default function BlogPost() {
     touchStart.current = {x: touch.clientX, y: touch.clientY};
   };
 
+  /* Track live delta to drive swipe overlay */
+  const handleTouchMove = (event: TouchEvent<HTMLElement>) => {
+    if (!touchStart.current || !isSwipeSafeTarget(event.target)) return;
+    const touch = event.touches[0];
+    const deltaX = touch.clientX - touchStart.current.x;
+    const deltaY = touch.clientY - touchStart.current.y;
+    // Only reflect horizontal-dominant swipes
+    if (Math.abs(deltaX) > Math.abs(deltaY) * 0.8) {
+      setSwipeDelta(deltaX);
+    } else if (Math.abs(deltaY) > 16) {
+      setSwipeDelta(0); // vertical scroll — clear
+    }
+  };
+
   const handleTouchEnd = (event: TouchEvent<HTMLElement>) => {
     if (!touchStart.current || !isSwipeSafeTarget(event.target)) {
       touchStart.current = null;
+      setSwipeDelta(0);
       return;
     }
 
@@ -126,8 +307,10 @@ export default function BlogPost() {
     const deltaX = touch.clientX - touchStart.current.x;
     const deltaY = touch.clientY - touchStart.current.y;
     touchStart.current = null;
+    setSwipeDelta(0);
+    setShowSwipeHint(false);
 
-    if (Math.abs(deltaX) < 80 || Math.abs(deltaX) < Math.abs(deltaY) * 1.4) return;
+    if (Math.abs(deltaX) < SWIPE_THRESHOLD || Math.abs(deltaX) < Math.abs(deltaY) * 1.4) return;
 
     if (deltaX < 0) goToPost(nextPost?.slug);
     if (deltaX > 0) goToPost(previousPost?.slug);
@@ -189,13 +372,19 @@ export default function BlogPost() {
         tags={post.tags}
       />
 
-      {/* Reading progress — above header */}
       <ReadingProgress />
       <Header />
+
+      {/* Swipe edge panels — mobile only */}
+      <SwipeNavOverlay previousPost={previousPost} nextPost={nextPost} swipeDelta={swipeDelta} />
+
+      {/* First-visit swipe hint toast — mobile only */}
+      <SwipeHint previousPost={previousPost} nextPost={nextPost} visible={showSwipeHint} />
 
       <main
         className="flex-1 w-full min-w-0"
         onTouchStart={handleTouchStart}
+        onTouchMove={handleTouchMove}
         onTouchEnd={handleTouchEnd}
       >
         <div className="w-full max-w-screen-2xl mx-auto px-3 sm:px-6 lg:px-8 2xl:px-12 py-6 sm:py-8 lg:py-12">
@@ -347,6 +536,7 @@ export default function BlogPost() {
                 <MarkdownRenderer content={post.body} isDarkMode={isDarkMode} />
               </div>
 
+              {/* Prev / Next navigation */}
               {(previousPost || nextPost) && (
                 <nav
                   aria-label="Blog post navigation"
