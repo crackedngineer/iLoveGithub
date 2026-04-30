@@ -69,6 +69,7 @@
   --animate-fade-in: fade-in 0.3s ease-out;
   --animate-pulse-subtle: pulse-subtle 2s cubic-bezier(0.4, 0, 0.6, 1) infinite;
   --animate-slide-down: slide-down 0.2s ease-out;
+  --animate-slide-left: slide-left 0.24s cubic-bezier(0.22, 1, 0.36, 1);
 }
 
 @keyframes accordion-down {
@@ -118,6 +119,17 @@
   to {
     opacity: 1;
     transform: translateY(0);
+  }
+}
+
+@keyframes slide-left {
+  from {
+    opacity: 0;
+    transform: translateX(18px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
   }
 }
 

@@ -20,7 +20,11 @@ const BLOGS_QUERY = `
         created
         tags
         category
+        description
+        excerpt
         readTimeMinutes
+        coverImage
+        author
       }
     }
   }
@@ -50,6 +54,11 @@ const BLOG_QUERY = `
       description
       created
       tags
+      category
+      excerpt
+      coverImage
+      author
+      readTimeMinutes
       body
       related {
         slug

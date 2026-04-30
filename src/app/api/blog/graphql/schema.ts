@@ -11,6 +11,7 @@ export const typeDefs = `
     slug: String!
     title: String!
     description: String
+    excerpt: String
     created: String
     tags: [String!]
     body: String!

@@ -1,6 +1,7 @@
+"use client";
+
 import {useEffect, useState} from "react";
 import {cn} from "@/lib/utils";
-import {List} from "lucide-react";
 
 interface TOCItem {
   id: string;
@@ -15,79 +16,72 @@ interface TableOfContentsProps {
 
 const TableOfContents = ({content, className}: TableOfContentsProps) => {
   const [headings, setHeadings] = useState<TOCItem[]>([]);
-  const [activeId, setActiveId] = useState<string>("");
+  const [activeId, setActiveId] = useState("");
 
   useEffect(() => {
-    // Parse headings from markdown content
-    const headingRegex = /^(#{1,6})\s+(.+)$/gm;
     const matches: TOCItem[] = [];
-    let match;
-
-    while ((match = headingRegex.exec(content)) !== null) {
-      const level = match[1].length;
-      const text = match[2].trim();
-      const id = text
-        .toLowerCase()
-        .replace(/[^a-z0-9]+/g, "-")
-        .replace(/(^-|-$)/g, "");
-
-      matches.push({id, text, level});
+    let m;
+    const re = /^(#{1,6})\s+(.+)$/gm;
+    while ((m = re.exec(content)) !== null) {
+      const text = m[2].trim();
+      matches.push({
+        level: m[1].length,
+        text,
+        id: text
+          .toLowerCase()
+          .replace(/[^a-z0-9]+/g, "-")
+          .replace(/(^-|-$)/g, ""),
+      });
     }
-
     setHeadings(matches);
   }, [content]);
 
   useEffect(() => {
     const observer = new IntersectionObserver(
-      (entries) => {
-        entries.forEach((entry) => {
-          if (entry.isIntersecting) {
-            setActiveId(entry.target.id);
-          }
-        });
-      },
+      (entries) =>
+        entries.forEach((e) => {
+          if (e.isIntersecting) setActiveId(e.target.id);
+        }),
       {rootMargin: "-80px 0% -80% 0%", threshold: 0.1},
     );
-
     headings.forEach(({id}) => {
-      const element = document.getElementById(id);
-      if (element) observer.observe(element);
+      const el = document.getElementById(id);
+      if (el) observer.observe(el);
     });
-
     return () => observer.disconnect();
   }, [headings]);
 
-  const handleClick = (id: string) => {
-    const element = document.getElementById(id);
-    if (element) {
-      const yOffset = -100;
-      const y = element.getBoundingClientRect().top + window.pageYOffset + yOffset;
-      window.scrollTo({top: y, behavior: "smooth"});
+  const scrollTo = (id: string) => {
+    const el = document.getElementById(id);
+    if (el) {
+      window.scrollTo({
+        top: el.getBoundingClientRect().top + window.scrollY - 100,
+        behavior: "smooth",
+      });
     }
   };
 
-  if (headings.length === 0) return null;
+  if (!headings.length) return null;
 
   return (
     <nav className={cn("sticky top-24", className)}>
-      <div className="bg-white/80 dark:bg-gray-900/80 backdrop-blur-sm rounded-xl border border-gray-200 dark:border-gray-700 p-4 shadow-lg">
-        <div className="flex items-center gap-2 mb-4 pb-3 border-b border-gray-200 dark:border-gray-700">
-          <List className="h-5 w-5 text-github-blue" />
-          <h3 className="font-semibold text-github-gray dark:text-white">Table of Contents</h3>
-        </div>
-        <ul className="space-y-2 max-h-[60vh] overflow-y-auto pr-2 scrollbar-thin">
-          {headings.map((heading) => (
-            <li key={heading.id} style={{paddingLeft: `${(heading.level - 1) * 12}px`}}>
+      <div className="rounded-xl border border-border bg-card p-4">
+        <p className="text-[11px] font-semibold uppercase tracking-widest text-muted-foreground mb-3">
+          Contents
+        </p>
+        <ul className="space-y-0.5 max-h-[65vh] overflow-y-auto">
+          {headings.map((h) => (
+            <li key={h.id} style={{paddingLeft: `${(h.level - 1) * 10}px`}}>
               <button
-                onClick={() => handleClick(heading.id)}
+                onClick={() => scrollTo(h.id)}
                 className={cn(
-                  "text-left text-sm w-full py-1.5 px-2 rounded-md transition-all duration-200 hover:bg-gray-100 dark:hover:bg-gray-800",
-                  activeId === heading.id
-                    ? "text-github-blue font-medium bg-github-blue/10 dark:bg-github-blue/20"
-                    : "text-gray-600 dark:text-gray-400",
+                  "w-full text-left text-xs py-1 px-2 rounded-md transition-all duration-150",
+                  activeId === h.id
+                    ? "text-github-blue font-semibold bg-github-blue/8"
+                    : "text-muted-foreground hover:text-foreground hover:bg-muted",
                 )}
               >
-                {heading.text}
+                {h.text}
               </button>
             </li>
           ))}

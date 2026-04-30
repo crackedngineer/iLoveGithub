@@ -3,7 +3,7 @@
 import React from "react";
 import Link from "next/link";
 import {motion} from "framer-motion";
-import type {FrontMatter} from "@/lib/types";
+import type {BlogPostFrontMatter as FrontMatter} from "@/lib/types";
 
 interface RecommendedPostsProps {
   posts: FrontMatter[];
@@ -28,7 +28,7 @@ const RecommendedPosts: React.FC<RecommendedPostsProps> = ({posts}) => {
                 <time className="text-xs text-gray-400 block mb-1">{post.created}</time>
                 {post.tags && post.tags.length > 0 && (
                   <div className="flex flex-wrap gap-1 mt-2">
-                    {post.tags.slice(0, 2).map((tag) => (
+                    {post.tags.slice(0, 2).map((tag: string) => (
                       <span
                         key={tag}
                         className="text-xs text-gray-400 bg-gray-800/50 px-2 py-0.5 rounded-full"

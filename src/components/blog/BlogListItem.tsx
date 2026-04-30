@@ -1,39 +1,73 @@
 import Link from "next/link";
-import {Badge} from "@/components/ui/badge";
-import {Clock} from "lucide-react";
+import {ArrowUpRight, Clock} from "lucide-react";
 import type {BlogPostFrontMatter} from "@/lib/types";
 
 const BlogListItem = ({post}: {post: BlogPostFrontMatter}) => {
-  const formattedDate = new Date(post.created).toISOString().split("T")[0];
+  const date = new Date(post.created).toLocaleDateString("en-US", {
+    year: "numeric",
+    month: "short",
+    day: "numeric",
+  });
 
   return (
-    <article className="group py-8 border-b border-border/50 last:border-b-0 transition-colors hover:bg-muted/20 -mx-4 px-4 rounded-lg">
-      <div className="flex items-center gap-3 text-sm text-muted-foreground font-mono">
-        <time>{formattedDate}</time>
-        <span className="text-border">•</span>
-        <span className="flex items-center gap-1">
-          <Clock className="h-3.5 w-3.5" />
-          {post.readTimeMinutes ? `${post.readTimeMinutes} min read` : "Quick read"}
-        </span>
-      </div>
+    <article className="group py-7 last:pb-0">
+      <Link href={`/blog/${post.slug}`} className="block">
+        {/* Meta row */}
+        <div className="flex items-center gap-2.5 text-xs text-muted-foreground font-mono mb-2.5">
+          <time dateTime={post.created}>{date}</time>
+          {post.readTimeMinutes && (
+            <>
+              <span className="text-border">·</span>
+              <span className="flex items-center gap-1">
+                <Clock size={11} />
+                {post.readTimeMinutes} min read
+              </span>
+            </>
+          )}
+        </div>
 
-      <h2 className="mt-2 text-xl md:text-2xl font-bold text-foreground group-hover:text-primary transition-colors duration-200">
-        <Link href={`/blog/${post.slug}`}>{post.title}</Link>
-      </h2>
-
-      {post.excerpt && <p className="mt-2 text-muted-foreground leading-relaxed">{post.excerpt}</p>}
-
-      <div className="flex flex-wrap gap-2 mt-4">
-        {post.tags.map((tag) => (
-          <Badge
-            key={tag}
-            variant="outline"
-            className="bg-transparent border-border text-muted-foreground hover:border-foreground hover:text-foreground transition-colors duration-200"
+        {/* Title row */}
+        <div className="flex items-start justify-between gap-4">
+          <h2
+            className="text-lg sm:text-xl font-bold text-foreground leading-snug
+                         group-hover:text-github-blue transition-colors duration-150 flex-1"
           >
-            {tag}
-          </Badge>
-        ))}
-      </div>
+            {post.title}
+          </h2>
+          <ArrowUpRight
+            size={18}
+            className="shrink-0 mt-0.5 text-muted-foreground/40
+                       group-hover:text-github-blue group-hover:translate-x-0.5 group-hover:-translate-y-0.5
+                       transition-all duration-150"
+          />
+        </div>
+
+        {/* Excerpt */}
+        {post.excerpt && (
+          <p className="mt-2 text-sm text-muted-foreground leading-relaxed line-clamp-2">
+            {post.excerpt}
+          </p>
+        )}
+      </Link>
+
+      {/* Tags */}
+      {post.tags.length > 0 && (
+        <div className="flex flex-wrap gap-1.5 mt-3">
+          {post.tags.map((tag) => (
+            <a
+              key={tag}
+              href={`/blog?category=${encodeURIComponent(tag)}`}
+              className="inline-flex items-center px-2.5 py-0.5 rounded-full
+                         text-[11px] font-medium font-mono
+                         bg-secondary text-muted-foreground
+                         hover:bg-github-blue/10 hover:text-github-blue
+                         transition-colors duration-150"
+            >
+              #{tag}
+            </a>
+          ))}
+        </div>
+      )}
     </article>
   );
 };

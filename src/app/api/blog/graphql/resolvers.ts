@@ -1,7 +1,6 @@
 import {unstable_cache} from "next/cache";
 import {getBlogPosts, rankPosts, getRelatedSlugs} from "@/lib/mdx";
 import {BlogPostDetail, BlogRelatedPost} from "@/lib/types";
-import {get} from "http";
 
 const getCachedPosts = unstable_cache(async () => getBlogPosts(), ["all-blog-posts"], {
   revalidate: 60, // ISR: regenerate every 60s
@@ -18,13 +17,22 @@ export const resolvers = {
   Query: {
     blogs: async (
       _: unknown,
-      {query = "", page = 1, count = 10}: {query?: string; page?: number; count?: number},
+      {
+        query = "",
+        category = "",
+        page = 1,
+        count = 10,
+      }: {query?: string; category?: string; page?: number; count?: number},
     ) => {
       let posts = await getCachedPosts();
 
       if (query) {
         // posts = await getSearchIndex(posts, query);
         posts = await rankPosts(posts, query);
+      }
+
+      if (category) {
+        posts = posts.filter((post) => post.category === category || post.tags?.includes(category));
       }
 
       const start = (page - 1) * count;

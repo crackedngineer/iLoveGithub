@@ -1,3 +1,5 @@
+"use client";
+
 import {Rss, Copy, Download, Check} from "lucide-react";
 import {Button} from "@/components/ui/button";
 import {Popover, PopoverContent, PopoverTrigger} from "@/components/ui/popover";
@@ -9,12 +11,9 @@ const RssFeedButton = () => {
   const [copied, setCopied] = useState(false);
 
   const handleCopyUrl = async () => {
-    const feedUrl = `${window.location.origin}/blog`;
-    await navigator.clipboard.writeText(feedUrl);
+    await navigator.clipboard.writeText(`${window.location.origin}/blog`);
     setCopied(true);
-    toast("RSS URL copied!", {
-      description: "Add this URL to your RSS reader.",
-    });
+    toast("RSS URL copied!", {description: "Add this URL to your RSS reader."});
     setTimeout(() => setCopied(false), 2000);
   };
 
@@ -22,50 +21,44 @@ const RssFeedButton = () => {
     const rssFeed = await generateRssFeed();
     const blob = new Blob([rssFeed], {type: "application/rss+xml"});
     const url = URL.createObjectURL(blob);
-
-    const a = document.createElement("a");
-    a.href = url;
-    a.download = "feed.xml";
+    const a = Object.assign(document.createElement("a"), {href: url, download: "feed.xml"});
     document.body.appendChild(a);
     a.click();
     document.body.removeChild(a);
     URL.revokeObjectURL(url);
-
-    toast("RSS feed downloaded!", {
-      description: "Import the XML file into your RSS reader.",
-    });
+    toast("RSS feed downloaded!", {description: "Import the XML file into your RSS reader."});
   };
 
   return (
     <Popover>
       <PopoverTrigger asChild>
-        <Button
-          variant="outline"
-          size="sm"
-          className="gap-2 border-github-orange/30 text-github-orange hover:bg-github-orange/10 hover:border-github-orange"
-        >
-          <Rss className="h-4 w-4" />
+        <Button variant="outline" size="sm" className="gap-2 h-9 text-xs">
+          <Rss size={14} className="text-amber-500" />
           Subscribe
         </Button>
       </PopoverTrigger>
-      <PopoverContent className="w-64 p-3" align="end">
-        <div className="space-y-2">
-          <p className="text-sm font-medium text-github-gray dark:text-white">
-            Subscribe to RSS Feed
-          </p>
-          <p className="text-xs text-gray-500 dark:text-gray-400">
-            Stay updated with new blog posts
-          </p>
-          <div className="flex gap-2 pt-2">
-            <Button variant="outline" size="sm" className="flex-1 gap-1" onClick={handleCopyUrl}>
-              {copied ? <Check className="h-3 w-3 text-green-500" /> : <Copy className="h-3 w-3" />}
-              Copy URL
-            </Button>
-            <Button variant="outline" size="sm" className="flex-1 gap-1" onClick={handleDownload}>
-              <Download className="h-3 w-3" />
-              Download
-            </Button>
-          </div>
+      <PopoverContent className="w-60 p-4" align="center">
+        <p className="text-sm font-semibold mb-0.5">Subscribe to RSS</p>
+        <p className="text-xs text-muted-foreground mb-3">Stay updated with new posts</p>
+        <div className="flex gap-2">
+          <Button
+            variant="outline"
+            size="sm"
+            className="flex-1 gap-1.5 text-xs h-8"
+            onClick={handleCopyUrl}
+          >
+            {copied ? <Check size={12} className="text-green-500" /> : <Copy size={12} />}
+            Copy URL
+          </Button>
+          <Button
+            variant="outline"
+            size="sm"
+            className="flex-1 gap-1.5 text-xs h-8"
+            onClick={handleDownload}
+          >
+            <Download size={12} />
+            Download
+          </Button>
         </div>
       </PopoverContent>
     </Popover>

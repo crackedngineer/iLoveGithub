@@ -20,8 +20,8 @@ const InternalError = () => {
     <div className="min-h-screen flex flex-col bg-gradient-to-br from-white to-gray-100 dark:from-gray-950 dark:to-gray-900">
       <Header />
 
-      <main className="flex-1 flex items-center justify-center px-4 py-12">
-        <div className="text-center max-w-2xl mx-auto animate-fade-in">
+      <main className="flex-1 flex items-center justify-center px-4 sm:px-6 lg:px-8 2xl:px-12 py-12">
+        <div className="text-center max-w-4xl mx-auto animate-fade-in">
           {/* 404 Number with gradient */}
           <div className="mb-8">
             <h1 className="text-8xl md:text-9xl font-bold bg-gradient-to-r from-github-blue to-github-green bg-clip-text text-transparent mb-4">

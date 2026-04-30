@@ -15,9 +15,7 @@
     "export": "next export",
     "lint": "next lint",
     "lint:fix": "next lint --fix",
-    "commit": "cz",
-    "hugo:build": "hugo --gc --minify -s blog",
-    "hugo:serve": "hugo server -s blog"
+    "commit": "cz"
   },
   "husky": {
     "hooks": {
