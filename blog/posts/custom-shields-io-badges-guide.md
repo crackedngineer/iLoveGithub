@@ -9,7 +9,7 @@ created: 2026-05-01
 tags: Shields.io, GitHub README, GitHub Badges, Markdown, Badge Generator, Developer Tools, README Design, Dynamic Badges, Open Source
 coverImage: /blog/custom-shields-io-badges-guide/cover-image-1.png
 draft: false
-readTimeMinutes: 12
+readTimeMinutes: 15
 ---
 
 # How to Create Custom Shields.io Badges: Static & Dynamic

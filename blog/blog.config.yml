@@ -4,7 +4,7 @@ rules:
   frontmatter_required:
     enabled: true
     severity: error
-    fields: ["title", "slug", "date", "description"]
+    fields: ["title", "slug", "created", "description"]
 
   heading_hierarchy:
     enabled: true
