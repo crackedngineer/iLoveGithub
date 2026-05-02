@@ -16,6 +16,7 @@ import {
   ChevronLeft,
   ChevronRight,
 } from "lucide-react";
+import Image from "next/image";
 import BookmarkButton from "@/components/blog/BookmarkButton";
 import Header from "@/components/Header";
 import ReadingProgress from "@/components/blog/ReadingProgress";
@@ -382,10 +383,11 @@ export default function BlogPostClient() {
             <article className="w-full flex-1 min-w-0 max-w-none lg:max-w-[calc(100%-15rem)] xl:max-w-[calc(100%-18rem)]">
               {post.coverImage && (
                 <div className="relative h-44 min-[420px]:h-56 sm:h-72 md:h-80 lg:h-[420px] 2xl:h-[480px] rounded-xl sm:rounded-2xl overflow-hidden mb-6 sm:mb-8 shadow-md">
-                  <img
+                  <Image
                     src={post.coverImage}
                     alt={post.title}
-                    className="w-full h-full object-cover"
+                    fill
+                    sizes="(max-width: 768px) 100vw, (max-width: 1280px) calc(100vw - 2rem), 900px"
                   />
                   <div className="absolute inset-0 bg-gradient-to-t from-black/50 to-transparent" />
                 </div>

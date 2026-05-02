@@ -25,29 +25,39 @@ export async function generateMetadata({params}: Props): Promise<Metadata> {
       ? [{url: post.coverImage, width: 1200, height: 630, alt: post.title}]
       : [{url: `${SITE_URL}/og-image.png`, width: 1200, height: 630, alt: "iLoveGithub Blog"}];
 
+    const description = post.description || post.excerpt || "";
+
     return {
       title: `${post.title} | iLoveGithub Blog`,
-      description: post.description || post.excerpt || "",
+      description,
       authors: post.author ? [{name: post.author}] : undefined,
       keywords: post.tags,
       alternates: {
         canonical: `${SITE_URL}/blog/${slug}`,
       },
+      robots: {
+        index: true,
+        follow: true,
+        googleBot: {index: true, follow: true, "max-snippet": -1, "max-image-preview": "large"},
+      },
       openGraph: {
         title: post.title,
-        description: post.description || post.excerpt || "",
+        description,
         type: "article",
         url: `${SITE_URL}/blog/${slug}`,
         siteName: "iLoveGithub",
+        locale: "en_US",
         images,
         publishedTime: post.created,
+        modifiedTime: post.created,
         authors: post.author ? [post.author] : undefined,
         tags: post.tags,
+        section: post.category || undefined,
       },
       twitter: {
         card: "summary_large_image",
         title: post.title,
-        description: post.description || post.excerpt || "",
+        description,
         images: post.coverImage ? [post.coverImage] : [`${SITE_URL}/og-image.png`],
       },
     };
@@ -75,6 +85,7 @@ export default async function BlogPostPage({params}: Props) {
         ...(post.coverImage ? {image: post.coverImage} : {}),
         datePublished: post.created,
         dateModified: post.created,
+        inLanguage: "en",
         author: {
           "@type": "Person",
           name: post.author || "iLoveGithub Team",
@@ -86,6 +97,7 @@ export default async function BlogPostPage({params}: Props) {
         },
         url: `${SITE_URL}/blog/${slug}`,
         keywords: post.tags.join(", "),
+        ...(post.category ? {articleSection: post.category} : {}),
         mainEntityOfPage: {"@type": "WebPage", "@id": `${SITE_URL}/blog/${slug}`},
       }
     : null;
