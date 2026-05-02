@@ -4,6 +4,21 @@ All notable changes to this project will be documented in this file.
 
 ---
 
+## [0.28.0](https://github.com/crackedngineer/iLoveGithub/compare/v0.27.2...v0.28.0) (2026-05-02)
+
+
+### Features
+
+* add custom Shields.io badges guide and cover images ([41d57d8](https://github.com/crackedngineer/iLoveGithub/commit/41d57d803a573dc582be7998bcd9dafa44b75dbb))
+* **blog:** update read time from 10 to 12 minutes ([48c7986](https://github.com/crackedngineer/iLoveGithub/commit/48c7986f6db4ba5b950a9c10bdf306ee560a3fc4))
+
+
+### Bug Fixes
+
+* **blog:** update frontmatter field from 'date' to 'created' and increase read time to 15 minutes ([de2591b](https://github.com/crackedngineer/iLoveGithub/commit/de2591b23ceed98b191cd39ae158765c2f2006cf))
+* remove cache option from Python setup in workflows ([6f7de7f](https://github.com/crackedngineer/iLoveGithub/commit/6f7de7fd4d36a0f4b56af622031d5a4d3e2764ce))
+* replace img with next/image for blog post cover ([05ddf1a](https://github.com/crackedngineer/iLoveGithub/commit/05ddf1abf0489bb79f1311ec826ce515ddcbbb9b))
+
 ## [0.27.2](https://github.com/crackedngineer/iLoveGithub/compare/v0.27.1...v0.27.2) (2026-04-30)
 
 
