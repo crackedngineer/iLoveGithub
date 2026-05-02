@@ -32,6 +32,9 @@ const nextConfig = {
       {
         pathname: "/icons/**",
       },
+      {
+        pathname: "/blog/**",
+      },
     ],
     remotePatterns: [
       {

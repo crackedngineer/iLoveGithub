@@ -5,10 +5,11 @@ description: "Learn to create custom Shields.io badges for GitHub READMEs, blogs
 excerpt: "A practical guide to creating eye-catching Shields.io badges — static, styled, and dynamic — for GitHub READMEs, portfolios, and developer blogs."
 author: Subhomoy Roy Choudhury
 category: Web Development
-date: 2026-05-01
+created: 2026-05-01
 tags: Shields.io, GitHub README, GitHub Badges, Markdown, Badge Generator, Developer Tools, README Design, Dynamic Badges, Open Source
-coverImage: https://images.unsplash.com/photo-1555066931-4365d14bab8c?w=800&auto=format&fit=crop&q=60
+coverImage: /blog/custom-shields-io-badges-guide/cover-image-1.png
 draft: false
+readTimeMinutes: 10
 ---
 
 # How to Create Custom Shields.io Badges: Static & Dynamic
