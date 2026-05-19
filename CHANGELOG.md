@@ -6,50 +6,44 @@ All notable changes to this project will be documented in this file.
 
 ## [0.28.0](https://github.com/crackedngineer/iLoveGithub/compare/v0.27.2...v0.28.0) (2026-05-02)
 
-
 ### Features
 
-* add custom Shields.io badges guide and cover images ([41d57d8](https://github.com/crackedngineer/iLoveGithub/commit/41d57d803a573dc582be7998bcd9dafa44b75dbb))
-* **blog:** update read time from 10 to 12 minutes ([48c7986](https://github.com/crackedngineer/iLoveGithub/commit/48c7986f6db4ba5b950a9c10bdf306ee560a3fc4))
-
+- add custom Shields.io badges guide and cover images ([41d57d8](https://github.com/crackedngineer/iLoveGithub/commit/41d57d803a573dc582be7998bcd9dafa44b75dbb))
+- **blog:** update read time from 10 to 12 minutes ([48c7986](https://github.com/crackedngineer/iLoveGithub/commit/48c7986f6db4ba5b950a9c10bdf306ee560a3fc4))
 
 ### Bug Fixes
 
-* **blog:** update frontmatter field from 'date' to 'created' and increase read time to 15 minutes ([de2591b](https://github.com/crackedngineer/iLoveGithub/commit/de2591b23ceed98b191cd39ae158765c2f2006cf))
-* remove cache option from Python setup in workflows ([6f7de7f](https://github.com/crackedngineer/iLoveGithub/commit/6f7de7fd4d36a0f4b56af622031d5a4d3e2764ce))
-* replace img with next/image for blog post cover ([05ddf1a](https://github.com/crackedngineer/iLoveGithub/commit/05ddf1abf0489bb79f1311ec826ce515ddcbbb9b))
+- **blog:** update frontmatter field from 'date' to 'created' and increase read time to 15 minutes ([de2591b](https://github.com/crackedngineer/iLoveGithub/commit/de2591b23ceed98b191cd39ae158765c2f2006cf))
+- remove cache option from Python setup in workflows ([6f7de7f](https://github.com/crackedngineer/iLoveGithub/commit/6f7de7fd4d36a0f4b56af622031d5a4d3e2764ce))
+- replace img with next/image for blog post cover ([05ddf1a](https://github.com/crackedngineer/iLoveGithub/commit/05ddf1abf0489bb79f1311ec826ce515ddcbbb9b))
 
 ## [0.27.2](https://github.com/crackedngineer/iLoveGithub/compare/v0.27.1...v0.27.2) (2026-04-30)
 
-
 ### Bug Fixes
 
-* remove unused blog lint configuration and update GiscusComments repo handling ([46eb228](https://github.com/crackedngineer/iLoveGithub/commit/46eb228b9ec05a20ec41aa33e6f05cade22e2496))
+- remove unused blog lint configuration and update GiscusComments repo handling ([46eb228](https://github.com/crackedngineer/iLoveGithub/commit/46eb228b9ec05a20ec41aa33e6f05cade22e2496))
 
 ## [0.27.1](https://github.com/crackedngineer/iLoveGithub/compare/v0.27.0...v0.27.1) (2026-04-30)
 
-
 ### Bug Fixes
 
-* remove outdated rewrites from vercel configuration ([a3ec6b6](https://github.com/crackedngineer/iLoveGithub/commit/a3ec6b6dcdfa30cc8f6c3a164ef18ec3e1c83241))
+- remove outdated rewrites from vercel configuration ([a3ec6b6](https://github.com/crackedngineer/iLoveGithub/commit/a3ec6b6dcdfa30cc8f6c3a164ef18ec3e1c83241))
 
 ## [0.27.0](https://github.com/crackedngineer/iLoveGithub/compare/v0.26.0...v0.27.0) (2026-04-30)
 
-
 ### Features
 
-* add swipe navigation and hint for blog post navigation ([368fac9](https://github.com/crackedngineer/iLoveGithub/commit/368fac9d5b76618dc872de7a4d2ee7c5662cd465))
-* **blog:** add BlogPostClient component with swipe navigation and structured data ([5ab58dc](https://github.com/crackedngineer/iLoveGithub/commit/5ab58dcb6ea0c24906b708890b2afd9b852746a5))
-* **blog:** create blog layout with metadata for SEO and social sharing ([5ab58dc](https://github.com/crackedngineer/iLoveGithub/commit/5ab58dcb6ea0c24906b708890b2afd9b852746a5))
-* enhance blog features with view tracking, comments, and UI improvements ([097e521](https://github.com/crackedngineer/iLoveGithub/commit/097e521c28a11f44fced9b237a5bf264dede28be))
-
+- add swipe navigation and hint for blog post navigation ([368fac9](https://github.com/crackedngineer/iLoveGithub/commit/368fac9d5b76618dc872de7a4d2ee7c5662cd465))
+- **blog:** add BlogPostClient component with swipe navigation and structured data ([5ab58dc](https://github.com/crackedngineer/iLoveGithub/commit/5ab58dcb6ea0c24906b708890b2afd9b852746a5))
+- **blog:** create blog layout with metadata for SEO and social sharing ([5ab58dc](https://github.com/crackedngineer/iLoveGithub/commit/5ab58dcb6ea0c24906b708890b2afd9b852746a5))
+- enhance blog features with view tracking, comments, and UI improvements ([097e521](https://github.com/crackedngineer/iLoveGithub/commit/097e521c28a11f44fced9b237a5bf264dede28be))
 
 ### Bug Fixes
 
-* **layout:** update metadata images and add robots and alternates for better indexing ([5ab58dc](https://github.com/crackedngineer/iLoveGithub/commit/5ab58dcb6ea0c24906b708890b2afd9b852746a5))
-* updated package-lock.json ([7100af9](https://github.com/crackedngineer/iLoveGithub/commit/7100af9a66547f9bf95e2e705e295f3ef38ceee6))
-* updated sitemap ([7187131](https://github.com/crackedngineer/iLoveGithub/commit/7187131a9b450b96d2824c009a7ba8b15680b3ed))
-* updated vercel acyion to v42 ([c717ea0](https://github.com/crackedngineer/iLoveGithub/commit/c717ea00b1d508bde094345250fb73dcccbdd962))
+- **layout:** update metadata images and add robots and alternates for better indexing ([5ab58dc](https://github.com/crackedngineer/iLoveGithub/commit/5ab58dcb6ea0c24906b708890b2afd9b852746a5))
+- updated package-lock.json ([7100af9](https://github.com/crackedngineer/iLoveGithub/commit/7100af9a66547f9bf95e2e705e295f3ef38ceee6))
+- updated sitemap ([7187131](https://github.com/crackedngineer/iLoveGithub/commit/7187131a9b450b96d2824c009a7ba8b15680b3ed))
+- updated vercel acyion to v42 ([c717ea0](https://github.com/crackedngineer/iLoveGithub/commit/c717ea00b1d508bde094345250fb73dcccbdd962))
 
 ## [0.26.0](https://github.com/crackedngineer/iLoveGithub/compare/v0.25.0...v0.26.0) (2026-04-29)
 

@@ -1,6 +1,7 @@
 "use client";
 
 import React, {useEffect, useState, useCallback} from "react";
+import Image from "next/image";
 import {QrCode, Download, Copy, Check, RefreshCw, Share2} from "lucide-react";
 import {
   Dialog,
@@ -49,7 +50,7 @@ const ShareQRCodeModal = ({isOpen, onClose, repoName}: QRCodeModalProps) => {
       setQrImageUrl(null);
       setError(false);
     }
-  }, [isOpen, fetchQrCode]);
+  }, [url, isOpen, fetchQrCode]);
 
   const handleCopy = async () => {
     try {
@@ -122,12 +123,16 @@ const ShareQRCodeModal = ({isOpen, onClose, repoName}: QRCodeModalProps) => {
                 </button>
               </div>
             ) : qrImageUrl ? (
-              <img
+              <Image
                 src={qrImageUrl}
-                alt={`QR code for ${repoName}`}
-                className="w-52 h-52 object-contain"
+                alt="AI QR Code"
+                className="object-contain"
+                width={220}
+                height={220}
               />
-            ) : null}
+            ) : (
+              <p className="text-gray-400">Failed to load QR</p>
+            )}
           </div>
         </div>
 

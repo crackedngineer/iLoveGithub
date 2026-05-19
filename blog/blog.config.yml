@@ -1,4 +1,4 @@
-severity_threshold: error   # info | warning | error
+severity_threshold: error # info | warning | error
 
 rules:
   frontmatter_required:

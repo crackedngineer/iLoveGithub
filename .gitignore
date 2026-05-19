@@ -41,6 +41,10 @@ yarn-error.log*
 *.tsbuildinfo
 next-env.d.ts
 
+# Testing
+coverage/
+.jest-cache/
+*.lcov
 node_modules
 .env
 .vscode/*
@@ -48,6 +52,8 @@ node_modules
 # Hugo files
 blog/public
 blog/resources
-public/blog.* 
+public/blog.*
+
 # Added by code-review-graph
 .code-review-graph/
+settings.local.json

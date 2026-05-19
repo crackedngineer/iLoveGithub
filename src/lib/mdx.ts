@@ -24,12 +24,11 @@ export function rankPosts(posts: BlogPostDetail[], query: string) {
   }
 
   const results = miniSearch.search(q, {prefix: true});
-
   const postMap = new Map(posts.map((p) => [p.slug, p]));
-
   return results.map((r) => postMap.get(r.id)).filter(Boolean) as BlogPostDetail[];
 }
 
 export function getRelatedSlugs(slug: string, limit = 3): string[] {
-  return RelatedPosts[slug as keyof typeof RelatedPosts]?.slice(0, limit) ?? [];
+  const related = RelatedPosts as Record<string, string[]>;
+  return related[slug]?.slice(0, limit) ?? [];
 }

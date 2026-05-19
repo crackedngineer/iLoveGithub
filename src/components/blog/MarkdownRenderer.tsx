@@ -1,11 +1,12 @@
 "use client";
 
+import {useState, type HTMLAttributes} from "react";
+import Image from "next/image";
 import ReactMarkdown from "react-markdown";
 import remarkGfm from "remark-gfm";
 import {Prism as SyntaxHighlighter} from "react-syntax-highlighter";
 import {oneDark, oneLight} from "react-syntax-highlighter/dist/esm/styles/prism";
 import {Copy, Check} from "lucide-react";
-import {useState} from "react";
 
 interface MarkdownRendererProps {
   content: string;
@@ -119,21 +120,29 @@ const MarkdownRenderer = ({content, isDarkMode = false}: MarkdownRendererProps) 
           ),
 
           /* ── Images ────────────────────────────────────── */
-          img: ({src, alt}) => (
-            <figure className="my-6 sm:my-8 max-w-full overflow-hidden">
-              <img
-                src={src}
-                alt={alt}
-                className="rounded-xl shadow-md w-full max-w-full h-auto
-                         border border-border object-contain"
-              />
-              {alt && (
-                <figcaption className="text-center text-xs text-muted-foreground mt-2 italic">
-                  {alt}
-                </figcaption>
-              )}
-            </figure>
-          ),
+          img: ({src, alt}) => {
+            if (typeof src !== "string") {
+              return null;
+            }
+
+            return (
+              <figure className="my-6 sm:my-8 max-w-full overflow-hidden">
+                <Image
+                  src={src}
+                  alt={alt ?? ""}
+                  width={100}
+                  height={100}
+                  className="rounded-xl shadow-md w-full max-w-full h-auto
+                           border border-border object-contain"
+                />
+                {alt && (
+                  <figcaption className="text-center text-xs text-muted-foreground mt-2 italic">
+                    {alt}
+                  </figcaption>
+                )}
+              </figure>
+            );
+          },
 
           /* ── Tables ────────────────────────────────────── */
           table: ({children}) => (
@@ -166,7 +175,7 @@ const MarkdownRenderer = ({content, isDarkMode = false}: MarkdownRendererProps) 
           ),
 
           /* ── Code ──────────────────────────────────────── */
-          code({className, children, ...props}: {className?: string; [key: string]: any}) {
+          code({className, children, ...props}: HTMLAttributes<HTMLElement>) {
             const match = /language-(\w+)/.exec(className || "");
             const codeString = String(children).replace(/\n$/, "");
             const isBlock = match || codeString.includes("\n");

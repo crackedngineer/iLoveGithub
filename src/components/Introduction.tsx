@@ -1,5 +1,13 @@
+import Image from "next/image";
+
+type BadgeType = {
+  href: string;
+  src: string;
+  alt: string;
+};
+
 export const Introduction = () => {
-  const badges = [
+  const badges: BadgeType[] = [
     {
       href: "https://www.producthunt.com/posts/ilovegithub?embed=true&utm_source=badge-featured&utm_medium=badge&utm_source=badge-ilovegithub",
       src: "https://api.producthunt.com/widgets/embed-image/v1/featured.svg?post_id=967157&theme=light&t=1747590463334",
@@ -35,10 +43,11 @@ export const Introduction = () => {
             rel="noopener noreferrer"
             className="opacity-75 hover:opacity-100 hover:scale-105 transition-all duration-200"
           >
-            <img
+            <Image
               src={badge.src}
               alt={badge.alt}
               width={200}
+              height={44}
               className="h-11 rounded-md shadow-sm"
             />
           </a>

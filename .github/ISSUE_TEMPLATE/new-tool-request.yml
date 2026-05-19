@@ -20,7 +20,7 @@ body:
       placeholder: "e.g., GitHub1s"
     validations:
       required: true
-  
+
   - type: textarea
     id: description
     attributes:
@@ -29,7 +29,6 @@ body:
       placeholder: "One second to read GitHub code with VS Code."
     validations:
       required: true
-
 
   - type: input
     id: homepage

@@ -81,8 +81,8 @@ const GitVisualify = () => {
   const [owner, repoName] = params.slug || [];
   const {session} = useAuth();
 
-  const [repo, setRepo] = useState<RepoMeta | null>(null);
-  const [loading, setLoading] = useState(false);
+  const [repo, _setRepo] = useState<RepoMeta | null>(null);
+  const [loading, _setLoading] = useState(false);
   const [copied, setCopied] = useState(false);
 
   const [theme, setTheme] = useState<ThemeKey>("dark");
@@ -365,7 +365,7 @@ const GitVisualify = () => {
                     }}
                   >
                     {(() => {
-                      const oldLayout = layout;
+                      const _oldLayout = layout;
                       const el = (
                         <div
                           className="relative overflow-hidden"
@@ -418,7 +418,7 @@ const GitVisualify = () => {
           <div className="bg-[#111827] border border-gray-800/50 rounded-xl p-5 space-y-5">
             <div className="grid grid-cols-2 gap-4">
               <div>
-                <label className="text-xs font-medium text-gray-500 mb-1.5 block">Theme</label>
+                <p className="text-xs font-medium text-gray-500 mb-1.5 block">Theme</p>
                 <Select value={theme} onValueChange={(v) => setTheme(v as ThemeKey)}>
                   <SelectTrigger className="bg-[#0a0e17] border-gray-700/50 text-gray-200 rounded-lg h-10">
                     <SelectValue />
@@ -433,7 +433,7 @@ const GitVisualify = () => {
                 </Select>
               </div>
               <div>
-                <label className="text-xs font-medium text-gray-500 mb-1.5 block">Font</label>
+                <p className="text-xs font-medium text-gray-500 mb-1.5 block">Font</p>
                 <Select value={font} onValueChange={(v) => setFont(v as FontKey)}>
                   <SelectTrigger className="bg-[#0a0e17] border-gray-700/50 text-gray-200 rounded-lg h-10">
                     <SelectValue />
@@ -447,9 +447,7 @@ const GitVisualify = () => {
               </div>
             </div>
             <div>
-              <label className="text-xs font-medium text-gray-500 mb-2 block">
-                Padding: {padding}px
-              </label>
+              <p className="text-xs font-medium text-gray-500 mb-2 block">Padding: {padding}px</p>
               <Slider
                 value={[padding]}
                 onValueChange={(v) => setPadding(v[0])}
@@ -466,7 +464,7 @@ const GitVisualify = () => {
         <TabsContent value="background" className="mt-4">
           <div className="bg-[#111827] border border-gray-800/50 rounded-xl p-5 space-y-4">
             <div>
-              <label className="text-xs font-medium text-gray-500 mb-1.5 block">Pattern</label>
+              <p className="text-xs font-medium text-gray-500 mb-1.5 block">Pattern</p>
               <Select value={pattern} onValueChange={(v) => setPattern(v as PatternKey)}>
                 <SelectTrigger className="bg-[#0a0e17] border-gray-700/50 text-gray-200 rounded-lg h-10">
                   <SelectValue />
