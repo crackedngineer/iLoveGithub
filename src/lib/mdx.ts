@@ -1,35 +1,40 @@
 import type {BlogPostDetail} from "@/lib/types";
 import MiniSearch from "minisearch";
-import RelatedPosts from "../../public/blog.related.json";
-import BlogList from "../../public/blog.index.json";
-import BlogSearch from "../../public/blog.search.json";
+import fs from "fs";
+import path from "path";
+
+function readJson<T>(filename: string): T {
+  const filePath = path.join(process.cwd(), "public", filename);
+  return JSON.parse(fs.readFileSync(filePath, "utf-8")) as T;
+}
 
 let miniSearch: MiniSearch | null = null;
 
 export function getBlogPosts(): BlogPostDetail[] {
-  return BlogList as BlogPostDetail[];
+  return readJson<BlogPostDetail[]>("blog.index.json");
 }
 
 export function getBlogBySlug(slug: string) {
-  return BlogList.find((p) => p.slug === slug) ?? null;
+  const list = readJson<BlogPostDetail[]>("blog.index.json");
+  return list.find((p) => p.slug === slug) ?? null;
 }
 
 export function rankPosts(posts: BlogPostDetail[], query: string) {
   const q = query.toLowerCase();
   if (!miniSearch) {
-    miniSearch = MiniSearch.loadJSON(JSON.stringify(BlogSearch), {
+    const searchIndex = readJson<object>("blog.search.json");
+    miniSearch = MiniSearch.loadJSON(JSON.stringify(searchIndex), {
       fields: ["title", "description", "tags", "body"],
       idField: "slug",
     });
   }
 
   const results = miniSearch.search(q, {prefix: true});
-
   const postMap = new Map(posts.map((p) => [p.slug, p]));
-
   return results.map((r) => postMap.get(r.id)).filter(Boolean) as BlogPostDetail[];
 }
 
 export function getRelatedSlugs(slug: string, limit = 3): string[] {
-  return RelatedPosts[slug as keyof typeof RelatedPosts]?.slice(0, limit) ?? [];
+  const related = readJson<Record<string, string[]>>("blog.related.json");
+  return related[slug]?.slice(0, limit) ?? [];
 }
