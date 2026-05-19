@@ -4,6 +4,21 @@ All notable changes to this project will be documented in this file.
 
 ---
 
+## [0.29.0](https://github.com/crackedngineer/iLoveGithub/compare/v0.28.0...v0.29.0) (2026-05-19)
+
+
+### Features
+
+* add unit tests for mailer, MDX, Redis, Supabase, and various service functions ([b785805](https://github.com/crackedngineer/iLoveGithub/commit/b7858051d486a79743e446209b151f55064b77d9))
+* add writing-tests skill with principles for effective testing ([768a223](https://github.com/crackedngineer/iLoveGithub/commit/768a223d692ec3b1f4601fd79bebdbc17196227c))
+* merge feat/unit tests ([f2c2707](https://github.com/crackedngineer/iLoveGithub/commit/f2c27072f4c776da1999ac5bf7422365fb90de6f))
+
+
+### Bug Fixes
+
+* **tests:** improve error handling in fetchRateLimit test case ([27f5861](https://github.com/crackedngineer/iLoveGithub/commit/27f586142ca628361cac29b89dae1d383ac945e8))
+* update formatting and alignment in README for tools section ([1e81cc4](https://github.com/crackedngineer/iLoveGithub/commit/1e81cc4db813abfaa35e4eea9f90abcb6b91e0d6))
+
 ## [0.28.0](https://github.com/crackedngineer/iLoveGithub/compare/v0.27.2...v0.28.0) (2026-05-02)
 
 ### Features
