@@ -20,7 +20,7 @@ jest.mock("@/components/ui/dropdown-menu", () => ({
 jest.mock("next/image", () => ({
   __esModule: true,
   default: ({src, alt, ...rest}: {src: string; alt: string; [k: string]: unknown}) => (
-    // eslint-disable-next-line @next/next/no-img-element, jsx-a11y/alt-text
+    // eslint-disable-next-line @next/next/no-img-element
     <img src={src} alt={alt} {...(rest as object)} />
   ),
 }));

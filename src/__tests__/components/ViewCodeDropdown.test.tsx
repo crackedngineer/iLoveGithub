@@ -1,6 +1,5 @@
 import React from "react";
 import {render, screen} from "@testing-library/react";
-import userEvent from "@testing-library/user-event";
 import {ViewCodeDropdown} from "@/components/ViewCodeDropdown";
 import type {Tool} from "@/lib/types";
 
@@ -11,7 +10,7 @@ jest.mock("@/components/ui/dropdown-menu", () => ({
     <div>{children}</div>
   ),
   DropdownMenuContent: ({children}: {children: React.ReactNode}) => <div>{children}</div>,
-  DropdownMenuItem: ({children, asChild}: {children: React.ReactNode; asChild?: boolean}) => (
+  DropdownMenuItem: ({children}: {children: React.ReactNode; asChild?: boolean}) => (
     <div>{children}</div>
   ),
 }));

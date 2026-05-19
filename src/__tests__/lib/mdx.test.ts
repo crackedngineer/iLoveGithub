@@ -2,7 +2,6 @@
 // MiniSearch integration is tested through rankPosts.
 
 import {getBlogBySlug, getBlogPosts, getRelatedSlugs, rankPosts} from "@/lib/mdx";
-import type {BlogPostDetail} from "@/lib/types";
 
 describe("getBlogPosts", () => {
   it("returns an array", () => {

@@ -88,7 +88,7 @@ describe("fetchRateLimit", () => {
   });
 
   it("returns fallback defaults when an Axios error occurs", async () => {
-    const axiosError = new Error("Request failed") as any;
+    const axiosError = new Error("Request failed");
     axiosError.response = {data: {message: "Unauthorized"}};
     mockIsAxiosError.mockReturnValue(true);
     mockGet.mockRejectedValueOnce(axiosError);

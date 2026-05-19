@@ -39,9 +39,7 @@ jest.mock("@/components/ui/button", () => ({
     variant?: string;
   }) =>
     asChild ? (
-      <div onClick={onClick} {...props}>
-        {children}
-      </div>
+      <>{children}</>
     ) : (
       <button onClick={onClick} {...props}>
         {children}
