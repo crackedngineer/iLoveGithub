@@ -10,11 +10,15 @@ import {cn} from "@/lib/utils";
 import BlogListItem from "@/components/blog/BlogListItem";
 import BlogListSkeleton from "@/components/blog/BlogListSkeleton";
 import RssFeedButton from "@/components/blog/RssFeedButton";
+import type {BlogPostFrontMatter} from "@/lib/types";
 
 const POSTS_PER_PAGE = 7;
 
 function useBlogPosts(page: number, q: string, category: string) {
-  const [data, setData] = useState<{posts: any[]; total: number}>({posts: [], total: 0});
+  const [data, setData] = useState<{posts: BlogPostFrontMatter[]; total: number}>({
+    posts: [],
+    total: 0,
+  });
   const [loading, setLoading] = useState(true);
 
   useEffect(() => {

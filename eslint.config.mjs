@@ -1,24 +1,26 @@
-import {dirname} from "path";
-import {fileURLToPath} from "url";
-import {FlatCompat} from "@eslint/eslintrc";
-
-const __filename = fileURLToPath(import.meta.url);
-const __dirname = dirname(__filename);
-
-const compat = new FlatCompat({
-  baseDirectory: __dirname,
-});
+import nextPlugin from "@next/eslint-plugin-next";
+import tsPlugin from "@typescript-eslint/eslint-plugin";
+import jsxA11y from "eslint-plugin-jsx-a11y";
 
 const eslintConfig = [
-  // Ignore patterns
   {
-    ignores: ["**/node_modules/**", "**/dist/**", "**/.next/**", "**/out/**"],
+    ignores: ["**/node_modules/**", "**/dist/**", "**/.next/**", "**/out/**", "**/venv/**"],
   },
 
-  // Extend Next.js configs
-  ...compat.extends("next/core-web-vitals", "next/typescript"),
+  nextPlugin.configs.recommended,
+  nextPlugin.configs["core-web-vitals"],
 
-  // TypeScript specific rules
+  ...tsPlugin.configs["flat/recommended"],
+
+  jsxA11y.flatConfigs.recommended,
+
+  {
+    files: ["**/app/layout.tsx"],
+    rules: {
+      "@next/next/no-page-custom-font": "off",
+    },
+  },
+
   {
     files: ["**/*.ts", "**/*.tsx"],
     rules: {

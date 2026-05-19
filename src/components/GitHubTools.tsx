@@ -34,12 +34,6 @@ const ACCENTS = [
   "bg-indigo-500",
 ];
 
-function categoryAccent(category: string): string {
-  let h = 0;
-  for (let i = 0; i < category.length; i++) h = (h * 31 + category.charCodeAt(i)) % ACCENTS.length;
-  return ACCENTS[h];
-}
-
 /* ── Tool description with stop-propagation expand ─────────── */
 function ToolDescription({description}: {description: string}) {
   const [expanded, setExpanded] = useState(false);

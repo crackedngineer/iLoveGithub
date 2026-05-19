@@ -5,7 +5,7 @@ const GRAPHQL_ENDPOINT = `${fullRootDomain}/api/blog/graphql`;
 
 export async function graphqlRequest<T>(
   query: string,
-  variables?: Record<string, any>,
+  variables?: Record<string, unknown>,
 ): Promise<T> {
   const response = await axios.post(GRAPHQL_ENDPOINT, {
     query,

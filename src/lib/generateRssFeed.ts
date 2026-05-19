@@ -20,7 +20,7 @@ export async function generateRssFeed(): Promise<string> {
       <guid isPermaLink="true">${postUrl}</guid>
       <description>${escapeXml(post.excerpt ?? "")}</description>
       <pubDate>${pubDate}</pubDate>
-      <author>${escapeXml((post as any).author ?? "")}</author>
+      <author>${escapeXml((post as {author?: string}).author ?? "")}</author>
       ${categories}
     </item>`;
     })

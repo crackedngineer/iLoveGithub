@@ -9,13 +9,6 @@ const iframeOrigins = GithubToolsList.filter((tool) => tool.iframe).map(
   (tool) => `https://${tool.name}.${rootDomain}`,
 );
 
-const remotePatterns = [
-  "*.blob.vercel-storage.com",
-  "avatars.githubusercontent.com",
-  "peerlist.io",
-  "scoutforge.net",
-];
-
 /**
  * Custom config (use in your own code if needed)
  */
