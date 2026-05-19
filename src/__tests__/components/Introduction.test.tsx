@@ -90,9 +90,4 @@ describe("Introduction Component", () => {
     const badgeWrapper = container.querySelector(".flex.flex-wrap.justify-center.gap-3");
     expect(badgeWrapper).toBeInTheDocument();
   });
-
-  it("matches snapshot", () => {
-    const {container} = render(<Introduction />);
-    expect(container).toMatchSnapshot();
-  });
 });

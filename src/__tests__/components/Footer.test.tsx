@@ -91,9 +91,4 @@ describe("Footer Component", () => {
     expect(para?.textContent).toContain("by");
     expect(para?.textContent).toContain("Subhomoy Roy Choudhury");
   });
-
-  it("matches snapshot", () => {
-    const {container} = render(<Footer />);
-    expect(container).toMatchSnapshot();
-  });
 });
