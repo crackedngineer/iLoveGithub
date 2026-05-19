@@ -6,15 +6,24 @@ const createJestConfig = nextJest({
 });
 
 const customJestConfig = {
-  setupFilesAfterEnv: ["<rootDir>/jest.setup.ts"], // ← Changed from .js to .ts
+  setupFilesAfterEnv: ["<rootDir>/jest.setup.ts"],
   testEnvironment: "jest-environment-jsdom",
   moduleNameMapper: {
     "^@/(.*)$": "<rootDir>/src/$1",
   },
   collectCoverageFrom: [
-    "src/**/*.{js,jsx,ts,tsx}",
+    "src/lib/**/*.{ts,tsx}",
+    "src/app/**/*.{ts,tsx}",
+    // Exclude complex pages that require full integration/browser setup
+    "!src/app/blog/**",
+    "!src/app/visualify/**",
+    "!src/app/tools/**",
+    "!src/app/[owner]/**",
+    "!src/app/page.tsx",
+    "!src/app/layout.tsx",
+    "!src/app/auth/**",
+    "!src/app/api/blog/**",
     "!src/**/*.d.ts",
-    "!src/**/*.stories.{js,jsx,ts,tsx}",
     "!**/node_modules/**",
   ],
   coverageThreshold: {

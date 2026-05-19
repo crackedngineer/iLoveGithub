@@ -1,6 +1,6 @@
 import {render, screen} from "@testing-library/react";
 import type {ComponentProps} from "react";
-import Footer from "./Footer";
+import Footer from "../../components/Footer";
 
 // Mock next/image
 jest.mock("next/image", () => ({

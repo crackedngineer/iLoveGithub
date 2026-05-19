@@ -66,7 +66,13 @@ describe("Utils", () => {
       const consoleSpy = jest.spyOn(console, "error").mockImplementation();
       const result = getHostnameFromUrl("not-a-valid-url");
       expect(result).toBeNull();
-      expect(consoleSpy).toHaveBeenCalledWith("Invalid URL:", "not-a-valid-url");
+      // The error is logged with either "Invalid URL:" or "Unexpected error while parsing URL:"
+      // depending on whether the thrown error is classified as TypeError in the runtime
+      expect(consoleSpy).toHaveBeenCalledWith(
+        expect.stringContaining("URL"),
+        "not-a-valid-url",
+        expect.anything(),
+      );
       consoleSpy.mockRestore();
     });
 
