@@ -1,3 +1,4 @@
+import path from "path";
 import GithubToolsList from "./tools.json";
 import {rootDomain} from "@/lib/utils";
 
@@ -27,13 +28,31 @@ const customConfig = {
  */
 const nextConfig = {
   reactStrictMode: true,
+  serverExternalPackages: ["@resvg/resvg-js"],
 
   /** Allow remote images from Vercel Blob storage */
   images: {
-    remotePatterns: remotePatterns.map((hostname) => ({
-      protocol: "https",
-      hostname,
-    })),
+    localPatterns: [
+      {
+        pathname: "/api/visualify/**",
+      },
+      {
+        pathname: "/icons/**",
+      },
+      {
+        pathname: "/blog/**",
+      },
+    ],
+    remotePatterns: [
+      {
+        protocol: "https",
+        hostname: "*.blob.vercel-storage.com",
+      },
+      {
+        protocol: "https",
+        hostname: "avatars.githubusercontent.com",
+      },
+    ],
   },
 
   /** Custom headers for security */
@@ -54,19 +73,19 @@ const nextConfig = {
       },
     ];
   },
+};
 
-  async rewrites() {
-    return [
-      {
-        source: "/blog/:path*",
-        destination: "https://ilovegithub-blog.netlify.app/:path*",
-      },
-    ];
+// const withMDX = require('@next/mdx')({
+// 	extension: /\.mdx$/,
+// })
+
+// Export both if needed in your app
+const config = {
+  ...nextConfig,
+  ...customConfig,
+  turbopack: {
+    root: path.join(__dirname, ".."),
   },
 };
 
-// Export both if needed in your app
-export default {
-  ...nextConfig,
-  ...customConfig,
-};
+export default config;

@@ -1,20 +1,19 @@
 "use client";
 
 import React, {useEffect, useState} from "react";
-import Image from "next/image";
-import {IndianRupee, Plus, Minus, Coffee} from "lucide-react";
-import {Button} from "@/components/ui/button";
+import axios from "axios";
+import {IndianRupee, Plus, Minus, Heart, Smartphone} from "lucide-react";
 import {Slider} from "@/components/ui/slider";
 import {
   Dialog,
   DialogContent,
-  DialogClose,
   DialogHeader,
   DialogTitle,
   DialogDescription,
 } from "@/components/ui/dialog";
 import {DONATION_MERCHANT_NAME} from "@/constants";
-import {generateQRCode} from "@/services/qrcode";
+import Image from "next/image";
+import {cn} from "@/lib/utils";
 
 interface DonationModalProps {
   isOpen: boolean;
@@ -22,163 +21,190 @@ interface DonationModalProps {
   isIndiaLocation: boolean | null;
 }
 
+const PRESET_AMOUNTS = [101, 201, 501, 1001];
+const MIN = 11;
+const MAX = 5001;
+const STEP = 10;
+
 const DonationModal = ({isOpen, onClose, isIndiaLocation}: DonationModalProps) => {
   const [amount, setAmount] = useState(101);
   const [debouncedAmount, setDebouncedAmount] = useState(amount);
   const [qrImage, setQrImage] = useState("");
   const [loading, setLoading] = useState(false);
 
-  const minAmount = 11;
-  const maxAmount = 5001;
-  const step = 10;
-  const presetAmounts = [101, 201, 501, 1001];
+  const upiString = `upi://pay?pa=${process.env.NEXT_PUBLIC_DONATION_UPI_ID}&pn=${DONATION_MERCHANT_NAME}&am=${amount}&cu=INR`;
 
-  const handleIncrease = () => {
-    setAmount((prev) => Math.min(prev + step, maxAmount));
-  };
-
-  const handleDecrease = () => {
-    setAmount((prev) => Math.max(prev - step, minAmount));
-  };
-
-  const handleSliderChange = (value: number[]) => {
-    setAmount(value[0]);
-  };
-
+  /* debounce amount → QR regeneration */
   useEffect(() => {
-    const handler = setTimeout(() => {
-      if (amount !== debouncedAmount) {
-        setDebouncedAmount(amount);
-      }
-    }, 800); // increased debounce delay
+    const t = setTimeout(() => setDebouncedAmount(amount), 800);
+    return () => clearTimeout(t);
+  }, [amount]);
 
-    return () => clearTimeout(handler);
-  }, [amount, debouncedAmount]);
-
+  /* generate QR on debounced amount change */
   useEffect(() => {
-    const generateQR = async () => {
+    if (!isIndiaLocation) return;
+    const generate = async () => {
+      setLoading(true);
       try {
-        setLoading(true);
         const origin = typeof window !== "undefined" ? window.location.origin : "";
-        const imageUrl = `${origin}/icons/favicon.png`;
-
-        const image = await generateQRCode(
-          `upi://pay?pa=${process.env.NEXT_PUBLIC_DONATION_UPI_ID}&pn=${DONATION_MERCHANT_NAME}&am=${debouncedAmount}&cu=INR`,
-          imageUrl,
-        );
-
-        setQrImage(image);
-      } catch (error) {
-        console.error("QR code generation failed:", error);
+        const {data} = await axios.post("/api/qrcode/generate", {
+          data: `upi://pay?pa=${process.env.NEXT_PUBLIC_DONATION_UPI_ID}&pn=${DONATION_MERCHANT_NAME}&am=${debouncedAmount}&cu=INR`,
+          image: `${origin}/icons/favicon.png`,
+        });
+        setQrImage(data.image);
+      } catch {
+        /* silent — QR area will stay blank */
       } finally {
         setLoading(false);
       }
     };
-
-    if (isIndiaLocation) {
-      generateQR();
-    }
+    generate();
   }, [debouncedAmount, isIndiaLocation]);
 
   return (
     <Dialog
-      key={"dialog-donation"}
       open={isOpen}
       onOpenChange={(open) => {
         if (!open) onClose();
       }}
     >
-      <DialogContent className="max-w-md w-full p-6 bg-white dark:bg-gray-900 overflow-hidden animate-fade-in rounded-lg">
-        <DialogHeader className="space-y-3">
-          <div className="flex items-center gap-2">
-            {isIndiaLocation ? (
-              <IndianRupee className="h-5 w-5 text-blue-500" />
-            ) : (
-              <Coffee className="h-5 w-5 text-blue-500" />
-            )}
-            <DialogTitle className="text-xl font-bold">
+      <DialogContent className="max-w-sm w-full p-0 gap-0 overflow-hidden rounded-2xl">
+        {/* ── Header ────────────────────────────────────────── */}
+        <DialogHeader className="px-6 pt-6 pb-0">
+          <div className="flex items-center gap-2 mb-1">
+            <div
+              className="w-8 h-8 rounded-lg bg-pink-50 dark:bg-pink-900/20
+                            flex items-center justify-center shrink-0"
+            >
+              <Heart className="w-4 h-4 text-github-pink fill-github-pink" />
+            </div>
+            <DialogTitle className="text-foreground font-semibold">
               {isIndiaLocation ? "Support via UPI" : "Support Our Work"}
             </DialogTitle>
           </div>
-          <DialogDescription className="text-gray-600 dark:text-gray-400">
+          <DialogDescription className="text-sm text-muted-foreground">
             {isIndiaLocation
-              ? "Scan the QR code below to make a donation via UPI"
+              ? "Choose an amount, scan the QR, or open in your UPI app"
               : "Your support helps us build better tools for developers"}
           </DialogDescription>
         </DialogHeader>
 
-        <div className="flex flex-col items-center justify-center space-y-6 mt-4">
-          <div className="bg-white p-3 rounded-lg shadow-sm border border-gray-200 dark:border-gray-700 w-48 h-48 flex items-center justify-center">
-            {loading ? (
-              <p className="text-sm text-gray-500 dark:text-gray-400">Generating QR...</p>
-            ) : (
-              qrImage && (
-                <Image src={qrImage} className="rounded" alt="QR Code" width={192} height={192} />
-              )
-            )}
-          </div>
-
-          <div className="w-full space-y-4">
-            <div className="flex items-center justify-between w-full">
-              <p className="text-sm font-medium text-gray-700 dark:text-gray-300">Amount</p>
-              <div className="font-bold text-xl text-blue-600 dark:text-blue-400 flex items-center">
-                {isIndiaLocation ? "₹" : "$"} {amount}
+        {isIndiaLocation && (
+          <>
+            {/* ── Amount display ────────────────────────────── */}
+            <div className="px-6 pt-5 flex flex-col items-center gap-1">
+              <p className="text-xs font-medium uppercase tracking-widest text-muted-foreground">
+                Amount
+              </p>
+              <div className="flex items-end gap-1">
+                <IndianRupee className="w-5 h-5 text-foreground mb-1" strokeWidth={2.5} />
+                <span className="font-display text-4xl font-bold leading-none text-foreground">
+                  {amount}
+                </span>
               </div>
             </div>
 
-            <div className="grid grid-cols-4 gap-2 w-full">
-              {presetAmounts.map((presetAmount) => (
-                <Button
-                  key={presetAmount}
-                  variant={amount === presetAmount ? "default" : "outline"}
-                  className="w-full"
-                  onClick={() => setAmount(presetAmount)}
+            {/* ── Preset pills ──────────────────────────────── */}
+            <div className="px-6 pt-3 grid grid-cols-4 gap-2">
+              {PRESET_AMOUNTS.map((preset) => (
+                <button
+                  key={preset}
+                  onClick={() => setAmount(preset)}
+                  className={cn(
+                    "h-9 rounded-lg text-sm font-medium transition-all duration-150",
+                    amount === preset
+                      ? "bg-github-blue text-white shadow-sm"
+                      : "bg-gray-100 dark:bg-gray-800 text-gray-700 dark:text-gray-300 hover:bg-gray-200 dark:hover:bg-gray-700",
+                  )}
                 >
-                  {isIndiaLocation ? "₹" : "$"} {presetAmount}
-                </Button>
+                  ₹{preset}
+                </button>
               ))}
             </div>
 
-            <div className="flex items-center justify-between gap-4">
-              <Button
-                variant="outline"
-                size="icon"
-                onClick={handleDecrease}
-                disabled={amount <= minAmount}
-                className="rounded-full"
+            {/* ── Slider with stepper ───────────────────────── */}
+            <div className="px-6 pt-3 flex items-center gap-3">
+              <button
+                onClick={() => setAmount((p) => Math.max(p - STEP, MIN))}
+                disabled={amount <= MIN}
+                className="w-8 h-8 rounded-full flex items-center justify-center shrink-0
+                           bg-gray-100 dark:bg-gray-800 hover:bg-gray-200 dark:hover:bg-gray-700
+                           disabled:opacity-30 disabled:pointer-events-none transition-colors"
               >
-                <Minus className="h-4 w-4" />
-              </Button>
+                <Minus size={14} />
+              </button>
 
               <Slider
                 value={[amount]}
-                min={minAmount}
-                max={maxAmount}
-                step={step}
-                onValueChange={handleSliderChange}
+                min={MIN}
+                max={MAX}
+                step={STEP}
+                onValueChange={([v]) => setAmount(v)}
                 className="flex-1"
               />
 
-              <Button
-                variant="outline"
-                size="icon"
-                onClick={handleIncrease}
-                disabled={amount >= maxAmount}
-                className="rounded-full"
+              <button
+                onClick={() => setAmount((p) => Math.min(p + STEP, MAX))}
+                disabled={amount >= MAX}
+                className="w-8 h-8 rounded-full flex items-center justify-center shrink-0
+                           bg-gray-100 dark:bg-gray-800 hover:bg-gray-200 dark:hover:bg-gray-700
+                           disabled:opacity-30 disabled:pointer-events-none transition-colors"
               >
-                <Plus className="h-4 w-4" />
-              </Button>
+                <Plus size={14} />
+              </button>
             </div>
-          </div>
-        </div>
 
-        <div className="flex flex-col space-y-3 mt-6">
-          <DialogClose asChild>
-            <Button variant="outline" className="w-full">
-              Cancel
-            </Button>
-          </DialogClose>
-        </div>
+            {/* ── QR Code ───────────────────────────────────── */}
+            <div className="px-6 pt-4 flex justify-center">
+              <div className="bg-white rounded-xl border border-gray-200 p-3 shadow-sm">
+                {loading ? (
+                  <div className="w-[200px] h-[200px] flex flex-col items-center justify-center gap-3">
+                    <IndianRupee className="w-8 h-8 text-gray-200 animate-pulse" />
+                    <p className="text-xs text-gray-400">Generating…</p>
+                  </div>
+                ) : qrImage ? (
+                  <Image
+                    src={qrImage}
+                    alt="UPI QR Code"
+                    width={200}
+                    height={200}
+                    className="rounded-lg"
+                  />
+                ) : (
+                  <div className="w-[200px] h-[200px] flex items-center justify-center">
+                    <p className="text-xs text-gray-400">QR unavailable</p>
+                  </div>
+                )}
+              </div>
+            </div>
+
+            {/* ── Open in UPI App ───────────────────────────── */}
+            <div className="px-6 pt-4 pb-6">
+              <a
+                href={upiString}
+                className="flex items-center justify-center gap-2 w-full h-10 rounded-xl
+                           bg-github-blue hover:bg-blue-700 text-white text-sm font-medium
+                           transition-colors duration-150"
+              >
+                <Smartphone size={15} />
+                Open in UPI App
+              </a>
+              <p className="text-center text-[11px] text-muted-foreground mt-2">
+                Works with GPay, PhonePe, Paytm &amp; more
+              </p>
+            </div>
+          </>
+        )}
+
+        {/* Non-India fallback */}
+        {!isIndiaLocation && isIndiaLocation !== null && (
+          <div className="px-6 py-8 text-center">
+            <Heart className="w-10 h-10 text-github-pink fill-github-pink/20 mx-auto mb-3" />
+            <p className="text-sm text-muted-foreground">
+              Your support helps us build better tools for developers.
+            </p>
+          </div>
+        )}
       </DialogContent>
     </Dialog>
   );

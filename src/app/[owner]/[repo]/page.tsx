@@ -2,9 +2,8 @@
 
 import {useCallback, useMemo, useEffect, useState} from "react";
 import {useRouter, useParams} from "next/navigation";
-import RepoInfo, {RepoData} from "@/components/RepoInfo";
+import RepoExplorer from "@/components/RepoExplorer";
 import GitHubTools from "@/components/GitHubTools";
-import RepoSearch from "@/components/RepoSearch";
 import AppLayout from "@/components/AppLayout";
 import {Introduction} from "@/components/Introduction";
 import {RECENT_REPO_LOCAL_STORAGE_KEY, RECENT_TRENDING_REPO_CACHE_MAXCOUNT} from "@/constants";
@@ -13,6 +12,7 @@ import {Tool} from "@/lib/types";
 import {useAuth} from "@/components/AuthProvider";
 import {fetchRepoDetails} from "@/services/github";
 import {fetchToolList} from "@/services/tools";
+import type {RepoData} from "@/components/RepoExplorer";
 
 export default function RepoPage() {
   const {session, loading} = useAuth();
@@ -23,20 +23,17 @@ export default function RepoPage() {
 
   const [repoData, setRepoData] = useState<RepoData | null>(null);
   const [tools, setTools] = useState<Tool[]>([]);
-  const [isLoading, setIsLoading] = useState<boolean>(true);
+  const [isLoading, setIsLoading] = useState(true);
   const [error, setError] = useState<"rate-limit" | "generic" | null>(null);
 
   const fullName = useMemo(() => `${owner}/${repo}`.toLowerCase(), [owner, repo]);
-
-  const token = useMemo(() => {
-    return session?.provider_token;
-  }, [session?.provider_token]);
+  const token = useMemo(() => session?.provider_token, [session?.provider_token]);
 
   const updateRecentRepos = (details: RepoData) => {
     const stored = JSON.parse(
       localStorage.getItem(RECENT_REPO_LOCAL_STORAGE_KEY) || "[]",
     ) as string[];
-    const updated = [details.fullName, ...stored.filter((name) => name !== details.fullName)].slice(
+    const updated = [details.fullName, ...stored.filter((n) => n !== details.fullName)].slice(
       0,
       RECENT_TRENDING_REPO_CACHE_MAXCOUNT,
     );
@@ -46,11 +43,10 @@ export default function RepoPage() {
   const fetchRepoData = useCallback(async () => {
     setIsLoading(true);
     setError(null);
-
     try {
       if (!session && !remaining) {
         setError("rate-limit");
-        const fallbackRepo: RepoData = {
+        setRepoData({
           name: repo,
           owner,
           fullName,
@@ -65,11 +61,9 @@ export default function RepoPage() {
           topics: [],
           default_branch: "main",
           cachedAt: Date.now(),
-        };
-        setRepoData(fallbackRepo);
+        });
         return;
       }
-
       const githubData = await fetchRepoDetails(owner, repo, token);
       const transformed: RepoData = {
         name: githubData.name,
@@ -87,11 +81,9 @@ export default function RepoPage() {
         default_branch: githubData.default_branch,
         cachedAt: githubData.cached_at || Date.now(),
       };
-
       setRepoData(transformed);
       updateRecentRepos(transformed);
-    } catch (error) {
-      console.error("Error fetching repo data:", error);
+    } catch {
       setError("generic");
     } finally {
       setIsLoading(false);
@@ -101,67 +93,41 @@ export default function RepoPage() {
   const fetchTools = useCallback(async () => {
     if (!repoData) return;
     try {
-      const tools = await fetchToolList(repoData.owner, repoData.name, repoData.default_branch);
-      setTools(tools);
-    } catch (err) {
-      console.error("Error fetching tools:", err);
+      const t = await fetchToolList(repoData.owner, repoData.name, repoData.default_branch);
+      setTools(t);
+    } catch {
       setTools([]);
     }
   }, [repoData]);
 
   useEffect(() => {
-    if (!loading) {
-      fetchRepoData();
-    }
+    if (!loading) fetchRepoData();
   }, [loading, fetchRepoData]);
-
   useEffect(() => {
     if (repoData) fetchTools();
   }, [repoData, fetchTools]);
 
   return (
     <AppLayout>
-      <main className="flex-1 w-full max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 py-8">
+      <div className="w-full max-w-screen-2xl mx-auto px-4 sm:px-6 lg:px-8 2xl:px-12 py-8">
         <Introduction />
 
-        <RepoSearch
+        <RepoExplorer
           key={`${owner}-${repo}`}
           value={`${owner}/${repo}`}
           trending={false}
-          onRepoSubmit={(owner, repo) => {
-            if (owner.trim() && repo.trim()) {
-              router.push(`/${owner}/${repo}`);
-            }
+          onRepoSubmit={(o, r) => {
+            if (o.trim() && r.trim()) router.push(`/${o}/${r}`);
           }}
+          repoData={repoData}
+          tools={tools.filter((t) => t.type === "application")}
+          isLoading={isLoading}
+          fetchError={error}
+          isLoggedIn={!!session || !!remaining}
         />
 
-        {isLoading && (
-          <div className="w-full max-w-4xl mx-auto mt-8 flex justify-center px-4">
-            <div className="animate-pulse-subtle flex flex-col items-center w-full">
-              <div className="h-6 w-2/3 sm:w-1/2 bg-gray-200 dark:bg-gray-800 rounded mb-4"></div>
-              <div className="h-4 w-5/6 sm:w-2/3 bg-gray-200 dark:bg-gray-800 rounded mb-3"></div>
-              <div className="h-4 w-4/5 sm:w-1/2 bg-gray-200 dark:bg-gray-800 rounded"></div>
-            </div>
-          </div>
-        )}
-
-        {error === "generic" && (
-          <div className="text-center text-red-500">
-            <p>Oops, something went wrong. Please try again later.</p>
-          </div>
-        )}
-
-        {!isLoading && repoData && (
-          <>
-            <RepoInfo
-              repo={repoData}
-              isLoggedIn={!!session || !!remaining}
-              tools={tools.filter((item: Tool) => item.type === "application")}
-            />
-            <GitHubTools tools={tools.filter((item: Tool) => item.type !== "application")} />
-          </>
-        )}
-      </main>
+        <GitHubTools tools={tools.filter((t) => t.type !== "application")} />
+      </div>
     </AppLayout>
   );
 }

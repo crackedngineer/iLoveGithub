@@ -1,0 +1,18 @@
+{
+  "permissions": {
+    "allow": [
+      "mcp__code-review-graph__get_architecture_overview_tool",
+      "Bash(npx tsc *)",
+      "Bash(grep -v \"//.*max-w\")",
+      "Bash(sort -t: -k1,1)",
+      "Bash(grep -v \"Welcome\\\\|Today\\\\|Quote\\\\|^$\")",
+      "Bash(Get-Content \"C:\\\\Users\\\\subho\\\\AppData\\\\Local\\\\Temp\\\\claude\\\\D--Github-Projects-iLoveGithub\\\\723dc8d8-8b39-465d-b391-d660066db7bc\\\\tasks\\\\b6i6n3bu8.output\")",
+      "Bash(Select-String \"error TS\")",
+      "Bash(xargs grep *)",
+      "Bash(node -e \"const p=require\\('./package.json'\\); console.log\\('scripts:', JSON.stringify\\(p.scripts, null, 2\\)\\)\")",
+      "Bash(git add *)",
+      "Bash(git commit -m ' *)"
+    ]
+  },
+  "enabledMcpjsonServers": ["code-review-graph"]
+}

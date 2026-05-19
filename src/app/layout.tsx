@@ -12,6 +12,9 @@ import AuthGuard from "@/components/AuthGuard";
 import DemoVideoProvider from "@/components/DemoVideoProvider";
 import AppVersionSync from "@/components/AppVersionSync";
 import {AppLocationProvider} from "@/components/AppLocationProvider";
+import {Toaster} from "@/components/ui/sonner";
+import {ThemeProvider} from "next-themes";
+import RouteLoader from "@/components/RouteLoader";
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -66,9 +69,17 @@ export const metadata: Metadata = {
     title: "iLoveGithub - GitHub Tools & Repo Transformers",
     description:
       "Explore magical GitHub tools to open repos in VS Code, summarize repositories with AI, and transform GitHub URLs easily!",
-    images: ["https://ilovegithub.vercel.app/og-image.jpg"],
+    images: ["https://ilovegithub.vercel.app/og-image.png"],
   },
   metadataBase: new URL("https://ilovegithub.vercel.app"),
+  robots: {
+    index: true,
+    follow: true,
+    googleBot: {index: true, follow: true, "max-snippet": -1, "max-image-preview": "large"},
+  },
+  alternates: {
+    canonical: "https://ilovegithub.vercel.app",
+  },
 };
 
 export default function RootLayout({
@@ -80,6 +91,13 @@ export default function RootLayout({
     <html lang="en" suppressHydrationWarning>
       <head>
         <link rel="canonical" href="https://ilovegithub.vercel.app" />
+        {/* Syne display font — loaded at runtime to avoid build-time network dependency */}
+        <link rel="preconnect" href="https://fonts.googleapis.com" />
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin="anonymous" />
+        <link
+          href="https://fonts.googleapis.com/css2?family=Syne:wght@400;500;600;700;800&display=swap"
+          rel="stylesheet"
+        />
         {/* Theme script for preventing flicker */}
         <Script
           id="theme-script"
@@ -105,6 +123,35 @@ export default function RootLayout({
         })();`,
           }}
         />
+        {/* Organization + WebSite structured data — present on every page */}
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{
+            __html: JSON.stringify([
+              {
+                "@context": "https://schema.org",
+                "@type": "Organization",
+                name: "iLoveGithub",
+                url: "https://ilovegithub.vercel.app",
+                logo: "https://ilovegithub.vercel.app/icons/favicon.png",
+                description:
+                  "A curated collection of magical tools built around GitHub — visualize repos, generate AI summaries, convert to podcasts, and much more.",
+                sameAs: ["https://github.com/crackedngineer/iLoveGithub"],
+              },
+              {
+                "@context": "https://schema.org",
+                "@type": "WebSite",
+                name: "iLoveGithub",
+                url: "https://ilovegithub.vercel.app",
+                potentialAction: {
+                  "@type": "SearchAction",
+                  target: "https://ilovegithub.vercel.app/blog?q={search_term_string}",
+                  "query-input": "required name=search_term_string",
+                },
+              },
+            ]),
+          }}
+        />
         {/* Google AdSense script */}
         <Script
           async
@@ -113,22 +160,28 @@ export default function RootLayout({
           strategy="afterInteractive"
         />
       </head>
-      <body className={`${geistSans.variable} ${geistMono.variable} antialiased`}>
+      <body
+        className={`${geistSans.variable} ${geistMono.variable} antialiased`}
+        suppressHydrationWarning
+      >
         <GoogleAnalytics measurementId={process.env.NEXT_PUBLIC_GA_MEASUREMENT_ID} />
         <Analytics />
-        <GoogleAnalytics measurementId={process.env.NEXT_PUBLIC_GA_MEASUREMENT_ID} />
         <SpeedInsights />
         <AppVersionSync />
+        <RouteLoader />
+        <Toaster />
 
-        <DemoVideoProvider>
-          <AppLocationProvider>
-            <AuthProvider>
-              <ApiLimitProvider>
-                <AuthGuard>{children}</AuthGuard>
-              </ApiLimitProvider>
-            </AuthProvider>
-          </AppLocationProvider>
-        </DemoVideoProvider>
+        <ThemeProvider attribute="class" enableSystem={true} defaultTheme="light">
+          <DemoVideoProvider>
+            <AppLocationProvider>
+              <AuthProvider>
+                <ApiLimitProvider>
+                  <AuthGuard>{children}</AuthGuard>
+                </ApiLimitProvider>
+              </AuthProvider>
+            </AppLocationProvider>
+          </DemoVideoProvider>
+        </ThemeProvider>
 
         {/* Add the AdBanner component at the end of body to ensure it's at the bottom */}
         {/* <AdBanner adSlot="8130644563" /> */}

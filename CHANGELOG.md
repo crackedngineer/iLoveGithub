@@ -4,6 +4,148 @@ All notable changes to this project will be documented in this file.
 
 ---
 
+## [0.28.0](https://github.com/crackedngineer/iLoveGithub/compare/v0.27.2...v0.28.0) (2026-05-02)
+
+### Features
+
+- add custom Shields.io badges guide and cover images ([41d57d8](https://github.com/crackedngineer/iLoveGithub/commit/41d57d803a573dc582be7998bcd9dafa44b75dbb))
+- **blog:** update read time from 10 to 12 minutes ([48c7986](https://github.com/crackedngineer/iLoveGithub/commit/48c7986f6db4ba5b950a9c10bdf306ee560a3fc4))
+
+### Bug Fixes
+
+- **blog:** update frontmatter field from 'date' to 'created' and increase read time to 15 minutes ([de2591b](https://github.com/crackedngineer/iLoveGithub/commit/de2591b23ceed98b191cd39ae158765c2f2006cf))
+- remove cache option from Python setup in workflows ([6f7de7f](https://github.com/crackedngineer/iLoveGithub/commit/6f7de7fd4d36a0f4b56af622031d5a4d3e2764ce))
+- replace img with next/image for blog post cover ([05ddf1a](https://github.com/crackedngineer/iLoveGithub/commit/05ddf1abf0489bb79f1311ec826ce515ddcbbb9b))
+
+## [0.27.2](https://github.com/crackedngineer/iLoveGithub/compare/v0.27.1...v0.27.2) (2026-04-30)
+
+### Bug Fixes
+
+- remove unused blog lint configuration and update GiscusComments repo handling ([46eb228](https://github.com/crackedngineer/iLoveGithub/commit/46eb228b9ec05a20ec41aa33e6f05cade22e2496))
+
+## [0.27.1](https://github.com/crackedngineer/iLoveGithub/compare/v0.27.0...v0.27.1) (2026-04-30)
+
+### Bug Fixes
+
+- remove outdated rewrites from vercel configuration ([a3ec6b6](https://github.com/crackedngineer/iLoveGithub/commit/a3ec6b6dcdfa30cc8f6c3a164ef18ec3e1c83241))
+
+## [0.27.0](https://github.com/crackedngineer/iLoveGithub/compare/v0.26.0...v0.27.0) (2026-04-30)
+
+### Features
+
+- add swipe navigation and hint for blog post navigation ([368fac9](https://github.com/crackedngineer/iLoveGithub/commit/368fac9d5b76618dc872de7a4d2ee7c5662cd465))
+- **blog:** add BlogPostClient component with swipe navigation and structured data ([5ab58dc](https://github.com/crackedngineer/iLoveGithub/commit/5ab58dcb6ea0c24906b708890b2afd9b852746a5))
+- **blog:** create blog layout with metadata for SEO and social sharing ([5ab58dc](https://github.com/crackedngineer/iLoveGithub/commit/5ab58dcb6ea0c24906b708890b2afd9b852746a5))
+- enhance blog features with view tracking, comments, and UI improvements ([097e521](https://github.com/crackedngineer/iLoveGithub/commit/097e521c28a11f44fced9b237a5bf264dede28be))
+
+### Bug Fixes
+
+- **layout:** update metadata images and add robots and alternates for better indexing ([5ab58dc](https://github.com/crackedngineer/iLoveGithub/commit/5ab58dcb6ea0c24906b708890b2afd9b852746a5))
+- updated package-lock.json ([7100af9](https://github.com/crackedngineer/iLoveGithub/commit/7100af9a66547f9bf95e2e705e295f3ef38ceee6))
+- updated sitemap ([7187131](https://github.com/crackedngineer/iLoveGithub/commit/7187131a9b450b96d2824c009a7ba8b15680b3ed))
+- updated vercel acyion to v42 ([c717ea0](https://github.com/crackedngineer/iLoveGithub/commit/c717ea00b1d508bde094345250fb73dcccbdd962))
+
+## [0.26.0](https://github.com/crackedngineer/iLoveGithub/compare/v0.25.0...v0.26.0) (2026-04-29)
+
+### Features
+
+- daily keep-alive schedule and code-review-graph config ([792debc](https://github.com/crackedngineer/iLoveGithub/commit/792debcc144eaec9833d027a23be6ec90e68624f))
+- enhance ToolLoading and ToolViewer components with improved UI and loading states; add RepoExplorer component for repository analysis ([74277dd](https://github.com/crackedngineer/iLoveGithub/commit/74277dd249c0f43cdf320470de6ff63bab199d94))
+- implement new feature for user authentication and improve error handling ([68bdeae](https://github.com/crackedngineer/iLoveGithub/commit/68bdeae0eab4f7cecc3d911be04e4f976dbb9613))
+- increase header max length to 150 characters in commitlint configuration ([0ff3a0f](https://github.com/crackedngineer/iLoveGithub/commit/0ff3a0f3531712ea2b961d6d8106e4931aa29fa7))
+
+## [0.25.0](https://github.com/crackedngineer/iLoveGithub/compare/v0.24.0...v0.25.0) (2026-04-07)
+
+### Features
+
+- add visualify card generation and theme management ([a415ca9](https://github.com/crackedngineer/iLoveGithub/commit/a415ca944d653a657eb82d4e3448aec11db0cd63))
+
+## [0.24.0](https://github.com/crackedngineer/iLoveGithub/compare/v0.23.4...v0.24.0) (2026-03-19)
+
+### Features
+
+- add Supabase keep-alive workflow and script for database maintenance ([9be1cf2](https://github.com/crackedngineer/iLoveGithub/commit/9be1cf2f12abf704bdde7d4051289ab297910577))
+- merge fixes ([85da3ca](https://github.com/crackedngineer/iLoveGithub/commit/85da3ca7c1a0194a1b6477eba6a79b44e4935618))
+
+### Bug Fixes
+
+- package.json & package-lock.json to reduce vulnerabilities ([e4963f4](https://github.com/crackedngineer/iLoveGithub/commit/e4963f4175efd97d000e9a2b0466baeafe76436f))
+- package.json & package-lock.json to reduce vulnerabilities ([7b85569](https://github.com/crackedngineer/iLoveGithub/commit/7b85569606b716fc390db1e8f305a8661976f109))
+- package.json & package-lock.json to reduce vulnerabilities ([c7d3c6c](https://github.com/crackedngineer/iLoveGithub/commit/c7d3c6c5294d053da36fe84b239a2aa05c97bab2))
+- package.json & package-lock.json to reduce vulnerabilities ([6742805](https://github.com/crackedngineer/iLoveGithub/commit/67428050982aee32d125ee66a328a5e8391b006f))
+- update Supabase keep-alive workflow to correctly generate requirements and run script ([9c787a3](https://github.com/crackedngineer/iLoveGithub/commit/9c787a382549dc6696f58f11cb3a4b79063d866e))
+- upgrade @supabase/supabase-js from 2.87.1 to 2.89.0 ([feebfe1](https://github.com/crackedngineer/iLoveGithub/commit/feebfe1c464211ccfcaf88ad7506871257875682))
+- upgrade @upstash/redis from 1.35.8 to 1.36.0 ([42b8508](https://github.com/crackedngineer/iLoveGithub/commit/42b8508638079243b2c0fd3d0bf2657a46dc896e))
+- upgrade lucide-react from 0.561.0 to 0.562.0 ([362d28f](https://github.com/crackedngineer/iLoveGithub/commit/362d28fb8cefb48bed17da435c8c62ad65a97648))
+- upgrade motion from 12.23.25 to 12.23.26 ([8469ba6](https://github.com/crackedngineer/iLoveGithub/commit/8469ba68f0be27ff190c20f3cea989bc8888211b))
+- upgrade nodemailer from 7.0.11 to 7.0.12 ([339ddfe](https://github.com/crackedngineer/iLoveGithub/commit/339ddfe1beebf584c2b6a1226744a0d4fbf63c0e))
+
+## [0.23.4](https://github.com/crackedngineer/iLoveGithub/compare/v0.23.3...v0.23.4) (2026-01-13)
+
+### Bug Fixes
+
+- enable force check for readiness probe in uptime workflow ([adb0664](https://github.com/crackedngineer/iLoveGithub/commit/adb066450bf289c9c544dd07698a2ed5748c9c5f))
+- enable force check for readiness probe in uptime workflow ([20fa128](https://github.com/crackedngineer/iLoveGithub/commit/20fa1285890da1c3b2032e35228daabf1f75fd94))
+
+## [0.23.3](https://github.com/crackedngineer/iLoveGithub/compare/v0.23.2...v0.23.3) (2026-01-12)
+
+### Bug Fixes
+
+- update uptime status and improve badge generation iusing shield.io ([449bc17](https://github.com/crackedngineer/iLoveGithub/commit/449bc17b7eb9dc5405ee61e7aa25c8f75329316e))
+- update uptime status and improve badge generation iusing shield.io ([c4ce6ea](https://github.com/crackedngineer/iLoveGithub/commit/c4ce6eaddd193fcb3bc63dafef087b0a2f2188d6))
+
+## [0.23.2](https://github.com/crackedngineer/iLoveGithub/compare/v0.23.1...v0.23.2) (2026-01-10)
+
+### Bug Fixes
+
+- update uptime status and README badge URL ([92912f4](https://github.com/crackedngineer/iLoveGithub/commit/92912f48edb317f9c6093ba2a562a6f6db4cb10d))
+
+## [0.23.1](https://github.com/crackedngineer/iLoveGithub/compare/v0.23.0...v0.23.1) (2026-01-10)
+
+### Bug Fixes
+
+- added status empty folder ([75554a8](https://github.com/crackedngineer/iLoveGithub/commit/75554a89b84d0dafd5cdc94aab226ccc4a2e024f))
+
+## [0.23.0](https://github.com/crackedngineer/iLoveGithub/compare/v0.22.0...v0.23.0) (2026-01-10)
+
+### Features
+
+- implement health monitoring and circuit breaker for critical se… ([2b39681](https://github.com/crackedngineer/iLoveGithub/commit/2b39681c8510f5c1e963d689ac65b64d81da6b3f))
+
+## [0.22.0](https://github.com/crackedngineer/iLoveGithub/compare/v0.21.10...v0.22.0) (2026-01-08)
+
+### Features
+
+- **qrcode:** integrate qr-code-styling for SVG QR code generation ([21adb64](https://github.com/crackedngineer/iLoveGithub/commit/21adb641c1a68dfeeaaaf042917c3511c58e1eb2))
+- **qrcode:** integrate qr-code-styling for SVG QR code generation ([b220af9](https://github.com/crackedngineer/iLoveGithub/commit/b220af92ed26725827c724370ab1a0f897605b89))
+
+## [0.21.10](https://github.com/crackedngineer/iLoveGithub/compare/v0.21.9...v0.21.10) (2026-01-06)
+
+### Bug Fixes
+
+- upgrade react from 19.2.1 to 19.2.3 ([f2efa91](https://github.com/crackedngineer/iLoveGithub/commit/f2efa91535b2a4e0ebb66c96d71ac4a84a93dcd3))
+- upgrade react-dom from 19.2.1 to 19.2.3 ([e082b77](https://github.com/crackedngineer/iLoveGithub/commit/e082b772dc61c1fa7d87e612e3fcc7ae034d76c8))
+
+## [0.21.9](https://github.com/crackedngineer/iLoveGithub/compare/v0.21.8...v0.21.9) (2025-12-30)
+
+### Bug Fixes
+
+- upgrade @supabase/ssr from 0.7.0 to 0.8.0 ([77c4880](https://github.com/crackedngineer/iLoveGithub/commit/77c48802c7ddea710f04c22c0664a0945a77f624))
+- upgrade lucide-react from 0.555.0 to 0.556.0 ([97512b4](https://github.com/crackedngineer/iLoveGithub/commit/97512b4775e7863e96efc0a2ab1b7d5e02b3892c))
+
+## [0.21.8](https://github.com/crackedngineer/iLoveGithub/compare/v0.21.7...v0.21.8) (2025-12-20)
+
+### Bug Fixes
+
+- upgrade @supabase/ssr from 0.7.0 to 0.8.0 ([ab92d86](https://github.com/crackedngineer/iLoveGithub/commit/ab92d865d11c63bfe80b218a537a06aebb00c69c))
+- upgrade lucide-react from 0.552.0 to 0.555.0 ([e9c9e03](https://github.com/crackedngineer/iLoveGithub/commit/e9c9e03a149ac92fe7e3dc105dc0b6ba4c5f3b4a))
+
+## [0.21.7](https://github.com/crackedngineer/iLoveGithub/compare/v0.21.6...v0.21.7) (2025-12-15)
+
+### Bug Fixes
+
+- package.json & package-lock.json to reduce vulnerabilities ([538d2c5](https://github.com/crackedngineer/iLoveGithub/commit/538d2c5596c553229b1341a62c56535a87f061b5))
+
 ## [0.21.6](https://github.com/crackedngineer/iLoveGithub/compare/v0.21.5...v0.21.6) (2025-12-08)
 
 ### Bug Fixes

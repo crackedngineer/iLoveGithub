@@ -1,0 +1,51 @@
+name: Supabase Keep-Alive
+
+on:
+  schedule:
+    # Run at midnight UTC every day
+    - cron: "0 0 * * *"
+
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  keep-alive:
+    runs-on: ubuntu-latest
+    outputs:
+      status: ${{ steps.keep-alive.outputs.status }}
+      failed_dbs: ${{ steps.keep-alive.outputs.failed_dbs }}
+      paused_dbs: ${{ steps.keep-alive.outputs.paused_dbs }}
+
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+
+      - name: Install dependencies
+        run: pip install supabase
+
+      - name: Run keep-alive
+        id: keep-alive
+        run: python scripts/supabase_keep_alive.py
+        env:
+          SUPABASE_URL: ${{ secrets.SUPABASE_URL }}
+          SUPABASE_KEY: ${{ secrets.SUPABASE_KEY }}
+          SUPABASE_DB_NAME: ${{ secrets.SUPABASE_DB_NAME }}
+
+      - name: Report failure
+        if: failure()
+        run: |
+          echo "## ❌ Supabase Keep-Alive Failed" >> "$GITHUB_STEP_SUMMARY"
+          if [ -n "${{ steps.keep-alive.outputs.paused_dbs }}" ]; then
+            echo "" >> "$GITHUB_STEP_SUMMARY"
+            echo "**Paused:** ${{ steps.keep-alive.outputs.paused_dbs }}" >> "$GITHUB_STEP_SUMMARY"
+            echo "Resume the project at https://supabase.com/dashboard." >> "$GITHUB_STEP_SUMMARY"
+          fi
+          if [ -n "${{ steps.keep-alive.outputs.failed_dbs }}" ]; then
+            echo "" >> "$GITHUB_STEP_SUMMARY"
+            echo "**Failed:** ${{ steps.keep-alive.outputs.failed_dbs }}" >> "$GITHUB_STEP_SUMMARY"
+          fi

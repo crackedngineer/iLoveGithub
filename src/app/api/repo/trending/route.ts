@@ -25,11 +25,13 @@ export async function GET(req: Request) {
     query,
   )}&sort=stars&order=desc&per_page=${limit}&page=${page}`;
 
+  const requestToken = req.headers.get("authorization") || GITHUB_TOKEN;
+
   try {
     const res = await fetch(url, {
       headers: {
         Accept: "application/vnd.github+json",
-        ...(GITHUB_TOKEN ? {Authorization: `Bearer ${GITHUB_TOKEN}`} : {}),
+        ...(requestToken ? {Authorization: requestToken} : {}),
       },
       next: {revalidate: TRENDING_REPO_TTL},
     });

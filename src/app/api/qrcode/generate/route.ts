@@ -1,7 +1,8 @@
 import {NextRequest, NextResponse} from "next/server";
-import {redis} from "@/lib/redis";
 import crypto from "crypto";
 import {put} from "@vercel/blob";
+import {redis} from "@/lib/redis";
+import {redisCircuit} from "@/lib/circuit-breaker";
 
 export async function POST(req: NextRequest) {
   try {
@@ -20,7 +21,7 @@ export async function POST(req: NextRequest) {
     const cacheKey = `qr:url:${hash}`;
 
     // Check Redis cache
-    const cachedUrl = await redis.get<string>(cacheKey);
+    const cachedUrl = await redisCircuit.execute(async () => await redis.get<string>(cacheKey));
     if (cachedUrl) {
       return NextResponse.json({image: cachedUrl});
     }
@@ -51,11 +52,23 @@ export async function POST(req: NextRequest) {
     });
 
     // Cache the URL in Redis
-    await redis.set(cacheKey, blob.url, {ex: 86400}); // 1 day TTL
+    await redisCircuit.execute(async () => await redis.set(cacheKey, blob.url, {ex: 86400})); // 1 day TTL
 
     return NextResponse.json({image: blob.url});
   } catch (error) {
     console.error("QR Generation Error:", error);
+
+    // Check if it's a circuit breaker error
+    if (error instanceof Error && error.message.includes("Circuit breaker OPEN")) {
+      return NextResponse.json(
+        {
+          error: "Service Temporarily Unavailable",
+          message: "Database service is temporarily unavailable. Please try again later.",
+        },
+        {status: 503},
+      );
+    }
+
     return NextResponse.json({error: "Failed to generate QR code"}, {status: 500});
   }
 }
