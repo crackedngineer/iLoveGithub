@@ -45,6 +45,14 @@ const nextConfig = {
         protocol: "https",
         hostname: "avatars.githubusercontent.com",
       },
+      {
+        protocol: "https",
+        hostname: "peerlist.io",
+      },
+      {
+        protocol: "https",
+        hostname: "*.producthunt.com",
+      },
     ],
   },
 
