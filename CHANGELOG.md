@@ -4,6 +4,13 @@ All notable changes to this project will be documented in this file.
 
 ---
 
+## [0.29.2](https://github.com/crackedngineer/iLoveGithub/compare/v0.29.1...v0.29.2) (2026-05-20)
+
+
+### Bug Fixes
+
+* **tool:** Add GitReverse tool ([9d75056](https://github.com/crackedngineer/iLoveGithub/commit/9d75056fe76eb6edf58fb7be1cccae421f166bbe))
+
 ## [0.29.1](https://github.com/crackedngineer/iLoveGithub/compare/v0.29.0...v0.29.1) (2026-05-20)
 
 
