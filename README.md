@@ -92,6 +92,7 @@
 | [**gitingest**](https://gitingest.com/) | Turn any Git repository into a simple text digest of its codebase. | `https://gitingest.com/{owner}/{repo}` |
 | [**gitmvp**](https://www.gitmvp.com/) | Turn any GitHub repo into an MVP prompt | `https://www.gitmvp.com/{owner}/{repo}` |
 | [**gitpodcast**](https://www.gitpodcast.com/) | Turn any GitHub repository into an engaging podcast in seconds. | `https://www.gitpodcast.com/{owner}/{repo}` |
+| [**gitreverse**](https://www.gitreverse.com/) | Turn a GitHub repository into a plain-language coding agent prompt. | `https://www.gitreverse.com/{owner}/{repo}` |
 | [**gitsummarize**](https://gitsummarize.com/) | Turn any GitHub repository into a comprehensive AI-powered Documentation & AI-Powered Understanding hub. | `https://gitsummarize.com/{owner}/{repo}` |
 | [**gittodoc**](https://www.gittodoc.com/) | Turn any Git repository into a simple Documentation & AI-Powered Understanding link that LLMs can easily index. | `https://www.gittodoc.com/{owner}/{repo}` |
 | [**talktogithub**](https://talktogithub.com/) | Repo to Convo in seconds! | `https://talktogithub.com/{owner}/{repo}` |
