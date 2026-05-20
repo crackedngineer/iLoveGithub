@@ -380,6 +380,17 @@
     "created_at": "2025-10-22"
   },
   {
+    "name": "gitreverse",
+    "title": "GitReverse",
+    "description": "Turn a GitHub repository into a plain-language coding agent prompt.",
+    "homepage": "https://www.gitreverse.com/",
+    "url": "https://www.gitreverse.com/{owner}/{repo}",
+    "icon": "https://www.gitreverse.com/icon.svg?icon.0dc098~r70zpv.svg",
+    "category": "Documentation & AI-Powered Understanding",
+    "iframe": false,
+    "created_at": "2026-05-20"
+  },
+  {
     "name": "gitsummarize",
     "title": "GitSummarize",
     "description": "Turn any GitHub repository into a comprehensive AI-powered Documentation & AI-Powered Understanding hub.",
