@@ -4,6 +4,13 @@ All notable changes to this project will be documented in this file.
 
 ---
 
+## [0.29.1](https://github.com/crackedngineer/iLoveGithub/compare/v0.29.0...v0.29.1) (2026-05-20)
+
+
+### Bug Fixes
+
+* formatting issue in GEMINI.md ([2a69de4](https://github.com/crackedngineer/iLoveGithub/commit/2a69de43071788e3e1d4636d60f0f022c5af0790))
+
 ## [0.29.0](https://github.com/crackedngineer/iLoveGithub/compare/v0.28.0...v0.29.0) (2026-05-19)
 
 
