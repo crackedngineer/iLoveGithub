@@ -4,6 +4,7 @@ type BadgeType = {
   href: string;
   src: string;
   alt: string;
+  unoptimized?: boolean;
 };
 
 export const Introduction = () => {
@@ -17,6 +18,7 @@ export const Introduction = () => {
       href: "https://peerlist.io/crackedngineer/project/ilovegithub",
       src: "https://peerlist.io/api/v1/projects/embed/PRJH8OEJ9OJ8E88PJ3R66977NBDAOK?showUpvote=true&theme=light",
       alt: "iLoveGithub Peerlist Badge",
+      unoptimized: true,
     },
   ];
 
@@ -48,6 +50,7 @@ export const Introduction = () => {
               alt={badge.alt}
               width={200}
               height={44}
+              unoptimized={badge.unoptimized}
               className="h-11 rounded-md shadow-sm"
             />
           </a>
