@@ -4,6 +4,13 @@ All notable changes to this project will be documented in this file.
 
 ---
 
+## [0.29.3](https://github.com/crackedngineer/iLoveGithub/compare/v0.29.2...v0.29.3) (2026-05-21)
+
+
+### Bug Fixes
+
+* **Introduction:** add unoptimized property to BadgeType and usage in badges ([3b90b33](https://github.com/crackedngineer/iLoveGithub/commit/3b90b33ee674361edca15e19884cf758f23df653))
+
 ## [0.29.2](https://github.com/crackedngineer/iLoveGithub/compare/v0.29.1...v0.29.2) (2026-05-20)
 
 
